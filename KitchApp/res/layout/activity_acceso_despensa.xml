@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+    	android:text="despensa"
+    	android:textColor="@color/navy"
+    	android:textSize="40sp" >
+
+    </TextView>
+
+   	<Button
+   	    android:id="@+id/button1"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:layout_below="@+id/textView1"
+   	    android:layout_marginLeft="53dp"
+   	    android:layout_marginTop="17dp"
+   	    android:background="@color/aqua"
+   	    android:text="lacteos"
+   	    android:textColor="@color/black" />
+   	
+   	<Button
+   	    android:id="@+id/button2"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_below="@+id/textView1"
+   	    android:layout_marginRight="53dp"
+   	    android:layout_marginTop="17dp"
+   	    android:background="@color/aqua"
+   	    android:text="frutasVerduras"
+   	    android:textColor="@color/black" />
+   	
+   	<Button
+   	    android:id="@+id/button3"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:layout_below="@+id/button1"
+   	    android:layout_marginLeft="53dp"
+   	    android:layout_marginTop="17dp"
+   	    android:background="@color/aqua"
+   	    android:text="panBolleria"
+   	    android:textColor="@color/black" />
+
+   	<Button
+       	android:id="@+id/button4"
+       	android:layout_width="107dp"
+       	android:layout_height="wrap_content"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_below="@+id/button2"
+   	    android:layout_marginRight="53dp"
+   	    android:layout_marginTop="17dp"
+       	android:background="@color/aqua"
+       	android:text="bebidas"
+       	android:textColor="@color/black" />
+   	
+   	<Button
+   	    android:id="@+id/button5"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:layout_below="@+id/button3"
+   	    android:layout_marginLeft="53dp"
+   	    android:layout_marginTop="17dp"
+   	    android:background="@color/aqua"
+   	    android:text="carnes"
+   	    android:textColor="@color/black" />
+
+   	<Button
+       	android:id="@+id/button6"
+       	android:layout_width="107dp"
+       	android:layout_height="wrap_content"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_below="@+id/button4"
+   	    android:layout_marginRight="53dp"
+   	    android:layout_marginTop="17dp"
+       	android:background="@color/aqua"
+       	android:text="pescados"
+       	android:textColor="@color/black" />
+   	
+   	<Button
+   	    android:id="@+id/button7"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:layout_below="@+id/button5"
+   	    android:layout_marginLeft="53dp"
+   	    android:layout_marginTop="17dp"
+   	    android:background="@color/aqua"
+   	    android:text="salsasCondimentos"
+   	    android:textColor="@color/black" />
+
+   	<Button
+       	android:id="@+id/button8"
+       	android:layout_width="107dp"
+       	android:layout_height="wrap_content"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_below="@+id/button6"
+   	    android:layout_marginRight="53dp"
+   	    android:layout_marginTop="17dp"
+       	android:background="@color/aqua"
+       	android:text="pastasArroces"
+       	android:textColor="@color/black" />
+   	
+   	<Button
+   	    android:id="@+id/button9"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:layout_below="@+id/button7"
+   	    android:layout_marginLeft="53dp"
+   	    android:layout_marginTop="17dp"
+   	    android:background="@color/aqua"
+   	    android:text="congelados"
+   	    android:textColor="@color/black" />
+
+   	<Button
+       	android:id="@+id/button10"
+       	android:layout_width="107dp"
+       	android:layout_height="wrap_content"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_below="@+id/button8"
+   	    android:layout_marginRight="53dp"
+   	    android:layout_marginTop="17dp"
+       	android:background="@color/aqua"
+       	android:text="varios"
+       	android:textColor="@color/black" />
+   	
+   	<Button
+   	    android:id="@+id/button11"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentLeft="true"
+   	    android:layout_below="@+id/button9"
+   	    android:layout_marginLeft="53dp"
+   	    android:layout_marginTop="40dp"
+   	    android:background="@color/navy"
+   	    android:text="anadirProducto"
+   	    android:textColor="@color/white" />
+   	
+   	<Button
+   	    android:id="@+id/button12"
+   	    android:layout_width="107dp"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentRight="true"
+   	    android:layout_below="@+id/button10"
+   	    android:layout_marginRight="53dp"
+   	    android:layout_marginTop="40dp"
+   	    android:background="@color/navy"
+   	    android:text="buscarProducto"
+   	    android:textColor="@color/white" />
+   	
+</RelativeLayout>
