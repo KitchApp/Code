@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-    	android:text="@string/despensa"
+    	android:text="despensa"
     	android:textColor="@color/navy"
     	android:textSize="40sp" >
 
@@ -24,7 +24,7 @@
    	    android:layout_marginLeft="53dp"
    	    android:layout_marginTop="17dp"
    	    android:background="@color/aqua"
-   	    android:text="@string/lacteos"
+   	    android:text="lacteos"
    	    android:textColor="@color/black" />
    	
    	<Button
@@ -36,7 +36,7 @@
    	    android:layout_marginRight="53dp"
    	    android:layout_marginTop="17dp"
    	    android:background="@color/aqua"
-   	    android:text="@string/frutasVerduras"
+   	    android:text="frutasVerduras"
    	    android:textColor="@color/black" />
    	
    	<Button
@@ -48,7 +48,7 @@
    	    android:layout_marginLeft="53dp"
    	    android:layout_marginTop="17dp"
    	    android:background="@color/aqua"
-   	    android:text="@string/panBolleria"
+   	    android:text="panBolleria"
    	    android:textColor="@color/black" />
 
    	<Button
@@ -60,7 +60,7 @@
    	    android:layout_marginRight="53dp"
    	    android:layout_marginTop="17dp"
        	android:background="@color/aqua"
-       	android:text="@string/bebidas"
+       	android:text="bebidas"
        	android:textColor="@color/black" />
    	
    	<Button
@@ -72,7 +72,7 @@
    	    android:layout_marginLeft="53dp"
    	    android:layout_marginTop="17dp"
    	    android:background="@color/aqua"
-   	    android:text="@string/carnes"
+   	    android:text="carnes"
    	    android:textColor="@color/black" />
 
    	<Button
@@ -84,7 +84,7 @@
    	    android:layout_marginRight="53dp"
    	    android:layout_marginTop="17dp"
        	android:background="@color/aqua"
-       	android:text="@string/pescados"
+       	android:text="pescados"
        	android:textColor="@color/black" />
    	
    	<Button
@@ -96,7 +96,7 @@
    	    android:layout_marginLeft="53dp"
    	    android:layout_marginTop="17dp"
    	    android:background="@color/aqua"
-   	    android:text="@string/salsasCondimentos"
+   	    android:text="salsasCondimentos"
    	    android:textColor="@color/black" />
 
    	<Button
@@ -108,7 +108,7 @@
    	    android:layout_marginRight="53dp"
    	    android:layout_marginTop="17dp"
        	android:background="@color/aqua"
-       	android:text="@string/pastasArroces"
+       	android:text="pastasArroces"
        	android:textColor="@color/black" />
    	
    	<Button
@@ -120,7 +120,7 @@
    	    android:layout_marginLeft="53dp"
    	    android:layout_marginTop="17dp"
    	    android:background="@color/aqua"
-   	    android:text="@string/congelados"
+   	    android:text="congelados"
    	    android:textColor="@color/black" />
 
    	<Button
@@ -132,7 +132,7 @@
    	    android:layout_marginRight="53dp"
    	    android:layout_marginTop="17dp"
        	android:background="@color/aqua"
-       	android:text="@string/varios"
+       	android:text="varios"
        	android:textColor="@color/black" />
    	
    	<Button
@@ -144,7 +144,7 @@
    	    android:layout_marginLeft="53dp"
    	    android:layout_marginTop="40dp"
    	    android:background="@color/navy"
-   	    android:text="@string/anadirProducto"
+   	    android:text="anadirProducto"
    	    android:textColor="@color/white" />
    	
    	<Button
@@ -156,7 +156,7 @@
    	    android:layout_marginRight="53dp"
    	    android:layout_marginTop="40dp"
    	    android:background="@color/navy"
-   	    android:text="@string/buscarProducto"
+   	    android:text="buscarProducto"
    	    android:textColor="@color/white" />
    	
 </RelativeLayout>
