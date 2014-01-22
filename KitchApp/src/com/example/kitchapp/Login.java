@@ -37,8 +37,9 @@ public class Login extends Activity implements OnClickListener{
 			Intent registro = new Intent(getApplicationContext(), Registro.class);
 			startActivity(registro);
 		case R.id.btnLogin:
-			Intent principal=new Intent("com.example.kitchapp.PantallaPrincipal");
-			startActivity(principal);
+			Intent i=new Intent("com.example.kitchapp.PantallaTransicion");
+			startActivity(i);
+			
 		}
 		
 	}
