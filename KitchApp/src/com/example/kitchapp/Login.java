@@ -10,7 +10,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+<<<<<<< HEAD
 public class Login extends Activity implements OnClickListener{
+=======
+public class Login extends Activity {
+>>>>>>> refs/heads/Rama-Edu-Android
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,15 +25,26 @@ public class Login extends Activity implements OnClickListener{
 		Button b1=(Button)findViewById(R.id.btnLogin);
 		
 		//Listener para botón login
+<<<<<<< HEAD
 		b1.setOnClickListener(this);
 
 		// Listener para link de registro de nueva cuenta
 		registerScreen.setOnClickListener(this);
+=======
+		//b1.setOnClickListener(this);
+
+		// Listener para link de registro de nueva cuenta
+		//registerScreen.setOnClickListener(this);
+>>>>>>> refs/heads/Rama-Edu-Android
 }
 
 	
 
+<<<<<<< HEAD
 	@Override
+=======
+	/*@Override
+>>>>>>> refs/heads/Rama-Edu-Android
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
 		switch (arg0.getId()){
@@ -42,5 +57,22 @@ public class Login extends Activity implements OnClickListener{
 			
 		}
 		
+<<<<<<< HEAD
+=======
+		}*/
+		
+
+	public void intento_logueo(View view) {
+		Intent i = new Intent(this, PantallaTransicion.class);
+		//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
+		startActivity(i);
+
+	}
+	
+	public void registrarse(View view) {
+		Intent i = new Intent(this, Registro.class);
+		//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
+		startActivity(i);
+>>>>>>> refs/heads/Rama-Edu-Android
 	}
 }
