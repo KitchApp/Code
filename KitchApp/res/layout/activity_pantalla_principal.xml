@@ -1,9 +1,59 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
     android:background="@drawable/prueba2" >
+    
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="114dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:text="@string/lista_compra"
+        android:onClick="accederDespensa" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="123dp"
+        android:layout_height="60dp" 
+        android:layout_marginLeft="176dp"
+        android:layout_marginTop="114dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:text="@string/despensa"
+        android:onClick="accederDespensa" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button1"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:text="@string/recetario"
+        android:onClick="accederDespensa" />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button2"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:text="@string/estadisticas"
+        android:onClick="accederDespensa" />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:text="@string/localizacion"
+        android:onClick="accederDespensa" />
 <!--
 <Button
         android:id="@+id/button1"
@@ -43,4 +93,4 @@
         android:text="@string/estadisticas" />
   -->
     
-</LinearLayout>
+</RelativeLayout>

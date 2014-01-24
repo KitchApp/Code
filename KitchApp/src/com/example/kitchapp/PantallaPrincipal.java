@@ -15,10 +15,10 @@ public class PantallaPrincipal extends Activity{
 }
 	
 	
-	/*public void accederDespensa(View view) {
+	public void accederDespensa(View view) {
 		Intent i = new Intent(this, AccesoDespensa.class);
 		Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
 		startActivity(i);
         
-	}*/
+	}
 }

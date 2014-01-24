@@ -43,7 +43,7 @@ public class PantallaTransicion extends Activity {
 	private void tareaLarga()
     {
             try { 
-                    Thread.sleep(1000); 
+                    Thread.sleep(200); 
             } catch(InterruptedException e) {}
     }
 	
@@ -91,7 +91,10 @@ public class PantallaTransicion extends Activity {
                     {
                             //pDialog.dismiss();
                             //Toast.makeText(PantallaTransicion.this, "Tarea finalizada!", Toast.LENGTH_SHORT).show();
-                            setContentView(R.layout.activity_pantalla_principal);
+                            //setContentView(R.layout.activity_pantalla_principal);
+                    	Intent i = new Intent(PantallaTransicion.this, PantallaPrincipal.class);
+                		startActivity(i);
+                    	
                     }
             }
             

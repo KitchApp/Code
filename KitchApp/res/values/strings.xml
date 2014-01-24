@@ -5,9 +5,10 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="despensa">Despensa</string>
-    <string name="lista_compra">Lista Compra</string>
+    <string name="lista_compra">Lista de la Compra</string>
     <string name="recetario">Recetario</string>
-    <string name="estadisticas">Estadísticas/Historial Compras</string>
+    <string name="estadisticas">Estadísticas</string>
+    <string name="localizacion">Localización</string>
     <string name="title_activity_acceso_despensa">AccesoDespensaActivity</string>
     <string name="lacteos">Lácteos</string>
     <string name="frutasVerduras">Frutas y Verduras</string>
@@ -21,5 +22,7 @@
     <string name="varios">Varios</string>
     <string name="anadirProducto">Añadir Producto</string>
     <string name="buscarProducto">Buscar Producto</string>
+    <string name="title_activity_list_item_layout">List_item_layout</string>
+    <string name="title_activity_add_despensa">AddDespensa</string>
 
 </resources>
