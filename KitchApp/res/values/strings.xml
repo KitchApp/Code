@@ -22,5 +22,7 @@
     <string name="varios">Varios</string>
     <string name="anadirProducto">Añadir Producto</string>
     <string name="buscarProducto">Buscar Producto</string>
+    <string name="title_activity_list_item_layout">List_item_layout</string>
+    <string name="title_activity_add_despensa">AddDespensa</string>
 
 </resources>
