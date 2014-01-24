@@ -75,12 +75,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-<<<<<<< HEAD
                 android:text="Login"/>
-=======
-                android:text="Login"
                 android:onClick="intento_logueo"/>
->>>>>>> refs/heads/Rama-Edu-Android
           
           <!-- Enlace a la pantalla de registro -->
           <TextView android:id="@+id/link_to_register"
@@ -91,13 +87,9 @@
                 android:text="Nuevo en KitchApp? Registrate Aquí"
                 android:gravity="center"
                 android:textSize="20dip"
-<<<<<<< HEAD
                 android:textColor="#0b84aa"/>
-=======
-                android:textColor="#0b84aa"
                 android:clickable="true"
                 android:onClick="registrarse" />
->>>>>>> refs/heads/Rama-Edu-Android
  
         </LinearLayout>
         <!-- fin Formulario de login -->
