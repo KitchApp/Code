@@ -14,6 +14,7 @@ public final class R {
         public static final int aqua=0x7f040009;
         public static final int black=0x7f04000f;
         public static final int blue=0x7f04000d;
+        public static final int celeste=0x7f040010;
         public static final int fuchsia=0x7f040002;
         public static final int gray=0x7f040005;
         public static final int green=0x7f04000c;
@@ -39,11 +40,12 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int cabecera_kitchapp=0x7f020000;
-        public static final int fondo_pie_pagina=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int propuestaportadaappis=0x7f020003;
-        public static final int prueba2=0x7f020004;
+        public static final int boton_redondo=0x7f020000;
+        public static final int cabecera_kitchapp=0x7f020001;
+        public static final int fondo_pie_pagina=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int propuestaportadaappis=0x7f020004;
+        public static final int prueba2=0x7f020005;
     }
     public static final class id {
         public static final int action_settings=0x7f090018;
@@ -86,25 +88,26 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
-        public static final int anadirProducto=0x7f060012;
+        public static final int anadirProducto=0x7f060013;
         public static final int app_name=0x7f060000;
-        public static final int bebidas=0x7f06000b;
-        public static final int buscarProducto=0x7f060013;
-        public static final int carnes=0x7f06000c;
-        public static final int congelados=0x7f060010;
+        public static final int bebidas=0x7f06000c;
+        public static final int buscarProducto=0x7f060014;
+        public static final int carnes=0x7f06000d;
+        public static final int congelados=0x7f060011;
         public static final int despensa=0x7f060003;
         public static final int estadisticas=0x7f060006;
-        public static final int frutasVerduras=0x7f060009;
+        public static final int frutasVerduras=0x7f06000a;
         public static final int hello_world=0x7f060002;
-        public static final int lacteos=0x7f060008;
+        public static final int lacteos=0x7f060009;
         public static final int lista_compra=0x7f060004;
-        public static final int panBolleria=0x7f06000a;
-        public static final int pastasArroces=0x7f06000f;
-        public static final int pescados=0x7f06000d;
+        public static final int localizacion=0x7f060007;
+        public static final int panBolleria=0x7f06000b;
+        public static final int pastasArroces=0x7f060010;
+        public static final int pescados=0x7f06000e;
         public static final int recetario=0x7f060005;
-        public static final int salsasCondimentos=0x7f06000e;
-        public static final int title_activity_acceso_despensa=0x7f060007;
-        public static final int varios=0x7f060011;
+        public static final int salsasCondimentos=0x7f06000f;
+        public static final int title_activity_acceso_despensa=0x7f060008;
+        public static final int varios=0x7f060012;
     }
     public static final class style {
         /** 
