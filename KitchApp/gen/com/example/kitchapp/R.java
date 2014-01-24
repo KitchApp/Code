@@ -39,11 +39,16 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int propuestaportadaappis=0x7f020001;
+        public static final int cabecera_kitchapp=0x7f020000;
+        public static final int fondo_pie_pagina=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int propuestaportadaappis=0x7f020003;
+        public static final int prueba2=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000d;
+        public static final int action_settings=0x7f090018;
+        public static final int btnLogin=0x7f09000f;
+        public static final int btnRegistro=0x7f090016;
         public static final int button1=0x7f090001;
         public static final int button10=0x7f09000a;
         public static final int button11=0x7f09000b;
@@ -56,15 +61,28 @@ public final class R {
         public static final int button7=0x7f090007;
         public static final int button8=0x7f090008;
         public static final int button9=0x7f090009;
+        public static final int encabezado=0x7f09000d;
+        public static final int footer=0x7f09000e;
+        public static final int header=0x7f090012;
+        public static final int link_to_login=0x7f090017;
+        public static final int link_to_register=0x7f090010;
+        public static final int progressBar1=0x7f090011;
+        public static final int reg_email=0x7f090014;
+        public static final int reg_password=0x7f090015;
+        public static final int reg_usuario=0x7f090013;
         public static final int textView1=0x7f090000;
     }
     public static final class layout {
         public static final int activity_acceso_despensa=0x7f030000;
-        public static final int activity_main=0x7f030001;
+        public static final int activity_login=0x7f030001;
+        public static final int activity_pantalla_principal=0x7f030002;
+        public static final int activity_pantalla_transicion=0x7f030003;
+        public static final int cabecera=0x7f030004;
+        public static final int pie_de_pagina=0x7f030005;
+        public static final int registro=0x7f030006;
     }
     public static final class menu {
-        public static final int acceso_despensa=0x7f080000;
-        public static final int main=0x7f080001;
+        public static final int login=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
