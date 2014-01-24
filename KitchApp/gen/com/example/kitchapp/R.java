@@ -40,12 +40,16 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int boton_redondo=0x7f020000;
-        public static final int cabecera_kitchapp=0x7f020001;
-        public static final int fondo_pie_pagina=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int propuestaportadaappis=0x7f020004;
-        public static final int prueba2=0x7f020005;
+        public static final int anadir_icono=0x7f020000;
+        public static final int boton_redondo_color_aqua=0x7f020001;
+        public static final int boton_redondo_color_celeste=0x7f020002;
+        public static final int boton_redondo_color_navy=0x7f020003;
+        public static final int cabecera_kitchapp=0x7f020004;
+        public static final int fondo_pie_pagina=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int lupa_sobre_un_robot_androide=0x7f020007;
+        public static final int propuestaportadaappis=0x7f020008;
+        public static final int prueba2=0x7f020009;
     }
     public static final class id {
         public static final int action_settings=0x7f090018;
@@ -53,8 +57,6 @@ public final class R {
         public static final int btnRegistro=0x7f090016;
         public static final int button1=0x7f090001;
         public static final int button10=0x7f09000a;
-        public static final int button11=0x7f09000b;
-        public static final int button12=0x7f09000c;
         public static final int button2=0x7f090002;
         public static final int button3=0x7f090003;
         public static final int button4=0x7f090004;
@@ -63,6 +65,8 @@ public final class R {
         public static final int button7=0x7f090007;
         public static final int button8=0x7f090008;
         public static final int button9=0x7f090009;
+        public static final int button_add=0x7f09000b;
+        public static final int button_lens=0x7f09000c;
         public static final int encabezado=0x7f09000d;
         public static final int footer=0x7f09000e;
         public static final int header=0x7f090012;

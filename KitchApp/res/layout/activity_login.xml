@@ -75,7 +75,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-                android:text="Login"/>
+                android:text="Login"
                 android:onClick="intento_logueo"/>
           
           <!-- Enlace a la pantalla de registro -->
@@ -87,7 +87,7 @@
                 android:text="Nuevo en KitchApp? Registrate Aquí"
                 android:gravity="center"
                 android:textSize="20dip"
-                android:textColor="#0b84aa"/>
+                android:textColor="#0b84aa"
                 android:clickable="true"
                 android:onClick="registrarse" />
  

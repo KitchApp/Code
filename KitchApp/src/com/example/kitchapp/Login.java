@@ -20,7 +20,7 @@ public class Login extends Activity {
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
 		
-		//Listener para botï¿½n login
+		//Listener para botón login
 		//b1.setOnClickListener(this);
 
 		// Listener para link de registro de nueva cuenta
