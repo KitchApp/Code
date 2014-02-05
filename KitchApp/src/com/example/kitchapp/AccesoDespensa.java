@@ -15,8 +15,8 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
-		Button b = (Button) findViewById(R.id.button1);
-		b.setOnClickListener(this);
+		Button b1 = (Button) findViewById(R.id.button1);
+		b1.setOnClickListener(this);
 		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
 		Button b=(Button)findViewById(R.id.button_add);
 		b.setOnClickListener(this);
@@ -44,8 +44,8 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			break;
 			
 		case R.id.button1:
-			Intent i = new Intent(this,MostrarProductosCategoria.class);
-			startActivity(i);
+			Intent intent = new Intent(this,MostrarProductosCategoria.class);
+			startActivity(intent);
 			break;
 		}
 	}
