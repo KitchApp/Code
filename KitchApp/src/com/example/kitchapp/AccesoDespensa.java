@@ -9,11 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-<<<<<<< HEAD
-public class AccesoDespensa extends Activity implements OnClickListener{
-=======
 public class AccesoDespensa extends Activity implements OnClickListener {
->>>>>>> origin/Rama-Edu-Android
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,31 +38,18 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()){
-		/*case R.id.button_add:
+		case R.id.button_add:
 			Intent i = new Intent(this,AddDespensa.class);
 			startActivity(i);
-			break;*/
+			break;
+			
 		case R.id.button1:
 			Intent i = new Intent(this,MostrarProductosCategoria.class);
 			startActivity(i);
 			break;
 		}
-
-<<<<<<< HEAD
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		switch (v.getId()){
-		case R.id.button_add:
-			Intent i = new Intent(this,AddDespensa.class);
-			startActivity(i);
-			break;
-		}
 	}
-
-=======
-	}
->>>>>>> origin/Rama-Edu-Android
+	
 }
 	
 	
