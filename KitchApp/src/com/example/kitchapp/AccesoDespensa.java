@@ -1,5 +1,6 @@
 package com.example.kitchapp;
 
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -47,6 +48,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		}
 
 	}
+	
 }
 	
 	

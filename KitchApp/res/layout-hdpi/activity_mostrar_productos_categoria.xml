@@ -8,7 +8,7 @@
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:orientation="vertical"
-    	android:background="@drawable/resumen_de_color_como_fondo">
+    	android:background="@drawable/images">
     	<TextView
         	android:id="@+id/textView_Dairy"
         	android:layout_width="wrap_content"
