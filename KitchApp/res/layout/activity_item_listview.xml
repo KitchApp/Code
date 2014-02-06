@@ -6,20 +6,20 @@
     
     <TextView 
         android:id="@+id/textView_Item_Name"
-        android:layout_width="wrap_content"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:text="Leche Asturiana Entera"
         android:textSize="20sp" 
-        android:textColor="@color/navy"/>
+        android:textColor="@color/black"/>
     <TextView 
         android:id="@+id/textView_Item_Cant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="30dp"
         android:text="5"
         android:textSize="20sp" 
-        android:textColor="@color/navy"/>
+        android:textColor="@color/black"/>
     
 
 </LinearLayout>

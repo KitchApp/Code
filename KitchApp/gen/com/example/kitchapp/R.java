@@ -45,13 +45,16 @@ public final class R {
         public static final int boton_redondo_color_celeste=0x7f020002;
         public static final int boton_redondo_color_navy=0x7f020003;
         public static final int cabecera_kitchapp=0x7f020004;
-        public static final int fondo_pie_pagina=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int lupa_sobre_un_robot_androide=0x7f020007;
-        public static final int numberpicker_down=0x7f020008;
-        public static final int numberpicker_up=0x7f020009;
-        public static final int propuestaportadaappis=0x7f02000a;
-        public static final int prueba2=0x7f02000b;
+        public static final int fondo_de_pantalla_naranja=0x7f020005;
+        public static final int fondo_pie_pagina=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int images=0x7f020008;
+        public static final int lupa_sobre_un_robot_androide=0x7f020009;
+        public static final int numberpicker_down=0x7f02000a;
+        public static final int numberpicker_up=0x7f02000b;
+        public static final int propuestaportadaappis=0x7f02000c;
+        public static final int prueba2=0x7f02000d;
+        public static final int resumen_de_color_como_fondo=0x7f02000e;
     }
     public static final class id {
         public static final int action_settings=0x7f09001f;
@@ -125,7 +128,7 @@ public final class R {
         public static final int pescados=0x7f06000e;
         public static final int recetario=0x7f060005;
         public static final int salsasCondimentos=0x7f06000f;
-        public static final int set=0x7f060016;
+        public static final int save=0x7f060016;
         public static final int title_activity_acceso_despensa=0x7f060008;
         public static final int title_activity_modificar_producto_despensa=0x7f060015;
         public static final int title_activity_mostrar_productos_categoria=0x7f060018;

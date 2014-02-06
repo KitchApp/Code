@@ -69,7 +69,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
         // Pass null as the parent view because its going in the dialog layout
         builder.setView(inflater.inflate(R.layout.activity_modificar_producto_despensa, null))
                 // Add action buttons
-                .setPositiveButton(R.string.set,
+                .setPositiveButton(R.string.save,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 /*Toast.makeText(getActivity(), "Set",
@@ -98,6 +98,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		products.add(new ItemProducto(0,"Leche Asturiana Entera",5,""));
 		products.add(new ItemProducto(1,"Leche Asturiana Desnatada",4,""));
 		products.add(new ItemProducto(2,"Leche Asturiana Semidesnatada",3,""));
+		products.add(new ItemProducto(3,"Yogures Naturales Danone",4,""));
+		products.add(new ItemProducto(4,"Natillas Chocolate Danone",2,""));
+		products.add(new ItemProducto(5,"Queso Semicurado El Ventero",1,""));
+		
 	}
 
 	@Override
