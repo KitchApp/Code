@@ -25,7 +25,7 @@
     <string name="title_activity_list_item_layout">List_item_layout</string>
     <string name="title_activity_add_despensa">AddDespensa</string>
     <string name="title_activity_modificar_producto_despensa">ModificarProductoDespensaActivity</string>
-    <string name="set">Set</string>
+    <string name="save">Save</string>
     <string name="cancel">Cancel</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
 
