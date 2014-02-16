@@ -1,21 +1,16 @@
 package com.example.kitchapp;
 
 
-<<<<<<< HEAD
 import java.util.HashMap;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-=======
-import android.app.Activity;
->>>>>>> refs/heads/Rama-Vivi-Android
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-<<<<<<< HEAD
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,17 +19,11 @@ public class Login extends Activity {
 	private HashMap<String,String> users;
 	private EditText userName;
 	private EditText password;
-=======
-import android.widget.TextView;
-
-public class Login extends Activity {
->>>>>>> refs/heads/Rama-Vivi-Android
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
 		setContentView(R.layout.activity_login);
-<<<<<<< HEAD
 		users = new HashMap<String,String>();
 		initializeUsers();
 		Bundle extra = this.getIntent().getExtras();
@@ -49,13 +38,11 @@ public class Login extends Activity {
 		
 		userName = (EditText)findViewById(R.id.editTextuserName);
 		password = (EditText)findViewById(R.id.editTextPassword);
-=======
->>>>>>> refs/heads/Rama-Vivi-Android
 
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
 		
-		//Listener para botón login
+		//Listener para botï¿½n login
 		//b1.setOnClickListener(this);
 
 		// Listener para link de registro de nueva cuenta
@@ -81,7 +68,6 @@ public class Login extends Activity {
 		
 
 	public void intento_logueo(View view) {
-<<<<<<< HEAD
 		String name = userName.getText().toString(); 
 		String key = password.getText().toString();
 		if (users.containsKey(name) && key.equals(users.get(name))) {
@@ -94,11 +80,6 @@ public class Login extends Activity {
 		}
 		else
 			errorPassword();
-=======
-		Intent i = new Intent(this, PantallaTransicion.class);
-		//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
-		startActivity(i);
->>>>>>> refs/heads/Rama-Vivi-Android
 
 	}
 	
@@ -107,7 +88,6 @@ public class Login extends Activity {
 		//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
 		startActivity(i);
 	}
-<<<<<<< HEAD
 	
 	public void initializeUsers() {
 		users.put("ude1988@hotmail.com","13-1-1988");
@@ -122,7 +102,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("No se encuentra registrado en KitchApp. Por favor regístrese")
+	            .setMessage("No se encuentra registrado en KitchApp. Por favor regï¿½strese")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -142,7 +122,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("Contraseña incorrecta. Inténtelo de nuevo")
+	            .setMessage("Contraseï¿½a incorrecta. Intï¿½ntelo de nuevo")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -163,7 +143,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("Ya existe ese nombre de usuario. Por favor regístrese de nuevo")
+	            .setMessage("Ya existe ese nombre de usuario. Por favor regï¿½strese de nuevo")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -175,6 +155,4 @@ public class Login extends Activity {
 	    builder.create();
 	    builder.show();
 	}
-=======
->>>>>>> refs/heads/Rama-Vivi-Android
 }
