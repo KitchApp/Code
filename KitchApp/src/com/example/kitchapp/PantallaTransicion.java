@@ -43,7 +43,7 @@ public class PantallaTransicion extends Activity {
 	private void tareaLarga()
     {
             try { 
-                    Thread.sleep(200); 
+                    Thread.sleep(1000); 
             } catch(InterruptedException e) {}
     }
 	
