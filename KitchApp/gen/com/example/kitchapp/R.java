@@ -45,7 +45,6 @@ public final class R {
     }
     public static final class drawable {
         public static final int anadir_icono=0x7f020000;
-<<<<<<< HEAD
         public static final int barras=0x7f020001;
         public static final int boton_redondo_color_aqua=0x7f020002;
         public static final int boton_redondo_color_celeste=0x7f020003;
