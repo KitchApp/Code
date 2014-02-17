@@ -16,14 +16,11 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
-<<<<<<< HEAD
+
 		Button b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(this);
 		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
 		Button b=(Button)findViewById(R.id.button_add);
-=======
-		Button b = (Button) findViewById(R.id.button1);
->>>>>>> origin/Rama-Vivi-Android
 		b.setOnClickListener(this);
 		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
 	}
@@ -58,12 +55,5 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			startActivity(intent);
 			break;
 		}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/Rama-Vivi-Android
 	}
-	
 }
-	
-	
