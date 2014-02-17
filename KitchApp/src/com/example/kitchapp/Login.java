@@ -102,7 +102,11 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
+<<<<<<< HEAD
 	            .setMessage("No se encuentra registrado en KitchApp. Por favor regï¿½strese")
+=======
+	            .setMessage("No se encuentra registrado en KitchApp. Por favor regístrese")
+>>>>>>> origin/Rama-Vivi-Android
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -122,7 +126,11 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
+<<<<<<< HEAD
 	            .setMessage("Contraseï¿½a incorrecta. Intï¿½ntelo de nuevo")
+=======
+	            .setMessage("Contraseña incorrecta. Inténtelo de nuevo")
+>>>>>>> origin/Rama-Vivi-Android
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -143,7 +151,11 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
+<<<<<<< HEAD
 	            .setMessage("Ya existe ese nombre de usuario. Por favor regï¿½strese de nuevo")
+=======
+	            .setMessage("Ya existe ese nombre de usuario. Por favor regístrese de nuevo")
+>>>>>>> origin/Rama-Vivi-Android
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -155,4 +167,8 @@ public class Login extends Activity {
 	    builder.create();
 	    builder.show();
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/Rama-Vivi-Android

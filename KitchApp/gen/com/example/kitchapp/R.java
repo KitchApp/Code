@@ -8,9 +8,12 @@
 package com.example.kitchapp;
 
 public final class R {
+<<<<<<< HEAD
     public static final class array {
         public static final int Categorias=0x7f010000;
     }
+=======
+>>>>>>> origin/Rama-Vivi-Android
     public static final class attr {
     }
     public static final class color {
@@ -44,6 +47,7 @@ public final class R {
     }
     public static final class drawable {
         public static final int anadir_icono=0x7f020000;
+<<<<<<< HEAD
         public static final int barras=0x7f020001;
         public static final int boton_redondo_color_aqua=0x7f020002;
         public static final int boton_redondo_color_celeste=0x7f020003;
@@ -130,6 +134,79 @@ public final class R {
         public static final int login=0x7f080002;
         public static final int modificar_producto_despensa=0x7f080003;
         public static final int mostrar_productos_categoria=0x7f080004;
+=======
+        public static final int boton_redondo_color_aqua=0x7f020001;
+        public static final int boton_redondo_color_celeste=0x7f020002;
+        public static final int boton_redondo_color_navy=0x7f020003;
+        public static final int cabecera_kitchapp=0x7f020004;
+        public static final int close=0x7f020005;
+        public static final int fondo2=0x7f020006;
+        public static final int fondo_de_pantalla_naranja=0x7f020007;
+        public static final int fondo_pie_pagina=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int images=0x7f02000a;
+        public static final int lupa_sobre_un_robot_androide=0x7f02000b;
+        public static final int numberpicker_down=0x7f02000c;
+        public static final int numberpicker_up=0x7f02000d;
+        public static final int propuestaportadaappis=0x7f02000e;
+        public static final int prueba2=0x7f02000f;
+        public static final int resumen_de_color_como_fondo=0x7f020010;
+    }
+    public static final class id {
+        public static final int action_settings=0x7f090023;
+        public static final int btnLogin=0x7f090013;
+        public static final int btnRegistro=0x7f090021;
+        public static final int button1=0x7f090001;
+        public static final int button10=0x7f090007;
+        public static final int button2=0x7f090002;
+        public static final int button3=0x7f090003;
+        public static final int button4=0x7f090005;
+        public static final int button5=0x7f09000b;
+        public static final int button6=0x7f090004;
+        public static final int button7=0x7f09000c;
+        public static final int button8=0x7f090006;
+        public static final int button9=0x7f090009;
+        public static final int button_add=0x7f090008;
+        public static final int button_cancel=0x7f090019;
+        public static final int button_decrement=0x7f090015;
+        public static final int button_increment=0x7f090017;
+        public static final int button_lens=0x7f09000a;
+        public static final int button_save=0x7f090018;
+        public static final int cantProduct=0x7f090016;
+        public static final int editTextPassword=0x7f090012;
+        public static final int editTextuserName=0x7f090011;
+        public static final int encabezado=0x7f09000f;
+        public static final int footer=0x7f090010;
+        public static final int header=0x7f09001d;
+        public static final int link_to_login=0x7f090022;
+        public static final int link_to_register=0x7f090014;
+        public static final int listViewProducts=0x7f09001b;
+        public static final int progressBar1=0x7f09001c;
+        public static final int reg_email=0x7f09001f;
+        public static final int reg_password=0x7f090020;
+        public static final int reg_usuario=0x7f09001e;
+        public static final int textView1=0x7f090000;
+        public static final int textView_Dairy=0x7f09001a;
+        public static final int textView_Item_Cant=0x7f09000e;
+        public static final int textView_Item_Name=0x7f09000d;
+    }
+    public static final class layout {
+        public static final int activity_acceso_despensa=0x7f030000;
+        public static final int activity_item_listview=0x7f030001;
+        public static final int activity_login=0x7f030002;
+        public static final int activity_modificar_producto_despensa=0x7f030003;
+        public static final int activity_mostrar_productos_categoria=0x7f030004;
+        public static final int activity_pantalla_principal=0x7f030005;
+        public static final int activity_pantalla_transicion=0x7f030006;
+        public static final int cabecera=0x7f030007;
+        public static final int pie_de_pagina=0x7f030008;
+        public static final int registro=0x7f030009;
+    }
+    public static final class menu {
+        public static final int login=0x7f080000;
+        public static final int modificar_producto_despensa=0x7f080001;
+        public static final int mostrar_productos_categoria=0x7f080002;
+>>>>>>> origin/Rama-Vivi-Android
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
@@ -147,18 +224,29 @@ public final class R {
         public static final int lacteos=0x7f060009;
         public static final int lista_compra=0x7f060004;
         public static final int localizacion=0x7f060007;
+<<<<<<< HEAD
         public static final int ok=0x7f060021;
+=======
+        public static final int ok=0x7f060018;
+>>>>>>> origin/Rama-Vivi-Android
         public static final int panBolleria=0x7f06000b;
         public static final int pastasArroces=0x7f060010;
         public static final int pescados=0x7f06000e;
         public static final int recetario=0x7f060005;
         public static final int salsasCondimentos=0x7f06000f;
+<<<<<<< HEAD
         public static final int save=0x7f060020;
         public static final int title_activity_acceso_despensa=0x7f060008;
         public static final int title_activity_add_despensa=0x7f060016;
         public static final int title_activity_list_item_layout=0x7f060015;
         public static final int title_activity_modificar_producto_despensa=0x7f060019;
         public static final int title_activity_mostrar_productos_categoria=0x7f060018;
+=======
+        public static final int save=0x7f060016;
+        public static final int title_activity_acceso_despensa=0x7f060008;
+        public static final int title_activity_modificar_producto_despensa=0x7f060015;
+        public static final int title_activity_mostrar_productos_categoria=0x7f060019;
+>>>>>>> origin/Rama-Vivi-Android
         public static final int varios=0x7f060012;
     }
     public static final class style {

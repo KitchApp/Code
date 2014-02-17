@@ -13,47 +13,6 @@
         android:background="@drawable/boton_redondo_color_celeste"
         android:text="@string/lista_compra"
         android:onClick="accederDespensa" />
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="123dp"
-        android:layout_height="60dp" 
-        android:layout_marginLeft="176dp"
-        android:layout_marginTop="114dp"
-        android:background="@drawable/boton_redondo_color_celeste"
-        android:text="@string/despensa"
-        android:onClick="accederDespensa" />
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="123dp"
-        android:layout_height="60dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/button1"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/boton_redondo_color_celeste"
-        android:text="@string/recetario"
-        android:onClick="accederDespensa" />
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="123dp"
-        android:layout_height="60dp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/button2"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/boton_redondo_color_celeste"
-        android:text="@string/estadisticas"
-        android:onClick="accederDespensa" />
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="123dp"
-        android:layout_height="60dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/button3"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/boton_redondo_color_celeste"
-        android:text="@string/localizacion"
-        android:onClick="accederDespensa" />
 <!--
 <Button
         android:id="@+id/button1"
@@ -92,5 +51,49 @@
         android:background="@color/aqua"
         android:text="@string/estadisticas" />
   -->
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:onClick="accederDespensa"
+        android:text="@string/localizacion" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button1"
+        android:layout_marginRight="33dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:onClick="accederDespensa"
+        android:text="@string/despensa" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:onClick="accederDespensa"
+        android:text="@string/estadisticas" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/button4"
+        android:layout_alignBottom="@+id/button4"
+        android:layout_alignLeft="@+id/button1"
+        android:background="@drawable/boton_redondo_color_celeste"
+        android:onClick="accederDespensa"
+        android:text="@string/recetario" />
     
 </RelativeLayout>
