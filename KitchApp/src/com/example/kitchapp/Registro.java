@@ -50,8 +50,4 @@ public class Registro extends Activity implements OnClickListener {
 		}
 		
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/Rama-Vivi-Android
