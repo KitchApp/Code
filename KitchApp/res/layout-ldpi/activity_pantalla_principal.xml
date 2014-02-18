@@ -2,11 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-<<<<<<< HEAD
     android:background="@drawable/fondo2" >
-=======
-    android:background="@drawable/prueba2" >
->>>>>>> origin/Rama-Edu-Android
     
     <Button
         android:id="@+id/button1"
