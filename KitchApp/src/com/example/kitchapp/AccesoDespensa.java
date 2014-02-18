@@ -18,6 +18,8 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_acceso_despensa);
 		Button b = (Button) findViewById(R.id.button1);
 		b.setOnClickListener(this);
+		Button button_add=(Button)findViewById(R.id.button_add);
+		button_add.setOnClickListener(this);
 		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
 	}
 
@@ -44,6 +46,11 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		case R.id.button1:
 			Intent i = new Intent(this,MostrarProductosCategoria.class);
 			startActivity(i);
+			break;
+			
+		case R.id.button_add:
+			Intent j = new Intent(this,AddDespensa.class);
+			startActivity(j);
 			break;
 		}
 

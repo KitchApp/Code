@@ -45,11 +45,23 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		initializeArrayList();
 		Bundle extra = this.getIntent().getExtras();
 		if (extra!=null) {
-			int posi = extra.getInt("posicion");
-			int cantProducto = extra.getInt("cantProduct");
-			ItemProducto producto = products.get(posi);
-			producto.setCantidad(cantProducto);
-			products.set(posi,producto);
+			int key = extra.getInt("key");
+			if (key == 0) {
+				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"),"");
+				//if (!products.contains(item.getNombre())) {
+					products.add(item);
+				/*}
+				else {
+					errorProduct();
+				}*/
+			}
+			else {
+				int posi = extra.getInt("posicion");
+				int cantProducto = extra.getInt("cantProduct");
+				ItemProducto producto = products.get(posi);
+				producto.setCantidad(cantProducto);
+				products.set(posi,producto);
+			}
 		}
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
@@ -143,6 +155,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				ItemProducto prod = products.get(pos);
 				intent.putExtra("posicion",pos);
 				intent.putExtra("cantProduct",prod.getCantidad());
+				intent.putExtra("key",1);
 				//intent.putExtra("productos",products);
 				startActivity(intent);
 				break;
@@ -154,6 +167,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
             	Intent i = new Intent(this,MostrarProductosCategoria.class);
 				i.putExtra("posicion",pos);
 				i.putExtra("cantProduct",produ.getCantidad());
+				i.putExtra("key",1);
 				startActivity(i);
 				break;
 				
@@ -198,5 +212,25 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		products.set(pos,product);
 		modificarProducto(view,pos);
 		
+	}
+	
+	public void errorProduct() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		 
+	    builder.setTitle("Error")
+	            .setIcon(
+	                    getResources().getDrawable(
+	                            R.drawable.close))
+	            .setMessage("Producto ya existente en la despensa")
+	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+	 
+	                @Override
+	                public void onClick(DialogInterface arg0, int arg1) {
+	                	arg0.cancel();
+	                }
+	            });
+	 
+	    builder.create();
+	    builder.show();
 	}
 }

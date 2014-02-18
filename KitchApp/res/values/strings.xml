@@ -23,9 +23,13 @@
     <string name="anadirProducto">Añadir Producto</string>
     <string name="buscarProducto">Buscar Producto</string>
     <string name="title_activity_modificar_producto_despensa">ModificarProductoDespensaActivity</string>
-    <string name="save">Save</string>
-    <string name="cancel">Cancel</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
     <string name="ok">OK</string>
+    <string name="add_manually">Añadir Manualmente</string>
+    <string name="nameProduct">Nombre Producto</string>
+    <string name="cantProduct">Cantidad Producto</string>
+    <string name="add">Añadir</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
 
 </resources>
