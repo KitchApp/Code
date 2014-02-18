@@ -52,15 +52,9 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			startActivity(i);
 			break;
 			
-<<<<<<< HEAD
-		case R.id.button1:
-			Intent intent = new Intent(this,MostrarProductosCategoria.class);
-			startActivity(intent);
-=======
 		case R.id.button_add:
 			Intent j = new Intent(this,AddDespensa.class);
 			startActivity(j);
->>>>>>> origin/Rama-Edu-Android
 			break;
 		}
 	}
