@@ -68,15 +68,15 @@
 		android:textColor="@color/black" />
 		
 	<Button
-	   	    android:id="@+id/button5"
-	   	    android:layout_width="125dp"
-	   	    android:layout_height="58dp"
-	   	    android:layout_alignBaseline="@+id/button6"
-	   	    android:layout_alignBottom="@+id/button6"
-	   	    android:layout_alignLeft="@+id/button3"
-	   	    android:background="@drawable/boton_redondo_color_celeste"
-	   	    android:text="@string/carnes"
-	   	    android:textColor="@color/black" />
+		android:id="@+id/button5"
+		android:layout_width="125dp"
+		android:layout_height="58dp"
+		android:layout_alignBaseline="@+id/button6"
+		android:layout_alignBottom="@+id/button6"
+		android:layout_alignLeft="@+id/button3"
+		android:background="@drawable/boton_redondo_color_celeste"
+		android:text="@string/carnes"
+		android:textColor="@color/black" />
 	
 	 <Button
 		android:id="@+id/button6"
@@ -135,15 +135,15 @@
 	       	android:text="@string/varios"
 	       	android:textColor="@color/black" />
 	   	
-	   	<Button
-	   	    android:id="@+id/button_add"
-	   	    android:layout_width="100dp"
-	   	    android:layout_height="60dp"
-	   	    android:background="@drawable/anadir_icono"
-	   	    android:layout_alignParentLeft="true"
-	   	    android:layout_below="@+id/button9"
-	   	    android:layout_marginLeft="35dp"
-	   	    android:layout_marginTop="13dp"/>
+	<Button
+		android:id="@+id/button_add"
+		android:layout_width="100dp"
+		android:layout_height="60dp"
+		android:background="@drawable/anadir_icono"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@+id/button9"
+		android:layout_marginLeft="35dp"
+		android:layout_marginTop="13dp"/>
 	   	
 	   	<!--<Button
 	   	    android:id="@+id/button11"
@@ -157,15 +157,15 @@
 	   	    android:text="@string/anadirProducto"
 	   	    android:textColor="@color/white" /> -->
 	   	
-	   	<Button
-	   	    android:id="@+id/button_lens"
-	   	    android:layout_width="100dp"
-	   	    android:layout_height="60dp"
-	   	    android:background="@drawable/lupa_sobre_un_robot_androide"
-	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button10"
-	   	    android:layout_marginRight="30dp"
-	   	    android:layout_marginTop="13dp"/>
+	<Button
+		android:id="@+id/button_lens"
+		android:layout_width="100dp"
+		android:layout_height="60dp"
+		android:background="@drawable/lupa_sobre_un_robot_androide"
+		android:layout_alignParentRight="true"
+		android:layout_below="@+id/button10"
+		android:layout_marginRight="30dp"
+		android:layout_marginTop="13dp"/>
 	
 	   	<!--<Button
 	   	    android:id="@+id/button12"
