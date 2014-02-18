@@ -22,6 +22,8 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
 		Button b=(Button)findViewById(R.id.button_add);
 		b.setOnClickListener(this);
+		Button button_add=(Button)findViewById(R.id.button_add);
+		button_add.setOnClickListener(this);
 		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
 	}
 
@@ -50,9 +52,15 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			startActivity(i);
 			break;
 			
+<<<<<<< HEAD
 		case R.id.button1:
 			Intent intent = new Intent(this,MostrarProductosCategoria.class);
 			startActivity(intent);
+=======
+		case R.id.button_add:
+			Intent j = new Intent(this,AddDespensa.class);
+			startActivity(j);
+>>>>>>> origin/Rama-Edu-Android
 			break;
 		}
 	}
