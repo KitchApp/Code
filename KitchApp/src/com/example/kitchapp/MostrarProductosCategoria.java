@@ -16,7 +16,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MostrarProductosCategoria extends Activity implements OnClickListener {
 	
@@ -48,12 +47,22 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			int key = extra.getInt("key");
 			if (key == 0) {
 				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"),"");
-				//if (!products.contains(item.getNombre())) {
+				boolean encontrado = false;
+				int i = 0;
+				while (i<products.size() && !encontrado){
+					ItemProducto prod = products.get(i);
+					String name = prod.getNombre();
+					if (name.equals(item.getNombre())) {
+						encontrado = true;
+					}
+					i++;
+				}
+				if (!encontrado) {
 					products.add(item);
-				/*}
+				}
 				else {
 					errorProduct();
-				}*/
+				}
 			}
 			else {
 				int posi = extra.getInt("posicion");
@@ -63,6 +72,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				products.set(posi,producto);
 			}
 		}
+		TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
+		link_atras.setOnClickListener(this);
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -76,7 +87,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		    @Override
 		    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 		        // TODO Auto-generated method stub
-		        Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
+		        //Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
 		        cantFinal = products.get(position).getCantidad();
 		        modificarProducto(arg1,position);
 		 
@@ -169,6 +180,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				i.putExtra("cantProduct",produ.getCantidad());
 				i.putExtra("key",1);
 				startActivity(i);
+				break;
+			
+			case R.id.textView_Atras:
+				Intent j = new Intent(this,AccesoDespensa.class);
+				startActivity(j);
 				break;
 				
 		}

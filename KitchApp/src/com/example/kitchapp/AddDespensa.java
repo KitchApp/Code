@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class AddDespensa extends Activity implements OnClickListener {
@@ -31,7 +30,7 @@ public class AddDespensa extends Activity implements OnClickListener {
 	    @Override
 	    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 	        // TODO Auto-generated method stub
-	        Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
+	        //Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
 	        if (position == 0) {
 	        	addManualmente(arg1);
 	        }

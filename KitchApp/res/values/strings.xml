@@ -32,6 +32,8 @@
     <string name="nameProduct">Nombre Producto</string>
     <string name="cantProduct">Cantidad Producto</string>
     <string name="add">Añadir</string>
+    <string name="back">Volver</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
+    <string name="title_activity_add_manualmente">AddManualmenteActivity</string>
 
 </resources>

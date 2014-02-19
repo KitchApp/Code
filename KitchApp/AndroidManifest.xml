@@ -81,7 +81,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            
         </activity>
         <activity
             android:name="com.example.kitchapp.AddDespensa"
@@ -91,7 +90,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            
         </activity>
         <activity
             android:name="com.example.kitchapp.AddManualmente"
@@ -101,7 +99,6 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            
         </activity>
     </application>
 

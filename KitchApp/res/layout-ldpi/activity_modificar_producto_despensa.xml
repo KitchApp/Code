@@ -59,6 +59,9 @@
 	        android:text="@string/cancel" />
         
     </LinearLayout>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Rama-Edu-Android
     
 </LinearLayout>
