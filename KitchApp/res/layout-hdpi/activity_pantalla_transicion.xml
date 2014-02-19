@@ -10,12 +10,7 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
-<<<<<<< HEAD
-        android:layout_marginTop="175dip"
-        android:layout_marginLeft="155dip"/>
-=======
         android:layout_marginTop="210dip"
         android:layout_marginLeft="145dip"/>
->>>>>>> origin/Rama-Edu-Android
          
 </LinearLayout>
