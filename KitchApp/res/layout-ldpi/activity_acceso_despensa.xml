@@ -18,7 +18,6 @@
 
     	</TextView>
 
-<<<<<<< HEAD
    	<Button
        		android:id="@+id/button1"
    		android:layout_width="125dp"
@@ -132,89 +131,6 @@
 		android:layout_below="@+id/button8"
 		android:layout_marginRight="25dp"
 	   	android:layout_marginTop="13dp"
-=======
-   		<Button
-   	    	android:id="@+id/button1"
-	   	    android:layout_width="125dp"
-	   	    android:layout_height="58dp"
-	   	    android:layout_alignParentLeft="true"
-	   	    android:layout_below="@+id/textView1"
-	   	    android:layout_marginLeft="15dp"
-	   	    android:layout_marginTop="5dp"
-	   	    android:background="@drawable/boton_redondo_color_celeste"
-	   	    android:text="@string/lacteos"
-	   	    android:textColor="@color/black"/>
-   	
-	   	<Button
-	   	    android:id="@+id/button2"
-	   	    android:layout_width="125dp"
-	   	    android:layout_height="wrap_content"
-	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/textView1"
-	   	    android:layout_marginRight="25dp"
-	   	    android:layout_marginTop="5dp"
-	   	    android:background="@drawable/boton_redondo_color_celeste"
-	   	    android:text="@string/frutasVerduras"
-	   	    android:textColor="@color/black" />
-	   	
-	   	<Button
-	   	    android:id="@+id/button3"
-	   	    android:layout_width="125dp"
-	   	    android:layout_height="wrap_content"
-	   	    android:layout_above="@+id/button6"
-	   	    android:layout_alignParentLeft="true"
-	   	    android:layout_below="@+id/button1"
-	   	    android:layout_marginLeft="15dp"
-	   	    android:layout_marginTop="13dp"
-	   	    android:background="@drawable/boton_redondo_color_celeste"
-	   	    android:text="@string/panBolleria"
-	   	    android:textColor="@color/black" />
-	
-	   	<Button
-	       	android:id="@+id/button4"
-	       	android:layout_width="125dp"
-	       	android:layout_height="58dp"
-	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button2"
-	   	    android:layout_marginRight="25dp"
-	   	    android:layout_marginTop="13dp"
-	       	android:background="@drawable/boton_redondo_color_celeste"
-	       	android:text="@string/bebidas"
-	       	android:textColor="@color/black" />
-	
-	   	<Button
-	       	android:id="@+id/button6"
-	       	android:layout_width="125dp"
-	       	android:layout_height="58dp"
-	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button4"
-	   	    android:layout_marginRight="25dp"
-	   	    android:layout_marginTop="13dp"
-	       	android:background="@drawable/boton_redondo_color_celeste"
-	       	android:text="@string/pescados"
-	       	android:textColor="@color/black" />
-	
-	   	<Button
-	       	android:id="@+id/button8"
-	       	android:layout_width="125dp"
-	       	android:layout_height="wrap_content"
-	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button6"
-	   	    android:layout_marginRight="25dp"
-	   	    android:layout_marginTop="13dp"
-	       	android:background="@drawable/boton_redondo_color_celeste"
-	       	android:text="@string/pastasArroces"
-	       	android:textColor="@color/black" />
-	
-	   	<Button
-	       	android:id="@+id/button10"
-	       	android:layout_width="125dp"
-	       	android:layout_height="56dp"
-	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button8"
-	   	    android:layout_marginRight="25dp"
-	   	    android:layout_marginTop="13dp"
->>>>>>> origin/Rama-Edu-Android
 	       	android:background="@drawable/boton_redondo_color_celeste"
 	       	android:text="@string/varios"
 	       	android:textColor="@color/black" />
@@ -263,37 +179,6 @@
 	   	    android:text="@string/buscarProducto"
 	   	    android:textColor="@color/white" /> -->
 
-	   	<Button
-	   	    android:id="@+id/button5"
-	   	    android:layout_width="125dp"
-	   	    android:layout_height="58dp"
-	   	    android:layout_alignBaseline="@+id/button6"
-	   	    android:layout_alignBottom="@+id/button6"
-	   	    android:layout_alignLeft="@+id/button3"
-	   	    android:background="@drawable/boton_redondo_color_celeste"
-	   	    android:text="@string/carnes"
-	   	    android:textColor="@color/black" />
-
-	   	<Button
-	   	    android:id="@+id/button7"
-	   	    android:layout_width="125dp"
-	   	    android:layout_height="wrap_content"
-	   	    android:layout_alignBaseline="@+id/button8"
-	   	    android:layout_alignBottom="@+id/button8"
-	   	    android:layout_alignLeft="@+id/button5"
-	   	    android:background="@drawable/boton_redondo_color_celeste"
-	   	    android:text="@string/salsasCondimentos"
-	   	    android:textColor="@color/black" />
-
-	   	<Button
-	   	    android:id="@+id/button9"
-	   	    android:layout_width="125dp"
-	   	    android:layout_height="56dp"
-	   	    android:layout_above="@+id/button_lens"
-	   	    android:layout_alignLeft="@+id/button7"
-	   	    android:background="@drawable/boton_redondo_color_celeste"
-	   	    android:text="@string/congelados"
-	   	    android:textColor="@color/black" />
 	   	
 	</RelativeLayout>
 </ScrollView>
