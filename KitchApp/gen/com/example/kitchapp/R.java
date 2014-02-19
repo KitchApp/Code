@@ -50,25 +50,26 @@ public final class R {
         public static final int boton_redondo_color_navy=0x7f020004;
         public static final int cabecera_kitchapp=0x7f020005;
         public static final int close=0x7f020006;
-        public static final int fondo_de_pantalla_naranja=0x7f020007;
-        public static final int fondo_pie_pagina=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int images=0x7f02000a;
-        public static final int lupa_sobre_un_robot_androide=0x7f02000b;
-        public static final int microfono=0x7f02000c;
-        public static final int numberpicker_down=0x7f02000d;
-        public static final int numberpicker_up=0x7f02000e;
-        public static final int propuestaportadaappis=0x7f02000f;
-        public static final int prueba2=0x7f020010;
-        public static final int resumen_de_color_como_fondo=0x7f020011;
-        public static final int teclado_android=0x7f020012;
+        public static final int fondo2=0x7f020007;
+        public static final int fondo_de_pantalla_naranja=0x7f020008;
+        public static final int fondo_pie_pagina=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int images=0x7f02000b;
+        public static final int lupa_sobre_un_robot_androide=0x7f02000c;
+        public static final int microfono=0x7f02000d;
+        public static final int numberpicker_down=0x7f02000e;
+        public static final int numberpicker_up=0x7f02000f;
+        public static final int propuestaportadaappis=0x7f020010;
+        public static final int prueba2=0x7f020011;
+        public static final int resumen_de_color_como_fondo=0x7f020012;
+        public static final int teclado_android=0x7f020013;
     }
     public static final class id {
         public static final int EditTextCantProduct=0x7f0a0010;
         public static final int Spinner01=0x7f0a0011;
-        public static final int action_settings=0x7f0a002c;
+        public static final int action_settings=0x7f0a002d;
         public static final int btnLogin=0x7f0a001c;
-        public static final int btnRegistro=0x7f0a002a;
+        public static final int btnRegistro=0x7f0a002b;
         public static final int button1=0x7f0a0001;
         public static final int button10=0x7f0a000a;
         public static final int button2=0x7f0a0002;
@@ -92,20 +93,21 @@ public final class R {
         public static final int editTextuserName=0x7f0a001a;
         public static final int encabezado=0x7f0a0018;
         public static final int footer=0x7f0a0019;
-        public static final int header=0x7f0a0026;
+        public static final int header=0x7f0a0027;
         public static final int imageView1=0x7f0a0017;
         public static final int imagen=0x7f0a0015;
-        public static final int link_to_login=0x7f0a002b;
+        public static final int link_to_login=0x7f0a002c;
         public static final int link_to_register=0x7f0a001d;
         public static final int listView=0x7f0a000d;
         public static final int listViewProducts=0x7f0a0024;
         public static final int nombre=0x7f0a0016;
-        public static final int progressBar1=0x7f0a0025;
-        public static final int reg_email=0x7f0a0028;
-        public static final int reg_password=0x7f0a0029;
-        public static final int reg_usuario=0x7f0a0027;
+        public static final int progressBar1=0x7f0a0026;
+        public static final int reg_email=0x7f0a0029;
+        public static final int reg_password=0x7f0a002a;
+        public static final int reg_usuario=0x7f0a0028;
         public static final int textView1=0x7f0a0000;
         public static final int textViewAdd=0x7f0a000e;
+        public static final int textView_Atras=0x7f0a0025;
         public static final int textView_Dairy=0x7f0a0023;
         public static final int textView_Item_Cant=0x7f0a0014;
         public static final int textView_Item_Name=0x7f0a0013;
@@ -126,9 +128,10 @@ public final class R {
         public static final int registro=0x7f03000c;
     }
     public static final class menu {
-        public static final int login=0x7f090000;
-        public static final int modificar_producto_despensa=0x7f090001;
-        public static final int mostrar_productos_categoria=0x7f090002;
+        public static final int add_manualmente=0x7f090000;
+        public static final int login=0x7f090001;
+        public static final int modificar_producto_despensa=0x7f090002;
+        public static final int mostrar_productos_categoria=0x7f090003;
     }
     public static final class string {
         public static final int action_settings=0x7f070001;
@@ -136,6 +139,7 @@ public final class R {
         public static final int add_manually=0x7f070019;
         public static final int anadirProducto=0x7f070013;
         public static final int app_name=0x7f070000;
+        public static final int back=0x7f07001d;
         public static final int bebidas=0x7f07000c;
         public static final int buscarProducto=0x7f070014;
         public static final int cancel=0x7f070017;
@@ -158,8 +162,9 @@ public final class R {
         public static final int salsasCondimentos=0x7f07000f;
         public static final int save=0x7f070016;
         public static final int title_activity_acceso_despensa=0x7f070008;
+        public static final int title_activity_add_manualmente=0x7f07001f;
         public static final int title_activity_modificar_producto_despensa=0x7f070015;
-        public static final int title_activity_mostrar_productos_categoria=0x7f07001d;
+        public static final int title_activity_mostrar_productos_categoria=0x7f07001e;
         public static final int varios=0x7f070012;
     }
     public static final class style {
