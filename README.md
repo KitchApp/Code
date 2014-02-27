@@ -1,4 +1,2 @@
-Code
-====
 
-Code of App
+Code of KitchApp Aplication( Android and Web)

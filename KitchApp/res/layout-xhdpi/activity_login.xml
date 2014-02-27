@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+  <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+ 
+        <!--  Encabezado-->
+        <LinearLayout android:id="@+id/encabezado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@layout/cabecera"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip">
+                <!-- Logo de encabezado-->
+                <ImageView android:src="@drawable/cabecera_kitchapp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"/>
+                <!-- fin Logo de encabezado -->
+        </LinearLayout>
+        <!--  fin Encabezado -->
+        <!-- Pie de página -->
+        <LinearLayout android:id="@+id/footer"
+            	android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="90dip"
+                android:background="@layout/pie_de_pagina"
+                android:layout_alignParentBottom="true">
+        </LinearLayout>
+        <!-- fin Pie de página -->
+ 
+        <!-- Formulario de login -->
+        <LinearLayout
+         
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dip"
+          android:layout_below="@id/encabezado">
+                
+          <!--  Etiqueta de correo electrónico -->
+          <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:textSize="15dip"
+                android:text="Usuario"/>
+          
+          <EditText android:id="@+id/editTextuserName"
+              	android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:singleLine="true"/>
+          
+          <!--  Etiqueta contraseña -->
+          <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:textSize="15dip"
+                android:text="Contraseña"/>
+          
+          <EditText android:id="@+id/editTextPassword"
+              	android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:password="true"/>
+          
+          <!-- Botón Login -->
+          <Button android:id="@+id/btnLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Login"
+                android:onClick="intento_logueo"/>
+          
+          <!-- Enlace a la pantalla de registro -->
+          <TextView android:id="@+id/link_to_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:layout_marginBottom="40dip"
+                android:text="Nuevo en KitchApp? Registrate Aquí"
+                android:gravity="center"
+                android:textSize="20dip"
+                android:textColor="#0b84aa"
+                android:clickable="true"
+                android:onClick="registrarse" />
+ 
+        </LinearLayout>
+        <!-- fin Formulario de login -->
+  </RelativeLayout>
+</ScrollView>
