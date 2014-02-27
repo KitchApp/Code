@@ -116,7 +116,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
  
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
+<<<<<<< HEAD
+        //view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
+        view = inflater.inflate(R.layout.activity_add_despensa, null);
+=======
         view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
+>>>>>>> Rama-Android
         cantProduct = (TextView) view.findViewById(R.id.cantProduct);
         cantProduct.setText(products.get(position).getCantidad() + "");
     	pos = position;
