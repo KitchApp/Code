@@ -8,14 +8,14 @@
 package com.example.kitchapp;
 
 public final class R {
-<<<<<<< HEAD
-    public static final class array {
+//<<<<<<< HEAD
+    /*public static final class array {
         public static final int Categorias=0x7f050000;
-=======
+=======*/
     
     public static final class array {
         public static final int Categorias=0x7f010000;
->>>>>>> Rama-Android
+//>>>>>>> Rama-Android
     }
     public static final class attr {
     }
@@ -55,7 +55,7 @@ public final class R {
         public static final int boton_redondo_color_celeste=0x7f020003;
         public static final int boton_redondo_color_navy=0x7f020004;
         public static final int cabecera_kitchapp=0x7f020005;
-<<<<<<< HEAD
+/*<<<<<<< HEAD
         public static final int close=0x7f020006;
         public static final int fondo2=0x7f020007;
         public static final int fondo_de_pantalla_naranja=0x7f020008;
@@ -117,8 +117,8 @@ public final class R {
         public static final int textView_Atras=0x7f0a0025;
         public static final int textView_Dairy=0x7f0a0023;
         public static final int textView_Item_Cant=0x7f0a0014;
-        public static final int textView_Item_Name=0x7f0a0013;
-=======
+        public static final int textView_Item_Name=0x7f0a0013;*/
+//=======
         public static final int fondo_pie_pagina=0x7f020006;
         public static final int ic_launcher=0x7f020007;
         public static final int images=0x7f020008;
@@ -186,12 +186,12 @@ public final class R {
         public static final int textViewAdd=0x7f090031;
         public static final int textView_Atras=0x7f090032;
         
->>>>>>> Rama-Android
+//>>>>>>> Rama-Android
     }
     public static final class layout {
         public static final int activity_acceso_despensa=0x7f030000;
         public static final int activity_add_despensa=0x7f030001;
-<<<<<<< HEAD
+/*<<<<<<< HEAD
         public static final int activity_add_manualmente=0x7f030002;
         public static final int activity_add_producto=0x7f030003;
         public static final int activity_item_listview=0x7f030004;
@@ -245,8 +245,8 @@ public final class R {
         public static final int title_activity_list_item_layout=0x7f070015;
         public static final int title_activity_modificar_producto_despensa=0x7f070017;
         public static final int title_activity_mostrar_productos_categoria=0x7f070020;
-        public static final int varios=0x7f070012;
-=======
+        public static final int varios=0x7f070012;*/
+//=======
         public static final int activity_list_item_layout=0x7f030002;
         public static final int activity_login=0x7f030003;
         public static final int activity_pantalla_principal=0x7f030004;
@@ -304,7 +304,7 @@ public final class R {
         public static final int back=0x7f060020;
         public static final int title_activity_add_manualmente=0x7f060021;
         
->>>>>>> Rama-Android
+//>>>>>>> Rama-Android
     }
     public static final class style {
         /** 
