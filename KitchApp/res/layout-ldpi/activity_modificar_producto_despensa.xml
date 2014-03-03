@@ -11,9 +11,9 @@
     
 	    <Button 
 	        android:id="@+id/button_decrement"
-	        android:layout_width="70dp"
+	        android:layout_width="60dp"
 	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="23dp"
+	        android:layout_marginLeft="10dp"
 	        android:layout_marginTop="5dp"
 	        android:background="@drawable/numberpicker_down"
 	        android:onClick="decrementCant"/>
@@ -21,7 +21,7 @@
 	        android:id="@+id/cantProduct"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="30dp"
+	        android:layout_marginLeft="15dp"
 	        android:layout_marginTop="5dp"
 	    	android:text="5"
 	    	android:textColor="@color/navy"
@@ -31,9 +31,9 @@
 	
 	    <Button
 	        android:id="@+id/button_increment"
-	        android:layout_width="70dp"
+	        android:layout_width="60dp"
 	        android:layout_height="wrap_content"
-	        android:layout_marginLeft="30dp"
+	        android:layout_marginLeft="20dp"
 	        android:background="@drawable/numberpicker_up" 
 	        android:onClick="incrementCant" />
 	    
@@ -46,14 +46,14 @@
 	    
         <Button
 	        android:id="@+id/button_save"
-	        android:layout_width="130dp"
+	        android:layout_width="100dp"
 	        android:layout_height="wrap_content"
 	        android:background="@color/gray" 
 	        android:text="@string/save" />
         
         <Button
 	        android:id="@+id/button_cancel"
-	        android:layout_width="140dp"
+	        android:layout_width="100dp"
 	        android:layout_height="wrap_content"
 	        android:background="@color/gray" 
 	        android:text="@string/cancel" />

@@ -64,7 +64,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	
 	
 	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
+		final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
 	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    
