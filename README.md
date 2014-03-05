@@ -1,4 +1,4 @@
 Code
 ====
 
-Code of App
+Code of the Android Application.
