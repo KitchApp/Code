@@ -56,6 +56,7 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< HEAD
             android:name="com.example.kitchapp.ItemAdapter"
             android:label="@string/app_name" >
             <intent-filter>
@@ -74,12 +75,15 @@
             </intent-filter>
         </activity>
         <activity
+=======
+>>>>>>> Rama-Android
             android:name="com.example.kitchapp.ItemAdapter"
             android:label="@string/app_name" >
             <intent-filter>
-            <action android:name="com.example.kitchapp.ItemAdapter" />
-            <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.example.kitchapp.ItemAdapter" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            
         </activity>
         
         <activity
@@ -87,7 +91,6 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.kitchapp.MostrarProductosCategoria" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

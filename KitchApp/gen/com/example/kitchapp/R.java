@@ -8,9 +8,8 @@
 package com.example.kitchapp;
 
 public final class R {
-    
     public static final class array {
-        public static final int Categorias=0x7f010000;
+        public static final int Categorias=0x7f050000;
     }
     public static final class attr {
     }
@@ -50,23 +49,26 @@ public final class R {
         public static final int boton_redondo_color_celeste=0x7f020003;
         public static final int boton_redondo_color_navy=0x7f020004;
         public static final int cabecera_kitchapp=0x7f020005;
-        public static final int fondo_pie_pagina=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int images=0x7f020008;
-        public static final int lupa_sobre_un_robot_androide=0x7f020009;
-        public static final int microfono=0x7f02000a;
-        public static final int propuestaportadaappis=0x7f02000b;
-        public static final int prueba2=0x7f02000c;
-        public static final int teclado_android=0x7f02000d;
+        public static final int close=0x7f020006;
+        public static final int fondo2=0x7f020007;
+        public static final int fondo_de_pantalla_naranja=0x7f020008;
+        public static final int fondo_pie_pagina=0x7f020009;
+        public static final int ic_launcher=0x7f02000a;
+        public static final int images=0x7f02000b;
+        public static final int lupa_sobre_un_robot_androide=0x7f02000c;
+        public static final int microfono=0x7f02000d;
         public static final int numberpicker_down=0x7f02000e;
         public static final int numberpicker_up=0x7f02000f;
-        public static final int resumen_de_color_como_fondo=0x7f020010;
-        public static final int fondo_de_pantalla_naranja=0x7f020011;
-        public static final int close=0x7f020012;
-        public static final int fondo2=0x7f020013;
+        public static final int propuestaportadaappis=0x7f020010;
+        public static final int prueba2=0x7f020011;
+        public static final int resumen_de_color_como_fondo=0x7f020012;
+        public static final int teclado_android=0x7f020013;
     }
     public static final class id {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Rama-Android
         public static final int EditTextCantProduct=0x7f0a000f;
         public static final int Spinner01=0x7f0a0010;
         public static final int action_settings=0x7f0a002c;
@@ -112,6 +114,7 @@ public final class R {
         public static final int textView_Dairy=0x7f0a0022;
         public static final int textView_Item_Cant=0x7f0a0013;
         public static final int textView_Item_Name=0x7f0a0012;
+<<<<<<< HEAD
     }
     public static final class layout {
         public static final int activity_acceso_despensa=0x7f030000;
@@ -194,18 +197,34 @@ public final class R {
         public static final int activity_mostrar_productos_categoria=0x7f03000b;
         public static final int activity_add_manualmente=0x7f03000c;
 >>>>>>> Rama-Android
+=======
+    }
+    public static final class layout {
+        public static final int activity_acceso_despensa=0x7f030000;
+        public static final int activity_add_manualmente=0x7f030001;
+        public static final int activity_item_listview=0x7f030002;
+        public static final int activity_list_item_layout=0x7f030003;
+        public static final int activity_login=0x7f030004;
+        public static final int activity_modificar_producto_despensa=0x7f030005;
+        public static final int activity_mostrar_productos_categoria=0x7f030006;
+        public static final int activity_pantalla_principal=0x7f030007;
+        public static final int activity_pantalla_transicion=0x7f030008;
+        public static final int cabecera=0x7f030009;
+        public static final int pie_de_pagina=0x7f03000a;
+        public static final int registro=0x7f03000b;
+>>>>>>> Rama-Android
     }
     public static final class menu {
-        public static final int add_despensa=0x7f080000;
-        public static final int list_item_layout=0x7f080001;
-        public static final int login=0x7f080002;
-        public static final int modificar_producto_despensa=0x7f080003;
-        public static final int mostrar_productos_categoria=0x7f080004;
-        public static final int add_manualmente=0x7f080005;
-        
+        public static final int add_manualmente=0x7f090000;
+        public static final int login=0x7f090001;
+        public static final int modificar_producto_despensa=0x7f090002;
+        public static final int mostrar_productos_categoria=0x7f090003;
     }
     public static final class string {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Rama-Android
         public static final int action_settings=0x7f070001;
         public static final int add=0x7f07001e;
         public static final int add_manually=0x7f07001b;
@@ -240,6 +259,7 @@ public final class R {
         public static final int title_activity_modificar_producto_despensa=0x7f070017;
         public static final int title_activity_mostrar_productos_categoria=0x7f070020;
         public static final int varios=0x7f070012;
+<<<<<<< HEAD
 =======
         public static final int action_settings=0x7f060000;
         public static final int anadirProducto=0x7f060001;
@@ -276,6 +296,8 @@ public final class R {
         public static final int back=0x7f060020;
         public static final int title_activity_add_manualmente=0x7f060021;
         
+>>>>>>> Rama-Android
+=======
 >>>>>>> Rama-Android
     }
     public static final class style {
