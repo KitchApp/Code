@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/add_manually"
         android:textColor="@color/navy"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editTextNameProduct"
@@ -21,8 +21,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/textViewAdd"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
+        android:textSize="15sp"
         android:hint="@string/nameProduct"
         android:textColorHint="@color/black" />
 
@@ -32,10 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/editTextNameProduct"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="@string/cantProduct" 
-        android:textColorHint="@color/black">
+        android:textSize="15sp"
+        android:hint="@string/cantProduct"
+        android:textColorHint="@color/black" >
 
         <requestFocus />
     </EditText>
@@ -47,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/EditTextCantProduct"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:background="@color/gray"
         android:entries="@array/Categorias" />
     
@@ -57,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/Spinner01"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/boton_redondo_color_navy"
         android:text="@string/add" 
         android:textColor="@color/white"/>

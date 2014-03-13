@@ -25,6 +25,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private TextView cantProduct;
     private Button save;
     private Button cancel;
+    private Button decrement;
+    private Button increment;
     private int cantFinal;
     private AlertDialog.Builder builder;
     
@@ -116,6 +118,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
  
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
+
         view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
         cantProduct = (TextView) view.findViewById(R.id.cantProduct);
         cantProduct.setText(products.get(position).getCantidad() + "");
@@ -124,6 +127,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     	save.setOnClickListener(this);
     	cancel = (Button) view.findViewById(R.id.button_cancel);
     	cancel.setOnClickListener(this);
+    	decrement = (Button) view.findViewById(R.id.button_decrement);
+    	decrement.setOnClickListener(this);
+    	increment = (Button) view.findViewById(R.id.button_increment);
+    	increment.setOnClickListener(this);
         builder.setView(view);
                 // Add action buttons
                 /*.setPositiveButton(R.string.save,
@@ -187,6 +194,14 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				startActivity(j);
 				break;
 				
+			case R.id.button_decrement:
+				decrementCant(v);
+				break;
+				
+			case R.id.button_increment:
+				incrementCant(v);
+				break;
+				
 		}
             	
 				
@@ -212,7 +227,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		if (product.getCantidad() > 0) {
 			product.setCantidad(product.getCantidad()-1);
 			products.set(pos,product);
-			modificarProducto(view,pos);
+			cantProduct.setText(product.getCantidad() + "");
 		}
 		
 	}
@@ -226,7 +241,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		ItemProducto product = products.get(pos);
 		product.setCantidad(product.getCantidad()+1);
 		products.set(pos,product);
-		modificarProducto(view,pos);
+		cantProduct.setText(product.getCantidad() + "");
 		
 	}
 	

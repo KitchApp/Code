@@ -52,7 +52,7 @@
           <EditText android:id="@+id/reg_usuario"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="4dip"
                 android:singleLine="true"
                 android:layout_marginBottom="20dip"/>
           
@@ -65,7 +65,7 @@
           <EditText android:id="@+id/reg_email"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="4dip"
                 android:singleLine="true"
                 android:layout_marginBottom="20dip"/>
           
@@ -86,7 +86,7 @@
           <Button android:id="@+id/btnRegistro"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
+                android:layout_marginTop="8dip"
                 android:text="Registrar Nueva Cuenta"/>
           
           <!-- Enlace a la pantalla de login -->
@@ -97,7 +97,7 @@
                 android:layout_marginBottom="40dip"
                 android:text="Ya tienes una cuenta! Entra Aquí"
                 android:gravity="center"
-                android:textSize="20dip"
+                android:textSize="18dip"
                 android:textColor="#025f7c"/>
  
         </LinearLayout>

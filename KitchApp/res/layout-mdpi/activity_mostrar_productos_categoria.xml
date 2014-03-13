@@ -15,7 +15,7 @@
         	android:layout_height="wrap_content"
         	android:layout_marginLeft="90dp"
         	android:text="@string/lacteos"
-        	android:textSize="40sp" 
+        	android:textSize="35sp" 
         	android:textColor="@color/navy"/>
     
     	<ListView

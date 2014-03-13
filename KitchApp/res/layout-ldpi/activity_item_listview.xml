@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:text="Leche Asturiana Entera"
-        android:textSize="20sp" 
+        android:textSize="15sp" 
         android:textColor="@color/black"/>
     <TextView 
         android:id="@+id/textView_Item_Cant"
