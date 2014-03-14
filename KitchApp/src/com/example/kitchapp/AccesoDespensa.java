@@ -30,22 +30,9 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 
 		Button b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(this);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
->>>>>>> Rama-Android
-=======
->>>>>>> Rama-Android
-		Button b=(Button)findViewById(R.id.button_add);
-		b.setOnClickListener(this);
+
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> Rama-Android
 	}
 
 	@Override
@@ -68,8 +55,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			break;
 			
 		case R.id.button_add:
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 			alertDialog(v);
 		}
@@ -77,7 +62,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	
 	
 	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
+		final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
 	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    
@@ -95,38 +80,4 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		  startActivity(intent);
 	  }
 
-=======
-			Intent j = new Intent(this,AddDespensa.class);
-			startActivity(j);
-			break;
-		}
-	}
->>>>>>> Rama-Android
-=======
-
-			alertDialog(v);
-		}
-	}
-	
-	
-	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
-	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
-	    ListAdapter adapter = new ItemAdapter(this, items, icons);
-	    
-        new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
-        	public void onClick(DialogInterface dialog, int item ) {
-        		if (item==0)
-        			addManualmente();
-	        }
-	    }).show();
-	}
-	
-	
-	public void addManualmente() {
-		  Intent intent = new Intent(this,AddManualmente.class);
-		  startActivity(intent);
-	  }
-
->>>>>>> Rama-Android
 }
