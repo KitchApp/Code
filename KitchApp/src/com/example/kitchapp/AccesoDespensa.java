@@ -3,7 +3,6 @@ package com.example.kitchapp;
 
 import android.os.Bundle;
 import android.app.Activity;
-<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,37 +19,27 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
-=======
-import android.content.Intent;
-import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
->>>>>>> Rama-Android
+
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 
+	Button b1;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
 
-		Button b1 = (Button) findViewById(R.id.button1);
+		b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(this);
-<<<<<<< HEAD
-=======
-		Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
->>>>>>> Rama-Android
 		Button b=(Button)findViewById(R.id.button_add);
 		b.setOnClickListener(this);
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
-<<<<<<< HEAD
-=======
-		//Toast.makeText(this, "Actividad despensa", Toast.LENGTH_SHORT).show();
->>>>>>> Rama-Android
+		
 	}
 
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -58,32 +47,21 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		return true;
 	}
 	
-<<<<<<< HEAD
-=======
-	/*public void mostrarProductos(View view) {
-		Intent intent = new Intent(this,MostrarProductosCategoria.class);
-		startActivity(intent);
-	}*/
->>>>>>> Rama-Android
+
 	
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()){
-<<<<<<< HEAD
-=======
-		/*case R.id.button_add:
-			Intent i = new Intent(this,AddDespensa.class);
-			startActivity(i);
-			break;*/
->>>>>>> Rama-Android
+
 		case R.id.button1:
 			Intent i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("lacteos", 1);
 			startActivity(i);
 			break;
 			
 		case R.id.button_add:
-<<<<<<< HEAD
+
 			alertDialog(v);
 		}
 	}
@@ -107,11 +85,5 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		  Intent intent = new Intent(this,AddManualmente.class);
 		  startActivity(intent);
 	  }
-=======
-			Intent j = new Intent(this,AddDespensa.class);
-			startActivity(j);
-			break;
-		}
-	}
->>>>>>> Rama-Android
+
 }

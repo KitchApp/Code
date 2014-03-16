@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/images">
+
+    <TextView
+        android:id="@+id/textViewAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_manually"
+        android:textColor="@color/navy"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextNameProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewAdd"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:textSize="15sp"
+        android:text="@string/nameProduct" />
+
+    <EditText
+        android:id="@+id/EditTextCantProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editTextNameProduct"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:textSize="15sp"
+        android:text="@string/cantProduct" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/Spinner01"
+        style="@style/AppTheme"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/EditTextCantProduct"
+        android:layout_marginTop="40dp"
+        android:background="@color/gray"
+        android:entries="@array/Categorias" />
+    
+    <Button 
+        android:id="@+id/button_addProduct"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Spinner01"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boton_redondo_color_navy"
+        android:text="@string/add" 
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
+

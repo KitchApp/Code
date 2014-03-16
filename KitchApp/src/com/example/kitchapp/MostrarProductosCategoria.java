@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -27,26 +28,64 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private Button cancel;
     private int cantFinal;
     private AlertDialog.Builder builder;
+    Handler_Sqlite helper=new Handler_Sqlite(this);
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mostrar_productos_categoria);
-			/*int posi = extra.getInt("posicion");
-			int cantProducto = extra.getInt("cantProduct");
-			ItemProducto producto = products.get(posi);
-			System.out.println("holaaaaa");
-			producto.setCantidad(cantProducto);
-			products.set(posi,producto);*/
-			//products = new ArrayList<ItemProducto>();
-			//products = extra.getParcelable("productos");
 		products = new ArrayList<ItemProducto>();
-		initializeArrayList();
+		
+		
+		/*SQLiteDatabase tmp=helper.open();	
+		if (tmp!=null){
+				helper.insertProducto("Yogurt",2,1);
+				helper.insertProducto("Manzana",3,2 );
+				helper.insertProducto("Magdalena",5,3);
+				helper.insertProducto("Leche",6,1);
+				helper.insertProducto("coca-cola", 4, 4);
+				helper.insertProducto("Pollo", 1, 5);
+				helper.insertProducto("Merluza", 1, 6);
+				helper.insertProducto("Red bull", 4, 4);
+				helper.insertProducto("Arroz largo", 4, 8);
+				helper.insertProducto("Guisantes", 1, 9);
+				helper.insertProducto("Gel baño", 4, 10);
+				helper.insertProducto("Macarrones", 2, 8);
+				helper.insertProducto("Helado Fresa", 4, 9);
+				/*helper.insertCategory(1,"Lácteos")
+				helper.insertCategory(2,"Frutas y Verduras")
+				helper.insertCategory(3,"Pan y Bollería")
+				helper.insertCategory(4,"Bebidas")
+				helper.insertCategory(5,"Carnes")
+				helper.insertCategory(6,"Pescados")
+				helper.insertCategory(7,"Salsas y condimentos")
+				helper.insertCategory(8,"Arroces")
+				helper.insertCategory(9,"Congelados")
+				helper.insertCategory(10,"Varios")*/
+		
+		Bundle extraLacteos= this.getIntent().getExtras();
+		if(extraLacteos!=null){
+			Integer lacteos=extraLacteos.getInt("lacteos");
+			initializeArrayList(lacteos);
+			
+		}
+			
+			
+		//}		
+			
+		
+		helper.close();
+		
+		
+		
 		Bundle extra = this.getIntent().getExtras();
+		
+		
 		if (extra!=null) {
 			int key = extra.getInt("key");
 			if (key == 0) {
-				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"),"");
+				
+				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"));
 				boolean encontrado = false;
 				int i = 0;
 				while (i<products.size() && !encontrado){
@@ -57,12 +96,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					}
 					i++;
 				}
-				if (!encontrado) {
+				/*if (!encontrado) {
 					products.add(item);
 				}
 				else {
 					errorProduct();
-				}
+				}*/
 			}
 			else {
 				int posi = extra.getInt("posicion");
@@ -72,6 +111,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				products.set(posi,producto);
 			}
 		}
+		
 		TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
 		link_atras.setOnClickListener(this);
 		list = (ListView)findViewById(R.id.listViewProducts);
@@ -104,11 +144,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	}
 	
 	public void modificarProducto(View view,int position) {
-		/*Intent intent = new Intent(this,ModificarProductoDespensa.class);
-		startActivity(intent);*/
-		/*ModificarProductoDespensa intent = new ModificarProductoDespensa();
-		Toast.makeText(this, "Actividad mostrar productos", Toast.LENGTH_SHORT).show();
-		intent.onCreateDialog(null);*/
+		
 		builder = new AlertDialog.Builder(this);
 		 
         // Get the layout inflater
@@ -116,12 +152,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
  
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
-<<<<<<< HEAD
-        //view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
-        view = inflater.inflate(R.layout.activity_add_despensa, null);
-=======
+
         view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
->>>>>>> Rama-Android
         cantProduct = (TextView) view.findViewById(R.id.cantProduct);
         cantProduct.setText(products.get(position).getCantidad() + "");
     	pos = position;
@@ -130,27 +162,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     	cancel = (Button) view.findViewById(R.id.button_cancel);
     	cancel.setOnClickListener(this);
         builder.setView(view);
-                // Add action buttons
-                /*.setPositiveButton(R.string.save,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                /*Toast.makeText(getActivity(), "Set",
-                                        Toast.LENGTH_SHORT).show();
-                            	finish();
-                            	
-                            }
-                        })
-                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        /*Toast.makeText(getActivity(), "Cancel", Toast.LENGTH_SHORT)
-                                .show();
-                    	ItemProducto prod = products.get(pos);
-                    	prod.setCantidad(cantFinal);
-                    	products.set(pos,prod);
-                    	finish();
-                    	
-                    }
-                });*/
+                
         
         builder.create();
         builder.show();
@@ -197,13 +209,16 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				
 	}
 	
-	private void initializeArrayList() {
-		products.add(new ItemProducto(0,"Leche Asturiana Entera",5,""));
-		products.add(new ItemProducto(1,"Leche Asturiana Desnatada",4,""));
-		products.add(new ItemProducto(2,"Leche Asturiana Semidesnatada",3,""));
-		products.add(new ItemProducto(3,"Yogures Naturales Danone",4,""));
+	private void initializeArrayList(Integer category) {
+	
+		
+		products=helper.read(category);
+		
+		/*products.add(new ItemProducto(1,helper.read()[1],4,""));
+		products.add(new ItemProducto(2,helper.read()[2],3,""));
+		products.add(new ItemProducto(3,helper.read()[4],4,""));
 		products.add(new ItemProducto(4,"Natillas Chocolate Danone",2,""));
-		products.add(new ItemProducto(5,"Queso Semicurado El Ventero",1,""));
+		products.add(new ItemProducto(5,"Queso Semicurado El Ventero",1,""));*/
 		
 	}
 	
