@@ -32,17 +32,10 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 
 		b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(this);
-<<<<<<< HEAD
 
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
-=======
-		Button b=(Button)findViewById(R.id.button_add);
-		b.setOnClickListener(this);
-		Button button_add=(Button)findViewById(R.id.button_add);
-		button_add.setOnClickListener(this);
-		
->>>>>>> Rama-Mayra-Android
+
 	}
 
 	
