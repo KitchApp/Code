@@ -23,18 +23,29 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 
+	Button b1;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
 
-		Button b1 = (Button) findViewById(R.id.button1);
+		b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(this);
+<<<<<<< HEAD
 
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
+=======
+		Button b=(Button)findViewById(R.id.button_add);
+		b.setOnClickListener(this);
+		Button button_add=(Button)findViewById(R.id.button_add);
+		button_add.setOnClickListener(this);
+		
+>>>>>>> Rama-Mayra-Android
 	}
 
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -51,6 +62,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 
 		case R.id.button1:
 			Intent i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("lacteos", 1);
 			startActivity(i);
 			break;
 			

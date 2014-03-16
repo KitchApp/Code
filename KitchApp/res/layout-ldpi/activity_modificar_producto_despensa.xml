@@ -33,7 +33,12 @@
 	        android:layout_width="60dp"
 	        android:layout_height="wrap_content"
 	        android:layout_marginLeft="20dp"
+<<<<<<< HEAD
 	        android:background="@drawable/numberpicker_up"  />
+=======
+	        android:background="@drawable/numberpicker_up" 
+	        android:onClick="incrementCant" />
+>>>>>>> Rama-Mayra-Android
 	    
     </LinearLayout>
     
