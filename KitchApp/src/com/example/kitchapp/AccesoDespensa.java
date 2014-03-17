@@ -47,10 +47,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
-<<<<<<< HEAD
-=======
-
->>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
 	}
 
 	
@@ -79,11 +75,10 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			alertDialog(v);
 		}
 	}
-<<<<<<< HEAD
 	
 	
 	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
+		final String [] items = new String[] {"Manualmente", "Voz", "CÃ³digo de barras" };
 	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    
@@ -104,8 +99,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		  Intent intent = new Intent(this,AddManualmente.class);
 		  startActivity(intent);
 	  }
-=======
->>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
 	
 	public void addVoice() {
 		if(isConnected()){
@@ -119,7 +112,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
        	}
 	}
 	
-<<<<<<< HEAD
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo net = cm.getActiveNetworkInfo();
@@ -128,19 +120,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	    } else {
 	        return false; 
 	    }
-=======
-	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
-	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
-	    ListAdapter adapter = new ItemAdapter(this, items, icons);
-	    
-        new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
-        	public void onClick(DialogInterface dialog, int item ) {
-        		if (item==0)
-        			addManualmente();
-	        }
-	    }).show();
->>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
 	}
 	
 	@Override
@@ -188,7 +167,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
    	 		startActivity(intent);
 		}
 		catch (NumberFormatException e) {
-			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un número", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un nï¿½mero", Toast.LENGTH_SHORT).show();
 		}
 	}
 
