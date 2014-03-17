@@ -23,26 +23,48 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 
-	Button b1;
+	Button buttonLacteos;
+	Button buttonFrutas;
+	Button buttonPan;
+	Button buttonBebidas;
+	Button buttonCarnes;
+	Button buttonPescados;
+	Button buttonSalsas;
+	Button buttonPastas;
+	Button buttonCongelados;
+	Button buttonVarios;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
 
-		b1 = (Button) findViewById(R.id.button1);
-		b1.setOnClickListener(this);
-<<<<<<< HEAD
+		buttonLacteos = (Button) findViewById(R.id.buttonLacteos);
+		buttonLacteos.setOnClickListener(this);
+		buttonFrutas = (Button) findViewById(R.id.buttonFrutas);
+		buttonFrutas.setOnClickListener(this);
+		buttonPan = (Button) findViewById(R.id.buttonPan);
+		buttonPan.setOnClickListener(this);
+		buttonBebidas = (Button) findViewById(R.id.buttonBebidas);
+		buttonBebidas.setOnClickListener(this);
+		buttonCarnes = (Button) findViewById(R.id.buttonCarnes);
+		buttonCarnes.setOnClickListener(this);
+		buttonPescados = (Button) findViewById(R.id.buttonPescados);
+		buttonPescados.setOnClickListener(this);
+		buttonSalsas = (Button) findViewById(R.id.buttonSalsas);
+		buttonSalsas.setOnClickListener(this);
+		buttonPastas = (Button) findViewById(R.id.buttonPastas);
+		buttonPastas.setOnClickListener(this);
+		buttonCongelados = (Button) findViewById(R.id.buttonCongelados);
+		buttonCongelados.setOnClickListener(this);
+		buttonVarios = (Button) findViewById(R.id.buttonVarios);
+		buttonVarios.setOnClickListener(this);
 
-		Button button_add=(Button)findViewById(R.id.button_add);
-		button_add.setOnClickListener(this);
-=======
 		Button b=(Button)findViewById(R.id.button_add);
 		b.setOnClickListener(this);
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
 		
->>>>>>> Rama-Mayra-Android
 	}
 
 	
@@ -58,13 +80,60 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		Intent i;
 		switch (v.getId()){
 
-		case R.id.button1:
-			Intent i = new Intent(this,MostrarProductosCategoria.class);
+		case R.id.buttonLacteos:
+			i = new Intent(this,MostrarProductosCategoria.class);
 			i.putExtra("lacteos", 1);
 			startActivity(i);
 			break;
+		case R.id.buttonFrutas:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("frutas", 2);
+			startActivity(i);
+			break;
+		case R.id.buttonPan:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("pan", 3);
+			startActivity(i);
+			break;
+		case R.id.buttonBebidas:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("bebidas", 4);
+			startActivity(i);
+			break;
+		case R.id.buttonCarnes:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("carnes", 5);
+			startActivity(i);
+			break;
+		case R.id.buttonPescados:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("pescados", 6);
+			startActivity(i);
+			break;
+		case R.id.buttonSalsas:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("salsas", 7);
+			startActivity(i);
+			break;
+		case R.id.buttonPastas:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("pastas", 8);
+			startActivity(i);
+			break;
+		case R.id.buttonCongelados:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("congelados", 9);
+			startActivity(i);
+			break;
+		case R.id.buttonVarios:
+			i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("varios", 10);
+			startActivity(i);
+			break;
+
 			
 		case R.id.button_add:
 
@@ -74,7 +143,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	
 	
 	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
+		final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
 	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    

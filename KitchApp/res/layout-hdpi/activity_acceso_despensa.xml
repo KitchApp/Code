@@ -19,7 +19,7 @@
     	</TextView>
 
    		<Button
-   	    	    android:id="@+id/button1"
+   	    	    android:id="@+id/buttonLacteos"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="58dp"
 	   	    android:layout_alignParentLeft="true"
@@ -31,7 +31,7 @@
 	   	    android:textColor="@color/black"/>
    	
 	   	<Button
-	   	    android:id="@+id/button2"
+	   	    android:id="@+id/buttonFrutas"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="wrap_content"
 	   	    android:layout_alignParentRight="true"
@@ -43,12 +43,12 @@
 	   	    android:textColor="@color/black" />
 	   	
 	   	<Button
-	   	    android:id="@+id/button3"
+	   	    android:id="@+id/buttonPan"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="wrap_content"
-	   	    android:layout_above="@+id/button6"
+	   	    android:layout_above="@+id/buttonPescados"
 	   	    android:layout_alignParentLeft="true"
-	   	    android:layout_below="@+id/button1"
+	   	    android:layout_below="@+id/buttonLacteos"
 	   	    android:layout_marginLeft="15dp"
 	   	    android:layout_marginTop="5dp"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
@@ -56,11 +56,11 @@
 	   	    android:textColor="@color/black" />
 	
 	   	<Button
-	       	    android:id="@+id/button4"
+	       	    android:id="@+id/buttonBebidas"
 	       	    android:layout_width="125dp"
 	       	    android:layout_height="58dp"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button2"
+	   	    android:layout_below="@+id/buttonFrutas"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="5dp"
 	       	    android:background="@drawable/boton_redondo_color_celeste"
@@ -68,23 +68,23 @@
 	       	    android:textColor="@color/black" />
 	   	
 	   	<Button
-	   	    android:id="@+id/button5"
+	   	    android:id="@+id/buttonCarnes"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="58dp"
-	   	    android:layout_alignBaseline="@+id/button6"
-	   	    android:layout_alignBottom="@+id/button6"
-	   	    android:layout_alignLeft="@+id/button3"
+	   	    android:layout_alignBaseline="@+id/buttonPescados"
+	   	    android:layout_alignBottom="@+id/buttonPescados"
+	   	    android:layout_alignLeft="@+id/buttonPan"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
 	   	    android:layout_marginTop="5dp"
 	   	    android:text="@string/carnes"
 	   	    android:textColor="@color/black" />
 	
 	   	<Button
-      	       	    android:id="@+id/button6"
+      	       	    android:id="@+id/buttonPescados"
 	       	    android:layout_width="125dp"
 	       	    android:layout_height="58dp"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button4"
+	   	    android:layout_below="@+id/buttonBebidas"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="5dp"
 	       	    android:background="@drawable/boton_redondo_color_celeste"
@@ -92,23 +92,23 @@
 	       	    android:textColor="@color/black" />
 
 		<Button
-	   	    android:id="@+id/button7"
+	   	    android:id="@+id/buttonSalsas"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="wrap_content"
-	   	    android:layout_alignBaseline="@+id/button8"
-	   	    android:layout_alignBottom="@+id/button8"
-	   	    android:layout_alignLeft="@+id/button5"
+	   	    android:layout_alignBaseline="@+id/buttonPastas"
+	   	    android:layout_alignBottom="@+id/buttonPastas"
+	   	    android:layout_alignLeft="@+id/buttonCarnes"
 	   	    android:layout_marginTop="5dp"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
 	   	    android:text="@string/salsasCondimentos"
 	   	    android:textColor="@color/black" />
 
 	   	<Button
-	       	    android:id="@+id/button8"
+	       	    android:id="@+id/buttonPastas"
 	       	    android:layout_width="125dp"
 	       	    android:layout_height="wrap_content"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button6"
+	   	    android:layout_below="@+id/buttonPescados"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="5dp"
 	       	    android:background="@drawable/boton_redondo_color_celeste"
@@ -116,22 +116,22 @@
 	       	    android:textColor="@color/black" />
 	   	
 	   	<Button
-	   	    android:id="@+id/button9"
+	   	    android:id="@+id/buttonCongelados"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="56dp"
 	   	    android:layout_above="@+id/button_lens"
-	   	    android:layout_alignLeft="@+id/button7"
+	   	    android:layout_alignLeft="@+id/buttonSalsas"
 	   	    android:layout_marginTop="5dp"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
 	   	    android:text="@string/congelados"
 	   	    android:textColor="@color/black" />
 	
 	   	<Button
-	       	    android:id="@+id/button10"
+	       	    android:id="@+id/buttonVarios"
 	       	    android:layout_width="125dp"
 	       	    android:layout_height="56dp"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button8"
+	   	    android:layout_below="@+id/buttonPastas"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="13dp"
 	       	    android:background="@drawable/boton_redondo_color_celeste"
@@ -144,7 +144,7 @@
 	   	    android:layout_height="60dp"
 	   	    android:background="@drawable/anadir_icono"
 	   	    android:layout_alignParentLeft="true"
-	   	    android:layout_below="@+id/button9"
+	   	    android:layout_below="@+id/buttonCongelados"
 	   	    android:layout_marginLeft="35dp"
 	   	    android:layout_marginTop="13dp"/>
 	   	
@@ -166,7 +166,7 @@
 	   	    android:layout_height="60dp"
 	   	    android:background="@drawable/lupa_sobre_un_robot_androide"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button10"
+	   	    android:layout_below="@+id/buttonVarios"
 	   	    android:layout_marginRight="30dp"
 	   	    android:layout_marginTop="13dp"/>
 	
