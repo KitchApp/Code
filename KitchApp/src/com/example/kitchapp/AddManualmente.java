@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class AddManualmente extends Activity implements OnClickListener {
 
@@ -63,11 +64,17 @@ public class AddManualmente extends Activity implements OnClickListener {
 		switch (v.getId()){
 		case R.id.button_addProduct:
 			//Toast.makeText(this, "Me han pinchado", Toast.LENGTH_SHORT).show();
-			Intent i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("nameProduct",nameProduct.getText().toString());
-			i.putExtra("cantProduct",Integer.parseInt(cantProduct.getText().toString()));
-			i.putExtra("key",0);
-			startActivity(i);
+			try {
+				int cant = Integer.parseInt(cantProduct.getText().toString());
+				Intent i = new Intent(this,MostrarProductosCategoria.class);
+				i.putExtra("nameProduct",nameProduct.getText().toString());
+				i.putExtra("cantProduct",cant);
+				i.putExtra("key",0);
+				startActivity(i);
+			}
+			catch (NumberFormatException e) {
+				Toast.makeText(this, "La cantidad introducida tiene que ser de tipo entero", Toast.LENGTH_SHORT).show();
+			}
 			break;
 		}
 	}

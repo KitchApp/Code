@@ -24,6 +24,17 @@
         	android:layout_height="wrap_content">
         
     	</ListView>
+    	
+    	<TextView 
+    	    android:id="@+id/textView_Atras"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp"
+        	android:layout_marginLeft="250dp"
+        	android:text="@string/back"
+        	android:textSize="20sp" 
+        	android:textColor="@color/navy"
+        	android:clickable="true" />
 
 	</LinearLayout>
 

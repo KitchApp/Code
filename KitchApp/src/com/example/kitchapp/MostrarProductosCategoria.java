@@ -53,8 +53,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				int i = 0;
 				while (i<products.size() && !encontrado){
 					ItemProducto prod = products.get(i);
-					String name = prod.getNombre();
-					if (name.equals(item.getNombre())) {
+					String name = prod.getNombre().toLowerCase();
+					if (name.equals(item.getNombre().toLowerCase())) {
 						encontrado = true;
 					}
 					i++;
