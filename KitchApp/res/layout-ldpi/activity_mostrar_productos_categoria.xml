@@ -17,6 +17,7 @@
         	android:text="@string/lacteos"
         	android:textSize="30sp" 
         	android:textColor="@color/navy"/>
+    	
     
     	<ListView
         	android:id="@+id/listViewProducts"

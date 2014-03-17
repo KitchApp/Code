@@ -35,18 +35,25 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	ListView textlist;
 	ArrayList<String> matches_text;
 
+	Button b1;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
 
-		Button b1 = (Button) findViewById(R.id.button1);
+		b1 = (Button) findViewById(R.id.button1);
 		b1.setOnClickListener(this);
 
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
 	}
 
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -63,6 +70,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 
 		case R.id.button1:
 			Intent i = new Intent(this,MostrarProductosCategoria.class);
+			i.putExtra("lacteos", 1);
 			startActivity(i);
 			break;
 			
@@ -71,6 +79,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			alertDialog(v);
 		}
 	}
+<<<<<<< HEAD
 	
 	
 	public void alertDialog(View v){
@@ -95,6 +104,8 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		  Intent intent = new Intent(this,AddManualmente.class);
 		  startActivity(intent);
 	  }
+=======
+>>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
 	
 	public void addVoice() {
 		if(isConnected()){
@@ -108,6 +119,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
        	}
 	}
 	
+<<<<<<< HEAD
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo net = cm.getActiveNetworkInfo();
@@ -116,6 +128,19 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	    } else {
 	        return false; 
 	    }
+=======
+	public void alertDialog(View v){
+		final String [] items = new String[] {"Manualmente", "Voz", "C�digo de barras" };
+	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
+	    ListAdapter adapter = new ItemAdapter(this, items, icons);
+	    
+        new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
+        	public void onClick(DialogInterface dialog, int item ) {
+        		if (item==0)
+        			addManualmente();
+	        }
+	    }).show();
+>>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
 	}
 	
 	@Override

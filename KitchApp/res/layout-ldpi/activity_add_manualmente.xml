@@ -24,6 +24,10 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:textSize="15sp"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
         android:hint="@string/nameProduct" 
         android:textColorHint="@color/black"/>
 
@@ -36,6 +40,10 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:textSize="15sp"
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
         android:hint="@string/cantProduct" 
         android:textColorHint="@color/black">
 
