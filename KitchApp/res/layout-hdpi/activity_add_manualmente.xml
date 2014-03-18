@@ -23,8 +23,7 @@
         android:layout_below="@+id/textViewAdd"
         android:layout_marginTop="38dp"
         android:ems="10"
-        android:hint="@string/nameProduct"
-        android:textColorHint="@color/black" />
+        android:text="@string/nameProduct" />
 
     <EditText
         android:id="@+id/EditTextCantProduct"
@@ -34,8 +33,7 @@
         android:layout_below="@+id/editTextNameProduct"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:hint="@string/cantProduct" 
-        android:textColorHint="@color/black">
+        android:text="@string/cantProduct" >
 
         <requestFocus />
     </EditText>
