@@ -51,13 +51,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
 
-<<<<<<< HEAD
-		b1 = (Button) findViewById(R.id.button1);
-		b1.setOnClickListener(this);
 
-		Button button_add=(Button)findViewById(R.id.button_add);
-		button_add.setOnClickListener(this);
-=======
 		buttonLacteos = (Button) findViewById(R.id.buttonLacteos);
 		buttonLacteos.setOnClickListener(this);
 		buttonFrutas = (Button) findViewById(R.id.buttonFrutas);
@@ -84,7 +78,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		Button button_add=(Button)findViewById(R.id.button_add);
 		button_add.setOnClickListener(this);
 		
->>>>>>> origin/Rama-Mayra_Android
+
 	}
 
 	
@@ -163,11 +157,8 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	
 	
 	public void alertDialog(View v){
-<<<<<<< HEAD
+
 		final String [] items = new String[] {"Manualmente", "Voz", "CÃ³digo de barras" };
-=======
-		final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
->>>>>>> origin/Rama-Mayra_Android
 	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    
