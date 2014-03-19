@@ -20,16 +20,12 @@
     	
     
     	<ListView
-<<<<<<< HEAD
+
         	android:id="@+id/listViewProducts"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content">
         	
-=======
-    	    android:id="@+id/listViewProducts"
-    	    android:layout_width="wrap_content"
-    	    android:layout_height="206dp" >
->>>>>>> origin/Rama-Mayra_Android
+
         
     	</ListView>
     	
