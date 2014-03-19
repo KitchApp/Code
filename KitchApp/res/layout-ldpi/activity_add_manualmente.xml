@@ -24,12 +24,9 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:textSize="15sp"
-<<<<<<< HEAD
         android:hint="@string/nameProduct" 
         android:textColorHint="@color/black"/>
-=======
-        android:text="@string/nameProduct" />
->>>>>>> origin/Rama-Mayra_Android
+
 
     <EditText
         android:id="@+id/EditTextCantProduct"
@@ -40,12 +37,9 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:textSize="15sp"
-<<<<<<< HEAD
         android:hint="@string/cantProduct" 
         android:textColorHint="@color/black">
-=======
-        android:text="@string/cantProduct" >
->>>>>>> origin/Rama-Mayra_Android
+
 
         <requestFocus />
     </EditText>
