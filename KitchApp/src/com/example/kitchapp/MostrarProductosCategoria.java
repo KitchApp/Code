@@ -2,21 +2,32 @@ package com.example.kitchapp;
 
 import java.util.ArrayList;
 
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+<<<<<<< HEAD
+=======
+import android.speech.RecognizerIntent;
+>>>>>>> Rama-Edu-Android
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MostrarProductosCategoria extends Activity implements OnClickListener {
 	
@@ -30,7 +41,16 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private Button increment;
     private int cantFinal;
     private AlertDialog.Builder builder;
+<<<<<<< HEAD
     Handler_Sqlite helper=new Handler_Sqlite(this);
+=======
+    private Integer tipoCat;
+    Handler_Sqlite helper=new Handler_Sqlite(this);
+    private static final int REQUEST_CODE = 1234;
+	Dialog match_text_dialog;
+	ListView textlist;
+	ArrayList<String> matches_text;
+>>>>>>> Rama-Edu-Android
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +59,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		products = new ArrayList<ItemProducto>();
 		
 		
+<<<<<<< HEAD
 		/*SQLiteDatabase tmp=helper.open();	
+=======
+		/*SQLiteDatabase tmp = helper.open();	
+>>>>>>> Rama-Edu-Android
 		if (tmp!=null){
 				helper.insertProducto("Yogurt",2,1);
 				helper.insertProducto("Manzana",3,2 );
@@ -54,6 +78,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Gel baño", 4, 10);
 				helper.insertProducto("Macarrones", 2, 8);
 				helper.insertProducto("Helado Fresa", 4, 9);
+<<<<<<< HEAD
+=======
+		}*/
+>>>>>>> Rama-Edu-Android
 				/*helper.insertCategory(1,"Lácteos")
 				helper.insertCategory(2,"Frutas y Verduras")
 				helper.insertCategory(3,"Pan y Bollería")
@@ -65,10 +93,61 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertCategory(9,"Congelados")
 				helper.insertCategory(10,"Varios")*/
 		
+<<<<<<< HEAD
 		Bundle extraLacteos= this.getIntent().getExtras();
 		if(extraLacteos!=null){
 			Integer lacteos=extraLacteos.getInt("lacteos");
 			initializeArrayList(lacteos);
+=======
+		Bundle extras= this.getIntent().getExtras();
+		if(extras!=null){
+			tipoCat=extras.getInt("idCat");
+			initializeArrayList(tipoCat);
+			TextView title = (TextView) findViewById(R.id.textView_Cat);
+			switch (tipoCat) {
+				case 1:
+					title.setText("Lácteos");
+					break;
+				
+				case 2:
+					title.setText("Frutas y Verduras");
+					break;
+
+				case 3:
+					title.setText("Pan y Bollería");
+					break;
+
+				case 4:
+					title.setText("Bebidas");
+					break;
+
+				case 5:
+					title.setText("Carnes");
+					break;
+
+				case 6:
+					title.setText("Pescados");
+					break;
+
+				case 7:
+					title.setText("Salsas y Condimentos");
+					break;
+
+				case 8:
+					title.setText("Pastas y Arroces");
+					break;
+
+				case 9:
+					title.setText("Congelados");
+					break;
+
+				case 10:
+					title.setText("Varios");
+					break;
+
+					
+			}
+>>>>>>> Rama-Edu-Android
 			
 		}
 			
@@ -76,17 +155,28 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		//}		
 			
 		
+<<<<<<< HEAD
 		helper.close();
+=======
+		//helper.close();
+>>>>>>> Rama-Edu-Android
 		
 		
 		
 		Bundle extra = this.getIntent().getExtras();
 		
 		
+<<<<<<< HEAD
 		if (extra!=null) {
 			int key = extra.getInt("key");
 			if (key == 0) {
 				
+=======
+		if (extra!=null && extra.getInt("key") != 0) {
+			int key = extra.getInt("key");
+			if (key == 1) {
+				//initializeArrayList(tipoCat);
+>>>>>>> Rama-Edu-Android
 				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"));
 				boolean encontrado = false;
 				int i = 0;
@@ -100,6 +190,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				}
 				/*if (!encontrado) {
 					products.add(item);
+					SQLiteDatabase tmp = helper.open();	
+					if (tmp!=null){
+						helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
+						helper.close();
+					}
+					
 				}
 				else {
 					errorProduct();
@@ -114,8 +210,15 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			}
 		}
 		
+<<<<<<< HEAD
 		TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
 		link_atras.setOnClickListener(this);
+=======
+		/*TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
+		link_atras.setOnClickListener(this);*/
+		Button button_add=(Button)findViewById(R.id.button_add);
+		button_add.setOnClickListener(this);
+>>>>>>> Rama-Edu-Android
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -205,10 +308,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				startActivity(i);
 				break;
 			
-			case R.id.textView_Atras:
+			/*case R.id.textView_Atras:
 				Intent j = new Intent(this,AccesoDespensa.class);
 				startActivity(j);
-				break;
+				break;*/
 				
 			case R.id.button_decrement:
 				decrementCant(v);
@@ -216,6 +319,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				
 			case R.id.button_increment:
 				incrementCant(v);
+				break;
+				
+			case R.id.button_add:
+
+				alertDialog(v);
 				break;
 				
 		}
@@ -283,4 +391,124 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    builder.create();
 	    builder.show();
 	}
+	
+	public void alertDialog(View v){
+		final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
+	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
+	    ListAdapter adapter = new ItemAdapter(this, items, icons);
+	    
+        new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
+        	public void onClick(DialogInterface dialog, int item ) {
+        		if (item==0)
+        			addManualmente();
+        		else if (item == 1) {
+        			addVoice();
+        		}
+        			
+	        }
+	    }).show();
+	}
+	
+	
+	public void addManualmente() {
+		  Intent intent = new Intent(this,AddManualmente.class);
+		  intent.putExtra("idCat",tipoCat);
+		  startActivity(intent);
+	  }
+	
+	public void addVoice() {
+		if(isConnected()){
+       	 Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        	 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+        	 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        	 startActivityForResult(intent, REQUEST_CODE);
+       			 }
+       	else{
+       		Toast.makeText(getApplicationContext(), "Please Connect to Internet", Toast.LENGTH_LONG).show();
+       	}
+	}
+	
+	public boolean isConnected() {
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+	    NetworkInfo net = cm.getActiveNetworkInfo();
+	    if (net!=null && net.isAvailable() && net.isConnected()) {
+	        return true;
+	    } else {
+	        return false; 
+	    }
+	}
+	
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+     if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+    	    
+     match_text_dialog = new Dialog(MostrarProductosCategoria.this);
+     match_text_dialog.setContentView(R.layout.dialog_matches);
+     match_text_dialog.setTitle("Select Matching Text");
+     textlist = (ListView)match_text_dialog.findViewById(R.id.listDialogVoice);
+     matches_text = data
+		     .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+     ArrayAdapter<String> adapter =    new ArrayAdapter<String>(this,
+    	     android.R.layout.simple_list_item_1, matches_text);
+     textlist.setAdapter(adapter);
+     textlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+     @Override
+     public void onItemClick(AdapterView<?> parent, View view,
+                             int position, long id) {
+    	 
+    	 match_text_dialog.hide();
+    	 addProduct(position);
+     }
+ });
+     
+     match_text_dialog.show();
+     
+     }
+     super.onActivityResult(requestCode, resultCode, data);
+    }
+	
+	public void addProduct(int position) {
+		try {
+			//Intent intent = new Intent(this,MostrarProductosCategoria.class);
+   	 		String[] prod = matches_text.get(position).split("");
+   	 		int cant = Integer.parseInt(prod[prod.length - 1]);
+   	 		String name = "";
+   	 		for (int i = 0;i < prod.length - 1;i++) {
+   	 			name += prod[i];
+   	 			name += "";
+   	 		}
+   	 	initializeArrayList(tipoCat);
+		ItemProducto item = new ItemProducto(products.size(),name,cant);
+		boolean encontrado = false;
+		int i = 0;
+		while (i<products.size() && !encontrado){
+			ItemProducto product = products.get(i);
+			String nameP = product.getNombre().toLowerCase();
+			if (nameP.equals(item.getNombre().toLowerCase())) {
+				encontrado = true;
+			}
+			i++;
+		}
+		if (!encontrado) {
+			products.add(item);
+			SQLiteDatabase tmp = helper.open();	
+			if (tmp!=null){
+				helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
+				helper.close();
+			}
+			
+		}
+		else {
+			errorProduct();
+		}
+   	 		//intent.putExtra("key",1);
+   	 		//intent.putExtra("nameProduct",name);
+   	 		//intent.putExtra("cantProduct", cant);
+   	 		//startActivity(intent);
+		}
+		catch (NumberFormatException e) {
+			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un número", Toast.LENGTH_SHORT).show();
+		}
+	}
+
 }
