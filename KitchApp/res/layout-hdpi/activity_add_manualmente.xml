@@ -40,7 +40,7 @@
         <requestFocus />
     </EditText>
 
-    <Spinner
+    <!--  <Spinner
         android:id="@+id/Spinner01"
         style="@style/AppTheme"
         android:layout_width="200dp"
@@ -49,14 +49,14 @@
         android:layout_below="@+id/EditTextCantProduct"
         android:layout_marginTop="80dp"
         android:background="@color/gray"
-        android:entries="@array/Categorias" />
+        android:entries="@array/Categorias" /> -->
     
     <Button 
         android:id="@+id/button_addProduct"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/Spinner01"
+        android:layout_below="@+id/EditTextCantProduct"
         android:layout_marginTop="40dp"
         android:background="@drawable/boton_redondo_color_navy"
         android:text="@string/add" 
