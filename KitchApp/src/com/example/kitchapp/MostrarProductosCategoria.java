@@ -37,8 +37,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private TextView cantProduct;
     private Button save;
     private Button cancel;
-    private Button decrement;
-    private Button increment;
     private int cantFinal;
     private AlertDialog.Builder builder;
 <<<<<<< HEAD
@@ -96,6 +94,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 <<<<<<< HEAD
 		Bundle extraLacteos= this.getIntent().getExtras();
 		if(extraLacteos!=null){
+<<<<<<< HEAD
 			Integer lacteos=extraLacteos.getInt("lacteos");
 			initializeArrayList(lacteos);
 =======
@@ -149,6 +148,39 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			}
 >>>>>>> Rama-Edu-Android
 			
+=======
+			if(extraLacteos.getInt("lacteos")==1){
+				initializeArrayList(extraLacteos.getInt("lacteos"));
+			}
+			else if(extraLacteos.getInt("frutas")==2){
+				initializeArrayList(extraLacteos.getInt("frutas"));
+			}
+			else if(extraLacteos.getInt("pan")==3){
+					initializeArrayList(extraLacteos.getInt("pan"));
+				}
+			else if(extraLacteos.getInt("bebidas")==4){
+				initializeArrayList(extraLacteos.getInt("bebidas"));
+			}
+			else if(extraLacteos.getInt("carnes")==5){
+				initializeArrayList(extraLacteos.getInt("carnes"));
+			}
+			else  if(extraLacteos.getInt("pescados")==6){
+				initializeArrayList(extraLacteos.getInt("pescados"));
+			}
+			else  if(extraLacteos.getInt("salsas")==7){
+				initializeArrayList(extraLacteos.getInt("salsas"));
+			}
+			else if(extraLacteos.getInt("arroces")==8){
+				initializeArrayList(extraLacteos.getInt("arroces"));
+			}
+			else  if(extraLacteos.getInt("congelados")==9){
+				initializeArrayList(extraLacteos.getInt("congelados"));
+			}
+			else  if(extraLacteos.getInt("varios")==10){
+				initializeArrayList(extraLacteos.getInt("varios"));
+			}
+				
+>>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
 		}
 			
 			
@@ -266,10 +298,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     	save.setOnClickListener(this);
     	cancel = (Button) view.findViewById(R.id.button_cancel);
     	cancel.setOnClickListener(this);
-    	decrement = (Button) view.findViewById(R.id.button_decrement);
-    	decrement.setOnClickListener(this);
-    	increment = (Button) view.findViewById(R.id.button_increment);
-    	increment.setOnClickListener(this);
         builder.setView(view);
                 
         
@@ -313,6 +341,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				startActivity(j);
 				break;*/
 				
+<<<<<<< HEAD
 			case R.id.button_decrement:
 				decrementCant(v);
 				break;
@@ -326,6 +355,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				alertDialog(v);
 				break;
 				
+=======
+>>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
 		}
             	
 				
@@ -354,7 +385,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		if (product.getCantidad() > 0) {
 			product.setCantidad(product.getCantidad()-1);
 			products.set(pos,product);
-			cantProduct.setText(product.getCantidad() + "");
+			modificarProducto(view,pos);
 		}
 		
 	}
@@ -368,7 +399,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		ItemProducto product = products.get(pos);
 		product.setCantidad(product.getCantidad()+1);
 		products.set(pos,product);
-		cantProduct.setText(product.getCantidad() + "");
+		modificarProducto(view,pos);
 		
 	}
 	
