@@ -24,7 +24,7 @@
         android:layout_marginTop="38dp"
         android:ems="10"
         android:hint="@string/nameProduct" 
-        android:textColorHint:"@color/black" />
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/EditTextCantProduct"
@@ -35,7 +35,7 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="@string/cantProduct" 
-        android:textColorHint:"@color/black" >
+        android:textColorHint="@color/black" >
 
         <requestFocus />
     </EditText>
