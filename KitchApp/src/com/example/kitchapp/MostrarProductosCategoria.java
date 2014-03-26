@@ -76,21 +76,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Macarrones",2,8,null);
 				helper.insertProducto("Helado Fresa",4,9,null);
 		}*/
-<<<<<<< HEAD
-				/*helper.insertCategory(1,"Lï¿½cteos")
-				helper.insertCategory(2,"Frutas y Verduras")
-				helper.insertCategory(3,"Pan y Bollerï¿½a")
-				helper.insertCategory(4,"Bebidas")
-				helper.insertCategory(5,"Carnes")
-				helper.insertCategory(6,"Pescados")
-				helper.insertCategory(7,"Salsas y condimentos")
-				helper.insertCategory(8,"Arroces")
-				helper.insertCategory(9,"Congelados")
-				helper.insertCategory(10,"Varios")*/
-		
-=======
-				
->>>>>>> Rama-Mayra_Android
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -299,11 +284,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				
 			case R.id.button_add:
 
-<<<<<<< HEAD
-				alertDialog(true,0);
-=======
 				alertDialogListView(true,0);
->>>>>>> Rama-Mayra_Android
 
 				break;
 				
@@ -528,7 +509,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    				else{
    					ArrayList<Object> tmp=helper.readProductsTemporary(result);
    					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1));
-   					//Para que se refresque la información en la pantalla
+   					//Para que se refresque la informaciï¿½n en la pantalla
    					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1);
    					products.add(item);
    					list = (ListView)findViewById(R.id.listViewProducts);
