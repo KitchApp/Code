@@ -76,6 +76,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Macarrones",2,8,null);
 				helper.insertProducto("Helado Fresa",4,9,null);
 		}*/
+<<<<<<< HEAD
 				/*helper.insertCategory(1,"Lï¿½cteos")
 				helper.insertCategory(2,"Frutas y Verduras")
 				helper.insertCategory(3,"Pan y Bollerï¿½a")
@@ -87,6 +88,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertCategory(9,"Congelados")
 				helper.insertCategory(10,"Varios")*/
 		
+=======
+				
+>>>>>>> Rama-Mayra_Android
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -295,7 +299,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				
 			case R.id.button_add:
 
+<<<<<<< HEAD
 				alertDialog(true,0);
+=======
+				alertDialogListView(true,0);
+>>>>>>> Rama-Mayra_Android
 
 				break;
 				
@@ -365,7 +373,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    builder.show();
 	}
 	
-	public void alertDialog(boolean full, int except){
+	public void alertDialogListView(boolean full, int except){
 		
 	    if(full & except==0){
 	    	final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
@@ -457,6 +465,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	public void addBarCode(){
 		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
+
 		scanIntegrator.initiateScan();
 	}
 	
@@ -512,13 +521,24 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    			String result=scanningResult.getContents();
    			if (!helper.exist(result,"products")){
    				if (!helper.exist(result,"productsTemporary")){
-   					Toast.makeText(this, "Producto no existente ", Toast.LENGTH_SHORT).show();
-   					alertDialog(false,3);
+   					alertDialogReport("Producto no existente");
+   					//alertDialogListView(false,3);
    					
    				}
    				else{
    					ArrayList<Object> tmp=helper.readProductsTemporary(result);
    					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1));
+   					//Para que se refresque la información en la pantalla
+   					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1);
+   					products.add(item);
+   					list = (ListView)findViewById(R.id.listViewProducts);
+   					ItemProductoAdapter adapter;
+   					// Inicializamos el adapter.
+   					adapter = new ItemProductoAdapter(this,products);
+   					// Asignamos el Adapter al ListView, en este punto hacemos que el
+   					// ListView muestre los datos que queremos.
+   					list.setAdapter(adapter);
+   					
    				}
    				
    			}
@@ -540,6 +560,29 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
      
 
     }
+	
+	
+	public void alertDialogReport(String msj) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		 
+	   // builder.setTitle("Error")
+	           builder.setIcon(
+	                    getResources().getDrawable(
+	                            R.drawable.close))
+	            .setMessage(msj)
+	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+	 
+	                @Override
+	                public void onClick(DialogInterface arg0, int arg1) {
+	                	//arg0.cancel();
+	                	alertDialogListView(false,3);
+	                }
+	            });
+	 
+	    builder.create();
+	    builder.show();
+	}
+	
 	
 	public void addProduct(int position) {
 		try {
