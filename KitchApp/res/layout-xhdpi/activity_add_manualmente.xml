@@ -24,10 +24,15 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:textSize="15sp"
+<<<<<<< HEAD
 
         android:hint="@string/nameProduct"
         android:textColorHint="@color/black" />
 
+=======
+        android:hint="@string/nameProduct"
+        android:textColorHint="@color/black" />
+>>>>>>> Rama-Mayra_Android
 
     <EditText
         android:id="@+id/EditTextCantProduct"

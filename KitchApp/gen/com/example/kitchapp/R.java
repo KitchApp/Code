@@ -68,6 +68,7 @@ public final class R {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int EditTextCantProduct=0x7f0a000f;
         public static final int Spinner01=0x7f0a0010;
         public static final int action_settings=0x7f0a002d;
@@ -89,6 +90,8 @@ public final class R {
         public static final int button_decrement=0x7f0a001d;
         public static final int button_increment=0x7f0a001f;
 =======
+=======
+>>>>>>> Rama-Mayra_Android
         public static final int EditTextCantProduct=0x7f0a000e;
         public static final int action_settings=0x7f0a0031;
         public static final int btnLogin=0x7f0a0019;
@@ -113,6 +116,7 @@ public final class R {
         public static final int button_cancel=0x7f0a001f;
         public static final int button_decrement=0x7f0a001b;
         public static final int button_increment=0x7f0a001d;
+<<<<<<< HEAD
 >>>>>>> Rama-Edu-Android
         public static final int button_lens=0x7f0a000a;
         public static final int button_save=0x7f0a001e;
@@ -228,32 +232,43 @@ public final class R {
         public static final int button_cancel=0x7f0a002b;
         public static final int button_decrement=0x7f0a0027;
         public static final int button_increment=0x7f0a0029;
+=======
+>>>>>>> Rama-Mayra_Android
         public static final int button_lens=0x7f0a000a;
-        public static final int button_save=0x7f0a002a;
-        public static final int cantProduct=0x7f0a0028;
-        public static final int editTextNameProduct=0x7f0a0018;
-        public static final int editTextPassword=0x7f0a0024;
-        public static final int editTextuserName=0x7f0a0023;
-        public static final int encabezado=0x7f0a0021;
-        public static final int footer=0x7f0a0022;
-        public static final int header=0x7f0a0030;
-        public static final int imageView1=0x7f0a0020;
-        public static final int imagen=0x7f0a001e;
-        public static final int link_to_login=0x7f0a0035;
-        public static final int link_to_register=0x7f0a0026;
-        public static final int listViewProducts=0x7f0a002d;
-        public static final int nombre=0x7f0a001f;
-        public static final int progressBar1=0x7f0a002f;
-        public static final int reg_email=0x7f0a0032;
-        public static final int reg_password=0x7f0a0033;
-        public static final int reg_usuario=0x7f0a0031;
+        public static final int button_save=0x7f0a001e;
+        public static final int cantProduct=0x7f0a001c;
+        public static final int editTextNameProduct=0x7f0a000d;
+        public static final int editTextPassword=0x7f0a0018;
+        public static final int editTextuserName=0x7f0a0017;
+        public static final int encabezado=0x7f0a0015;
+        public static final int footer=0x7f0a0016;
+        public static final int header=0x7f0a002b;
+        public static final int imageView1=0x7f0a0014;
+        public static final int imagen=0x7f0a0012;
+        public static final int link_to_login=0x7f0a0030;
+        public static final int link_to_register=0x7f0a001a;
+        public static final int listDialogVoice=0x7f0a002a;
+        public static final int listViewProducts=0x7f0a0021;
+        public static final int nombre=0x7f0a0013;
+        public static final int progressBar1=0x7f0a0029;
+        public static final int reg_email=0x7f0a002d;
+        public static final int reg_password=0x7f0a002e;
+        public static final int reg_usuario=0x7f0a002c;
         public static final int textView1=0x7f0a0000;
+<<<<<<< HEAD
         public static final int textViewAdd=0x7f0a0017;
         public static final int textView_Atras=0x7f0a002e;
         public static final int textView_Dairy=0x7f0a002c;
         public static final int textView_Item_Cant=0x7f0a001d;
         public static final int textView_Item_Name=0x7f0a001c;
 >>>>>>> origin/Rama-Mayra_Android
+=======
+        public static final int textViewAdd=0x7f0a000c;
+        public static final int textView_Cat=0x7f0a0020;
+        public static final int textView_Dairy=0x7f0a0023;
+        public static final int textView_Item_Cant=0x7f0a0011;
+        public static final int textView_Item_Name=0x7f0a0010;
+>>>>>>> Rama-Mayra_Android
     }
     public static final class layout {
         public static final int activity_acceso_despensa=0x7f030000;
@@ -266,9 +281,15 @@ public final class R {
         public static final int activity_pantalla_principal=0x7f030007;
         public static final int activity_pantalla_transicion=0x7f030008;
         public static final int cabecera=0x7f030009;
+<<<<<<< HEAD
         public static final int pie_de_pagina=0x7f03000a;
         public static final int registro=0x7f03000b;
         public static final int dialog_matches=0x7f03000c;
+=======
+        public static final int dialog_matches=0x7f03000a;
+        public static final int pie_de_pagina=0x7f03000b;
+        public static final int registro=0x7f03000c;
+>>>>>>> Rama-Mayra_Android
     }
     public static final class menu {
         public static final int add_manualmente=0x7f080000;

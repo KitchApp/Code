@@ -29,6 +29,12 @@ import android.widget.AdapterView.OnItemClickListener;
 
 
 public class AccesoDespensa extends Activity implements OnClickListener {
+<<<<<<< HEAD
+=======
+	
+
+	
+>>>>>>> Rama-Mayra_Android
 	
 
 	@Override
@@ -57,6 +63,30 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		Button button_others = (Button) findViewById(R.id.buttonOthers);
 		button_others.setOnClickListener(this);
 
+<<<<<<< HEAD
+=======
+		Button button_dairy = (Button) findViewById(R.id.buttonDairy);
+		button_dairy.setOnClickListener(this);
+		Button button_fruits = (Button) findViewById(R.id.buttonFruits);
+		button_fruits.setOnClickListener(this);
+		Button button_bread = (Button) findViewById(R.id.buttonBread);
+		button_bread.setOnClickListener(this);
+		Button button_drinks = (Button) findViewById(R.id.buttonDrinks);
+		button_drinks.setOnClickListener(this);
+		Button button_meat = (Button) findViewById(R.id.buttonMeat);
+		button_meat.setOnClickListener(this);
+		Button button_fish = (Button) findViewById(R.id.buttonFish);
+		button_fish.setOnClickListener(this);
+		Button button_sauces = (Button) findViewById(R.id.buttonSauces);
+		button_sauces.setOnClickListener(this);
+		Button button_pasta = (Button) findViewById(R.id.buttonPasta);
+		button_pasta.setOnClickListener(this);
+		Button button_frozen = (Button) findViewById(R.id.buttonFrozen);
+		button_frozen.setOnClickListener(this);
+		Button button_others = (Button) findViewById(R.id.buttonOthers);
+		button_others.setOnClickListener(this);
+
+>>>>>>> Rama-Mayra_Android
 	}
 
 	
@@ -137,4 +167,9 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		}
 	}
 	
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> Rama-Mayra_Android
 }

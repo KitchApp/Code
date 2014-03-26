@@ -144,7 +144,7 @@
 	   	    android:layout_height="60dp"
 	   	    android:background="@drawable/anadir_icono"
 	   	    android:layout_alignParentLeft="true"
-	   	    android:layout_below="@+id/buttonCongelados"
+	   	    android:layout_below="@+id/button9"
 	   	    android:layout_marginLeft="35dp"
 	   	    android:layout_marginTop="13dp"/> -->
 	   	
