@@ -8,10 +8,8 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-<<<<<<< HEAD
-=======
 import android.content.ActivityNotFoundException;
->>>>>>> Rama-Mayra_Android
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,12 +27,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-<<<<<<< HEAD
-=======
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
->>>>>>> Rama-Mayra_Android
+
 
 public class MostrarProductosCategoria extends Activity implements OnClickListener {
 	
@@ -70,31 +66,17 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Manzana",3,2,null);
 				helper.insertProducto("Magdalena",5,3,null);
 				helper.insertProducto("Leche",6,1);
-<<<<<<< HEAD
-				helper.insertProducto("coca-cola", 4, 4);
-				helper.insertProducto("Pollo", 1, 5);
-				helper.insertProducto("Merluza", 1, 6);
-				helper.insertProducto("Red bull", 4, 4);
-				helper.insertProducto("Arroz largo", 4, 8);
-				helper.insertProducto("Guisantes", 1, 9);
-				helper.insertProducto("Gel baï¿½o", 4, 10);
-				helper.insertProducto("Macarrones", 2, 8);
-				helper.insertProducto("Helado Fresa", 4, 9);
-		}*/
-				/*helper.insertCategory(1,"Lï¿½cteos")
-=======
 				helper.insertProducto("coca-cola",4,4,null);
 				helper.insertProducto("Pollo",1,5,null);
 				helper.insertProducto("Merluza",1,6,null);
 				helper.insertProducto("Red bull",4,4,null);
 				helper.insertProducto("Arroz largo",4,8,null);
 				helper.insertProducto("Guisantes",1,9,null);
-				helper.insertProducto("Gel baño",4,10,null);
+				helper.insertProducto("Gel baï¿½o",4,10,null);
 				helper.insertProducto("Macarrones",2,8,null);
 				helper.insertProducto("Helado Fresa",4,9,null);
 		}*/
-				/*helper.insertCategory(1,"Lácteos")
->>>>>>> Rama-Mayra_Android
+				/*helper.insertCategory(1,"Lï¿½cteos")
 				helper.insertCategory(2,"Frutas y Verduras")
 				helper.insertCategory(3,"Pan y Bollerï¿½a")
 				helper.insertCategory(4,"Bebidas")
@@ -112,11 +94,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
 				case 1:
-<<<<<<< HEAD
 					title.setText("Lï¿½cteos");
-=======
-					title.setText("Lácteos");
->>>>>>> Rama-Mayra_Android
+
 					break;
 				
 				case 2:
@@ -124,11 +103,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 3:
-<<<<<<< HEAD
 					title.setText("Pan y Bollerï¿½a");
-=======
-					title.setText("Pan y Bollería");
->>>>>>> Rama-Mayra_Android
+
 					break;
 
 				case 4:
@@ -157,13 +133,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 
 				case 10:
 					title.setText("Varios");
-<<<<<<< HEAD
-					break;
-
-					
-=======
 					break;	
->>>>>>> Rama-Mayra_Android
+
 			}
 			
 		}
@@ -178,10 +149,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		
 		Bundle extra = this.getIntent().getExtras();
 		
-<<<<<<< HEAD
-=======
-		
->>>>>>> Rama-Mayra_Android
 		if (extra!=null && extra.getInt("key") != 0) {
 			int key = extra.getInt("key");
 			if (key == 1) {
@@ -199,15 +166,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				}
 				if (!encontrado) {
 					products.add(item);
-<<<<<<< HEAD
-					SQLiteDatabase tmp = helper.open();	
-					if (tmp!=null){
-						helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
-=======
 					SQLiteDatabase tmp1 = helper.open();	
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
->>>>>>> Rama-Mayra_Android
+
 						helper.close();
 					}
 					
@@ -333,11 +295,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				
 			case R.id.button_add:
 
-<<<<<<< HEAD
-				alertDialog(v);
-=======
 				alertDialog(true,0);
->>>>>>> Rama-Mayra_Android
+
 				break;
 				
 		}
@@ -406,27 +365,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    builder.show();
 	}
 	
-<<<<<<< HEAD
-	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
-	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
-	    ListAdapter adapter = new ItemAdapter(this, items, icons);
-	    
-        new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
-        	public void onClick(DialogInterface dialog, int item ) {
-        		if (item==0)
-        			addManualmente();
-        		else if (item == 1) {
-        			addVoice();
-        		}
-        			
-	        }
-	    }).show();
-=======
 	public void alertDialog(boolean full, int except){
 		
 	    if(full & except==0){
-	    	final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
+	    	final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
 		    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 		    ListAdapter adapter = new ItemAdapter(this, items, icons);
 		    
@@ -446,7 +388,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    }
 	    else{
 	    	if(except==1){
-	    		final String [] items = new String[] {"Voz", "Código de barras" };
+	    		final String [] items = new String[] {"Voz", "Cï¿½digo de barras" };
 	    	    final Integer[] icons = new Integer[] {R.drawable.microfono, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -461,7 +403,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			    }).show();
 	    	}
 	    	else if(except==2){
-	    		final String [] items = new String[] {"Manualmente", "Código de barras" };
+	    		final String [] items = new String[] {"Manualmente", "Cï¿½digo de barras" };
 	    	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -491,7 +433,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			    }).show();
 	    	}
 	    }
->>>>>>> Rama-Mayra_Android
+
 	}
 	
 	
@@ -513,8 +455,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
        	}
 	}
 	
-<<<<<<< HEAD
-=======
 	public void addBarCode(){
 		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
 		scanIntegrator.initiateScan();
@@ -522,7 +462,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	
 	
->>>>>>> Rama-Mayra_Android
+
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo net = cm.getActiveNetworkInfo();
@@ -535,12 +475,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-<<<<<<< HEAD
-=======
-	
-		
-		
->>>>>>> Rama-Mayra_Android
      if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
     	    
      match_text_dialog = new Dialog(MostrarProductosCategoria.this);
@@ -566,9 +500,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
      
      }
      super.onActivityResult(requestCode, resultCode, data);
-<<<<<<< HEAD
-=======
-     
+
      
    //BarCode
 		
@@ -606,7 +538,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    		
      
      
->>>>>>> Rama-Mayra_Android
+
     }
 	
 	public void addProduct(int position) {
@@ -635,11 +567,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			products.add(item);
 			SQLiteDatabase tmp = helper.open();	
 			if (tmp!=null){
-<<<<<<< HEAD
-				helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
-=======
 				helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
->>>>>>> Rama-Mayra_Android
+
 				helper.close();
 			}
 			
@@ -653,11 +582,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 		//startActivity(intent);
 		}
 		catch (NumberFormatException e) {
-<<<<<<< HEAD
 			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un nï¿½mero", Toast.LENGTH_SHORT).show();
-=======
-			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un número", Toast.LENGTH_SHORT).show();
->>>>>>> Rama-Mayra_Android
+
 		}
 	}
 
