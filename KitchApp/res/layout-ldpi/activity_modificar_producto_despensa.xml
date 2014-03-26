@@ -15,7 +15,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_marginLeft="10dp"
 	        android:layout_marginTop="5dp"
-	        android:background="@drawable/numberpicker_down"/>
+	        android:background="@drawable/numberpicker_down"
+	        android:onClick="decrementCant"/>
 	    <TextView 
 	        android:id="@+id/cantProduct"
 	        android:layout_width="wrap_content"
@@ -33,7 +34,10 @@
 	        android:layout_width="60dp"
 	        android:layout_height="wrap_content"
 	        android:layout_marginLeft="20dp"
-	        android:background="@drawable/numberpicker_up"  />
+
+	        android:background="@drawable/numberpicker_up" 
+	        android:onClick="incrementCant" />
+
 	    
     </LinearLayout>
     

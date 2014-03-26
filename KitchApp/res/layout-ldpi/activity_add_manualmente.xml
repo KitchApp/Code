@@ -27,6 +27,7 @@
         android:hint="@string/nameProduct" 
         android:textColorHint="@color/black"/>
 
+
     <EditText
         android:id="@+id/EditTextCantProduct"
         android:layout_width="wrap_content"
@@ -38,6 +39,7 @@
         android:textSize="15sp"
         android:hint="@string/cantProduct" 
         android:textColorHint="@color/black">
+
 
         <requestFocus />
     </EditText>

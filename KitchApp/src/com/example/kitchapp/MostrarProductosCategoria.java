@@ -34,13 +34,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private TextView cantProduct;
     private Button save;
     private Button cancel;
-    private Button decrement;
-    private Button increment;
     private int cantFinal;
     private AlertDialog.Builder builder;
     private Integer tipoCat;
-    Handler_Sqlite helper=new Handler_Sqlite(this);
     private static final int REQUEST_CODE = 1234;
+    Handler_Sqlite helper;
 	Dialog match_text_dialog;
 	ListView textlist;
 	ArrayList<String> matches_text;
@@ -49,10 +47,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mostrar_productos_categoria);
+		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 		
 		
-		/*SQLiteDatabase tmp = helper.open();	
+		/*SQLiteDatabase tmp=helper.open();	
 		if (tmp!=null){
 				helper.insertProducto("Yogurt",2,1);
 				helper.insertProducto("Manzana",3,2 );
@@ -67,10 +66,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Gel baño", 4, 10);
 				helper.insertProducto("Macarrones", 2, 8);
 				helper.insertProducto("Helado Fresa", 4, 9);
-		}*/
-				/*helper.insertCategory(1,"Lácteos")
+		}
+		helper.close();*/
+				/*helper.insertCategory(1,"Lï¿½cteos")
 				helper.insertCategory(2,"Frutas y Verduras")
-				helper.insertCategory(3,"Pan y Bollería")
+				helper.insertCategory(3,"Pan y Bollerï¿½a")
 				helper.insertCategory(4,"Bebidas")
 				helper.insertCategory(5,"Carnes")
 				helper.insertCategory(6,"Pescados")
@@ -82,7 +82,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
-			initializeArrayList(tipoCat);
+			SQLiteDatabase tmp = helper.open();
+			if (tmp != null) {
+				initializeArrayList(tipoCat);
+				helper.close();
+			}
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
 				case 1:
@@ -140,7 +144,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		
 		Bundle extra = this.getIntent().getExtras();
 		
-		
 		if (extra!=null && extra.getInt("key") != 0) {
 			int key = extra.getInt("key");
 			if (key == 1) {
@@ -148,33 +151,35 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"));
 				boolean encontrado = false;
 				int i = 0;
+				int cantProductModify = 0;
 				while (i<products.size() && !encontrado){
 					ItemProducto prod = products.get(i);
 					String name = prod.getNombre().toLowerCase();
 					if (name.equals(item.getNombre().toLowerCase())) {
 						encontrado = true;
+						cantProductModify = prod.getCantidad() + item.getCantidad();
 					}
 					i++;
 				}
 				if (!encontrado) {
 					products.add(item);
-					SQLiteDatabase tmp = helper.open();	
-					if (tmp!=null){
+					SQLiteDatabase tmc = helper.open();	
+					if (tmc!=null){
 						helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
 						helper.close();
 					}
 					
 				}
 				else {
-					errorProduct();
+					modifyProduct();
+					products.get(i-1).setCantidad(cantProductModify);
+					SQLiteDatabase tmc = helper.open();	
+					if (tmc!=null){
+						helper.updateProduct(item.getNombre(),cantProductModify);
+						helper.close();
+					}
+					
 				}
-			}
-			else {
-				int posi = extra.getInt("posicion");
-				int cantProducto = extra.getInt("cantProduct");
-				ItemProducto producto = products.get(posi);
-				producto.setCantidad(cantProducto);
-				products.set(posi,producto);
 			}
 		}
 		
@@ -229,10 +234,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     	save.setOnClickListener(this);
     	cancel = (Button) view.findViewById(R.id.button_cancel);
     	cancel.setOnClickListener(this);
-    	decrement = (Button) view.findViewById(R.id.button_decrement);
-    	decrement.setOnClickListener(this);
-    	increment = (Button) view.findViewById(R.id.button_increment);
-    	increment.setOnClickListener(this);
         builder.setView(view);
                 
         
@@ -251,23 +252,23 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		// TODO Auto-generated method stub
 		switch(v.getId()) {
 			case R.id.button_save:
-				Intent intent = new Intent(this,MostrarProductosCategoria.class);
 				ItemProducto prod = products.get(pos);
-				intent.putExtra("posicion",pos);
-				intent.putExtra("cantProduct",prod.getCantidad());
-				intent.putExtra("key",1);
-				//intent.putExtra("productos",products);
-				startActivity(intent);
+				prod.setCantidad(Integer.parseInt(cantProduct.getText().toString()));
+				products.set(pos,prod);
+				SQLiteDatabase tmp = helper.open();
+				if (tmp != null) {
+					helper.updateProduct(prod.getNombre(),prod.getCantidad());
+					helper.close();
+				}
+				Intent j = new Intent(this,MostrarProductosCategoria.class);
+				j.putExtra("idCat",tipoCat);
+				startActivity(j);
+				
 				break;
 			
 			case R.id.button_cancel:
-				ItemProducto produ = products.get(pos);
-            	produ.setCantidad(cantFinal);
-            	products.set(pos,produ);
             	Intent i = new Intent(this,MostrarProductosCategoria.class);
-				i.putExtra("posicion",pos);
-				i.putExtra("cantProduct",produ.getCantidad());
-				i.putExtra("key",1);
+            	i.putExtra("idCat",tipoCat);
 				startActivity(i);
 				break;
 			
@@ -313,11 +314,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-		ItemProducto product = products.get(pos);
-		if (product.getCantidad() > 0) {
-			product.setCantidad(product.getCantidad()-1);
-			products.set(pos,product);
-			cantProduct.setText(product.getCantidad() + "");
+		if (Integer.parseInt(cantProduct.getText().toString()) > 0) {
+	        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())-1 + "");
+
 		}
 		
 	}
@@ -328,20 +327,18 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-		ItemProducto product = products.get(pos);
-		product.setCantidad(product.getCantidad()+1);
-		products.set(pos,product);
-		cantProduct.setText(product.getCantidad() + "");
+        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
+
 		
 	}
 	
-	public void errorProduct() {
+	public void modifyProduct() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    builder.setTitle("Error")
+	    builder.setTitle("Información")
 	            .setIcon(
 	                    getResources().getDrawable(
-	                            R.drawable.close))
+	                            android.R.drawable.ic_dialog_info))
 	            .setMessage("Producto ya existente en la despensa")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
@@ -435,43 +432,79 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			//Intent intent = new Intent(this,MostrarProductosCategoria.class);
    	 		String[] prod = matches_text.get(position).split("");
    	 		int cant = Integer.parseInt(prod[prod.length - 1]);
-   	 		String name = "";
-   	 		for (int i = 0;i < prod.length - 1;i++) {
-   	 			name += prod[i];
-   	 			name += "";
+   	 		if (cant <= 0) {
+   	 			errorCantVoice();
    	 		}
-   	 	initializeArrayList(tipoCat);
-		ItemProducto item = new ItemProducto(products.size(),name,cant);
-		boolean encontrado = false;
-		int i = 0;
-		while (i<products.size() && !encontrado){
-			ItemProducto product = products.get(i);
-			String nameP = product.getNombre().toLowerCase();
-			if (nameP.equals(item.getNombre().toLowerCase())) {
-				encontrado = true;
-			}
-			i++;
-		}
-		if (!encontrado) {
-			products.add(item);
-			SQLiteDatabase tmp = helper.open();	
-			if (tmp!=null){
-				helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
-				helper.close();
-			}
+   	 		else {
+   	 			String name = "";
+   	 			for (int i = 0;i < prod.length - 1;i++) {
+   	 				name += prod[i];
+   	 				name += "";
+   	 			}
+   	 			initializeArrayList(tipoCat);
+   	 			ItemProducto item = new ItemProducto(products.size(),name,cant);
+   	 			boolean encontrado = false;
+   	 			int i = 0;
+   	 			int cantProductModify = 0;
+   	 			while (i<products.size() && !encontrado){
+   	 				ItemProducto product = products.get(i);
+   	 				String nameP = product.getNombre().toLowerCase();
+   	 				if (nameP.equals(item.getNombre().toLowerCase())) {
+   	 					encontrado = true;
+   	 					cantProductModify = product.getCantidad() + item.getCantidad();
+   	 				}
+   	 				i++;
+   	 			}
+   	 			if (!encontrado) {
+   	 				products.add(item);
+   	 				SQLiteDatabase tmp = helper.open();	
+   	 				if (tmp!=null){
+   	 					helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
+   	 					helper.close();
+   	 				}
 			
-		}
-		else {
-			errorProduct();
-		}
-   	 		//intent.putExtra("key",1);
-   	 		//intent.putExtra("nameProduct",name);
-   	 		//intent.putExtra("cantProduct", cant);
-   	 		//startActivity(intent);
+   	 			}
+   	 			else {
+   	 				modifyProduct();
+   	 				products.get(i-1).setCantidad(cantProductModify);
+   	 				SQLiteDatabase tmp = helper.open();
+   	 				if (tmp!=null) {
+   	 					helper.updateProduct(item.getNombre(),cantProductModify);
+   	 					helper.close();
+   	 				}
+   	 			}
+   	 	
+		/*Intent intent = new Intent(this,MostrarProductosCategoria.class);
+		startActivity(intent);*/
+   	 			ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
+   	 			list.setAdapter(adapter);
+   	 		}
+		
+		
 		}
 		catch (NumberFormatException e) {
-			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un número", Toast.LENGTH_SHORT).show();
+			errorCantVoice();
 		}
+	}
+	
+	public void errorCantVoice() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		 
+	    builder.setTitle("Error")
+	            .setIcon(
+	                    getResources().getDrawable(
+	                            R.drawable.close))
+	            .setMessage("La cantidad del producto introducida tiene que ser un número mayor que cero")
+	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+	 
+	                @Override
+	                public void onClick(DialogInterface arg0, int arg1) {
+	                	arg0.cancel();
+	                }
+	            });
+	 
+	    builder.create();
+	    builder.show();
 	}
 
 }
