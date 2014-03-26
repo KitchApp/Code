@@ -19,7 +19,7 @@
     	</TextView>
 
    		<Button
-   	    	android:id="@+id/button1"
+   	    	android:id="@+id/buttonDairy"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="58dp"
 	   	    android:layout_alignParentLeft="true"
@@ -31,7 +31,7 @@
 	   	    android:textColor="@color/black"/>
    	
 	   	<Button
-	   	    android:id="@+id/button2"
+	   	    android:id="@+id/buttonFruits"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="wrap_content"
 	   	    android:layout_alignParentRight="true"
@@ -43,12 +43,12 @@
 	   	    android:textColor="@color/black" />
 	   	
 	   	<Button
-	   	    android:id="@+id/button3"
+	   	    android:id="@+id/buttonBread"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="wrap_content"
-	   	    android:layout_above="@+id/button6"
+	   	    android:layout_above="@+id/buttonFish"
 	   	    android:layout_alignParentLeft="true"
-	   	    android:layout_below="@+id/button1"
+	   	    android:layout_below="@+id/buttonDairy"
 	   	    android:layout_marginLeft="15dp"
 	   	    android:layout_marginTop="13dp"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
@@ -56,11 +56,11 @@
 	   	    android:textColor="@color/black" />
 	
 	   	<Button
-	       	android:id="@+id/button4"
+	       	android:id="@+id/buttonDrinks"
 	       	android:layout_width="125dp"
 	       	android:layout_height="58dp"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button2"
+	   	    android:layout_below="@+id/buttonFruits"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="13dp"
 	       	android:background="@drawable/boton_redondo_color_celeste"
@@ -68,11 +68,11 @@
 	       	android:textColor="@color/black" />
 	
 	   	<Button
-	       	android:id="@+id/button6"
+	       	android:id="@+id/buttonFish"
 	       	android:layout_width="125dp"
 	       	android:layout_height="58dp"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button4"
+	   	    android:layout_below="@+id/buttonDrinks"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="13dp"
 	       	android:background="@drawable/boton_redondo_color_celeste"
@@ -80,11 +80,11 @@
 	       	android:textColor="@color/black" />
 	
 	   	<Button
-	       	android:id="@+id/button8"
+	       	android:id="@+id/buttonPasta"
 	       	android:layout_width="125dp"
 	       	android:layout_height="wrap_content"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button6"
+	   	    android:layout_below="@+id/buttonFish"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="13dp"
 	       	android:background="@drawable/boton_redondo_color_celeste"
@@ -92,18 +92,18 @@
 	       	android:textColor="@color/black" />
 	
 	   	<Button
-	       	android:id="@+id/button10"
+	       	android:id="@+id/buttonOthers"
 	       	android:layout_width="125dp"
 	       	android:layout_height="56dp"
 	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button8"
+	   	    android:layout_below="@+id/buttonPasta"
 	   	    android:layout_marginRight="25dp"
 	   	    android:layout_marginTop="13dp"
 	       	android:background="@drawable/boton_redondo_color_celeste"
 	       	android:text="@string/varios"
 	       	android:textColor="@color/black" />
 	   	
-	   	<Button
+	   	<!--  <Button
 	   	    android:id="@+id/button_add"
 	   	    android:layout_width="100dp"
 	   	    android:layout_height="60dp"
@@ -111,7 +111,7 @@
 	   	    android:layout_alignParentLeft="true"
 	   	    android:layout_below="@+id/button9"
 	   	    android:layout_marginLeft="35dp"
-	   	    android:layout_marginTop="13dp"/>
+	   	    android:layout_marginTop="13dp"/> -->
 	   	
 	   	<!--<Button
 	   	    android:id="@+id/button11"
@@ -130,9 +130,8 @@
 	   	    android:layout_width="100dp"
 	   	    android:layout_height="60dp"
 	   	    android:background="@drawable/lupa_sobre_un_robot_androide"
-	   	    android:layout_alignParentRight="true"
-	   	    android:layout_below="@+id/button10"
-	   	    android:layout_marginRight="30dp"
+	   	    android:layout_centerHorizontal="true"
+	   	    android:layout_below="@+id/buttonOthers"
 	   	    android:layout_marginTop="13dp"/>
 	
 	   	<!--<Button
@@ -148,33 +147,33 @@
 	   	    android:textColor="@color/white" /> -->
 
 	   	<Button
-	   	    android:id="@+id/button5"
+	   	    android:id="@+id/buttonMeat"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="58dp"
-	   	    android:layout_alignBaseline="@+id/button6"
-	   	    android:layout_alignBottom="@+id/button6"
-	   	    android:layout_alignLeft="@+id/button3"
+	   	    android:layout_alignBaseline="@+id/buttonFish"
+	   	    android:layout_alignBottom="@+id/buttonFish"
+	   	    android:layout_alignLeft="@+id/buttonBread"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
 	   	    android:text="@string/carnes"
 	   	    android:textColor="@color/black" />
 
 	   	<Button
-	   	    android:id="@+id/button7"
+	   	    android:id="@+id/buttonSauces"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="wrap_content"
-	   	    android:layout_alignBaseline="@+id/button8"
-	   	    android:layout_alignBottom="@+id/button8"
-	   	    android:layout_alignLeft="@+id/button5"
+	   	    android:layout_alignBaseline="@+id/buttonPasta"
+	   	    android:layout_alignBottom="@+id/buttonPasta"
+	   	    android:layout_alignLeft="@+id/buttonMeat"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
 	   	    android:text="@string/salsasCondimentos"
 	   	    android:textColor="@color/black" />
 
 	   	<Button
-	   	    android:id="@+id/button9"
+	   	    android:id="@+id/buttonFrozen"
 	   	    android:layout_width="125dp"
 	   	    android:layout_height="56dp"
 	   	    android:layout_above="@+id/button_lens"
-	   	    android:layout_alignLeft="@+id/button7"
+	   	    android:layout_alignLeft="@+id/buttonSauces"
 	   	    android:background="@drawable/boton_redondo_color_celeste"
 	   	    android:text="@string/congelados"
 	   	    android:textColor="@color/black" />
