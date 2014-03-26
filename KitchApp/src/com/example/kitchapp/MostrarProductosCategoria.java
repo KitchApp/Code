@@ -30,6 +30,7 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+
 public class MostrarProductosCategoria extends Activity implements OnClickListener {
 	
 	private ListView list;
@@ -70,21 +71,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Red bull",4,4,null);
 				helper.insertProducto("Arroz largo",4,8,null);
 				helper.insertProducto("Guisantes",1,9,null);
-				helper.insertProducto("Gel baño",4,10,null);
+				helper.insertProducto("Gel baï¿½o",4,10,null);
 				helper.insertProducto("Macarrones",2,8,null);
 				helper.insertProducto("Helado Fresa",4,9,null);
 		}*/
-				/*helper.insertCategory(1,"Lácteos")
-				helper.insertCategory(2,"Frutas y Verduras")
-				helper.insertCategory(3,"Pan y Bollería")
-				helper.insertCategory(4,"Bebidas")
-				helper.insertCategory(5,"Carnes")
-				helper.insertCategory(6,"Pescados")
-				helper.insertCategory(7,"Salsas y condimentos")
-				helper.insertCategory(8,"Arroces")
-				helper.insertCategory(9,"Congelados")
-				helper.insertCategory(10,"Varios")*/
-		
+				
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -92,7 +83,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
 				case 1:
-					title.setText("Lácteos");
+					title.setText("Lï¿½cteos");
+
 					break;
 				
 				case 2:
@@ -100,7 +92,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 3:
-					title.setText("Pan y Bollería");
+					title.setText("Pan y Bollerï¿½a");
+
 					break;
 
 				case 4:
@@ -130,6 +123,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				case 10:
 					title.setText("Varios");
 					break;	
+
 			}
 			
 		}
@@ -138,12 +132,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		
 			
 		
-		helper.close();
+		//helper.close();
 		
 		
 		
 		Bundle extra = this.getIntent().getExtras();
-		
 		
 		if (extra!=null && extra.getInt("key") != 0) {
 			int key = extra.getInt("key");
@@ -165,6 +158,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					SQLiteDatabase tmp1 = helper.open();	
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
+
 						helper.close();
 					}
 					
@@ -290,7 +284,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				
 			case R.id.button_add:
 
-				alertDialog(true,0);
+				alertDialogListView(true,0);
+
 				break;
 				
 		}
@@ -359,10 +354,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    builder.show();
 	}
 	
-	public void alertDialog(boolean full, int except){
+	public void alertDialogListView(boolean full, int except){
 		
 	    if(full & except==0){
-	    	final String [] items = new String[] {"Manualmente", "Voz", "Código de barras" };
+	    	final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
 		    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 		    ListAdapter adapter = new ItemAdapter(this, items, icons);
 		    
@@ -382,7 +377,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    }
 	    else{
 	    	if(except==1){
-	    		final String [] items = new String[] {"Voz", "Código de barras" };
+	    		final String [] items = new String[] {"Voz", "Cï¿½digo de barras" };
 	    	    final Integer[] icons = new Integer[] {R.drawable.microfono, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -397,7 +392,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			    }).show();
 	    	}
 	    	else if(except==2){
-	    		final String [] items = new String[] {"Manualmente", "Código de barras" };
+	    		final String [] items = new String[] {"Manualmente", "Cï¿½digo de barras" };
 	    	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -427,6 +422,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			    }).show();
 	    	}
 	    }
+
 	}
 	
 	
@@ -450,11 +446,13 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	public void addBarCode(){
 		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
+
 		scanIntegrator.initiateScan();
 	}
 	
 	
 	
+
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo net = cm.getActiveNetworkInfo();
@@ -467,9 +465,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	
-		
-		
      if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
     	    
      match_text_dialog = new Dialog(MostrarProductosCategoria.this);
@@ -495,7 +490,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
      
      }
      super.onActivityResult(requestCode, resultCode, data);
-     
+
      
    //BarCode
 		
@@ -507,13 +502,24 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    			String result=scanningResult.getContents();
    			if (!helper.exist(result,"products")){
    				if (!helper.exist(result,"productsTemporary")){
-   					Toast.makeText(this, "Producto no existente ", Toast.LENGTH_SHORT).show();
-   					alertDialog(false,3);
+   					alertDialogReport("Producto no existente");
+   					//alertDialogListView(false,3);
    					
    				}
    				else{
    					ArrayList<Object> tmp=helper.readProductsTemporary(result);
    					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1));
+   					//Para que se refresque la información en la pantalla
+   					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1);
+   					products.add(item);
+   					list = (ListView)findViewById(R.id.listViewProducts);
+   					ItemProductoAdapter adapter;
+   					// Inicializamos el adapter.
+   					adapter = new ItemProductoAdapter(this,products);
+   					// Asignamos el Adapter al ListView, en este punto hacemos que el
+   					// ListView muestre los datos que queremos.
+   					list.setAdapter(adapter);
+   					
    				}
    				
    			}
@@ -533,7 +539,31 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    		
      
      
+
     }
+	
+	
+	public void alertDialogReport(String msj) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		 
+	   // builder.setTitle("Error")
+	           builder.setIcon(
+	                    getResources().getDrawable(
+	                            R.drawable.close))
+	            .setMessage(msj)
+	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+	 
+	                @Override
+	                public void onClick(DialogInterface arg0, int arg1) {
+	                	//arg0.cancel();
+	                	alertDialogListView(false,3);
+	                }
+	            });
+	 
+	    builder.create();
+	    builder.show();
+	}
+	
 	
 	public void addProduct(int position) {
 		try {
@@ -562,6 +592,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			SQLiteDatabase tmp = helper.open();	
 			if (tmp!=null){
 				helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
+
 				helper.close();
 			}
 			
@@ -575,7 +606,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 		//startActivity(intent);
 		}
 		catch (NumberFormatException e) {
-			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un número", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un nï¿½mero", Toast.LENGTH_SHORT).show();
+
 		}
 	}
 

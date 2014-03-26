@@ -26,7 +26,6 @@
         android:textSize="15sp"
         android:hint="@string/nameProduct" 
         android:textColorHint="@color/black"/>
-
     <EditText
         android:id="@+id/EditTextCantProduct"
         android:layout_width="wrap_content"

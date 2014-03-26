@@ -24,8 +24,10 @@
         android:layout_marginTop="28dp"
         android:ems="10"
         android:textSize="15sp"
+
         android:hint="@string/nameProduct"
         android:textColorHint="@color/black" />
+
 
     <EditText
         android:id="@+id/EditTextCantProduct"
@@ -36,6 +38,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:textSize="15sp"
+
         android:hint="@string/cantProduct"
         android:textColorHint="@color/black" >
 
