@@ -59,66 +59,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		products = new ArrayList<ItemProducto>();
 		
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		/*SQLiteDatabase tmp=helper.open();	
-=======
-		/*SQLiteDatabase tmp = helper.open();	
->>>>>>> Rama-Edu-Android
-=======
-		/*SQLiteDatabase tmp=helper.open();	
->>>>>>> Rama-Edu-Android
-=======
-		/*SQLiteDatabase tmp = helper.open();	
-		
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-		if (tmp!=null){
-				
-				helper.insertProducto("Yogurt",2,1,null);
-				helper.insertProducto("Manzana",3,2,null);
-				helper.insertProducto("Magdalena",5,3,null);
-				helper.insertProducto("Leche",6,1);
-<<<<<<< HEAD
-				helper.insertProducto("coca-cola", 4, 4);
-				helper.insertProducto("Pollo", 1, 5);
-				helper.insertProducto("Merluza", 1, 6);
-				helper.insertProducto("Red bull", 4, 4);
-				helper.insertProducto("Arroz largo", 4, 8);
-				helper.insertProducto("Guisantes", 1, 9);
-				helper.insertProducto("Gel baño", 4, 10);
-				helper.insertProducto("Macarrones", 2, 8);
-				helper.insertProducto("Helado Fresa", 4, 9);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		}*/
->>>>>>> Rama-Edu-Android
-				/*helper.insertCategory(1,"Lácteos")
-=======
-		}
-		helper.close();*/
-				/*helper.insertCategory(1,"Lï¿½cteos")
->>>>>>> Rama-Edu-Android
-				helper.insertCategory(2,"Frutas y Verduras")
-				helper.insertCategory(3,"Pan y Bollerï¿½a")
-				helper.insertCategory(4,"Bebidas")
-				helper.insertCategory(5,"Carnes")
-				helper.insertCategory(6,"Pescados")
-				helper.insertCategory(7,"Salsas y condimentos")
-				helper.insertCategory(8,"Arroces")
-				helper.insertCategory(9,"Congelados")
-				helper.insertCategory(10,"Varios")*/
-		
-<<<<<<< HEAD
-		Bundle extraLacteos= this.getIntent().getExtras();
-		if(extraLacteos!=null){
-<<<<<<< HEAD
-			Integer lacteos=extraLacteos.getInt("lacteos");
-			initializeArrayList(lacteos);
-=======
-=======
-				helper.insertProducto("coca-cola",4,4,null);
+				/*helper.insertProducto("coca-cola",4,4,null);
 				helper.insertProducto("Pollo",1,5,null);
 				helper.insertProducto("Merluza",1,6,null);
 				helper.insertProducto("Red bull",4,4,null);
@@ -128,7 +69,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Macarrones",2,8,null);
 				helper.insertProducto("Helado Fresa",4,9,null);
 		}*/
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -195,19 +135,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		
 		Bundle extra = this.getIntent().getExtras();
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-<<<<<<< HEAD
-		if (extra!=null) {
-			int key = extra.getInt("key");
-			if (key == 0) {
-				
-=======
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 		if (extra!=null && extra.getInt("key") != 0) {
 			int key = extra.getInt("key");
 			if (key == 1) {
@@ -227,26 +154,15 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				}
 				if (!encontrado) {
 					products.add(item);
-<<<<<<< HEAD
-					SQLiteDatabase tmc = helper.open();	
-					if (tmc!=null){
-						helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
-=======
 					SQLiteDatabase tmp1 = helper.open();	
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
 
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 						helper.close();
 					}
 					
 				}
 				else {
-<<<<<<< HEAD
-					errorProduct();
-<<<<<<< HEAD
-				}*/
-=======
 					modifyProduct();
 					products.get(i-1).setCantidad(cantProductModify);
 					SQLiteDatabase tmc = helper.open();	
@@ -256,18 +172,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					}
 					
 				}
->>>>>>> Rama-Edu-Android
-=======
-				}
+				
+		
 			}
-			else {
-				int posi = extra.getInt("posicion");
-				int cantProducto = extra.getInt("cantProduct");
-				ItemProducto producto = products.get(posi);
-				producto.setCantidad(cantProducto);
-				products.set(posi,producto);
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-			}
+
 		}
 		
 		/*TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
@@ -406,21 +314,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-<<<<<<< HEAD
-		ItemProducto product = products.get(pos);
-		if (product.getCantidad() > 0) {
-			product.setCantidad(product.getCantidad()-1);
-			products.set(pos,product);
-<<<<<<< HEAD
-			modificarProducto(view,pos);
-=======
 		if (Integer.parseInt(cantProduct.getText().toString()) > 0) {
 	        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())-1 + "");
 
->>>>>>> Rama-Edu-Android
-=======
-			cantProduct.setText(product.getCantidad() + "");
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 		}
 		
 	}
@@ -431,26 +327,15 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-<<<<<<< HEAD
-		ItemProducto product = products.get(pos);
-		product.setCantidad(product.getCantidad()+1);
-		products.set(pos,product);
-<<<<<<< HEAD
-		modificarProducto(view,pos);
-=======
         cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
 
->>>>>>> Rama-Edu-Android
-=======
-		cantProduct.setText(product.getCantidad() + "");
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 		
 	}
 	
 	public void modifyProduct() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    builder.setTitle("Información")
+	    builder.setTitle("Informaciï¿½n")
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            android.R.drawable.ic_dialog_info))
@@ -686,7 +571,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 		if (cant <= 0) {
    	 			errorCantVoice();
    	 		}
-<<<<<<< HEAD
    	 		else {
    	 			String name = "";
    	 			for (int i = 0;i < prod.length - 1;i++) {
@@ -711,31 +595,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 				products.add(item);
    	 				SQLiteDatabase tmp = helper.open();	
    	 				if (tmp!=null){
-   	 					helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
+   	 					helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
    	 					helper.close();
    	 				}
-=======
-   	 	initializeArrayList(tipoCat);
-		ItemProducto item = new ItemProducto(products.size(),name,cant);
-		boolean encontrado = false;
-		int i = 0;
-		while (i<products.size() && !encontrado){
-			ItemProducto product = products.get(i);
-			String nameP = product.getNombre().toLowerCase();
-			if (nameP.equals(item.getNombre().toLowerCase())) {
-				encontrado = true;
-			}
-			i++;
-		}
-		if (!encontrado) {
-			products.add(item);
-			SQLiteDatabase tmp = helper.open();	
-			if (tmp!=null){
-				helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
 
-				helper.close();
-			}
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 			
    	 			}
    	 			else {
@@ -757,12 +620,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		
 		}
 		catch (NumberFormatException e) {
-<<<<<<< HEAD
 			errorCantVoice();
-=======
-			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un nï¿½mero", Toast.LENGTH_SHORT).show();
-
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 		}
 	}
 	
@@ -773,7 +631,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("La cantidad del producto introducida tiene que ser un número mayor que cero")
+	            .setMessage("La cantidad del producto introducida tiene que ser un nï¿½mero mayor que cero")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
