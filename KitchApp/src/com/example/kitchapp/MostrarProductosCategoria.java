@@ -613,6 +613,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 	
 		/*Intent intent = new Intent(this,MostrarProductosCategoria.class);
 		startActivity(intent);*/
+				list = (ListView) findViewById(R.id.listViewProducts);
    	 			ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
    	 			list.setAdapter(adapter);
    	 		}
