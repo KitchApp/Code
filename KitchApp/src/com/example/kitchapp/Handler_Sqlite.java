@@ -125,6 +125,8 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		
 		return c.getString(password);
 		
+	}
+		
 	public boolean exist(String data, String table){
 		
 		String columnas[]={_ID,"name","barCode"};
