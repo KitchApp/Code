@@ -17,8 +17,10 @@ import static android.provider.BaseColumns._ID;
 
 public class Handler_Sqlite extends SQLiteOpenHelper {
 	private static final String nameBD = "KitchApp-Base";
+	Context myContext;
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,7);
+		myContext = ctx;
 	}
 	
 	public SQLiteDatabase open(){
@@ -176,7 +178,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		
 		tmp.put("cant",number);
 		
-		this.getWritableDatabase().update("productos", tmp, "name=?", args);
+		this.getWritableDatabase().update("products", tmp, "name=?", args);
 	}
 	
 	public void insertUser(String name,String password,String email) {
