@@ -16,17 +16,9 @@ import static android.provider.BaseColumns._ID;
 
 
 public class Handler_Sqlite extends SQLiteOpenHelper {
-<<<<<<< HEAD
 	private static final String nameBD = "KitchApp-Base";
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,7);
-=======
-	Context myContext;
-	public Handler_Sqlite(Context ctx){
-		
-		super(ctx,"Base1", null,1);
-		myContext=ctx;
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 	}
 	
 	public SQLiteDatabase open(){
@@ -41,12 +33,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
 		//This method is limited to directly execute the SQL code that we pass as a parameter
-		String query2 = "CREATE TABLE users ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, email TEXT);";
+		String query3 = "CREATE TABLE users ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, email TEXT);";
 		db.execSQL(query1);	
 		db.execSQL(query2);
-<<<<<<< HEAD
-		//db.execSQL(query2);
-=======
+		db.execSQL(query3);
 		
 		 InputStream is = null;
 		    try {
@@ -73,20 +63,15 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		            }                
 		        }
 		    }			
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 	}
 
 	@Override
 	//This methos is called when the database needs to be upgraded.
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
-<<<<<<< HEAD
-		db.execSQL("DROP TABLE IF EXISTS productos");
 		//db.execSQL("DROP TABLE IF EXISTS categorias");
 		db.execSQL("DROP TABLE IF EXISTS users");
-=======
 		db.execSQL("DROP TABLE IF EXISTS products");
 		db.execSQL("DROP TABLE IF EXISTS productsTemporary");
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 		onCreate(db);
 	}
 	
@@ -108,14 +93,13 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
-			//TODO hacer consulta para la categoría
+			//TODO hacer consulta para la categorï¿½a
 			
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;
 	}
 	
-<<<<<<< HEAD
 	public boolean readUser(String nameUser) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={nameUser};
@@ -141,7 +125,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		
 		return c.getString(password);
 		
-=======
 	public boolean exist(String data, String table){
 		
 		String columnas[]={_ID,"name","barCode"};
@@ -170,7 +153,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		result.add((c.getString(idBarCode)));
 		
 		return result;
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 	}
 	
 		
