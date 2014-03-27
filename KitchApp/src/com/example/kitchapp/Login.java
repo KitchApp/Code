@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,21 +20,36 @@ public class Login extends Activity {
 	private HashMap<String,String> users;
 	private EditText userName;
 	private EditText password;
+	Handler_Sqlite helper = new Handler_Sqlite(this);
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
 		setContentView(R.layout.activity_login);
-		users = new HashMap<String,String>();
-		initializeUsers();
+		/*users = new HashMap<String,String>();
+		initializeUsers();*/
 		Bundle extra = this.getIntent().getExtras();
 		if (extra != null) {
-			if (!users.containsKey(extra.getString("userName"))) {
+			String nameUser = extra.getString("userName");
+			String userPassword = extra.getString("password");
+			String userEmail = extra.getString("email");
+			SQLiteDatabase tmp = helper.open();
+			if (tmp != null) {
+				if (!helper.readUser(nameUser)) {
+					helper.insertUser(nameUser, userPassword, userEmail);
+				}
+				else {
+					errorRegister();
+				}
+				helper.close();
+
+			}
+			/*if (!users.containsKey(extra.getString("userName"))) {
 				users.put(extra.getString("userName"),extra.getString("password"));
 			}
 			else {
 				errorRegister();
-			}
+			}*/
 		}
 		
 		userName = (EditText)findViewById(R.id.editTextuserName);
@@ -70,7 +86,23 @@ public class Login extends Activity {
 	public void intento_logueo(View view) {
 		String name = userName.getText().toString(); 
 		String key = password.getText().toString();
-		if (users.containsKey(name) && key.equals(users.get(name))) {
+		SQLiteDatabase tmp = helper.open();
+		if (tmp != null) {
+			if (helper.readUser(name) && key.equals(helper.readPassword(name))) {
+				Intent i = new Intent(this, PantallaTransicion.class);
+				//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
+				startActivity(i);
+			}
+			else if (!helper.readUser(name)) {
+				errorLogging();
+			}
+			else {
+				errorPassword();
+			}
+			helper.close();
+				
+		}
+		/*if (users.containsKey(name) && key.equals(users.get(name))) {
 			Intent i = new Intent(this, PantallaTransicion.class);
 			//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
 			startActivity(i);
@@ -79,7 +111,7 @@ public class Login extends Activity {
 			errorLogging();
 		}
 		else
-			errorPassword();
+			errorPassword();*/
 
 	}
 	
@@ -102,7 +134,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("No se encuentra registrado en KitchApp. Por favor regï¿½strese")
+	            .setMessage("No se encuentra registrado en KitchApp. Por favor regístrese")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -122,7 +154,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("Contraseï¿½a incorrecta. Intï¿½ntelo de nuevo")
+	            .setMessage("Contraseña incorrecta. Inténtelo de nuevo")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -143,7 +175,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("Ya existe ese nombre de usuario. Por favor regï¿½strese de nuevo")
+	            .setMessage("Ya existe ese nombre de usuario. Por favor regístrese de nuevo")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override

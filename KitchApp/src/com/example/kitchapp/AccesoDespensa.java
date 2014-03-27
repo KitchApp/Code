@@ -33,6 +33,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Button b1;
 =======
 	
@@ -50,10 +51,13 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	Button buttonVarios;
 >>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
 	
+=======
+>>>>>>> Rama-Edu-Android
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,6 +96,9 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 <<<<<<< HEAD
 >>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
 =======
+=======
+	
+>>>>>>> Rama-Edu-Android
 		Button button_dairy = (Button) findViewById(R.id.buttonDairy);
 		button_dairy.setOnClickListener(this);
 		Button button_fruits = (Button) findViewById(R.id.buttonFruits);
@@ -255,6 +262,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		}
 	}
 	
+<<<<<<< HEAD
 	
 <<<<<<< HEAD
 	public void alertDialog(View v){
@@ -357,4 +365,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	}
 
 >>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
+=======
+>>>>>>> Rama-Edu-Android
 }

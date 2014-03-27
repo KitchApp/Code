@@ -11,8 +11,9 @@ import static android.provider.BaseColumns._ID;
 
 
 public class Handler_Sqlite extends SQLiteOpenHelper {
+	private static final String nameBD = "KitchApp-Base";
 	public Handler_Sqlite(Context ctx){
-		super(ctx,"MyBase", null,6);
+		super(ctx,nameBD, null,7);
 	}
 	
 	public SQLiteDatabase open(){
@@ -26,7 +27,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		String query1 = "CREATE TABLE productos ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER);";
 		//String query2= "CREATE TABLE categorias("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)";
 		//This method is limited to directly execute the SQL code that we pass as a parameter
+		String query2 = "CREATE TABLE users ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, email TEXT);";
 		db.execSQL(query1);	
+		db.execSQL(query2);
 		//db.execSQL(query2);
 	}
 
@@ -35,6 +38,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
 		db.execSQL("DROP TABLE IF EXISTS productos");
 		//db.execSQL("DROP TABLE IF EXISTS categorias");
+		db.execSQL("DROP TABLE IF EXISTS users");
 		onCreate(db);
 	}
 
@@ -62,6 +66,33 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		return result;
 	}
 	
+	public boolean readUser(String nameUser) {
+		SQLiteDatabase db=this.getReadableDatabase();
+		String args[]={nameUser};
+		Cursor c=db.query("users", null, "name=?", args, null, null, null);
+		if (c.getCount() == 0)
+			return false;
+		else
+			return true;
+		
+	}
+	
+	public String readPassword(String nameUser) {
+		SQLiteDatabase db=this.getReadableDatabase();
+		String args[]={nameUser};
+		Cursor c=db.query("users", null, "name=?", args, null, null, null);
+		int id,name,password,email;
+		id = c.getColumnIndex(_ID);
+		name = c.getColumnIndex("name");
+		password = c.getColumnIndex("password");
+		email = c.getColumnIndex("email");
+		
+		c.moveToFirst();
+		
+		return c.getString(password);
+		
+	}
+	
 		
 	public void insertProducto(String name,Integer number, Integer idCategory){
 		ContentValues registro=new ContentValues();
@@ -72,5 +103,23 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		
 		this.getWritableDatabase().insert("productos", null, registro);
 	
+	}
+	
+	public void updateProduct(String name,Integer number) {
+		String args [] = { name };
+		ContentValues tmp = new ContentValues();
+		
+		tmp.put("cant",number);
+		
+		this.getWritableDatabase().update("productos", tmp, "name=?", args);
+	}
+	
+	public void insertUser(String name,String password,String email) {
+		ContentValues register = new ContentValues();
+		register.put("name", name);
+		register.put("password", password);
+		register.put("email", email);
+		
+		this.getWritableDatabase().insert("users", null, register);
 	}
 }
