@@ -23,7 +23,9 @@
         android:layout_below="@+id/textViewAdd"
         android:layout_marginTop="38dp"
         android:ems="10"
-        android:text="@string/nameProduct" />
+        android:hint="@string/nameProduct"
+
+        android:textColorHint="@color/black" />
 
     <EditText
         android:id="@+id/EditTextCantProduct"
@@ -34,11 +36,17 @@
         android:layout_marginTop="40dp"
         android:ems="10"
 <<<<<<< HEAD
+<<<<<<< HEAD
         android:text="@string/cantProduct" >
 =======
         android:hint="@string/cantProduct"
         android:textColorHint="@color/black" >
 >>>>>>> Rama-Edu-Android
+=======
+        android:hint="@string/cantProduct" 
+        android:textColorHint="@color/black">
+
+>>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 
         <requestFocus />
     </EditText>

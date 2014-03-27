@@ -29,6 +29,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 
 public class AccesoDespensa extends Activity implements OnClickListener {
+<<<<<<< HEAD
 	
 
 <<<<<<< HEAD
@@ -53,10 +54,13 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	
 =======
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -99,6 +103,9 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 =======
 	
 >>>>>>> Rama-Edu-Android
+=======
+	
+>>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 		Button button_dairy = (Button) findViewById(R.id.buttonDairy);
 		button_dairy.setOnClickListener(this);
 		Button button_fruits = (Button) findViewById(R.id.buttonFruits);
@@ -120,9 +127,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		Button button_others = (Button) findViewById(R.id.buttonOthers);
 		button_others.setOnClickListener(this);
 
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
 	}
 
 	
@@ -138,24 +142,13 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		Intent i;
 		switch (v.getId()){
 
-<<<<<<< HEAD
 		case R.id.buttonDairy:
 			Intent i = new Intent(this,MostrarProductosCategoria.class);
-<<<<<<< HEAD
-=======
-		case R.id.buttonLacteos:
-			i = new Intent(this,MostrarProductosCategoria.class);
->>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
-			i.putExtra("lacteos", 1);
-=======
 			i.putExtra("idCat",1);
->>>>>>> Rama-Edu-Android
 			startActivity(i);
 			break;
-<<<<<<< HEAD
 		
 		case R.id.buttonFruits:
 			Intent j = new Intent(this,MostrarProductosCategoria.class);
@@ -210,58 +203,11 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			intent7.putExtra("idCat",10);
 			startActivity(intent7);
 			break;
-=======
-		case R.id.buttonFrutas:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("frutas", 2);
-			startActivity(i);
-			break;
-		case R.id.buttonPan:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("pan", 3);
-			startActivity(i);
-			break;
-		case R.id.buttonBebidas:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("bebidas", 4);
-			startActivity(i);
-			break;
-		case R.id.buttonCarnes:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("carnes", 5);
-			startActivity(i);
-			break;
-		case R.id.buttonPescados:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("pescados", 6);
-			startActivity(i);
-			break;
-		case R.id.buttonSalsas:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("salsas", 7);
-			startActivity(i);
-			break;
-		case R.id.buttonPastas:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("pastas", 8);
-			startActivity(i);
-			break;
-		case R.id.buttonCongelados:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("congelados", 9);
-			startActivity(i);
-			break;
-		case R.id.buttonVarios:
-			i = new Intent(this,MostrarProductosCategoria.class);
-			i.putExtra("varios", 10);
-			startActivity(i);
-			break;
-
->>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
 			
 		}
 	}
 	
+<<<<<<< HEAD
 <<<<<<< HEAD
 	
 <<<<<<< HEAD
@@ -367,4 +313,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 >>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
 =======
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 }
