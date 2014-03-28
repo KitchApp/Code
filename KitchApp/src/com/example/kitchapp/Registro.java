@@ -69,6 +69,7 @@ public class Registro extends Activity implements OnClickListener {
 		}
 		
 	}
+<<<<<<< HEAD
 	
 	public void errorMail() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -89,4 +90,6 @@ public class Registro extends Activity implements OnClickListener {
 	    builder.create();
 	    builder.show();
 	}
+=======
+>>>>>>> Rama-Vivi-Android
 }

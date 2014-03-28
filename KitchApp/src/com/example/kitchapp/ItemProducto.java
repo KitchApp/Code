@@ -4,7 +4,11 @@ public class ItemProducto {
   protected long id;
   protected int cantidad;
   protected String nombre;
+<<<<<<< HEAD
   protected String barCode;
+=======
+  //protected String tipo;
+>>>>>>> Rama-Vivi-Android
          
   public ItemProducto() {
     this.nombre = "";

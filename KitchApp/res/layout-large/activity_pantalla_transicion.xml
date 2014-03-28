@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/propuestaportadaappis"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+<<<<<<< HEAD:KitchApp/res/layout-hdpi/activity_pantalla_transicion.xml
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="210dip"
+        android:layout_marginLeft="145dip"/>
+=======
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dip"
+        android:layout_marginTop="180dip" />
+>>>>>>> Rama-Vivi-Android:KitchApp/res/layout-large/activity_pantalla_transicion.xml
+         
+</LinearLayout>

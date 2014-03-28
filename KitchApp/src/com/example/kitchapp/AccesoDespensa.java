@@ -26,7 +26,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
+<<<<<<< HEAD
 
+=======
+
+
+public class AccesoDespensa extends Activity implements OnClickListener {
+	
+>>>>>>> Rama-Vivi-Android
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 	
@@ -34,7 +41,11 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> Rama-Vivi-Android
 		Button button_dairy = (Button) findViewById(R.id.buttonDairy);
 		button_dairy.setOnClickListener(this);
 		Button button_fruits = (Button) findViewById(R.id.buttonFruits);
