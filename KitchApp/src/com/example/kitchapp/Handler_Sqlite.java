@@ -1,12 +1,10 @@
 package com.example.kitchapp;
 
-<<<<<<< HEAD
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-=======
->>>>>>> Rama-Vivi-Android
 import java.util.ArrayList;
 
 import android.content.ContentValues;
@@ -14,24 +12,18 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-<<<<<<< HEAD
+
 import android.text.TextUtils;
-=======
->>>>>>> Rama-Vivi-Android
 import static android.provider.BaseColumns._ID;
 
 
 public class Handler_Sqlite extends SQLiteOpenHelper {
-<<<<<<< HEAD
+
 	private static final String nameBD = "KitchApp-Base";
 	Context myContext;
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,7);
 		myContext = ctx;
-=======
-	public Handler_Sqlite(Context ctx){
-		super(ctx,"MyBase", null,6);
->>>>>>> Rama-Vivi-Android
 	}
 	
 	public SQLiteDatabase open(){
@@ -42,7 +34,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	@Override
 	//This method is called when the database is created for the first time.
 	public void onCreate(SQLiteDatabase db){
-<<<<<<< HEAD
+
 		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, barCode TEXT);";
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
@@ -77,19 +69,12 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		            }                
 		        }
 		    }			
-=======
-		String query1 = "CREATE TABLE productos ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER);";
-		//String query2= "CREATE TABLE categorias("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)";
-		//This method is limited to directly execute the SQL code that we pass as a parameter
-		db.execSQL(query1);	
-		//db.execSQL(query2);
->>>>>>> Rama-Vivi-Android
 	}
 
 	@Override
 	//This methos is called when the database needs to be upgraded.
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
-<<<<<<< HEAD
+
 		//db.execSQL("DROP TABLE IF EXISTS categorias");
 		db.execSQL("DROP TABLE IF EXISTS users");
 		db.execSQL("DROP TABLE IF EXISTS products");
@@ -99,49 +84,31 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	
 	
 	public ArrayList<ItemProducto> readProducts(Integer key){
-=======
-		db.execSQL("DROP TABLE IF EXISTS productos");
-		//db.execSQL("DROP TABLE IF EXISTS categorias");
-		onCreate(db);
-	}
 
-	
-	public ArrayList<ItemProducto> read(Integer key){
->>>>>>> Rama-Vivi-Android
-		
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		String columnas[]={_ID,"name","cant"};
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={key.toString()};
 		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
-<<<<<<< HEAD
+
 		Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
-=======
-		Cursor c=db.query("productos", null, "idCat=?", args, null, null, null);
->>>>>>> Rama-Vivi-Android
 		int id, idName, idNum, idCat;
 		id=c.getColumnIndex(_ID);
 		idName=c.getColumnIndex("name");
 		idNum=c.getColumnIndex("cant");
 		idCat=c.getColumnIndex("idCat");
 		
-<<<<<<< HEAD
-		
+
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
 			//TODO hacer consulta para la categorï¿½a
-=======
-		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-			c.getString(idCat);
-			//TODO hacer consulta para la categoría
->>>>>>> Rama-Vivi-Android
-			
+
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;
 	}
 	
-<<<<<<< HEAD
+
 	public boolean readUser(String nameUser) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={nameUser};
@@ -201,16 +168,12 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	
 		
 	public void insertProducts(String name,Integer number, Integer idCategory, String barCode){
-=======
-		
-	public void insertProducto(String name,Integer number, Integer idCategory){
->>>>>>> Rama-Vivi-Android
 		ContentValues registro=new ContentValues();
 		
 		registro.put("name", name);
 		registro.put("cant", number);
 		registro.put("idCat", idCategory);
-<<<<<<< HEAD
+
 		registro.put("barCode",barCode);
 		
 		this.getWritableDatabase().insert("products", null, registro);
@@ -234,10 +197,4 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		
 		this.getWritableDatabase().insert("users", null, register);
 	}
-=======
-		
-		this.getWritableDatabase().insert("productos", null, registro);
-	
-	}
->>>>>>> Rama-Vivi-Android
 }
