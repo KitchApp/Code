@@ -4,18 +4,19 @@ public class ItemProducto {
   protected long id;
   protected int cantidad;
   protected String nombre;
-  protected String tipo;
+  //protected String tipo;
          
   public ItemProducto() {
     this.nombre = "";
-    this.tipo = "";
+    //this.tipo = "";
     this.cantidad = 0;
   }
      
-  public ItemProducto(long id, String nombre, int cantidad, String tipo) {
+  //public ItemProducto(long id, String nombre, int cantidad, String tipo) {
+  public ItemProducto(int id, String nombre, int cantidad) {
     this.id = id;
     this.nombre = nombre;
-    this.tipo = tipo;
+    //this.tipo = tipo;
     this.cantidad = cantidad;
   }
      
@@ -58,12 +59,12 @@ public class ItemProducto {
 	  this.cantidad = cantidad;
   }
      
-  public String getTipo() {
+ /* public String getTipo() {
     return tipo;
   }
      
   public void setTipo(String tipo) {
     this.tipo = tipo;
-  }
+  }*/
   
 }
