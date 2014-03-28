@@ -69,7 +69,7 @@ public class Registro extends Activity implements OnClickListener {
 		}
 		
 	}
-<<<<<<< HEAD
+
 	
 	public void errorMail() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -78,7 +78,7 @@ public class Registro extends Activity implements OnClickListener {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("La dirección de correo tiene que ser tipo example@dominio.com/es")
+	            .setMessage("La direcciï¿½n de correo tiene que ser tipo example@dominio.com/es")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -90,6 +90,4 @@ public class Registro extends Activity implements OnClickListener {
 	    builder.create();
 	    builder.show();
 	}
-=======
->>>>>>> Rama-Vivi-Android
 }
