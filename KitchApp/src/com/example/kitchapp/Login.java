@@ -134,7 +134,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("No se encuentra registrado en KitchApp. Por favor regï¿½strese")
+	            .setMessage("No se encuentra registrado en KitchApp. Por favor regístrese")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -154,7 +154,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("Contraseï¿½a incorrecta. Intï¿½ntelo de nuevo")
+	            .setMessage("Contraseña incorrecta. Inténtelo de nuevo")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -175,7 +175,7 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("Ya existe ese nombre de usuario. Por favor regï¿½strese de nuevo")
+	            .setMessage("Ya existe ese nombre de usuario. Por favor regístrese de nuevo")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override

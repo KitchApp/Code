@@ -2,11 +2,8 @@ package com.example.kitchapp;
 
 import android.os.Bundle;
 import android.app.Activity;
-<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-=======
->>>>>>> Rama-Vivi-Android
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -71,7 +68,6 @@ public class AddManualmente extends Activity implements OnClickListener {
 			//Toast.makeText(this, "Me han pinchado", Toast.LENGTH_SHORT).show();
 			try {
 				int cant = Integer.parseInt(cantProduct.getText().toString());
-<<<<<<< HEAD
 				if (cant <= 0) {
 					errorCant();
 				}
@@ -86,22 +82,10 @@ public class AddManualmente extends Activity implements OnClickListener {
 			}
 			catch (NumberFormatException e) {
 				errorCant();
-=======
-				Intent i = new Intent(this,MostrarProductosCategoria.class);
-				i.putExtra("nameProduct",nameProduct.getText().toString());
-				i.putExtra("cantProduct",cant);
-				i.putExtra("key",1);
-				i.putExtra("idCat",this.getIntent().getExtras().getInt("idCat"));
-				startActivity(i);
-			}
-			catch (NumberFormatException e) {
-				Toast.makeText(this, "La cantidad introducida tiene que ser de tipo entero", Toast.LENGTH_SHORT).show();
->>>>>>> Rama-Vivi-Android
 			}
 			break;
 		}
 	}
-<<<<<<< HEAD
 	
 	public void errorCant() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -122,7 +106,5 @@ public class AddManualmente extends Activity implements OnClickListener {
 	    builder.create();
 	    builder.show();
 	}
-=======
->>>>>>> Rama-Vivi-Android
 
 }
