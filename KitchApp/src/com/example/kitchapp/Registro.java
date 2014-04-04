@@ -69,6 +69,10 @@ public class Registro extends Activity implements OnClickListener {
 		}
 		
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 	
 	public void errorMail() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -77,7 +81,7 @@ public class Registro extends Activity implements OnClickListener {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("La dirección de correo tiene que ser tipo example@dominio.com/es")
+	            .setMessage("La direcciï¿½n de correo tiene que ser tipo example@dominio.com/es")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override

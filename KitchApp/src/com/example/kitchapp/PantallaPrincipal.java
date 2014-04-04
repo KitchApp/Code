@@ -4,6 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 
 public class PantallaPrincipal extends Activity{
 

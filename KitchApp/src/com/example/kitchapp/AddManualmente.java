@@ -2,8 +2,15 @@ package com.example.kitchapp;
 
 import android.os.Bundle;
 import android.app.Activity;
+<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+=======
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -68,6 +75,10 @@ public class AddManualmente extends Activity implements OnClickListener {
 			//Toast.makeText(this, "Me han pinchado", Toast.LENGTH_SHORT).show();
 			try {
 				int cant = Integer.parseInt(cantProduct.getText().toString());
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 				if (cant <= 0) {
 					errorCant();
 				}
@@ -86,6 +97,10 @@ public class AddManualmente extends Activity implements OnClickListener {
 			break;
 		}
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 	
 	public void errorCant() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -94,7 +109,7 @@ public class AddManualmente extends Activity implements OnClickListener {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("La cantidad del producto introducida tiene que ser un número mayor que cero")
+	            .setMessage("La cantidad del producto introducida tiene que ser un nï¿½mero mayor que cero")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override

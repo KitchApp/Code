@@ -1,5 +1,9 @@
 package com.example.kitchapp;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,12 +15,21 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 import android.text.TextUtils;
 import static android.provider.BaseColumns._ID;
 
 
 public class Handler_Sqlite extends SQLiteOpenHelper {
+<<<<<<< HEAD
 	private static final String nameBD = "KitchApp-BaseDD";
+=======
+
+	private static final String nameBD = "KitchApp-Base";
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 	Context myContext;
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,1);
@@ -31,6 +44,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	@Override
 	//This method is called when the database is created for the first time.
 	public void onCreate(SQLiteDatabase db){
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, barCode TEXT);";
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
@@ -70,6 +87,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	@Override
 	//This methos is called when the database needs to be upgraded.
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 		//db.execSQL("DROP TABLE IF EXISTS categorias");
 		db.execSQL("DROP TABLE IF EXISTS users");
 		db.execSQL("DROP TABLE IF EXISTS products");
@@ -79,12 +100,20 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	
 	
 	public ArrayList<ItemProducto> readProducts(Integer key){
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		String columnas[]={_ID,"name","cant"};
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={key.toString()};
 		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 		Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
 		int id, idName, idNum, idCat;
 		id=c.getColumnIndex(_ID);
@@ -92,16 +121,28 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		idNum=c.getColumnIndex("cant");
 		idCat=c.getColumnIndex("idCat");
 		
+<<<<<<< HEAD
 		
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
 			//TODO hacer consulta para la categor�a
 			
+=======
+
+		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+			//c.getString(idCat);
+			//TODO hacer consulta para la categor�a
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;
 	}
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 	public boolean readUser(String nameUser) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={nameUser};
@@ -166,6 +207,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 		registro.put("name", name);
 		registro.put("cant", number);
 		registro.put("idCat", idCategory);
+<<<<<<< HEAD
+=======
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 		registro.put("barCode",barCode);
 		
 		this.getWritableDatabase().insert("products", null, registro);

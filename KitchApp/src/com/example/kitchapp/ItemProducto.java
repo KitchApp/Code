@@ -4,8 +4,14 @@ public class ItemProducto {
   protected long id;
   protected int cantidad;
   protected String nombre;
+<<<<<<< HEAD
   protected String barCode;
          
+=======
+
+  protected String barCode;
+
+>>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";
