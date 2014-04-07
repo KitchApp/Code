@@ -1,19 +1,13 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
-
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 import android.content.ActivityNotFoundException;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,14 +26,13 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 
 public class MostrarProductosCategoria extends Activity implements OnClickListener {
 	
-	private ListView list;
+    private ListView list;
     private ArrayList<ItemProducto> products;
     private int pos;
     private TextView cantProduct;
@@ -51,10 +44,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private int cantFinal;
     private AlertDialog.Builder builder;
     private Integer tipoCat;
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
     private static final int REQUEST_CODE = 1234;
     Handler_Sqlite helper;
 	Dialog match_text_dialog;
@@ -65,10 +54,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mostrar_productos_categoria);
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 		
@@ -94,12 +79,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
 				case 1:
-<<<<<<< HEAD
 					title.setText("Lacteos");
-=======
-					title.setText("L�cteos");
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
-
 					break;
 				
 				case 2:
@@ -107,12 +87,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 3:
-<<<<<<< HEAD
 					title.setText("Pan y Bolleria");
-=======
-					title.setText("Pan y Boller�a");
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
-
 					break;
 
 				case 4:
@@ -141,26 +116,16 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 
 				case 10:
 					title.setText("Varios");
-<<<<<<< HEAD
 					break;	
 
-=======
-
-					break;	
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 			}
-			
 		}
 			
 			
-<<<<<<< HEAD
+
 		
 			
-=======
 
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
-		
 	//helper.close();
 		
 		
@@ -174,30 +139,18 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"));
 				boolean encontrado = false;
 				int i = 0;
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 				int cantProductModify = 0;
 				while (i<products.size() && !encontrado){
 					ItemProducto prod = products.get(i);
 					String name = prod.getNombre().toLowerCase();
 					if (name.equals(item.getNombre().toLowerCase())) {
 						encontrado = true;
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 						cantProductModify = prod.getCantidad() + item.getCantidad();
 					}
 					i++;
 				}
 				if (!encontrado) {
 					products.add(item);
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 					SQLiteDatabase tmp1 = helper.open();	
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
@@ -207,10 +160,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					
 				}
 				else {
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 					modifyProduct();
 					products.get(i-1).setCantidad(cantProductModify);
 					SQLiteDatabase tmc = helper.open();	
@@ -345,15 +294,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				break;
 				
 			case R.id.button_add:
-
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 				alertDialogListView(true,0);
-
 				break;
-				
 		}
             	
 				
@@ -361,15 +303,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	private void initializeArrayList(Integer category) {
 	
-		
-<<<<<<< HEAD
 		products=helper.readProducts(category);
 		
-=======
-
-		products=helper.readProducts(category);
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 		/*products.add(new ItemProducto(1,helper.read()[1],4,""));
 		products.add(new ItemProducto(2,helper.read()[2],3,""));
 		products.add(new ItemProducto(3,helper.read()[4],4,""));
@@ -518,16 +453,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		scanIntegrator.initiateScan();
 	}
 	
-<<<<<<< HEAD
-	
-	
-
-=======
-
-	
-	
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo net = cm.getActiveNetworkInfo();
@@ -645,10 +570,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			//Intent intent = new Intent(this,MostrarProductosCategoria.class);
    	 		String[] prod = matches_text.get(position).split("");
    	 		int cant = Integer.parseInt(prod[prod.length - 1]);
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
    	 		if (cant <= 0) {
    	 			errorCantVoice();
    	 		}
