@@ -27,16 +27,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-<<<<<<< HEAD
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 	
-=======
-	
-
-public class AccesoDespensa extends Activity implements OnClickListener {
-	
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
