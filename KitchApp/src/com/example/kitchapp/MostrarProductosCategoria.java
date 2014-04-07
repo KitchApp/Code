@@ -251,12 +251,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		switch(v.getId()) {
 			case R.id.button_save:
 				ItemProducto prod = products.get(pos);
-<<<<<<< HEAD
 				String nameLast = prod.getNombre();
 				prod.setNombre(nameProduct.getText().toString());
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 				prod.setCantidad(Integer.parseInt(cantProduct.getText().toString()));
 				products.set(pos,prod);
 				SQLiteDatabase tmp = helper.open();
@@ -272,10 +268,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			
 			case R.id.button_cancel:
             	Intent i = new Intent(this,MostrarProductosCategoria.class);
-<<<<<<< HEAD
-=======
-
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
             	i.putExtra("idCat",tipoCat);
 				startActivity(i);
 				break;
