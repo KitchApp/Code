@@ -69,10 +69,7 @@ public class Registro extends Activity implements OnClickListener {
 		}
 		
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> a01008e9382f21d5ca4f21803e9b2e22aabeb4bf
 	
 	public void errorMail() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
