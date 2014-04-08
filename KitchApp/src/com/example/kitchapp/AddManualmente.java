@@ -2,8 +2,10 @@ package com.example.kitchapp;
 
 import android.os.Bundle;
 import android.app.Activity;
+
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -86,7 +88,7 @@ public class AddManualmente extends Activity implements OnClickListener {
 			break;
 		}
 	}
-	
+
 	public void errorCant() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
@@ -94,7 +96,7 @@ public class AddManualmente extends Activity implements OnClickListener {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("La cantidad del producto introducida tiene que ser un número mayor que cero")
+	            .setMessage("La cantidad del producto introducida tiene que ser un nï¿½mero mayor que cero")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override

@@ -1,20 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        Tema de la aplicación de base, depende del nivel de API. Este tema se 
+        sustituye por AppBaseTheme de res / valores-vxx / styles.xml en los 
+        dispositivos más nuevos.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
+    
         <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            Personalizaciones temáticas disponibles en los niveles de API más 
+            nuevos pueden ir en res / valores-vxx / styles.xml, mientras que 
+            las personalizaciones relacionadas con la compatibilidad con versiones 
+            anteriores pueden ir aquí.
         -->
+        
     </style>
 
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-    </style>
+    <!-- Application theme. -->    
+                
+	<style name="boton_style" parent="@android:style/Widget.Button">
+	<!-- style name="AppTheme" parent="AppBaseTheme"> -->
+	
+	    <!-- Todas las personalizaciones que no son específicos de un nivel 
+        	 determinado de API pueden ir aquí
+        -->
+                
+		<item name="android:layout_width">0dip</item>
+		<item name="android:layout_height">wrap_content</item>		        				
+		<item name="android:textColor">@color/black</item>
+		<item name="android:gravity">center</item>		
+		<item name="android:background">@drawable/fondo_boton</item>
+		<item name="android:layout_margin">5dip</item>
+		<item name="android:layout_marginTop">15dip</item>		
+		<item name="android:textSize">19dip</item>
+		
+	</style>	
 
 </resources>

@@ -30,12 +30,11 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 	
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
-	
+
 		Button button_dairy = (Button) findViewById(R.id.buttonDairy);
 		button_dairy.setOnClickListener(this);
 		Button button_fruits = (Button) findViewById(R.id.buttonFruits);

@@ -4,8 +4,8 @@ public class ItemProducto {
   protected long id;
   protected int cantidad;
   protected String nombre;
-  //protected String tipo;
-         
+  protected String barCode;
+
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";
@@ -18,6 +18,7 @@ public class ItemProducto {
     this.nombre = nombre;
     //this.tipo = tipo;
     this.cantidad = cantidad;
+    //this.barCode=barCode;
   }
      
   /*public Item(long id, String nombre, String tipo, String rutaImagen) {
