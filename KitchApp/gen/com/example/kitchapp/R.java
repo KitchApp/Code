@@ -48,21 +48,25 @@ public final class R {
         public static final int boton_redondo_color_aqua=0x7f020002;
         public static final int boton_redondo_color_celeste=0x7f020003;
         public static final int boton_redondo_color_navy=0x7f020004;
-        public static final int cabecera_kitchapp=0x7f020005;
-        public static final int close=0x7f020006;
-        public static final int fondo2=0x7f020007;
-        public static final int fondo_de_pantalla_naranja=0x7f020008;
-        public static final int fondo_pie_pagina=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int images=0x7f02000b;
-        public static final int lupa_sobre_un_robot_androide=0x7f02000c;
-        public static final int microfono=0x7f02000d;
-        public static final int numberpicker_down=0x7f02000e;
-        public static final int numberpicker_up=0x7f02000f;
-        public static final int propuestaportadaappis=0x7f020010;
-        public static final int prueba2=0x7f020011;
-        public static final int resumen_de_color_como_fondo=0x7f020012;
-        public static final int teclado_android=0x7f020013;
+        public static final int button_over=0x7f020005;
+        public static final int cabecera_kitchapp=0x7f020006;
+        public static final int close=0x7f020007;
+        public static final int fondo=0x7f020008;
+        public static final int fondo2=0x7f020009;
+        public static final int fondo_boton=0x7f02000a;
+        public static final int fondo_de_pantalla_naranja=0x7f02000b;
+        public static final int fondo_nuevo=0x7f02000c;
+        public static final int fondo_pie_pagina=0x7f02000d;
+        public static final int ic_launcher=0x7f02000e;
+        public static final int images=0x7f02000f;
+        public static final int lupa_sobre_un_robot_androide=0x7f020010;
+        public static final int microfono=0x7f020011;
+        public static final int numberpicker_down=0x7f020012;
+        public static final int numberpicker_up=0x7f020013;
+        public static final int propuestaportadaappis=0x7f020014;
+        public static final int prueba2=0x7f020015;
+        public static final int resumen_de_color_como_fondo=0x7f020016;
+        public static final int teclado_android=0x7f020017;
     }
     public static final class id {
 <<<<<<< HEAD
@@ -103,16 +107,17 @@ public final class R {
         public static final int button5=0x7f0a0028;
         public static final int buttonBread=0x7f0a0003;
         public static final int buttonDairy=0x7f0a0001;
-        public static final int buttonDrinks=0x7f0a0005;
-        public static final int buttonFish=0x7f0a0004;
+        public static final int buttonDrinks=0x7f0a0004;
+        public static final int buttonFish=0x7f0a0006;
         public static final int buttonFrozen=0x7f0a0009;
         public static final int buttonFruits=0x7f0a0002;
-        public static final int buttonMeat=0x7f0a0006;
-        public static final int buttonOthers=0x7f0a000b;
+        public static final int buttonMeat=0x7f0a0005;
+        public static final int buttonOthers=0x7f0a000a;
         public static final int buttonPasta=0x7f0a0008;
         public static final int buttonSauces=0x7f0a0007;
-        public static final int button_add=0x7f0a0022;
+        public static final int button_add=0x7f0a0023;
         public static final int button_addProduct=0x7f0a000f;
+<<<<<<< HEAD
         public static final int button_cancel=0x7f0a001f;
         public static final int button_decrement=0x7f0a001b;
         public static final int button_increment=0x7f0a001d;
@@ -121,6 +126,14 @@ public final class R {
         public static final int button_lens=0x7f0a000a;
         public static final int button_save=0x7f0a001e;
         public static final int cantProduct=0x7f0a001c;
+=======
+        public static final int button_cancel=0x7f0a0020;
+        public static final int button_decrement=0x7f0a001c;
+        public static final int button_increment=0x7f0a001e;
+        public static final int button_lens=0x7f0a000b;
+        public static final int button_save=0x7f0a001f;
+        public static final int cantProduct=0x7f0a001d;
+>>>>>>> Rama-Edu-Android
         public static final int editTextNameProduct=0x7f0a000d;
         public static final int editTextPassword=0x7f0a0018;
         public static final int editTextuserName=0x7f0a0017;
@@ -132,7 +145,8 @@ public final class R {
         public static final int link_to_login=0x7f0a0030;
         public static final int link_to_register=0x7f0a001a;
         public static final int listDialogVoice=0x7f0a002a;
-        public static final int listViewProducts=0x7f0a0021;
+        public static final int listViewProducts=0x7f0a0022;
+        public static final int nameProductModify=0x7f0a001b;
         public static final int nombre=0x7f0a0013;
         public static final int progressBar1=0x7f0a0029;
         public static final int reg_email=0x7f0a002d;
@@ -140,8 +154,7 @@ public final class R {
         public static final int reg_usuario=0x7f0a002c;
         public static final int textView1=0x7f0a0000;
         public static final int textViewAdd=0x7f0a000c;
-        public static final int textView_Cat=0x7f0a0020;
-        public static final int textView_Dairy=0x7f0a0023;
+        public static final int textView_Cat=0x7f0a0021;
         public static final int textView_Item_Cant=0x7f0a0011;
         public static final int textView_Item_Name=0x7f0a0010;
     }
@@ -374,13 +387,15 @@ public final class R {
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        Tema de la aplicación de base, depende del nivel de API. Este tema se 
+        sustituye por AppBaseTheme de res / valores-vxx / styles.xml en los 
+        dispositivos más nuevos.
     
 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            Personalizaciones temáticas disponibles en los niveles de API más 
+            nuevos pueden ir en res / valores-vxx / styles.xml, mientras que 
+            las personalizaciones relacionadas con la compatibilidad con versiones 
+            anteriores pueden ir aquí.
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -396,8 +411,11 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f010000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
+<<<<<<< HEAD
         public static final int AppTheme=0x7f010001;
+=======
+        public static final int boton_style=0x7f080001;
+>>>>>>> Rama-Edu-Android
     }
 }

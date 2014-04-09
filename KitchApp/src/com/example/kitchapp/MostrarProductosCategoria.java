@@ -1,7 +1,6 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
-
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -9,7 +8,10 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
+<<<<<<< HEAD
 
+=======
+>>>>>>> Rama-Edu-Android
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -23,10 +25,14 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -34,10 +40,11 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MostrarProductosCategoria extends Activity implements OnClickListener {
 	
-	private ListView list;
+    private ListView list;
     private ArrayList<ItemProducto> products;
     private int pos;
     private TextView cantProduct;
+    private EditText nameProduct;
     private Button save;
     private Button cancel;
     private Button decrement;
@@ -59,6 +66,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		products = new ArrayList<ItemProducto>();
 		
 		
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +127,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 =======
 =======
 				helper.insertProducto("coca-cola",4,4,null);
+=======
+				/*helper.insertProducto("coca-cola",4,4,null);
+>>>>>>> Rama-Edu-Android
 				helper.insertProducto("Pollo",1,5,null);
 				helper.insertProducto("Merluza",1,6,null);
 				helper.insertProducto("Red bull",4,4,null);
@@ -128,7 +139,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.insertProducto("Macarrones",2,8,null);
 				helper.insertProducto("Helado Fresa",4,9,null);
 		}*/
+<<<<<<< HEAD
 >>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
+=======
+>>>>>>> Rama-Edu-Android
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -140,8 +154,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
 				case 1:
+<<<<<<< HEAD
 					title.setText("Lï¿½cteos");
 
+=======
+					title.setText("Lacteos");
+>>>>>>> Rama-Edu-Android
 					break;
 				
 				case 2:
@@ -149,8 +167,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 3:
+<<<<<<< HEAD
 					title.setText("Pan y Bollerï¿½a");
 
+=======
+					title.setText("Pan y Bolleria");
+>>>>>>> Rama-Edu-Android
 					break;
 
 				case 4:
@@ -182,14 +204,19 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;	
 
 			}
-			
 		}
 			
 			
+<<<<<<< HEAD
 		
 			
+=======
+
+>>>>>>> Rama-Edu-Android
 		
-		//helper.close();
+			
+
+	//helper.close();
 		
 		
 		
@@ -228,15 +255,21 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				if (!encontrado) {
 					products.add(item);
 <<<<<<< HEAD
+<<<<<<< HEAD
 					SQLiteDatabase tmc = helper.open();	
 					if (tmc!=null){
 						helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
 =======
+=======
+>>>>>>> Rama-Edu-Android
 					SQLiteDatabase tmp1 = helper.open();	
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
 
+<<<<<<< HEAD
 >>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
+=======
+>>>>>>> Rama-Edu-Android
 						helper.close();
 					}
 					
@@ -251,11 +284,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					products.get(i-1).setCantidad(cantProductModify);
 					SQLiteDatabase tmc = helper.open();	
 					if (tmc!=null){
-						helper.updateProduct(item.getNombre(),cantProductModify);
+						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
 						helper.close();
 					}
 					
 				}
+<<<<<<< HEAD
 >>>>>>> Rama-Edu-Android
 =======
 				}
@@ -267,7 +301,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				producto.setCantidad(cantProducto);
 				products.set(posi,producto);
 >>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
+=======
+				
+		
+>>>>>>> Rama-Edu-Android
 			}
+
 		}
 		
 		/*TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
@@ -314,6 +353,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
         // Pass null as the parent view because its going in the dialog layout
 
         view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
+        nameProduct = (EditText) view.findViewById(R.id.nameProductModify);
+        nameProduct.setText(products.get(position).getNombre());
         cantProduct = (TextView) view.findViewById(R.id.cantProduct);
         cantProduct.setText(products.get(position).getCantidad() + "");
     	pos = position;
@@ -344,11 +385,13 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		switch(v.getId()) {
 			case R.id.button_save:
 				ItemProducto prod = products.get(pos);
+				String nameLast = prod.getNombre();
+				prod.setNombre(nameProduct.getText().toString());
 				prod.setCantidad(Integer.parseInt(cantProduct.getText().toString()));
 				products.set(pos,prod);
 				SQLiteDatabase tmp = helper.open();
 				if (tmp != null) {
-					helper.updateProduct(prod.getNombre(),prod.getCantidad());
+					helper.updateProduct(nameLast,prod.getNombre(),prod.getCantidad());
 					helper.close();
 				}
 				Intent j = new Intent(this,MostrarProductosCategoria.class);
@@ -377,11 +420,14 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				break;
 				
 			case R.id.button_add:
+<<<<<<< HEAD
 
 				alertDialogListView(true,0);
 
+=======
+				alertDialogListView(true,0);
+>>>>>>> Rama-Edu-Android
 				break;
-				
 		}
             	
 				
@@ -389,7 +435,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	private void initializeArrayList(Integer category) {
 	
+<<<<<<< HEAD
 		
+=======
+>>>>>>> Rama-Edu-Android
 		products=helper.readProducts(category);
 		
 		/*products.add(new ItemProducto(1,helper.read()[1],4,""));
@@ -450,7 +499,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	public void modifyProduct() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    builder.setTitle("Información")
+	    builder.setTitle("Informacion")
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            android.R.drawable.ic_dialog_info))
@@ -470,7 +519,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	public void alertDialogListView(boolean full, int except){
 		
 	    if(full & except==0){
+<<<<<<< HEAD
 	    	final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
+=======
+	    	final String [] items = new String[] {"Manualmente", "Voz", "Codigo de barras" };
+>>>>>>> Rama-Edu-Android
 		    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 		    ListAdapter adapter = new ItemAdapter(this, items, icons);
 		    
@@ -490,7 +543,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    }
 	    else{
 	    	if(except==1){
+<<<<<<< HEAD
 	    		final String [] items = new String[] {"Voz", "Cï¿½digo de barras" };
+=======
+	    		final String [] items = new String[] {"Voz", "Codigo de barras" };
+>>>>>>> Rama-Edu-Android
 	    	    final Integer[] icons = new Integer[] {R.drawable.microfono, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -505,7 +562,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			    }).show();
 	    	}
 	    	else if(except==2){
+<<<<<<< HEAD
 	    		final String [] items = new String[] {"Manualmente", "Cï¿½digo de barras" };
+=======
+	    		final String [] items = new String[] {"Manualmente", "Codigo de barras" };
+>>>>>>> Rama-Edu-Android
 	    	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -563,9 +624,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		scanIntegrator.initiateScan();
 	}
 	
+<<<<<<< HEAD
 	
 	
 
+=======
+>>>>>>> Rama-Edu-Android
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo net = cm.getActiveNetworkInfo();
@@ -711,9 +775,10 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 				products.add(item);
    	 				SQLiteDatabase tmp = helper.open();	
    	 				if (tmp!=null){
-   	 					helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
+   	 					helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
    	 					helper.close();
    	 				}
+<<<<<<< HEAD
 =======
    	 	initializeArrayList(tipoCat);
 		ItemProducto item = new ItemProducto(products.size(),name,cant);
@@ -736,6 +801,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				helper.close();
 			}
 >>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
+=======
+
+>>>>>>> Rama-Edu-Android
 			
    	 			}
    	 			else {
@@ -743,13 +811,14 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 				products.get(i-1).setCantidad(cantProductModify);
    	 				SQLiteDatabase tmp = helper.open();
    	 				if (tmp!=null) {
-   	 					helper.updateProduct(item.getNombre(),cantProductModify);
+   	 					helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
    	 					helper.close();
    	 				}
    	 			}
    	 	
 		/*Intent intent = new Intent(this,MostrarProductosCategoria.class);
 		startActivity(intent);*/
+				list = (ListView) findViewById(R.id.listViewProducts);
    	 			ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
    	 			list.setAdapter(adapter);
    	 		}
@@ -773,7 +842,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("La cantidad del producto introducida tiene que ser un número mayor que cero")
+	            .setMessage("La cantidad del producto introducida tiene que ser un numero mayor que cero")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
