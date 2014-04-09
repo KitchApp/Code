@@ -15,7 +15,7 @@ import android.text.TextUtils;
 import static android.provider.BaseColumns._ID;
 
 
-public class Handler_Sqlite extends SQLiteOpenHelper
+public class Handler_Sqlite extends SQLiteOpenHelper {
 
 	private static final String nameBD = "KitchApp-BaseDD";
 
