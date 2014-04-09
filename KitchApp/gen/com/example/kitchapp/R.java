@@ -39,8 +39,8 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f070000;
-        public static final int activity_vertical_margin=0x7f070001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
     }
     public static final class drawable {
         public static final int anadir_icono=0x7f020000;
@@ -69,33 +69,6 @@ public final class R {
         public static final int teclado_android=0x7f020017;
     }
     public static final class id {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        public static final int EditTextCantProduct=0x7f0a000f;
-        public static final int Spinner01=0x7f0a0010;
-        public static final int action_settings=0x7f0a002d;
-        public static final int btnLogin=0x7f0a001b;
-        public static final int btnRegistro=0x7f0a002b;
-        public static final int button1=0x7f0a0001;
-        public static final int button10=0x7f0a000b;
-        public static final int button2=0x7f0a0002;
-        public static final int button3=0x7f0a0003;
-        public static final int button4=0x7f0a0005;
-        public static final int button5=0x7f0a0006;
-        public static final int button6=0x7f0a0004;
-        public static final int button7=0x7f0a0007;
-        public static final int button8=0x7f0a0008;
-        public static final int button9=0x7f0a0009;
-        public static final int button_add=0x7f0a000c;
-        public static final int button_addProduct=0x7f0a0011;
-        public static final int button_cancel=0x7f0a0021;
-        public static final int button_decrement=0x7f0a001d;
-        public static final int button_increment=0x7f0a001f;
-=======
-=======
->>>>>>> Rama-Mayra_Android
         public static final int EditTextCantProduct=0x7f0a000e;
         public static final int action_settings=0x7f0a0031;
         public static final int btnLogin=0x7f0a0019;
@@ -118,6 +91,7 @@ public final class R {
         public static final int button_add=0x7f0a0023;
         public static final int button_addProduct=0x7f0a000f;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int button_cancel=0x7f0a001f;
         public static final int button_decrement=0x7f0a001b;
         public static final int button_increment=0x7f0a001d;
@@ -127,13 +101,18 @@ public final class R {
         public static final int button_save=0x7f0a001e;
         public static final int cantProduct=0x7f0a001c;
 =======
+=======
+>>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
         public static final int button_cancel=0x7f0a0020;
         public static final int button_decrement=0x7f0a001c;
         public static final int button_increment=0x7f0a001e;
         public static final int button_lens=0x7f0a000b;
         public static final int button_save=0x7f0a001f;
         public static final int cantProduct=0x7f0a001d;
+<<<<<<< HEAD
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
         public static final int editTextNameProduct=0x7f0a000d;
         public static final int editTextPassword=0x7f0a0018;
         public static final int editTextuserName=0x7f0a0017;
@@ -158,131 +137,6 @@ public final class R {
         public static final int textView_Item_Cant=0x7f0a0011;
         public static final int textView_Item_Name=0x7f0a0010;
     }
-=======
-=======
->>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
-        
-        public static final int action_settings=0x7f090001;
-        public static final int btnLogin=0x7f090002;
-        public static final int btnRegistro=0x7f090003;
-        public static final int numberpicker_down=0x7f090004;
-        public static final int numberpicker_up=0x7f090005;
-        public static final int button1=0x7f090006;
-        public static final int button10=0x7f090007;
-        public static final int button2=0x7f090008;
-        public static final int button3=0x7f090009;
-        public static final int button4=0x7f09000a;
-        public static final int button5=0x7f09000b;
-        public static final int button6=0x7f09000c;
-        public static final int button7=0x7f09000d;
-        public static final int button8=0x7f09000e;
-        public static final int button9=0x7f09000f;
-        public static final int button_add=0x7f090010;
-        public static final int button_lens=0x7f090011;
-        public static final int encabezado=0x7f090012;
-        public static final int footer=0x7f090013;
-        public static final int header=0x7f090014;
-        public static final int link_to_login=0x7f090015;
-        public static final int link_to_register=0x7f090016;
-        public static final int progressBar1=0x7f090017;
-        public static final int reg_email=0x7f090018;
-        public static final int reg_password=0x7f090019;
-        public static final int reg_usuario=0x7f09001a;
-        public static final int imageView1=0x7f09001b;
-        public static final int imagen=0x7f09001c;
-        public static final int listView=0x7f09001d;
-        public static final int nombre=0x7f09001e;
-        public static final int button_decrement=0x7f09001f;
-        public static final int button_increment=0x7f090020;
-        public static final int cantProduct=0x7f090021;
-        public static final int listViewProducts=0x7f090022;
-        public static final int textView1=0x7f090023;
-        public static final int textView_Dairy=0x7f090024;
-        public static final int textView_Item_Cant=0x7f090025;
-        public static final int textView_Item_Name=0x7f090026;
-        public static final int editTextPassword=0x7f090027;
-        public static final int editTextuserName=0x7f090028;
-        public static final int button_save=0x7f090029;
-        public static final int EditText01=0x7f09002a;
-        public static final int Spinner01=0x7f09002b;
-        public static final int editText1=0x7f09002c;
-        public static final int button_cancel=0x7f09002d;
-        public static final int EditTextCantProduct=0x7f09002e;
-        public static final int button_addProduct=0x7f09002f;
-        public static final int editTextNameProduct=0x7f090030;
-        public static final int textViewAdd=0x7f090031;
-        public static final int textView_Atras=0x7f090032;
-        public static final int listDialogVoice=0x7f090033;
-        
-=======
-        public static final int EditTextCantProduct=0x7f0a0019;
-        public static final int Spinner01=0x7f0a001a;
-        public static final int action_settings=0x7f0a0036;
-        public static final int btnLogin=0x7f0a0025;
-        public static final int btnRegistro=0x7f0a0034;
-        public static final int button1=0x7f0a000d;
-        public static final int button10=0x7f0a0016;
-        public static final int button2=0x7f0a000e;
-        public static final int button3=0x7f0a000f;
-        public static final int button4=0x7f0a0011;
-        public static final int button5=0x7f0a0012;
-        public static final int button6=0x7f0a0010;
-        public static final int button7=0x7f0a0013;
-        public static final int button8=0x7f0a0014;
-        public static final int button9=0x7f0a0015;
-        public static final int buttonBebidas=0x7f0a0005;
-        public static final int buttonCarnes=0x7f0a0006;
-        public static final int buttonCongelados=0x7f0a0009;
-        public static final int buttonFrutas=0x7f0a0002;
-        public static final int buttonLacteos=0x7f0a0001;
-        public static final int buttonPan=0x7f0a0003;
-        public static final int buttonPastas=0x7f0a0008;
-        public static final int buttonPescados=0x7f0a0004;
-        public static final int buttonSalsas=0x7f0a0007;
-        public static final int buttonVarios=0x7f0a000b;
-        public static final int button_add=0x7f0a000c;
-        public static final int button_addProduct=0x7f0a001b;
-        public static final int button_cancel=0x7f0a002b;
-        public static final int button_decrement=0x7f0a0027;
-        public static final int button_increment=0x7f0a0029;
-=======
->>>>>>> Rama-Mayra_Android
-        public static final int button_lens=0x7f0a000a;
-        public static final int button_save=0x7f0a001e;
-        public static final int cantProduct=0x7f0a001c;
-        public static final int editTextNameProduct=0x7f0a000d;
-        public static final int editTextPassword=0x7f0a0018;
-        public static final int editTextuserName=0x7f0a0017;
-        public static final int encabezado=0x7f0a0015;
-        public static final int footer=0x7f0a0016;
-        public static final int header=0x7f0a002b;
-        public static final int imageView1=0x7f0a0014;
-        public static final int imagen=0x7f0a0012;
-        public static final int link_to_login=0x7f0a0030;
-        public static final int link_to_register=0x7f0a001a;
-        public static final int listDialogVoice=0x7f0a002a;
-        public static final int listViewProducts=0x7f0a0021;
-        public static final int nombre=0x7f0a0013;
-        public static final int progressBar1=0x7f0a0029;
-        public static final int reg_email=0x7f0a002d;
-        public static final int reg_password=0x7f0a002e;
-        public static final int reg_usuario=0x7f0a002c;
-        public static final int textView1=0x7f0a0000;
-<<<<<<< HEAD
-        public static final int textViewAdd=0x7f0a0017;
-        public static final int textView_Atras=0x7f0a002e;
-        public static final int textView_Dairy=0x7f0a002c;
-        public static final int textView_Item_Cant=0x7f0a001d;
-        public static final int textView_Item_Name=0x7f0a001c;
->>>>>>> origin/Rama-Mayra_Android
-=======
-        public static final int textViewAdd=0x7f0a000c;
-        public static final int textView_Cat=0x7f0a0020;
-        public static final int textView_Dairy=0x7f0a0023;
-        public static final int textView_Item_Cant=0x7f0a0011;
-        public static final int textView_Item_Name=0x7f0a0010;
->>>>>>> Rama-Mayra_Android
-    }
     public static final class layout {
         public static final int activity_acceso_despensa=0x7f030000;
         public static final int activity_add_manualmente=0x7f030001;
@@ -294,61 +148,17 @@ public final class R {
         public static final int activity_pantalla_principal=0x7f030007;
         public static final int activity_pantalla_transicion=0x7f030008;
         public static final int cabecera=0x7f030009;
-<<<<<<< HEAD
-        public static final int pie_de_pagina=0x7f03000a;
-        public static final int registro=0x7f03000b;
-        public static final int dialog_matches=0x7f03000c;
-=======
         public static final int dialog_matches=0x7f03000a;
         public static final int pie_de_pagina=0x7f03000b;
         public static final int registro=0x7f03000c;
->>>>>>> Rama-Mayra_Android
     }
     public static final class menu {
-        public static final int add_manualmente=0x7f080000;
-        public static final int login=0x7f080001;
-        public static final int modificar_producto_despensa=0x7f080002;
-        public static final int mostrar_productos_categoria=0x7f080003;
+        public static final int add_manualmente=0x7f090000;
+        public static final int login=0x7f090001;
+        public static final int modificar_producto_despensa=0x7f090002;
+        public static final int mostrar_productos_categoria=0x7f090003;
     }
     public static final class string {
-<<<<<<< HEAD
-        
-        public static final int action_settings=0x7f060000;
-        public static final int anadirProducto=0x7f060001;
-        public static final int app_name=0x7f060002;
-        public static final int bebidas=0x7f060003;
-        public static final int buscarProducto=0x7f060004;
-        public static final int cancel=0x7f060005;
-        public static final int carnes=0x7f060006;
-        public static final int congelados=0x7f060007;
-        public static final int despensa=0x7f060008;
-        public static final int estadisticas=0x7f060009;
-        public static final int frutasVerduras=0x7f06000a;
-        public static final int hello_world=0x7f06000b;
-        public static final int lacteos=0x7f06000c;
-        public static final int lista_compra=0x7f06000d;
-        public static final int localizacion=0x7f06000e;
-        public static final int ok=0x7f06000f;
-        public static final int panBolleria=0x7f060010;
-        public static final int pastasArroces=0x7f060011;
-        public static final int pescados=0x7f060012;
-        public static final int recetario=0x7f060013;
-        public static final int salsasCondimentos=0x7f060014;
-        public static final int save=0x7f060015;
-        public static final int title_activity_acceso_despensa=0x7f060016;
-        public static final int title_activity_add_despensa=0x7f060017;
-        public static final int title_activity_list_item_layout=0x7f060018;
-        public static final int title_activity_modificar_producto_despensa=0x7f060019;
-        public static final int title_activity_mostrar_productos_categoria=0x7f06001a;
-        public static final int varios=0x7f06001b;
-        public static final int add=0x7f06001c;
-        public static final int add_manually=0x7f06001d;
-        public static final int cantProduct=0x7f06001e;
-        public static final int nameProduct=0x7f06001f;
-        public static final int back=0x7f060020;
-        public static final int title_activity_add_manualmente=0x7f060021;
-        
-=======
         public static final int action_settings=0x7f070001;
         public static final int add=0x7f07001e;
         public static final int add_manually=0x7f07001b;
@@ -383,7 +193,6 @@ public final class R {
         public static final int title_activity_modificar_producto_despensa=0x7f070017;
         public static final int title_activity_mostrar_productos_categoria=0x7f070020;
         public static final int varios=0x7f070012;
->>>>>>> origin/Rama-Mayra_Android
     }
     public static final class style {
         /** 
@@ -409,13 +218,17 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f010000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
          */
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int AppTheme=0x7f010001;
 =======
         public static final int boton_style=0x7f080001;
 >>>>>>> Rama-Edu-Android
+=======
+        public static final int boton_style=0x7f080001;
+>>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
     }
 }
