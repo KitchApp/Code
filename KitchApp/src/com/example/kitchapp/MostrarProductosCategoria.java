@@ -8,13 +8,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -33,13 +26,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-<<<<<<< HEAD
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
-
-
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -72,90 +58,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		products = new ArrayList<ItemProducto>();
 		
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		/*SQLiteDatabase tmp=helper.open();	
-=======
-		/*SQLiteDatabase tmp = helper.open();	
->>>>>>> Rama-Edu-Android
-=======
-		/*SQLiteDatabase tmp=helper.open();	
->>>>>>> Rama-Edu-Android
-=======
-		/*SQLiteDatabase tmp = helper.open();	
-		
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-		if (tmp!=null){
-				
-				helper.insertProducto("Yogurt",2,1,null);
-				helper.insertProducto("Manzana",3,2,null);
-				helper.insertProducto("Magdalena",5,3,null);
-				helper.insertProducto("Leche",6,1);
-<<<<<<< HEAD
-				helper.insertProducto("coca-cola", 4, 4);
-				helper.insertProducto("Pollo", 1, 5);
-				helper.insertProducto("Merluza", 1, 6);
-				helper.insertProducto("Red bull", 4, 4);
-				helper.insertProducto("Arroz largo", 4, 8);
-				helper.insertProducto("Guisantes", 1, 9);
-				helper.insertProducto("Gel baño", 4, 10);
-				helper.insertProducto("Macarrones", 2, 8);
-				helper.insertProducto("Helado Fresa", 4, 9);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		}*/
->>>>>>> Rama-Edu-Android
-				/*helper.insertCategory(1,"Lácteos")
-=======
-		}
-		helper.close();*/
-				/*helper.insertCategory(1,"Lï¿½cteos")
->>>>>>> Rama-Edu-Android
-				helper.insertCategory(2,"Frutas y Verduras")
-				helper.insertCategory(3,"Pan y Bollerï¿½a")
-				helper.insertCategory(4,"Bebidas")
-				helper.insertCategory(5,"Carnes")
-				helper.insertCategory(6,"Pescados")
-				helper.insertCategory(7,"Salsas y condimentos")
-				helper.insertCategory(8,"Arroces")
-				helper.insertCategory(9,"Congelados")
-				helper.insertCategory(10,"Varios")*/
-		
-<<<<<<< HEAD
-		Bundle extraLacteos= this.getIntent().getExtras();
-		if(extraLacteos!=null){
-<<<<<<< HEAD
-			Integer lacteos=extraLacteos.getInt("lacteos");
-			initializeArrayList(lacteos);
-=======
-=======
-				helper.insertProducto("coca-cola",4,4,null);
-=======
-				/*helper.insertProducto("coca-cola",4,4,null);
->>>>>>> Rama-Edu-Android
-=======
-				/*helper.insertProducto("coca-cola",4,4,null);
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-				helper.insertProducto("Pollo",1,5,null);
-				helper.insertProducto("Merluza",1,6,null);
-				helper.insertProducto("Red bull",4,4,null);
-				helper.insertProducto("Arroz largo",4,8,null);
-				helper.insertProducto("Guisantes",1,9,null);
-				helper.insertProducto("Gel baï¿½o",4,10,null);
-				helper.insertProducto("Macarrones",2,8,null);
-				helper.insertProducto("Helado Fresa",4,9,null);
-		}*/
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -167,16 +69,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
 				case 1:
-<<<<<<< HEAD
-<<<<<<< HEAD
-					title.setText("Lï¿½cteos");
-
-=======
 					title.setText("Lacteos");
->>>>>>> Rama-Edu-Android
-=======
-					title.setText("Lacteos");
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 					break;
 				
 				case 2:
@@ -184,16 +77,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 3:
-<<<<<<< HEAD
-<<<<<<< HEAD
-					title.setText("Pan y Bollerï¿½a");
-
-=======
 					title.setText("Pan y Bolleria");
->>>>>>> Rama-Edu-Android
-=======
-					title.setText("Pan y Bolleria");
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 					break;
 
 				case 4:
@@ -227,21 +111,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			}
 		}
 			
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-			
-=======
-
->>>>>>> Rama-Edu-Android
-		
-			
-=======
-
-		
-			
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 
 	//helper.close();
 		
@@ -268,28 +137,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				}
 				if (!encontrado) {
 					products.add(item);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-					SQLiteDatabase tmc = helper.open();	
-					if (tmc!=null){
-						helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
-=======
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 					SQLiteDatabase tmp1 = helper.open();	
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 						helper.close();
 					}
 					
@@ -304,27 +154,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					}
 					
 				}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Rama-Edu-Android
-=======
-				}
-			}
-			else {
-				int posi = extra.getInt("posicion");
-				int cantProducto = extra.getInt("cantProduct");
-				ItemProducto producto = products.get(posi);
-				producto.setCantidad(cantProducto);
-				products.set(posi,producto);
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
-				
-		
->>>>>>> Rama-Edu-Android
-=======
-				
-		
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 			}
 
 		}
@@ -440,17 +269,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				break;
 				
 			case R.id.button_add:
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 				alertDialogListView(true,0);
-
-=======
-				alertDialogListView(true,0);
->>>>>>> Rama-Edu-Android
-=======
-				alertDialogListView(true,0);
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 				break;
 		}
             	
@@ -459,13 +278,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	private void initializeArrayList(Integer category) {
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 		products=helper.readProducts(category);
 		
 		/*products.add(new ItemProducto(1,helper.read()[1],4,""));
@@ -523,15 +335,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	public void alertDialogListView(boolean full, int except){
 		
 	    if(full & except==0){
-<<<<<<< HEAD
-<<<<<<< HEAD
-	    	final String [] items = new String[] {"Manualmente", "Voz", "Cï¿½digo de barras" };
-=======
 	    	final String [] items = new String[] {"Manualmente", "Voz", "Codigo de barras" };
->>>>>>> Rama-Edu-Android
-=======
-	    	final String [] items = new String[] {"Manualmente", "Voz", "Codigo de barras" };
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 		    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
 		    ListAdapter adapter = new ItemAdapter(this, items, icons);
 		    
@@ -551,15 +355,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    }
 	    else{
 	    	if(except==1){
-<<<<<<< HEAD
-<<<<<<< HEAD
-	    		final String [] items = new String[] {"Voz", "Cï¿½digo de barras" };
-=======
 	    		final String [] items = new String[] {"Voz", "Codigo de barras" };
->>>>>>> Rama-Edu-Android
-=======
-	    		final String [] items = new String[] {"Voz", "Codigo de barras" };
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	    	    final Integer[] icons = new Integer[] {R.drawable.microfono, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -574,15 +370,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			    }).show();
 	    	}
 	    	else if(except==2){
-<<<<<<< HEAD
-<<<<<<< HEAD
-	    		final String [] items = new String[] {"Manualmente", "Cï¿½digo de barras" };
-=======
 	    		final String [] items = new String[] {"Manualmente", "Codigo de barras" };
->>>>>>> Rama-Edu-Android
-=======
-	    		final String [] items = new String[] {"Manualmente", "Codigo de barras" };
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	    	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.barras};
 	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
 	    	    
@@ -640,15 +428,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		scanIntegrator.initiateScan();
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-	
-
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 	    NetworkInfo net = cm.getActiveNetworkInfo();
@@ -796,36 +575,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 					helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
    	 					helper.close();
    	 				}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-   	 	initializeArrayList(tipoCat);
-		ItemProducto item = new ItemProducto(products.size(),name,cant);
-		boolean encontrado = false;
-		int i = 0;
-		while (i<products.size() && !encontrado){
-			ItemProducto product = products.get(i);
-			String nameP = product.getNombre().toLowerCase();
-			if (nameP.equals(item.getNombre().toLowerCase())) {
-				encontrado = true;
-			}
-			i++;
-		}
-		if (!encontrado) {
-			products.add(item);
-			SQLiteDatabase tmp = helper.open();	
-			if (tmp!=null){
-				helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
 
-				helper.close();
-			}
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 			
    	 			}
    	 			else {
