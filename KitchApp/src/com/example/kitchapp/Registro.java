@@ -90,7 +90,6 @@ public class Registro extends Activity implements OnClickListener {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-<<<<<<< HEAD
 	            .setMessage("La direccion de correo tiene que ser tipo example@dominio.com/es")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
@@ -112,9 +111,6 @@ public class Registro extends Activity implements OnClickListener {
 	                    getResources().getDrawable(
 	                            R.drawable.close))
 	            .setMessage("Ya existe ese nombre de usuario. Por favor registrese de nuevo")
-=======
-	            .setMessage("La direcci�n de correo tiene que ser tipo example@dominio.com/es")
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
