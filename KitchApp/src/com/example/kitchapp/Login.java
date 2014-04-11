@@ -26,34 +26,7 @@ public class Login extends Activity {
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
 		setContentView(R.layout.activity_login);
-<<<<<<< HEAD
-=======
-		/*users = new HashMap<String,String>();
-		initializeUsers();*/
-		Bundle extra = this.getIntent().getExtras();
-		if (extra != null) {
-			String nameUser = extra.getString("userName");
-			String userPassword = extra.getString("password");
-			String userEmail = extra.getString("email");
-			SQLiteDatabase tmp = helper.open();
-			if (tmp != null) {
-				if (!helper.readUser(nameUser)) {
-					helper.insertUser(nameUser, userPassword, userEmail);
-				}
-				else {
-					errorRegister();
-				}
-				helper.close();
 
-			}
-			/*if (!users.containsKey(extra.getString("userName"))) {
-				users.put(extra.getString("userName"),extra.getString("password"));
-			}
-			else {
-				errorRegister();
-			}*/
-		}
->>>>>>> Rama-Mayra_Android
 		
 		userName = (EditText)findViewById(R.id.editTextuserName);
 		password = (EditText)findViewById(R.id.editTextPassword);
@@ -72,10 +45,7 @@ public class Login extends Activity {
 		if (tmp != null) {
 			if (helper.readUser(name) && key.equals(helper.readPassword(name))) {
 				Intent i = new Intent(this, PantallaTransicion.class);
-<<<<<<< HEAD
-=======
-				//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
->>>>>>> Rama-Mayra_Android
+
 				startActivity(i);
 			}
 			else if (!helper.readUser(name)) {
@@ -86,21 +56,6 @@ public class Login extends Activity {
 			}
 			helper.close();
 				
-<<<<<<< HEAD
-		}
-=======
-		}
-		/*if (users.containsKey(name) && key.equals(users.get(name))) {
-			Intent i = new Intent(this, PantallaTransicion.class);
-			//Toast.makeText(this, "Actividad Main ", Toast.LENGTH_SHORT).show();
-			startActivity(i);
-		}
-		else if (!users.containsKey(name)) {
-			errorLogging();
-		}
-		else
-			errorPassword();*/
->>>>>>> Rama-Mayra_Android
 
 	}
 	
@@ -117,11 +72,9 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-<<<<<<< HEAD
+
 	            .setMessage("No se encuentra registrado en KitchApp. Por favor registrese")
-=======
-	            .setMessage("No se encuentra registrado en KitchApp. Por favor regístrese")
->>>>>>> Rama-Mayra_Android
+
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -141,11 +94,9 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-<<<<<<< HEAD
-	            .setMessage("Contraseña incorrecta. Intentelo de nuevo")
-=======
-	            .setMessage("Contraseña incorrecta. Inténtelo de nuevo")
->>>>>>> Rama-Mayra_Android
+
+	            .setMessage("Contraseï¿½a incorrecta. Intentelo de nuevo")
+
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -159,26 +110,5 @@ public class Login extends Activity {
 
 	}
 	
-<<<<<<< HEAD
-=======
-	public void errorRegister() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		 
-	    builder.setTitle("Error")
-	            .setIcon(
-	                    getResources().getDrawable(
-	                            R.drawable.close))
-	            .setMessage("Ya existe ese nombre de usuario. Por favor regístrese de nuevo")
-	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-	 
-	                @Override
-	                public void onClick(DialogInterface arg0, int arg1) {
-	                	arg0.cancel();
-	                }
-	            });
-	 
-	    builder.create();
-	    builder.show();
-	}
->>>>>>> Rama-Mayra_Android
+
 }
