@@ -55,7 +55,7 @@ public class Login extends Activity {
 				errorPassword();
 			}
 			helper.close();
-				
+		}				
 
 	}
 	
