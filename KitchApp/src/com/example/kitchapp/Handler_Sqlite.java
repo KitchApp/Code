@@ -15,11 +15,8 @@ import android.text.TextUtils;
 import static android.provider.BaseColumns._ID;
 
 
-<<<<<<< HEAD
-public class Handler_Sqlite extends SQLiteOpenHelper {
-=======
 public class Handler_Sqlite extends SQLiteOpenHelper{
->>>>>>> Rama-Mayra_Android
+
 
 	private static final String nameBD = "KitchApp-BaseDD";
 
@@ -45,10 +42,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		String query3 = "CREATE TABLE users ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, email TEXT);";
 		db.execSQL(query1);	
 		db.execSQL(query2);
-<<<<<<< HEAD
-		//db.execSQL(query2);
-=======
->>>>>>> Rama-Mayra_Android
 		db.execSQL(query3);
 		
 		 InputStream is = null;
@@ -81,10 +74,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	@Override
 	//This methos is called when the database needs to be upgraded.
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
-<<<<<<< HEAD
-=======
 
->>>>>>> Rama-Mayra_Android
 		//db.execSQL("DROP TABLE IF EXISTS categorias");
 		db.execSQL("DROP TABLE IF EXISTS users");
 		db.execSQL("DROP TABLE IF EXISTS products");
@@ -94,10 +84,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	
 	
 	public ArrayList<ItemProducto> readProducts(Integer key){
-<<<<<<< HEAD
-=======
 
->>>>>>> Rama-Mayra_Android
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		String columnas[]={_ID,"name","cant"};
 		SQLiteDatabase db=this.getReadableDatabase();
@@ -113,11 +100,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
-<<<<<<< HEAD
-=======
-			//TODO hacer consulta para la categor�a
 
->>>>>>> Rama-Mayra_Android
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;
