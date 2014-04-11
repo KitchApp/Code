@@ -5,7 +5,7 @@ public class ItemProducto {
   protected int cantidad;
   protected String nombre;
   protected String barCode;
-         
+
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";
