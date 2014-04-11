@@ -58,19 +58,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		products = new ArrayList<ItemProducto>();
 		
 		
-<<<<<<< HEAD
-=======
-				/*helper.insertProducto("coca-cola",4,4,null);
-				helper.insertProducto("Pollo",1,5,null);
-				helper.insertProducto("Merluza",1,6,null);
-				helper.insertProducto("Red bull",4,4,null);
-				helper.insertProducto("Arroz largo",4,8,null);
-				helper.insertProducto("Guisantes",1,9,null);
-				helper.insertProducto("Gel baï¿½o",4,10,null);
-				helper.insertProducto("Macarrones",2,8,null);
-				helper.insertProducto("Helado Fresa",4,9,null);
-		}*/
->>>>>>> Rama-Mayra_Android
+
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -122,7 +110,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 11:
-					title.setText("Droguería");
+					title.setText("Droguerï¿½a");
 					break;
 			
 				case 12:
@@ -132,13 +120,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			}
 		}
 			
-<<<<<<< HEAD
-=======
-			
 
-		
-			
->>>>>>> Rama-Mayra_Android
 
 	//helper.close();
 		
