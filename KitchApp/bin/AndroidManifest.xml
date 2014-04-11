@@ -14,12 +14,9 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-<<<<<<< HEAD
-        android:label="@string/app_name" >
-=======
         android:label="@string/app_name"
         android:theme="@style/AppBaseTheme" >
->>>>>>> Rama-Mayra_Android
+
         <activity
             android:name="com.example.kitchapp.Login"
             android:label=" " >
@@ -35,11 +32,7 @@
         </activity>
         <activity
             android:name="com.example.kitchapp.PantallaPrincipal"
-<<<<<<< HEAD
-            android:label="@string/app_name" 
-=======
             android:label=" " 
->>>>>>> Rama-Mayra_Android
             android:theme="@style/boton_style">
             <intent-filter>
                 <action android:name="com.example.kitchapp.PantallaPrincipal" />
@@ -58,11 +51,7 @@
         </activity>
         <activity
             android:name="com.example.kitchapp.AccesoDespensa"
-<<<<<<< HEAD
-            android:label="@string/app_name" 
-=======
             android:label=" " 
->>>>>>> Rama-Mayra_Android
             android:theme="@style/boton_style" >
             <intent-filter>
                 <action android:name="com.example.kitchapp.AccesoDespensa" />
@@ -82,11 +71,7 @@
         
         <activity
             android:name="com.example.kitchapp.MostrarProductosCategoria"
-<<<<<<< HEAD
-            android:label="@string/app_name" >
-=======
             android:label=" " >
->>>>>>> Rama-Mayra_Android
             <intent-filter>
                 <action android:name="com.example.kitchapp.MostrarProductosCategoria" />
                 <category android:name="android.intent.category.DEFAULT" />
