@@ -48,7 +48,11 @@
 	        android:id="@+id/button_save"
 	        style="@style/boton_style"
 		   	android:layout_weight="1"
+<<<<<<< HEAD
 	        android:background="@color/gray" 
+=======
+	        android:background="@color/lightGray" 
+>>>>>>> Rama-Mayra_Android
 	        android:text="@string/save" 
 	        android:textSize="22dip"/>
         
@@ -56,7 +60,11 @@
 	        android:id="@+id/button_cancel"
 	        style="@style/boton_style"
 		   	android:layout_weight="1"
+<<<<<<< HEAD
 	        android:background="@color/gray" 
+=======
+	        android:background="@color/lightGray" 
+>>>>>>> Rama-Mayra_Android
 	        android:text="@string/cancel" 
 	        android:textSize="22dip"/>
         

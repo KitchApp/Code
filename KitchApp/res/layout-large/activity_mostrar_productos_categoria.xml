@@ -8,7 +8,11 @@
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical"
+<<<<<<< HEAD
     	android:background="@drawable/fondo">
+=======
+    	android:background="@color/white">
+>>>>>>> Rama-Mayra_Android
     	
     	<TextView
         	android:id="@+id/textView_Cat"

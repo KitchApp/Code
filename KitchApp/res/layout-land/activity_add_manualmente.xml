@@ -55,4 +55,8 @@
         android:layout_marginBottom="20dp"
         android:textColor="@color/white"/>
 
+<<<<<<< HEAD:KitchApp/res/layout-land/activity_add_manualmente.xml
 </RelativeLayout>
+=======
+</RelativeLayout>
+>>>>>>> Rama-Mayra_Android:KitchApp/res/layout-land/activity_add_manualmente.xml

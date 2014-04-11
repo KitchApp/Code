@@ -33,6 +33,7 @@
 	            android:orientation="horizontal">		    	
 		   		<Button
 		   	    	android:id="@+id/buttonDairy"
+<<<<<<< HEAD
 		   	    	style="@style/boton_style"
 		   	    	android:layout_weight="1"			   	       			   	    
 			   	    android:background="@drawable/boton_redondo_color_celeste"
@@ -43,6 +44,21 @@
 			   	    style="@style/boton_style"
 			   	    android:layout_weight="1"			   	    		   	    			   	    
 			   	    android:background="@drawable/boton_redondo_color_celeste"
+=======
+		   	    	android:layout_weight="1"			   	       			   	    
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/lacteos"
+			   	    android:textSize="15dp"
+			   	    android:text="@string/lacteos" 
+			   	    />
+		   	
+			   	<Button
+			   	    android:id="@+id/buttonFruits"
+			   	    android:layout_weight="1"	
+			   	    android:background="@color/lightGreen"		   	    		   	    			   	    
+			   	    android:drawableTop="@drawable/frutas_verduras"
+			   	    android:textSize="15dp"
+>>>>>>> Rama-Mayra_Android
 			   	    android:text="@string/frutasVerduras" />
 			</LinearLayout>   	
 			   	
@@ -52,16 +68,30 @@
 	            android:orientation="horizontal">
 			   	<Button
 			   	    android:id="@+id/buttonBread"
+<<<<<<< HEAD
 			   	    style="@style/boton_style"
 			   	    android:layout_weight="1"
 			   	    android:background="@drawable/boton_redondo_color_celeste"
+=======
+			   	    android:layout_weight="1"
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/pan_bolleria"
+			   	    android:textSize="15dp"
+>>>>>>> Rama-Mayra_Android
 			   	    android:text="@string/panBolleria" />
 			
 			   	<Button
 			       	android:id="@+id/buttonDrinks"
+<<<<<<< HEAD
 			       	style="@style/boton_style"
 			       	android:layout_weight="1"			       	
 			       	android:background="@drawable/boton_redondo_color_celeste"
+=======
+			       	android:layout_weight="1"		
+			       	android:background="@color/lightGreen"	       	
+			       	android:drawableTop="@drawable/bebidas"
+			       	android:textSize="15dp"
+>>>>>>> Rama-Mayra_Android
 			       	android:text="@string/bebidas" />
 			</LinearLayout>
 			
@@ -71,16 +101,30 @@
 	            android:orientation="horizontal">
 			   	<Button
 			   	    android:id="@+id/buttonMeat"
+<<<<<<< HEAD
 			   	    style="@style/boton_style"
 			   	    android:layout_weight="1"
 			   	    android:background="@drawable/boton_redondo_color_celeste"
+=======
+			   	    android:layout_weight="1"
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/carnes"
+			   	    android:textSize="15dp"
+>>>>>>> Rama-Mayra_Android
 			   	    android:text="@string/carnes" />
 	            
 			   	<Button
 			       	android:id="@+id/buttonFish"
+<<<<<<< HEAD
 			       	style="@style/boton_style"
 			       	android:layout_weight="1"
 			       	android:background="@drawable/boton_redondo_color_celeste"
+=======
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+			       	android:drawableTop="@drawable/pescados"
+			       	android:textSize="15dp"
+>>>>>>> Rama-Mayra_Android
 			       	android:text="@string/pescados" />						   	
 			</LinearLayout>
 			
@@ -89,6 +133,7 @@
 			    android:layout_height="wrap_content"
 			    android:orientation="horizontal">
 			   	<Button
+<<<<<<< HEAD
 			   	    android:id="@+id/buttonSauces"
 			   	    style="@style/boton_style"
 			   	    android:layout_weight="1"
@@ -100,6 +145,21 @@
 			       	style="@style/boton_style"
 			       	android:layout_weight="1"
 			       	android:background="@drawable/boton_redondo_color_celeste"
+=======
+			   	    android:id="@+id/buttonCondiment"
+			   	    android:layout_weight="1"
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/condimentos"
+			   	    android:textSize="15dp"
+			   	    android:text="@string/condimentos" />
+			   	
+			   	<Button
+			       	android:id="@+id/buttonPasta"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+			       	android:drawableTop="@drawable/pastas"
+			       	android:textSize="15dp"
+>>>>>>> Rama-Mayra_Android
 			       	android:text="@string/pastasArroces" />
 			</LinearLayout>			   				   			   	
 						   					   	
@@ -109,6 +169,7 @@
 			    android:orientation="horizontal">
 			   	<Button
 			   	    android:id="@+id/buttonFrozen"
+<<<<<<< HEAD
 			   	    style="@style/boton_style"
 			   	    android:layout_weight="1"
 			   	    android:background="@drawable/boton_redondo_color_celeste"
@@ -122,6 +183,43 @@
 			</LinearLayout>		
 
 			<LinearLayout 
+=======
+			   	    android:layout_weight="1"
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/congelados"
+			   	    android:textSize="15dp"
+			   	    android:text="@string/congelados" />
+			   	<Button
+			       	android:id="@+id/buttonSauces"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+					android:drawableTop="@drawable/salsas"
+			       	android:textSize="15dp"
+			       	android:text="@string/salsas" />
+			</LinearLayout>		
+			
+			<LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal">
+			   	<Button
+			   	    android:id="@+id/buttonStore"
+			   	    android:layout_weight="1"
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/drogueria"
+			   	    android:textSize="15dp"
+			   	    android:text="@string/drogueria" />
+			   	<Button
+			       	android:id="@+id/buttonOthers"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+					android:drawableTop="@drawable/varios"
+			       	android:textSize="15dp"
+			       	android:text="@string/varios" />
+			</LinearLayout>		
+
+			<!--<LinearLayout 
+>>>>>>> Rama-Mayra_Android
 			    android:layout_width="fill_parent"
 			    android:layout_height="wrap_content"
 			    android:orientation="horizontal">			   	
@@ -131,7 +229,11 @@
 			   	    android:layout_height="wrap_content"			   	    
 			   	    android:layout_gravity="center_horizontal"
 			   	    android:background="@drawable/lupa_sobre_un_robot_androide" />
+<<<<<<< HEAD
 			</LinearLayout>		
+=======
+			</LinearLayout>  -->		
+>>>>>>> Rama-Mayra_Android
 			   	
 	   	</LinearLayout>
 	</RelativeLayout>

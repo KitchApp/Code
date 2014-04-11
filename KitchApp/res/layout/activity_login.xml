@@ -51,13 +51,21 @@
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
+<<<<<<< HEAD
                 android:textSize="15dip"
+=======
+                
+>>>>>>> Rama-Mayra_Android
                 android:text="Usuario"/>
           
           <EditText 
               	android:id="@+id/editTextuserName"
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+                android:inputType="text"
+>>>>>>> Rama-Mayra_Android
                 android:layout_marginTop="5dip"
                 android:layout_marginBottom="20dip"
                 android:singleLine="true"/>
@@ -67,7 +75,11 @@
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
+<<<<<<< HEAD
                 android:textSize="15dip"
+=======
+                
+>>>>>>> Rama-Mayra_Android
                 android:text="Contraseña"/>
           
           <EditText 
@@ -75,6 +87,10 @@
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
+<<<<<<< HEAD
+=======
+                android:inputType="text"
+>>>>>>> Rama-Mayra_Android
                 android:singleLine="true"
                 android:password="true"/>
           
@@ -83,6 +99,10 @@
               	android:id="@+id/btnLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+                
+>>>>>>> Rama-Mayra_Android
                 android:layout_marginTop="10dip"
                 android:text="Login"
                 android:onClick="intento_logueo"/>

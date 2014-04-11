@@ -19,7 +19,10 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
+<<<<<<< HEAD
 	Handler_Sqlite helper = new Handler_Sqlite(this);
+=======
+>>>>>>> Rama-Mayra_Android
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,11 +53,16 @@ public class Registro extends Activity implements OnClickListener {
 			case R.id.btnRegistro:
 				String mail = email.getText().toString();
 				String [] mailarroba = mail.split("@");
+<<<<<<< HEAD
 				if ((mailarroba.length < 2) || (mail.equals(mailarroba[0])) || (mailarroba.length > 2)) {
+=======
+				if (mail.equals(mailarroba[0]) || mailarroba.length > 2) {
+>>>>>>> Rama-Mayra_Android
 					errorMail();
 				}
 				else {
 					String [] mailpoint = mailarroba[1].split("\\.");
+<<<<<<< HEAD
 					if (mailpoint.length < 2 || mailarroba[1].equals(mailpoint[0])) {
 						errorMail();
 					}
@@ -75,6 +83,18 @@ public class Registro extends Activity implements OnClickListener {
 							}
 							helper.close();
 						}
+=======
+					if (mailarroba[1].equals(mailpoint[0]) || mailpoint.length > 2) {
+						errorMail();
+					}
+					else {
+						Intent intent = new Intent(this,Login.class);
+						intent.putExtra("userName",userName.getText().toString());
+						intent.putExtra("password",password.getText().toString());
+						intent.putExtra("email", email.getText().toString());
+						startActivity(intent);
+						finish();
+>>>>>>> Rama-Mayra_Android
 					}
 				}
 				break;
@@ -90,6 +110,7 @@ public class Registro extends Activity implements OnClickListener {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
+<<<<<<< HEAD
 	            .setMessage("La direccion de correo tiene que ser tipo example@dominio.com/es")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
@@ -111,6 +132,9 @@ public class Registro extends Activity implements OnClickListener {
 	                    getResources().getDrawable(
 	                            R.drawable.close))
 	            .setMessage("Ya existe ese nombre de usuario. Por favor registrese de nuevo")
+=======
+	            .setMessage("La direcci�n de correo tiene que ser tipo example@dominio.com/es")
+>>>>>>> Rama-Mayra_Android
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override

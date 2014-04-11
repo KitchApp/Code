@@ -8,7 +8,11 @@
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical"
+<<<<<<< HEAD:KitchApp/res/layout-land/activity_mostrar_productos_categoria.xml
     	android:background="@drawable/fondo">
+=======
+    	android:background="@color/white">
+>>>>>>> Rama-Mayra_Android:KitchApp/res/layout-land/activity_mostrar_productos_categoria.xml
     	
     	<TextView
         	android:id="@+id/textView_Cat"
