@@ -26,6 +26,7 @@ public class Login extends Activity {
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
 		setContentView(R.layout.activity_login);
+
 		
 		userName = (EditText)findViewById(R.id.editTextuserName);
 		password = (EditText)findViewById(R.id.editTextPassword);
@@ -44,6 +45,7 @@ public class Login extends Activity {
 		if (tmp != null) {
 			if (helper.readUser(name) && key.equals(helper.readPassword(name))) {
 				Intent i = new Intent(this, PantallaTransicion.class);
+
 				startActivity(i);
 			}
 			else if (!helper.readUser(name)) {
@@ -53,8 +55,7 @@ public class Login extends Activity {
 				errorPassword();
 			}
 			helper.close();
-				
-		}
+		}				
 
 	}
 	
@@ -71,7 +72,9 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
+
 	            .setMessage("No se encuentra registrado en KitchApp. Por favor registrese")
+
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -91,7 +94,9 @@ public class Login extends Activity {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-	            .setMessage("Contraseña incorrecta. Intentelo de nuevo")
+
+	            .setMessage("Contraseï¿½a incorrecta. Intentelo de nuevo")
+
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -105,4 +110,5 @@ public class Login extends Activity {
 
 	}
 	
+
 }

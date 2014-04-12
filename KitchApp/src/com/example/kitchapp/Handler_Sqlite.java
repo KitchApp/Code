@@ -15,21 +15,8 @@ import android.text.TextUtils;
 import static android.provider.BaseColumns._ID;
 
 
-<<<<<<< HEAD
-public class Handler_Sqlite extends SQLiteOpenHelper {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	private static final String nameBD = "KitchApp-Base";
-	public Handler_Sqlite(Context ctx){
-		super(ctx,nameBD, null,7);
-=======
-	Context myContext;
-	public Handler_Sqlite(Context ctx){
-		
-		super(ctx,"Base1", null,1);
-		myContext=ctx;
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
+public class Handler_Sqlite extends SQLiteOpenHelper{
+
 
 	private static final String nameBD = "KitchApp-BaseDD";
 
@@ -37,17 +24,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper {
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,1);
 		myContext = ctx;
->>>>>>> Rama-Edu-Android
-=======
-public class Handler_Sqlite extends SQLiteOpenHelper
-
-	private static final String nameBD = "KitchApp-BaseDD";
-
-	Context myContext;
-	public Handler_Sqlite(Context ctx){
-		super(ctx,nameBD, null,1);
-		myContext = ctx;
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	}
 	
 	public SQLiteDatabase open(){
@@ -61,6 +37,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Rama-Edu-Android
@@ -69,6 +46,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 >>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 =======
 >>>>>>> Rama-Edu-Android
+=======
+
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, barCode TEXT);";
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
@@ -80,6 +60,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		//db.execSQL(query2);
 =======
 =======
@@ -89,8 +70,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 =======
 		//db.execSQL(query2);
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		db.execSQL(query3);
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 		
 		 InputStream is = null;
 		    try {
@@ -117,18 +99,12 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 		            }                
 		        }
 		    }			
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	}
 
 	@Override
 	//This methos is called when the database needs to be upgraded.
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -146,19 +122,19 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 <<<<<<< HEAD
 >>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
 =======
+=======
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 
 		//db.execSQL("DROP TABLE IF EXISTS categorias");
 		db.execSQL("DROP TABLE IF EXISTS users");
 		db.execSQL("DROP TABLE IF EXISTS products");
 		db.execSQL("DROP TABLE IF EXISTS productsTemporary");
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 		onCreate(db);
 	}
 	
 	
 	public ArrayList<ItemProducto> readProducts(Integer key){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,11 +147,15 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 >>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 =======
 >>>>>>> Rama-Edu-Android
+=======
+
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		String columnas[]={_ID,"name","cant"};
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={key.toString()};
 		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -187,6 +167,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 >>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 =======
 >>>>>>> Rama-Edu-Android
+=======
+
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
 		int id, idName, idNum, idCat;
 		id=c.getColumnIndex(_ID);
@@ -196,6 +179,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 		
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,6 +195,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 >>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 =======
 >>>>>>> Rama-Edu-Android
+=======
+
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;
@@ -241,36 +228,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper
 		
 		return c.getString(password);
 		
-	}
-		
-	public boolean exist(String data, String table){
-		
-		String columnas[]={_ID,"name","barCode"};
-	
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={data};
-		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
-		Cursor c=db.query(table, null, "barCode=?", args, null, null, null);
-	
-		return (c.moveToFirst());
-		
-		
-	}
-	
-	public ArrayList<Object> readProductsTemporary(Object data){
-		ArrayList<Object> result=new ArrayList<Object>();
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={(String)data};
-		Cursor c=db.query("productsTemporary", null, "barCode=?", args, null, null, null);
-		int idName=c.getColumnIndex("name");
-		int idBarCode=c.getColumnIndex("barCode");
-		c.moveToFirst();
-		String tmp1=c.getString(idName);
-		String tmp2=c.getString(idBarCode);
-		result.add((c.getString(idName)));
-		result.add((c.getString(idBarCode)));
-		
-		return result;
 	}
 		
 	public boolean exist(String data, String table){

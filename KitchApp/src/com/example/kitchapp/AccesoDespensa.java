@@ -30,95 +30,11 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	Button b1;
-=======
-	
->>>>>>> Rama-Edu-Android
-=======
-	Button buttonLacteos;
-	Button buttonFrutas;
-	Button buttonPan;
-	Button buttonBebidas;
-	Button buttonCarnes;
-	Button buttonPescados;
-	Button buttonSalsas;
-	Button buttonPastas;
-	Button buttonCongelados;
-	Button buttonVarios;
->>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
-	
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		b1 = (Button) findViewById(R.id.button1);
-		b1.setOnClickListener(this);
-=======
->>>>>>> 3595f17192c1223c6fcb9aab83ebc4a75ab32ca2
-
-		buttonLacteos = (Button) findViewById(R.id.buttonLacteos);
-		buttonLacteos.setOnClickListener(this);
-		buttonFrutas = (Button) findViewById(R.id.buttonFrutas);
-		buttonFrutas.setOnClickListener(this);
-		buttonPan = (Button) findViewById(R.id.buttonPan);
-		buttonPan.setOnClickListener(this);
-		buttonBebidas = (Button) findViewById(R.id.buttonBebidas);
-		buttonBebidas.setOnClickListener(this);
-		buttonCarnes = (Button) findViewById(R.id.buttonCarnes);
-		buttonCarnes.setOnClickListener(this);
-		buttonPescados = (Button) findViewById(R.id.buttonPescados);
-		buttonPescados.setOnClickListener(this);
-		buttonSalsas = (Button) findViewById(R.id.buttonSalsas);
-		buttonSalsas.setOnClickListener(this);
-		buttonPastas = (Button) findViewById(R.id.buttonPastas);
-		buttonPastas.setOnClickListener(this);
-		buttonCongelados = (Button) findViewById(R.id.buttonCongelados);
-		buttonCongelados.setOnClickListener(this);
-		buttonVarios = (Button) findViewById(R.id.buttonVarios);
-		buttonVarios.setOnClickListener(this);
-
-		Button b=(Button)findViewById(R.id.button_add);
-		b.setOnClickListener(this);
-		Button button_add=(Button)findViewById(R.id.button_add);
-		button_add.setOnClickListener(this);
-		
-
-<<<<<<< HEAD
->>>>>>> cbefd14e7b9a60ed8c3553c1b066bc11efc60619
-=======
-=======
-	
->>>>>>> Rama-Edu-Android
-=======
-	
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 		Button button_dairy = (Button) findViewById(R.id.buttonDairy);
 		button_dairy.setOnClickListener(this);
 		Button button_fruits = (Button) findViewById(R.id.buttonFruits);
@@ -131,12 +47,16 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		button_meat.setOnClickListener(this);
 		Button button_fish = (Button) findViewById(R.id.buttonFish);
 		button_fish.setOnClickListener(this);
-		Button button_sauces = (Button) findViewById(R.id.buttonSauces);
-		button_sauces.setOnClickListener(this);
+		Button button_condiment = (Button) findViewById(R.id.buttonCondiment);
+		button_condiment.setOnClickListener(this);
 		Button button_pasta = (Button) findViewById(R.id.buttonPasta);
 		button_pasta.setOnClickListener(this);
 		Button button_frozen = (Button) findViewById(R.id.buttonFrozen);
 		button_frozen.setOnClickListener(this);
+		Button button_sauces = (Button) findViewById(R.id.buttonSauces);
+		button_sauces.setOnClickListener(this);
+		Button button_store = (Button) findViewById(R.id.buttonStore);
+		button_store.setOnClickListener(this);
 		Button button_others = (Button) findViewById(R.id.buttonOthers);
 		button_others.setOnClickListener(this);
 
@@ -193,7 +113,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			startActivity(intent3);
 			break;
 			
-		case R.id.buttonSauces:
+		case R.id.buttonCondiment:
 			Intent intent4 = new Intent(this,MostrarProductosCategoria.class);
 			intent4.putExtra("idCat",7);
 			startActivity(intent4);
@@ -211,10 +131,22 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			startActivity(intent6);
 			break;
 			
-		case R.id.buttonOthers:
+		case R.id.buttonSauces:
 			Intent intent7 = new Intent(this,MostrarProductosCategoria.class);
 			intent7.putExtra("idCat",10);
 			startActivity(intent7);
+			break;
+		
+		case R.id.buttonStore:
+			Intent intent8 = new Intent(this,MostrarProductosCategoria.class);
+			intent8.putExtra("idCat",11);
+			startActivity(intent8);
+			break;
+			
+		case R.id.buttonOthers:
+			Intent intent9 = new Intent(this,MostrarProductosCategoria.class);
+			intent9.putExtra("idCat",12);
+			startActivity(intent9);
 			break;
 			
 		}

@@ -35,6 +35,7 @@
         android:layout_below="@+id/editTextNameProduct"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:inputType="number"
         android:textSize="19dip"
         android:hint="@string/cantProduct"
         android:textColorHint="@color/black" >
@@ -56,3 +57,7 @@
         android:textColor="@color/white"/>
 
 </RelativeLayout>
+<<<<<<< HEAD:KitchApp/res/layout-land/activity_add_manualmente.xml~HEAD
+=======
+
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6:KitchApp/res/layout-large-land/activity_add_manualmente.xml

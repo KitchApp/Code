@@ -16,9 +16,11 @@
     <string name="bebidas">Bebidas</string>
     <string name="carnes">Carnes</string>
     <string name="pescados">Pescados</string>
-    <string name="salsasCondimentos">Salsas y Condimentos</string>
+    <string name="condimentos">Condimentos</string>
+    <string name="salsas">Salsas</string>
     <string name="pastasArroces">Pastas y Arroces</string>
     <string name="congelados">Congelados</string>
+    <string name="drogueria">Droguería</string>
     <string name="varios">Varios</string>
     <string name="anadirProducto">Añadir Producto</string>
     <string name="buscarProducto">Buscar Producto</string>

@@ -19,7 +19,9 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
+
 	Handler_Sqlite helper = new Handler_Sqlite(this);
+
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class Registro extends Activity implements OnClickListener {
 			case R.id.btnRegistro:
 				String mail = email.getText().toString();
 				String [] mailarroba = mail.split("@");
+
 				if ((mailarroba.length < 2) || (mail.equals(mailarroba[0])) || (mailarroba.length > 2)) {
 					errorMail();
 				}
@@ -90,7 +93,7 @@ public class Registro extends Activity implements OnClickListener {
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
-<<<<<<< HEAD
+
 	            .setMessage("La direccion de correo tiene que ser tipo example@dominio.com/es")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
@@ -112,9 +115,6 @@ public class Registro extends Activity implements OnClickListener {
 	                    getResources().getDrawable(
 	                            R.drawable.close))
 	            .setMessage("Ya existe ese nombre de usuario. Por favor registrese de nuevo")
-=======
-	            .setMessage("La direcci�n de correo tiene que ser tipo example@dominio.com/es")
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override

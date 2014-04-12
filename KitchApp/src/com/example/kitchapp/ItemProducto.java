@@ -8,6 +8,7 @@ public class ItemProducto {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
          
 =======
 
@@ -18,6 +19,9 @@ public class ItemProducto {
 =======
   
 >>>>>>> Rama-Edu-Android
+=======
+
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";

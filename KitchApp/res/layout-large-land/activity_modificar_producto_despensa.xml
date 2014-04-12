@@ -50,16 +50,26 @@
 	        android:id="@+id/button_cancel"
 	        style="@style/boton_style"
 		   	android:layout_weight="1"
+<<<<<<< HEAD
 	        android:background="@color/gray" 
 	        android:text="@string/cancel" 
+=======
+	        android:background="@color/lightGray" 
+	        android:text="@string/save" 
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 	        android:textSize="22dip"/>
         
         <Button
 	        android:id="@+id/button_save"
 	        style="@style/boton_style"
 		   	android:layout_weight="1"
+<<<<<<< HEAD
 	        android:background="@color/gray" 
 	        android:text="@string/save" 
+=======
+	        android:background="@color/lightGray" 
+	        android:text="@string/cancel" 
+>>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 	        android:textSize="22dip"/>
         
     </LinearLayout>    

@@ -8,8 +8,8 @@
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical"
-    	android:background="@drawable/fondo">
-    	
+    	android:background="@color/white">
+
     	<TextView
         	android:id="@+id/textView_Cat"
         	android:layout_width="wrap_content"
