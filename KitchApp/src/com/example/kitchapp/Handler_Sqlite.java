@@ -34,21 +34,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	@Override
 	//This method is called when the database is created for the first time.
 	public void onCreate(SQLiteDatabase db){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, barCode TEXT);";
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
@@ -56,22 +41,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		String query3 = "CREATE TABLE users ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, email TEXT);";
 		db.execSQL(query1);	
 		db.execSQL(query2);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		//db.execSQL(query2);
-=======
-=======
-		db.execSQL(query3);
->>>>>>> Rama-Edu-Android
-=======
-=======
-		//db.execSQL(query2);
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		db.execSQL(query3);
 		
 		 InputStream is = null;
@@ -104,26 +73,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	@Override
 	//This methos is called when the database needs to be upgraded.
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		db.execSQL("DROP TABLE IF EXISTS productos");
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-		//db.execSQL("DROP TABLE IF EXISTS categorias");
-		db.execSQL("DROP TABLE IF EXISTS users");
-		db.execSQL("DROP TABLE IF EXISTS products");
-		db.execSQL("DROP TABLE IF EXISTS productsTemporary");
-<<<<<<< HEAD
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
-=======
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 
 		//db.execSQL("DROP TABLE IF EXISTS categorias");
 		db.execSQL("DROP TABLE IF EXISTS users");
@@ -134,42 +83,11 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	
 	
 	public ArrayList<ItemProducto> readProducts(Integer key){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		String columnas[]={_ID,"name","cant"};
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={key.toString()};
 		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 		Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
 		int id, idName, idNum, idCat;
 		id=c.getColumnIndex(_ID);
@@ -179,25 +97,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			//TODO hacer consulta para la categoría
-			
-=======
-			//TODO hacer consulta para la categorï¿½a
-
->>>>>>> Rama-Edu-Android
-=======
-			//TODO hacer consulta para la categorï¿½a
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;
