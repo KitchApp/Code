@@ -92,6 +92,7 @@ public final class R {
         public static final int button_addProduct=0x7f0a000f;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int button_cancel=0x7f0a001f;
         public static final int button_decrement=0x7f0a001b;
         public static final int button_increment=0x7f0a001d;
@@ -104,10 +105,13 @@ public final class R {
 =======
 >>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
         public static final int button_cancel=0x7f0a0020;
+=======
+        public static final int button_cancel=0x7f0a001f;
+>>>>>>> Rama-Edu-Android
         public static final int button_decrement=0x7f0a001c;
         public static final int button_increment=0x7f0a001e;
         public static final int button_lens=0x7f0a000b;
-        public static final int button_save=0x7f0a001f;
+        public static final int button_save=0x7f0a0020;
         public static final int cantProduct=0x7f0a001d;
 <<<<<<< HEAD
 >>>>>>> Rama-Edu-Android

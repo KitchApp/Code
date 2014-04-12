@@ -7,6 +7,7 @@ public class ItemProducto {
   protected String barCode;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
          
 =======
 
@@ -14,6 +15,9 @@ public class ItemProducto {
 =======
 
 >>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
+=======
+  
+>>>>>>> Rama-Edu-Android
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";
