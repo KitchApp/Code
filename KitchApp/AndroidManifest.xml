@@ -32,7 +32,12 @@
         </activity>
         <activity
             android:name="com.example.kitchapp.PantallaPrincipal"
+<<<<<<< HEAD
             android:label=" " >
+=======
+            android:label=" " 
+            android:theme="@style/boton_style">
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
             <intent-filter>
                 <action android:name="com.example.kitchapp.PantallaPrincipal" />
 
@@ -50,7 +55,12 @@
         </activity>
         <activity
             android:name="com.example.kitchapp.AccesoDespensa"
+<<<<<<< HEAD
             android:label=" " >
+=======
+            android:label=" " 
+            android:theme="@style/boton_style" >
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
             <intent-filter>
                 <action android:name="com.example.kitchapp.AccesoDespensa" />
 

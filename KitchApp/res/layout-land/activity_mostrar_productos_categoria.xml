@@ -10,7 +10,10 @@
     	android:orientation="vertical"
     	android:background="@color/white">
 
+<<<<<<< HEAD
     	
+=======
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
     	<TextView
         	android:id="@+id/textView_Cat"
         	android:layout_width="wrap_content"

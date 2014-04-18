@@ -34,7 +34,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	@Override
 	//This method is called when the database is created for the first time.
 	public void onCreate(SQLiteDatabase db){
+<<<<<<< HEAD
 
+=======
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, barCode TEXT);";
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
@@ -84,13 +87,19 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	
 	
 	public ArrayList<ItemProducto> readProducts(Integer key){
+<<<<<<< HEAD
 
+=======
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		String columnas[]={_ID,"name","cant"};
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={key.toString()};
 		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 		Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
 		int id, idName, idNum, idCat;
 		id=c.getColumnIndex(_ID);
@@ -100,7 +109,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;

@@ -11,18 +11,27 @@
 	    <LinearLayout 
 	        android:layout_width="fill_parent"
 	        android:layout_height="fill_parent"
+<<<<<<< HEAD
 	        android:paddingTop="120dp"
+=======
+	        android:paddingTop="80dp"
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 	        android:orientation="vertical" >       	
 			
        			<LinearLayout 
 		            android:layout_width="fill_parent"
 		            android:layout_height="wrap_content"
 		            android:background="@color/lightGreen"
+<<<<<<< HEAD
 		            android:orientation="horizontal"
 		            android:padding="10dp" 
 		            android:layout_marginBottom="10dp"
 		            android:layout_marginLeft="10dp"
 		            android:layout_marginRight="10dp"  >
+=======
+		            
+		            android:orientation="horizontal" >
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				    <!-- Distribución de 50% y 50% respectivamente 
 				    	para los elementos agregados al layout. 
 				    	El 100% del espacio disponible para estos elementos (botones),
@@ -36,14 +45,21 @@
 				    -->
 		    		<Button
 		    		    android:id="@+id/button1"
+<<<<<<< HEAD
 		    		    android:layout_width="0dp"
 		    		    android:layout_height="wrap_content"
+=======
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				        android:layout_weight="1"	
 				        android:textColor="@color/white"      
 				        android:background="@color/darkGray"      
 				        android:drawableRight="@drawable/lista_compra"		        		       
 				        android:text="@string/lista_compra" 
+<<<<<<< HEAD
 				        android:textSize="25dp"
+=======
+				        android:textSize="20dp"
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				        android:onClick="accederDespensa" 
 				        
 				    />
@@ -54,6 +70,7 @@
 		            android:layout_width="fill_parent"
 		            android:layout_height="wrap_content"
 		            android:background="@color/lightGreen"
+<<<<<<< HEAD
 		            android:orientation="horizontal"
 		            android:padding="10dp" 
 		            android:layout_marginBottom="10dp"
@@ -64,12 +81,22 @@
 				        android:id="@+id/button2"
 				        android:layout_width="0dp"
 		    		    android:layout_height="wrap_content"
+=======
+		            android:orientation="horizontal" >
+				    
+				    <Button
+				        android:id="@+id/button2"
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				        android:layout_weight="1"      
 				        android:textColor="@color/white" 
 				        android:background="@color/darkGray"     		        
 				        android:drawableRight="@drawable/despensa"		        		             
 				        android:text="@string/despensa" 
+<<<<<<< HEAD
 				        android:textSize="25dp"
+=======
+				        android:textSize="20dp"
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				        android:onClick="accederDespensa" />
 				
 				</LinearLayout>
@@ -78,6 +105,7 @@
 		            android:layout_width="fill_parent"
 		            android:layout_height="wrap_content"
 		            android:background="@color/lightGreen"
+<<<<<<< HEAD
 		            android:orientation="horizontal"
 		            android:padding="10dp" 
 		            android:layout_marginBottom="10dp"
@@ -88,12 +116,22 @@
 				        android:id="@+id/button3"
 				        android:layout_width="0dp"
 		    		    android:layout_height="wrap_content"
+=======
+		            android:orientation="horizontal" >
+				    
+				    <Button
+				        android:id="@+id/button3"
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				        android:layout_weight="1"                        		  
 				        android:textColor="@color/white"    	
 				        android:background="@color/darkGray"  	        
 				        android:drawableRight="@drawable/recetario"		        		             
 				        android:text="@string/recetario" 
+<<<<<<< HEAD
 				        android:textSize="25dp"
+=======
+				        android:textSize="20dp"
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				        android:onClick="accederDespensa" />
 				
 				</LinearLayout>
@@ -102,6 +140,7 @@
 		            android:layout_width="fill_parent"
 		            android:layout_height="wrap_content"
 		            android:background="@color/lightGreen"
+<<<<<<< HEAD
 		            android:orientation="horizontal"
 		            android:padding="10dp" 
 		            android:layout_marginBottom="10dp"
@@ -112,11 +151,18 @@
 				        android:id="@+id/button4"
 				        android:layout_width="0dp"
 		    		    android:layout_height="wrap_content"
+=======
+		            android:orientation="horizontal" >
+				    
+				    <Button
+				        android:id="@+id/button4"
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 				        android:layout_weight="1"                        		    
 				        android:textColor="@color/white"   
 				        android:background="@color/darkGray"   		        
 				        android:drawableRight="@drawable/estadisticas"		        		             
 				        android:text="@string/estadisticas" 
+<<<<<<< HEAD
 				        android:textSize="25dp"
 				        android:onClick="accederDespensa" />
 				
@@ -126,3 +172,18 @@
 
 		</RelativeLayout>
 </ScrollView>
+=======
+				        android:textSize="20dp"
+				        android:onClick="accederDespensa" />
+				
+				</LinearLayout>
+		        
+        
+		        
+		        
+   			</LinearLayout>
+
+		</RelativeLayout>
+</ScrollView>
+
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21

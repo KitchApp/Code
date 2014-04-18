@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
+<<<<<<< HEAD
     android:layout_height="fill_parent" >
 	
     <LinearLayout 
@@ -61,6 +62,49 @@
 	
 	        <requestFocus />
 	    </EditText>    
+=======
+    android:layout_height="fill_parent" 
+    android:background="@drawable/fondo">
+
+    <TextView
+        android:id="@+id/textViewAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_manually"
+        android:textColor="@color/navy"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextNameProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewAdd"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:textSize="19dip"
+        android:hint="@string/nameProduct"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/EditTextCantProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editTextNameProduct"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="19dip"
+        android:hint="@string/cantProduct"
+        android:textColorHint="@color/black" >
+
+        <requestFocus />
+    </EditText>
+>>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
     
     <!-- Button 
         android:id="@+id/button_addProduct"
