@@ -5,15 +5,7 @@ public class ItemProducto {
   protected int cantidad;
   protected String nombre;
   protected String barCode;
-<<<<<<< HEAD
-<<<<<<< HEAD
-         
-=======
 
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";

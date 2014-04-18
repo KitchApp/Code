@@ -6,7 +6,8 @@
         sustituye por AppBaseTheme de res / valores-vxx / styles.xml en los 
         dispositivos más nuevos.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
+    <style name="AppBaseTheme" parent="android:Theme.Dialog">
+
     
         <!--
             Personalizaciones temáticas disponibles en los niveles de API más 
@@ -29,8 +30,7 @@
 		<item name="android:layout_width">0dip</item>
 		<item name="android:layout_height">wrap_content</item>		        				
 		<item name="android:textColor">@color/black</item>
-		<item name="android:gravity">center</item>		
-		<item name="android:background">@drawable/fondo_boton</item>
+		<item name="android:gravity">center</item>				
 		<item name="android:layout_margin">5dip</item>
 		<item name="android:layout_marginTop">15dip</item>		
 		<item name="android:textSize">19dip</item>

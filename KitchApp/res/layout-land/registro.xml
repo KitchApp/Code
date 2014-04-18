@@ -10,15 +10,17 @@
         android:background="#ffffff">
  
         <!--  Encabezado-->
-        <LinearLayout android:id="@+id/header"
+        <LinearLayout 
+            	android:id="@+id/header"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
                 android:paddingTop="5dip"
                 android:paddingBottom="5dip">
                 <!-- Logo de encabezado-->
-                <ImageView android:src="@drawable/cabecera_kitchapp"
-                            android:layout_width="wrap_content"
+                <ImageView 
+                    		android:src="@drawable/cabecera_kitchapp"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dip"
                             android:layout_marginRight="10dip"/>
@@ -26,78 +28,96 @@
         </LinearLayout>
         <!--  fin Encabezado -->
         <!-- Pie de página -->
-        <LinearLayout android:id="@+id/footer"
+        <LinearLayout 
+            	android:id="@+id/footer"
             	android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="90dip"
+                android:layout_height="wrap_content"
                 android:background="@layout/pie_de_pagina"
                 android:layout_alignParentBottom="true">
         </LinearLayout>
         <!-- fin Pie de página -->
  
         <!-- Formulario de login -->
-        <LinearLayout
-          
+        <LinearLayout          
           android:orientation="vertical"
-          android:layout_width="match_parent"
+          android:layout_width="fill_parent"
           android:layout_height="wrap_content"
           android:padding="10dip"
           android:layout_below="@id/header">
           <!-- Etiqueta Usuario -->
-          <TextView android:layout_width="fill_parent"
+          <TextView 
+              	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:text="Usuario"/>
+                android:text="Usuario"
+                android:textSize="20dip"/>
           
-          <EditText android:id="@+id/reg_usuario"
+          <EditText 
+              	android:id="@+id/reg_usuario"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
                 android:singleLine="true"
-                android:layout_marginBottom="20dip"/>
+                android:layout_marginBottom="20dip"
+                android:textSize="20dip" 
+                android:textColor="@color/black"/>
           
           <!--  Etiqueta correo electrónico -->
-          <TextView android:layout_width="fill_parent"
+          <TextView 
+              	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:text="Correo electrónico"/>
+                android:text="Correo electrónico"
+                android:textSize="20dip" />
           
-          <EditText android:id="@+id/reg_email"
+          <EditText 
+              	android:id="@+id/reg_email"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
                 android:singleLine="true"
-                android:layout_marginBottom="20dip"/>
+                android:layout_marginBottom="20dip"
+                android:textSize="20dip"
+                android:textColor="@color/black"/>
           
           <!-- Etiqueta Contraseña -->
-          <TextView android:layout_width="fill_parent"
+          <TextView 
+              	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:text="Contraseña"/>
+                android:text="Contraseña"
+                android:textSize="20dip" />
           
-          <EditText android:id="@+id/reg_password"
+          <EditText 
+              	android:id="@+id/reg_password"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:password="true"
                 android:singleLine="true"
-                android:layout_marginTop="5dip"/>
+                android:layout_marginTop="5dip"
+                android:textSize="20dip" 
+                android:textColor="@color/black"/>
           
           <!-- Botón Registro -->
-          <Button android:id="@+id/btnRegistro"
+          <Button 
+              	android:id="@+id/btnRegistro"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-                android:text="Registrar Nueva Cuenta"/>
+                android:text="Registrar Nueva Cuenta"
+                android:textSize="25dip"/>
           
           <!-- Enlace a la pantalla de login -->
-          <TextView android:id="@+id/link_to_login"
+          <TextView 
+              	android:id="@+id/link_to_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
+                android:layout_marginTop="20dip"
                 android:layout_marginBottom="40dip"
                 android:text="Ya tienes una cuenta! Entra Aquí"
                 android:gravity="center"
-                android:textSize="20dip"
+                android:textSize="25dip"
                 android:textColor="#025f7c"/>
  
         </LinearLayout>

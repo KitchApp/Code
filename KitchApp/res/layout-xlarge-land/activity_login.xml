@@ -12,7 +12,7 @@
         <!--  Encabezado-->
         <LinearLayout 
             	android:id="@+id/encabezado"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
                 android:paddingTop="5dip"
@@ -20,7 +20,7 @@
                 <!-- Logo de encabezado-->
                 <ImageView 
                     	android:src="@drawable/cabecera_kitchapp"
-                    	android:layout_width="wrap_content"
+                    	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                         android:layout_marginLeft="10dip"
                         android:layout_marginRight="10dip"/>
@@ -44,6 +44,7 @@
           		android:layout_width="fill_parent"
           		android:layout_height="wrap_content"
           		android:padding="10dip"
+          		android:layout_marginTop="10dip"
           		android:layout_below="@id/encabezado">
                 
           <!--  Etiqueta de correo electrónico -->
@@ -51,40 +52,47 @@
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:textSize="15dip"
-                android:text="Usuario"/>
+                android:textSize="35dip"
+                android:text="Usuario"
+                android:layout_marginTop="15dip"/>
           
           <EditText 
               	android:id="@+id/editTextuserName"
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginBottom="20dip"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:textSize="35dip"
+                android:textColor="@color/black" />
           
           <!--  Etiqueta contraseña -->
           <TextView 
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
-                android:textSize="15dip"
-                android:text="Contraseña"/>
+                android:textSize="35dip"
+                android:text="Contraseña"
+                android:layout_marginTop="15dip" />
           
           <EditText 
               	android:id="@+id/editTextPassword"
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
+                android:layout_marginTop="15dip"
                 android:singleLine="true"
-                android:password="true"/>
+                android:password="true"
+                android:textSize="35dip"
+                android:textColor="@color/black" />
           
           <!-- Botón Login -->
           <Button 
               	android:id="@+id/btnLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
+                android:layout_marginTop="25dip"
                 android:text="Login"
+                android:textSize="40dip"
                 android:onClick="intento_logueo"/>
           
           <!-- Enlace a la pantalla de registro -->
@@ -96,7 +104,7 @@
                 android:layout_marginBottom="40dip"
                 android:text="Nuevo en KitchApp? Registrate Aquí"
                 android:gravity="center"
-                android:textSize="20dip"
+                android:textSize="40dip"
                 android:textColor="#0b84aa"
                 android:clickable="true"
                 android:onClick="registrarse" />

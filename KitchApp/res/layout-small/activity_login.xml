@@ -12,7 +12,7 @@
         <!--  Encabezado-->
         <LinearLayout 
             	android:id="@+id/encabezado"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
                 android:paddingTop="5dip"
@@ -20,7 +20,7 @@
                 <!-- Logo de encabezado-->
                 <ImageView 
                     	android:src="@drawable/cabecera_kitchapp"
-                    	android:layout_width="wrap_content"
+                    	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
                         android:layout_marginLeft="10dip"
                         android:layout_marginRight="10dip"/>
@@ -60,7 +60,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
                 android:layout_marginBottom="20dip"
-                android:singleLine="true"/>
+                android:singleLine="true"
+                android:textSize="15dip"
+                android:textColor="@color/black" />
           
           <!--  Etiqueta contraseña -->
           <TextView 
@@ -76,7 +78,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
                 android:singleLine="true"
-                android:password="true"/>
+                android:textSize="15dip"
+                android:password="true"
+                android:textColor="@color/black" />
           
           <!-- Botón Login -->
           <Button 
@@ -92,8 +96,8 @@
               	android:id="@+id/link_to_register"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dip"
-                android:layout_marginBottom="40dip"
+                android:layout_marginTop="20dip"
+                android:layout_marginBottom="20dip"
                 android:text="Nuevo en KitchApp? Registrate Aquí"
                 android:gravity="center"
                 android:textSize="20dip"

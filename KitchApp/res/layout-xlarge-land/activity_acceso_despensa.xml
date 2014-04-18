@@ -11,11 +11,17 @@
 	    <LinearLayout 
 	        android:layout_width="fill_parent"
 	        android:layout_height="fill_parent"
-	        android:orientation="vertical" >
+	        android:orientation="vertical"
+	        android:paddingTop="30dp" >
 	        <LinearLayout 
-	            android:layout_width="fill_parent"
-	            android:layout_height="fill_parent"
-	            android:orientation="horizontal">
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_gravity="center_horizontal"
+	            android:padding="20dp" 
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp">
 		    	<TextView
 		        	android:id="@+id/textView1"
 		        	android:layout_width="wrap_content"
@@ -23,105 +29,195 @@
 		        	android:gravity="center"
 		    		android:text="@string/despensa"
 		    		android:textColor="@color/navy"
-		    		android:textSize="40sp" >		
+		    		android:textSize="85sp" >		
 		    	</TextView>
 			</LinearLayout>
 			
 	        <LinearLayout 
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
-	            android:orientation="horizontal">		    	
+	            android:orientation="horizontal"
+	            android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="220dp"
+		        android:layout_marginRight="220dp" >		    	
 		   		<Button
 		   	    	android:id="@+id/buttonDairy"
-		   	    	style="@style/boton_style"
+		   	    	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 		   	    	android:layout_weight="1"			   	       			   	    
-			   	    android:background="@drawable/boton_redondo_color_celeste"
-			   	    android:text="@string/lacteos" />
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/lacteos"
+			   	    android:textSize="30dp"
+			   	    android:text="@string/lacteos" 			   	    
+		        	android:layout_marginRight="140dp" />
 		   	
 			   	<Button
 			   	    android:id="@+id/buttonFruits"
-			   	    style="@style/boton_style"
-			   	    android:layout_weight="1"			   	    		   	    			   	    
-			   	    android:background="@drawable/boton_redondo_color_celeste"
-			   	    android:text="@string/frutasVerduras" />
+			   	    android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			   	    android:layout_weight="1"	
+			   	    android:background="@color/lightGreen"		   	    		   	    			   	    
+			   	    android:drawableTop="@drawable/frutas_verduras"
+			   	    android:textSize="30dp"
+			   	    android:text="@string/frutasVerduras" 
+			   	    android:layout_marginLeft="140dp" />
 			</LinearLayout>   	
 			   	
 	        <LinearLayout 
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
-	            android:orientation="horizontal">
+	            android:orientation="horizontal"
+	            android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="220dp"
+		        android:layout_marginRight="220dp" >
 			   	<Button
 			   	    android:id="@+id/buttonBread"
-			   	    style="@style/boton_style"
+			   	    android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 			   	    android:layout_weight="1"
-			   	    android:background="@drawable/boton_redondo_color_celeste"
-			   	    android:text="@string/panBolleria" />
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/pan_bolleria"
+			   	    android:textSize="30dp"
+			   	    android:text="@string/panBolleria" 			   	    	   	    
+		        	android:layout_marginRight="140dp" />
 			
 			   	<Button
 			       	android:id="@+id/buttonDrinks"
-			       	style="@style/boton_style"
-			       	android:layout_weight="1"			       	
-			       	android:background="@drawable/boton_redondo_color_celeste"
-			       	android:text="@string/bebidas" />
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			       	android:layout_weight="1"		
+			       	android:background="@color/lightGreen"	       	
+			       	android:drawableTop="@drawable/bebidas"
+			       	android:textSize="30dp"
+			       	android:text="@string/bebidas"
+			       	android:layout_marginLeft="140dp" />
 			</LinearLayout>
 			
 	        <LinearLayout 
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
-	            android:orientation="horizontal">
+	            android:orientation="horizontal"
+	            android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="220dp"
+		        android:layout_marginRight="220dp" >
 			   	<Button
 			   	    android:id="@+id/buttonMeat"
-			   	    style="@style/boton_style"
+			   	    android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 			   	    android:layout_weight="1"
-			   	    android:background="@drawable/boton_redondo_color_celeste"
-			   	    android:text="@string/carnes" />
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/carnes"
+			   	    android:textSize="30dp"
+			   	    android:text="@string/carnes"			   	    
+		        	android:layout_marginRight="140dp" />
 	            
 			   	<Button
 			       	android:id="@+id/buttonFish"
-			       	style="@style/boton_style"
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 			       	android:layout_weight="1"
-			       	android:background="@drawable/boton_redondo_color_celeste"
-			       	android:text="@string/pescados" />						   	
+			       	android:background="@color/lightGreen"
+			       	android:drawableTop="@drawable/pescados"
+			       	android:textSize="30dp"
+			       	android:text="@string/pescados" 
+			       	android:layout_marginLeft="140dp" />						   	
 			</LinearLayout>
 			
 			<LinearLayout 
 			    android:layout_width="fill_parent"
 			    android:layout_height="wrap_content"
-			    android:orientation="horizontal">
+			    android:orientation="horizontal"
+			    android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="220dp"
+		        android:layout_marginRight="220dp" >
 			   	<Button
-			   	    android:id="@+id/buttonSauces"
-			   	    style="@style/boton_style"
+			   	    android:id="@+id/buttonCondiment"
+			   	    android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 			   	    android:layout_weight="1"
-			   	    android:background="@drawable/boton_redondo_color_celeste"
-			   	    android:text="@string/salsasCondimentos" />
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/condimentos"
+			   	    android:textSize="30dp"
+			   	    android:text="@string/condimentos" 			   	    
+		        	android:layout_marginRight="140dp" />
 			   	
 			   	<Button
 			       	android:id="@+id/buttonPasta"
-			       	style="@style/boton_style"
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 			       	android:layout_weight="1"
-			       	android:background="@drawable/boton_redondo_color_celeste"
-			       	android:text="@string/pastasArroces" />
+			       	android:background="@color/lightGreen"
+			       	android:drawableTop="@drawable/pastas"
+			       	android:textSize="30dp"
+			       	android:text="@string/pastasArroces" 
+			       	android:layout_marginLeft="140dp" />
 			</LinearLayout>			   				   			   	
 						   					   	
 			<LinearLayout 
 			    android:layout_width="fill_parent"
 			    android:layout_height="wrap_content"
-			    android:orientation="horizontal">
+			    android:orientation="horizontal"
+			    android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="220dp"
+		        android:layout_marginRight="220dp" >
 			   	<Button
 			   	    android:id="@+id/buttonFrozen"
-			   	    style="@style/boton_style"
+			   	    android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 			   	    android:layout_weight="1"
-			   	    android:background="@drawable/boton_redondo_color_celeste"
-			   	    android:text="@string/congelados" />
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/congelados"
+			   	    android:textSize="30dp"
+			   	    android:text="@string/congelados" 			   	    
+		        	android:layout_marginRight="140dp" />
+			   	<Button
+			       	android:id="@+id/buttonSauces"
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+					android:drawableTop="@drawable/salsas"
+			       	android:textSize="30dp"
+			       	android:text="@string/salsas"
+			       	android:layout_marginLeft="140dp" />
+			</LinearLayout>		
+			
+			<LinearLayout 
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="220dp"
+		        android:layout_marginRight="220dp" >
+			   	<Button
+			   	    android:id="@+id/buttonStore"
+			   	    android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			   	    android:layout_weight="1"
+			   	    android:background="@color/lightGreen"
+			   	    android:drawableTop="@drawable/drogueria"
+			   	    android:textSize="30dp"
+			   	    android:text="@string/drogueria" 		   	    
+		        	android:layout_marginRight="140dp" />
 			   	<Button
 			       	android:id="@+id/buttonOthers"
-			       	style="@style/boton_style"
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
 			       	android:layout_weight="1"
-			       	android:background="@drawable/boton_redondo_color_celeste"
-			       	android:text="@string/varios" />
+			       	android:background="@color/lightGreen"
+					android:drawableTop="@drawable/varios"
+			       	android:textSize="30dp"
+			       	android:text="@string/varios"
+			       	android:layout_marginLeft="140dp" />
 			</LinearLayout>		
 
-			<LinearLayout 
+			<!--<LinearLayout 
 			    android:layout_width="fill_parent"
 			    android:layout_height="wrap_content"
 			    android:orientation="horizontal">			   	
@@ -131,8 +227,9 @@
 			   	    android:layout_height="wrap_content"			   	    
 			   	    android:layout_gravity="center_horizontal"
 			   	    android:background="@drawable/lupa_sobre_un_robot_androide" />
-			</LinearLayout>		
-			   	
+			</LinearLayout>  -->		
+
 	   	</LinearLayout>
+
 	</RelativeLayout>
 </ScrollView>

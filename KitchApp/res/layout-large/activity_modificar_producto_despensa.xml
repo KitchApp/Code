@@ -48,7 +48,7 @@
 	        android:id="@+id/button_save"
 	        style="@style/boton_style"
 		   	android:layout_weight="1"
-	        android:background="@color/gray" 
+	        android:background="@color/lightGray" 
 	        android:text="@string/save" 
 	        android:textSize="22dip"/>
         
@@ -56,7 +56,7 @@
 	        android:id="@+id/button_cancel"
 	        style="@style/boton_style"
 		   	android:layout_weight="1"
-	        android:background="@color/gray" 
+	        android:background="@color/lightGray" 
 	        android:text="@string/cancel" 
 	        android:textSize="22dip"/>
         
