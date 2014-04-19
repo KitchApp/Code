@@ -11,7 +11,7 @@
  
         <!--  Encabezado-->
         <LinearLayout 
-            	android:id="@+id/header"
+            	  android:id="@+id/header"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
@@ -19,7 +19,7 @@
                 android:paddingBottom="5dp" >
                 <!-- Logo de encabezado-->
                 <ImageView 
-                    		android:src="@drawable/cabecera_kitchapp"
+                        		android:src="@drawable/cabecera_kitchapp"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
