@@ -9,15 +9,15 @@
         android:layout_height="wrap_content"        
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-		android:padding="15dp">
+	android:padding="15dp" >
         <TextView	        
 	    	android:layout_width="0dp"
 	    	android:layout_height="wrap_content"
-			android:layout_weight="1"    	    		    		    		    	    			
+		android:layout_weight="1"    	    		    		    		    	    			
 	        android:layout_marginTop="10dp"
 	    	android:text="@string/dialog_header"
 	    	android:textColor="@color/navy"
-			android:textSize="30sp" />
+		android:textSize="30sp" />
     </LinearLayout>
         
 	    <EditText        	        
@@ -25,8 +25,8 @@
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_horizontal"      
 	        android:layout_marginTop="30dp"
-		   	android:ems="10"
-	        android:textSize="20dip"	        
+		android:ems="10"
+	        android:textSize="20sp"	        
 	        android:hint="@string/nameOfList"
 	        android:textColorHint="@color/black"
 	        android:fontFamily="sans-serif" >	    	    
@@ -44,7 +44,7 @@
         <!-- Button
 	        android:id="@+id/button_save"
 	        style="@style/boton_style"
-		   	android:layout_weight="1"
+		android:layout_weight="1"
 	        android:background="@color/navy" 
 	        android:text="@string/save2" 
 	        android:textColor="@color/white"
@@ -52,35 +52,35 @@
 	        
 	    <Button 
 	        android:id="@+id/button_save"
-	        android:layout_width="0dip"
+	        android:layout_width="0dp"
 	        android:layout_height="wrap_content"
-		   	android:layout_weight="1"
+		android:layout_weight="1"
 	        android:background="@drawable/boton_redondo_color_navy"
 	        android:text="@string/save2" 
-	        android:textSize="25dip"
+	        android:textSize="25sp"
 	        android:layout_marginBottom="20dp"
 	        android:layout_marginTop="20dp"
 	        android:layout_marginRight="25dp"	        
 	        android:layout_gravity="left"
-	        android:textColor="@color/white"/>    
+	        android:textColor="@color/white" />    
         
         <!-- Button
 	        android:id="@+id/button_cancel"
 	        style="@style/boton_style"
-		   	android:layout_weight="1"
+		android:layout_weight="1"
 	        android:background="@color/navy" 
 	        android:text="@string/cancel2" 
 	        android:textColor="@color/white"
-	        android:textSize="22dp"/> -->
+	        android:textSize="22sp"/> -->
 
 	    <Button
 	        android:id="@+id/button_cancel"
-	        android:layout_width="0dip"
+	        android:layout_width="0dp"
 	        android:layout_height="wrap_content"
-		   	android:layout_weight="1"
+		android:layout_weight="1"
 	        android:background="@drawable/boton_redondo_color_navy"
 	        android:text="@string/cancel2"
-	        android:textSize="25dip"
+	        android:textSize="25sp"
 	        android:layout_marginBottom="20dp"
 	        android:layout_marginTop="20dp"
 	        android:layout_marginLeft="25dp"	        
