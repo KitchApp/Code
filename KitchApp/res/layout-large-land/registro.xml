@@ -3,35 +3,36 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
-  android:fillViewport="true">
+  android:fillViewport="true" >
   <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff">
+        android:background="#ffffff" >
  
         <!--  Encabezado-->
         <LinearLayout android:id="@+id/header"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
-                android:paddingTop="5dip"
-                android:paddingBottom="5dip">
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" >
                 <!-- Logo de encabezado-->
                 <ImageView android:src="@drawable/cabecera_kitchapp"
-                            android:layout_width="fill_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dip"
-                            android:layout_marginRight="10dip"/>
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp" />
                 <!-- fin Logo de encabezado -->
         </LinearLayout>
         <!--  fin Encabezado -->
         <!-- Pie de página -->
-        <LinearLayout android:id="@+id/footer"
-            	android:orientation="vertical"
+        <LinearLayout 
+                android:id="@+id/footer"
+            	  android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/pie_de_pagina"
-                android:layout_alignParentBottom="true">
+                android:layout_alignParentBottom="true" >
         </LinearLayout>
         <!-- fin Pie de página -->
  
@@ -40,25 +41,25 @@
           android:orientation="vertical"
           android:layout_width="fill_parent"
           android:layout_height="wrap_content"
-          android:padding="10dip"
-          android:layout_below="@id/header">
+          android:padding="10dp"
+          android:layout_below="@id/header" >
           <!-- Etiqueta Usuario -->
           <TextView 
               	android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
                 android:text="Usuario"
-                android:textSize="20dip"/>
+                android:textSize="20sp" />
           
           <EditText 
               	android:id="@+id/reg_usuario"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dip"
+                android:layout_marginTop="1dp"
                 android:singleLine="true"
-                android:layout_marginBottom="20dip"
-                android:textSize="20dip"
-                android:textColor="@color/black"/>
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black" />
           
           <!--  Etiqueta correo electrónico -->
           <TextView 
@@ -66,17 +67,17 @@
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
                 android:text="Correo electrónico"
-                android:textSize="20dip" />
+                android:textSize="20sp" />
           
           <EditText 
               	android:id="@+id/reg_email"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dip"
+                android:layout_marginTop="1dp"
                 android:singleLine="true"
-                android:layout_marginBottom="20dip"
-                android:textSize="20dip" 
-                android:textColor="@color/black"/>
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp" 
+                android:textColor="@color/black" />
           
           <!-- Etiqueta Contraseña -->
           <TextView 
@@ -84,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
                 android:text="Contraseña"
-                android:textSize="20dip" />
+                android:textSize="20sp" />
           
           <EditText 
               	android:id="@+id/reg_password"
@@ -92,30 +93,30 @@
                 android:layout_height="wrap_content"
                 android:password="true"
                 android:singleLine="true"
-                android:layout_marginTop="1dip"
-                android:textSize="20dip"
-                android:textColor="@color/black"/>
+                android:layout_marginTop="1dp"
+                android:textSize="20sp"
+                android:textColor="@color/black" />
           
           <!-- Botón Registro -->
           <Button 
               	android:id="@+id/btnRegistro"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
+                android:layout_marginTop="15dp"
                 android:text="Registrar Nueva Cuenta"
-                android:textSize="25dip" />
+                android:textSize="25sp" />
           
           <!-- Enlace a la pantalla de login -->
           <TextView 
               	android:id="@+id/link_to_login"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dip"
-                android:layout_marginBottom="40dip"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
                 android:text="Ya tienes una cuenta! Entra Aquí"
                 android:gravity="center"
-                android:textSize="25dip"
-                android:textColor="#025f7c"/>
+                android:textSize="25sp"
+                android:textColor="#025f7c" />
  
         </LinearLayout>
         <!-- fin Formulario de login -->
