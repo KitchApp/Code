@@ -10,7 +10,8 @@
         android:background="#ffffff" >
  
         <!--  Encabezado-->
-        <LinearLayout android:id="@+id/header"
+        <LinearLayout 
+                android:id="@+id/header"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
@@ -27,7 +28,8 @@
         </LinearLayout>
         <!--  fin Encabezado -->
         <!-- Pie de página -->
-        <LinearLayout android:id="@+id/footer"
+        <LinearLayout 
+                android:id="@+id/footer"
             	  android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -59,7 +61,7 @@
                 android:layout_marginTop="5dp"
                 android:singleLine="true"
                 android:layout_marginBottom="20dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textColor="@color/black" />
           
           <!--  Etiqueta correo electrónico -->
@@ -68,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#372c24"
                 android:text="Correo electrónico"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
           
           <EditText 
               	android:id="@+id/reg_email"
