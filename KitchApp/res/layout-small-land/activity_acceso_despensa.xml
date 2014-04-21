@@ -177,7 +177,7 @@
 		   	    android:layout_weight="1"
 		   	    android:background="@color/lightGreen"
 		   	    android:drawableTop="@drawable/congelados"
-		   	    android:textSize="15dp"
+		   	    android:textSize="15sp"
 			    android:text="@string/congelados"			   	    
 		            android:layout_marginRight="30dp" />
 			    
@@ -214,27 +214,6 @@
 			    android:text="@string/drogueria"			   	    
 		            android:layout_marginRight="30dp" />
 		            
-	   	    <Button
-		       	    android:id="@+id/buttonSauces"
-			    android:layout_weight="1"
-			    android:background="@color/lightGreen"
-		            android:drawableTop="@drawable/salsas"
-			    android:textSize="15sp"
-			    android:text="@string/salsas" />
-			    
-		</LinearLayout>		
-			
-		<LinearLayout 
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal" >
-  	   	    <Button
-		   	    android:id="@+id/buttonStore"
-		   	    android:layout_weight="1"
-		   	    android:background="@color/lightGreen"
-		   	    android:drawableTop="@drawable/drogueria"
-		   	    android:textSize="15sp"
-		   	    android:text="@string/drogueria" />
 	   	    <Button
 		       	    android:id="@+id/buttonOthers"
 			    android:layout_width="0dp"
