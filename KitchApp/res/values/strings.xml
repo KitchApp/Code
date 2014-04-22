@@ -44,6 +44,6 @@
     <string name="addProduct">Añadir artículo</string>
     <string name="create">Crear</string>
     <string name="remove">Eliminar</string>
-	<string name="product1">Articulo1</string>
-	<string name="CantProducts">Articulos</string>
+    <string name="product1">Articulo1</string>
+    <string name="CantProducts">Articulos</string>
 </resources>
