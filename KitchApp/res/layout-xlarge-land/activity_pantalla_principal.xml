@@ -1,197 +1,130 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-  	android:layout_width="fill_parent"
-  	android:layout_height="fill_parent"
- 	android:fillViewport="true">
-	<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+    <RelativeLayout
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content" 
-    	android:background="@drawable/fondo_nuevo">
+    	android:background="@drawable/fondo_nuevo" >
 
-	    <LinearLayout 
+        <LinearLayout 
 	        android:layout_width="fill_parent"
 	        android:layout_height="fill_parent"
-<<<<<<< HEAD
 	        android:paddingTop="190dp"	        
-=======
 	        android:paddingTop="80dp"
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 	        android:orientation="vertical" >       	
 			
-       			<LinearLayout 
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-<<<<<<< HEAD
-		            android:background="@color/lightGreen"		            
-		            android:orientation="horizontal"
-		            android:padding="20dp" 
-		            android:layout_marginBottom="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginRight="20dp" >
-=======
-		            android:background="@color/lightGreen"
-		            
-		            android:orientation="horizontal" >
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
-				    <!-- Distribución de 50% y 50% respectivamente 
-				    	para los elementos agregados al layout. 
-				    	El 100% del espacio disponible para estos elementos (botones),
-				    	corresponde al layout_width del LinearLayout con un 
-				    	valor de fill_parent.
-				    	El valor para el layout_width de los botones lo hemos definido 
-				    	con 0dp. Eso nos ayuda a decirle a nuestro diseño que resalte 
-				    	la propiedad del peso y pueda distribuir equitativamente los 
-				    	componentes sin importar lo extenso del contenido que tenga cada
-				    	“celda”, tal y como si se trataran de porcentajes. 
-				    -->
-<<<<<<< HEAD
+       		<LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+	                android:background="@color/lightGreen"		            
+		        android:orientation="horizontal"
+		        android:padding="20dp" 
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp" >
 
-		    		<Button
-		    		    android:id="@+id/button1"		    		    
-		    		    android:layout_width="0dp"
-		    		    android:layout_height="wrap_content"
-		    		    android:layout_weight="1"
-		    		    android:background="@color/darkGray"
-		    		    android:drawableRight="@drawable/lista_compra"
-		    		    android:onClick="accederDespensa"
-		    		    android:text="@string/lista_compra"
-		    		    android:textColor="@color/white"
-		    		    android:textSize="45dp" />
+		    <!-- Distribución de 50% y 50% respectivamente 
+		    	para los elementos agregados al layout. 
+		    	El 100% del espacio disponible para estos elementos (botones),
+		    	corresponde al layout_width del LinearLayout con un 
+		    	valor de fill_parent.
+		   	El valor para el layout_width de los botones lo hemos definido 
+		    	con 0dp. Eso nos ayuda a decirle a nuestro diseño que resalte 
+		   	la propiedad del peso y pueda distribuir equitativamente los 
+		    	componentes sin importar lo extenso del contenido que tenga cada
+		    	“celda”, tal y como si se trataran de porcentajes. 
+		    -->
 
-=======
-		    		<Button
-		    		    android:id="@+id/button1"
-				        android:layout_weight="1"	
-				        android:textColor="@color/white"      
-				        android:background="@color/darkGray"      
-				        android:drawableRight="@drawable/lista_compra"		        		       
-				        android:text="@string/lista_compra" 
-				        android:textSize="20dp"
-				        android:onClick="accederDespensa" 
-				        
-				    />
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
-				</LinearLayout>
+	    		<Button
+	    		        android:id="@+id/button1"		    		    
+		    		android:layout_width="0dp"
+		    		android:layout_height="wrap_content"
+		    		android:layout_weight="1"
+		    		android:background="@color/darkGray"
+		    		android:drawableRight="@drawable/lista_compra"
+		    		android:onClick="accederDespensa"
+		    		android:text="@string/lista_compra"
+		    		android:textColor="@color/white"
+		    		android:textSize="45sp" />
+			        
+		</LinearLayout>
 		
-        
-        		<LinearLayout 
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:background="@color/lightGreen"
-<<<<<<< HEAD
-		            android:orientation="horizontal"
-		            android:padding="20dp" 
-		            android:layout_marginBottom="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginRight="20dp" >
+        	<LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/lightGreen"
+	                android:orientation="horizontal"
+		        android:padding="20dp" 
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp" >
 				    
-				    <Button
-				        android:id="@+id/button2"
-				        android:layout_width="0dp"
-		    		    android:layout_height="wrap_content"
-=======
-		            android:orientation="horizontal" >
-				    
-				    <Button
-				        android:id="@+id/button2"
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
-				        android:layout_weight="1"      
-				        android:textColor="@color/white" 
-				        android:background="@color/darkGray"     		        
-				        android:drawableRight="@drawable/despensa"		        		             
-				        android:text="@string/despensa" 
-<<<<<<< HEAD
-				        android:textSize="45dp"
-=======
-				        android:textSize="20dp"
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
-				        android:onClick="accederDespensa" />
+		        <Button
+			        android:id="@+id/button2"
+			        android:layout_width="0dp"
+		    		android:layout_height="wrap_content"
+			        android:layout_weight="1"      
+			        android:textColor="@color/white" 
+			        android:background="@color/darkGray"     		        
+			        android:drawableRight="@drawable/despensa"		        		             
+			        android:text="@string/despensa" 
+			        android:textSize="45sp"
+			        android:onClick="accederDespensa" />
 				
-				</LinearLayout>
+		</LinearLayout>
 				
-		        <LinearLayout 
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:background="@color/lightGreen"
-<<<<<<< HEAD
-		            android:orientation="horizontal"
-		            android:padding="20dp" 
-		            android:layout_marginBottom="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginRight="20dp" >
+		<LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/lightGreen"
+	                android:orientation="horizontal"
+		        android:padding="20dp" 
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp" >
 				    
-				    <Button
-				        android:id="@+id/button3"
-				        android:layout_width="0dp"
-		    		    android:layout_height="wrap_content"
-=======
-		            android:orientation="horizontal" >
-				    
-				    <Button
-				        android:id="@+id/button3"
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
-				        android:layout_weight="1"                        		  
-				        android:textColor="@color/white"    	
-				        android:background="@color/darkGray"  	        
-				        android:drawableRight="@drawable/recetario"		        		             
-				        android:text="@string/recetario" 
-<<<<<<< HEAD
-				        android:textSize="45dp"
-=======
-				        android:textSize="20dp"
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
-				        android:onClick="accederDespensa" />
+			<Button
+			        android:id="@+id/button3"
+			        android:layout_width="0dp"
+		    	        android:layout_height="wrap_content"
+			        android:layout_weight="1"                        		  
+			        android:textColor="@color/white"    	
+			        android:background="@color/darkGray"  	        
+			        android:drawableRight="@drawable/recetario"		        		             
+			        android:text="@string/recetario" 
+			        android:textSize="45sp"
+			        android:onClick="accederDespensa" />
+
+		</LinearLayout>
 				
-				</LinearLayout>
-				
-		        <LinearLayout 
-		            android:layout_width="fill_parent"
-		            android:layout_height="wrap_content"
-		            android:background="@color/lightGreen"
-<<<<<<< HEAD
-		            android:orientation="horizontal"
-		            android:padding="20dp" 
-		            android:layout_marginBottom="20dp"
-		            android:layout_marginLeft="20dp"
-		            android:layout_marginRight="20dp" >
+	        <LinearLayout 
+	                android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:background="@color/lightGreen"
+		        android:orientation="horizontal"
+		        android:padding="20dp" 
+		        android:layout_marginBottom="20dp"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginRight="20dp" >
 				    
-				    <Button
-				        android:id="@+id/button4"
-				        android:layout_width="0dp"
-		    		    android:layout_height="wrap_content"
-=======
-		            android:orientation="horizontal" >
-				    
-				    <Button
-				        android:id="@+id/button4"
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
-				        android:layout_weight="1"                        		    
-				        android:textColor="@color/white"   
-				        android:background="@color/darkGray"   		        
-				        android:drawableRight="@drawable/estadisticas"		        		             
-				        android:text="@string/estadisticas" 
-<<<<<<< HEAD
-				        android:textSize="45dp"
-				        android:onClick="accederDespensa" />
+			<Button
+			        android:id="@+id/button4"
+			        android:layout_width="0dp"
+		    	        android:layout_height="wrap_content"
+			        android:layout_weight="1"                        		    
+			        android:textColor="@color/white"   
+			        android:background="@color/darkGray"   		        
+			        android:drawableRight="@drawable/estadisticas"		        		             
+			        android:text="@string/estadisticas" 
+			        android:textSize="45sp"
+			        android:onClick="accederDespensa" />
 				
-				</LinearLayout>
+		</LinearLayout>
 		                		     		       
-   			</LinearLayout>
+	</LinearLayout>
 
-		</RelativeLayout>
+    </RelativeLayout>
+
 </ScrollView>
-=======
-				        android:textSize="20dp"
-				        android:onClick="accederDespensa" />
-				
-				</LinearLayout>
-		        
-        
-		        
-		        
-   			</LinearLayout>
-
-		</RelativeLayout>
-</ScrollView>
-
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
