@@ -50,21 +50,15 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		
 		Button button_fish = (Button) findViewById(R.id.buttonFish);
 		button_fish.setOnClickListener(this);
-<<<<<<< HEAD
 		
 		Button button_condiment = (Button) findViewById(R.id.buttonCondiment);
 		button_condiment.setOnClickListener(this);
-		
-=======
-		Button button_condiment = (Button) findViewById(R.id.buttonCondiment);
-		button_condiment.setOnClickListener(this);
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
+
 		Button button_pasta = (Button) findViewById(R.id.buttonPasta);
 		button_pasta.setOnClickListener(this);
 		
 		Button button_frozen = (Button) findViewById(R.id.buttonFrozen);
 		button_frozen.setOnClickListener(this);
-<<<<<<< HEAD
 		
 		Button button_sauces = (Button) findViewById(R.id.buttonSauces);
 		button_sauces.setOnClickListener(this);
@@ -72,12 +66,6 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		Button button_store = (Button) findViewById(R.id.buttonStore);
 		button_store.setOnClickListener(this);
 		
-=======
-		Button button_sauces = (Button) findViewById(R.id.buttonSauces);
-		button_sauces.setOnClickListener(this);
-		Button button_store = (Button) findViewById(R.id.buttonStore);
-		button_store.setOnClickListener(this);
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 		Button button_others = (Button) findViewById(R.id.buttonOthers);
 		button_others.setOnClickListener(this);
 
