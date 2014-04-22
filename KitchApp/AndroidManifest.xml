@@ -26,24 +26,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.Registro"
             android:label=" " >
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.PantallaPrincipal"
-<<<<<<< HEAD
             android:label=" " >
-=======
-            android:label=" " 
-            android:theme="@style/boton_style">
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
             <intent-filter>
                 <action android:name="com.example.kitchapp.PantallaPrincipal" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.PantallaTransicion"
             android:label=" " >
@@ -53,20 +51,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.AccesoDespensa"
-<<<<<<< HEAD
             android:label=" " >
-=======
-            android:label=" " 
-            android:theme="@style/boton_style" >
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
             <intent-filter>
                 <action android:name="com.example.kitchapp.AccesoDespensa" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.ItemAdapter"
             android:label=" " >
@@ -85,6 +80,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.ItemProductoAdapter"
             android:label=" " >
@@ -94,6 +90,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.AddManualmente"
             android:label=" " >
@@ -103,6 +100,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
     </application>
 
 </manifest>
