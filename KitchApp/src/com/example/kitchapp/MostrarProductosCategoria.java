@@ -45,9 +45,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private Integer tipoCat;
     private static final int REQUEST_CODE = 1234;
     Handler_Sqlite helper;
-	Dialog match_text_dialog;
-	ListView textlist;
-	ArrayList<String> matches_text;
+    Dialog match_text_dialog;
+    ListView textlist;
+    ArrayList<String> matches_text;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +56,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 		
-<<<<<<< HEAD
-		
-
-=======
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -122,10 +117,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			}
 		}
 			
-<<<<<<< HEAD
-=======
-
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 	//helper.close();
 				
 		Bundle extra = this.getIntent().getExtras();
@@ -166,10 +157,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					}
 					
 				}
-<<<<<<< HEAD
-						
-=======
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
+
 			}
 
 		}
@@ -563,7 +551,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	 	String oneCantF = "una";
 	 	int cant = 0;
 	 	boolean error = false;
-			//Intent intent = new Intent(this,MostrarProductosCategoria.class);
+		//Intent intent = new Intent(this,MostrarProductosCategoria.class);
    	 	for (int i = 0;i < prod.length;i++) {
    	 			if (cant == 0) {
    	 				if ((prod[i].equals(oneCantM)) || (prod[i].equals(oneCantF))) {
@@ -610,9 +598,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 					}
    	 					i++;
    	 				}
-<<<<<<< HEAD
 
-=======
    	 				if (!encontrado) {
    	 					products.add(item);
    	 					SQLiteDatabase tmp = helper.open();	
@@ -620,7 +606,6 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    	 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
    	 						helper.close();
    	 					}
->>>>>>> 493accc9c72ba6d919f3ba8fe1050c974ea71d21
 			
    	 				}
    	 				else {
@@ -646,7 +631,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	public void errorCantVoice() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    builder.setTitle("Error")
+	    	builder.setTitle("Error")
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
@@ -662,5 +647,4 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    builder.create();
 	    builder.show();
 	}
-
 }
