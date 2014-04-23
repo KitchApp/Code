@@ -24,7 +24,13 @@
         	    android:layout_marginTop="10dp"
 		    android:textSize="20sp"			   	
 		    android:ems="30"			   	
+<<<<<<< HEAD
 	            android:hint="@string/addProduct" />
+=======
+	            android:hint="@string/addProduct" >
+	            <requestFocus />
+	    	    </EditText>
+>>>>>>> Rama-Mayra_Android
 	                       
         </LinearLayout>
         
@@ -38,19 +44,31 @@
 	            android:id="@+id/btn3"
 		    style="@style/boton_style"
 		    android:layout_weight="1"            
+<<<<<<< HEAD
 	            android:background="@drawable/mini_tic" />
+=======
+	            android:background="@drawable/mini_tic2" />
+>>>>>>> Rama-Mayra_Android
 	        
 	    <Button 
 	            android:id="@+id/btn1"
 		    style="@style/boton_style"
 		    android:layout_weight="1"
+<<<<<<< HEAD
 	            android:background="@drawable/voz" />
+=======
+	            android:background="@drawable/microfono2" />
+>>>>>>> Rama-Mayra_Android
 	        
 	    <Button 
 	            android:id="@+id/btn2"
 		    style="@style/boton_style"
 		    android:layout_weight="1"
+<<<<<<< HEAD
 	            android:background="@drawable/barras2" />                        
+=======
+	            android:background="@drawable/barras3" />                        
+>>>>>>> Rama-Mayra_Android
 	        
 	    <Button 
 	            android:id="@+id/btn4"
@@ -66,7 +84,11 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
+<<<<<<< HEAD
         android:background="@drawable/hoja8">
+=======
+        android:background="@drawable/fondo_lista_compra8">
+>>>>>>> Rama-Mayra_Android
 		        
         <CheckBox
             
@@ -75,8 +97,13 @@
             android:onClick="onCheckboxClicked"
             android:text="@string/product1"
             android:textSize="22sp" 
+<<<<<<< HEAD
             android:layout_marginTop="47dp"
             android:layout_marginLeft="35dp"/>
+=======
+            android:layout_marginTop="56dp"
+            android:layout_marginLeft="55dp"/>
+>>>>>>> Rama-Mayra_Android
         
     </LinearLayout>    
 </LinearLayout>

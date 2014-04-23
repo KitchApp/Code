@@ -34,8 +34,13 @@
         
         <activity
             android:name="com.example.kitchapp.PantallaPrincipal"
+<<<<<<< HEAD
             android:label=" " >
 
+=======
+            android:label=" " 
+            >
+>>>>>>> Rama-Mayra_Android
             <intent-filter>
                 <action android:name="com.example.kitchapp.PantallaPrincipal" />
 
@@ -57,7 +62,12 @@
         
         <activity
             android:name="com.example.kitchapp.AccesoDespensa"
+<<<<<<< HEAD
             android:label=" " >
+=======
+            android:label=" " 
+           >
+>>>>>>> Rama-Mayra_Android
             <intent-filter>
                 <action android:name="com.example.kitchapp.AccesoDespensa" />
 

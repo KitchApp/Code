@@ -56,6 +56,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 		
+<<<<<<< HEAD
+=======
+		
+
+>>>>>>> Rama-Mayra_Android
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -107,7 +112,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 11:
+<<<<<<< HEAD
 					title.setText("Drogueria");
+=======
+					title.setText("Droguer�a");
+>>>>>>> Rama-Mayra_Android
 					break;
 			
 				case 12:
@@ -117,6 +126,11 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			}
 		}
 			
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Rama-Mayra_Android
 	//helper.close();
 				
 		Bundle extra = this.getIntent().getExtras();

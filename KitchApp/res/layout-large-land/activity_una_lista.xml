@@ -15,6 +15,7 @@
             android:orientation="horizontal" >
                     
 	        <EditText 
+<<<<<<< HEAD
 	                android:id="@+id/et1"
 		        android:layout_width="0dp"
 		        android:layout_height="wrap_content"
@@ -24,6 +25,19 @@
 			android:textSize="40sp"			   	
 			android:ems="30"			   	
 	                android:hint="@string/addProduct" />
+=======
+	            android:id="@+id/et1"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:textColorHint="@color/black"			   	
+        		android:layout_marginTop="10dp"
+				android:textSize="40sp"			   	
+				android:ems="30"			   	
+	            android:hint="@string/addProduct" >
+	            <requestFocus />
+    	    </EditText>
+>>>>>>> Rama-Mayra_Android
 	                       
         </LinearLayout>
         
@@ -37,19 +51,31 @@
 	            android:id="@+id/btn3"
 		    style="@style/boton_style"
 		    android:layout_weight="1"            
+<<<<<<< HEAD
 	            android:background="@drawable/mini_tic" />
+=======
+	            android:background="@drawable/mini_tic2" />
+>>>>>>> Rama-Mayra_Android
 	        
 	        <Button 
 	            android:id="@+id/btn1"
 		    style="@style/boton_style"
 		    android:layout_weight="1"
+<<<<<<< HEAD
 	            android:background="@drawable/voz" />
+=======
+	            android:background="@drawable/microfono2" />
+>>>>>>> Rama-Mayra_Android
 	        
 	        <Button 
 	            android:id="@+id/btn2"
 		    style="@style/boton_style"
 		    android:layout_weight="1"
+<<<<<<< HEAD
 	            android:background="@drawable/barras2" />                        
+=======
+	            android:background="@drawable/barras3" />                        
+>>>>>>> Rama-Mayra_Android
 	        
 	        <Button 
 	            android:id="@+id/btn4"
@@ -65,7 +91,11 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
+<<<<<<< HEAD
         android:background="@drawable/hoja8" >
+=======
+        android:background="@drawable/fondo_lista_compra8" >
+>>>>>>> Rama-Mayra_Android
 		        
         <CheckBox            
             android:layout_width="wrap_content"
@@ -73,8 +103,13 @@
             android:onClick="onCheckboxClicked"
             android:text="@string/product1"
             android:textSize="25sp" 
+<<<<<<< HEAD
             android:layout_marginTop="47dp"
             android:layout_marginLeft="99dp" />
+=======
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="150dp" />
+>>>>>>> Rama-Mayra_Android
         
     </LinearLayout>    
 </LinearLayout>

@@ -22,8 +22,13 @@
                     	android:src="@drawable/cabecera_kitchapp"
                     	android:layout_width="fill_parent"
                     	android:layout_height="wrap_content"
+<<<<<<< HEAD
                       android:layout_marginLeft="10dp"
                       android:layout_marginRight="10dp" />
+=======
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+>>>>>>> Rama-Mayra_Android
                 <!-- fin Logo de encabezado -->
         </LinearLayout>
         <!--  fin Encabezado -->
