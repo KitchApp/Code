@@ -1,7 +1,9 @@
 package com.example.kitchapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -37,8 +39,7 @@ public class PantallaTransicion extends Activity {
 		return true;
 	}
 	
-	
-	
+		
 	
 	private void tareaLarga()
     {
@@ -83,6 +84,7 @@ public class PantallaTransicion extends Activity {
                     //pDialog.show();
             	barra.setMax(100);
             	barra.setProgress(0);
+            	
             }
             
             @Override
@@ -92,6 +94,7 @@ public class PantallaTransicion extends Activity {
                             //pDialog.dismiss();
                             //Toast.makeText(PantallaTransicion.this, "Tarea finalizada!", Toast.LENGTH_SHORT).show();
                             //setContentView(R.layout.activity_pantalla_principal);
+                    	
                     	Intent i = new Intent(PantallaTransicion.this, PantallaPrincipal.class);
                 		startActivity(i);
                     	

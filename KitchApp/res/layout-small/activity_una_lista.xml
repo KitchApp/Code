@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+                    
+	    	<EditText 
+	            android:id="@+id/et1"
+	            android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:textColorHint="@color/black"			   	
+        	    android:layout_marginTop="10dp"
+			    android:textSize="20sp"			   	
+			    android:ems="30"			   	
+	            android:hint="@string/addProduct" >
+	            <requestFocus />
+    	    </EditText>
+	                       
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >        
+        
+	    <Button 
+        	    android:id="@+id/btn3"
+		    style="@style/boton_style"
+	    	    android:layout_weight="1"            
+            	    android:background="@drawable/mini_tic2" />
+        
+            <Button 
+	            android:id="@+id/btn1"
+		    style="@style/boton_style"
+		    android:layout_weight="1"
+	            android:background="@drawable/microfono2" />
+        
+            <Button 
+	            android:id="@+id/btn2"
+		    style="@style/boton_style"
+		    android:layout_weight="1"
+	            android:background="@drawable/barras3" />                        
+        
+            <Button 
+	            android:id="@+id/btn4"
+		    style="@style/boton_style"
+		    android:layout_weight="1"            
+	            android:background="@drawable/delete2" />
+        
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/fondo_lista_compra8" >
+		        
+        <CheckBox            
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:onClick="onCheckboxClicked"
+            	android:text="@string/product1"
+            	android:textSize="22sp" 
+            	android:layout_marginTop="65dp"
+            	android:layout_marginLeft="55dp" />
+        
+    </LinearLayout>    
+</LinearLayout>

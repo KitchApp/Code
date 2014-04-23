@@ -16,6 +16,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppBaseTheme" >
+
         <activity
             android:name="com.example.kitchapp.Login"
             android:label=" " >
@@ -32,7 +33,7 @@
         <activity
             android:name="com.example.kitchapp.PantallaPrincipal"
             android:label=" " 
-            android:theme="@style/boton_style">
+            >
             <intent-filter>
                 <action android:name="com.example.kitchapp.PantallaPrincipal" />
 
@@ -51,7 +52,7 @@
         <activity
             android:name="com.example.kitchapp.AccesoDespensa"
             android:label=" " 
-            android:theme="@style/boton_style" >
+           >
             <intent-filter>
                 <action android:name="com.example.kitchapp.AccesoDespensa" />
 
