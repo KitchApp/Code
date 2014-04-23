@@ -19,11 +19,7 @@
                 android:paddingBottom="5dp" >
                 <!-- Logo de encabezado-->
                 <ImageView 
-<<<<<<< HEAD
-                        	android:src="@drawable/cabecera_kitchapp"
-=======
                           android:src="@drawable/cabecera_kitchapp"
->>>>>>> Rama-Mayra_Android
                           android:layout_width="fill_parent"
                           android:layout_height="wrap_content"
                           android:layout_marginLeft="10dp"

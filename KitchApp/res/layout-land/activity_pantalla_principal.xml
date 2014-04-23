@@ -12,10 +12,6 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
 	    android:paddingTop="120dp"
-<<<<<<< HEAD
-	    android:paddingTop="80dp"
-=======
->>>>>>> Rama-Mayra_Android
 	    android:orientation="vertical" >       	
 			
        	    <LinearLayout 
@@ -26,11 +22,7 @@
 		    android:padding="10dp" 
 		    android:layout_marginBottom="10dp"
 		    android:layout_marginLeft="10dp"
-<<<<<<< HEAD
-		    android:layout_marginRight="10dp"  
-=======
 		    android:layout_marginRight="10dp"  >
->>>>>>> Rama-Mayra_Android
 
 		    <!-- Distribución de 50% y 50% respectivamente 
 		    	para los elementos agregados al layout. 

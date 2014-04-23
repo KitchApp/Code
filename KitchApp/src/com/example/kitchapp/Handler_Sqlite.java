@@ -100,10 +100,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
 			//c.getString(idCat);
-<<<<<<< HEAD
-=======
 
->>>>>>> Rama-Mayra_Android
 			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
 		}
 		return result;

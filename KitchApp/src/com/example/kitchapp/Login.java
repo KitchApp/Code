@@ -62,39 +62,16 @@ public class Login extends Activity {
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
 		
-<<<<<<< HEAD
-}
-=======
 	}
->>>>>>> Rama-Mayra_Android
 
 		
 
 	public void intento_logueo(View view) {
 		String name = userName.getText().toString(); 
 		String key = password.getText().toString();
-<<<<<<< HEAD
-		SQLiteDatabase tmp = helper.open();
-		if (tmp != null) {
-			if (helper.readUser(name) && key.equals(helper.readPassword(name))) {
-				Intent i = new Intent(this, PantallaTransicion.class);
-
-				startActivity(i);
-			}
-			else if (!helper.readUser(name)) {
-				errorLogging();
-			}
-			else {
-				errorPassword();
-			}
-			helper.close();
-		}				
-
-=======
 		
 		
 		new HttpAsyncTask().execute();
->>>>>>> Rama-Mayra_Android
 	}
 	
 	public void registrarse(View view) {
@@ -206,25 +183,11 @@ public class Login extends Activity {
 
 
 	
-<<<<<<< HEAD
-	public void errorPassword() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		 
-	    builder.setTitle("Error")
-	            .setIcon(
-	                    getResources().getDrawable(
-	                            R.drawable.close))
-
-	            .setMessage("Contrase�a incorrecta. Intentelo de nuevo")
-
-	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-=======
 	public static String httpGetData(String mURL) {
         //String response="";
 		 InputStream inputStream = null;
 	        String result = "";
 	        try {
->>>>>>> Rama-Mayra_Android
 	 
 	            // create HttpClient
 	            HttpClient httpclient = new DefaultHttpClient();
@@ -264,10 +227,6 @@ public class Login extends Activity {
 	
 	 }
 	
-<<<<<<< HEAD
-
-}
-=======
 	/*public void errorPassword() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
@@ -293,4 +252,3 @@ public class Login extends Activity {
 	
 
 
->>>>>>> Rama-Mayra_Android

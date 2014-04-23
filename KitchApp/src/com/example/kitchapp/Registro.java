@@ -28,10 +28,7 @@ import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-<<<<<<< HEAD
-=======
 import android.os.AsyncTask;
->>>>>>> Rama-Mayra_Android
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
@@ -47,11 +44,6 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
-<<<<<<< HEAD
-
-	Handler_Sqlite helper = new Handler_Sqlite(this);
-
-=======
 	private String encryptedPassword="";
 
 	Handler_Sqlite helper = new Handler_Sqlite(this);
@@ -60,7 +52,6 @@ public class Registro extends Activity implements OnClickListener {
 	public String session_name;
     public String session_id;
     public Boolean registrado=false;
->>>>>>> Rama-Mayra_Android
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -119,10 +110,6 @@ public class Registro extends Activity implements OnClickListener {
 			case R.id.btnRegistro:
 				String mail = email.getText().toString();
 				String [] mailarroba = mail.split("@");
-<<<<<<< HEAD
-
-=======
->>>>>>> Rama-Mayra_Android
 				if ((mailarroba.length < 2) || (mail.equals(mailarroba[0])) || (mailarroba.length > 2)) {
 					errorMail();
 				}
@@ -132,24 +119,6 @@ public class Registro extends Activity implements OnClickListener {
 						errorMail();
 					}
 					else {
-<<<<<<< HEAD
-						String nameUser = userName.getText().toString();
-						String userPassword = password.getText().toString();
-						String userMail = email.getText().toString();
-						SQLiteDatabase tmp = helper.open();
-						if (tmp != null) {
-							if (!helper.readUser(nameUser)) {
-								helper.insertUser(nameUser, userPassword, userMail);
-								Intent intent = new Intent(this,PantallaTransicion.class);
-								startActivity(intent);
-								finish();
-							}
-							else {
-								errorRegister();
-							}
-							helper.close();
-						}
-=======
 						showMessageEmailValidation();
 						/*new HttpAsyncTask().execute();
 						
@@ -157,7 +126,6 @@ public class Registro extends Activity implements OnClickListener {
 			        	startActivity(intent);
 						finish();*/
 			            
->>>>>>> Rama-Mayra_Android
 					}
 				}
 				break;
@@ -213,36 +181,8 @@ public class Registro extends Activity implements OnClickListener {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
 	    builder.setTitle("Error")
-<<<<<<< HEAD
-	            .setIcon(
-	                    getResources().getDrawable(
-	                            R.drawable.close))
-
-	            .setMessage("La direccion de correo tiene que ser tipo example@dominio.com/es")
-	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-	 
-	                @Override
-	                public void onClick(DialogInterface arg0, int arg1) {
-	                	arg0.cancel();
-	                }
-	            });
-	 
-	    builder.create();
-	    builder.show();
-	}
-	
-	public void errorRegister() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		 
-	    builder.setTitle("Error")
-	            .setIcon(
-	                    getResources().getDrawable(
-	                            R.drawable.close))
-	            .setMessage("Ya existe ese nombre de usuario. Por favor registrese de nuevo")
-=======
 	            .setIcon(getResources().getDrawable(R.drawable.close))
 	            .setMessage("La direccion de correo tiene que ser tipo example@dominio.com/es")
->>>>>>> Rama-Mayra_Android
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	            	@Override
 	            	public void onClick(DialogInterface arg0, int arg1) {

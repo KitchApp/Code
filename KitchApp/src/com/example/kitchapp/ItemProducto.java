@@ -14,11 +14,11 @@ public class ItemProducto {
      
   //public ItemProducto(long id, String nombre, int cantidad, String tipo) {
   public ItemProducto(int id, String nombre, int cantidad) {
-    	this.id = id;
-    	this.nombre = nombre;
-    	//this.tipo = tipo;
-    	this.cantidad = cantidad;
-    	//this.barCode=barCode;
+    this.id = id;
+    this.nombre = nombre;
+    //this.tipo = tipo;
+    this.cantidad = cantidad;
+    //this.barCode=barCode;
   }
      
   /*public Item(long id, String nombre, String tipo, String rutaImagen) {
@@ -29,11 +29,11 @@ public class ItemProducto {
   }*/
      
   public long getId() {
-    	return id;
+    return id;
   }
      
   public void setId(long id) {
-    	this.id = id;
+    this.id = id;
   }
      
   /*public String getRutaImagen() {
@@ -45,19 +45,19 @@ public class ItemProducto {
   }*/
      
   public String getNombre() {
-    	return nombre;
+    return nombre;
   }
      
   public void setNombre(String nombre) {
-    	this.nombre = nombre;
+    this.nombre = nombre;
   }
   
   public int getCantidad() {
-	return cantidad;
+	  return cantidad;
   }
   
   public void setCantidad(int cantidad) {
-	this.cantidad = cantidad;
+	  this.cantidad = cantidad;
   }
      
  /* public String getTipo() {

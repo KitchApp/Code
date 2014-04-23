@@ -11,25 +11,16 @@
  
         <!--  Encabezado-->
         <LinearLayout 
-<<<<<<< HEAD
-            	  android:id="@+id/header"
-=======
             	android:id="@+id/header"
->>>>>>> Rama-Mayra_Android
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp" >
                 <!-- Logo de encabezado-->
-<<<<<<< HEAD
-                <ImageView  android:src="@drawable/cabecera_kitchapp"
-                            android:layout_width="wrap_content"
-=======
                 <ImageView  
                     		android:src="@drawable/cabecera_kitchapp"
                             android:layout_width="fill_parent"
->>>>>>> Rama-Mayra_Android
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp" />

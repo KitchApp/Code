@@ -10,13 +10,9 @@
          android:layout_height="wrap_content"
          android:layout_marginTop="15dp"
          android:layout_marginBottom="20dp"
-<<<<<<< HEAD
-         android:singleLine="true" />
-=======
          android:singleLine="true" >
          <requestFocus />
 	</EditText>
->>>>>>> Rama-Mayra_Android
 	
     <LinearLayout 
         android:layout_width="fill_parent"
@@ -32,16 +28,10 @@
 	    <TextView
 	            android:id="@+id/cantProduct"
 	            style="@style/boton_style"
-<<<<<<< HEAD
-		    android:layout_weight="1"
-	    	    android:textColor="@color/navy"
-	    	    android:textSize="40sp" >	
-=======
 		    	android:layout_weight="1"
 		    	android:text="15"
 	    	    android:textColor="@color/navy"
 	    	    android:textSize="50sp" >	
->>>>>>> Rama-Mayra_Android
 	    </TextView>
 	    
 	    <Button
@@ -55,12 +45,8 @@
     <LinearLayout 
         android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-<<<<<<< HEAD
-    	android:orientation="horizontal" >
-=======
     	android:orientation="horizontal" 
     	android:layout_marginTop="20dp">
->>>>>>> Rama-Mayra_Android
         
         <Button
 	        android:id="@+id/button_save"

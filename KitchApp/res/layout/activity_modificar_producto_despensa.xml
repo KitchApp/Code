@@ -10,13 +10,9 @@
          android:layout_height="wrap_content"
          android:layout_marginTop="15dp"
          android:layout_marginBottom="20dp"
-<<<<<<< HEAD
-         android:singleLine="true" />
-=======
          android:singleLine="true" >
          <requestFocus />
 	</EditText>
->>>>>>> Rama-Mayra_Android
 	
     <LinearLayout 
          android:layout_width="fill_parent"
@@ -36,11 +32,7 @@
 		   android:text="15"	   
 	    	   android:textColor="@color/navy"
 	    	   android:gravity="center"
-<<<<<<< HEAD
-	    	   android:textSize="40sp">	
-=======
 	    	   android:textSize="30sp">	
->>>>>>> Rama-Mayra_Android
 	 </TextView>	
 	    
 	 <Button
@@ -54,12 +46,8 @@
     <LinearLayout 
          android:layout_width="fill_parent"
     	 android:layout_height="wrap_content"
-<<<<<<< HEAD
-    	 android:orientation="horizontal">
-=======
     	 android:orientation="horizontal"
     	 android:layout_marginTop="10dp">
->>>>>>> Rama-Mayra_Android
         
          <Button
 	        android:id="@+id/button_save"

@@ -47,10 +47,7 @@
 		   	    android:layout_height="wrap_content"
 		   	    android:layout_weight="1"			   	       			   	    
 			    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/lacteos"
 			    android:textSize="30sp"
 			    android:text="@string/lacteos" 			   	    
@@ -61,12 +58,8 @@
 		   	    android:layout_width="0dp"
 		      	    android:layout_height="wrap_content"
 			    android:layout_weight="1"	
-<<<<<<< HEAD
-		   	    android:background="@color/lightGreen"		   	    		   	    			   	    
-=======
 		   	    android:background="@color/lightGreen"		
 		   	    android:textColor="@color/white"   	    		   	    			   	    
->>>>>>> Rama-Mayra_Android
 		   	    android:drawableTop="@drawable/frutas_verduras"
 		   	    android:textSize="30sp"
 		   	    android:text="@string/frutasVerduras" 
@@ -89,10 +82,7 @@
 	 	    	    android:layout_height="wrap_content"
 			    android:layout_weight="1"
 			    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/pan_bolleria"
 			    android:textSize="30sp"
 		   	    android:text="@string/panBolleria" 			   	    	   	    
@@ -103,12 +93,8 @@
 			    android:layout_width="0dp"
 	   	    	    android:layout_height="wrap_content"
 			    android:layout_weight="1"		
-<<<<<<< HEAD
-			    android:background="@color/lightGreen"	       	
-=======
 			    android:background="@color/lightGreen"	  
 			    android:textColor="@color/white"     	
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/bebidas"
 			    android:textSize="30sp"
 			    android:text="@string/bebidas"
@@ -131,10 +117,7 @@
 		   	    android:layout_height="wrap_content"
 			    android:layout_weight="1"
 			    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/carnes"
 			    android:textSize="30sp"
 		   	    android:text="@string/carnes"			   	    
@@ -146,10 +129,7 @@
 		   	    android:layout_height="wrap_content"
 			    android:layout_weight="1"
 			    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/pescados"
 			    android:textSize="30sp"
 			    android:text="@string/pescados" 
@@ -171,10 +151,7 @@
 		   	    android:layout_height="wrap_content"
 			    android:layout_weight="1"
 			    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/condimentos"
 			    android:textSize="30sp"
 			    android:text="@string/condimentos" 			   	    
@@ -186,10 +163,7 @@
 		   	    android:layout_height="wrap_content"
 			    android:layout_weight="1"
 			    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/pastas"
 			    android:textSize="30sp"
 			    android:text="@string/pastasArroces" 
@@ -211,10 +185,7 @@
 		   	    android:layout_height="wrap_content"
 		   	    android:layout_weight="1"
 		   	    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 		   	    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 		   	    android:drawableTop="@drawable/congelados"
 		   	    android:textSize="30sp"
 		   	    android:text="@string/congelados" 			   	    
@@ -226,10 +197,7 @@
 		   	    android:layout_height="wrap_content"
 			    android:layout_weight="1"
 			    android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			    android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			    android:drawableTop="@drawable/salsas"
 			    android:textSize="30sp"
 			    android:text="@string/salsas"
@@ -251,10 +219,7 @@
 		   	    	android:layout_height="wrap_content"
 			   	android:layout_weight="1"
 			   	android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			   	android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 			   	android:drawableTop="@drawable/drogueria"
 			   	android:textSize="30sp"
 			   	android:text="@string/drogueria" 		   	    
@@ -266,10 +231,7 @@
 		   	    	android:layout_height="wrap_content"
 			       	android:layout_weight="1"
 			       	android:background="@color/lightGreen"
-<<<<<<< HEAD
-=======
 			       	android:textColor="@color/white"
->>>>>>> Rama-Mayra_Android
 				android:drawableTop="@drawable/varios"
 			       	android:textSize="30sp"
 			       	android:text="@string/varios"

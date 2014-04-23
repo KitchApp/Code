@@ -28,11 +28,7 @@
 	        android:layout_height="wrap_content"
 	        android:layout_gravity="center_horizontal"      
 	        android:layout_marginTop="30dp"
-<<<<<<< HEAD
-	   	android:ems="10"
-=======
 	   		android:ems="10"
->>>>>>> Rama-Mayra_Android
 	        android:textSize="45sp"	        
 	        android:hint="@string/nameOfList"
 	        android:textColorHint="@color/black"

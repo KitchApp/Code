@@ -29,12 +29,13 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+
 public class MostrarProductosCategoria extends Activity implements OnClickListener {
 	
     private ListView list;
     private ArrayList<ItemProducto> products;
     private int pos;
-    private EditText cantProduct;
+    private TextView cantProduct;
     private EditText nameProduct;
     private Button save;
     private Button cancel;
@@ -45,9 +46,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
     private Integer tipoCat;
     private static final int REQUEST_CODE = 1234;
     Handler_Sqlite helper;
-    Dialog match_text_dialog;
-    ListView textlist;
-    ArrayList<String> matches_text;
+	Dialog match_text_dialog;
+	ListView textlist;
+	ArrayList<String> matches_text;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,11 +57,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 		
-<<<<<<< HEAD
-=======
 		
 
->>>>>>> Rama-Mayra_Android
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -112,11 +110,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 11:
-<<<<<<< HEAD
-					title.setText("Drogueria");
-=======
 					title.setText("Droguer�a");
->>>>>>> Rama-Mayra_Android
 					break;
 			
 				case 12:
@@ -126,13 +120,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 			}
 		}
 			
-<<<<<<< HEAD
-=======
 
 
->>>>>>> Rama-Mayra_Android
 	//helper.close();
-				
+		
+		
+		
 		Bundle extra = this.getIntent().getExtras();
 		
 		if (extra!=null && extra.getInt("key") != 0) {
@@ -171,7 +164,8 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					}
 					
 				}
-
+				
+		
 			}
 
 		}
@@ -222,7 +216,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
         view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
         nameProduct = (EditText) view.findViewById(R.id.nameProductModify);
         nameProduct.setText(products.get(position).getNombre());
-        cantProduct = (EditText) view.findViewById(R.id.cantProduct);
+        cantProduct = (TextView) view.findViewById(R.id.cantProduct);
         cantProduct.setText(products.get(position).getCantidad() + "");
     	pos = position;
     	save = (Button) view.findViewById(R.id.button_save);
@@ -502,7 +496,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
    				else{
    					ArrayList<Object> tmp=helper.readProductsTemporary(result);
    					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1));
-   					//Para que se refresque la informacion en la pantalla
+   					//Para que se refresque la informaci�n en la pantalla
    					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1);
    					products.add(item);
    					list = (ListView)findViewById(R.id.listViewProducts);
@@ -559,93 +553,71 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	
 	public void addProduct(int position) {
-		String[] prod = matches_text.get(position).split(" ");
-	 	String name = "";
-	 	String oneCantM = "un";
-	 	String oneCantF = "una";
-	 	int cant = 0;
-	 	boolean error = false;
-		//Intent intent = new Intent(this,MostrarProductosCategoria.class);
-   	 	for (int i = 0;i < prod.length;i++) {
-   	 			if (cant == 0) {
-   	 				if ((prod[i].equals(oneCantM)) || (prod[i].equals(oneCantF))) {
-						cant = 1;
-   	 				}
-   	 				else {
-   	 					try {
-   	 						cant = Integer.parseInt(prod[i]);
-   	 					}
-   	 					catch (NumberFormatException e) {
-   	 						if (i == prod.length-1) {
-   	 							errorCantVoice();
-   	 							error = true;
-   	 						}
-   	 						else {
-   	 							name += prod[i];
-   	 							name += " ";
-   	 						}
-   	 					}
-   	 				}
-   	 			}
-   	 			else {
-   	 				name += prod[i];
-					name += " ";
-   	 			}
-   	 			
+		try {
+			//Intent intent = new Intent(this,MostrarProductosCategoria.class);
+   	 		String[] prod = matches_text.get(position).split("");
+   	 		int cant = Integer.parseInt(prod[prod.length - 1]);
+   	 		if (cant <= 0) {
+   	 			errorCantVoice();
    	 		}
-   	 		if (!error) {
-   	 			if (cant <= 0) {
-   	 				errorCantVoice();
+   	 		else {
+   	 			String name = "";
+   	 			for (int i = 0;i < prod.length - 1;i++) {
+   	 				name += prod[i];
+   	 				name += "";
    	 			}
-   	 			else {
-   	 				initializeArrayList(tipoCat);
-   	 				ItemProducto item = new ItemProducto(products.size(),name,cant);
-   	 				boolean encontrado = false;
-   	 				int i = 0;
-   	 				int cantProductModify = 0;
-   	 				while (i<products.size() && !encontrado){
-   	 					ItemProducto product = products.get(i);
-   	 					String nameP = product.getNombre().toLowerCase();
-   	 					if (nameP.equals(item.getNombre().toLowerCase())) {
-   	 						encontrado = true;
-   	 						cantProductModify = product.getCantidad() + item.getCantidad();
-   	 					}
-   	 					i++;
+   	 			initializeArrayList(tipoCat);
+   	 			ItemProducto item = new ItemProducto(products.size(),name,cant);
+   	 			boolean encontrado = false;
+   	 			int i = 0;
+   	 			int cantProductModify = 0;
+   	 			while (i<products.size() && !encontrado){
+   	 				ItemProducto product = products.get(i);
+   	 				String nameP = product.getNombre().toLowerCase();
+   	 				if (nameP.equals(item.getNombre().toLowerCase())) {
+   	 					encontrado = true;
+   	 					cantProductModify = product.getCantidad() + item.getCantidad();
+   	 				}
+   	 				i++;
+   	 			}
+   	 			if (!encontrado) {
+   	 				products.add(item);
+   	 				SQLiteDatabase tmp = helper.open();	
+   	 				if (tmp!=null){
+   	 					helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
+   	 					helper.close();
    	 				}
 
-   	 				if (!encontrado) {
-   	 					products.add(item);
-   	 					SQLiteDatabase tmp = helper.open();	
-   	 					if (tmp!=null){
-   	 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
-   	 						helper.close();
-   	 					}
 			
+   	 			}
+   	 			else {
+   	 				modifyProduct();
+   	 				products.get(i-1).setCantidad(cantProductModify);
+   	 				SQLiteDatabase tmp = helper.open();
+   	 				if (tmp!=null) {
+   	 					helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
+   	 					helper.close();
    	 				}
-   	 				else {
-   	 					modifyProduct();
-   	 					products.get(i-1).setCantidad(cantProductModify);
-   	 					SQLiteDatabase tmp = helper.open();
-   	 					if (tmp!=null) {
-   	 						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
-   	 						helper.close();
-   	 					}
-   	 				}
+   	 			}
    	 	
 		/*Intent intent = new Intent(this,MostrarProductosCategoria.class);
 		startActivity(intent);*/
-   	 				list = (ListView) findViewById(R.id.listViewProducts);
-   	 				ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
-   	 				list.setAdapter(adapter);
-   	 			}
+				list = (ListView) findViewById(R.id.listViewProducts);
+   	 			ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
+   	 			list.setAdapter(adapter);
    	 		}
 		
+		
+		}
+		catch (NumberFormatException e) {
+			errorCantVoice();
+		}
 	}
 	
 	public void errorCantVoice() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    	builder.setTitle("Error")
+	    builder.setTitle("Error")
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
@@ -661,4 +633,5 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    builder.create();
 	    builder.show();
 	}
+
 }
