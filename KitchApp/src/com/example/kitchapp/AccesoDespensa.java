@@ -36,12 +36,9 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 
-<<<<<<< HEAD
-public class AccesoDespensa extends Activity implements OnClickListener {
-=======
+
 public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
->>>>>>> Rama-Lorena-Android
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -78,12 +75,6 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-<<<<<<< HEAD
-		//getMenuInflater().inflate(R.menu.acceso_despensa, menu);
-		return true;
-	}
-	
-=======
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_search, menu);
 		return super.onCreateOptionsMenu(menu);
@@ -95,7 +86,7 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 			startActivity(j);
 			return true;
 	}
->>>>>>> Rama-Lorena-Android
+
 
 	
 	@Override
