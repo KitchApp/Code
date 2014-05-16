@@ -9,12 +9,6 @@ import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.http.HttpResponse;
-<<<<<<< HEAD
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-=======
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
@@ -22,25 +16,15 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
->>>>>>> Rama-Lorena-Android
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-<<<<<<< HEAD
-=======
 import org.json.JSONArray;
 import org.json.JSONException;
 >>>>>>> Rama-Lorena-Android
 import org.json.JSONObject;
 
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> Rama-Lorena-Android
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -123,12 +107,7 @@ public class Login extends Activity {
    
 
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
-<<<<<<< HEAD
-=======
-		
 
-		
->>>>>>> Rama-Lorena-Android
         @Override
         protected Integer doInBackground(String... urls) {
         	
@@ -176,20 +155,7 @@ public class Login extends Activity {
             return 0;
         }
 
-<<<<<<< HEAD
-        	//String tmp=httpGetData(urls[0]);
-        	/*encryptedPassword=httpGetData(urls[0]);
-        	if (encryptedPassword!=""){
-        		registrado=true;
-        		
-        	}
-        		
-            return httpGetData(urls[0]);
-        }*/
-        // onPostExecute displays the results of the AsyncTask.
-=======
-       // onPostExecute displays the results of the AsyncTask.
->>>>>>> Rama-Lorena-Android
+
        @Override
         protected void onPostExecute(Integer result) {
             //Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
