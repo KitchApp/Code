@@ -18,19 +18,11 @@ import static android.provider.BaseColumns._ID;
 public class Handler_Sqlite extends SQLiteOpenHelper{
 
 
-<<<<<<< HEAD
 	private static final String nameBD = "KitchApp-BaseDD";
 
 	Context myContext;
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,1);
-=======
-	private static final String nameBD = "KitchApp-BaseDD1";
-
-	Context myContext;
-	public Handler_Sqlite(Context ctx){
-		super(ctx,nameBD, null,3);
->>>>>>> Rama-Lorena-Android
 		myContext = ctx;
 	}
 	
@@ -42,20 +34,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	@Override
 	//This method is called when the database is created for the first time.
 	public void onCreate(SQLiteDatabase db){
-<<<<<<< HEAD
-
-=======
->>>>>>> Rama-Lorena-Android
 		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, barCode TEXT);";
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
 		//This method is limited to directly execute the SQL code that we pass as a parameter
-<<<<<<< HEAD
-		//String query3 = "CREATE TABLE users ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, email TEXT);";
-		db.execSQL(query1);	
-		db.execSQL(query2);
-		//db.execSQL(query3);
-=======
 		String query3 = "CREATE TABLE users ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, email TEXT);";
 		String query4 = "CREATE TABLE listShopping ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)";
 		String query5 = "CREATE TABLE productsList ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, idCat INTEGER, barCode TEXT)";
@@ -67,7 +49,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		db.execSQL(query4);
 		db.execSQL(query5);
 		db.execSQL(query6);
->>>>>>> Rama-Lorena-Android
 		
 		 InputStream is = null;
 		    try {
@@ -104,39 +85,13 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		db.execSQL("DROP TABLE IF EXISTS users");
 		db.execSQL("DROP TABLE IF EXISTS products");
 		db.execSQL("DROP TABLE IF EXISTS productsTemporary");
-<<<<<<< HEAD
-=======
 		db.execSQL("DROP TABLE IF EXISTS listShopping");
 		db.execSQL("DROP TABLE IF EXISTS productsList");
 		db.execSQL("DROP TABLE IF EXISTS listHaveProducts");
->>>>>>> Rama-Lorena-Android
 		onCreate(db);
 	}
 	
 	
-<<<<<<< HEAD
-	public ArrayList<ItemProducto> readProducts(Integer key){
-
-		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
-		String columnas[]={_ID,"name","cant"};
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={key.toString()};
-		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
-
-		Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
-		int id, idName, idNum, idCat;
-		id=c.getColumnIndex(_ID);
-		idName=c.getColumnIndex("name");
-		idNum=c.getColumnIndex("cant");
-		idCat=c.getColumnIndex("idCat");
-		
-		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-			//c.getString(idCat);
-
-			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
-		}
-		return result;
-=======
 	public ArrayList<ItemProducto> readProducts(Integer key,String option){
 		
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
@@ -204,17 +159,12 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
         	lists.add(new ShoppingListItem(c.getString(listName)));
         } while (c.moveToNext());*/
 		return lists;
-		
-		
->>>>>>> Rama-Lorena-Android
+	
 	}
 	
 	public boolean readUser(String nameUser) {
 		SQLiteDatabase db=this.getReadableDatabase();
-<<<<<<< HEAD
-=======
-		
->>>>>>> Rama-Lorena-Android
+
 		String args[]={nameUser};
 		Cursor c=db.query("users", null, "name=?", args, null, null, null);
 		if (c.getCount() == 0)
@@ -271,17 +221,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	}
 	
 		
-<<<<<<< HEAD
-	public void insertProducts(String name,Integer number, Integer idCategory, String barCode){
-		ContentValues registro=new ContentValues();
-		
-		registro.put("name", name);
-		registro.put("cant", number);
-		registro.put("idCat", idCategory);
-		registro.put("barCode",barCode);
-		
-		this.getWritableDatabase().insert("products", null, registro);
-=======
 public void insertProducts(String name,Integer number, Integer idCategory, String barCode, String option, Integer idList){
 	
 		
@@ -360,13 +299,12 @@ public boolean existProductList(String name) {
 
 
 
-	//método temporal
+	//mï¿½todo temporal
 	public void insertLists(String name){
 		ContentValues registro=new ContentValues();
 		
 		registro.put("name", name);
 		this.getWritableDatabase().insert("listShopping", null, registro);
->>>>>>> Rama-Lorena-Android
 	
 	}
 	
@@ -388,8 +326,6 @@ public boolean existProductList(String name) {
 		
 		this.getWritableDatabase().insert("users", null, register);
 	}
-<<<<<<< HEAD
-=======
 	
 	public void removeProduct(String name,String option,Integer idList) {
 		String args [] = { name };
@@ -474,5 +410,4 @@ public boolean existProductList(String name) {
 		};	
 		return p;
 	}
->>>>>>> Rama-Lorena-Android
 }
