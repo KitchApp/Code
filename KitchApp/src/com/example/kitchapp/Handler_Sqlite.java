@@ -136,31 +136,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		return result;
 	}
 	
-	public ArrayList<ShoppingListItem> readLists(){
-		//No utilizo por ahora los argumentos
-		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
-		SQLiteDatabase db=this.getReadableDatabase();
-		//String args[]={key.toString()};
-		//System.out.println(args[0]);
-		Integer listName;
-		//String[] valores_recuperar = {"name"};
-		Cursor c=db.query("listShopping", null, null, null, null, null, null,null);
-		listName = c.getColumnIndex("name");
-		//c.moveToFirst();
-		
-		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-			//c.getString(idCat);
-			lists.add(new ShoppingListItem(c.getString(listName)));
-		}
-		/*c.moveToFirst();
-	
-        do {
-        	String tmp=c.getString(listName);
-        	lists.add(new ShoppingListItem(c.getString(listName)));
-        } while (c.moveToNext());*/
-		return lists;
-	
-	}
 	
 	public boolean readUser(String nameUser) {
 		SQLiteDatabase db=this.getReadableDatabase();
