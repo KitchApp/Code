@@ -13,8 +13,16 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
+<<<<<<< HEAD
 import android.view.LayoutInflater;
 import android.view.Menu;
+=======
+import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+>>>>>>> Rama-Lorena-Android
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -28,7 +36,11 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 
+<<<<<<< HEAD
 public class AccesoDespensa extends Activity implements OnClickListener {
+=======
+public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
+>>>>>>> Rama-Lorena-Android
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,10 +78,24 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
+<<<<<<< HEAD
 		//getMenuInflater().inflate(R.menu.acceso_despensa, menu);
 		return true;
 	}
 	
+=======
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menu_search, menu);
+		return super.onCreateOptionsMenu(menu);
+
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+			Intent j = new Intent(this, Bar_Search.class);
+			startActivity(j);
+			return true;
+	}
+>>>>>>> Rama-Lorena-Android
 
 	
 	@Override

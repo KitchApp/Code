@@ -6,9 +6,18 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+<<<<<<< HEAD
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+=======
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.TextView;
+import android.widget.Toast;
+>>>>>>> Rama-Lorena-Android
 
 public class ItemProductoAdapter extends BaseAdapter {
   protected Activity activity;
@@ -42,6 +51,18 @@ public class ItemProductoAdapter extends BaseAdapter {
       LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
       vi = inflater.inflate(R.layout.activity_item_listview, null);
     }
+<<<<<<< HEAD
+=======
+    
+    CheckBox checkProduct = (CheckBox) vi.findViewById(R.id.checkBox_Product);
+    checkProduct.setOnClickListener(new OnClickListener() {
+    	@Override
+    	public void onClick(View v) {
+    		ItemProducto data = (ItemProducto) v.getTag();
+    		data.setSelected(((CheckBox) v).isChecked());
+    	}
+    });
+>>>>>>> Rama-Lorena-Android
              
     ItemProducto item = items.get(position);
          
@@ -53,7 +74,20 @@ public class ItemProductoAdapter extends BaseAdapter {
     nombre.setText(item.getNombre());
          
     TextView cantidad = (TextView) vi.findViewById(R.id.textView_Item_Cant);
+<<<<<<< HEAD
     cantidad.setText(item.getCantidad() + "");
+=======
+    
+    if (item.getCantidad() == 0) {
+    	cantidad.setText("");
+    }
+    else {
+    	cantidad.setText(item.getCantidad() + "");
+    }
+    
+    checkProduct.setChecked(item.isSelected());
+    checkProduct.setTag(item);
+>>>>>>> Rama-Lorena-Android
  
     return vi;
   }
