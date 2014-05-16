@@ -7,10 +7,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 
 import android.content.Intent;
-<<<<<<< HEAD
-=======
 import android.database.sqlite.SQLiteDatabase;
->>>>>>> Rama-Lorena-Android
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,19 +24,13 @@ public class AddManualmente extends Activity implements OnClickListener {
 	private Spinner categoria;
 	private EditText nameProduct;
 	private EditText cantProduct;
-<<<<<<< HEAD
-=======
 	Handler_Sqlite helper;
->>>>>>> Rama-Lorena-Android
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_manualmente);
-<<<<<<< HEAD
-=======
 		helper = new Handler_Sqlite(this);
->>>>>>> Rama-Lorena-Android
 		//Toast.makeText(this, "Actividad anyadir manualmente", Toast.LENGTH_SHORT).show();
 		/*categoria=(Spinner)findViewById(R.id.Spinner01);
 		ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(this,R.array.Categorias,android.R.layout.simple_spinner_item);
@@ -86,12 +77,7 @@ public class AddManualmente extends Activity implements OnClickListener {
 					errorCant();
 				}
 				else {
-<<<<<<< HEAD
-					Intent i = new Intent(this,MostrarProductosCategoria.class);
-					i.putExtra("nameProduct",nameProduct.getText().toString());
-					i.putExtra("cantProduct",cant);
-					i.putExtra("key",1);
-=======
+
 					SQLiteDatabase tmp = helper.open();
 					if (tmp != null) {
 						if (helper.existProductAdded(nameProduct.getText().toString())) {
@@ -108,7 +94,6 @@ public class AddManualmente extends Activity implements OnClickListener {
 					/*i.putExtra("nameProduct",nameProduct.getText().toString());
 					i.putExtra("cantProduct",cant);
 					i.putExtra("key",1);*/
->>>>>>> Rama-Lorena-Android
 					i.putExtra("idCat",this.getIntent().getExtras().getInt("idCat"));
 					startActivity(i);
 				}
