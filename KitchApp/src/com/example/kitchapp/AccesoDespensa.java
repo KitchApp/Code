@@ -12,14 +12,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 
-<<<<<<< HEAD
-public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
-	
-=======
-
 public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
 
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -67,15 +61,10 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 			startActivity(j);
 			return true;
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 
 	
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()){
 
 		case R.id.buttonDairy:
