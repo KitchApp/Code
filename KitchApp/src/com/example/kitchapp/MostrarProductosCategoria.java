@@ -1,10 +1,7 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
 
-=======
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -58,20 +55,11 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 	ListView textlist;
 	ArrayList<String> matches_text;
 	private boolean barCode = false;
-<<<<<<< HEAD
-	
-=======
-	private boolean search = false;
 
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mostrar_productos_categoria);
-<<<<<<< HEAD
-=======
-
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 		helper = new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 
@@ -84,11 +72,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 				helper.close();
 			}
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
-			switch (tipoCat) {
-<<<<<<< HEAD
-=======
-
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
+			switch (tipoCat) {1
 			case 1:
 				title.setText("Lacteos");
 				break;
@@ -227,23 +211,10 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 
 	}
 
-<<<<<<< HEAD
 
 	@Override
 	public void onClick(View v) {
-=======
-	/*
-	 * @Override public void onClick(View v) { // TODO Auto-generated method
-	 * stub
-	 * 
-	 * }
-	 */
 
-
-	@Override
-	public void onClick(View v) {
-		
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 		switch (v.getId()) {
 		case R.id.button_save:
 			ItemProducto prod = products.get(pos);
@@ -269,11 +240,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 			startActivity(i);
 			break;
 
-		/*
-		 * case R.id.textView_Atras: Intent j = new
-		 * Intent(this,AccesoDespensa.class); startActivity(j); break;
-		 */
-
 		case R.id.button_decrement:
 			decrementCant(v);
 			break;
@@ -282,9 +248,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 			incrementCant(v);
 			break;
 
-		/*
-		 * case R.id.button_add: alertDialogListView(true,0); break;
-		 */
 		}
 
 	}
@@ -293,41 +256,19 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 
 		products = helper.readProducts(category, "readPantry");
 
-		/*
-		 * products.add(new ItemProducto(1,helper.read()[1],4,""));
-		 * products.add(new ItemProducto(2,helper.read()[2],3,""));
-		 * products.add(new ItemProducto(3,helper.read()[4],4,""));
-		 * products.add(new ItemProducto(4,"Natillas Chocolate Danone",2,""));
-		 * products.add(new ItemProducto(5,"Queso Semicurado El Ventero",1,""));
-		 */
-
 	}
 
 	public void decrementCant(View view) {
-		/*
-		 * cantProduct = (TextView) view.findViewById(R.id.cantProduct); int
-		 * cant = Integer.parseInt(cantProduct.getText().toString()); int
-		 * cantModified = cant--; cantProduct.setText(cantModified + "");
-		 */
-
 		if (Integer.parseInt(cantProduct.getText().toString()) > 0) {
 			cantProduct.setText(Integer.parseInt(cantProduct.getText()
 					.toString()) - 1 + "");
-
 		}
 
 	}
 
 	public void incrementCant(View view) {
-		/*
-		 * cantProduct = (TextView) view.findViewById(R.id.cantProduct); int
-		 * cant = Integer.parseInt(cantProduct.getText().toString()); int
-		 * cantModified = cant--; cantProduct.setText(cantModified + "");
-		 */
-
 		cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())
 				+ 1 + "");
-
 	}
 
 	public void modifyProduct() {
@@ -700,10 +641,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 		list = (ListView) findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter = new ItemProductoAdapter(this, products);
 		list.setAdapter(adapter);
-<<<<<<< HEAD
-=======
 
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 	}
 
 }
