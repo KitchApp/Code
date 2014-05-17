@@ -14,13 +14,24 @@
         android:layout_centerVertical="true"
         android:visibility="gone"
         />
-
+    
     <TextView
         android:id="@+id/text_listName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"  
-        android:layout_marginLeft="50dp"   
+        android:layout_marginLeft="50dp"  
         android:textSize="30sp" 
         android:textColor="@android:color/black"/>
+    
+    <Button 
+        android:id="@+id/button_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:onClick="goList"
+        android:background="@drawable/go">
+    </Button>
+    
 
 </RelativeLayout>

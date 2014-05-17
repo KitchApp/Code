@@ -8,42 +8,6 @@
 package com.example.kitchapp;
 
 public final class R {
-<<<<<<< HEAD
-    public static final class array {
-        public static final int Categorias=0x7f050000;
-    }
-    public static final class attr {
-    }
-    public static final class color {
-        public static final int androidGreen=0x7f040015;
-        public static final int aqua=0x7f040007;
-        public static final int black=0x7f04000d;
-        public static final int blue=0x7f04000b;
-        public static final int celeste=0x7f04000e;
-        public static final int darkGray=0x7f040013;
-        public static final int darkGreen=0x7f040011;
-        public static final int fuchsia=0x7f04000f;
-        public static final int green=0x7f04000a;
-        public static final int lightGray=0x7f040014;
-        public static final int lightGreen=0x7f040012;
-        public static final int lime=0x7f040008;
-        public static final int maroon=0x7f040006;
-        public static final int navy=0x7f04000c;
-        /**  color name="gray">#808080</color> 
-         */
-        public static final int olive=0x7f040004;
-        public static final int pink=0x7f040010;
-        public static final int purple=0x7f040005;
-        public static final int red=0x7f040002;
-        public static final int silver=0x7f040003;
-        public static final int teal=0x7f040009;
-        public static final int white=0x7f040000;
-        /** <color name="fuchsia">#FF00FF</color>  
-         */
-        public static final int yellow=0x7f040001;
-    }
-    public static final class dimen {
-=======
     public static final class anim {
         public static final int abc_fade_in=0x7f040000;
         public static final int abc_fade_out=0x7f040001;
@@ -1016,228 +980,12 @@ containing a value of this type.
  Minimum width of the search view text entry area. 
          */
         public static final int abc_search_view_text_min_width=0x7f08000c;
->>>>>>> Rama-Lorena-Android
         /**  Default screen margins, per the Android Design guidelines. 
 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-<<<<<<< HEAD
-        public static final int activity_horizontal_margin=0x7f060000;
-        public static final int activity_vertical_margin=0x7f060001;
-    }
-    public static final class drawable {
-        public static final int anadir_icono=0x7f020000;
-        public static final int barras=0x7f020001;
-        public static final int barras2=0x7f020002;
-        public static final int barras3=0x7f020003;
-        public static final int bebidas=0x7f020004;
-        public static final int boton_redondo_color_aqua=0x7f020005;
-        public static final int boton_redondo_color_celeste=0x7f020006;
-        public static final int boton_redondo_color_navy=0x7f020007;
-        public static final int button_over=0x7f020008;
-        public static final int cabecera_kitchapp=0x7f020009;
-        public static final int carnes=0x7f02000a;
-        public static final int close=0x7f02000b;
-        public static final int cod_barras_verdeok=0x7f02000c;
-        public static final int condimentos=0x7f02000d;
-        public static final int congelados=0x7f02000e;
-        public static final int delete=0x7f02000f;
-        public static final int delete2=0x7f020010;
-        public static final int despensa=0x7f020011;
-        public static final int drogueria=0x7f020012;
-        public static final int estadisticas=0x7f020013;
-        public static final int ffondo=0x7f020014;
-        public static final int fondo=0x7f020015;
-        public static final int fondo2=0x7f020016;
-        public static final int fondo_boton=0x7f020017;
-        public static final int fondo_de_pantalla_naranja=0x7f020018;
-        public static final int fondo_lista_compra=0x7f020019;
-        public static final int fondo_lista_compra1=0x7f02001a;
-        public static final int fondo_lista_compra10=0x7f02001b;
-        public static final int fondo_lista_compra11=0x7f02001c;
-        public static final int fondo_lista_compra12=0x7f02001d;
-        public static final int fondo_lista_compra13=0x7f02001e;
-        public static final int fondo_lista_compra14=0x7f02001f;
-        public static final int fondo_lista_compra15=0x7f020020;
-        public static final int fondo_lista_compra16=0x7f020021;
-        public static final int fondo_lista_compra2=0x7f020022;
-        public static final int fondo_lista_compra3=0x7f020023;
-        public static final int fondo_lista_compra4=0x7f020024;
-        public static final int fondo_lista_compra5=0x7f020025;
-        public static final int fondo_lista_compra6=0x7f020026;
-        public static final int fondo_lista_compra7=0x7f020027;
-        public static final int fondo_lista_compra8=0x7f020028;
-        public static final int fondo_lista_compra85=0x7f020029;
-        public static final int fondo_lista_compra9=0x7f02002a;
-        public static final int fondo_nuevo=0x7f02002b;
-        public static final int fondo_pie_pagina=0x7f02002c;
-        public static final int frutas_verduras=0x7f02002d;
-        public static final int hoja8=0x7f02002e;
-        public static final int ic_launcher=0x7f02002f;
-        public static final int ic_launcher2=0x7f020030;
-        public static final int imageok_verde=0x7f020031;
-        public static final int images=0x7f020032;
-        public static final int imagetic_verde=0x7f020033;
-        public static final int imagevoz_verde=0x7f020034;
-        public static final int lacteos=0x7f020035;
-        public static final int lista_compra=0x7f020036;
-        public static final int localizacion=0x7f020037;
-        public static final int lupa_sobre_un_robot_androide=0x7f020038;
-        public static final int micro_verde=0x7f020039;
-        public static final int microfono=0x7f02003a;
-        public static final int microfono2=0x7f02003b;
-        public static final int mini_tic=0x7f02003c;
-        public static final int mini_tic2=0x7f02003d;
-        public static final int mini_tic3=0x7f02003e;
-        public static final int numberpicker_down=0x7f02003f;
-        public static final int numberpicker_up=0x7f020040;
-        public static final int pan_bolleria=0x7f020041;
-        public static final int pastas=0x7f020042;
-        public static final int pescados=0x7f020043;
-        public static final int propuestaportadaappis=0x7f020044;
-        public static final int prueba2=0x7f020045;
-        public static final int recetario=0x7f020046;
-        public static final int resumen_de_color_como_fondo=0x7f020047;
-        public static final int salsas=0x7f020048;
-        public static final int teclado_android=0x7f020049;
-        public static final int tic=0x7f02004a;
-        public static final int tic_verde=0x7f02004b;
-        public static final int varios=0x7f02004c;
-        public static final int voz=0x7f02004d;
-    }
-    public static final class id {
-        public static final int EditTextCantProduct=0x7f0a000f;
-        public static final int action_settings=0x7f0a0038;
-        public static final int btn1=0x7f0a002e;
-        public static final int btn2=0x7f0a002f;
-        public static final int btn3=0x7f0a002d;
-        public static final int btn4=0x7f0a0030;
-        public static final int btnLogin=0x7f0a001c;
-        public static final int btnRegistro=0x7f0a0036;
-        public static final int button1=0x7f0a0027;
-        public static final int button2=0x7f0a0028;
-        public static final int button3=0x7f0a0029;
-        public static final int button4=0x7f0a002a;
-        public static final int buttonBread=0x7f0a0003;
-        public static final int buttonCondiment=0x7f0a0007;
-        public static final int buttonDairy=0x7f0a0001;
-        public static final int buttonDrinks=0x7f0a0004;
-        public static final int buttonFish=0x7f0a0006;
-        public static final int buttonFrozen=0x7f0a0009;
-        public static final int buttonFruits=0x7f0a0002;
-        public static final int buttonMeat=0x7f0a0005;
-        public static final int buttonOthers=0x7f0a000c;
-        public static final int buttonPasta=0x7f0a0008;
-        public static final int buttonSauces=0x7f0a000a;
-        public static final int buttonStore=0x7f0a000b;
-        public static final int button_add=0x7f0a0026;
-        public static final int button_addProduct=0x7f0a0010;
-        public static final int button_cancel=0x7f0a0023;
-        public static final int button_decrement=0x7f0a001f;
-        public static final int button_increment=0x7f0a0021;
-        public static final int button_save=0x7f0a0022;
-        public static final int cantProduct=0x7f0a0020;
-        public static final int editTextNameProduct=0x7f0a000e;
-        public static final int editTextPassword=0x7f0a001b;
-        public static final int editTextuserName=0x7f0a001a;
-        public static final int encabezado=0x7f0a0018;
-        public static final int et1=0x7f0a002c;
-        public static final int footer=0x7f0a0019;
-        public static final int header=0x7f0a0032;
-        public static final int imageView1=0x7f0a0015;
-        public static final int imagen=0x7f0a0013;
-        public static final int link_to_login=0x7f0a0037;
-        public static final int link_to_register=0x7f0a001d;
-        public static final int listDialogVoice=0x7f0a0031;
-        public static final int listViewProducts=0x7f0a0025;
-        public static final int nameProductModify=0x7f0a001e;
-        public static final int nombre=0x7f0a0014;
-        public static final int progressBar1=0x7f0a002b;
-        public static final int reg_email=0x7f0a0034;
-        public static final int reg_password=0x7f0a0035;
-        public static final int reg_usuario=0x7f0a0033;
-        public static final int tab1=0x7f0a0016;
-        public static final int tab2=0x7f0a0017;
-        public static final int textView1=0x7f0a0000;
-        public static final int textViewAdd=0x7f0a000d;
-        public static final int textView_Cat=0x7f0a0024;
-        public static final int textView_Item_Cant=0x7f0a0012;
-        public static final int textView_Item_Name=0x7f0a0011;
-    }
-    public static final class layout {
-        public static final int activity_acceso_despensa=0x7f030000;
-        public static final int activity_add_manualmente=0x7f030001;
-        public static final int activity_item_listview=0x7f030002;
-        public static final int activity_list_item_layout=0x7f030003;
-        public static final int activity_lista_de_la_compra=0x7f030004;
-        public static final int activity_login=0x7f030005;
-        public static final int activity_modificar_producto_despensa=0x7f030006;
-        public static final int activity_mostrar_productos_categoria=0x7f030007;
-        public static final int activity_pantalla_principal=0x7f030008;
-        public static final int activity_pantalla_transicion=0x7f030009;
-        public static final int activity_una_lista=0x7f03000a;
-        public static final int button_style_main_activity=0x7f03000b;
-        public static final int cabecera=0x7f03000c;
-        public static final int dialog_crear_lista_compra=0x7f03000d;
-        public static final int dialog_matches=0x7f03000e;
-        public static final int pie_de_pagina=0x7f03000f;
-        public static final int registro=0x7f030010;
-    }
-    public static final class menu {
-        public static final int add_manualmente=0x7f090000;
-        public static final int login=0x7f090001;
-        public static final int modificar_producto_despensa=0x7f090002;
-        public static final int mostrar_productos_categoria=0x7f090003;
-    }
-    public static final class string {
-        public static final int CantProducts=0x7f07002c;
-        public static final int action_settings=0x7f070001;
-        public static final int add=0x7f070022;
-        public static final int addProduct=0x7f070028;
-        public static final int add_manually=0x7f07001f;
-        public static final int anadirProducto=0x7f070015;
-        public static final int app_name=0x7f070000;
-        public static final int back=0x7f070023;
-        public static final int bebidas=0x7f07000c;
-        public static final int buscarProducto=0x7f070016;
-        public static final int cancel=0x7f07001c;
-        public static final int cancel2=0x7f07001d;
-        public static final int cantProduct=0x7f070021;
-        public static final int carnes=0x7f07000d;
-        public static final int condimentos=0x7f07000f;
-        public static final int congelados=0x7f070012;
-        public static final int create=0x7f070029;
-        public static final int despensa=0x7f070003;
-        public static final int dialog_header=0x7f070026;
-        public static final int drogueria=0x7f070013;
-        public static final int estadisticas=0x7f070006;
-        public static final int frutasVerduras=0x7f07000a;
-        public static final int hello_world=0x7f070002;
-        public static final int lacteos=0x7f070009;
-        public static final int lista_compra=0x7f070004;
-        public static final int localizacion=0x7f070007;
-        public static final int nameOfList=0x7f070027;
-        public static final int nameProduct=0x7f070020;
-        public static final int ok=0x7f07001e;
-        public static final int panBolleria=0x7f07000b;
-        public static final int pastasArroces=0x7f070011;
-        public static final int pescados=0x7f07000e;
-        public static final int product1=0x7f07002b;
-        public static final int recetario=0x7f070005;
-        public static final int remove=0x7f07002a;
-        public static final int salsas=0x7f070010;
-        public static final int save=0x7f07001a;
-        public static final int save2=0x7f07001b;
-        public static final int title_activity_acceso_despensa=0x7f070008;
-        public static final int title_activity_add_despensa=0x7f070018;
-        public static final int title_activity_add_manualmente=0x7f070025;
-        public static final int title_activity_list_item_layout=0x7f070017;
-        public static final int title_activity_modificar_producto_despensa=0x7f070019;
-        public static final int title_activity_mostrar_productos_categoria=0x7f070024;
-        public static final int varios=0x7f070014;
-=======
         public static final int activity_horizontal_margin=0x7f080015;
         public static final int activity_vertical_margin=0x7f080016;
         /**  The platform's desired fixed height for a dialog along the major axis
@@ -1412,44 +1160,46 @@ containing a value of this type.
         public static final int fondo_nuevo=0x7f020087;
         public static final int fondo_pie_pagina=0x7f020088;
         public static final int frutas_verduras=0x7f020089;
-        public static final int highlight_focused=0x7f0200af;
-        public static final int highlight_pressed=0x7f0200ae;
-        public static final int hoja8=0x7f02008a;
-        public static final int ic_action_search=0x7f02008b;
-        public static final int ic_launcher=0x7f02008c;
-        public static final int ic_launcher2=0x7f02008d;
-        public static final int imageok_verde=0x7f02008e;
-        public static final int images=0x7f02008f;
-        public static final int imagetic_verde=0x7f020090;
-        public static final int imagevoz_verde=0x7f020091;
-        public static final int lacteos=0x7f020092;
-        public static final int lista_compra=0x7f020093;
-        public static final int listview_selector=0x7f020094;
-        public static final int localizacion=0x7f020095;
-        public static final int loupe=0x7f020096;
-        public static final int lupa_sobre_un_robot_androide=0x7f020097;
-        public static final int micro_verde=0x7f020098;
-        public static final int microfono=0x7f020099;
-        public static final int microfono2=0x7f02009a;
-        public static final int mini_tic=0x7f02009b;
-        public static final int mini_tic2=0x7f02009c;
-        public static final int mini_tic3=0x7f02009d;
-        public static final int numberpicker_down=0x7f02009e;
-        public static final int numberpicker_up=0x7f02009f;
-        public static final int pan_bolleria=0x7f0200a0;
-        public static final int pastas=0x7f0200a1;
-        public static final int pescados=0x7f0200a2;
-        public static final int propuestaportadaappis=0x7f0200a3;
-        public static final int prueba2=0x7f0200a4;
-        public static final int recetario=0x7f0200a5;
-        public static final int resumen_de_color_como_fondo=0x7f0200a6;
-        public static final int salsas=0x7f0200a7;
-        public static final int teclado_android=0x7f0200a8;
-        public static final int tic=0x7f0200a9;
-        public static final int tic_verde=0x7f0200aa;
-        public static final int tick=0x7f0200ab;
-        public static final int varios=0x7f0200ac;
-        public static final int voz=0x7f0200ad;
+        public static final int go=0x7f02008a;
+        public static final int highlight_focused=0x7f0200b1;
+        public static final int highlight_pressed=0x7f0200b0;
+        public static final int hoja8=0x7f02008b;
+        public static final int home=0x7f02008c;
+        public static final int ic_action_search=0x7f02008d;
+        public static final int ic_launcher=0x7f02008e;
+        public static final int ic_launcher2=0x7f02008f;
+        public static final int imageok_verde=0x7f020090;
+        public static final int images=0x7f020091;
+        public static final int imagetic_verde=0x7f020092;
+        public static final int imagevoz_verde=0x7f020093;
+        public static final int lacteos=0x7f020094;
+        public static final int lista_compra=0x7f020095;
+        public static final int listview_selector=0x7f020096;
+        public static final int localizacion=0x7f020097;
+        public static final int loupe=0x7f020098;
+        public static final int lupa_sobre_un_robot_androide=0x7f020099;
+        public static final int micro_verde=0x7f02009a;
+        public static final int microfono=0x7f02009b;
+        public static final int microfono2=0x7f02009c;
+        public static final int mini_tic=0x7f02009d;
+        public static final int mini_tic2=0x7f02009e;
+        public static final int mini_tic3=0x7f02009f;
+        public static final int numberpicker_down=0x7f0200a0;
+        public static final int numberpicker_up=0x7f0200a1;
+        public static final int pan_bolleria=0x7f0200a2;
+        public static final int pastas=0x7f0200a3;
+        public static final int pescados=0x7f0200a4;
+        public static final int propuestaportadaappis=0x7f0200a5;
+        public static final int prueba2=0x7f0200a6;
+        public static final int recetario=0x7f0200a7;
+        public static final int resumen_de_color_como_fondo=0x7f0200a8;
+        public static final int salsas=0x7f0200a9;
+        public static final int teclado_android=0x7f0200aa;
+        public static final int tic=0x7f0200ab;
+        public static final int tic_verde=0x7f0200ac;
+        public static final int tick=0x7f0200ad;
+        public static final int varios=0x7f0200ae;
+        public static final int voz=0x7f0200af;
     }
     public static final class id {
         public static final int EditTextCantProduct=0x7f05004b;
@@ -1464,25 +1214,21 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050099;
+        public static final int action_settings=0x7f05007a;
         public static final int activity_chooser_view_content=0x7f050025;
-        public static final int add_Product=0x7f05009a;
+        public static final int add_Product=0x7f05007b;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int btnLogin=0x7f05005d;
-        public static final int btnRegistro=0x7f050095;
-        public static final int button1=0x7f050067;
-        public static final int button2=0x7f050068;
-        public static final int button3=0x7f050069;
-        public static final int button4=0x7f05006a;
-        public static final int buttonAddCode=0x7f050074;
-        public static final int buttonAddManually=0x7f050072;
-        public static final int buttonAddVoice=0x7f050073;
+        public static final int btnLogin=0x7f05005a;
+        public static final int btnRegistro=0x7f050075;
+        public static final int button1=0x7f050064;
+        public static final int button2=0x7f050065;
+        public static final int button3=0x7f050066;
+        public static final int button4=0x7f050067;
         public static final int buttonBread=0x7f05003f;
-        public static final int buttonCancel=0x7f05006e;
+        public static final int buttonCancel=0x7f05006b;
         public static final int buttonCondiment=0x7f050043;
         public static final int buttonDairy=0x7f05003d;
-        public static final int buttonDelete=0x7f050075;
         public static final int buttonDrinks=0x7f050040;
         public static final int buttonFish=0x7f050042;
         public static final int buttonFrozen=0x7f050045;
@@ -1493,77 +1239,62 @@ containing a value of this type.
         public static final int buttonSauces=0x7f050046;
         public static final int buttonStore=0x7f050047;
         public static final int button_Voice=0x7f05004f;
-        public static final int button_accept=0x7f05006f;
+        public static final int button_accept=0x7f05006c;
         public static final int button_addProduct=0x7f05004c;
-        public static final int button_cancel=0x7f050064;
+        public static final int button_cancel=0x7f050061;
         public static final int button_codeSearch=0x7f050050;
-        public static final int button_decrement=0x7f050060;
-        public static final int button_increment=0x7f050062;
+        public static final int button_decrement=0x7f05005d;
+        public static final int button_go=0x7f050079;
+        public static final int button_increment=0x7f05005f;
         public static final int button_ok=0x7f05004e;
-        public static final int button_save=0x7f050063;
-        public static final int cantProduct=0x7f050061;
+        public static final int button_save=0x7f050060;
+        public static final int cantProduct=0x7f05005e;
         public static final int checkBox_Product=0x7f050053;
-        public static final int checkBox_list=0x7f050097;
+        public static final int checkBox_list=0x7f050077;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050028;
-        public static final int delete_Product=0x7f05009b;
+        public static final int delete_Product=0x7f05007c;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
-        public static final int editTextDialogUserInput=0x7f05008f;
+        public static final int editTextDialogUserInput=0x7f05006f;
         public static final int editTextNameProduct=0x7f05004a;
-        public static final int editTextPassword=0x7f05005c;
-        public static final int editTextuserName=0x7f05005b;
+        public static final int editTextPassword=0x7f050059;
+        public static final int editTextuserName=0x7f050058;
         public static final int edit_query=0x7f050030;
-        public static final int encabezado=0x7f050059;
+        public static final int encabezado=0x7f050056;
         public static final int end=0x7f050013;
-        public static final int et1=0x7f050071;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
-        public static final int footer=0x7f05005a;
-        public static final int header=0x7f050091;
+        public static final int footer=0x7f050057;
+        public static final int header=0x7f050071;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
-        public static final int imageView1=0x7f050058;
-        public static final int imagen=0x7f050056;
-        public static final int layout_root=0x7f05008e;
-        public static final int link_to_login=0x7f050096;
-        public static final int link_to_register=0x7f05005e;
-        public static final int listDialogVoice=0x7f050090;
+        public static final int layout_root=0x7f05006e;
+        public static final int link_to_login=0x7f050076;
+        public static final int link_to_register=0x7f05005b;
+        public static final int listDialogVoice=0x7f050070;
         public static final int listMode=0x7f050001;
-        public static final int listViewBread=0x7f05007b;
-        public static final int listViewCondiment=0x7f050083;
-        public static final int listViewDairy=0x7f050077;
-        public static final int listViewDrinks=0x7f05007d;
-        public static final int listViewFish=0x7f050081;
-        public static final int listViewFrozen=0x7f050087;
-        public static final int listViewFruits=0x7f050079;
-        public static final int listViewMeat=0x7f05007f;
-        public static final int listViewOthers=0x7f05008d;
-        public static final int listViewPasta=0x7f050085;
-        public static final int listViewProducts=0x7f050066;
-        public static final int listViewSauces=0x7f050089;
-        public static final int listViewStore=0x7f05008b;
-        public static final int listView_lists=0x7f050070;
+        public static final int listViewProducts=0x7f050063;
+        public static final int listView_lists=0x7f05006d;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
-        public static final int nameProductModify=0x7f05005f;
+        public static final int nameProductModify=0x7f05005c;
         public static final int never=0x7f050009;
-        public static final int nombre=0x7f050057;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
-        public static final int progressBar1=0x7f05006b;
+        public static final int progressBar1=0x7f050068;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int reg_email=0x7f050093;
-        public static final int reg_password=0x7f050094;
-        public static final int reg_usuario=0x7f050092;
-        public static final int search=0x7f05009c;
+        public static final int reg_email=0x7f050073;
+        public static final int reg_password=0x7f050074;
+        public static final int reg_usuario=0x7f050072;
+        public static final int search=0x7f05007d;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1578,29 +1309,17 @@ containing a value of this type.
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
-        public static final int spinnerCategory=0x7f05006d;
+        public static final int spinnerCategory=0x7f05006a;
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int textView1=0x7f05003c;
         public static final int textViewAdd=0x7f050049;
-        public static final int textViewBread=0x7f05007a;
-        public static final int textViewCategory=0x7f05006c;
-        public static final int textViewCondiment=0x7f050082;
-        public static final int textViewDairy=0x7f050076;
-        public static final int textViewDrinks=0x7f05007c;
-        public static final int textViewFish=0x7f050080;
-        public static final int textViewFrozen=0x7f050086;
-        public static final int textViewFruits=0x7f050078;
-        public static final int textViewMeat=0x7f05007e;
-        public static final int textViewOthers=0x7f05008c;
-        public static final int textViewPasta=0x7f050084;
-        public static final int textViewSauces=0x7f050088;
-        public static final int textViewStore=0x7f05008a;
-        public static final int textView_Cat=0x7f050065;
+        public static final int textViewCategory=0x7f050069;
+        public static final int textView_Cat=0x7f050062;
         public static final int textView_Item_Cant=0x7f050055;
         public static final int textView_Item_Name=0x7f050054;
-        public static final int text_listName=0x7f050098;
+        public static final int text_listName=0x7f050078;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int txt_barSearch=0x7f05004d;
@@ -1664,23 +1383,21 @@ containing a value of this type.
         public static final int activity_add_manualmente=0x7f030019;
         public static final int activity_bar_search=0x7f03001a;
         public static final int activity_item_listview=0x7f03001b;
-        public static final int activity_list_item_layout=0x7f03001c;
-        public static final int activity_login=0x7f03001d;
-        public static final int activity_modificar_producto_despensa=0x7f03001e;
-        public static final int activity_mostrar_productos_categoria=0x7f03001f;
-        public static final int activity_pantalla_principal=0x7f030020;
-        public static final int activity_pantalla_transicion=0x7f030021;
-        public static final int activity_seleccionar_categoria=0x7f030022;
-        public static final int activity_shopping_lists=0x7f030023;
-        public static final int activity_una_lista=0x7f030024;
-        public static final int button_style_main_activity=0x7f030025;
-        public static final int cabecera=0x7f030026;
-        public static final int dialog_crear_lista_compra=0x7f030027;
-        public static final int dialog_matches=0x7f030028;
-        public static final int pie_de_pagina=0x7f030029;
-        public static final int registro=0x7f03002a;
-        public static final int shoppinglist_item=0x7f03002b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002c;
+        public static final int activity_login=0x7f03001c;
+        public static final int activity_modificar_producto_despensa=0x7f03001d;
+        public static final int activity_mostrar_productos_categoria=0x7f03001e;
+        public static final int activity_pantalla_principal=0x7f03001f;
+        public static final int activity_pantalla_transicion=0x7f030020;
+        public static final int activity_seleccionar_categoria=0x7f030021;
+        public static final int activity_shopping_lists=0x7f030022;
+        public static final int cabecera=0x7f030023;
+        public static final int dialog_crear_lista_compra=0x7f030024;
+        public static final int dialog_matches=0x7f030025;
+        public static final int pie_de_pagina=0x7f030026;
+        public static final int registro=0x7f030027;
+        public static final int shopping_list_go=0x7f030028;
+        public static final int shoppinglist_item=0x7f030029;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002a;
     }
     public static final class menu {
         public static final int add_manualmente=0x7f0d0000;
@@ -1757,6 +1474,7 @@ containing a value of this type.
         public static final int estadisticas=0x7f0a0013;
         public static final int frutasVerduras=0x7f0a0017;
         public static final int hello_world=0x7f0a000f;
+        public static final int home=0x7f0a003f;
         public static final int lacteos=0x7f0a0016;
         public static final int lista_compra=0x7f0a0011;
         public static final int listadelacompra=0x7f0a0039;
@@ -1781,7 +1499,6 @@ containing a value of this type.
         public static final int title_activity_modificar_producto_despensa=0x7f0a0026;
         public static final int title_activity_mostrar_productos_categoria=0x7f0a0031;
         public static final int varios=0x7f0a0021;
->>>>>>> Rama-Lorena-Android
     }
     public static final class style {
         /** 
@@ -1807,13 +1524,6 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-<<<<<<< HEAD
-        public static final int AppBaseTheme=0x7f080000;
-        /**  Application theme. 
-         */
-        public static final int boton_style=0x7f080001;
-    }
-=======
         public static final int AppBaseTheme=0x7f0b008b;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
@@ -3655,5 +3365,4 @@ containing a value of this type.
         */
         public static final int View_paddingStart = 1;
     };
->>>>>>> Rama-Lorena-Android
 }

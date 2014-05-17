@@ -23,7 +23,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,7 +48,25 @@ public class Bar_Search extends Activity implements OnClickListener {
 
 		txt_search = (EditText) findViewById(R.id.txt_barSearch);
 		txt_product = (TextView) findViewById(R.id.txt_product);
+		txt_product.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				modifyProduct(arg0);
+
+			}
+
+		});
 		txt_quantity = (TextView) findViewById(R.id.txt_quantity);
+		txt_quantity.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				modifyProduct(arg0);
+
+			}
+
+		});
 		Button button_ok = (Button) findViewById(R.id.button_ok);
 		button_ok.setOnClickListener(this);
 		Button button_Voice = (Button) findViewById(R.id.button_Voice);
@@ -72,8 +89,7 @@ public class Bar_Search extends Activity implements OnClickListener {
 
 		case R.id.button_ok:
 			String prod = txt_search.getText().toString();
-			if (prod.length() != 0)
-				showProduct(prod, "name");
+			showProduct(prod, "name");
 			break;
 
 		case R.id.button_Voice:
@@ -250,6 +266,32 @@ public class Bar_Search extends Activity implements OnClickListener {
 					+ "");
 
 		}
+
+	}
+
+
+	public void modifyProduct(View view) {
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		LayoutInflater inflater = this.getLayoutInflater();
+
+		view = inflater.inflate(R.layout.activity_modificar_producto_despensa,
+				null);
+		txt_qty = (TextView) view.findViewById(R.id.cantProduct);
+		txt_qty.setText(txt_quantity.getText());
+		
+		Button save = (Button) view.findViewById(R.id.button_save);
+		save.setOnClickListener(this);
+		Button cancel = (Button) view.findViewById(R.id.button_cancel);
+		cancel.setOnClickListener(this);
+		Button decrement = (Button) view.findViewById(R.id.button_decrement);
+		decrement.setOnClickListener(this);
+		Button increment = (Button) view.findViewById(R.id.button_increment);
+		increment.setOnClickListener(this);
+		
+		builder.setView(view);
+		builder.create();
+		builder.show();
 
 	}
 

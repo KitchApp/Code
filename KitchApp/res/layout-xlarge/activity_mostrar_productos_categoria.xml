@@ -28,16 +28,7 @@
         
     	</ListView>
     	
-<<<<<<< HEAD
-    	<Button
-	   	android:id="@+id/button_add"
-	   	android:layout_width="wrap_content"
-	   	android:layout_height="wrap_content"
-	   	android:background="@drawable/anadir_icono" 
-	   	android:layout_gravity="center_horizontal" />    	    	
-=======
     	 	
->>>>>>> Rama-Lorena-Android
 
     </LinearLayout>
 </ScrollView>

@@ -1,11 +1,7 @@
 package com.example.kitchapp;
 
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -24,19 +20,15 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
  
 public class Registro extends Activity implements OnClickListener {
@@ -44,8 +36,7 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
-	private String encryptedPassword="";
-
+	
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 
 	
@@ -61,22 +52,17 @@ public class Registro extends Activity implements OnClickListener {
         // Set View to register.xml
         setContentView(R.layout.registro);
  
-        TextView loginScreen = (TextView) findViewById(R.id.link_to_login);
         Button buttonRegister = (Button) findViewById(R.id.btnRegistro);
         userName = (EditText) findViewById(R.id.reg_usuario);
         password = (EditText) findViewById(R.id.reg_password);
         email = (EditText) findViewById(R.id.reg_email);
  
-        // Listening to Login Screen link
-        //loginScreen.setOnClickListener(this);
         buttonRegister.setOnClickListener(this);
         userName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
 				if(hasFocus==false){
-					//userValidation=true;
 					new HttpGetName().execute();
 					
 				}
@@ -87,13 +73,8 @@ public class Registro extends Activity implements OnClickListener {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
-				
 				if(hasFocus==true){
-					//emailValidation=true;
 					new HttpGetEmail().execute();
-					
-					
 				}
 				
 			}
@@ -106,7 +87,6 @@ public class Registro extends Activity implements OnClickListener {
     
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()) {
 			case R.id.link_to_login:
 				finish();
@@ -228,14 +208,10 @@ public class Registro extends Activity implements OnClickListener {
 		protected String doInBackground(String... mURL) {
 			
 			String response="";
-	        //mURL[0]=mURL[0].replace(" ", "%20");
-	         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
-	          HttpClient httpclient = new DefaultHttpClient();
-	          HttpGet httppost= new HttpGet();;
-	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
-	    	//HttpGet httppost = new HttpGet(mURL[0]);
-	         
-	        	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
+	        HttpClient httpclient = new DefaultHttpClient();
+	        HttpGet httppost= new HttpGet();;
+	        Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
+	    	httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
 	         
 	         
 	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
@@ -249,19 +225,13 @@ public class Registro extends Activity implements OnClickListener {
 	         Log.i("LocAndroid Response HTTP",response);
 	    	} catch (ClientProtocolException e) {
 	        Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-	        // TODO Auto-generated catch block
 	    } catch (IOException e) {
 	        
 	        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-	        // TODO Auto-generated catch block
 	    }
-			// TODO Auto-generated method stub
 			return response;
 		}
-    //return response;
-	
-	
-	
+   
 		protected void onPostExecute(String result) {
 			JSONArray ja=null;
 			try {
@@ -272,7 +242,6 @@ public class Registro extends Activity implements OnClickListener {
 			
 			
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
 			
@@ -341,19 +310,13 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
          Log.i("LocAndroid Response HTTP",response);
     	} catch (ClientProtocolException e) {
         Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-        // TODO Auto-generated catch block
     } catch (IOException e) {
         
         Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-        // TODO Auto-generated catch block
     }
-		// TODO Auto-generated method stub
 		return response;
 	}
-    //return response;
-	
-	
-	
+    
 	protected void onPostExecute(String result) {
 		JSONArray ja=null;
 		try {
@@ -364,15 +327,11 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		
 		
 	} catch (JSONException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 		Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
 		
 	}
 	try{
-		String tmp=email.getText().toString();
-		boolean x=email.getText().toString().equals(ja.getString(2));
-		boolean y=!(email.getText().toString().equals(""));
 		if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
 			//registrado=true;
 			builder.setTitle("Informacion")
@@ -417,9 +376,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
                 JSONObject json = new JSONObject();
                 //extract the username and password from UI elements and create a JSON object
-                String name=username.getText().toString().trim();
-                String pass=password.getText().toString().trim();
-                String mail=email.getText().toString().trim();
                 json.put("name", username.getText().toString().trim());
                 json.put("pass", password.getText().toString().trim());
                 json.put("mail", email.getText().toString().trim());
