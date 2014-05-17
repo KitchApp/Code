@@ -41,12 +41,9 @@ public class PantallaTransicion extends Activity {
 
 		@Override
 			protected Boolean doInBackground(Void... params) {
-				// TODO Auto-generated method stub
 				for(int i=1; i<=10; i++) {
 					tareaLarga();
 					publishProgress(i*10);
-					/*if(isCancelled())
-						break;*/
 				}
 				return true;
 			}
@@ -56,44 +53,24 @@ public class PantallaTransicion extends Activity {
             protected void onProgressUpdate(Integer... values) {
                     int progreso = values[0].intValue();
                     barra.setProgress(progreso);
-                    //pDialog.setProgress(progreso);
             }
             
             
             protected void onPreExecute() {
-                    
-                    /*pDialog.setOnCancelListener(new OnCancelListener() {
-                                @Override
-                                public void onCancel(DialogInterface dialog) {
-                                	AccesoBBDD.this.cancel(true);
-                                }
-                        });*/
-                    
-                    //pDialog.setProgress(0);
-                    //pDialog.show();
             	barra.setMax(100);
             	barra.setProgress(0);
-            	
             }
             
             @Override
             protected void onPostExecute(Boolean result) {
                     if(result)
                     {
-                            //pDialog.dismiss();
-                            //Toast.makeText(PantallaTransicion.this, "Tarea finalizada!", Toast.LENGTH_SHORT).show();
-                            //setContentView(R.layout.activity_pantalla_principal);
-                    	
-                    	Intent i = new Intent(PantallaTransicion.this, PantallaPrincipal.class);
+                           Intent i = new Intent(PantallaTransicion.this, PantallaPrincipal.class);
                 		startActivity(i);
                     	
                     }
             }
             
-            /*@Override
-            protected void onCancelled() {
-                    Toast.makeText(PantallaTransicion.this, "Tarea cancelada!", Toast.LENGTH_SHORT).show();
-            }*/
 	}
 
 }
