@@ -15,7 +15,6 @@
 	        android:orientation="vertical" >       	
 			
 		<LinearLayout 
-<<<<<<< HEAD
 	                android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:background="@color/lightGreen"		            
@@ -24,17 +23,7 @@
 		        android:layout_marginBottom="20dp"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
-=======
-	            android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:background="@color/lightGreen"		            
-		        android:orientation="horizontal"
-		        android:padding="30dp" 
-		        android:layout_marginBottom="20dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp" 
-		        android:layout_marginTop="30dp">
->>>>>>> Rama-Lorena-Android
+
 		            
 		    <!-- Distribución de 50% y 50% respectivamente 
 			para los elementos agregados al layout. 
@@ -68,17 +57,10 @@
 		        android:background="@color/lightGreen"
 		        android:orientation="horizontal"
 		        android:padding="20dp" 
-<<<<<<< HEAD
 		        android:layout_marginBottom="20dp"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
-=======
-		        android:layout_marginBottom="30dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp" 
-		        android:layout_marginTop="30dp" >
->>>>>>> Rama-Lorena-Android
-				    
+
 			<Button
 			        android:id="@+id/button2"
 			        android:layout_width="0dp"
@@ -99,17 +81,10 @@
 		        android:background="@color/lightGreen"
 	                android:orientation="horizontal"
 		        android:padding="20dp" 
-<<<<<<< HEAD
 		        android:layout_marginBottom="20dp"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
-=======
-		        android:layout_marginBottom="30dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp"
-		        android:layout_marginTop="30dp" >
->>>>>>> Rama-Lorena-Android
-				    
+
 			<Button
 			        android:id="@+id/button3"
 			        android:layout_width="0dp"
@@ -130,17 +105,10 @@
 		        android:background="@color/lightGreen"
 	                android:orientation="horizontal"
 		        android:padding="20dp" 
-<<<<<<< HEAD
 		        android:layout_marginBottom="20dp"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
-=======
-		        android:layout_marginBottom="30dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp"
-		        android:layout_marginTop="30dp" >
->>>>>>> Rama-Lorena-Android
-				    
+	    
 			<Button
 			        android:id="@+id/button4"
 			        android:layout_width="0dp"
