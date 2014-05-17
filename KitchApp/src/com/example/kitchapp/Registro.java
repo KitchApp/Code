@@ -42,10 +42,7 @@ public class Registro extends Activity implements OnClickListener {
 	
 	public String session_name;
     public String session_id;
-    //private boolean userValidation=false;
-    //private boolean emailValidation=false;
-    //public Boolean registrado=false;
-	
+   
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,12 +101,7 @@ public class Registro extends Activity implements OnClickListener {
 					}
 					else {
 						showMessageEmailValidation();
-						/*new HttpAsyncTask().execute();
-						
-						Intent intent = new Intent(Registro.this,PantallaTransicion.class);
-			        	startActivity(intent);
-						finish();*/
-			            
+					
 					}
 				}
 				break;
@@ -142,7 +134,7 @@ public class Registro extends Activity implements OnClickListener {
 		 
 	    builder.setTitle("Informacion")
 	            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
-	            .setMessage("Recuerde que si desea utilizar su cuenta en la página web tiene que validarla pinchando en el enlace que se le ha enviado al correo electrónico.")
+	            .setMessage("Recuerde que si desea utilizar su cuenta en la pï¿½gina web tiene que validarla pinchando en el enlace que se le ha enviado al correo electrï¿½nico.")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -290,13 +282,10 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 	protected String doInBackground(String... mURL) {
 		
 		String response="";
-        //mURL[0]=mURL[0].replace(" ", "%20");
-         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
-          HttpClient httpclient = new DefaultHttpClient();
-          HttpGet httppost= new HttpGet();;
-         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
-    	//HttpGet httppost = new HttpGet(mURL[0]);
-         	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
+        	HttpClient httpclient = new DefaultHttpClient();
+          	HttpGet httppost= new HttpGet();;
+         	Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
+         	httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
          	
          
          Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
@@ -390,13 +379,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
                 String jsonResponse = EntityUtils.toString(response.getEntity());
 
                 JSONObject jsonObject = new JSONObject(jsonResponse);
-                //String tmp=jsonObject.getString("user");
-                	//showMessageInvalidRegister();
-                /*{"uid":"253","uri":"http://www.kitchapp.es/?q=json/user/253"}*/
-                /*{"form_errors":{"name":"El nombre <em class=\"placeholder\">edu</em> ya se encuentra en uso.","mail":"La direcci\u00f3n de correo <em class=\"placeholder\">edu1@hotmail.com</em> ya est\u00e1 registrada. <a href=\"/?q=user/password\">\u00bfHa olvidado su contrase\u00f1a?</a>"}}*/
-                /*{"form_errors":{"name":"El nombre <em class=\"placeholder\">mayra</em> ya se encuentra en uso.","mail":"La direcci\u00f3n de correo <em class=\"placeholder\">majuma22@gmail.com</em> ya est\u00e1 registrada. <a href=\"/?q=user/password\">\u00bfHa olvidado su contrase\u00f1a?</a>"}}*/
-                //read the session information
-                
                 session_name=jsonObject.getString("session_name");
                 session_id=jsonObject.getString("sessid");
                 return 0;
@@ -408,64 +390,7 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
             return 0;
         }  	
-        	/*encryptedPassword=httpGetData(urls[0]);
-        	return httpGetData(urls[0]);*/
+        	
         }
         
-       // onPostExecute displays the results of the AsyncTask.
-        //@Override
-        protected void onPostExecute(Integer result) {
-        	/*Intent intent = new Intent(Registro.this,PantallaTransicion.class);
-        	startActivity(intent);
-			finish();*/
-        	
-            
-           
-       }
-
-	
-	
-	/*public static String httpGetData(String mURL) {
-        //String response="";
-		 InputStream inputStream = null;
-	     String result = "";
-	     try {
-	 
-	            // create HttpClient
-	            HttpClient httpclient = new DefaultHttpClient();
-	 
-	            // make GET request to the given URL
-	            HttpResponse httpResponse = httpclient.execute(new HttpGet(mURL));
-	 
-	            // receive response as inputStream
-	            inputStream = httpResponse.getEntity().getContent();
-	 
-	            // convert inputstream to string
-	            if(inputStream != null)
-	                result = convertInputStreamToString(inputStream);
-	            else
-	                result = "Did not work!";
-	 
-	     } 
-	     catch (Exception e) {
-	            Log.d("InputStream", e.getLocalizedMessage());
-	     }
-	 
-	     return result;
-    
-    }  
-	
-	 
-	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-	        String line = "";
-	        String result = "";
-	        while((line = bufferedReader.readLine()) != null)
-	            result += line;
-	 
-	        inputStream.close();
-	        return result;
-	 
-	    
-	}*/
 }
