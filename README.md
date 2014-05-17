@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 KitchApp-Android
 ================
 
-Code of the Android Application.
-<<<<<<< HEAD
-=======
-
->>>>>>> Rama-Vivi-Android
-=======
 General Description
 ===================
 
@@ -30,5 +23,4 @@ JDK Java Development Kit 1.6 or greater to build Java and Android apps.
 Code
 ====
 
-Code of the Android Application.
->>>>>>> Rama-Lorena-Android
+Code of the Android Application
