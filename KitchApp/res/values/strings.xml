@@ -39,18 +39,13 @@
     <string name="back">Volver</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
     <string name="title_activity_add_manualmente">AddManualmenteActivity</string>
-<<<<<<< HEAD
     <string name="dialog_header">Crear ListaCompra</string>
-=======
->>>>>>> Rama-Lorena-Android
     <string name="nameOfList">Añadir nuevaLista</string>
     <string name="addProduct">Añadir artículo</string>
     <string name="create">Crear</string>
     <string name="remove">Eliminar</string>
     <string name="product1">Articulo1</string>
     <string name="CantProducts">Articulos</string>
-<<<<<<< HEAD
-=======
     <string name="listadelacompra">Lista de la compra</string>
     <string name="accept">Aceptar</string>
     <string name="delete">Eliminar</string>
@@ -58,5 +53,4 @@
     <string name="categorySelected">Seleccionar categoría</string>
     <string name="search">Buscar</string>
    
->>>>>>> Rama-Lorena-Android
 </resources>
