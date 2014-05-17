@@ -15,17 +15,6 @@
 	        android:orientation="vertical" >       	
 			
 		<LinearLayout 
-<<<<<<< HEAD
-	            android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:background="@color/lightGreen"		            
-		        android:orientation="horizontal"
-		        android:padding="30dp" 
-		        android:layout_marginBottom="20dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp" 
-		        android:layout_marginTop="30dp">
-=======
 	                android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
 		        android:background="@color/lightGreen"		            
@@ -35,20 +24,6 @@
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
 
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
-		            
-		    <!-- Distribución de 50% y 50% respectivamente 
-			para los elementos agregados al layout. 
-			El 100% del espacio disponible para estos elementos (botones),
-			corresponde al layout_width del LinearLayout con un 
-			valor de fill_parent.
-			El valor para el layout_width de los botones lo hemos definido 
-			con 0dp. Eso nos ayuda a decirle a nuestro diseño que resalte 
-			la propiedad del peso y pueda distribuir equitativamente los 
-			componentes sin importar lo extenso del contenido que tenga cada
-			“celda”, tal y como si se trataran de porcentajes. 
-			-->
-		    	
 		    	<Button
 		    	        android:id="@+id/button1"
 		    		android:layout_width="0dp"
@@ -69,18 +44,10 @@
 		        android:background="@color/lightGreen"
 		        android:orientation="horizontal"
 		        android:padding="20dp" 
-<<<<<<< HEAD
-		        android:layout_marginBottom="30dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp" 
-		        android:layout_marginTop="30dp" >
-				    
-=======
 		        android:layout_marginBottom="20dp"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
 
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 			<Button
 			        android:id="@+id/button2"
 			        android:layout_width="0dp"
@@ -101,18 +68,10 @@
 		        android:background="@color/lightGreen"
 	                android:orientation="horizontal"
 		        android:padding="20dp" 
-<<<<<<< HEAD
-		        android:layout_marginBottom="30dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp"
-		        android:layout_marginTop="30dp" >
-				    
-=======
 		        android:layout_marginBottom="20dp"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
 
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 			<Button
 			        android:id="@+id/button3"
 			        android:layout_width="0dp"
@@ -133,18 +92,10 @@
 		        android:background="@color/lightGreen"
 	                android:orientation="horizontal"
 		        android:padding="20dp" 
-<<<<<<< HEAD
-		        android:layout_marginBottom="30dp"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginRight="20dp"
-		        android:layout_marginTop="30dp" >
-				    
-=======
 		        android:layout_marginBottom="20dp"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
-	    
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
+
 			<Button
 			        android:id="@+id/button4"
 			        android:layout_width="0dp"
