@@ -72,7 +72,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 				helper.close();
 			}
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
-			switch (tipoCat) {1
+			switch (tipoCat) {
 			case 1:
 				title.setText("Lacteos");
 				break;
