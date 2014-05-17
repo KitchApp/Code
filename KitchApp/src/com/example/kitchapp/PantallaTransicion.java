@@ -1,10 +1,17 @@
 package com.example.kitchapp;
 
 import android.app.Activity;
+<<<<<<< HEAD
+=======
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
+<<<<<<< HEAD
 import android.widget.ProgressBar;
 
 public class PantallaTransicion extends Activity {
@@ -12,10 +19,30 @@ public class PantallaTransicion extends Activity {
 	private AccesoBBDD tarea;
 	private ProgressBar barra;
 	
+=======
+import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+public class PantallaTransicion extends Activity {
+	
+	private ProgressDialog pDialog;	
+	private AccesoBBDD tarea;
+	private ProgressBar barra;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pantalla_transicion);
+<<<<<<< HEAD
+=======
+		
+		/*pDialog = new ProgressDialog(PantallaTransicion.this);
+        pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        pDialog.setMessage("Procesando...");
+        //pDialog.setCancelable(true);
+        pDialog.setMax(100);*/
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		barra=(ProgressBar)findViewById(R.id.progressBar1);
         tarea = new AccesoBBDD();
         tarea.execute();

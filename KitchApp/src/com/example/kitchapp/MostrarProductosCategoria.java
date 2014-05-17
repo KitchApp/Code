@@ -47,6 +47,10 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 	private Button cancel;
 	private Button decrement;
 	private Button increment;
+<<<<<<< HEAD
+=======
+	private int cantFinal;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	private AlertDialog.Builder builder;
 	private Integer tipoCat;
 	private static final int REQUEST_CODE = 1234;
@@ -55,7 +59,12 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 	ListView textlist;
 	ArrayList<String> matches_text;
 	private boolean barCode = false;
+<<<<<<< HEAD
 	
+=======
+	private boolean search = false;
+
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -123,6 +132,49 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 
 			}
 		}
+<<<<<<< HEAD
+=======
+
+		// helper.close();
+
+		/*
+		 * Bundle extra = this.getIntent().getExtras();
+		 * 
+		 * if (extra!=null && extra.getInt("key") != 0) { int key =
+		 * extra.getInt("key"); if (key == 1) { //initializeArrayList(tipoCat);
+		 * ItemProducto item = new
+		 * ItemProducto(products.size(),extra.getString("nameProduct"
+		 * ),extra.getInt("cantProduct"),1,false); boolean encontrado = false;
+		 * int i = 0; int cantProductModify = 0; while (i<products.size() &&
+		 * !encontrado){ ItemProducto prod = products.get(i); String name =
+		 * prod.getNombre().toLowerCase(); if
+		 * (name.equals(item.getNombre().toLowerCase())) { encontrado = true;
+		 * cantProductModify = prod.getCantidad() + item.getCantidad(); } i++; }
+		 * if (!encontrado) { products.add(item); SQLiteDatabase tmp1 =
+		 * helper.open(); if (tmp1!=null){
+		 * helper.insertProducts(item.getNombre()
+		 * ,item.getCantidad(),tipoCat,"","insertPantry",1); helper.close(); }
+		 * 
+		 * } else { modifyProduct();
+		 * products.get(i-1).setCantidad(cantProductModify); SQLiteDatabase tmc
+		 * = helper.open(); if (tmc!=null){
+		 * helper.updateProduct(item.getNombre()
+		 * ,item.getNombre(),cantProductModify); helper.close(); }
+		 * 
+		 * } }
+		 * 
+		 * }
+		 */
+
+		/*
+		 * TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
+		 * link_atras.setOnClickListener(this);
+		 */
+		/*
+		 * Button button_add=(Button)findViewById(R.id.button_add);
+		 * button_add.setOnClickListener(this);
+		 */
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		list = (ListView) findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -130,11 +182,23 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 		// Asignamos el Adapter al ListView, en este punto hacemos que el
 		// ListView muestre los datos que queremos.
 		list.setAdapter(adapter);
+<<<<<<< HEAD
+=======
+		// setContentView(R.layout.activity_mostrar_productos_categoria);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		list.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int position, long id) {
+<<<<<<< HEAD
+=======
+				// TODO Auto-generated method stub
+				// Toast.makeText(getApplicationContext(), "Ha pulsado el item "
+				// + position, Toast.LENGTH_SHORT).show();
+
+				cantFinal = products.get(position).getCantidad();
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 				modificarProducto(arg1, position);
 
 			}
@@ -173,6 +237,14 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 			}
 			return true;
 			
+<<<<<<< HEAD
+=======
+//		case R.id.search:
+//			Intent j = new Intent(this, Bar_Search.class);
+//			startActivity(j);
+//			return true;
+
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -211,9 +283,22 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 
 	}
 
+<<<<<<< HEAD
 
 	@Override
 	public void onClick(View v) {
+=======
+	/*
+	 * @Override public void onClick(View v) { // TODO Auto-generated method
+	 * stub
+	 * 
+	 * }
+	 */
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		switch (v.getId()) {
 		case R.id.button_save:
 			ItemProducto prod = products.get(pos);
@@ -609,6 +694,14 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 					}
 				}
 
+<<<<<<< HEAD
+=======
+				/*
+				 * Intent intent = new
+				 * Intent(this,MostrarProductosCategoria.class);
+				 * startActivity(intent);
+				 */
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 				list = (ListView) findViewById(R.id.listViewProducts);
 				ItemProductoAdapter adapter = new ItemProductoAdapter(this,
 						products);

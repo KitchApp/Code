@@ -23,6 +23,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
+=======
+import android.widget.ListAdapter;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +52,7 @@ public class Bar_Search extends Activity implements OnClickListener {
 
 		txt_search = (EditText) findViewById(R.id.txt_barSearch);
 		txt_product = (TextView) findViewById(R.id.txt_product);
+<<<<<<< HEAD
 		txt_product.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -67,6 +72,9 @@ public class Bar_Search extends Activity implements OnClickListener {
 			}
 
 		});
+=======
+		txt_quantity = (TextView) findViewById(R.id.txt_quantity);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		Button button_ok = (Button) findViewById(R.id.button_ok);
 		button_ok.setOnClickListener(this);
 		Button button_Voice = (Button) findViewById(R.id.button_Voice);
@@ -89,7 +97,12 @@ public class Bar_Search extends Activity implements OnClickListener {
 
 		case R.id.button_ok:
 			String prod = txt_search.getText().toString();
+<<<<<<< HEAD
 			showProduct(prod, "name");
+=======
+			if (prod.length() != 0)
+				showProduct(prod, "name");
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			break;
 
 		case R.id.button_Voice:
@@ -269,6 +282,7 @@ public class Bar_Search extends Activity implements OnClickListener {
 
 	}
 
+<<<<<<< HEAD
 
 	public void modifyProduct(View view) {
 
@@ -295,4 +309,6 @@ public class Bar_Search extends Activity implements OnClickListener {
 
 	}
 
+=======
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 }

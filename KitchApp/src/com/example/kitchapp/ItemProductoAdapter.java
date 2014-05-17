@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
+<<<<<<< HEAD
+=======
+import android.widget.Toast;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 public class ItemProductoAdapter extends BaseAdapter {
   protected Activity activity;

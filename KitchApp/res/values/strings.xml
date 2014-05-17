@@ -51,6 +51,9 @@
     <string name="dialog_header">Nombre de la lista</string>
     <string name="categorySelected">Seleccionar categoría</string>
     <string name="search">Buscar</string>
+<<<<<<< HEAD
     <string name="home">Inicio</string>
+=======
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
    
 </resources>

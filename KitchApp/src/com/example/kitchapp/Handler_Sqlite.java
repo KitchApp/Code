@@ -97,7 +97,13 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		SQLiteDatabase db=this.getReadableDatabase();
 		if (option.equals("readPantry")) {
+<<<<<<< HEAD
 			String args[]={key.toString()};
+=======
+			String columnas[]={_ID,"name","cant"};
+			String args[]={key.toString()};
+			//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
 			int id, idName, idNum, idCat;
 			id=c.getColumnIndex(_ID);
@@ -106,6 +112,10 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 			idCat=c.getColumnIndex("idCat");
 		
 			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+<<<<<<< HEAD
+=======
+				//c.getString(idCat);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 				result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum),c.getInt(idCat),false));
 			}
 		}
@@ -113,8 +123,14 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 			System.out.println("holaaaa");
 			String args[]={key.toString()};
 			System.out.println(args[0]);
+<<<<<<< HEAD
 			int idProduct,cant;
 			Cursor c=db.query("listHaveProducts", null, "idList=?", args, null, null, null);
+=======
+			int idL,idProduct,cant;
+			Cursor c=db.query("listHaveProducts", null, "idList=?", args, null, null, null);
+			idL = c.getColumnIndex("idList");
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			idProduct = c.getColumnIndex("idProduct");
 			cant = c.getColumnIndex("cant");
 			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
@@ -133,6 +149,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	}
 	
 	public ArrayList<ShoppingListItem> readLists(){
+<<<<<<< HEAD
 		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
 		SQLiteDatabase db=this.getReadableDatabase();
 		Integer listName;
@@ -143,6 +160,32 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 			lists.add(new ShoppingListItem(c.getString(listName)));
 		}
 		return lists;		
+=======
+		//No utilizo por ahora los argumentos
+		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
+		SQLiteDatabase db=this.getReadableDatabase();
+		//String args[]={key.toString()};
+		//System.out.println(args[0]);
+		Integer listName;
+		//String[] valores_recuperar = {"name"};
+		Cursor c=db.query("listShopping", null, null, null, null, null, null,null);
+		listName = c.getColumnIndex("name");
+		//c.moveToFirst();
+		
+		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+			//c.getString(idCat);
+			lists.add(new ShoppingListItem(c.getString(listName)));
+		}
+		/*c.moveToFirst();
+	
+        do {
+        	String tmp=c.getString(listName);
+        	lists.add(new ShoppingListItem(c.getString(listName)));
+        } while (c.moveToNext());*/
+		return lists;
+		
+		
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	}
 	
 	public boolean readUser(String nameUser) {
@@ -161,9 +204,18 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={nameUser};
 		Cursor c=db.query("users", null, "name=?", args, null, null, null);
+<<<<<<< HEAD
 		int password;
 		password = c.getColumnIndex("password");
 	
+=======
+		int id,name,password,email;
+		id = c.getColumnIndex(_ID);
+		name = c.getColumnIndex("name");
+		password = c.getColumnIndex("password");
+		email = c.getColumnIndex("email");
+		
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		c.moveToFirst();
 		
 		return c.getString(password);
@@ -172,8 +224,16 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		
 	public boolean exist(String data, String table){
 		
+<<<<<<< HEAD
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={data};
+=======
+		String columnas[]={_ID,"name","barCode"};
+	
+		SQLiteDatabase db=this.getReadableDatabase();
+		String args[]={data};
+		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		Cursor c=db.query(table, null, "barCode=?", args, null, null, null);
 	
 		return (c.moveToFirst());
@@ -189,6 +249,11 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		int idName=c.getColumnIndex("name");
 		int idBarCode=c.getColumnIndex("barCode");
 		c.moveToFirst();
+<<<<<<< HEAD
+=======
+		String tmp1=c.getString(idName);
+		String tmp2=c.getString(idBarCode);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		result.add((c.getString(idName)));
 		result.add((c.getString(idBarCode)));
 		
@@ -242,8 +307,16 @@ public Integer getIDProduct(String name,String col) {
 	SQLiteDatabase db=this.getReadableDatabase();
 	String args[]={name};
 	Cursor c=db.query("productsList", null, col + "=?", args, null, null, null);
+<<<<<<< HEAD
 	int id;
 	id = c.getColumnIndex(_ID);
+=======
+	int id,nameP,idCat,barcode;
+	id = c.getColumnIndex(_ID);
+	nameP = c.getColumnIndex("name");
+	idCat = c.getColumnIndex("idCat");
+	barcode = c.getColumnIndex("barCode");
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	
 	c.moveToFirst();
 	
@@ -368,17 +441,29 @@ public boolean existProductList(String name) {
 		
 		SQLiteDatabase db= this.getReadableDatabase();
 		String args[]={data};
+<<<<<<< HEAD
 //		Cursor c = db.query(table, null, "name=?", args, null, null, null);
 		Cursor c = db.query(table, null, col+"=?", args, null, null, null);
+=======
+		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
+		Cursor c = db.query(table, null, "name=?", args, null, null, null);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		ItemProducto p = null;
 		int id = c.getColumnIndex(_ID);
 		int n = c.getColumnIndex("name");
 		int q = c.getColumnIndex("cant");
 		if (c.moveToFirst()) {
+<<<<<<< HEAD
+=======
+//			int id = c.getColumnIndex("_ID");
+//			int q = c.getColumnIndex("cant");
+//			int n = c.getColumnIndex("name");
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			p = new ItemProducto(c.getInt(id),c.getString(n),c.getInt(q));
 		};	
 		return p;
 	}
+<<<<<<< HEAD
 	
 	public boolean existList(String table, String data){
 			
@@ -397,4 +482,6 @@ public boolean existProductList(String name) {
 		
 		this.getWritableDatabase().update("listShopping", tmp, "name=?", args);
 	}
+=======
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 }

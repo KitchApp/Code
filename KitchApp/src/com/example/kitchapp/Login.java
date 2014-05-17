@@ -5,29 +5,74 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+<<<<<<< HEAD
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+=======
+import java.util.HashMap;
+import java.util.concurrent.ExecutionException;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicResponseHandler;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+<<<<<<< HEAD
 import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+=======
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+
+
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.EditText;
 
 public class Login extends Activity {
 
+=======
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class Login extends Activity {
+	
+	private HashMap<String,String> users;
+	private EditText userName;
+	private EditText password;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 	Boolean registrado=false;
 
@@ -40,11 +85,28 @@ public class Login extends Activity {
 		// setting default screen to login.xml
 		setContentView(R.layout.activity_login);
 
+<<<<<<< HEAD
+=======
+		
+		userName = (EditText)findViewById(R.id.editTextuserName);
+		password = (EditText)findViewById(R.id.editTextPassword);
+
+		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
+		Button b1=(Button)findViewById(R.id.btnLogin);
+		
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	}
 
 		
 
 	public void intento_logueo(View view) {
+<<<<<<< HEAD
+=======
+		String name = userName.getText().toString(); 
+		String key = password.getText().toString();
+		
+		
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		new HttpAsyncTask().execute();
 	}
 	
@@ -131,6 +193,7 @@ public class Login extends Activity {
        // onPostExecute displays the results of the AsyncTask.
        @Override
         protected void onPostExecute(Integer result) {
+<<<<<<< HEAD
             if(registrado){
     			Intent intent = new Intent(Login.this,PantallaTransicion.class);
     	    	startActivity(intent);
@@ -138,6 +201,22 @@ public class Login extends Activity {
     		}
     		else
     			errorLogging();      
+=======
+            //Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
+            //apellido.setText(result);
+        	if(registrado){
+    			Intent intent = new Intent(Login.this,PantallaTransicion.class);
+    	    	startActivity(intent);
+    			finish();
+    			
+    			/*Toast.makeText(getBaseContext(), "Perfecto!", Toast.LENGTH_LONG).show();
+    			Intent i = new Intent(this, PantallaTransicion.class);
+    			startActivity(i);*/
+    		}
+    		else
+    			errorLogging();
+            
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
             
        }
     }

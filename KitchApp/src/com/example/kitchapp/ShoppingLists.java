@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CheckBox;
@@ -24,6 +25,15 @@ import android.widget.TextView;
 
 public class ShoppingLists extends ActionBarActivity {
 
+=======
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ListView;
+
+public class ShoppingLists extends ActionBarActivity implements OnClickListener{
+	
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	private ArrayList<ShoppingListItem> shoppingLists;
 	private ListView list;
 	private ShoppingListAdapter adapter;
@@ -34,6 +44,7 @@ public class ShoppingLists extends ActionBarActivity {
 	private String listTableName = "listshopping";
 	private String column = "name";
 	private Context mycontext;
+<<<<<<< HEAD
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -68,14 +79,59 @@ public class ShoppingLists extends ActionBarActivity {
 		inflater.inflate(R.menu.menu_action_bar, menu);
 		add_Item = menu.findItem(R.id.add_Product);
 		return super.onCreateOptionsMenu(menu);
+=======
+	
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		mycontext=this;
+		setContentView(R.layout.activity_shopping_lists);
+		shoppingLists = new ArrayList<ShoppingListItem>();
+		helper=new Handler_Sqlite(this);
+		initializeArrayList(1);
+		list = (ListView) findViewById(R.id.listView_lists);
+		adapter = new ShoppingListAdapter(this, shoppingLists);  // Mirar si hay problemas de compatibilidad entre Activity y SherlockActivity
+		list.setAdapter(adapter);	
+		
+		
+		
+	}
+	
+	public void initializeArrayList(Integer idList) {
+		
+		shoppingLists=helper.readLists();
+	}
+        
+	
+	
+	@Override
+	public void onClick(View arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_action_bar, menu);
+        add_Item = menu.findItem(R.id.add_Product);
+        return super.onCreateOptionsMenu(menu);
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+<<<<<<< HEAD
 		// cambiar add_Product por add(para que sea más general)
 		case R.id.add_Product:
 			open_Dialog();
+=======
+		//cambiar add_Product por add(para que sea más general)
+		case R.id.add_Product:
+			open_Dialog();
+			//add_List();
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			return true;
 
 		case R.id.delete_Product:
@@ -98,23 +154,48 @@ public class ShoppingLists extends ActionBarActivity {
 	}
 
 	private void showCheckBox() {
+<<<<<<< HEAD
 		for (int i = 0; i < list.getChildCount(); i++) {
+=======
+		for (int i=0;i<list.getChildCount();i++) {
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			View v = list.getChildAt(i);
 			CheckBox check = (CheckBox) v.findViewById(R.id.checkBox_list);
 			check.setVisibility(View.VISIBLE);
 		}
 	}
 
+<<<<<<< HEAD
 	private void delete_List() {
 
 		for (int i = 0; i < shoppingLists.size(); i++) {
 			ShoppingListItem item = shoppingLists.get(i);
+=======
+//	private void add_List() {
+//		if (listName == "")
+//			listName = "Lista " + shoppingLists.size();
+//		shoppingLists.add(new ShoppingListItem(listName));
+//		helper.insertLists(listName);
+//		list.setAdapter(adapter);
+//	}
+
+	private void delete_List() {
+				
+		for (int i=0;i<shoppingLists.size();i++) {
+			ShoppingListItem item = shoppingLists.get(i);
+//			System.out.println(item.getListName());
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			if (item.isChecked()) {
 				shoppingLists.remove(i);
 				i--;
 				SQLiteDatabase db = helper.open();
+<<<<<<< HEAD
 				if (db != null) {
 					helper.remove(listTableName, column, item.getListName());
+=======
+				if (db!=null) {
+					helper.remove(listTableName,column,item.getListName());
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 					helper.close();
 				}
 			}
@@ -123,6 +204,10 @@ public class ShoppingLists extends ActionBarActivity {
 		adapter = new ShoppingListAdapter(this, shoppingLists);
 		list.setAdapter(adapter);
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 	public void hideCheckBox() {
 		for (int i = 0; i < list.getChildCount(); i++) {
@@ -147,6 +232,7 @@ public class ShoppingLists extends ActionBarActivity {
 
 		// set dialog message
 		alertDialogBuilder
+<<<<<<< HEAD
 				.setCancelable(false)
 				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
@@ -232,6 +318,31 @@ public class ShoppingLists extends ActionBarActivity {
 								dialog.cancel();
 							}
 						});
+=======
+			.setCancelable(false)
+			.setPositiveButton("OK",
+			  new DialogInterface.OnClickListener() {
+			    public void onClick(DialogInterface dialog,int id) {
+				// get user input and set it to result
+				// edit text
+			    	
+			    listName = userInput.getText().toString();
+			    helper.insertLists(listName);
+			    int idLista=helper.getIdList(listName);
+			    Intent intent = new Intent(mycontext, MostrarProductosLista.class);
+			    intent.putExtra("idList", idLista);
+			    mycontext.startActivity(intent);
+			    //refreshListView(userInput.getText().toString());
+			    
+			    }
+			  })
+			.setNegativeButton("Cancel",
+			  new DialogInterface.OnClickListener() {
+			    public void onClick(DialogInterface dialog,int id) {
+				dialog.cancel();
+			    }
+			  });
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 		// create alert dialog
 		AlertDialog alertDialog = alertDialogBuilder.create();
@@ -239,6 +350,7 @@ public class ShoppingLists extends ActionBarActivity {
 		// show it
 		alertDialog.show();
 
+<<<<<<< HEAD
 	}
 	
 	public void modifyList(int position, String wrong){
@@ -282,5 +394,8 @@ public class ShoppingLists extends ActionBarActivity {
 		builder.create();
 		builder.show();
 	}
+=======
+			}
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 }

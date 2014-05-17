@@ -1,6 +1,11 @@
 package com.example.kitchapp;
 
 import android.app.Activity;
+<<<<<<< HEAD
+=======
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+>>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
