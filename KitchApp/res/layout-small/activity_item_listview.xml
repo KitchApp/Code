@@ -3,7 +3,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal" >
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
     <CheckBox 
         android:id="@+id/checkBox_Product"
         android:layout_width="wrap_content"
@@ -26,5 +30,9 @@
         android:text="5"
         android:textSize="20sp" 
         android:textColor="@color/black"/>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 </LinearLayout>

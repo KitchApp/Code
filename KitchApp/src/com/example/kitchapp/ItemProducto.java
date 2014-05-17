@@ -72,7 +72,11 @@ public class ItemProducto {
   public void setCantidad(int cantidad) {
 	  this.cantidad = cantidad;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
   public boolean isSelected() {
 	  return selected;
   }
@@ -88,6 +92,10 @@ public class ItemProducto {
   public void setCategory(int category) {
 	  this.category = category;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
      
  /* public String getTipo() {
     return tipo;

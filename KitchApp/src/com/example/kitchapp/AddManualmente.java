@@ -51,6 +51,10 @@ public class AddManualmente extends Activity implements OnClickListener {
 					errorCant();
 				}
 				else {
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 					SQLiteDatabase tmp = helper.open();
 					if (tmp != null) {
 						if (helper.existProductAdded(nameProduct.getText().toString())) {
@@ -64,6 +68,12 @@ public class AddManualmente extends Activity implements OnClickListener {
 						helper.close();
 					}
 					Intent i = new Intent(this,MostrarProductosCategoria.class);
+<<<<<<< HEAD
+=======
+					/*i.putExtra("nameProduct",nameProduct.getText().toString());
+					i.putExtra("cantProduct",cant);
+					i.putExtra("key",1);*/
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 					i.putExtra("idCat",this.getIntent().getExtras().getInt("idCat"));
 					startActivity(i);
 				}

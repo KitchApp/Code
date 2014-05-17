@@ -1,7 +1,10 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 
+=======
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -55,11 +58,20 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 	ListView textlist;
 	ArrayList<String> matches_text;
 	private boolean barCode = false;
+<<<<<<< HEAD
 	
+=======
+	private boolean search = false;
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mostrar_productos_categoria);
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 		helper = new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 
@@ -73,6 +85,10 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 			}
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 			case 1:
 				title.setText("Lacteos");
 				break;
@@ -211,9 +227,23 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 
 	}
 
+<<<<<<< HEAD
 
 	@Override
 	public void onClick(View v) {
+=======
+	/*
+	 * @Override public void onClick(View v) { // TODO Auto-generated method
+	 * stub
+	 * 
+	 * }
+	 */
+
+
+	@Override
+	public void onClick(View v) {
+		
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 		switch (v.getId()) {
 		case R.id.button_save:
 			ItemProducto prod = products.get(pos);
@@ -670,6 +700,10 @@ public class MostrarProductosCategoria extends ActionBarActivity implements
 		list = (ListView) findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter = new ItemProductoAdapter(this, products);
 		list.setAdapter(adapter);
+<<<<<<< HEAD
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 	}
 
 }

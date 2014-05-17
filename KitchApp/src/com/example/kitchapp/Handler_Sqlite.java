@@ -18,11 +18,19 @@ import static android.provider.BaseColumns._ID;
 public class Handler_Sqlite extends SQLiteOpenHelper{
 
 
+<<<<<<< HEAD
 	private static final String nameBD = "KitchApp-BaseDD1";
 
 	Context myContext;
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,3);
+=======
+	private static final String nameBD = "KitchApp-BaseDD";
+
+	Context myContext;
+	public Handler_Sqlite(Context ctx){
+		super(ctx,nameBD, null,1);
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 		myContext = ctx;
 	}
 	
@@ -132,6 +140,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		return result;
 	}
 	
+<<<<<<< HEAD
 	public ArrayList<ShoppingListItem> readLists(){
 		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
 		SQLiteDatabase db=this.getReadableDatabase();
@@ -148,6 +157,12 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	public boolean readUser(String nameUser) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		
+=======
+	
+	public boolean readUser(String nameUser) {
+		SQLiteDatabase db=this.getReadableDatabase();
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 		String args[]={nameUser};
 		Cursor c=db.query("users", null, "name=?", args, null, null, null);
 		if (c.getCount() == 0)
@@ -271,7 +286,7 @@ public boolean existProductList(String name) {
 
 
 
-	//método temporal
+	//mï¿½todo temporal
 	public void insertLists(String name){
 		ContentValues registro=new ContentValues();
 		
@@ -379,6 +394,7 @@ public boolean existProductList(String name) {
 		};	
 		return p;
 	}
+<<<<<<< HEAD
 	
 	public boolean existList(String table, String data){
 			
@@ -397,4 +413,6 @@ public boolean existProductList(String name) {
 		
 		this.getWritableDatabase().update("listShopping", tmp, "name=?", args);
 	}
+=======
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 }

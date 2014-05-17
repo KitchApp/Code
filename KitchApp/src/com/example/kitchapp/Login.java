@@ -6,14 +6,28 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import org.apache.http.HttpResponse;
+<<<<<<< HEAD
+=======
+import org.apache.http.client.ClientProtocolException;
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+<<<<<<< HEAD
+=======
+import org.apache.http.impl.client.BasicResponseHandler;
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+<<<<<<< HEAD
+=======
+import org.json.JSONArray;
+import org.json.JSONException;
+>>>>>>> Rama-Lorena-Android
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
 import org.json.JSONObject;
 
 import android.app.Activity;
@@ -78,9 +92,13 @@ public class Login extends Activity {
    
 
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
+<<<<<<< HEAD
 		
 
 		
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
         @Override
         protected Integer doInBackground(String... urls) {
         	
@@ -128,7 +146,11 @@ public class Login extends Activity {
             return 0;
         }
 
+<<<<<<< HEAD
        // onPostExecute displays the results of the AsyncTask.
+=======
+
+>>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
        @Override
         protected void onPostExecute(Integer result) {
             if(registrado){
