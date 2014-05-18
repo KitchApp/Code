@@ -39,10 +39,7 @@
     <string name="back">Volver</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
     <string name="title_activity_add_manualmente">AddManualmenteActivity</string>
-<<<<<<< HEAD
-=======
     <string name="dialog_header">Crear ListaCompra</string>
->>>>>>> c6cdd3dc9d1dde44a6ac404340440f340d8c9e81
     <string name="nameOfList">Añadir nuevaLista</string>
     <string name="addProduct">Añadir artículo</string>
     <string name="create">Crear</string>
