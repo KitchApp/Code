@@ -8,37 +8,52 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.speech.RecognizerIntent;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MostrarProductosCategoria extends Activity implements OnClickListener {
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+
+public class MostrarProductosCategoria extends ActionBarActivity  implements OnClickListener {
 	
-	private ListView list;
+    private ListView list;
     private ArrayList<ItemProducto> products;
     private int pos;
-    private TextView cantProduct;
+    private boolean pressedButtonDelete;
+    private MenuItem item_add;
+    private EditText cantProduct;
+    private EditText nameProduct;
     private Button save;
     private Button cancel;
+    private Button decrement;
+    private Button increment;
     private int cantFinal;
     private AlertDialog.Builder builder;
     private Integer tipoCat;
-    Handler_Sqlite helper=new Handler_Sqlite(this);
     private static final int REQUEST_CODE = 1234;
+    Handler_Sqlite helper;
 	Dialog match_text_dialog;
 	ListView textlist;
 	ArrayList<String> matches_text;
@@ -47,40 +62,18 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_mostrar_productos_categoria);
+		pressedButtonDelete = false;
+		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
-		
-		
-		/*SQLiteDatabase tmp=helper.open();	
-		if (tmp!=null){
-				helper.insertProducto("Yogurt",2,1);
-				helper.insertProducto("Manzana",3,2 );
-				helper.insertProducto("Magdalena",5,3);
-				helper.insertProducto("Leche",6,1);
-				helper.insertProducto("coca-cola", 4, 4);
-				helper.insertProducto("Pollo", 1, 5);
-				helper.insertProducto("Merluza", 1, 6);
-				helper.insertProducto("Red bull", 4, 4);
-				helper.insertProducto("Arroz largo", 4, 8);
-				helper.insertProducto("Guisantes", 1, 9);
-				helper.insertProducto("Gel ba�o", 4, 10);
-				helper.insertProducto("Macarrones", 2, 8);
-				helper.insertProducto("Helado Fresa", 4, 9);
-		}*/
-				/*helper.insertCategory(1,"L�cteos")
-				helper.insertCategory(2,"Frutas y Verduras")
-				helper.insertCategory(3,"Pan y Boller�a")
-				helper.insertCategory(4,"Bebidas")
-				helper.insertCategory(5,"Carnes")
-				helper.insertCategory(6,"Pescados")
-				helper.insertCategory(7,"Salsas y condimentos")
-				helper.insertCategory(8,"Arroces")
-				helper.insertCategory(9,"Congelados")
-				helper.insertCategory(10,"Varios")*/
 		
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
-			initializeArrayList(tipoCat);
+			SQLiteDatabase tmp = helper.open();
+			if (tmp != null) {
+				initializeArrayList(tipoCat);
+				helper.close();
+			}
 			TextView title = (TextView) findViewById(R.id.textView_Cat);
 			switch (tipoCat) {
 				case 1:
@@ -108,7 +101,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 7:
-					title.setText("Salsas y Condimentos");
+					title.setText("Condimentos");
 					break;
 
 				case 8:
@@ -120,65 +113,71 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 					break;
 
 				case 10:
-					title.setText("Varios");
+					title.setText("Salsas");
 					break;
 
-					
-			}
+				case 11:
+					title.setText("Drogueria");
+					break;
 			
+				case 12:
+					title.setText("Varios");
+					break;	
+
+			}
 		}
 			
-			
-		//}		
-			
-		
-		//helper.close();
+
+	//helper.close();
 		
 		
 		
-		Bundle extra = this.getIntent().getExtras();
+		/*Bundle extra = this.getIntent().getExtras();
 		
 		if (extra!=null && extra.getInt("key") != 0) {
 			int key = extra.getInt("key");
 			if (key == 1) {
 				//initializeArrayList(tipoCat);
-				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"));
+				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"),1,false);
 				boolean encontrado = false;
 				int i = 0;
+				int cantProductModify = 0;
 				while (i<products.size() && !encontrado){
 					ItemProducto prod = products.get(i);
 					String name = prod.getNombre().toLowerCase();
 					if (name.equals(item.getNombre().toLowerCase())) {
 						encontrado = true;
+						cantProductModify = prod.getCantidad() + item.getCantidad();
 					}
 					i++;
 				}
 				if (!encontrado) {
 					products.add(item);
-					SQLiteDatabase tmp = helper.open();	
-					if (tmp!=null){
-						helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
+					SQLiteDatabase tmp1 = helper.open();	
+					if (tmp1!=null){
+						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"","insertPantry",1);
 						helper.close();
 					}
 					
 				}
 				else {
-					errorProduct();
+					modifyProduct();
+					products.get(i-1).setCantidad(cantProductModify);
+					SQLiteDatabase tmc = helper.open();	
+					if (tmc!=null){
+						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
+						helper.close();
+					}
+					
 				}
 			}
-			else {
-				int posi = extra.getInt("posicion");
-				int cantProducto = extra.getInt("cantProduct");
-				ItemProducto producto = products.get(posi);
-				producto.setCantidad(cantProducto);
-				products.set(posi,producto);
-			}
-		}
+
+		}*/
 		
 		/*TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
 		link_atras.setOnClickListener(this);*/
-		Button button_add=(Button)findViewById(R.id.button_add);
-		button_add.setOnClickListener(this);
+		/*Button button_add=(Button)findViewById(R.id.button_add);
+		button_add.setOnClickListener(this);*/
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -193,8 +192,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 		        // TODO Auto-generated method stub
 		        //Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
-		        cantFinal = products.get(position).getCantidad();
-		        modificarProducto(arg1,position);
+		        
+		        	cantFinal = products.get(position).getCantidad();
+		        	modificarProducto(arg1,position);
 		 
 		    }
 		 
@@ -204,8 +204,39 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.mostrar_productos_categoria, menu);
-		return true;
+		MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_action_bar, menu);
+        item_add = menu.findItem(R.id.add_Product);
+        return super.onCreateOptionsMenu(menu);
+        
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		
+		switch (item.getItemId()) {
+			case R.id.add_Product:
+				alertDialogListView(true,0);
+				return true;
+				
+			case R.id.delete_Product:
+				if (pressedButtonDelete) {
+					item_add.setEnabled(true);
+					deleteProducts();
+					hideCheckBox();
+					pressedButtonDelete = false;
+				}
+				else {
+					item_add.setEnabled(false);
+					showCheckBox();
+					pressedButtonDelete = true;
+				}
+				return true;
+				
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+		
 	}
 	
 	public void modificarProducto(View view,int position) {
@@ -219,13 +250,19 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
         // Pass null as the parent view because its going in the dialog layout
 
         view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
-        cantProduct = (TextView) view.findViewById(R.id.cantProduct);
+        nameProduct = (EditText) view.findViewById(R.id.nameProductModify);
+        nameProduct.setText(products.get(position).getNombre());
+        cantProduct = (EditText) view.findViewById(R.id.cantProduct);
         cantProduct.setText(products.get(position).getCantidad() + "");
     	pos = position;
     	save = (Button) view.findViewById(R.id.button_save);
     	save.setOnClickListener(this);
     	cancel = (Button) view.findViewById(R.id.button_cancel);
     	cancel.setOnClickListener(this);
+    	decrement = (Button) view.findViewById(R.id.button_decrement);
+    	decrement.setOnClickListener(this);
+    	increment = (Button) view.findViewById(R.id.button_increment);
+    	increment.setOnClickListener(this);
         builder.setView(view);
                 
         
@@ -244,23 +281,25 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		// TODO Auto-generated method stub
 		switch(v.getId()) {
 			case R.id.button_save:
-				Intent intent = new Intent(this,MostrarProductosCategoria.class);
 				ItemProducto prod = products.get(pos);
-				intent.putExtra("posicion",pos);
-				intent.putExtra("cantProduct",prod.getCantidad());
-				intent.putExtra("key",1);
-				//intent.putExtra("productos",products);
-				startActivity(intent);
+				String nameLast = prod.getNombre();
+				prod.setNombre(nameProduct.getText().toString());
+				prod.setCantidad(Integer.parseInt(cantProduct.getText().toString()));
+				products.set(pos,prod);
+				SQLiteDatabase tmp = helper.open();
+				if (tmp != null) {
+					helper.updateProduct(nameLast,prod.getNombre(),prod.getCantidad());
+					helper.close();
+				}
+				Intent j = new Intent(this,MostrarProductosCategoria.class);
+				j.putExtra("idCat",tipoCat);
+				startActivity(j);
+				
 				break;
 			
 			case R.id.button_cancel:
-				ItemProducto produ = products.get(pos);
-            	produ.setCantidad(cantFinal);
-            	products.set(pos,produ);
             	Intent i = new Intent(this,MostrarProductosCategoria.class);
-				i.putExtra("posicion",pos);
-				i.putExtra("cantProduct",produ.getCantidad());
-				i.putExtra("key",1);
+            	i.putExtra("idCat",tipoCat);
 				startActivity(i);
 				break;
 			
@@ -277,11 +316,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 				incrementCant(v);
 				break;
 				
-			case R.id.button_add:
-
-				alertDialog(v);
-				break;
-				
+			/*case R.id.button_add:
+				alertDialogListView(true,0);
+				break;*/
 		}
             	
 				
@@ -289,8 +326,7 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	
 	private void initializeArrayList(Integer category) {
 	
-		
-		products=helper.read(category);
+		products=helper.readProducts(category,"readPantry");
 		
 		/*products.add(new ItemProducto(1,helper.read()[1],4,""));
 		products.add(new ItemProducto(2,helper.read()[2],3,""));
@@ -306,11 +342,9 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-		ItemProducto product = products.get(pos);
-		if (product.getCantidad() > 0) {
-			product.setCantidad(product.getCantidad()-1);
-			products.set(pos,product);
-			modificarProducto(view,pos);
+		if (Integer.parseInt(cantProduct.getText().toString()) > 0) {
+	        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())-1 + "");
+
 		}
 		
 	}
@@ -321,20 +355,18 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-		ItemProducto product = products.get(pos);
-		product.setCantidad(product.getCantidad()+1);
-		products.set(pos,product);
-		modificarProducto(view,pos);
+        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
+
 		
 	}
 	
-	public void errorProduct() {
+	public void modifyProduct() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    builder.setTitle("Error")
+	    builder.setTitle("Informacion")
 	            .setIcon(
 	                    getResources().getDrawable(
-	                            R.drawable.close))
+	                            android.R.drawable.ic_dialog_info))
 	            .setMessage("Producto ya existente en la despensa")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
@@ -348,21 +380,75 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
 	    builder.show();
 	}
 	
-	public void alertDialog(View v){
-		final String [] items = new String[] {"Manualmente", "Voz", "Codigo de barras" };
-	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
-	    ListAdapter adapter = new ItemAdapter(this, items, icons);
-	    
-        new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
-        	public void onClick(DialogInterface dialog, int item ) {
-        		if (item==0)
-        			addManualmente();
-        		else if (item == 1) {
-        			addVoice();
-        		}
-        			
-	        }
-	    }).show();
+	public void alertDialogListView(boolean full, int except){
+		
+	    if(full & except==0){
+	    	final String [] items = new String[] {"Manualmente", "Voz", "Codigo de barras" };
+		    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono, R.drawable.barras};
+		    ListAdapter adapter = new ItemAdapter(this, items, icons);
+		    
+	    	new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
+	        	public void onClick(DialogInterface dialog, int item ) {
+		        		if (item==0)
+		        			addManualmente();
+		        		else if (item == 1) {
+		        			addVoice();
+		        		}
+		        		else if(item==2){
+		        			addBarCode();
+		        		}
+	        			
+		        }
+		    }).show();
+	    }
+	    else{
+	    	if(except==1){
+	    		final String [] items = new String[] {"Voz", "Codigo de barras" };
+	    	    final Integer[] icons = new Integer[] {R.drawable.microfono, R.drawable.barras};
+	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
+	    	    
+	    		new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int item ) {
+			        		if (item==0)
+			        			addVoice();
+			        		else if (item == 1) {
+			        			addBarCode();
+			        		}        			
+			        }
+			    }).show();
+	    	}
+	    	else if(except==2){
+	    		final String [] items = new String[] {"Manualmente", "Codigo de barras" };
+	    	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.barras};
+	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
+	    	    
+	    		new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int item ) {
+			        		if (item==0)
+			        			addManualmente();
+			        		else if (item == 1) {
+			        			addBarCode();
+			        		}        			
+			        }
+			    }).show();
+	    	}
+	    	else if(except==3){
+	    		final String [] items = new String[] {"Manualmente", "Voz" };
+	    	    final Integer[] icons = new Integer[] {R.drawable.teclado_android, R.drawable.microfono};
+	    	    ListAdapter adapter = new ItemAdapter(this, items, icons);
+	    	    
+	    		new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
+		        	public void onClick(DialogInterface dialog, int item ) {
+			        		if (item==0)
+			        			addManualmente();
+			        		else if (item == 1) {
+			        			addVoice();
+			        		}        			
+			        }
+			    }).show();
+	    	}
+	    }
+
 	}
 	
 	
@@ -382,6 +468,12 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
        	else{
        		Toast.makeText(getApplicationContext(), "Please Connect to Internet", Toast.LENGTH_LONG).show();
        	}
+	}
+	
+	public void addBarCode(){
+		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
+
+		scanIntegrator.initiateScan();
 	}
 	
 	public boolean isConnected() {
@@ -421,50 +513,216 @@ public class MostrarProductosCategoria extends Activity implements OnClickListen
      
      }
      super.onActivityResult(requestCode, resultCode, data);
+
+     
+   //BarCode
+		
+		
+   		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+   		
+   		if (scanningResult != null ) {
+   			//we have a result
+   			String result=scanningResult.getContents();
+   			if (!helper.exist(result,"products")){
+   				if (!helper.exist(result,"productsTemporary")){
+   					alertDialogReport("Producto no existente");
+   					//alertDialogListView(false,3);
+   					
+   				}
+   				else{
+   					ArrayList<Object> tmp=helper.readProductsTemporary(result);
+   					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1),"insertPantry",1);
+   					//Para que se refresque la informaci�n en la pantalla
+   					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1,1,false);
+   					products.add(item);
+   					list = (ListView)findViewById(R.id.listViewProducts);
+   					ItemProductoAdapter adapter;
+   					// Inicializamos el adapter.
+   					adapter = new ItemProductoAdapter(this,products);
+   					// Asignamos el Adapter al ListView, en este punto hacemos que el
+   					// ListView muestre los datos que queremos.
+   					list.setAdapter(adapter);
+   					
+   				}
+   				
+   			}
+   			else{
+   				Toast.makeText(this,"Producto ya existente",Toast.LENGTH_SHORT).show();
+   			}
+   			
+   			
+   		}
+   		else{
+   		    Toast toast = Toast.makeText(getApplicationContext(), 
+   		        "No scan data received!", Toast.LENGTH_SHORT);
+   		    toast.show();
+   		}
+   		  
+   		//fin BarCode
+   		
+     
+     
+
     }
 	
+	
+	public void alertDialogReport(String msj) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		 
+	   // builder.setTitle("Error")
+	           builder.setIcon(
+	                    getResources().getDrawable(
+	                            R.drawable.close))
+	            .setMessage(msj)
+	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+	 
+	                @Override
+	                public void onClick(DialogInterface arg0, int arg1) {
+	                	//arg0.cancel();
+	                	alertDialogListView(false,3);
+	                }
+	            });
+	 
+	    builder.create();
+	    builder.show();
+	}
+	
+	
 	public void addProduct(int position) {
-		try {
+		String[] prod = matches_text.get(position).split(" ");
+	 	String name = "";
+	 	String oneCantM = "un";
+	 	String oneCantF = "una";
+	 	int cant = 0;
+	 	boolean error = false;
 			//Intent intent = new Intent(this,MostrarProductosCategoria.class);
-   	 		String[] prod = matches_text.get(position).split("");
-   	 		int cant = Integer.parseInt(prod[prod.length - 1]);
-   	 		String name = "";
-   	 		for (int i = 0;i < prod.length - 1;i++) {
-   	 			name += prod[i];
-   	 			name += "";
+   	 	for (int i = 0;i < prod.length;i++) {
+   	 			if (cant == 0) {
+   	 				if ((prod[i].equals(oneCantM)) || (prod[i].equals(oneCantF))) {
+						cant = 1;
+   	 				}
+   	 				else {
+   	 					try {
+   	 						cant = Integer.parseInt(prod[i]);
+   	 					}
+   	 					catch (NumberFormatException e) {
+   	 						if (i == prod.length-1) {
+   	 							errorCantVoice();
+   	 							error = true;
+   	 						}
+   	 						else {
+   	 							name += prod[i];
+   	 							name += " ";
+   	 						}
+   	 					}
+   	 				}
+   	 			}
+   	 			else {
+   	 				name += prod[i];
+					name += " ";
+   	 			}
+   	 			
    	 		}
-   	 	initializeArrayList(tipoCat);
-		ItemProducto item = new ItemProducto(products.size(),name,cant);
-		boolean encontrado = false;
-		int i = 0;
-		while (i<products.size() && !encontrado){
-			ItemProducto product = products.get(i);
-			String nameP = product.getNombre().toLowerCase();
-			if (nameP.equals(item.getNombre().toLowerCase())) {
-				encontrado = true;
-			}
-			i++;
-		}
-		if (!encontrado) {
-			products.add(item);
-			SQLiteDatabase tmp = helper.open();	
-			if (tmp!=null){
-				helper.insertProducto(item.getNombre(),item.getCantidad(),tipoCat);
-				helper.close();
-			}
+   	 		if (!error) {
+   	 			if (cant <= 0) {
+   	 				errorCantVoice();
+   	 			}
+   	 			else {
+   	 				initializeArrayList(tipoCat);
+   	 				ItemProducto item = new ItemProducto(products.size(),name,cant,1,false);
+   	 				boolean encontrado = false;
+   	 				int i = 0;
+   	 				int cantProductModify = 0;
+   	 				while (i<products.size() && !encontrado){
+   	 					ItemProducto product = products.get(i);
+   	 					String nameP = product.getNombre().toLowerCase();
+   	 					if (nameP.equals(item.getNombre().toLowerCase())) {
+   	 						encontrado = true;
+   	 						cantProductModify = product.getCantidad() + item.getCantidad();
+   	 					}
+   	 					i++;
+   	 				}
+   	 				if (!encontrado) {
+   	 					products.add(item);
+   	 					SQLiteDatabase tmp = helper.open();	
+   	 					if (tmp!=null){
+   	 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"","insertPantry",1);
+   	 						helper.close();
+   	 					}
 			
+   	 				}
+   	 				else {
+   	 					modifyProduct();
+   	 					products.get(i-1).setCantidad(cantProductModify);
+   	 					SQLiteDatabase tmp = helper.open();
+   	 					if (tmp!=null) {
+   	 						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
+   	 						helper.close();
+   	 					}
+   	 				}
+   	 	
+		/*Intent intent = new Intent(this,MostrarProductosCategoria.class);
+		startActivity(intent);*/
+   	 				list = (ListView) findViewById(R.id.listViewProducts);
+   	 				ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
+   	 				list.setAdapter(adapter);
+   	 			}
+   	 		}
+		
+	}
+	
+	public void errorCantVoice() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		 
+	    builder.setTitle("Error")
+	            .setIcon(
+	                    getResources().getDrawable(
+	                            R.drawable.close))
+	            .setMessage("La cantidad del producto introducida tiene que ser un numero mayor que cero")
+	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+	 
+	                @Override
+	                public void onClick(DialogInterface arg0, int arg1) {
+	                	arg0.cancel();
+	                }
+	            });
+	 
+	    builder.create();
+	    builder.show();
+	}
+	
+	public void showCheckBox() {
+		for (int i=0;i<list.getChildCount();i++) {
+			View v = list.getChildAt(i);
+			CheckBox check = (CheckBox) v.findViewById(R.id.checkBox_Product);
+			check.setVisibility(View.VISIBLE);
 		}
-		else {
-			errorProduct();
+	}
+	
+	public void hideCheckBox() {
+		for (int i=0;i<list.getChildCount();i++) {
+			View v = list.getChildAt(i);
+			CheckBox check = (CheckBox) v.findViewById(R.id.checkBox_Product);
+			check.setVisibility(View.INVISIBLE);
 		}
-   	 		//intent.putExtra("key",1);
-   	 		//intent.putExtra("nameProduct",name);
-   	 		//intent.putExtra("cantProduct", cant);
-   	 		//startActivity(intent);
+	}
+	
+	public void deleteProducts() {
+		for (int i=0;i<products.size();i++) {
+			ItemProducto item = products.get(i);
+			if (item.isSelected()) {
+				products.remove(i);
+				i--;
+				SQLiteDatabase tmp = helper.open();
+				if (tmp!=null) {
+					helper.removeProduct(item.getNombre(),"deletePantry",1);
+					helper.close();
+				}
+			}
 		}
-		catch (NumberFormatException e) {
-			Toast.makeText(this, "La cantidad de producto especificada tiene que ser un n�mero", Toast.LENGTH_SHORT).show();
-		}
+		list = (ListView) findViewById(R.id.listViewProducts);
+		ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
+		list.setAdapter(adapter);
 	}
 
 }

@@ -30,12 +30,11 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class AccesoDespensa extends Activity implements OnClickListener {
 	
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_acceso_despensa);
-	
+
 		Button button_dairy = (Button) findViewById(R.id.buttonDairy);
 		button_dairy.setOnClickListener(this);
 		Button button_fruits = (Button) findViewById(R.id.buttonFruits);
@@ -48,12 +47,16 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 		button_meat.setOnClickListener(this);
 		Button button_fish = (Button) findViewById(R.id.buttonFish);
 		button_fish.setOnClickListener(this);
-		Button button_sauces = (Button) findViewById(R.id.buttonSauces);
-		button_sauces.setOnClickListener(this);
+		Button button_condiment = (Button) findViewById(R.id.buttonCondiment);
+		button_condiment.setOnClickListener(this);
 		Button button_pasta = (Button) findViewById(R.id.buttonPasta);
 		button_pasta.setOnClickListener(this);
 		Button button_frozen = (Button) findViewById(R.id.buttonFrozen);
 		button_frozen.setOnClickListener(this);
+		Button button_sauces = (Button) findViewById(R.id.buttonSauces);
+		button_sauces.setOnClickListener(this);
+		Button button_store = (Button) findViewById(R.id.buttonStore);
+		button_store.setOnClickListener(this);
 		Button button_others = (Button) findViewById(R.id.buttonOthers);
 		button_others.setOnClickListener(this);
 
@@ -110,7 +113,7 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			startActivity(intent3);
 			break;
 			
-		case R.id.buttonSauces:
+		case R.id.buttonCondiment:
 			Intent intent4 = new Intent(this,MostrarProductosCategoria.class);
 			intent4.putExtra("idCat",7);
 			startActivity(intent4);
@@ -128,10 +131,22 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 			startActivity(intent6);
 			break;
 			
-		case R.id.buttonOthers:
+		case R.id.buttonSauces:
 			Intent intent7 = new Intent(this,MostrarProductosCategoria.class);
 			intent7.putExtra("idCat",10);
 			startActivity(intent7);
+			break;
+		
+		case R.id.buttonStore:
+			Intent intent8 = new Intent(this,MostrarProductosCategoria.class);
+			intent8.putExtra("idCat",11);
+			startActivity(intent8);
+			break;
+			
+		case R.id.buttonOthers:
+			Intent intent9 = new Intent(this,MostrarProductosCategoria.class);
+			intent9.putExtra("idCat",12);
+			startActivity(intent9);
 			break;
 			
 		}
