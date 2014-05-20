@@ -25,6 +25,11 @@
         	android:layout_height="wrap_content" >
         
     	</ListView>
+<<<<<<< HEAD
+=======
+    	
+    	
+>>>>>>> Rama-Vivi-Android
 
 	</LinearLayout>
 </ScrollView>

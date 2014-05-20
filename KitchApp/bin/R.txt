@@ -312,6 +312,7 @@ int drawable fondo_lista_compra9 0x7f020086
 int drawable fondo_nuevo 0x7f020087
 int drawable fondo_pie_pagina 0x7f020088
 int drawable frutas_verduras 0x7f020089
+<<<<<<< HEAD
 int drawable go 0x7f02008a
 int drawable highlight_focused 0x7f0200b1
 int drawable highlight_pressed 0x7f0200b0
@@ -352,6 +353,43 @@ int drawable tic_verde 0x7f0200ac
 int drawable tick 0x7f0200ad
 int drawable varios 0x7f0200ae
 int drawable voz 0x7f0200af
+=======
+int drawable highlight_focused 0x7f0200ac
+int drawable highlight_pressed 0x7f0200ab
+int drawable hoja8 0x7f02008a
+int drawable ic_launcher 0x7f02008b
+int drawable ic_launcher2 0x7f02008c
+int drawable imageok_verde 0x7f02008d
+int drawable images 0x7f02008e
+int drawable imagetic_verde 0x7f02008f
+int drawable imagevoz_verde 0x7f020090
+int drawable lacteos 0x7f020091
+int drawable lista_compra 0x7f020092
+int drawable listview_selector 0x7f020093
+int drawable localizacion 0x7f020094
+int drawable lupa_sobre_un_robot_androide 0x7f020095
+int drawable micro_verde 0x7f020096
+int drawable microfono 0x7f020097
+int drawable microfono2 0x7f020098
+int drawable mini_tic 0x7f020099
+int drawable mini_tic2 0x7f02009a
+int drawable mini_tic3 0x7f02009b
+int drawable numberpicker_down 0x7f02009c
+int drawable numberpicker_up 0x7f02009d
+int drawable pan_bolleria 0x7f02009e
+int drawable pastas 0x7f02009f
+int drawable pescados 0x7f0200a0
+int drawable propuestaportadaappis 0x7f0200a1
+int drawable prueba2 0x7f0200a2
+int drawable recetario 0x7f0200a3
+int drawable resumen_de_color_como_fondo 0x7f0200a4
+int drawable salsas 0x7f0200a5
+int drawable teclado_android 0x7f0200a6
+int drawable tic 0x7f0200a7
+int drawable tic_verde 0x7f0200a8
+int drawable varios 0x7f0200a9
+int drawable voz 0x7f0200aa
+>>>>>>> Rama-Vivi-Android
 int id EditTextCantProduct 0x7f05004b
 int id action_bar 0x7f05001c
 int id action_bar_activity_content 0x7f050015
@@ -364,6 +402,7 @@ int id action_context_bar 0x7f05001d
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
+<<<<<<< HEAD
 int id action_settings 0x7f05007a
 int id activity_chooser_view_content 0x7f050025
 int id add_Product 0x7f05007b
@@ -371,14 +410,34 @@ int id always 0x7f05000b
 int id beginning 0x7f050011
 int id btnLogin 0x7f05005a
 int id btnRegistro 0x7f050075
+=======
+int id action_settings 0x7f050098
+int id activity_chooser_view_content 0x7f050025
+int id add_Product 0x7f050099
+int id always 0x7f05000b
+int id beginning 0x7f050011
+int id btnLogin 0x7f05005a
+int id btnRegistro 0x7f050094
+>>>>>>> Rama-Vivi-Android
 int id button1 0x7f050064
 int id button2 0x7f050065
 int id button3 0x7f050066
 int id button4 0x7f050067
+<<<<<<< HEAD
 int id buttonBread 0x7f05003f
 int id buttonCancel 0x7f05006b
 int id buttonCondiment 0x7f050043
 int id buttonDairy 0x7f05003d
+=======
+int id buttonAddCode 0x7f050073
+int id buttonAddManually 0x7f050071
+int id buttonAddVoice 0x7f050072
+int id buttonBread 0x7f05003f
+int id buttonCancel 0x7f05006d
+int id buttonCondiment 0x7f050043
+int id buttonDairy 0x7f05003d
+int id buttonDelete 0x7f050074
+>>>>>>> Rama-Vivi-Android
 int id buttonDrinks 0x7f050040
 int id buttonFish 0x7f050042
 int id buttonFrozen 0x7f050045
@@ -388,6 +447,7 @@ int id buttonOthers 0x7f050048
 int id buttonPasta 0x7f050044
 int id buttonSauces 0x7f050046
 int id buttonStore 0x7f050047
+<<<<<<< HEAD
 int id button_Voice 0x7f05004f
 int id button_accept 0x7f05006c
 int id button_addProduct 0x7f05004c
@@ -409,21 +469,49 @@ int id dialog 0x7f05000e
 int id disableHome 0x7f050008
 int id dropdown 0x7f05000f
 int id editTextDialogUserInput 0x7f05006f
+=======
+int id button_accept 0x7f05006e
+int id button_addProduct 0x7f05004c
+int id button_cancel 0x7f050061
+int id button_decrement 0x7f05005d
+int id button_increment 0x7f05005f
+int id button_save 0x7f050060
+int id cantProduct 0x7f05005e
+int id checkBox_Product 0x7f050050
+int id checkBox_list 0x7f050096
+int id checkbox 0x7f05002d
+int id collapseActionView 0x7f05000d
+int id default_activity_button 0x7f050028
+int id delete_Product 0x7f05009a
+int id dialog 0x7f05000e
+int id disableHome 0x7f050008
+int id dropdown 0x7f05000f
+int id editTextDialogUserInput 0x7f05008e
+>>>>>>> Rama-Vivi-Android
 int id editTextNameProduct 0x7f05004a
 int id editTextPassword 0x7f050059
 int id editTextuserName 0x7f050058
 int id edit_query 0x7f050030
 int id encabezado 0x7f050056
 int id end 0x7f050013
+<<<<<<< HEAD
 int id expand_activities_button 0x7f050026
 int id expanded_menu 0x7f05002c
 int id footer 0x7f050057
 int id header 0x7f050071
+=======
+int id et1 0x7f050070
+int id expand_activities_button 0x7f050026
+int id expanded_menu 0x7f05002c
+int id footer 0x7f050057
+int id header 0x7f050090
+>>>>>>> Rama-Vivi-Android
 int id home 0x7f050014
 int id homeAsUp 0x7f050005
 int id icon 0x7f05002a
 int id ifRoom 0x7f05000a
 int id image 0x7f050027
+<<<<<<< HEAD
 int id layout_root 0x7f05006e
 int id link_to_login 0x7f050076
 int id link_to_register 0x7f05005b
@@ -431,20 +519,57 @@ int id listDialogVoice 0x7f050070
 int id listMode 0x7f050001
 int id listViewProducts 0x7f050063
 int id listView_lists 0x7f05006d
+=======
+int id imageView1 0x7f050055
+int id imagen 0x7f050053
+int id layout_root 0x7f05008d
+int id link_to_login 0x7f050095
+int id link_to_register 0x7f05005b
+int id listDialogVoice 0x7f05008f
+int id listMode 0x7f050001
+int id listViewBread 0x7f05007a
+int id listViewCondiment 0x7f050082
+int id listViewDairy 0x7f050076
+int id listViewDrinks 0x7f05007c
+int id listViewFish 0x7f050080
+int id listViewFrozen 0x7f050086
+int id listViewFruits 0x7f050078
+int id listViewMeat 0x7f05007e
+int id listViewOthers 0x7f05008c
+int id listViewPasta 0x7f050084
+int id listViewProducts 0x7f050063
+int id listViewSauces 0x7f050088
+int id listViewStore 0x7f05008a
+int id listView_lists 0x7f05006f
+>>>>>>> Rama-Vivi-Android
 int id list_item 0x7f050029
 int id middle 0x7f050012
 int id nameProductModify 0x7f05005c
 int id never 0x7f050009
+<<<<<<< HEAD
 int id none 0x7f050010
 int id normal 0x7f050000
+=======
+int id nombre 0x7f050054
+int id none 0x7f050010
+int id normal 0x7f050000
+int id pager 0x7f050069
+int id pager_title_strip 0x7f05006a
+>>>>>>> Rama-Vivi-Android
 int id progressBar1 0x7f050068
 int id progress_circular 0x7f050018
 int id progress_horizontal 0x7f050019
 int id radio 0x7f05002f
+<<<<<<< HEAD
 int id reg_email 0x7f050073
 int id reg_password 0x7f050074
 int id reg_usuario 0x7f050072
 int id search 0x7f05007d
+=======
+int id reg_email 0x7f050092
+int id reg_password 0x7f050093
+int id reg_usuario 0x7f050091
+>>>>>>> Rama-Vivi-Android
 int id search_badge 0x7f050032
 int id search_bar 0x7f050031
 int id search_button 0x7f050033
@@ -459,12 +584,17 @@ int id shortcut 0x7f05002e
 int id showCustom 0x7f050007
 int id showHome 0x7f050004
 int id showTitle 0x7f050006
+<<<<<<< HEAD
 int id spinnerCategory 0x7f05006a
+=======
+int id spinnerCategory 0x7f05006c
+>>>>>>> Rama-Vivi-Android
 int id split_action_bar 0x7f05001e
 int id submit_area 0x7f050039
 int id tabMode 0x7f050002
 int id textView1 0x7f05003c
 int id textViewAdd 0x7f050049
+<<<<<<< HEAD
 int id textViewCategory 0x7f050069
 int id textView_Cat 0x7f050062
 int id textView_Item_Cant 0x7f050055
@@ -475,6 +605,30 @@ int id top_action_bar 0x7f050020
 int id txt_barSearch 0x7f05004d
 int id txt_product 0x7f050051
 int id txt_quantity 0x7f050052
+=======
+int id textViewBread 0x7f050079
+int id textViewCategory 0x7f05006b
+int id textViewCondiment 0x7f050081
+int id textViewDairy 0x7f050075
+int id textViewDrinks 0x7f05007b
+int id textViewFish 0x7f05007f
+int id textViewFrozen 0x7f050085
+int id textViewFruits 0x7f050077
+int id textViewMeat 0x7f05007d
+int id textViewOthers 0x7f05008b
+int id textViewPasta 0x7f050083
+int id textViewSauces 0x7f050087
+int id textViewStore 0x7f050089
+int id textView_Cat 0x7f050062
+int id textView_Item_Cant 0x7f050052
+int id textView_Item_Name 0x7f050051
+int id text_listName 0x7f050097
+int id texto_favorites 0x7f05004d
+int id texto_recipes 0x7f05004e
+int id texto_topten 0x7f05004f
+int id title 0x7f05002b
+int id top_action_bar 0x7f050020
+>>>>>>> Rama-Vivi-Android
 int id up 0x7f050021
 int id useLogo 0x7f050003
 int id withText 0x7f05000c
@@ -505,6 +659,7 @@ int layout abc_search_view 0x7f030016
 int layout abc_simple_decor 0x7f030017
 int layout activity_acceso_despensa 0x7f030018
 int layout activity_add_manualmente 0x7f030019
+<<<<<<< HEAD
 int layout activity_bar_search 0x7f03001a
 int layout activity_item_listview 0x7f03001b
 int layout activity_login 0x7f03001c
@@ -528,6 +683,35 @@ int menu menu_action_bar 0x7f0d0002
 int menu menu_search 0x7f0d0003
 int menu modificar_producto_despensa 0x7f0d0004
 int menu mostrar_productos_categoria 0x7f0d0005
+=======
+int layout activity_fragment_favorites 0x7f03001a
+int layout activity_fragment_recipes 0x7f03001b
+int layout activity_fragment_topten 0x7f03001c
+int layout activity_item_listview 0x7f03001d
+int layout activity_list_item_layout 0x7f03001e
+int layout activity_login 0x7f03001f
+int layout activity_modificar_producto_despensa 0x7f030020
+int layout activity_mostrar_productos_categoria 0x7f030021
+int layout activity_pantalla_principal 0x7f030022
+int layout activity_pantalla_transicion 0x7f030023
+int layout activity_recipes_viewpager 0x7f030024
+int layout activity_seleccionar_categoria 0x7f030025
+int layout activity_shopping_lists 0x7f030026
+int layout activity_una_lista 0x7f030027
+int layout button_style_main_activity 0x7f030028
+int layout cabecera 0x7f030029
+int layout dialog_crear_lista_compra 0x7f03002a
+int layout dialog_matches 0x7f03002b
+int layout pie_de_pagina 0x7f03002c
+int layout registro 0x7f03002d
+int layout shoppinglist_item 0x7f03002e
+int layout support_simple_spinner_dropdown_item 0x7f03002f
+int menu add_manualmente 0x7f0d0000
+int menu login 0x7f0d0001
+int menu menu_action_bar 0x7f0d0002
+int menu modificar_producto_despensa 0x7f0d0003
+int menu mostrar_productos_categoria 0x7f0d0004
+>>>>>>> Rama-Vivi-Android
 int string CantProducts 0x7f0a0038
 int string abc_action_bar_home_description 0x7f0a0001
 int string abc_action_bar_up_description 0x7f0a0002
@@ -565,9 +749,15 @@ int string despensa 0x7f0a0010
 int string dialog_header 0x7f0a003c
 int string drogueria 0x7f0a0020
 int string estadisticas 0x7f0a0013
+<<<<<<< HEAD
 int string frutasVerduras 0x7f0a0017
 int string hello_world 0x7f0a000f
 int string home 0x7f0a003f
+=======
+int string favorite 0x7f0a0040
+int string frutasVerduras 0x7f0a0017
+int string hello_world 0x7f0a000f
+>>>>>>> Rama-Vivi-Android
 int string lacteos 0x7f0a0016
 int string lista_compra 0x7f0a0011
 int string listadelacompra 0x7f0a0039
@@ -580,17 +770,28 @@ int string pastasArroces 0x7f0a001e
 int string pescados 0x7f0a001b
 int string product1 0x7f0a0037
 int string recetario 0x7f0a0012
+<<<<<<< HEAD
+=======
+int string recipes 0x7f0a003f
+>>>>>>> Rama-Vivi-Android
 int string remove 0x7f0a0036
 int string salsas 0x7f0a001d
 int string save 0x7f0a0027
 int string save2 0x7f0a0028
+<<<<<<< HEAD
 int string search 0x7f0a003e
+=======
+>>>>>>> Rama-Vivi-Android
 int string title_activity_acceso_despensa 0x7f0a0015
 int string title_activity_add_despensa 0x7f0a0025
 int string title_activity_add_manualmente 0x7f0a0032
 int string title_activity_list_item_layout 0x7f0a0024
 int string title_activity_modificar_producto_despensa 0x7f0a0026
 int string title_activity_mostrar_productos_categoria 0x7f0a0031
+<<<<<<< HEAD
+=======
+int string topTen 0x7f0a003e
+>>>>>>> Rama-Vivi-Android
 int string varios 0x7f0a0021
 int style AppBaseTheme 0x7f0b008b
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063

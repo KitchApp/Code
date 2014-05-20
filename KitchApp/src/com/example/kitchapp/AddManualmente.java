@@ -2,8 +2,15 @@ package com.example.kitchapp;
 
 import android.os.Bundle;
 import android.app.Activity;
+<<<<<<< HEAD
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+=======
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
+>>>>>>> Rama-Vivi-Android
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
@@ -64,6 +71,12 @@ public class AddManualmente extends Activity implements OnClickListener {
 						helper.close();
 					}
 					Intent i = new Intent(this,MostrarProductosCategoria.class);
+<<<<<<< HEAD
+=======
+					/*i.putExtra("nameProduct",nameProduct.getText().toString());
+					i.putExtra("cantProduct",cant);
+					i.putExtra("key",1);*/
+>>>>>>> Rama-Vivi-Android
 					i.putExtra("idCat",this.getIntent().getExtras().getInt("idCat"));
 					startActivity(i);
 				}

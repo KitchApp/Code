@@ -17,11 +17,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/dialog_header" 
+<<<<<<< HEAD
 	android:textColorHint="@color/black"
 	android:textSize="20sp"
 	android:fontFamily="sans-serif" >	    	    
+=======
+	    android:textColorHint="@color/black"
+	    android:textSize="20sp"
+	    android:fontFamily="sans-serif" >	    	    
+	 
+ 
+>>>>>>> Rama-Vivi-Android
         <requestFocus />
  
     </EditText>
  
 </LinearLayout>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Rama-Vivi-Android

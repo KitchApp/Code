@@ -1,6 +1,8 @@
 package com.example.kitchapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +14,7 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
+		
 		setContentView(R.layout.activity_pantalla_principal);
 		Button buttonPantry = (Button) findViewById(R.id.button2);
 		buttonPantry.setOnClickListener(this);
@@ -20,6 +23,7 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		Button buttonRecipes = (Button) findViewById(R.id.button3);
 		buttonRecipes.setOnClickListener(this);
 		
+<<<<<<< HEAD
 	}
 	
 
@@ -27,6 +31,15 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		switch(v.getId()) {
 			case R.id.button1:
 				Intent i = new Intent(this, AccesoDespensa.class);
+=======
+}
+	
+	
+	public void onClick(View v) {
+		switch(v.getId()) {
+			case R.id.button1:
+				Intent i = new Intent(this, ShoppingLists.class);
+>>>>>>> Rama-Vivi-Android
 				startActivity(i);
 				break;
 			
@@ -35,7 +48,18 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 				startActivity(j);
 				break;
 				
+<<<<<<< HEAD
 		}
 	}
 	
+=======
+			case R.id.button3:
+				Intent k = new Intent(this, Recipes.class);
+				startActivity(k);
+				break;
+		}
+	}
+	
+	
+>>>>>>> Rama-Vivi-Android
 }

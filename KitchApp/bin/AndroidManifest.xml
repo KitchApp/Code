@@ -115,10 +115,17 @@
             </intent-filter>
         </activity>
         <activity
+<<<<<<< HEAD
             android:name="com.example.kitchapp.Bar_Search"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.Bar_Search" />
+=======
+            android:name="com.example.kitchapp.Recipes"
+            android:label=" " >
+            <intent-filter>
+                <action android:name="com.example.kitchapp.Recipes" />
+>>>>>>> Rama-Vivi-Android
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

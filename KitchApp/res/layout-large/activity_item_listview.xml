@@ -10,6 +10,12 @@
         android:layout_height="fill_parent"
         android:visibility="invisible"/>
     
+    <CheckBox 
+        android:id="@+id/checkBox_Product"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:visibility="invisible"/>
+    
     <TextView 
         android:id="@+id/textView_Item_Name"
         android:layout_width="wrap_content"

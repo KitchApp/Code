@@ -1,7 +1,15 @@
 package com.example.kitchapp;
 
 
+<<<<<<< HEAD
 import java.io.IOException;
+=======
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+>>>>>>> Rama-Vivi-Android
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -20,15 +28,29 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+<<<<<<< HEAD
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+=======
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.text.Editable;
+>>>>>>> Rama-Vivi-Android
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+<<<<<<< HEAD
+=======
+import android.widget.TextView;
+>>>>>>> Rama-Vivi-Android
 import android.widget.Toast;
  
 public class Registro extends Activity implements OnClickListener {
@@ -36,9 +58,22 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
+<<<<<<< HEAD
 	
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 
+=======
+	private String encryptedPassword="";
+
+	Handler_Sqlite helper = new Handler_Sqlite(this);
+
+	
+	public String session_name;
+    public String session_id;
+    //private boolean userValidation=false;
+    //private boolean emailValidation=false;
+    //public Boolean registrado=false;
+>>>>>>> Rama-Vivi-Android
 	
 	public String session_name;
     public String session_id;
@@ -54,12 +89,23 @@ public class Registro extends Activity implements OnClickListener {
         password = (EditText) findViewById(R.id.reg_password);
         email = (EditText) findViewById(R.id.reg_email);
  
+<<<<<<< HEAD
+=======
+        // Listening to Login Screen link
+        //loginScreen.setOnClickListener(this);
+>>>>>>> Rama-Vivi-Android
         buttonRegister.setOnClickListener(this);
         userName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
+<<<<<<< HEAD
 				if(hasFocus==false){
+=======
+				// TODO Auto-generated method stub
+				if(hasFocus==false){
+					//userValidation=true;
+>>>>>>> Rama-Vivi-Android
 					new HttpGetName().execute();
 					
 				}
@@ -70,8 +116,18 @@ public class Registro extends Activity implements OnClickListener {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
+<<<<<<< HEAD
 				if(hasFocus==true){
 					new HttpGetEmail().execute();
+=======
+				// TODO Auto-generated method stub
+				
+				if(hasFocus==true){
+					//emailValidation=true;
+					new HttpGetEmail().execute();
+					
+					
+>>>>>>> Rama-Vivi-Android
 				}
 				
 			}
@@ -101,7 +157,16 @@ public class Registro extends Activity implements OnClickListener {
 					}
 					else {
 						showMessageEmailValidation();
+<<<<<<< HEAD
 					
+=======
+						/*new HttpAsyncTask().execute();
+						
+						Intent intent = new Intent(Registro.this,PantallaTransicion.class);
+			        	startActivity(intent);
+						finish();*/
+			            
+>>>>>>> Rama-Vivi-Android
 					}
 				}
 				break;
@@ -134,7 +199,11 @@ public class Registro extends Activity implements OnClickListener {
 		 
 	    builder.setTitle("Informacion")
 	            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
+<<<<<<< HEAD
 	            .setMessage("Recuerde que si desea utilizar su cuenta en la pï¿½gina web tiene que validarla pinchando en el enlace que se le ha enviado al correo electrï¿½nico.")
+=======
+	            .setMessage("Recuerde que si desea utilizar su cuenta en la página web tiene que validarla pinchando en el enlace que se le ha enviado al correo electrónico.")
+>>>>>>> Rama-Vivi-Android
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -200,10 +269,21 @@ public class Registro extends Activity implements OnClickListener {
 		protected String doInBackground(String... mURL) {
 			
 			String response="";
+<<<<<<< HEAD
 	        HttpClient httpclient = new DefaultHttpClient();
 	        HttpGet httppost= new HttpGet();;
 	        Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
 	    	httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
+=======
+	        //mURL[0]=mURL[0].replace(" ", "%20");
+	         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
+	          HttpClient httpclient = new DefaultHttpClient();
+	          HttpGet httppost= new HttpGet();;
+	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
+	    	//HttpGet httppost = new HttpGet(mURL[0]);
+	         
+	        	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
+>>>>>>> Rama-Vivi-Android
 	         
 	         
 	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
@@ -217,6 +297,7 @@ public class Registro extends Activity implements OnClickListener {
 	         Log.i("LocAndroid Response HTTP",response);
 	    	} catch (ClientProtocolException e) {
 	        Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
+<<<<<<< HEAD
 	    } catch (IOException e) {
 	        
 	        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
@@ -224,6 +305,21 @@ public class Registro extends Activity implements OnClickListener {
 			return response;
 		}
    
+=======
+	        // TODO Auto-generated catch block
+	    } catch (IOException e) {
+	        
+	        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
+	        // TODO Auto-generated catch block
+	    }
+			// TODO Auto-generated method stub
+			return response;
+		}
+    //return response;
+	
+	
+	
+>>>>>>> Rama-Vivi-Android
 		protected void onPostExecute(String result) {
 			JSONArray ja=null;
 			try {
@@ -234,6 +330,10 @@ public class Registro extends Activity implements OnClickListener {
 			
 			
 		} catch (JSONException e) {
+<<<<<<< HEAD
+=======
+			// TODO Auto-generated catch block
+>>>>>>> Rama-Vivi-Android
 			e.printStackTrace();
 			Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
 			
@@ -282,10 +382,20 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 	protected String doInBackground(String... mURL) {
 		
 		String response="";
+<<<<<<< HEAD
         	HttpClient httpclient = new DefaultHttpClient();
           	HttpGet httppost= new HttpGet();;
          	Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
          	httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
+=======
+        //mURL[0]=mURL[0].replace(" ", "%20");
+         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
+          HttpClient httpclient = new DefaultHttpClient();
+          HttpGet httppost= new HttpGet();;
+         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
+    	//HttpGet httppost = new HttpGet(mURL[0]);
+         	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
+>>>>>>> Rama-Vivi-Android
          	
          
          Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
@@ -299,6 +409,7 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
          Log.i("LocAndroid Response HTTP",response);
     	} catch (ClientProtocolException e) {
         Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
+<<<<<<< HEAD
     } catch (IOException e) {
         
         Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
@@ -306,6 +417,21 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		return response;
 	}
     
+=======
+        // TODO Auto-generated catch block
+    } catch (IOException e) {
+        
+        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
+        // TODO Auto-generated catch block
+    }
+		// TODO Auto-generated method stub
+		return response;
+	}
+    //return response;
+	
+	
+	
+>>>>>>> Rama-Vivi-Android
 	protected void onPostExecute(String result) {
 		JSONArray ja=null;
 		try {
@@ -316,11 +442,21 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		
 		
 	} catch (JSONException e) {
+<<<<<<< HEAD
+=======
+		// TODO Auto-generated catch block
+>>>>>>> Rama-Vivi-Android
 		e.printStackTrace();
 		Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
 		
 	}
 	try{
+<<<<<<< HEAD
+=======
+		String tmp=email.getText().toString();
+		boolean x=email.getText().toString().equals(ja.getString(2));
+		boolean y=!(email.getText().toString().equals(""));
+>>>>>>> Rama-Vivi-Android
 		if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
 			//registrado=true;
 			builder.setTitle("Informacion")
@@ -365,6 +501,12 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
                 JSONObject json = new JSONObject();
                 //extract the username and password from UI elements and create a JSON object
+<<<<<<< HEAD
+=======
+                String name=username.getText().toString().trim();
+                String pass=password.getText().toString().trim();
+                String mail=email.getText().toString().trim();
+>>>>>>> Rama-Vivi-Android
                 json.put("name", username.getText().toString().trim());
                 json.put("pass", password.getText().toString().trim());
                 json.put("mail", email.getText().toString().trim());
@@ -379,6 +521,16 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
                 String jsonResponse = EntityUtils.toString(response.getEntity());
 
                 JSONObject jsonObject = new JSONObject(jsonResponse);
+<<<<<<< HEAD
+=======
+                //String tmp=jsonObject.getString("user");
+                	//showMessageInvalidRegister();
+                /*{"uid":"253","uri":"http://www.kitchapp.es/?q=json/user/253"}*/
+                /*{"form_errors":{"name":"El nombre <em class=\"placeholder\">edu</em> ya se encuentra en uso.","mail":"La direcci\u00f3n de correo <em class=\"placeholder\">edu1@hotmail.com</em> ya est\u00e1 registrada. <a href=\"/?q=user/password\">\u00bfHa olvidado su contrase\u00f1a?</a>"}}*/
+                /*{"form_errors":{"name":"El nombre <em class=\"placeholder\">mayra</em> ya se encuentra en uso.","mail":"La direcci\u00f3n de correo <em class=\"placeholder\">majuma22@gmail.com</em> ya est\u00e1 registrada. <a href=\"/?q=user/password\">\u00bfHa olvidado su contrase\u00f1a?</a>"}}*/
+                //read the session information
+                
+>>>>>>> Rama-Vivi-Android
                 session_name=jsonObject.getString("session_name");
                 session_id=jsonObject.getString("sessid");
                 return 0;
@@ -390,7 +542,70 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
             return 0;
         }  	
+<<<<<<< HEAD
         	
         }
         
+=======
+        	/*encryptedPassword=httpGetData(urls[0]);
+        	return httpGetData(urls[0]);*/
+        }
+        
+       // onPostExecute displays the results of the AsyncTask.
+        //@Override
+        protected void onPostExecute(Integer result) {
+        	/*Intent intent = new Intent(Registro.this,PantallaTransicion.class);
+        	startActivity(intent);
+			finish();*/
+        	
+            
+           
+       }
+
+	
+	
+	/*public static String httpGetData(String mURL) {
+        //String response="";
+		 InputStream inputStream = null;
+	     String result = "";
+	     try {
+	 
+	            // create HttpClient
+	            HttpClient httpclient = new DefaultHttpClient();
+	 
+	            // make GET request to the given URL
+	            HttpResponse httpResponse = httpclient.execute(new HttpGet(mURL));
+	 
+	            // receive response as inputStream
+	            inputStream = httpResponse.getEntity().getContent();
+	 
+	            // convert inputstream to string
+	            if(inputStream != null)
+	                result = convertInputStreamToString(inputStream);
+	            else
+	                result = "Did not work!";
+	 
+	     } 
+	     catch (Exception e) {
+	            Log.d("InputStream", e.getLocalizedMessage());
+	     }
+	 
+	     return result;
+    
+    }  
+	
+	 
+	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
+	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
+	        String line = "";
+	        String result = "";
+	        while((line = bufferedReader.readLine()) != null)
+	            result += line;
+	 
+	        inputStream.close();
+	        return result;
+	 
+	    
+	}*/
+>>>>>>> Rama-Vivi-Android
 }

@@ -24,6 +24,21 @@
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
 
+<<<<<<< HEAD
+=======
+		    <!-- Distribución de 50% y 50% respectivamente 
+		    	para los elementos agregados al layout. 
+		    	El 100% del espacio disponible para estos elementos (botones),
+		    	corresponde al layout_width del LinearLayout con un 
+		    	valor de fill_parent.
+		   	El valor para el layout_width de los botones lo hemos definido 
+		    	con 0dp. Eso nos ayuda a decirle a nuestro diseño que resalte 
+		   	la propiedad del peso y pueda distribuir equitativamente los 
+		    	componentes sin importar lo extenso del contenido que tenga cada
+		    	“celda”, tal y como si se trataran de porcentajes. 
+		    -->
+
+>>>>>>> Rama-Vivi-Android
 	    		<Button
 	    		        android:id="@+id/button1"		    		    
 		    		android:layout_width="0dp"
