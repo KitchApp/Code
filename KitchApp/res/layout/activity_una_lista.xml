@@ -7,7 +7,7 @@
 	    
 	<LinearLayout    	 	    
 	    android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
+	    android:layout_height="fill_parent"
 	    android:orientation="vertical" >
 	    
 	    <LinearLayout 
@@ -15,58 +15,58 @@
 	        android:layout_height="wrap_content"
 	        android:orientation="horizontal" >
 			
-		        <LinearLayout         
-				    android:layout_width="0dp"
-				    android:layout_height="wrap_content"
-		            android:layout_weight="1"
-		            android:orientation="horizontal" >
+	        <LinearLayout         
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:orientation="horizontal" >
 		                    
-			        <EditText 
-			            android:id="@+id/et1"
-				        android:layout_width="0dp"
-				        android:layout_height="wrap_content"
-					   	android:layout_weight="1"
-					   	android:textColorHint="@color/black"			   	
-		        		android:layout_marginTop="10dp"
-					   	android:textSize="20sp"			   	
-					   	android:ems="30"			   	
-			            android:hint="@string/addProduct" >
-			            <requestFocus />
-    				</EditText>
-			                       
-		        </LinearLayout>
-		        
-		        <LinearLayout 
+	            <EditText 
+		            android:id="@+id/et1"
 		            android:layout_width="0dp"
-				    android:layout_height="wrap_content"
-		            android:layout_weight="1"
-		            android:orientation="horizontal" >        
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:textColorHint="@color/black"			   	
+		       	    android:layout_marginTop="10dp"
+			    android:textSize="20sp"			   	
+			    android:ems="30"			   	
+		            android:hint="@string/addProduct" >
+		            <requestFocus />
+    		    </EditText>
+			                       
+		</LinearLayout>
 		        
-					<Button 
-						android:id="@+id/buttonAddManually"
-						style="@style/boton_style"
-						android:layout_weight="1"            
-						android:background="@drawable/mini_tic2" />
+		<LinearLayout 
+		       	android:layout_width="0dp"
+			android:layout_height="wrap_content"
+		       	android:layout_weight="1"
+		       	android:orientation="horizontal" >        
+		        
+			<Button 
+				android:id="@+id/buttonAddManually"
+				style="@style/boton_style"
+				android:layout_weight="1"            
+				android:background="@drawable/mini_tic2" />
+				
+			<Button 
+				android:id="@+id/buttonAddVoice"
+				style="@style/boton_style"
+				android:layout_weight="1"
+				android:background="@drawable/microfono2" />
 					
-					<Button 
-						android:id="@+id/buttonAddVoice"
-						style="@style/boton_style"
-						android:layout_weight="1"
-						android:background="@drawable/microfono2" />
+			<Button 
+				android:id="@+id/buttonAddCode"
+				style="@style/boton_style"
+				android:layout_weight="1"
+				android:background="@drawable/barras3" />                        
 					
-					<Button 
-						android:id="@+id/buttonAddCode"
-						style="@style/boton_style"
-						android:layout_weight="1"
-						android:background="@drawable/barras3" />                        
+			<Button 
+				android:id="@+id/buttonDelete"
+				style="@style/boton_style"
+				android:layout_weight="1"            
+				android:background="@drawable/delete2" />
 					
-					<Button 
-						android:id="@+id/buttonDelete"
-						style="@style/boton_style"
-						android:layout_weight="1"            
-						android:background="@drawable/delete2" />
-					
-		        </LinearLayout>
+		</LinearLayout>
 		        
 	    </LinearLayout>
 	    	    
@@ -83,7 +83,7 @@
 		        android:layout_marginLeft="45dp" 
 		        android:layout_marginTop="130dp">
 	        
-	    	    <TextView 
+	    	        <TextView 
 	        	   	android:id="@+id/textViewDairy"
 	       			android:layout_width="wrap_content"
 		       		android:layout_height="wrap_content"
@@ -92,11 +92,12 @@
 	       			android:textSize="20sp" />
 	    	    	        	
 	        	<ListView 
-	            	android:id="@+id/listViewDairy"
+	        	    	android:id="@+id/listViewDairy"
 	        		android:layout_width="wrap_content"
 	        		android:layout_height="wrap_content"
 	        		android:scrollbars="vertical" >	           
 	        	</ListView>	        
+	        	
 	        </LinearLayout>
 	        
 	        <LinearLayout 
@@ -114,11 +115,12 @@
 		       		android:textSize="20sp"/>
 		        
 		        <ListView 
-		            android:id="@+id/listViewFruits"
+			        android:id="@+id/listViewFruits"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none">		            
 		        </ListView>		        
+		        
 	        </LinearLayout>
 	        
 	        <LinearLayout 
@@ -136,11 +138,12 @@
 		       		android:textSize="20sp"/>
 		        
 		        <ListView 
-		            android:id="@+id/listViewBread"
+		                android:id="@+id/listViewBread"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"	        
 		        	android:scrollbars="none">		           
-		        </ListView>		        
+		        </ListView>
+		        
 	        </LinearLayout>
 		        
 	        <LinearLayout 
@@ -158,11 +161,12 @@
 		       		android:textSize="20sp"/>
 		        
 		        <ListView 
-		            android:id="@+id/listViewDrinks"
+		                android:id="@+id/listViewDrinks"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none" >		            
 		        </ListView>		        
+		        
 	        </LinearLayout>
 	        
 	        <LinearLayout 
@@ -180,11 +184,12 @@
 		       		android:textSize="20sp" />
 		       			        
 		        <ListView 
-		            android:id="@+id/listViewMeat"
+		                android:id="@+id/listViewMeat"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none" >	            
 		        </ListView>
+		        
 	    	</LinearLayout>
 	        
 	    	<LinearLayout 
@@ -202,11 +207,10 @@
 		       		android:textSize="20sp" />
 		        
 		        <ListView 
-		            android:id="@+id/listViewFish"
+		                android:id="@+id/listViewFish"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none" >
-		            
 		        </ListView>
 		        
 	        </LinearLayout>
@@ -226,11 +230,12 @@
 		       		android:textSize="20sp" />
 		        
 		        <ListView 
-		            android:id="@+id/listViewCondiment"
+		                android:id="@+id/listViewCondiment"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none" >		            
-		        </ListView>	        
+		        </ListView>
+		        
 	        </LinearLayout>
 	        
 	        <LinearLayout 
@@ -248,10 +253,11 @@
 		       		android:textSize="20sp"/>
 		        
 		        <ListView 
-		            android:id="@+id/listViewPasta"
+		                android:id="@+id/listViewPasta"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none">		            
+		        	
 		        </ListView>	        
 	        </LinearLayout>
 	        
@@ -270,34 +276,35 @@
 		       		android:textSize="20sp" />
 		        
 		        <ListView 
-		            android:id="@+id/listViewFrozen"
+		                android:id="@+id/listViewFrozen"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none" >	            
-		        </ListView>	        
+		        </ListView>
+		        
 	        </LinearLayout>
 	        
 	        <LinearLayout 
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="vertical"
-	        android:layout_marginLeft="45dp" >
-	        
-	        <TextView 
-	           	android:id="@+id/textViewSauces"
-	       		android:layout_width="wrap_content"
-	       		android:layout_height="wrap_content"
-	       		android:text="@string/salsas"
-	       		android:textColor="@color/navy"
-	       		android:textSize="20sp" />
-	        
-	        <ListView 
-	            android:id="@+id/listViewSauces"
-	        	android:layout_width="wrap_content"
-	        	android:layout_height="wrap_content"
-	        	android:scrollbars="none" >	            
-	        </ListView>
-	        
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:layout_marginLeft="45dp" >
+		        
+		        <TextView 
+		           	android:id="@+id/textViewSauces"
+		       		android:layout_width="wrap_content"
+		       		android:layout_height="wrap_content"
+		       		android:text="@string/salsas"
+		       		android:textColor="@color/navy"
+		       		android:textSize="20sp" />
+		        
+		        <ListView 
+		            	android:id="@+id/listViewSauces"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:scrollbars="none" >	            
+		        </ListView>
+		        
 	        </LinearLayout>
 	        
 	        <LinearLayout 
@@ -315,11 +322,12 @@
 		       		android:textSize="20sp" />
 		        
 		        <ListView 
-		            android:id="@+id/listViewStore"
+		                android:id="@+id/listViewStore"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none" >		            
-		        </ListView>		        
+		        </ListView>
+		        
 	        </LinearLayout>
 	        
 	        <LinearLayout 
@@ -337,13 +345,15 @@
 		       		android:textSize="20sp" />
 		        
 		        <ListView 
-		            android:id="@+id/listViewOthers"
+		                android:id="@+id/listViewOthers"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
 		        	android:scrollbars="none" >		            
-		        </ListView>	        
+		        </ListView>
+		        
 	        </LinearLayout>
 	        			        	        	        
 	    </LinearLayout>
+	    
 	</LinearLayout>
 </ScrollView>	        
