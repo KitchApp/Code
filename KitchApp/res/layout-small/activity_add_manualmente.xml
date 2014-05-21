@@ -8,19 +8,6 @@
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 	    
-<<<<<<< HEAD
-=======
-	    <!-- TextView
-	        android:id="@+id/textViewAdd"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"	        
-	        android:layout_gravity="center_horizontal"
-	        android:layout_marginTop="20dp"
-	        android:text="@string/add_manually"
-	        android:textColor="@color/navy"
-	        android:textSize="30sp" />  -->
-                	        
->>>>>>> Rama-Vivi-Android
 	<LinearLayout 
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -67,22 +54,6 @@
 	        <requestFocus />
 	    </EditText>    
 
-<<<<<<< HEAD
-=======
-	        <!-- Button 
-	        android:id="@+id/button_addProduct"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_centerHorizontal="true"
-	        android:layout_below="@+id/EditTextCantProduct"
-	        android:layout_marginTop="40dp"
-	        android:background="@drawable/boton_redondo_color_navy"
-	        android:text="@string/add"
-	        android:textSize="25sp"
-	        android:layout_marginBottom="20dp"
-	        android:textColor="@color/white" /> -->
-	    
->>>>>>> Rama-Vivi-Android
 	<LinearLayout 
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -103,4 +74,5 @@
 	</LinearLayout>
 	
     </LinearLayout>
+    
 </RelativeLayout>
