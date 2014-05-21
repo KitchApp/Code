@@ -22,34 +22,21 @@
         	android:textColor="@color/navy"/>
     
     	<ListView
-		    android:id="@+id/listView_lists"
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-<<<<<<< HEAD
-		    android:background="@color/lightGreen"
-		    android:cacheColorHint="@android:color/transparent"
-		    android:divider="@color/lightGreen"
-		    android:dividerHeight="8dp"
-		    android:scrollbarStyle="outsideOverlay"
-		    android:paddingBottom="8dp" 
-		    android:paddingLeft="9dp"
-		    android:paddingRight="9dp"
-		    android:paddingTop="10dp" >
-=======
-		    android:background="@color/white"
-		    android:cacheColorHint="@android:color/transparent"
-		    android:divider="@android:color/transparent"
-		    android:dividerHeight="8dp"
-		    android:scrollbarStyle="outsideOverlay"
-		    android:paddingBottom="8dp" 
-		    android:paddingLeft="5dp"
-		    android:paddingRight="5dp"
-		    android:paddingTop="15dp" >
->>>>>>> Rama-Vivi-Android
-		    
+		android:id="@+id/listView_lists"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:cacheColorHint="@android:color/transparent"
+		android:divider="@android:color/transparent"
+		android:dividerHeight="8dp"
+		android:scrollbarStyle="outsideOverlay"
+		android:paddingBottom="8dp" 
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:paddingTop="15dp" >
         
     	</ListView>
     	    	
-
     </LinearLayout>
+    
 </ScrollView>
