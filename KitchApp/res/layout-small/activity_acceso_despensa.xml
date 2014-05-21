@@ -169,80 +169,6 @@
 			    android:textSize="15sp"
 			    android:text="@string/pastasArroces"
 			    android:layout_marginLeft="10dp" />
-<<<<<<< HEAD
-
-		</LinearLayout>			   				   			   	
-						   					   	
-		<LinearLayout 
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal"
-		    android:padding="5dp" 
-		    android:layout_marginBottom="5dp"
-		    android:layout_marginLeft="20dp"
-		    android:layout_marginRight="20dp" >
-		    
-		    <Button
-		   	    android:id="@+id/buttonFrozen"
-		   	    android:layout_width="0dp"
-	   	    	    android:layout_height="wrap_content"
-		   	    android:layout_weight="1"
-		   	    android:background="@color/lightGreen"
-		   	    android:textColor="@color/white"
-		   	    android:drawableTop="@drawable/congelados"
-		   	    android:textSize="15sp"
-			    android:text="@string/congelados"			   	    
-		            android:layout_marginRight="10dp" />
-			   	
-  	   	    <Button
-		       	    android:id="@+id/buttonSauces"
-			    android:layout_width="0dp"
-		   	    android:layout_height="wrap_content"
-			    android:layout_weight="1"
-			    android:background="@color/lightGreen"
-			    android:textColor="@color/white"
-			    android:drawableTop="@drawable/salsas"
-			    android:textSize="15sp"
-			    android:text="@string/salsas" 
-			    android:layout_marginLeft="10dp" />
-			    
-		</LinearLayout>		
-			
-		<LinearLayout 
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal"
-		    android:padding="5dp" 
-		    android:layout_marginBottom="5dp"
-		    android:layout_marginLeft="20dp"
-		    android:layout_marginRight="20dp" >
-		    
-		    <Button
-		   	    android:id="@+id/buttonStore"
-		   	    android:layout_width="0dp"
-		      	    android:layout_height="wrap_content"
-		   	    android:layout_weight="1"
-		   	    android:background="@color/lightGreen"
-		   	    android:textColor="@color/white"
-		   	    android:drawableTop="@drawable/drogueria"
-		   	    android:textSize="15sp"
-		   	    android:text="@string/drogueria"		   	    
-	        	    android:layout_marginRight="10dp" />
-
-	   	    <Button
-			    android:id="@+id/buttonOthers"
-			    android:layout_width="0dp"
-		   	    android:layout_height="wrap_content"
-		       	    android:layout_weight="1"
-			    android:background="@color/lightGreen"
-			    android:textColor="@color/white"
-			    android:drawableTop="@drawable/varios"
-			    android:textSize="15sp"
-			    android:text="@string/varios"
-			    android:layout_marginLeft="10dp" />
-
-		</LinearLayout>		
-=======
 
 		</LinearLayout>			   				   			   	
 						   					   	
@@ -316,19 +242,6 @@
 
 		</LinearLayout>		
 
-			<!--<LinearLayout 
-			    android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-			    android:orientation="horizontal">			   	
-			   	<Button
-			   	    android:id="@+id/button_lens"
-			   	    android:layout_width="wrap_content"
-			   	    android:layout_height="wrap_content"			   	    
-			   	    android:layout_gravity="center_horizontal"
-			   	    android:background="@drawable/lupa_sobre_un_robot_androide" />
-			</LinearLayout>  -->		
->>>>>>> Rama-Vivi-Android
-
-	   	</LinearLayout>
+           </LinearLayout>
 	</RelativeLayout>
 </ScrollView>
