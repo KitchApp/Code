@@ -7,20 +7,19 @@
     android:descendantFocusability="blocksDescendants">
 
     <CheckBox
-        android:id="@+id/checkBox_list"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:visibility="gone"
-        />
+            android:id="@+id/checkBox_list"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
 
     <TextView
-        android:id="@+id/text_listName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"  
-        android:layout_marginLeft="50dp"   
-        android:textSize="30sp" 
-        android:textColor="@android:color/black"/>
+            android:id="@+id/text_listName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  
+            android:layout_marginLeft="50dp"   
+            android:textSize="30sp" 
+            android:textColor="@android:color/black" />
 
 </RelativeLayout>
