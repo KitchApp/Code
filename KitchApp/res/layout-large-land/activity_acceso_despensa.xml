@@ -23,13 +23,13 @@
 		    android:layout_marginLeft="10dp"
 		    android:layout_marginRight="10dp" >
 		    <TextView
-		       	android:id="@+id/textView1"
-		       	android:layout_width="wrap_content"
-		       	android:layout_height="wrap_content"
-		       	android:gravity="center"
-		    	android:text="@string/despensa"
-		    	android:textColor="@color/navy"
-		    	android:textSize="50sp" >		
+		       	    android:id="@+id/textView1"
+		       	    android:layout_width="wrap_content"
+		       	    android:layout_height="wrap_content"
+		       	    android:gravity="center"
+		    	    android:text="@string/despensa"
+		    	    android:textColor="@color/navy"
+		    	    android:textSize="50sp" >		
 		    </TextView>
 		    
 		</LinearLayout>
@@ -222,7 +222,6 @@
 			   	    android:textSize="15sp"
 			   	    android:text="@string/drogueria"
 			   	    android:layout_marginRight="70dp" />
-<<<<<<< HEAD
 
    		   	    <Button
 			       	    android:id="@+id/buttonOthers"
@@ -237,35 +236,8 @@
 			       	    android:layout_marginLeft="70dp" />
 			   	
 	        </LinearLayout>		
-=======
-
-   		   	    <Button
-			       	    android:id="@+id/buttonOthers"
-			       	    android:layout_width="0dp"
-		   	    	    android:layout_height="wrap_content"
-			       	    android:layout_weight="1"
-			       	    android:background="@color/lightGreen"
-			       	    android:textColor="@color/white"
-			 	    android:drawableTop="@drawable/varios"
-			       	    android:textSize="15sp"
-			       	    android:text="@string/varios"
-			       	    android:layout_marginLeft="70dp" />
-			   	
-	        </LinearLayout>		
-
-			<!--<LinearLayout 
-			    android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-			    android:orientation="horizontal">			   	
-			   	<Button
-			   	    android:id="@+id/button_lens"
-			   	    android:layout_width="wrap_content"
-			   	    android:layout_height="wrap_content"			   	    
-			   	    android:layout_gravity="center_horizontal"
-			   	    android:background="@drawable/lupa_sobre_un_robot_androide" />
-			</LinearLayout>  -->		
->>>>>>> Rama-Vivi-Android
 
 	    </LinearLayout>
+
         </RelativeLayout>
 </ScrollView>
