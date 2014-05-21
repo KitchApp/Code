@@ -9,16 +9,16 @@
         android:layout_height="wrap_content"        
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-		android:padding="10dp" >
+	android:padding="10dp" >
 	    <TextView 
 	        android:id="@+id/textViewCategory"
-	   		android:layout_width="0dp"
+		android:layout_width="0dp"
 	    	android:layout_height="wrap_content"
-			android:layout_weight="1"    	    		    		    		    	    			
+		android:layout_weight="1"    	    		    		    		    	    			
 	        android:layout_marginTop="10dp"
-	   		android:text="@string/categorySelected"
-	   		android:textColor="@color/navy"
-	   		android:textSize="30sp" />
+	   	android:text="@string/categorySelected"
+	   	android:textColor="@color/navy"
+	   	android:textSize="30sp" />
     </LinearLayout>        
     
     <LinearLayout 
@@ -63,7 +63,7 @@
 	       android:id="@+id/button_accept"
 	       android:layout_width="0dp"
 	       android:layout_height="wrap_content"
-		   android:layout_weight="1"	       
+	       android:layout_weight="1"	       
 	       android:background="@drawable/boton_redondo_color_navy"
 	       android:layout_marginBottom="20dp"	       
 	       android:layout_marginLeft="25dp"	 
@@ -73,8 +73,6 @@
 	       android:textSize="25sp"
 	       android:textColor="@color/white"/>
         
-        
     </LinearLayout>
     
-
 </LinearLayout>
