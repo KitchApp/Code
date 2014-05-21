@@ -2,8 +2,6 @@
 <resources>
     <string-array name="Categorias">
         <item >Lacteos</item><item>Frutas y Verduras</item>
-        
-        
         <item >Pan y Bolleria</item>
         <item >Bebidas</item>
         <item >Carnes</item>
