@@ -60,7 +60,9 @@
                 android:layout_height="wrap_content" 
                 android:visibility="invisible">
             </TextView>
+            
         </TableRow>
+        
     </TableLayout>
 
 </RelativeLayout>
