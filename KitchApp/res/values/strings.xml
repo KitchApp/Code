@@ -39,10 +39,7 @@
     <string name="back">Volver</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
     <string name="title_activity_add_manualmente">AddManualmenteActivity</string>
-<<<<<<< HEAD
     <string name="dialog_header">Crear ListaCompra</string>
-=======
->>>>>>> Rama-Vivi-Android
     <string name="nameOfList">Añadir nuevaLista</string>
     <string name="addProduct">Añadir artículo</string>
     <string name="create">Crear</string>
@@ -54,13 +51,10 @@
     <string name="delete">Eliminar</string>
     <string name="dialog_header">Nombre de la lista</string>
     <string name="categorySelected">Seleccionar categoría</string>
-<<<<<<< HEAD
     <string name="search">Buscar</string>
     <string name="home">Inicio</string>
-=======
     <string name="topTen">Top Ten</string>
     <string name="recipes">Recetas</string>
     <string name="favorite">Favoritos</string>
->>>>>>> Rama-Vivi-Android
-   
+
 </resources>
