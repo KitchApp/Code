@@ -4,63 +4,63 @@
     android:layout_height="match_parent" >
 
     <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        android:shrinkColumns="1,2,3"
-        android:stretchColumns="0" >
-
-        <TableRow>
-
-            <EditText
-                android:id="@+id/txt_barSearch"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/button_ok"
-                android:layout_width="40dp"
-                android:layout_height="25dp"
-                android:background="@drawable/tick" />
-
-            <Button
-                android:id="@+id/button_Voice"
-                android:layout_width="40dp"
-                android:layout_height="25dp"
-                android:background="@drawable/microfono" />
-
-            <Button
-                android:id="@+id/button_codeSearch"
-                android:layout_width="40dp"
-                android:layout_height="25dp"
-                android:background="@drawable/barras" />
-        </TableRow>
-
-        <TableRow
-            android:collapseColumns="1,2"
-            android:shrinkColumns="3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:shrinkColumns="1,2,3"
             android:stretchColumns="0" >
 
-            <TextView
-                android:id="@+id/txt_product"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_span="3" 
-                android:visibility="invisible">
-            </TextView>
-
-            <TextView
-                android:id="@+id/txt_quantity"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" 
-                android:visibility="invisible">
-            </TextView>
+        <TableRow>
+                <EditText
+                        android:id="@+id/txt_barSearch"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+    
+                <Button
+                        android:id="@+id/button_ok"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/tick" />
+    
+                <Button
+                        android:id="@+id/button_Voice"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/microfono" />
+    
+                <Button
+                        android:id="@+id/button_codeSearch"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/barras" />
         </TableRow>
+    
+        <TableRow
+                android:collapseColumns="1,2"
+                android:shrinkColumns="3"
+                android:stretchColumns="0" >
+    
+                <TextView
+                        android:id="@+id/txt_product"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="3" 
+                        android:visibility="invisible">
+                </TextView>
+    
+                <TextView
+                        android:id="@+id/txt_quantity"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" 
+                        android:visibility="invisible">
+                </TextView>
+        </TableRow>
+        
     </TableLayout>
-
+    
 </RelativeLayout>
