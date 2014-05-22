@@ -24,8 +24,6 @@
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginRight="20dp" >
 
-<<<<<<< HEAD
-=======
 		    <!-- Distribución de 50% y 50% respectivamente 
 		    	para los elementos agregados al layout. 
 		    	El 100% del espacio disponible para estos elementos (botones),
@@ -38,7 +36,6 @@
 		    	“celda”, tal y como si se trataran de porcentajes. 
 		    -->
 
->>>>>>> Rama-Vivi-Android
 	    		<Button
 	    		        android:id="@+id/button1"		    		    
 		    		android:layout_width="0dp"
