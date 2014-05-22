@@ -5,13 +5,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-<<<<<<< HEAD
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-=======
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
 
@@ -23,45 +16,30 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
->>>>>>> Rama-Vivi-Android
+
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-<<<<<<< HEAD
-import org.json.JSONObject;
-=======
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-
-
-
->>>>>>> Rama-Vivi-Android
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-<<<<<<< HEAD
-=======
+
 import android.database.sqlite.SQLiteDatabase;
->>>>>>> Rama-Vivi-Android
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-<<<<<<< HEAD
 
-public class Login extends Activity {
-
-	Handler_Sqlite helper = new Handler_Sqlite(this);
-	Boolean registrado=false;
-
-=======
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -73,39 +51,27 @@ public class Login extends Activity {
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 	Boolean registrado=false;
 
->>>>>>> Rama-Vivi-Android
 	public String session_name;
-    public String session_id;
-    public String encryptedPassword="";
+	public String session_id;
+        public String encryptedPassword="";
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
 		setContentView(R.layout.activity_login);
-<<<<<<< HEAD
-
-=======
-
 		
 		userName = (EditText)findViewById(R.id.editTextuserName);
 		password = (EditText)findViewById(R.id.editTextPassword);
 
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
-		
->>>>>>> Rama-Vivi-Android
 	}
 
 		
 
 	public void intento_logueo(View view) {
-<<<<<<< HEAD
-=======
 		String name = userName.getText().toString(); 
 		String key = password.getText().toString();
-		
-		
->>>>>>> Rama-Vivi-Android
 		new HttpAsyncTask().execute();
 	}
 	
@@ -139,13 +105,7 @@ public class Login extends Activity {
    
 
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
-<<<<<<< HEAD
 
-=======
-		
-
-		
->>>>>>> Rama-Vivi-Android
         @Override
         protected Integer doInBackground(String... urls) {
         	
@@ -193,19 +153,7 @@ public class Login extends Activity {
             return 0;
         }
 
-<<<<<<< HEAD
 
-       // onPostExecute displays the results of the AsyncTask.
-       @Override
-        protected void onPostExecute(Integer result) {
-            if(registrado){
-    			Intent intent = new Intent(Login.this,PantallaTransicion.class);
-    	    	startActivity(intent);
-    			finish();
-    		}
-    		else
-    			errorLogging();      
-=======
        // onPostExecute displays the results of the AsyncTask.
        @Override
         protected void onPostExecute(Integer result) {
@@ -223,13 +171,8 @@ public class Login extends Activity {
     		else
     			errorLogging();
             
->>>>>>> Rama-Vivi-Android
-            
-       }
-    }
+        }
 
-
-	
 	public static String httpGetData(String mURL) {
         //String response="";
 		 InputStream inputStream = null;
@@ -257,10 +200,7 @@ public class Login extends Activity {
 	 
 	        return result;
     
-    }  
-<<<<<<< HEAD
-	
-=======
+        }  
 	
 	 
 	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
@@ -273,43 +213,5 @@ public class Login extends Activity {
 	        inputStream.close();
 	        return result;
 	 
-	    }
-	
 	 }
-	
-	/*public void errorPassword() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		 
-	    builder.setTitle("Error")
-	            .setIcon(
-	                    getResources().getDrawable(
-	                            R.drawable.close))
-
-	            .setMessage("Contrase�a incorrecta. Intentelo de nuevo")
-
-	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
->>>>>>> Rama-Vivi-Android
-	 
-	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-	        String line = "";
-	        String result = "";
-	        while((line = bufferedReader.readLine()) != null)
-	            result += line;
-	 
-<<<<<<< HEAD
-	        inputStream.close();
-	        return result;
-	 
-	    }
-	
-	 }
-=======
-	    builder.create();
-	    builder.show();
-
-	}*/
->>>>>>> Rama-Vivi-Android
-	
-
-
+}
