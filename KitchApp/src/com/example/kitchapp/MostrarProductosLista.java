@@ -163,8 +163,6 @@ public class MostrarProductosLista extends Activity implements OnClickListener {
 		
 		Button button_addCode = (Button) findViewById(R.id.buttonAddCode);
 		button_addCode.setOnClickListener(this);
-		
-		
 	}
 	
 	private void initializeArrayList(Integer idList) {
@@ -477,7 +475,7 @@ public class MostrarProductosLista extends Activity implements OnClickListener {
 		EditText product = (EditText) findViewById(R.id.et1);
 		String prod = product.getText().toString();
 		if (prod.equals("")) {
-			alertDialogReport("Es necesario escribir el nombre del producto con su cantidad si se desea, para poder añadir");
+			alertDialogReport("Es necesario escribir el nombre del producto con su cantidad si se desea, para poder aï¿½adir");
 			return true;
 		}
 		else {
