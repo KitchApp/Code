@@ -20,6 +20,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	private static final String nameBD = "KitchApp-BaseDD1";
 
 	Context myContext;
+
 	public Handler_Sqlite(Context ctx){
 		super(ctx,nameBD, null,1);
 		myContext = ctx;
