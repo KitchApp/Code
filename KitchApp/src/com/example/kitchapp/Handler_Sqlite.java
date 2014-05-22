@@ -17,12 +17,7 @@ import static android.provider.BaseColumns._ID;
 
 public class Handler_Sqlite extends SQLiteOpenHelper{
 
-<<<<<<< HEAD
-	private static final String nameBD = "KitchApp-BaseDD";
-=======
-
 	private static final String nameBD = "KitchApp-BaseDD1";
->>>>>>> Rama-Vivi-Android
 
 	Context myContext;
 	public Handler_Sqlite(Context ctx){
@@ -46,11 +41,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		String query4 = "CREATE TABLE listShopping ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)";
 		String query5 = "CREATE TABLE productsList ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, idCat INTEGER, barCode TEXT)";
 		String query6 = "CREATE TABLE listHaveProducts ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, idList INTEGER, idProduct INTEGER,  cant INTEGER, FOREIGN KEY (idList) REFERENCES listShopping("+_ID+"), FOREIGN KEY (idProduct) REFERENCES productsList("+_ID+"))";
-<<<<<<< HEAD
 
-=======
-		
->>>>>>> Rama-Vivi-Android
 		db.execSQL(query1);	
 		db.execSQL(query2);
 		db.execSQL(query3);
@@ -105,13 +96,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		SQLiteDatabase db=this.getReadableDatabase();
 		if (option.equals("readPantry")) {
-<<<<<<< HEAD
-			String args[]={key.toString()};
-=======
 			String columnas[]={_ID,"name","cant"};
 			String args[]={key.toString()};
 			//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
->>>>>>> Rama-Vivi-Android
 			Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
 			int id, idName, idNum, idCat;
 			id=c.getColumnIndex(_ID);
@@ -120,10 +107,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 			idCat=c.getColumnIndex("idCat");
 		
 			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-<<<<<<< HEAD
-=======
 				//c.getString(idCat);
->>>>>>> Rama-Vivi-Android
 				result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum),c.getInt(idCat),false));
 			}
 		}
@@ -131,14 +115,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 			System.out.println("holaaaa");
 			String args[]={key.toString()};
 			System.out.println(args[0]);
-<<<<<<< HEAD
-			int idProduct,cant;
-			Cursor c=db.query("listHaveProducts", null, "idList=?", args, null, null, null);
-=======
 			int idL,idProduct,cant;
 			Cursor c=db.query("listHaveProducts", null, "idList=?", args, null, null, null);
 			idL = c.getColumnIndex("idList");
->>>>>>> Rama-Vivi-Android
 			idProduct = c.getColumnIndex("idProduct");
 			cant = c.getColumnIndex("cant");
 			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
@@ -157,7 +136,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	}
 	
 	public ArrayList<ShoppingListItem> readLists(){
-<<<<<<< HEAD
+
 		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
 		SQLiteDatabase db=this.getReadableDatabase();
 		Integer listName;
@@ -168,41 +147,11 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 			lists.add(new ShoppingListItem(c.getString(listName)));
 		}
 		return lists;		
-=======
-		//No utilizo por ahora los argumentos
-		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
-		SQLiteDatabase db=this.getReadableDatabase();
-		//String args[]={key.toString()};
-		//System.out.println(args[0]);
-		Integer listName;
-		//String[] valores_recuperar = {"name"};
-		Cursor c=db.query("listShopping", null, null, null, null, null, null,null);
-		listName = c.getColumnIndex("name");
-		//c.moveToFirst();
-		
-		
-		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-			//c.getString(idCat);
-			lists.add(new ShoppingListItem(c.getString(listName)));
-		}
-		/*c.moveToFirst();
-	
-        do {
-        	String tmp=c.getString(listName);
-        	lists.add(new ShoppingListItem(c.getString(listName)));
-        } while (c.moveToNext());*/
-		return lists;
-		
-		
->>>>>>> Rama-Vivi-Android
+
 	}
 	
 	public boolean readUser(String nameUser) {
 		SQLiteDatabase db=this.getReadableDatabase();
-<<<<<<< HEAD
-=======
-		
->>>>>>> Rama-Vivi-Android
 		String args[]={nameUser};
 		Cursor c=db.query("users", null, "name=?", args, null, null, null);
 		if (c.getCount() == 0)
@@ -216,18 +165,11 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={nameUser};
 		Cursor c=db.query("users", null, "name=?", args, null, null, null);
-<<<<<<< HEAD
-		int password;
-		password = c.getColumnIndex("password");
-	
-=======
 		int id,name,password,email;
 		id = c.getColumnIndex(_ID);
 		name = c.getColumnIndex("name");
 		password = c.getColumnIndex("password");
 		email = c.getColumnIndex("email");
-		
->>>>>>> Rama-Vivi-Android
 		c.moveToFirst();
 		
 		return c.getString(password);
@@ -236,21 +178,15 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		
 	public boolean exist(String data, String table){
 		
-<<<<<<< HEAD
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={data};
-=======
 		String columnas[]={_ID,"name","barCode"};
 	
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={data};
 		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
->>>>>>> Rama-Vivi-Android
+
 		Cursor c=db.query(table, null, "barCode=?", args, null, null, null);
 	
 		return (c.moveToFirst());
-		
-		
 	}
 	
 	public ArrayList<Object> readProductsTemporary(Object data){
@@ -261,11 +197,9 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		int idName=c.getColumnIndex("name");
 		int idBarCode=c.getColumnIndex("barCode");
 		c.moveToFirst();
-<<<<<<< HEAD
-=======
+
 		String tmp1=c.getString(idName);
 		String tmp2=c.getString(idBarCode);
->>>>>>> Rama-Vivi-Android
 		result.add((c.getString(idName)));
 		result.add((c.getString(idBarCode)));
 		
@@ -319,16 +253,11 @@ public Integer getIDProduct(String name,String col) {
 	SQLiteDatabase db=this.getReadableDatabase();
 	String args[]={name};
 	Cursor c=db.query("productsList", null, col + "=?", args, null, null, null);
-<<<<<<< HEAD
-	int id;
-	id = c.getColumnIndex(_ID);
-=======
 	int id,nameP,idCat,barcode;
 	id = c.getColumnIndex(_ID);
 	nameP = c.getColumnIndex("name");
 	idCat = c.getColumnIndex("idCat");
 	barcode = c.getColumnIndex("barCode");
->>>>>>> Rama-Vivi-Android
 	
 	c.moveToFirst();
 	
@@ -355,12 +284,8 @@ public boolean existProductList(String name) {
 }
 
 
-
-<<<<<<< HEAD
 	//mï¿½todo temporal
-=======
-	//método temporal
->>>>>>> Rama-Vivi-Android
+
 	public void insertLists(String name){
 		ContentValues registro=new ContentValues();
 		
@@ -375,101 +300,6 @@ public boolean existProductList(String name) {
 		
 		tmp.put("name",nameNew);
 		tmp.put("cant",number);
-<<<<<<< HEAD
-		
-		this.getWritableDatabase().update("products", tmp, "name=?", args);
-	}
-	
-	public void insertUser(String name,String password,String email) {
-		ContentValues register = new ContentValues();
-		register.put("name", name);
-		register.put("password", password);
-		register.put("email", email);
-		
-		this.getWritableDatabase().insert("users", null, register);
-	}
-	
-	public void removeProduct(String name,String option,Integer idList) {
-		String args [] = { name };
-		if (option.equals("deletePantry")) {
-			this.getWritableDatabase().delete("products","name=?",args);
-		}
-		else if (option.equals("deleteList")) {
-			Integer idProduct = getIDProduct(name,"name");
-			String argv [] = { idList.toString(),idProduct.toString() };
-			this.getWritableDatabase().delete("listHaveProducts","idList=? AND idProduct=?",argv);
-			if (!existProductOtherList(idProduct)) {
-				this.getWritableDatabase().delete("productsList","name=?",args);
-			}
-		}
-	}
-	
-	public boolean existProductOtherList(Integer id) {
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={id.toString()};
-		Cursor c=db.query("listHaveProducts", null, "idProduct=?", args, null, null, null);
-	
-		return (c.moveToFirst());
-	}
-	
-	//Hay que borrar primero los productos--->corregirlo
-	public void remove(String tableName, String column, String elemRemove) {
-		String args[] = {elemRemove};
-		this.getWritableDatabase().delete(tableName,column+"=?",args);
-	}
-	
-	
-	public boolean existProductAdded(String name) {
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={name};
-		Cursor c=db.query("products", null, "name=?", args, null, null, null);
-	
-		return (c.moveToFirst());
-	}
-	
-	public Integer getCant(String name) {
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={name};
-		int cant;
-		Cursor c=db.query("products", null, "name=?", args, null, null, null);
-		cant = c.getColumnIndex("cant");
-		c.moveToFirst();
-		return (c.getInt(cant));
-	}
-	
-	public boolean existListHaveProducts(Integer idProduct,Integer idList) {
-		SQLiteDatabase db=this.getReadableDatabase();
-		String args[]={idList.toString(),idProduct.toString()};
-		Cursor c=db.query("listHaveProducts", null, "idList=? AND idProduct=?", args, null, null, null);
-	
-		return (c.moveToFirst());
-	}
-	
-	public void updateProduct(String name,Integer number) {
-		String args [] = { name };
-		ContentValues tmp = new ContentValues();
-		
-		tmp.put("cant",number);
-		
-		this.getWritableDatabase().update("products", tmp, "name=?", args);
-	}
-	
-	public ItemProducto existProduct(String data, String table, String col){
-		
-		SQLiteDatabase db= this.getReadableDatabase();
-		String args[]={data};
-//		Cursor c = db.query(table, null, "name=?", args, null, null, null);
-		Cursor c = db.query(table, null, col+"=?", args, null, null, null);
-		ItemProducto p = null;
-		int id = c.getColumnIndex(_ID);
-		int n = c.getColumnIndex("name");
-		int q = c.getColumnIndex("cant");
-		if (c.moveToFirst()) {
-			p = new ItemProducto(c.getInt(id),c.getString(n),c.getInt(q));
-		};	
-		return p;
-=======
-		
 		this.getWritableDatabase().update("products", tmp, "name=?", args);
 	}
 	
@@ -537,7 +367,6 @@ public boolean existProductList(String name) {
 		Cursor c=db.query("listHaveProducts", null, "idList=? AND idProduct=?", args, null, null, null);
 	
 		return (c.moveToFirst());
->>>>>>> Rama-Vivi-Android
 	}
 	
 	public boolean existList(String table, String data){
