@@ -22,24 +22,13 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		buttonList.setOnClickListener(this);
 		Button buttonRecipes = (Button) findViewById(R.id.button3);
 		buttonRecipes.setOnClickListener(this);
-		
-<<<<<<< HEAD
 	}
-	
-
-	public void onClick(View v) {
-		switch(v.getId()) {
-			case R.id.button1:
-				Intent i = new Intent(this, AccesoDespensa.class);
-=======
-}
 	
 	
 	public void onClick(View v) {
 		switch(v.getId()) {
 			case R.id.button1:
 				Intent i = new Intent(this, ShoppingLists.class);
->>>>>>> Rama-Vivi-Android
 				startActivity(i);
 				break;
 			
@@ -48,11 +37,6 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 				startActivity(j);
 				break;
 				
-<<<<<<< HEAD
-		}
-	}
-	
-=======
 			case R.id.button3:
 				Intent k = new Intent(this, Recipes.class);
 				startActivity(k);
@@ -60,6 +44,4 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		}
 	}
 	
-	
->>>>>>> Rama-Vivi-Android
 }
