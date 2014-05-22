@@ -12,13 +12,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 
-<<<<<<< HEAD
 public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
 
-=======
-public class AccesoDespensa extends Activity implements OnClickListener {
-	
->>>>>>> Rama-Vivi-Android
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
