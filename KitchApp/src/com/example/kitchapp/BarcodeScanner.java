@@ -16,7 +16,6 @@ public class BarcodeScanner {
 		scanIntegrator.initiateScan();
 	}
 	
-	
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
 		if (scanningResult != null )
@@ -26,10 +25,5 @@ public class BarcodeScanner {
 	public String getBarcode() {
 		return barcode;
 	}
-		  
 	
-//	public void addBarCode(){
-//		IntentIntegrator scanIntegrator = new IntentIntegrator(activity);
-//		scanIntegrator.initiateScan();
-//	}
 }
