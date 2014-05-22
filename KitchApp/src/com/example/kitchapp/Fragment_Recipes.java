@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class Fragment_Recipes extends Fragment {
 
-View rootView;
+	View rootView;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		
