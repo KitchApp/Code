@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class Fragment_TopTen extends Fragment {
-View rootView;
+	
+	View rootView;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		
@@ -20,5 +21,4 @@ View rootView;
 		
 		return rootView;
 	}
-	
 }
