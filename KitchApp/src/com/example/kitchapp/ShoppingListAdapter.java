@@ -178,8 +178,3 @@ class Holder
     	this.checkBox = checkBox;
     }
 }*/
-
-
-
-
->>>>>>> Rama-Vivi-Android
