@@ -33,12 +33,8 @@ public class ShoppingListAdapter extends BaseAdapter {
  
   @Override
   public long getItemId(int position) {
-<<<<<<< HEAD
-	  return position;
-=======
-   // return items.get(position).getListName();
+   	  // return items.get(position).getListName();
 	  return 0;
->>>>>>> Rama-Vivi-Android
   }
  
   @Override
@@ -47,11 +43,7 @@ public class ShoppingListAdapter extends BaseAdapter {
          
     if(contentView == null) {
       LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-<<<<<<< HEAD
-      vi = inflater.inflate(R.layout.shopping_list_go, null);
-=======
       vi = inflater.inflate(R.layout.shoppinglist_item, null);
->>>>>>> Rama-Vivi-Android
     }
              
     ShoppingListItem item = items.get(position);
@@ -66,17 +58,6 @@ public class ShoppingListAdapter extends BaseAdapter {
     });
     
          
-<<<<<<< HEAD
-    TextView nombre = (TextView) vi.findViewById(R.id.text_listName);
-    nombre.setText(item.getListName());
-         
-    checkList.setChecked(item.isChecked());
-    checkList.setTag(item);
-    
-    return vi;
-  }
-}
-=======
     /*ImageView image = (ImageView) vi.findViewById(R.id.imagen);
     int imageResource = activity.getResources().getIdentifier(item.getRutaImagen(), null, activity.getPackageName());
     image.setImageDrawable(activity.getResources().getDrawable(imageResource));*/
