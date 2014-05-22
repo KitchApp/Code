@@ -23,43 +23,42 @@
             android:label=" " >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.Registro"
             android:label=" " >
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.PantallaPrincipal"
-            android:label=" " 
-            >
+            android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.PantallaPrincipal" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.PantallaTransicion"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.PantallaTransicion" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.AccesoDespensa"
-            android:label=" " 
-           >
+            android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.AccesoDespensa" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.ItemAdapter"
             android:label=" " >
@@ -67,7 +66,6 @@
                 <action android:name="com.example.kitchapp.ItemAdapter" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            
         </activity>
         
         <activity
@@ -78,55 +76,57 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.ItemProductoAdapter"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.ItemProductoAdapter" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.AddManualmente"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.AddManualmente" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.ShoppingLists"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.ShoppingLists" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name="com.example.kitchapp.MostrarProductosLista"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.MostrarProductosLista" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
         <activity
-<<<<<<< HEAD
             android:name="com.example.kitchapp.Bar_Search"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.Bar_Search" />
-=======
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
             android:name="com.example.kitchapp.Recipes"
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.Recipes" />
->>>>>>> Rama-Vivi-Android
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
