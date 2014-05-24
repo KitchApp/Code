@@ -14,24 +14,22 @@ public class ItemProducto {
 	    this.cantidad = 0;
 	    this.selected = false;
 	  }
-	     
-	  //public ItemProducto(long id, String nombre, int cantidad, String tipo) {
+	  
+	  public ItemProducto(int id, String nombre, int cantidad) {
+		    this.id = id;
+		    this.nombre = nombre;
+		    this.cantidad = cantidad;
+	  }
+	  
+	  //public ItemProducto(long id, String nombre, int cantidad, String tipo) { 
 	  public ItemProducto(int id, String nombre, int cantidad,int category, boolean selected) {
 		    this.id = id;
 		    this.nombre = nombre;
 		    //this.tipo = tipo;
 		    this.category = category;
 		    this.cantidad = cantidad;
-		    this.selected = selected;
-		    //this.barCode=barCode;
-		  }
-	     
-	  /*public Item(long id, String nombre, String tipo, String rutaImagen) {
-	    this.id = id;
-	    this.nombre = nombre;
-	    this.tipo = tipo;
-	    this.rutaImagen = rutaImagen;
-	  }*/
+		    this.selected = selected;		    
+	  }	     	 
 	     
 	  public long getId() {
 	    return id;
