@@ -75,7 +75,7 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 	}
 	
 	@Override
-	ublic boolean onCreateOptionsMenu(Menu menu) {
+	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_action_bar, menu);
@@ -86,7 +86,7 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		// cambiar add_Product por add(para que sea más general)
+		// cambiar add_Product por add(para que sea mÃ¡s general)
 		case R.id.add_Product:
 			open_Dialog();
 			return true;
@@ -197,7 +197,6 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 
 		// show it
 		alertDialog.show();
-
 	}
 	
 	public void goList(View v) {
