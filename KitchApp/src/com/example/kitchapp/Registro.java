@@ -48,17 +48,10 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText email;
 	private String encryptedPassword="";
 
-	Handler_Sqlite helper = new Handler_Sqlite(this);
-
+	Handler_Sqlite helper = new Handler_Sqlite(this);	
 	
 	public String session_name;
-	    public String session_id;
-    	//private boolean userValidation=false;
-    	//private boolean emailValidation=false;
-    	//public Boolean registrado=false;
-	
-	public String session_name;
-    	public String session_id;
+    public String session_id;
    
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -97,17 +90,12 @@ public class Registro extends Activity implements OnClickListener {
 				
 				if(hasFocus==true){
 					//emailValidation=true;
-					new HttpGetEmail().execute();
-					
-				}
-				
+					new HttpGetEmail().execute();					
+				}				
 			}
 		});
  
     }
-
-      
-
     
 	@Override
 	public void onClick(View v) {
@@ -133,13 +121,11 @@ public class Registro extends Activity implements OnClickListener {
 						
 						Intent intent = new Intent(Registro.this,PantallaTransicion.class);
 				        	startActivity(intent);
-						finish();*/
-			            
+						finish();*/			            
 					}
 				}
 				break;
-		}
-		
+		}		
 	}
 
 	public void showMessageInvalidRegister() {
@@ -160,14 +146,13 @@ public class Registro extends Activity implements OnClickListener {
 	    builder.create();
 	    builder.show();
 	}
-	
-	
+		
 	public void showMessageEmailValidation() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
 	    builder.setTitle("Informacion")
 	            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
-	            .setMessage("Recuerde que si desea utilizar su cuenta en la p�gina web tiene que validarla pinchando en el enlace que se le ha enviado al correo electr�nico.")
+	            .setMessage("Recuerde que si desea utilizar su cuenta en la pï¿½gina web tiene que validarla pinchando en el enlace que se le ha enviado al correo electrï¿½nico.")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -183,8 +168,7 @@ public class Registro extends Activity implements OnClickListener {
 	 
 	    builder.create();
 	    builder.show();
-	}
-	
+	}	
 	
 	public void errorMail() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -221,8 +205,7 @@ public class Registro extends Activity implements OnClickListener {
 	}
 	
 	public class HttpGetName extends AsyncTask<String, Integer, String> {
-     
-		
+     		
 		AlertDialog.Builder builder;
 		protected void onPreExecute() {
 		    super.onPreExecute();
@@ -241,78 +224,65 @@ public class Registro extends Activity implements OnClickListener {
  	          Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
 	    	  //HttpGet httppost = new HttpGet(mURL[0]);
 	         
-	        	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
-	         
-	         
-	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
-	         try {
-	   
-	
-	         Log.i("LocAndroid Response HTTP","Ejecutando get");
-	         // Execute HTTP Post Request
-	         ResponseHandler<String> responseHandler=new BasicResponseHandler();
-	        	response = httpclient.execute(httppost,responseHandler);
-	         Log.i("LocAndroid Response HTTP",response);
-	    	} catch (ClientProtocolException e) {
-	        Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-	        // TODO Auto-generated catch block
-	    } catch (IOException e) {
-	        
-	        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-	        // TODO Auto-generated catch block
-	    }
-			// TODO Auto-generated method stub
-			return response;
+	          httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
+	         	         
+	          Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
+	          try {	   
+	        	  Log.i("LocAndroid Response HTTP","Ejecutando get");
+	        	  // Execute HTTP Post Request
+	        	  ResponseHandler<String> responseHandler=new BasicResponseHandler();
+	        	  response = httpclient.execute(httppost,responseHandler);
+	        	  Log.i("LocAndroid Response HTTP",response);
+	    	  } catch (ClientProtocolException e) {
+	    		  Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
+	    		  //TODO Auto-generated catch block
+	    	  } catch (IOException e) {	        
+	    		  Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
+	    		  // TODO Auto-generated catch block
+	    	  }
+	          // TODO Auto-generated method stub
+	          return response;
 		}
     //return response;
 	
 		protected void onPostExecute(String result) {
 			JSONArray ja=null;
-			try {
-						
-			
-			if(result.length()>1)
-				ja=new JSONArray(result);
-			
-			
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-
-			e.printStackTrace();
-			Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
-			
-		}
-		try{
-			
-			if(userName.getText().toString().equals(ja.getString(0))){
-				//registrado=true;
-				builder.setTitle("Informacion")
-	            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
-	            .setMessage("Usuario no disponible")
-	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-	 
-	                @Override
-	                public void onClick(DialogInterface arg0, int arg1) {
-	                	arg0.cancel();
-	                	userName.requestFocus();
-	                }
-	            });
-	 
-				builder.create();
-				builder.show();
+			try {									
+				if(result.length()>1)
+					ja=new JSONArray(result);			
 				
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();			
 			}
-		}
+			try{
+				
+				if(userName.getText().toString().equals(ja.getString(0))){
+					//registrado=true;
+					builder.setTitle("Informacion")
+		            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
+		            .setMessage("Usuario no disponible")
+		            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+		 
+		                @Override
+		                public void onClick(DialogInterface arg0, int arg1) {
+		                	arg0.cancel();
+		                	userName.requestFocus();
+		                }
+		            });
+		 
+					builder.create();
+					builder.show();
+					
+				}
+			}
 			catch (Exception e) {
 				
-			} 
-		
-	
-	}
-    
+			} 		
+		}    
     }
-	
-	
+		
 public class HttpGetEmail extends AsyncTask<String, Integer, String> {
      
 		
@@ -327,62 +297,52 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		
 		String response="";
 	        //mURL[0]=mURL[0].replace(" ", "%20");
-	         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
-	          HttpClient httpclient = new DefaultHttpClient();
-	          HttpGet httppost= new HttpGet();;
+	        //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
+	         HttpClient httpclient = new DefaultHttpClient();
+	         HttpGet httppost= new HttpGet();;
 	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
 	    	//HttpGet httppost = new HttpGet(mURL[0]);
          	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
          
-         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
-         try {
-   
-
-         Log.i("LocAndroid Response HTTP","Ejecutando get");
-        // Execute HTTP Post Request
-      ResponseHandler<String> responseHandler=new BasicResponseHandler();
-        	response = httpclient.execute(httppost,responseHandler);
-         Log.i("LocAndroid Response HTTP",response);
-    	} catch (ClientProtocolException e) {
-        Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-        // TODO Auto-generated catch block
-    } catch (IOException e) {
-        
-        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-        // TODO Auto-generated catch block
-    }
+         	 Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
+         	 try {
+         		 Log.i("LocAndroid Response HTTP","Ejecutando get");
+         		 // Execute HTTP Post Request
+         		 ResponseHandler<String> responseHandler=new BasicResponseHandler();
+         		 response = httpclient.execute(httppost,responseHandler);
+         		 Log.i("LocAndroid Response HTTP",response);
+         	 } catch (ClientProtocolException e) {
+         		 Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
+         		 // TODO Auto-generated catch block
+         	 } catch (IOException e) {        
+         		 Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
+         		 // TODO Auto-generated catch block
+         	 }
 		// TODO Auto-generated method stub
 		return response;
-	}
-    //return response;
-	
+	}	
 	
 	protected void onPostExecute(String result) {
 		JSONArray ja=null;
-		try {
-					
-		
-		if(result.length()>1)
-			ja=new JSONArray(result);
-		
-		
-	} catch (JSONException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
-		
-	}
-	try{
-		String tmp=email.getText().toString();
-		boolean x=email.getText().toString().equals(ja.getString(2));
-		boolean y=!(email.getText().toString().equals(""));
+		try {							
+			if(result.length()>1)
+				ja=new JSONArray(result);		
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();		
+		}
+		try{
+			String tmp=email.getText().toString();
+			boolean x=email.getText().toString().equals(ja.getString(2));
+			boolean y=!(email.getText().toString().equals(""));
 
-		if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
-			//registrado=true;
-			builder.setTitle("Informacion")
-            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
-            .setMessage("Email ya registrado")
-            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+			if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
+				//registrado=true;
+				builder.setTitle("Informacion")
+				.setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
+				.setMessage("Email ya registrado")
+				.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
  
                 @Override
                 public void onClick(DialogInterface arg0, int arg1) {
@@ -391,21 +351,14 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
                 }
             });
  
-			builder.create();
-			builder.show();
-			
+				builder.create();
+				builder.show();			
+			}
 		}
-	}
-		catch (Exception e) {
-			
-		} 
-		
-	
-	}
-    
-    }
-	
-	
+		catch (Exception e) {			
+		} 			
+	}    
+}		
 	
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
            @Override
@@ -466,53 +419,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
         protected void onPostExecute(Integer result) {
         	/*Intent intent = new Intent(Registro.this,PantallaTransicion.class);
         	startActivity(intent);
-			finish();*/
-            
-        }
-
-	
-	
-	/*public static String httpGetData(String mURL) {
-        //String response="";
-		 InputStream inputStream = null;
-	     String result = "";
-	     try {
-	 
-	            // create HttpClient
-	            HttpClient httpclient = new DefaultHttpClient();
-	 
-	            // make GET request to the given URL
-	            HttpResponse httpResponse = httpclient.execute(new HttpGet(mURL));
-	 
-	            // receive response as inputStream
-	            inputStream = httpResponse.getEntity().getContent();
-	 
-	            // convert inputstream to string
-	            if(inputStream != null)
-	                result = convertInputStreamToString(inputStream);
-	            else
-	                result = "Did not work!";
-	 
-	     } 
-	     catch (Exception e) {
-	            Log.d("InputStream", e.getLocalizedMessage());
-	     }
-	 
-	     return result;
-    
-    }  
-	
-	 
-	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-	        String line = "";
-	        String result = "";
-	        while((line = bufferedReader.readLine()) != null)
-	            result += line;
-	 
-	        inputStream.close();
-	        return result;
-	 
-	    
-	}*/
+			finish();*/            
+        }	
 }
