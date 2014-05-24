@@ -1,6 +1,5 @@
 package com.example.kitchapp;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,12 +15,10 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
-
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -31,15 +28,13 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-
 import android.database.sqlite.SQLiteDatabase;
-
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -53,7 +48,7 @@ public class Login extends Activity {
 
 	public String session_name;
 	public String session_id;
-        public String encryptedPassword="";
+    public String encryptedPassword="";
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -66,9 +61,7 @@ public class Login extends Activity {
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
 	}
-
 		
-
 	public void intento_logueo(View view) {
 		String name = userName.getText().toString(); 
 		String key = password.getText().toString();
@@ -79,8 +72,7 @@ public class Login extends Activity {
 		Intent i = new Intent(this, Registro.class);
 		startActivity(i);
 	}
-	
-	
+		
 	public void errorLogging() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
@@ -103,13 +95,11 @@ public class Login extends Activity {
 	    builder.show();
 	}
    
-
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
 
         @Override
         protected Integer doInBackground(String... urls) {
-        	
-        	
+        	     	
         	HttpClient httpclient = new DefaultHttpClient();
 
             //set the remote endpoint URL
@@ -153,7 +143,6 @@ public class Login extends Activity {
             return 0;
         }
 
-
        // onPostExecute displays the results of the AsyncTask.
        @Override
         protected void onPostExecute(Integer result) {
@@ -172,10 +161,10 @@ public class Login extends Activity {
     			errorLogging();
             
         }
+	}
 
-	public static String httpGetData(String mURL) {
-        //String response="";
-		 InputStream inputStream = null;
+   	public static String httpGetData(String mURL) {
+        InputStream inputStream = null;
 	        String result = "";
 	        try {
 	 
@@ -198,20 +187,17 @@ public class Login extends Activity {
 	            Log.d("InputStream", e.getLocalizedMessage());
 	        }
 	 
-	        return result;
-    
-        }  
-	
+	        return result;    
+    }	
 	 
-	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-	        String line = "";
-	        String result = "";
-	        while((line = bufferedReader.readLine()) != null)
-	            result += line;
-	 
-	        inputStream.close();
-	        return result;
-	 
-	 }
+   	private static String convertInputStreamToString(InputStream inputStream) throws IOException{
+        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
+        String line = "";
+        String result = "";
+        while((line = bufferedReader.readLine()) != null)
+            result += line;
+ 
+        inputStream.close();
+        return result;
+    }
 }
