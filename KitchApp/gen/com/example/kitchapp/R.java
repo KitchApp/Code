@@ -1021,224 +1021,7 @@ containing a value of this type.
          */
         public static final int dialog_fixed_width_minor=0x7f080012;
     }
-    public static final class drawable {
-        public static final int abc_ab_bottom_solid_dark_holo=0x7f020000;
-        public static final int abc_ab_bottom_solid_light_holo=0x7f020001;
-        public static final int abc_ab_bottom_transparent_dark_holo=0x7f020002;
-        public static final int abc_ab_bottom_transparent_light_holo=0x7f020003;
-        public static final int abc_ab_share_pack_holo_dark=0x7f020004;
-        public static final int abc_ab_share_pack_holo_light=0x7f020005;
-        public static final int abc_ab_solid_dark_holo=0x7f020006;
-        public static final int abc_ab_solid_light_holo=0x7f020007;
-        public static final int abc_ab_stacked_solid_dark_holo=0x7f020008;
-        public static final int abc_ab_stacked_solid_light_holo=0x7f020009;
-        public static final int abc_ab_stacked_transparent_dark_holo=0x7f02000a;
-        public static final int abc_ab_stacked_transparent_light_holo=0x7f02000b;
-        public static final int abc_ab_transparent_dark_holo=0x7f02000c;
-        public static final int abc_ab_transparent_light_holo=0x7f02000d;
-        public static final int abc_cab_background_bottom_holo_dark=0x7f02000e;
-        public static final int abc_cab_background_bottom_holo_light=0x7f02000f;
-        public static final int abc_cab_background_top_holo_dark=0x7f020010;
-        public static final int abc_cab_background_top_holo_light=0x7f020011;
-        public static final int abc_ic_ab_back_holo_dark=0x7f020012;
-        public static final int abc_ic_ab_back_holo_light=0x7f020013;
-        public static final int abc_ic_cab_done_holo_dark=0x7f020014;
-        public static final int abc_ic_cab_done_holo_light=0x7f020015;
-        public static final int abc_ic_clear=0x7f020016;
-        public static final int abc_ic_clear_disabled=0x7f020017;
-        public static final int abc_ic_clear_holo_light=0x7f020018;
-        public static final int abc_ic_clear_normal=0x7f020019;
-        public static final int abc_ic_clear_search_api_disabled_holo_light=0x7f02001a;
-        public static final int abc_ic_clear_search_api_holo_light=0x7f02001b;
-        public static final int abc_ic_commit_search_api_holo_dark=0x7f02001c;
-        public static final int abc_ic_commit_search_api_holo_light=0x7f02001d;
-        public static final int abc_ic_go=0x7f02001e;
-        public static final int abc_ic_go_search_api_holo_light=0x7f02001f;
-        public static final int abc_ic_menu_moreoverflow_normal_holo_dark=0x7f020020;
-        public static final int abc_ic_menu_moreoverflow_normal_holo_light=0x7f020021;
-        public static final int abc_ic_menu_share_holo_dark=0x7f020022;
-        public static final int abc_ic_menu_share_holo_light=0x7f020023;
-        public static final int abc_ic_search=0x7f020024;
-        public static final int abc_ic_search_api_holo_light=0x7f020025;
-        public static final int abc_ic_voice_search=0x7f020026;
-        public static final int abc_ic_voice_search_api_holo_light=0x7f020027;
-        public static final int abc_item_background_holo_dark=0x7f020028;
-        public static final int abc_item_background_holo_light=0x7f020029;
-        public static final int abc_list_divider_holo_dark=0x7f02002a;
-        public static final int abc_list_divider_holo_light=0x7f02002b;
-        public static final int abc_list_focused_holo=0x7f02002c;
-        public static final int abc_list_longpressed_holo=0x7f02002d;
-        public static final int abc_list_pressed_holo_dark=0x7f02002e;
-        public static final int abc_list_pressed_holo_light=0x7f02002f;
-        public static final int abc_list_selector_background_transition_holo_dark=0x7f020030;
-        public static final int abc_list_selector_background_transition_holo_light=0x7f020031;
-        public static final int abc_list_selector_disabled_holo_dark=0x7f020032;
-        public static final int abc_list_selector_disabled_holo_light=0x7f020033;
-        public static final int abc_list_selector_holo_dark=0x7f020034;
-        public static final int abc_list_selector_holo_light=0x7f020035;
-        public static final int abc_menu_dropdown_panel_holo_dark=0x7f020036;
-        public static final int abc_menu_dropdown_panel_holo_light=0x7f020037;
-        public static final int abc_menu_hardkey_panel_holo_dark=0x7f020038;
-        public static final int abc_menu_hardkey_panel_holo_light=0x7f020039;
-        public static final int abc_search_dropdown_dark=0x7f02003a;
-        public static final int abc_search_dropdown_light=0x7f02003b;
-        public static final int abc_spinner_ab_default_holo_dark=0x7f02003c;
-        public static final int abc_spinner_ab_default_holo_light=0x7f02003d;
-        public static final int abc_spinner_ab_disabled_holo_dark=0x7f02003e;
-        public static final int abc_spinner_ab_disabled_holo_light=0x7f02003f;
-        public static final int abc_spinner_ab_focused_holo_dark=0x7f020040;
-        public static final int abc_spinner_ab_focused_holo_light=0x7f020041;
-        public static final int abc_spinner_ab_holo_dark=0x7f020042;
-        public static final int abc_spinner_ab_holo_light=0x7f020043;
-        public static final int abc_spinner_ab_pressed_holo_dark=0x7f020044;
-        public static final int abc_spinner_ab_pressed_holo_light=0x7f020045;
-        public static final int abc_tab_indicator_ab_holo=0x7f020046;
-        public static final int abc_tab_selected_focused_holo=0x7f020047;
-        public static final int abc_tab_selected_holo=0x7f020048;
-        public static final int abc_tab_selected_pressed_holo=0x7f020049;
-        public static final int abc_tab_unselected_pressed_holo=0x7f02004a;
-        public static final int abc_textfield_search_default_holo_dark=0x7f02004b;
-        public static final int abc_textfield_search_default_holo_light=0x7f02004c;
-        public static final int abc_textfield_search_right_default_holo_dark=0x7f02004d;
-        public static final int abc_textfield_search_right_default_holo_light=0x7f02004e;
-        public static final int abc_textfield_search_right_selected_holo_dark=0x7f02004f;
-        public static final int abc_textfield_search_right_selected_holo_light=0x7f020050;
-        public static final int abc_textfield_search_selected_holo_dark=0x7f020051;
-        public static final int abc_textfield_search_selected_holo_light=0x7f020052;
-        public static final int abc_textfield_searchview_holo_dark=0x7f020053;
-        public static final int abc_textfield_searchview_holo_light=0x7f020054;
-        public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
-        public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int add_product=0x7f020057;
-        public static final int anadir_icono=0x7f020058;
-        public static final int barras=0x7f020059;
-        public static final int barras2=0x7f02005a;
-        public static final int barras3=0x7f02005b;
-        public static final int bebidas=0x7f02005c;
-        public static final int boton_redondo_color_aqua=0x7f02005d;
-        public static final int boton_redondo_color_celeste=0x7f02005e;
-        public static final int boton_redondo_color_navy=0x7f02005f;
-        public static final int button_over=0x7f020060;
-        public static final int cabecera_kitchapp=0x7f020061;
-        public static final int carnes=0x7f020062;
-        public static final int close=0x7f020063;
-        public static final int cod_barras_verdeok=0x7f020064;
-        public static final int condimentos=0x7f020065;
-        public static final int congelados=0x7f020066;
-        public static final int delete=0x7f020067;
-        public static final int delete2=0x7f020068;
-        public static final int despensa=0x7f020069;
-        public static final int dialog_button_selector=0x7f02006a;
-        public static final int dialog_container=0x7f02006b;
-        public static final int dialog_divider=0x7f02006c;
-        public static final int drogueria=0x7f02006d;
-        public static final int estadisticas=0x7f02006e;
-        public static final int ffondo=0x7f02006f;
-        public static final int fondo=0x7f020070;
-        public static final int fondo2=0x7f020071;
-        public static final int fondo_boton=0x7f020072;
-        public static final int fondo_de_pantalla_naranja=0x7f020073;
-        public static final int fondo_lista=0x7f020074;
-        public static final int fondo_lista_compra=0x7f020075;
-        public static final int fondo_lista_compra1=0x7f020076;
-        public static final int fondo_lista_compra10=0x7f020077;
-        public static final int fondo_lista_compra11=0x7f020078;
-        public static final int fondo_lista_compra12=0x7f020079;
-        public static final int fondo_lista_compra13=0x7f02007a;
-        public static final int fondo_lista_compra14=0x7f02007b;
-        public static final int fondo_lista_compra15=0x7f02007c;
-        public static final int fondo_lista_compra16=0x7f02007d;
-        public static final int fondo_lista_compra2=0x7f02007e;
-        public static final int fondo_lista_compra3=0x7f02007f;
-        public static final int fondo_lista_compra4=0x7f020080;
-        public static final int fondo_lista_compra5=0x7f020081;
-        public static final int fondo_lista_compra6=0x7f020082;
-        public static final int fondo_lista_compra7=0x7f020083;
-        public static final int fondo_lista_compra8=0x7f020084;
-        public static final int fondo_lista_compra85=0x7f020085;
-        public static final int fondo_lista_compra9=0x7f020086;
-        public static final int fondo_nuevo=0x7f020087;
-        public static final int fondo_pie_pagina=0x7f020088;
-        public static final int frutas_verduras=0x7f020089;
-<<<<<<< HEAD
-        public static final int go=0x7f02008a;
-        public static final int highlight_focused=0x7f0200b1;
-        public static final int highlight_pressed=0x7f0200b0;
-        public static final int hoja8=0x7f02008b;
-        public static final int home=0x7f02008c;
-        public static final int ic_action_search=0x7f02008d;
-        public static final int ic_launcher=0x7f02008e;
-        public static final int ic_launcher2=0x7f02008f;
-        public static final int imageok_verde=0x7f020090;
-        public static final int images=0x7f020091;
-        public static final int imagetic_verde=0x7f020092;
-        public static final int imagevoz_verde=0x7f020093;
-        public static final int lacteos=0x7f020094;
-        public static final int lista_compra=0x7f020095;
-        public static final int listview_selector=0x7f020096;
-        public static final int localizacion=0x7f020097;
-        public static final int loupe=0x7f020098;
-        public static final int lupa_sobre_un_robot_androide=0x7f020099;
-        public static final int micro_verde=0x7f02009a;
-        public static final int microfono=0x7f02009b;
-        public static final int microfono2=0x7f02009c;
-        public static final int mini_tic=0x7f02009d;
-        public static final int mini_tic2=0x7f02009e;
-        public static final int mini_tic3=0x7f02009f;
-        public static final int numberpicker_down=0x7f0200a0;
-        public static final int numberpicker_up=0x7f0200a1;
-        public static final int pan_bolleria=0x7f0200a2;
-        public static final int pastas=0x7f0200a3;
-        public static final int pescados=0x7f0200a4;
-        public static final int propuestaportadaappis=0x7f0200a5;
-        public static final int prueba2=0x7f0200a6;
-        public static final int recetario=0x7f0200a7;
-        public static final int resumen_de_color_como_fondo=0x7f0200a8;
-        public static final int salsas=0x7f0200a9;
-        public static final int teclado_android=0x7f0200aa;
-        public static final int tic=0x7f0200ab;
-        public static final int tic_verde=0x7f0200ac;
-        public static final int tick=0x7f0200ad;
-        public static final int varios=0x7f0200ae;
-        public static final int voz=0x7f0200af;
-=======
-        public static final int highlight_focused=0x7f0200ac;
-        public static final int highlight_pressed=0x7f0200ab;
-        public static final int hoja8=0x7f02008a;
-        public static final int ic_launcher=0x7f02008b;
-        public static final int ic_launcher2=0x7f02008c;
-        public static final int imageok_verde=0x7f02008d;
-        public static final int images=0x7f02008e;
-        public static final int imagetic_verde=0x7f02008f;
-        public static final int imagevoz_verde=0x7f020090;
-        public static final int lacteos=0x7f020091;
-        public static final int lista_compra=0x7f020092;
-        public static final int listview_selector=0x7f020093;
-        public static final int localizacion=0x7f020094;
-        public static final int lupa_sobre_un_robot_androide=0x7f020095;
-        public static final int micro_verde=0x7f020096;
-        public static final int microfono=0x7f020097;
-        public static final int microfono2=0x7f020098;
-        public static final int mini_tic=0x7f020099;
-        public static final int mini_tic2=0x7f02009a;
-        public static final int mini_tic3=0x7f02009b;
-        public static final int numberpicker_down=0x7f02009c;
-        public static final int numberpicker_up=0x7f02009d;
-        public static final int pan_bolleria=0x7f02009e;
-        public static final int pastas=0x7f02009f;
-        public static final int pescados=0x7f0200a0;
-        public static final int propuestaportadaappis=0x7f0200a1;
-        public static final int prueba2=0x7f0200a2;
-        public static final int recetario=0x7f0200a3;
-        public static final int resumen_de_color_como_fondo=0x7f0200a4;
-        public static final int salsas=0x7f0200a5;
-        public static final int teclado_android=0x7f0200a6;
-        public static final int tic=0x7f0200a7;
-        public static final int tic_verde=0x7f0200a8;
-        public static final int varios=0x7f0200a9;
-        public static final int voz=0x7f0200aa;
->>>>>>> Rama-Vivi-Android
-    }
+
     public static final class id {
         public static final int EditTextCantProduct=0x7f05004b;
         public static final int action_bar=0x7f05001c;
@@ -1252,15 +1035,6 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-<<<<<<< HEAD
-        public static final int action_settings=0x7f05007a;
-        public static final int activity_chooser_view_content=0x7f050025;
-        public static final int add_Product=0x7f05007b;
-        public static final int always=0x7f05000b;
-        public static final int beginning=0x7f050011;
-        public static final int btnLogin=0x7f05005a;
-        public static final int btnRegistro=0x7f050075;
-=======
         public static final int action_settings=0x7f050098;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int add_Product=0x7f050099;
@@ -1268,17 +1042,10 @@ containing a value of this type.
         public static final int beginning=0x7f050011;
         public static final int btnLogin=0x7f05005a;
         public static final int btnRegistro=0x7f050094;
->>>>>>> Rama-Vivi-Android
         public static final int button1=0x7f050064;
         public static final int button2=0x7f050065;
         public static final int button3=0x7f050066;
         public static final int button4=0x7f050067;
-<<<<<<< HEAD
-        public static final int buttonBread=0x7f05003f;
-        public static final int buttonCancel=0x7f05006b;
-        public static final int buttonCondiment=0x7f050043;
-        public static final int buttonDairy=0x7f05003d;
-=======
         public static final int buttonAddCode=0x7f050073;
         public static final int buttonAddManually=0x7f050071;
         public static final int buttonAddVoice=0x7f050072;
@@ -1287,7 +1054,6 @@ containing a value of this type.
         public static final int buttonCondiment=0x7f050043;
         public static final int buttonDairy=0x7f05003d;
         public static final int buttonDelete=0x7f050074;
->>>>>>> Rama-Vivi-Android
         public static final int buttonDrinks=0x7f050040;
         public static final int buttonFish=0x7f050042;
         public static final int buttonFrozen=0x7f050045;
@@ -1297,29 +1063,10 @@ containing a value of this type.
         public static final int buttonPasta=0x7f050044;
         public static final int buttonSauces=0x7f050046;
         public static final int buttonStore=0x7f050047;
-<<<<<<< HEAD
         public static final int button_Voice=0x7f05004f;
-        public static final int button_accept=0x7f05006c;
-        public static final int button_addProduct=0x7f05004c;
-        public static final int button_cancel=0x7f050061;
         public static final int button_codeSearch=0x7f050050;
-        public static final int button_decrement=0x7f05005d;
         public static final int button_go=0x7f050079;
-        public static final int button_increment=0x7f05005f;
         public static final int button_ok=0x7f05004e;
-        public static final int button_save=0x7f050060;
-        public static final int cantProduct=0x7f05005e;
-        public static final int checkBox_Product=0x7f050053;
-        public static final int checkBox_list=0x7f050077;
-        public static final int checkbox=0x7f05002d;
-        public static final int collapseActionView=0x7f05000d;
-        public static final int default_activity_button=0x7f050028;
-        public static final int delete_Product=0x7f05007c;
-        public static final int dialog=0x7f05000e;
-        public static final int disableHome=0x7f050008;
-        public static final int dropdown=0x7f05000f;
-        public static final int editTextDialogUserInput=0x7f05006f;
-=======
         public static final int button_accept=0x7f05006e;
         public static final int button_addProduct=0x7f05004c;
         public static final int button_cancel=0x7f050061;
@@ -1337,39 +1084,22 @@ containing a value of this type.
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
         public static final int editTextDialogUserInput=0x7f05008e;
->>>>>>> Rama-Vivi-Android
         public static final int editTextNameProduct=0x7f05004a;
         public static final int editTextPassword=0x7f050059;
         public static final int editTextuserName=0x7f050058;
         public static final int edit_query=0x7f050030;
         public static final int encabezado=0x7f050056;
         public static final int end=0x7f050013;
-<<<<<<< HEAD
-        public static final int expand_activities_button=0x7f050026;
-        public static final int expanded_menu=0x7f05002c;
-        public static final int footer=0x7f050057;
-        public static final int header=0x7f050071;
-=======
         public static final int et1=0x7f050070;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int footer=0x7f050057;
         public static final int header=0x7f050090;
->>>>>>> Rama-Vivi-Android
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
-<<<<<<< HEAD
-        public static final int layout_root=0x7f05006e;
-        public static final int link_to_login=0x7f050076;
-        public static final int link_to_register=0x7f05005b;
-        public static final int listDialogVoice=0x7f050070;
-        public static final int listMode=0x7f050001;
-        public static final int listViewProducts=0x7f050063;
-        public static final int listView_lists=0x7f05006d;
-=======
         public static final int imageView1=0x7f050055;
         public static final int imagen=0x7f050053;
         public static final int layout_root=0x7f05008d;
@@ -1391,35 +1121,23 @@ containing a value of this type.
         public static final int listViewSauces=0x7f050088;
         public static final int listViewStore=0x7f05008a;
         public static final int listView_lists=0x7f05006f;
->>>>>>> Rama-Vivi-Android
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
         public static final int nameProductModify=0x7f05005c;
         public static final int never=0x7f050009;
-<<<<<<< HEAD
-        public static final int none=0x7f050010;
-        public static final int normal=0x7f050000;
-=======
         public static final int nombre=0x7f050054;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int pager=0x7f050069;
         public static final int pager_title_strip=0x7f05006a;
->>>>>>> Rama-Vivi-Android
         public static final int progressBar1=0x7f050068;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-<<<<<<< HEAD
-        public static final int reg_email=0x7f050073;
-        public static final int reg_password=0x7f050074;
-        public static final int reg_usuario=0x7f050072;
         public static final int search=0x7f05007d;
-=======
         public static final int reg_email=0x7f050092;
         public static final int reg_password=0x7f050093;
         public static final int reg_usuario=0x7f050091;
->>>>>>> Rama-Vivi-Android
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1434,28 +1152,15 @@ containing a value of this type.
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
-<<<<<<< HEAD
-        public static final int spinnerCategory=0x7f05006a;
-=======
         public static final int spinnerCategory=0x7f05006c;
->>>>>>> Rama-Vivi-Android
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int textView1=0x7f05003c;
         public static final int textViewAdd=0x7f050049;
-<<<<<<< HEAD
-        public static final int textViewCategory=0x7f050069;
-        public static final int textView_Cat=0x7f050062;
-        public static final int textView_Item_Cant=0x7f050055;
-        public static final int textView_Item_Name=0x7f050054;
-        public static final int text_listName=0x7f050078;
-        public static final int title=0x7f05002b;
-        public static final int top_action_bar=0x7f050020;
         public static final int txt_barSearch=0x7f05004d;
         public static final int txt_product=0x7f050051;
         public static final int txt_quantity=0x7f050052;
-=======
         public static final int textViewBread=0x7f050079;
         public static final int textViewCategory=0x7f05006b;
         public static final int textViewCondiment=0x7f050081;
@@ -1478,7 +1183,6 @@ containing a value of this type.
         public static final int texto_topten=0x7f05004f;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
->>>>>>> Rama-Vivi-Android
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
@@ -1535,7 +1239,6 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_acceso_despensa=0x7f030018;
         public static final int activity_add_manualmente=0x7f030019;
-<<<<<<< HEAD
         public static final int activity_bar_search=0x7f03001a;
         public static final int activity_item_listview=0x7f03001b;
         public static final int activity_login=0x7f03001c;
@@ -1545,28 +1248,12 @@ containing a value of this type.
         public static final int activity_pantalla_transicion=0x7f030020;
         public static final int activity_seleccionar_categoria=0x7f030021;
         public static final int activity_shopping_lists=0x7f030022;
-        public static final int cabecera=0x7f030023;
-        public static final int dialog_crear_lista_compra=0x7f030024;
-        public static final int dialog_matches=0x7f030025;
-        public static final int pie_de_pagina=0x7f030026;
-        public static final int registro=0x7f030027;
         public static final int shopping_list_go=0x7f030028;
-        public static final int shoppinglist_item=0x7f030029;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002a;
-=======
         public static final int activity_fragment_favorites=0x7f03001a;
         public static final int activity_fragment_recipes=0x7f03001b;
         public static final int activity_fragment_topten=0x7f03001c;
-        public static final int activity_item_listview=0x7f03001d;
         public static final int activity_list_item_layout=0x7f03001e;
-        public static final int activity_login=0x7f03001f;
-        public static final int activity_modificar_producto_despensa=0x7f030020;
-        public static final int activity_mostrar_productos_categoria=0x7f030021;
-        public static final int activity_pantalla_principal=0x7f030022;
-        public static final int activity_pantalla_transicion=0x7f030023;
         public static final int activity_recipes_viewpager=0x7f030024;
-        public static final int activity_seleccionar_categoria=0x7f030025;
-        public static final int activity_shopping_lists=0x7f030026;
         public static final int activity_una_lista=0x7f030027;
         public static final int button_style_main_activity=0x7f030028;
         public static final int cabecera=0x7f030029;
@@ -1576,20 +1263,14 @@ containing a value of this type.
         public static final int registro=0x7f03002d;
         public static final int shoppinglist_item=0x7f03002e;
         public static final int support_simple_spinner_dropdown_item=0x7f03002f;
->>>>>>> Rama-Vivi-Android
     }
     public static final class menu {
         public static final int add_manualmente=0x7f0d0000;
         public static final int login=0x7f0d0001;
         public static final int menu_action_bar=0x7f0d0002;
-<<<<<<< HEAD
         public static final int menu_search=0x7f0d0003;
-        public static final int modificar_producto_despensa=0x7f0d0004;
-        public static final int mostrar_productos_categoria=0x7f0d0005;
-=======
         public static final int modificar_producto_despensa=0x7f0d0003;
         public static final int mostrar_productos_categoria=0x7f0d0004;
->>>>>>> Rama-Vivi-Android
     }
     public static final class string {
         public static final int CantProducts=0x7f0a0038;
@@ -1656,15 +1337,10 @@ containing a value of this type.
         public static final int dialog_header=0x7f0a003c;
         public static final int drogueria=0x7f0a0020;
         public static final int estadisticas=0x7f0a0013;
-<<<<<<< HEAD
-        public static final int frutasVerduras=0x7f0a0017;
-        public static final int hello_world=0x7f0a000f;
         public static final int home=0x7f0a003f;
-=======
         public static final int favorite=0x7f0a0040;
         public static final int frutasVerduras=0x7f0a0017;
         public static final int hello_world=0x7f0a000f;
->>>>>>> Rama-Vivi-Android
         public static final int lacteos=0x7f0a0016;
         public static final int lista_compra=0x7f0a0011;
         public static final int listadelacompra=0x7f0a0039;
@@ -1677,28 +1353,19 @@ containing a value of this type.
         public static final int pescados=0x7f0a001b;
         public static final int product1=0x7f0a0037;
         public static final int recetario=0x7f0a0012;
-<<<<<<< HEAD
-=======
         public static final int recipes=0x7f0a003f;
->>>>>>> Rama-Vivi-Android
         public static final int remove=0x7f0a0036;
         public static final int salsas=0x7f0a001d;
         public static final int save=0x7f0a0027;
         public static final int save2=0x7f0a0028;
-<<<<<<< HEAD
         public static final int search=0x7f0a003e;
-=======
->>>>>>> Rama-Vivi-Android
         public static final int title_activity_acceso_despensa=0x7f0a0015;
         public static final int title_activity_add_despensa=0x7f0a0025;
         public static final int title_activity_add_manualmente=0x7f0a0032;
         public static final int title_activity_list_item_layout=0x7f0a0024;
         public static final int title_activity_modificar_producto_despensa=0x7f0a0026;
         public static final int title_activity_mostrar_productos_categoria=0x7f0a0031;
-<<<<<<< HEAD
-=======
         public static final int topTen=0x7f0a003e;
->>>>>>> Rama-Vivi-Android
         public static final int varios=0x7f0a0021;
     }
     public static final class style {
