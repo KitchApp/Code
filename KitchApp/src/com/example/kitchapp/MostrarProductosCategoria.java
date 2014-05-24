@@ -123,15 +123,10 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				case 12:
 					title.setText("Varios");
 					break;	
-
 			}
 		}
 			
-
-	//helper.close();
-		
-		
-		
+	//helper.close();						
 		/*Bundle extra = this.getIntent().getExtras();
 		
 		if (extra!=null && extra.getInt("key") != 0) {
@@ -157,8 +152,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"","insertPantry",1);
 						helper.close();
-					}
-					
+					}					
 				}
 				else {
 					modifyProduct();
@@ -167,8 +161,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 					if (tmc!=null){
 						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
 						helper.close();
-					}
-					
+					}					
 				}
 			}
 
@@ -194,10 +187,8 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		        //Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
 		        
 		        	cantFinal = products.get(position).getCantidad();
-		        	modificarProducto(arg1,position);
-		 
-		    }
-		 
+		        	modificarProducto(arg1,position);		 
+		    }		 
 		}); 
 	}
 
@@ -207,8 +198,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		MenuInflater inflater = getMenuInflater();
 	        inflater.inflate(R.menu.menu_action_bar, menu);
         	item_add = menu.findItem(R.id.add_Product);
-        	return super.onCreateOptionsMenu(menu);
-        
+        	return super.onCreateOptionsMenu(menu);        
 	}
 	
 	@Override
@@ -238,37 +228,9 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		}
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-
-		switch (item.getItemId()) {
-		case R.id.add_Product:
-			alertDialogListView(true, 0);
-			return true;
-
-		case R.id.delete_Product:
-			if (pressedButtonDelete) {
-				item_add.setEnabled(true);
-				deleteProducts();
-				hideCheckBox();
-				pressedButtonDelete = false;
-			} else {
-				item_add.setEnabled(false);
-				showCheckBox();
-				pressedButtonDelete = true;
-			}
-			return true;
-			
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-
-	}
-
 	public void modificarProducto(View view, int position) {
 
 		builder = new AlertDialog.Builder(this);
-
 		 
         // Get the layout inflater
         LayoutInflater inflater = this.getLayoutInflater();
@@ -291,13 +253,10 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
     	increment = (Button) view.findViewById(R.id.button_increment);
     	increment.setOnClickListener(this);
         builder.setView(view);
-                
-        
+                        
         builder.create();
-        builder.show();
- 
+        builder.show(); 
 	}
-
 
 	@Override
 	public void onClick(View v) {
@@ -343,7 +302,6 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				alertDialogListView(true,0);
 				break;*/
 		}
-
 	}
 
 	private void initializeArrayList(Integer category) {
@@ -366,9 +324,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		
 		if (Integer.parseInt(cantProduct.getText().toString()) > 0) {
 	        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())-1 + "");
-
 		}
-
 	}
 
 	public void incrementCant(View view) {
@@ -377,9 +333,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
-
-		
+        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");	
 	}
 	
 	public void modifyProduct() {
@@ -418,8 +372,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		        		}
 		        		else if(item==2){
 		        			addBarCode();
-		        		}
-	        			
+		        		}	        			
 		        }
 		    }).show();
 	    }
@@ -470,7 +423,6 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 			    }).show();
 	    	}
 	    }
-
 	}
 
 	public void addManualmente() {
@@ -493,12 +445,6 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 
 	public void addBarCode() {
 		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-		scanIntegrator.initiateScan();
-	}
-
-	public void addBarCode(){
-		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-
 		scanIntegrator.initiateScan();
 	}
 	
@@ -533,16 +479,14 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
     	 match_text_dialog.hide();
     	 addProduct(position);
      }
- });
+     });
      
      match_text_dialog.show();
      
      }
      super.onActivityResult(requestCode, resultCode, data);
-
      
-   //BarCode
-		
+   //BarCode		
 		
    		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
    		
@@ -552,13 +496,12 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
    			if (!helper.exist(result,"products")){
    				if (!helper.exist(result,"productsTemporary")){
    					alertDialogReport("Producto no existente");
-   					//alertDialogListView(false,3);
-   					
+   					//alertDialogListView(false,3);   					
    				}
    				else{
    					ArrayList<Object> tmp=helper.readProductsTemporary(result);
    					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1),"insertPantry",1);
-   					//Para que se refresque la informaci�n en la pantalla
+   					//Para que se refresque la informaciï¿½n en la pantalla
    					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1,1,false);
    					products.add(item);
    					list = (ListView)findViewById(R.id.listViewProducts);
@@ -567,28 +510,19 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
    					adapter = new ItemProductoAdapter(this,products);
    					// Asignamos el Adapter al ListView, en este punto hacemos que el
    					// ListView muestre los datos que queremos.
-   					list.setAdapter(adapter);
-   					
-   				}
-   				
+   					list.setAdapter(adapter);   					
+   				}   				
    			}
    			else{
    				Toast.makeText(this,"Producto ya existente",Toast.LENGTH_SHORT).show();
-   			}
-   			
-   			
+   			}   			   			
    		}
    		else{
    		    Toast toast = Toast.makeText(getApplicationContext(), 
    		        "No scan data received!", Toast.LENGTH_SHORT);
    		    toast.show();
-   		}
-   		  
-   		//fin BarCode
-   		
-     
-     
-
+   		}   		  
+   		//fin BarCode   		          
     }
 	
 	
