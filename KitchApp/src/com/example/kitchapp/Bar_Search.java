@@ -104,7 +104,7 @@ public class Bar_Search extends Activity implements OnClickListener {
 
 			SQLiteDatabase db = helper.open();
 			if (db != null) {
-				helper.updateProduct(txt_product.getText().toString(),
+				helper.updateProduct(txt_product.getText().toString(),txt_product.getText().toString(),
 						Integer.parseInt(txt_qty.getText().toString()));
 //				helper.close();
 			}
@@ -264,11 +264,8 @@ public class Bar_Search extends Activity implements OnClickListener {
 		if (Integer.parseInt(txt_qty.getText().toString()) > 0) {
 			txt_qty.setText(Integer.parseInt(txt_qty.getText().toString()) - 1
 					+ "");
-
 		}
-
 	}
-
 
 	public void modifyProduct(View view) {
 
@@ -292,7 +289,5 @@ public class Bar_Search extends Activity implements OnClickListener {
 		builder.setView(view);
 		builder.create();
 		builder.show();
-
 	}
-
 }
