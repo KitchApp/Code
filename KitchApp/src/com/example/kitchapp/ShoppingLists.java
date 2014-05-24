@@ -204,7 +204,7 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		TextView shoppingList = (TextView) item.getChildAt(1);
 		listName = shoppingList.getText().toString();
 		int numList = helper.getIdList(listName);
-		Intent j = new Intent(this, MostrarProductosCategoria.class);
+		Intent j = new Intent(this, MostrarProductosLista.class);
 		j.putExtra("numList", numList);
 		startActivity(j);
 		super.finish();
@@ -215,8 +215,7 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		LayoutInflater li = LayoutInflater.from(this);
 		View promptsView = li.inflate(R.layout.dialog_crear_lista_compra, null);
 
-		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-				mycontext);
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mycontext);
 
 		// set prompts.xml to alertdialog builder
 		alertDialogBuilder.setView(promptsView);
@@ -274,7 +273,7 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 	public void insertNewList() {
 		helper.insertLists(listName);
 		int idLista = helper.getIdList(listName);
-		Intent intent = new Intent(mycontext, MostrarProductosCategoria.class);
+		Intent intent = new Intent(mycontext, MostrarProductosLista.class);
 		intent.putExtra("idList", idLista);
 		mycontext.startActivity(intent);
 	}
@@ -295,7 +294,6 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 								open_Dialog();
 							}
 						});
-
 		builder.create();
 		builder.show();
 	}
