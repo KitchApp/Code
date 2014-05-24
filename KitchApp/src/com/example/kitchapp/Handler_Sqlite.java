@@ -285,7 +285,7 @@ public boolean existProductList(String name) {
 }
 
 
-	//m�todo temporal
+	//mï¿½todo temporal
 
 	public void insertLists(String name){
 		ContentValues registro=new ContentValues();
@@ -368,6 +368,21 @@ public boolean existProductList(String name) {
 		Cursor c=db.query("listHaveProducts", null, "idList=? AND idProduct=?", args, null, null, null);
 	
 		return (c.moveToFirst());
+	}
+	
+	public ItemProducto existProduct(String data, String table, String col){
+		
+		SQLiteDatabase db= this.getReadableDatabase();
+		String args[]={data};
+		Cursor c = db.query(table, null, "name=?", args, null, null, null);
+		ItemProducto p = null;
+		int id = c.getColumnIndex(_ID);
+		int n = c.getColumnIndex("name");
+		int q = c.getColumnIndex("cant");
+		if (c.moveToFirst()) {
+			p = new ItemProducto(c.getInt(id),c.getString(n),c.getInt(q));
+		};	
+		return p;
 	}
 	
 	public boolean existList(String table, String data){
