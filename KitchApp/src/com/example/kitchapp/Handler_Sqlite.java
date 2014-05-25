@@ -17,7 +17,7 @@ import static android.provider.BaseColumns._ID;
 
 public class Handler_Sqlite extends SQLiteOpenHelper{
 
-	private static final String nameBD = "KitchApp-BaseDD1";
+	private static final String nameBD = "KitchApp-BaseDD";
 
 	Context myContext;
 
