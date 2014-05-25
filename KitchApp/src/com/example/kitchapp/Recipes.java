@@ -22,24 +22,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-
 public class Recipes extends ActionBarActivity {
 	
-<<<<<<< HEAD
-	protected void onCreate(Bundle arg0) {
-	        super.onCreate(arg0);
-	        setContentView(R.layout.activity_recipes_viewpager);
-	  
-	        PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
-	        ViewPager mViewPager = (ViewPager) findViewById(R.id.pager);
-	        mViewPager.setAdapter(adapter);
-    	}
-=======
 	private TabListener tabListener;
 	private ViewPager mViewPager;
 	private PagerAdapter adapter;
 	private ViewPagerListener pageListener;
->>>>>>> Rama-Vivi-Android
 	
 		protected void onCreate(Bundle arg0) {
 	        super.onCreate(arg0);
@@ -65,31 +53,11 @@ public class Recipes extends ActionBarActivity {
 		
 		private static class PagerAdapter extends FragmentStatePagerAdapter {
 	
-<<<<<<< HEAD
-	public class PagerAdapter extends FragmentPagerAdapter {
-
-		public PagerAdapter(FragmentManager fm) {
-			super(fm);
-		}
-
-		public Fragment getItem(int arg0) {
-			switch (arg0) {
-	            	case 0:
-	                	return new Fragment_TopTen();
-	            	case 1:
-	                	return new Fragment_Recipes();
-	            	case 2:
-	                	return new Fragment_Favorites();
-	            	default:
-	            		return null;
-=======
 			public PagerAdapter(FragmentManager fm) {
 				super(fm);
->>>>>>> Rama-Vivi-Android
-			}
+			}			
 			
-			
-			 @Override
+			@Override
 			public Fragment getItem(int arg0) {
 				switch (arg0) {
 		            case 0:
@@ -103,17 +71,16 @@ public class Recipes extends ActionBarActivity {
 				}
 			}
 			 
-			 @Override
+			@Override
 			public int getCount() {
 				return 3;
 			}
 			
-			 @Override
+			@Override
 			public CharSequence getPageTitle(int position) {
 				String titulo = null;
 				switch (position) {
-					case 0:
-					
+					case 0:					
 		                titulo = "TOP TEN";
 		                break;
 		            case 1:
@@ -124,36 +91,14 @@ public class Recipes extends ActionBarActivity {
 		                break;
 				}
 				return titulo;
-			}
-			
-			
-			
+			}									
 		}
 		
-<<<<<<< HEAD
-		public CharSequence getPageTitle(int position) {
-			String titulo = null;
-			switch (position) {
-			case 0:
-	                	titulo = "TOP TEN";
-	                	break;
-	            	case 1:
-	            		titulo = "RECETAS";
-	                	break;
-	            	case 2:
-	            		titulo = "FAVORITOS";
-	                	break;
-			}
-			return titulo;
-		}
-    }
-=======
 		private class ViewPagerListener extends ViewPager.SimpleOnPageChangeListener {
 			@Override
 			public void onPageSelected(int position) {
 				getSupportActionBar().setSelectedNavigationItem(position);
 			}
-
 		}
 		
 		private void setActionBar() {
@@ -174,28 +119,25 @@ public class Recipes extends ActionBarActivity {
 	                    setPagerAdapter();
 	            	
 	                if (mViewPager.getCurrentItem() != tab.getPosition())
-	                    mViewPager.setCurrentItem(tab.getPosition());
-	                	
-	 
+	                    mViewPager.setCurrentItem(tab.getPosition());	                		 
 	            }
 	 
 	            @Override
 	            public void onTabReselected(Tab tab, FragmentTransaction arg1) {
 	            }
 	        };
+			
 	        for (int i = 0; i < 3; i++) {
 	            Tab tab = actionBar.newTab();
 	            tab.setTabListener(tabListener);
 	            tab.setText(adapter.getPageTitle(i));
 	            actionBar.addTab(tab);
 	        }
+			
 	        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
 	            actionBar.setTitle("");
 	        } /*else {
 	            actionBar.setTitle(R.string.app_name_capital);
 	        }*/
-	    }
-		
-		
->>>>>>> Rama-Vivi-Android
+	    }				
 }
