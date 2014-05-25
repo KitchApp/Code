@@ -52,5 +52,5 @@
         <item name="android:popupMenuStyle">@style/PopupMenu.Mystyleactionbar</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Mystyleactionbar</item>
     </style>
-
+    
 </resources>
