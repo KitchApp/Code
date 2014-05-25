@@ -5,16 +5,13 @@ public class ItemReceta {
 	protected long id;
 	protected String nombre;
 	
-		  
 	public ItemReceta() {
 		this.nombre = "";		    
-		
 	}
 		     
 	public ItemReceta(int id,String nombre) {
 		this.id=id;
-	    this.nombre = nombre;	
-	   
+	    	this.nombre = nombre;	
 	}
 		     
 	/*public Item(long id, String nombre, String tipo, String rutaImagen) {
@@ -25,11 +22,11 @@ public class ItemReceta {
 	}*/
 		     
 	public long getId() {
-	    return id;
+	    	return id;
 	}
 		     
 	public void setId(long id) {
-	    this.id = id;
+	    	this.id = id;
 	}
 		     
 	/*public String getRutaImagen() {
@@ -41,12 +38,11 @@ public class ItemReceta {
 	}*/
 		     
 	public String getNombre() {
-	    return nombre;
+	    	return nombre;
 	}
 		     
 	public void setNombre(String nombre) {
-	    this.nombre = nombre;
-	}		  		  		 		 
+	    	this.nombre = nombre;
+	}			  		  		 		 
 		  
-			  
 }
