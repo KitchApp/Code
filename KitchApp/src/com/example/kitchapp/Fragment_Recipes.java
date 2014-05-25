@@ -16,12 +16,9 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class Fragment_Recipes extends Fragment {
-<<<<<<< HEAD
-
-=======
+	
 	private ArrayList<ItemReceta> options=new ArrayList<ItemReceta>();
 	private ListView list;
->>>>>>> Rama-Vivi-Android
 	View rootView;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,12 +54,9 @@ public class Fragment_Recipes extends Fragment {
 		options.add(new ItemReceta(2,"Nacionalidad"));
 		options.add(new ItemReceta(3,"Dieta"));
 		options.add(new ItemReceta(4,"Con mi despensa"));
-		options.add(new ItemReceta(5,"Rápidas"));
-		options.add(new ItemReceta(6,"Especiales"));
+		options.add(new ItemReceta(5,"Modo de cocina (Rapidas)"));
+		options.add(new ItemReceta(6,"Intolerancias"));
 		options.add(new ItemReceta(7,"Tipo de plato"));
-		
-	
 	}
-
-
+	
 }
