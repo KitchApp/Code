@@ -29,7 +29,6 @@
         <item name="actionModeBackground">@drawable/cab_background_top_mystyleactionbar</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_mystyleactionbar</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Mystyleactionbar</item>
-
                 <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Mystyleactionbar.Widget</item>
 
