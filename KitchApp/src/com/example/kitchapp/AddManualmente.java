@@ -11,17 +11,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 public class AddManualmente extends Activity implements OnClickListener {
 
-	private Spinner categoria;
 	private EditText nameProduct;
 	private EditText cantProduct;
 	Handler_Sqlite helper;
@@ -40,22 +34,6 @@ public class AddManualmente extends Activity implements OnClickListener {
 		add.setOnClickListener(this);
 		nameProduct = (EditText) findViewById(R.id.editTextNameProduct);
 		cantProduct = (EditText) findViewById(R.id.EditTextCantProduct);
-		/*categoria.setOnItemSelectedListener(new OnItemSelectedListener(){
-			 
-		    @Override
-		    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-		        // TODO Auto-generated method stub
-		        //Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
-		 
-		    }
-
-			@Override
-			public void onNothingSelected(AdapterView<?> arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		 
-		});*/
 	}
 
 	@Override
@@ -67,10 +45,8 @@ public class AddManualmente extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()){
 		case R.id.button_addProduct:
-			//Toast.makeText(this, "Me han pinchado", Toast.LENGTH_SHORT).show();
 			try {
 				int cant = Integer.parseInt(cantProduct.getText().toString());
 				if (cant <= 0) {
@@ -90,9 +66,6 @@ public class AddManualmente extends Activity implements OnClickListener {
 						helper.close();
 					}
 					Intent i = new Intent(this,MostrarProductosCategoria.class);
-					/*i.putExtra("nameProduct",nameProduct.getText().toString());
-					i.putExtra("cantProduct",cant);
-					i.putExtra("key",1);*/
 					i.putExtra("idCat",this.getIntent().getExtras().getInt("idCat"));
 					startActivity(i);
 				}

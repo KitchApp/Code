@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
@@ -35,7 +34,6 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-
 public class MostrarProductosCategoria extends ActionBarActivity  implements OnClickListener {
 	
     private ListView list;
@@ -54,10 +52,12 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
     private Integer tipoCat;
     private static final int REQUEST_CODE = 1234;
     Handler_Sqlite helper;
+
 	Dialog match_text_dialog;
 	ListView textlist;
 	ArrayList<String> matches_text;
-    
+	private boolean barCode = false;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -123,15 +123,10 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				case 12:
 					title.setText("Varios");
 					break;	
-
 			}
 		}
 			
-
-	//helper.close();
-		
-		
-		
+	//helper.close();						
 		/*Bundle extra = this.getIntent().getExtras();
 		
 		if (extra!=null && extra.getInt("key") != 0) {
@@ -157,8 +152,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 					if (tmp1!=null){
 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"","insertPantry",1);
 						helper.close();
-					}
-					
+					}					
 				}
 				else {
 					modifyProduct();
@@ -167,8 +161,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 					if (tmc!=null){
 						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
 						helper.close();
-					}
-					
+					}					
 				}
 			}
 
@@ -181,7 +174,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
-		adapter = new ItemProductoAdapter(this,products);
+		adapter = new ItemProductoAdapter(this, products);
 		// Asignamos el Adapter al ListView, en este punto hacemos que el
 		// ListView muestre los datos que queremos.
 		list.setAdapter(adapter);
@@ -194,10 +187,8 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		        //Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
 		        
 		        	cantFinal = products.get(position).getCantidad();
-		        	modificarProducto(arg1,position);
-		 
-		    }
-		 
+		        	modificarProducto(arg1,position);		 
+		    }		 
 		}); 
 	}
 
@@ -205,10 +196,9 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_action_bar, menu);
-        item_add = menu.findItem(R.id.add_Product);
-        return super.onCreateOptionsMenu(menu);
-        
+	        inflater.inflate(R.menu.menu_action_bar, menu);
+        	item_add = menu.findItem(R.id.add_Product);
+        	return super.onCreateOptionsMenu(menu);        
 	}
 	
 	@Override
@@ -236,11 +226,10 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 			default:
 				return super.onOptionsItemSelected(item);
 		}
-		
 	}
-	
-	public void modificarProducto(View view,int position) {
-		
+
+	public void modificarProducto(View view, int position) {
+
 		builder = new AlertDialog.Builder(this);
 		 
         // Get the layout inflater
@@ -264,17 +253,10 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
     	increment = (Button) view.findViewById(R.id.button_increment);
     	increment.setOnClickListener(this);
         builder.setView(view);
-                
-        
+                        
         builder.create();
-        builder.show();
- 
+        builder.show(); 
 	}
-	/*@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		
-	}*/
 
 	@Override
 	public void onClick(View v) {
@@ -298,8 +280,8 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				break;
 			
 			case R.id.button_cancel:
-            	Intent i = new Intent(this,MostrarProductosCategoria.class);
-            	i.putExtra("idCat",tipoCat);
+            			Intent i = new Intent(this,MostrarProductosCategoria.class);
+            			i.putExtra("idCat",tipoCat);
 				startActivity(i);
 				break;
 			
@@ -320,12 +302,10 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				alertDialogListView(true,0);
 				break;*/
 		}
-            	
-				
 	}
-	
+
 	private void initializeArrayList(Integer category) {
-	
+
 		products=helper.readProducts(category,"readPantry");
 		
 		/*products.add(new ItemProducto(1,helper.read()[1],4,""));
@@ -335,7 +315,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		products.add(new ItemProducto(5,"Queso Semicurado El Ventero",1,""));*/
 		
 	}
-	
+
 	public void decrementCant(View view) {
 		/*cantProduct = (TextView) view.findViewById(R.id.cantProduct);
 		int cant = Integer.parseInt(cantProduct.getText().toString());
@@ -344,20 +324,16 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		
 		if (Integer.parseInt(cantProduct.getText().toString()) > 0) {
 	        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())-1 + "");
-
 		}
-		
 	}
-	
+
 	public void incrementCant(View view) {
 		/*cantProduct = (TextView) view.findViewById(R.id.cantProduct);
 		int cant = Integer.parseInt(cantProduct.getText().toString());
 		int cantModified = cant--;
 		cantProduct.setText(cantModified + "");*/
 		
-        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
-
-		
+        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");	
 	}
 	
 	public void modifyProduct() {
@@ -396,8 +372,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		        		}
 		        		else if(item==2){
 		        			addBarCode();
-		        		}
-	        			
+		        		}	        			
 		        }
 		    }).show();
 	    }
@@ -448,44 +423,41 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 			    }).show();
 	    	}
 	    }
-
 	}
-	
-	
+
 	public void addManualmente() {
-		  Intent intent = new Intent(this,AddManualmente.class);
-		  intent.putExtra("idCat",tipoCat);
-		  startActivity(intent);
-	  }
-	
-	public void addVoice() {
-		if(isConnected()){
-       	 Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        	 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-        	 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        	 startActivityForResult(intent, REQUEST_CODE);
-       			 }
-       	else{
-       		Toast.makeText(getApplicationContext(), "Please Connect to Internet", Toast.LENGTH_LONG).show();
-       	}
+		Intent intent = new Intent(this, AddManualmente.class);
+		intent.putExtra("idCat", tipoCat);
+		startActivity(intent);
 	}
-	
-	public void addBarCode(){
-		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
 
+	public void addVoice() {
+		if (isConnected()) {
+			Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+			intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+					RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+			startActivityForResult(intent, REQUEST_CODE);
+		} else {
+			Toast.makeText(getApplicationContext(),
+					"Please Connect to Internet", Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void addBarCode() {
+		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
 		scanIntegrator.initiateScan();
 	}
 	
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-	    NetworkInfo net = cm.getActiveNetworkInfo();
-	    if (net!=null && net.isAvailable() && net.isConnected()) {
-	        return true;
-	    } else {
-	        return false; 
-	    }
+		NetworkInfo net = cm.getActiveNetworkInfo();
+		if (net != null && net.isAvailable() && net.isConnected()) {
+			return true;
+		} else {
+			return false;
+		}
 	}
-	
+
 	@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
      if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
@@ -507,16 +479,14 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
     	 match_text_dialog.hide();
     	 addProduct(position);
      }
- });
+     });
      
      match_text_dialog.show();
      
      }
      super.onActivityResult(requestCode, resultCode, data);
-
      
-   //BarCode
-		
+   //BarCode		
 		
    		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
    		
@@ -526,13 +496,12 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
    			if (!helper.exist(result,"products")){
    				if (!helper.exist(result,"productsTemporary")){
    					alertDialogReport("Producto no existente");
-   					//alertDialogListView(false,3);
-   					
+   					//alertDialogListView(false,3);   					
    				}
    				else{
    					ArrayList<Object> tmp=helper.readProductsTemporary(result);
    					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1),"insertPantry",1);
-   					//Para que se refresque la informaci�n en la pantalla
+   					//Para que se refresque la informaciï¿½n en la pantalla
    					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1,1,false);
    					products.add(item);
    					list = (ListView)findViewById(R.id.listViewProducts);
@@ -541,28 +510,19 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
    					adapter = new ItemProductoAdapter(this,products);
    					// Asignamos el Adapter al ListView, en este punto hacemos que el
    					// ListView muestre los datos que queremos.
-   					list.setAdapter(adapter);
-   					
-   				}
-   				
+   					list.setAdapter(adapter);   					
+   				}   				
    			}
    			else{
    				Toast.makeText(this,"Producto ya existente",Toast.LENGTH_SHORT).show();
-   			}
-   			
-   			
+   			}   			   			
    		}
    		else{
    		    Toast toast = Toast.makeText(getApplicationContext(), 
    		        "No scan data received!", Toast.LENGTH_SHORT);
    		    toast.show();
-   		}
-   		  
-   		//fin BarCode
-   		
-     
-     
-
+   		}   		  
+   		//fin BarCode   		          
     }
 	
 	
@@ -706,9 +666,10 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 			check.setVisibility(View.INVISIBLE);
 		}
 	}
-	
+
 	public void deleteProducts() {
 		for (int i=0;i<products.size();i++) {
+
 			ItemProducto item = products.get(i);
 			if (item.isSelected()) {
 				products.remove(i);

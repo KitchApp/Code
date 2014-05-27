@@ -1,69 +1,69 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    	xmlns:tools="http://schemas.android.com/tools"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical" >
     
 	<EditText 
-         android:id="@+id/nameProductModify"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="15dp"
-         android:layout_marginBottom="20dp"
-         android:singleLine="true" >
-         <requestFocus />
+	         android:id="@+id/nameProductModify"
+	         android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="15dp"
+	         android:layout_marginBottom="20dp"
+	         android:singleLine="true" >
+	         <requestFocus />
 	</EditText>
 	
-    <LinearLayout 
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:orientation="horizontal" >
+    	<LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal" >
     
-	    <Button
-		android:id="@+id/button_decrement"
-		style="@style/boton_style"
-		android:layout_weight="1"			   	       			   	    
-		android:background="@drawable/numberpicker_down" />
-	    	    
-	    <TextView
-	        android:id="@+id/cantProduct"
-	        style="@style/boton_style"
+	        <Button
+			android:id="@+id/button_decrement"
+			style="@style/boton_style"
+			android:layout_weight="1"			   	       			   	    
+			android:background="@drawable/numberpicker_down" />
+		    	    
+	        <TextView
+		        android:id="@+id/cantProduct"
+		        style="@style/boton_style"
 			android:layout_weight="1"
 			android:text="15"	    	
-	    	android:textColor="@color/navy"
-	    	android:textSize="50sp" >	
-	    </TextView>	
+		    	android:textColor="@color/navy"
+		    	android:textSize="50sp" >	
+	        </TextView>	
 	    
-	    <Button
-	        android:id="@+id/button_increment"
-	        style="@style/boton_style"
-		android:layout_weight="1"
-	        android:background="@drawable/numberpicker_up" 
-	        android:onClick="incrementCant" />	  
+	        <Button
+		        android:id="@+id/button_increment"
+		        style="@style/boton_style"
+			android:layout_weight="1"
+		        android:background="@drawable/numberpicker_up" 
+		        android:onClick="incrementCant" />	  
 	        
-    </LinearLayout>
+        </LinearLayout>
     
-    <LinearLayout 
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:orientation="horizontal"
-    	android:layout_marginTop="20dp" >
+        <LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:layout_marginTop="20dp" >
         
-        <Button
-	        android:id="@+id/button_save"
-	        style="@style/boton_style"
-		android:layout_weight="1"
-	        android:background="@color/lightGray" 
-	        android:text="@string/save" 
-	        android:textSize="22sp" />
-        
-        <Button
-	        android:id="@+id/button_cancel"
-	        style="@style/boton_style"
-		android:layout_weight="1"
-	        android:background="@color/lightGray" 
-	        android:text="@string/cancel" 
-	        android:textSize="22sp" />
-        
-    </LinearLayout>    
+	        <Button
+		        android:id="@+id/button_save"
+		        style="@style/boton_style"
+			android:layout_weight="1"
+		        android:background="@color/lightGray" 
+		        android:text="@string/save" 
+		        android:textSize="22sp" />
+	        
+	        <Button
+		        android:id="@+id/button_cancel"
+		        style="@style/boton_style"
+			android:layout_weight="1"
+		        android:background="@color/lightGray" 
+		        android:text="@string/cancel" 
+		        android:textSize="22sp" />
+	        
+        </LinearLayout>    
 </LinearLayout>

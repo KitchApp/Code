@@ -33,7 +33,7 @@ public class ShoppingListAdapter extends BaseAdapter {
  
   @Override
   public long getItemId(int position) {
-   // return items.get(position).getListName();
+   	  // return items.get(position).getListName();
 	  return 0;
   }
  
@@ -178,7 +178,3 @@ class Holder
     	this.checkBox = checkBox;
     }
 }*/
-
-
-
-

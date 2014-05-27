@@ -39,6 +39,7 @@
     <string name="back">Volver</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
     <string name="title_activity_add_manualmente">AddManualmenteActivity</string>
+    <string name="dialog_header">Crear ListaCompra</string>
     <string name="nameOfList">Añadir nuevaLista</string>
     <string name="addProduct">Añadir artículo</string>
     <string name="create">Crear</string>
@@ -50,8 +51,10 @@
     <string name="delete">Eliminar</string>
     <string name="dialog_header">Nombre de la lista</string>
     <string name="categorySelected">Seleccionar categoría</string>
+    <string name="search">Buscar</string>
+    <string name="home">Inicio</string>
     <string name="topTen">Top Ten</string>
     <string name="recipes">Recetas</string>
     <string name="favorite">Favoritos</string>
-   
+
 </resources>

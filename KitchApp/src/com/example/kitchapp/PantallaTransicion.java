@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
+
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -27,9 +28,10 @@ public class PantallaTransicion extends Activity {
         pDialog.setMessage("Procesando...");
         //pDialog.setCancelable(true);
         pDialog.setMax(100);*/
+
 		barra=(ProgressBar)findViewById(R.id.progressBar1);
-        tarea = new AccesoBBDD();
-        tarea.execute();
+	        tarea = new AccesoBBDD();
+        	tarea.execute();
 	}
 
 	@Override
@@ -52,6 +54,7 @@ public class PantallaTransicion extends Activity {
 
 		@Override
 			protected Boolean doInBackground(Void... params) {
+
 				// TODO Auto-generated method stub
 				for(int i=1; i<=10; i++) {
 					tareaLarga();
@@ -67,7 +70,6 @@ public class PantallaTransicion extends Activity {
             protected void onProgressUpdate(Integer... values) {
                     int progreso = values[0].intValue();
                     barra.setProgress(progreso);
-                    //pDialog.setProgress(progreso);
             }
             
             
@@ -91,6 +93,7 @@ public class PantallaTransicion extends Activity {
             protected void onPostExecute(Boolean result) {
                     if(result)
                     {
+
                             //pDialog.dismiss();
                             //Toast.makeText(PantallaTransicion.this, "Tarea finalizada!", Toast.LENGTH_SHORT).show();
                             //setContentView(R.layout.activity_pantalla_principal);
@@ -108,9 +111,3 @@ public class PantallaTransicion extends Activity {
 	}
 
 }
-
-
-
-
-
-

@@ -10,16 +10,16 @@
         android:layout_height="wrap_content"        
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-		android:padding="10dp" >
-	    <TextView 
+	android:padding="10dp" >
+	<TextView 
 	        android:id="@+id/textViewCategory"
-	   		android:layout_width="0dp"
+		android:layout_width="0dp"
 	    	android:layout_height="wrap_content"
-			android:layout_weight="1"    	    		    		    		    	    			
+		android:layout_weight="1"    	    		    		    		    	    			
 	        android:layout_marginTop="10dp"
-	   		android:text="@string/categorySelected"
-	   		android:textColor="@color/navy"
-	   		android:textSize="40sp" />
+	   	android:text="@string/categorySelected"
+	   	android:textColor="@color/navy"
+	   	android:textSize="40sp" />
     </LinearLayout>        
     
     <LinearLayout 
@@ -29,7 +29,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp" 
         android:layout_marginTop="30dp" >
-	    <Spinner 
+	<Spinner 
 	       android:id="@+id/spinnerCategory"
 	       android:layout_width="wrap_content"
 	       android:layout_height="wrap_content"	       
@@ -65,7 +65,7 @@
 	       android:id="@+id/button_accept"
 	       android:layout_width="0dp"
 	       android:layout_height="wrap_content"
-		   android:layout_weight="1"	       
+	       android:layout_weight="1"	       
 	       android:background="@drawable/boton_redondo_color_navy"
 	       android:layout_marginBottom="20dp"
 	       android:layout_marginTop="20dp"
@@ -75,7 +75,6 @@
 	       android:text="@string/accept"
 	       android:textSize="35sp"
 	       android:textColor="@color/white" />
-        
         
     </LinearLayout>
         

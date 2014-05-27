@@ -1,6 +1,5 @@
 package com.example.kitchapp;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,10 +23,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
-
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -38,7 +33,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -53,30 +47,24 @@ public class Login extends Activity {
 	Boolean registrado=false;
 
 	public String session_name;
-    public String session_id;
+	public String session_id;
     public String encryptedPassword="";
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
 		setContentView(R.layout.activity_login);
-
 		
 		userName = (EditText)findViewById(R.id.editTextuserName);
 		password = (EditText)findViewById(R.id.editTextPassword);
 
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
-		
 	}
-
 		
-
 	public void intento_logueo(View view) {
 		String name = userName.getText().toString(); 
 		String key = password.getText().toString();
-		
-		
 		new HttpAsyncTask().execute();
 	}
 	
@@ -84,8 +72,7 @@ public class Login extends Activity {
 		Intent i = new Intent(this, Registro.class);
 		startActivity(i);
 	}
-	
-	
+		
 	public void errorLogging() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
@@ -108,15 +95,11 @@ public class Login extends Activity {
 	    builder.show();
 	}
    
-
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
-		
 
-		
         @Override
         protected Integer doInBackground(String... urls) {
-        	
-        	
+        	     	
         	HttpClient httpclient = new DefaultHttpClient();
 
             //set the remote endpoint URL
@@ -177,15 +160,11 @@ public class Login extends Activity {
     		else
     			errorLogging();
             
-            
-       }
-    }
+        }
+	}
 
-
-	
-	public static String httpGetData(String mURL) {
-        //String response="";
-		 InputStream inputStream = null;
+   	public static String httpGetData(String mURL) {
+        InputStream inputStream = null;
 	        String result = "";
 	        try {
 	 
@@ -208,47 +187,17 @@ public class Login extends Activity {
 	            Log.d("InputStream", e.getLocalizedMessage());
 	        }
 	 
-	        return result;
-    
-    }  
-	
+	        return result;    
+    }	
 	 
-	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-	        String line = "";
-	        String result = "";
-	        while((line = bufferedReader.readLine()) != null)
-	            result += line;
-	 
-	        inputStream.close();
-	        return result;
-	 
-	    }
-	
-	 }
-	
-	/*public void errorPassword() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		 
-	    builder.setTitle("Error")
-	            .setIcon(
-	                    getResources().getDrawable(
-	                            R.drawable.close))
-
-	            .setMessage("Contrase�a incorrecta. Intentelo de nuevo")
-
-	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-	 
-	                @Override
-	                public void onClick(DialogInterface arg0, int arg1) {
-	                	arg0.cancel();
-	                }
-	            });
-	 
-	    builder.create();
-	    builder.show();
-
-	}*/
-	
-
-
+   	private static String convertInputStreamToString(InputStream inputStream) throws IOException{
+        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
+        String line = "";
+        String result = "";
+        while((line = bufferedReader.readLine()) != null)
+            result += line;
+ 
+        inputStream.close();
+        return result;
+    }
+}

@@ -9,7 +9,7 @@
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical"
-    	android:background="@color/white">
+    	android:background="@color/white" >
 
     	
     	<TextView
@@ -19,7 +19,7 @@
         	android:layout_gravity="center_horizontal"
         	android:text="@string/listadelacompra"
         	android:textSize="30sp" 
-        	android:textColor="@color/navy"/>
+        	android:textColor="@color/navy" />
     
     	<ListView
 		    android:id="@+id/listView_lists"
@@ -34,10 +34,10 @@
 		    android:paddingLeft="5dp"
 		    android:paddingRight="5dp"
 		    android:paddingTop="15dp" >
-		    
-        
+
     	</ListView>
     	    	
 
     </LinearLayout>
+    
 </ScrollView>

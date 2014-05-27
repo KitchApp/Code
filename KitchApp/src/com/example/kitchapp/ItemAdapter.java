@@ -55,12 +55,5 @@ public class ItemAdapter extends ArrayAdapter<String> {
 }
 
 
-
-
-
-
-
-
-
  
  

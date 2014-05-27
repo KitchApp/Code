@@ -35,6 +35,7 @@
 			componentes sin importar lo extenso del contenido que tenga cada
 			“celda”, tal y como si se trataran de porcentajes. 
 			-->
+
 		    <Button
 		    	    android:id="@+id/button1"
 		    	    android:layout_width="0dp"
@@ -125,4 +126,5 @@
    	</LinearLayout>
 
     </RelativeLayout>
+    
 </ScrollView>

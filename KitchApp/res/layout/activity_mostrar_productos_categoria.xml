@@ -9,26 +9,25 @@
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical"
-    	android:background="@color/white">
+    	android:background="@color/white" >
 
     	
     	<TextView
-        	android:id="@+id/textView_Cat"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:layout_gravity="center_horizontal"
-        	android:text="@string/lacteos"
-        	android:textSize="40sp" 
-        	android:textColor="@color/navy"/>
+            	android:id="@+id/textView_Cat"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_gravity="center_horizontal"
+            	android:text="@string/lacteos"
+            	android:textSize="40sp" 
+            	android:textColor="@color/navy" />
     
     	<ListView
-        	android:id="@+id/listViewProducts"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content">
-        
+            	android:id="@+id/listViewProducts"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content" >
+            
     	</ListView>
-    	
-    	   	
 
     </LinearLayout>
+
 </ScrollView>

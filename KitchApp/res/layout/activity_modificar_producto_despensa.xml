@@ -12,7 +12,7 @@
          android:layout_marginBottom="20dp"
          android:singleLine="true" >
          <requestFocus />
-	</EditText>
+    </EditText>
 	
     <LinearLayout 
          android:layout_width="fill_parent"
@@ -20,27 +20,27 @@
     	 android:orientation="horizontal" >
     
 	 <Button
-		   android:id="@+id/button_decrement"
-		   style="@style/boton_style"
-		   android:layout_weight="1"			   	       			   	    
-		   android:background="@drawable/numberpicker_down" />
+	         android:id="@+id/button_decrement"
+		 style="@style/boton_style"
+		 android:layout_weight="1"			   	       			   	    
+		 android:background="@drawable/numberpicker_down" />
 	    	    
 	 <TextView 
-	           android:id="@+id/cantProduct"
-	           style="@style/boton_style"
-		   android:layout_weight="1"
-		   android:text="15"	   
-	    	   android:textColor="@color/navy"
-	    	   android:gravity="center"
-	    	   android:textSize="30sp">	
+	         android:id="@+id/cantProduct"
+	         style="@style/boton_style"
+		 android:layout_weight="1"
+		 android:text="15"	   
+	    	 android:textColor="@color/navy"
+	    	 android:gravity="center"
+	    	 android:textSize="30sp" >	
 	 </TextView>	
 	    
 	 <Button
-	           android:id="@+id/button_increment"
-	           style="@style/boton_style"
-		   android:layout_weight="1"
-	           android:background="@drawable/numberpicker_up" 
-	           android:onClick="incrementCant" />	  
+	         android:id="@+id/button_increment"
+	         style="@style/boton_style"
+		 android:layout_weight="1"
+	         android:background="@drawable/numberpicker_up" 
+	         android:onClick="incrementCant" />	  
     </LinearLayout>
     
     <LinearLayout 
@@ -50,20 +50,21 @@
     	 android:layout_marginTop="10dp">
         
          <Button
-	        android:id="@+id/button_save"
-	        style="@style/boton_style"
-		android:layout_weight="1"
-	        android:background="@color/lightGray" 
-	        android:text="@string/save" 
-	        android:textSize="22sp"/>
+	         android:id="@+id/button_save"
+	         style="@style/boton_style"
+		 android:layout_weight="1"
+	         android:background="@color/lightGray" 
+	         android:text="@string/save" 
+	         android:textSize="22sp" />
 	        
 	 <Button
-	        android:id="@+id/button_cancel"
-	        style="@style/boton_style"
-		android:layout_weight="1"
-	        android:background="@color/lightGray" 
-	        android:text="@string/cancel" 
-	        android:textSize="22sp" />
+	         android:id="@+id/button_cancel"
+	         style="@style/boton_style"
+		 android:layout_weight="1"
+	         android:background="@color/lightGray" 
+	         android:text="@string/cancel" 
+	         android:textSize="22sp" />
         
     </LinearLayout>    
+    
 </LinearLayout>

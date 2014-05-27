@@ -81,7 +81,7 @@
 		        android:layout_height="wrap_content"
 		        android:orientation="vertical"
 		        android:layout_marginLeft="45dp" 
-		        android:layout_marginTop="130dp">
+		        android:layout_marginTop="130dp" >
 	        
 	    	    <TextView 
 	        	   	android:id="@+id/textViewDairy"
@@ -111,13 +111,13 @@
 		       		android:layout_height="wrap_content"
 		       		android:text="@string/frutasVerduras"
 		       		android:textColor="@color/navy"
-		       		android:textSize="20sp"/>
+		       		android:textSize="20sp" />
 		        
 		        <ListView 
 		            android:id="@+id/listViewFruits"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"
-		        	android:scrollbars="none">		            
+		        	android:scrollbars="none" >		            
 		        </ListView>		        
 	        </LinearLayout>
 	        
@@ -133,13 +133,13 @@
 		       		android:layout_height="wrap_content"
 		       		android:text="@string/panBolleria"
 		       		android:textColor="@color/navy"
-		       		android:textSize="20sp"/>
+		       		android:textSize="20sp" />
 		        
 		        <ListView 
 		            android:id="@+id/listViewBread"
 		        	android:layout_width="wrap_content"
 		        	android:layout_height="wrap_content"	        
-		        	android:scrollbars="none">		           
+		        	android:scrollbars="none" >		           
 		        </ListView>		        
 	        </LinearLayout>
 		        
@@ -155,7 +155,7 @@
 		       		android:layout_height="wrap_content"
 		       		android:text="@string/bebidas"
 		       		android:textColor="@color/navy"
-		       		android:textSize="20sp"/>
+		       		android:textSize="20sp" />
 		        
 		        <ListView 
 		            android:id="@+id/listViewDrinks"
@@ -345,5 +345,7 @@
 	        </LinearLayout>
 	        			        	        	        
 	    </LinearLayout>
+	    
 	</LinearLayout>
+	
 </ScrollView>	        
