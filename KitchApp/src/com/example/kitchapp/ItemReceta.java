@@ -4,6 +4,7 @@ public class ItemReceta {
 
 	protected long id;
 	protected String nombre;
+	//protected String rutaImagen;
 	
 	public ItemReceta() {
 		this.nombre = "";		    
@@ -13,14 +14,7 @@ public class ItemReceta {
 		this.id=id;
 	    	this.nombre = nombre;	
 	}
-		     
-	/*public Item(long id, String nombre, String tipo, String rutaImagen) {
-		this.id = id;
-		this.nombre = nombre;
-		this.tipo = tipo;
-		this.rutaImagen = rutaImagen;
-	}*/
-		     
+		 		     
 	public long getId() {
 	    	return id;
 	}
@@ -31,9 +25,9 @@ public class ItemReceta {
 		     
 	/*public String getRutaImagen() {
 	    return rutaImagen;
-	}*/
+	}
 		     
-	/*public void setRutaImagen(String rutaImagen) {
+	public void setRutaImagen(String rutaImagen) {
 	    this.rutaImagen = rutaImagen;
 	}*/
 		     
@@ -42,7 +36,14 @@ public class ItemReceta {
 	}
 		     
 	public void setNombre(String nombre) {
+<<<<<<< HEAD
 	    	this.nombre = nombre;
 	}			  		  		 		 
+=======
+	    this.nombre = nombre;
+	}
+
+	  		  		 		 
+>>>>>>> Rama-Vivi-Android
 		  
 }

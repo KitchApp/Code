@@ -1,28 +1,25 @@
 package com.example.kitchapp;
 
-import java.util.ArrayList;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class Fragment_Recipes extends Fragment {
+<<<<<<< HEAD
 	
 	private ArrayList<ItemReceta> options=new ArrayList<ItemReceta>();
 	private ListView list;
+=======
+
+>>>>>>> Rama-Vivi-Android
 	View rootView;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		
+<<<<<<< HEAD
 		rootView = inflater.inflate(R.layout.activity_mostrar_categoria_recetas, container, false);	
 		initializeArrayListRecipes();
 		list = (ListView)rootView.findViewById(R.id.listViewCatRec);
@@ -59,4 +56,14 @@ public class Fragment_Recipes extends Fragment {
 		options.add(new ItemReceta(7,"Tipo de plato"));
 	}
 	
+=======
+		rootView = inflater.inflate(R.layout.activity_fragment_recipes, container, false);
+		
+		TextView texto = (TextView) rootView.findViewById(R.id.texto_recipes);
+		
+		texto.setText("Tab seleccionada" + "\n\n" + "Recetas");;
+		
+		return rootView;
+	}
+>>>>>>> Rama-Vivi-Android
 }

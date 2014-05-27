@@ -1,17 +1,15 @@
 package com.example.kitchapp;
 
-import com.example.kitchapp.R.color;
+import java.util.ArrayList;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.provider.CalendarContract.Colors;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -19,8 +17,14 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.RelativeLayout;
+=======
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+>>>>>>> Rama-Vivi-Android
 
 public class Recipes extends ActionBarActivity {
 	
@@ -28,59 +32,71 @@ public class Recipes extends ActionBarActivity {
 	private ViewPager mViewPager;
 	private PagerAdapter adapter;
 	private ViewPagerListener pageListener;
+	private static ArrayList<String> infoBundle;
 	
 		protected void onCreate(Bundle arg0) {
 	        super.onCreate(arg0);
 	        setContentView(R.layout.activity_recipes_viewpager);
-	        setPagerAdapter();
-            setActionBar();
+	        
+	        Bundle extras1= this.getIntent().getExtras();
+			if(extras1!=null){
+				infoBundle=extras1.getStringArrayList("infoTopTen");
+				
+			}
+	  
+	        adapter = new PagerAdapter(getSupportFragmentManager());
+	        mViewPager = (ViewPager) findViewById(R.id.pager);
+	        mViewPager.setAdapter(adapter);
+	        mViewPager.setOnPageChangeListener(pageListener);
+	        setActionBar();
 	    }
 		
-		private void setPagerAdapter() {
-	        if (adapter == null) {
-	            adapter = new PagerAdapter(getSupportFragmentManager());
-	        }
-	        if (pageListener == null) {
-	        	pageListener = new ViewPagerListener();
-	        }
-	        if (mViewPager == null) {
-	            mViewPager = (ViewPager) findViewById(R.id.pager);
-	            mViewPager.setAdapter(adapter);
-	            mViewPager.setOnPageChangeListener(pageListener);
-	            mViewPager.setOffscreenPageLimit(2);
-	        }
-	    }
 		
-		private static class PagerAdapter extends FragmentStatePagerAdapter {
+		public class PagerAdapter extends FragmentPagerAdapter {
 	
 			public PagerAdapter(FragmentManager fm) {
 				super(fm);
 			}			
 			
+<<<<<<< HEAD
 			@Override
+=======
+
+>>>>>>> Rama-Vivi-Android
 			public Fragment getItem(int arg0) {
 				switch (arg0) {
 		            case 0:
-		                return new Fragment_TopTen();
+		            	return Fragment_TopTen.newInstance(infoBundle);
 		            case 1:
-		                return new Fragment_Recipes();
+		                //return new Fragment_Recipes();
 		            case 2:
-		                return new Fragment_Favorites();
+		                //return new Fragment_Favorites();
 		            default:
 		            	return null;
 				}
 			}
+<<<<<<< HEAD
 			 
 			@Override
+=======
+	
+>>>>>>> Rama-Vivi-Android
 			public int getCount() {
-				return 3;
+				return 1;
 			}
 			
+<<<<<<< HEAD
 			@Override
 			public CharSequence getPageTitle(int position) {
 				String titulo = null;
 				switch (position) {
 					case 0:					
+=======
+			public CharSequence getPageTitle(int position) {
+				String titulo = null;
+				switch (position) {
+					case 0:
+>>>>>>> Rama-Vivi-Android
 		                titulo = "TOP TEN";
 		                break;
 		            case 1:
@@ -104,22 +120,23 @@ public class Recipes extends ActionBarActivity {
 		private void setActionBar() {
 	        final ActionBar actionBar = getSupportActionBar();
 	        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-	        //actionBar.setCustomView(R.drawable.tabselector);
 	        tabListener = new ActionBar.TabListener() {
 	 
 	            @Override
 	            public void onTabUnselected(Tab tab, FragmentTransaction arg1) {
-	           
 	            }
 	 
 	            @Override
 	            public void onTabSelected(Tab tab, FragmentTransaction arg1) {
-	            	
-	                if(adapter == null)
-	                    setPagerAdapter();
-	            	
+	               /* if(adapter == null)
+	                    setPagerAdapter();*/
 	                if (mViewPager.getCurrentItem() != tab.getPosition())
+<<<<<<< HEAD
 	                    mViewPager.setCurrentItem(tab.getPosition());	                		 
+=======
+	                    mViewPager.setCurrentItem(tab.getPosition());
+	 
+>>>>>>> Rama-Vivi-Android
 	            }
 	 
 	            @Override
@@ -139,5 +156,11 @@ public class Recipes extends ActionBarActivity {
 	        } /*else {
 	            actionBar.setTitle(R.string.app_name_capital);
 	        }*/
+<<<<<<< HEAD
 	    }				
 }
+=======
+	    }
+		
+		}
+>>>>>>> Rama-Vivi-Android
