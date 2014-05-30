@@ -39,6 +39,7 @@
                     android:layout_width="40dp"
                     android:layout_height="25dp"
                     android:background="@drawable/barras" />
+                    
             </TableRow>
 
     </TableLayout>
