@@ -5,7 +5,6 @@ import android.content.Intent;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-
 public class BarcodeScanner {
 	
 	private String barcode;
