@@ -27,6 +27,7 @@
                 <!-- fin Logo de encabezado -->
         </LinearLayout>
         <!--  fin Encabezado -->
+        
         <!-- Pie de página -->
         <LinearLayout 
             	  android:id="@+id/footer"
