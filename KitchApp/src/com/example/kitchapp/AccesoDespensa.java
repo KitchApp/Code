@@ -1,6 +1,5 @@
 package com.example.kitchapp;
 
-
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -10,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-
 
 public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
 
