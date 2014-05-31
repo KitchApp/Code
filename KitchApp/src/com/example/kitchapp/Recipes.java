@@ -17,14 +17,9 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
-<<<<<<< HEAD
-import android.view.View;
-import android.widget.RelativeLayout;
-=======
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
->>>>>>> Rama-Vivi-Android
 
 public class Recipes extends ActionBarActivity {
 	
@@ -56,13 +51,10 @@ public class Recipes extends ActionBarActivity {
 	
 			public PagerAdapter(FragmentManager fm) {
 				super(fm);
-			}			
+			}
 			
-<<<<<<< HEAD
-			@Override
-=======
+			
 
->>>>>>> Rama-Vivi-Android
 			public Fragment getItem(int arg0) {
 				switch (arg0) {
 		            case 0:
@@ -75,28 +67,15 @@ public class Recipes extends ActionBarActivity {
 		            	return null;
 				}
 			}
-<<<<<<< HEAD
-			 
-			@Override
-=======
 	
->>>>>>> Rama-Vivi-Android
 			public int getCount() {
 				return 1;
 			}
 			
-<<<<<<< HEAD
-			@Override
-			public CharSequence getPageTitle(int position) {
-				String titulo = null;
-				switch (position) {
-					case 0:					
-=======
 			public CharSequence getPageTitle(int position) {
 				String titulo = null;
 				switch (position) {
 					case 0:
->>>>>>> Rama-Vivi-Android
 		                titulo = "TOP TEN";
 		                break;
 		            case 1:
@@ -107,7 +86,10 @@ public class Recipes extends ActionBarActivity {
 		                break;
 				}
 				return titulo;
-			}									
+			}
+			
+			
+			
 		}
 		
 		private class ViewPagerListener extends ViewPager.SimpleOnPageChangeListener {
@@ -115,6 +97,7 @@ public class Recipes extends ActionBarActivity {
 			public void onPageSelected(int position) {
 				getSupportActionBar().setSelectedNavigationItem(position);
 			}
+
 		}
 		
 		private void setActionBar() {
@@ -131,36 +114,25 @@ public class Recipes extends ActionBarActivity {
 	               /* if(adapter == null)
 	                    setPagerAdapter();*/
 	                if (mViewPager.getCurrentItem() != tab.getPosition())
-<<<<<<< HEAD
-	                    mViewPager.setCurrentItem(tab.getPosition());	                		 
-=======
 	                    mViewPager.setCurrentItem(tab.getPosition());
 	 
->>>>>>> Rama-Vivi-Android
 	            }
 	 
 	            @Override
 	            public void onTabReselected(Tab tab, FragmentTransaction arg1) {
 	            }
 	        };
-			
 	        for (int i = 0; i < 3; i++) {
 	            Tab tab = actionBar.newTab();
 	            tab.setTabListener(tabListener);
 	            tab.setText(adapter.getPageTitle(i));
 	            actionBar.addTab(tab);
 	        }
-			
 	        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
 	            actionBar.setTitle("");
 	        } /*else {
 	            actionBar.setTitle(R.string.app_name_capital);
 	        }*/
-<<<<<<< HEAD
-	    }				
-}
-=======
 	    }
 		
-		}
->>>>>>> Rama-Vivi-Android
+}
