@@ -3,7 +3,7 @@
     package="com.example.kitchapp"
     android:versionCode="1"
     android:versionName="1.0" >
-    
+
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
@@ -25,11 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> Rama-Vivi-Android
         <activity
             android:name="com.example.kitchapp.Registro"
             android:label=" " >
@@ -107,8 +103,6 @@
             </intent-filter>
         </activity>
         
-<<<<<<< HEAD
-=======
         <activity
             android:name="com.example.kitchapp.Bar_Search"
             android:label=" " >
@@ -118,7 +112,6 @@
             </intent-filter>
         </activity>
             
->>>>>>> Rama-Vivi-Android
         <activity
             android:name="com.example.kitchapp.MostrarProductosLista"
             android:label=" " >
@@ -127,20 +120,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-        
-        <activity
-            android:name="com.example.kitchapp.Bar_Search"
-            android:label=" " >
-            <intent-filter>
-                <action android:name="com.example.kitchapp.Bar_Search" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        
-=======
 
->>>>>>> Rama-Vivi-Android
         <activity
             android:name="com.example.kitchapp.Recipes"
             android:label=" " >
