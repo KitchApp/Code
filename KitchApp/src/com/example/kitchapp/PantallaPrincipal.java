@@ -113,21 +113,31 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		// onPostExecute displays the results of the AsyncTask.
 		@Override
 		protected void onPostExecute(ArrayList<String> result) {
-			//Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
-			//apellido.setText(result);
-			//if(existRecipe){
-			/*String tmp="";
-			
-			infoRecipe.add(result.get(0));
-			infoRecipe.add(result.get(0));*/
-				//Intent intent = new Intent(getActivity(),ShowRecipe.class);
-				/*intent.putStringArrayListExtra("topten", result);
-			    startActivity(intent);*/
-			//}	      
-			//bundle=result;
 			Intent intent = new Intent(getApplicationContext(), Recipes.class);
 			intent.putStringArrayListExtra("infoTopTen", result);
 			startActivity(intent);
 		}
+	}
+	
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		MenuInflater inflater = getMenuInflater();
+        	inflater.inflate(R.menu.menu_pantalla_ppal, menu);
+        	return true;
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+		SharedPreferences settings = getSharedPreferences(
+				PantallaTransicion.PREFS_NAME, 0);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putBoolean("hasLoggedIn", false);
+		editor.commit();
+
+		Intent j = new Intent(this, Login.class);
+		j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(j);
+		finish();
+		return true;
 	}
 }
