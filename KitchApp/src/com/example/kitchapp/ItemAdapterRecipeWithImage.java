@@ -3,8 +3,10 @@ package com.example.kitchapp;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.List;
+
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Request;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+
 
 	public class ItemAdapterRecipeWithImage extends BaseAdapter {
 
