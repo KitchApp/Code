@@ -36,14 +36,7 @@ public class ItemReceta {
 	}
 		     
 	public void setNombre(String nombre) {
-<<<<<<< HEAD
-	    	this.nombre = nombre;
-	}			  		  		 		 
-=======
 	    this.nombre = nombre;
 	}
-
-	  		  		 		 
->>>>>>> Rama-Vivi-Android
 		  
 }
