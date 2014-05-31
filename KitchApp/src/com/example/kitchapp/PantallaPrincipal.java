@@ -1,7 +1,6 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -11,7 +10,6 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -37,11 +35,7 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		Button buttonRecipes = (Button) findViewById(R.id.button3);
 		buttonRecipes.setOnClickListener(this);
 	}
-<<<<<<< HEAD
-	
-=======
->>>>>>> Rama-Vivi-Android
-	
+
 	public void onClick(View v) {
 		switch(v.getId()) {
 			case R.id.button1:
@@ -65,14 +59,11 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		}
 	}
 	
-<<<<<<< HEAD
-}
-=======
 	private class GetTitleImageTopTen extends AsyncTask<String, Integer, ArrayList<String>>{
 		ArrayList<String> resp=new ArrayList<String>();
 		HttpPost httppost1;
 		HttpPost httppost2;
-		@Override
+	    @Override
 	    protected ArrayList<String> doInBackground(String... urls) {
 		    	
 			HttpClient httpclient = new DefaultHttpClient();
@@ -117,7 +108,7 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 			  }
 			
 			  return null;
-		}
+	    }
 		
 		// onPostExecute displays the results of the AsyncTask.
 		@Override
@@ -140,4 +131,3 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		}
 	}
 }
->>>>>>> Rama-Vivi-Android
