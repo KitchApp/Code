@@ -1,6 +1,5 @@
 package com.example.kitchapp;
 
-
 	public class ItemRecipeWithImage {
 
 		private String image;
@@ -54,5 +53,3 @@ package com.example.kitchapp;
 		}*/
 
 	}
-
-
