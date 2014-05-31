@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -13,7 +12,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import static android.provider.BaseColumns._ID;
-
 
 public class Handler_Sqlite extends SQLiteOpenHelper{
 
@@ -90,7 +88,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		db.execSQL("DROP TABLE IF EXISTS listHaveProducts");
 		onCreate(db);
 	}
-	
 	
 	public ArrayList<ItemProducto> readProducts(Integer key,String option){
 		
@@ -247,7 +244,6 @@ public void insertProducts(String name,Integer number, Integer idCategory, Strin
 		}
 		
 	}
-
 	
 public Integer getIDProduct(String name,String col) {
 	
@@ -283,7 +279,6 @@ public boolean existProductList(String name) {
 
 	return (c.moveToFirst());
 }
-
 
 	//mï¿½todo temporal
 
@@ -342,7 +337,6 @@ public boolean existProductList(String name) {
 		String tmp=column+"=?";
 		this.getWritableDatabase().delete(tableName,column+"=?",args);
 	}
-	
 	
 	public boolean existProductAdded(String name) {
 		SQLiteDatabase db=this.getReadableDatabase();
