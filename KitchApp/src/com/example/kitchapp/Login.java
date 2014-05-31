@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -22,7 +21,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -48,7 +46,7 @@ public class Login extends Activity {
 
 	public String session_name;
 	public String session_id;
-    public String encryptedPassword="";
+    	public String encryptedPassword="";
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -76,7 +74,7 @@ public class Login extends Activity {
 	public void errorLogging() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    builder.setTitle("Error")
+		builder.setTitle("Error")
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
@@ -91,80 +89,81 @@ public class Login extends Activity {
 	                }
 	            });
 	 
-	    builder.create();
-	    builder.show();
+	    	builder.create();
+	    	builder.show();
 	}
    
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
 
-        @Override
-        protected Integer doInBackground(String... urls) {
+            @Override
+            protected Integer doInBackground(String... urls) {
         	     	
         	HttpClient httpclient = new DefaultHttpClient();
 
-            //set the remote endpoint URL
-            HttpPost httppost = new HttpPost("http://www.kitchapp.es/json/user/login");
+            	//set the remote endpoint URL
+            	HttpPost httppost = new HttpPost("http://www.kitchapp.es/json/user/login");
             
-            try {
+            	try {
 
-                //get the UI elements for username and password
-            	EditText username= (EditText) findViewById(R.id.editTextuserName);
-                EditText password= (EditText) findViewById(R.id.editTextPassword);
+                	//get the UI elements for username and password
+            		EditText username= (EditText) findViewById(R.id.editTextuserName);
+                	EditText password= (EditText) findViewById(R.id.editTextPassword);
 
-                JSONObject json = new JSONObject();
-                //extract the username and password from UI elements and create a JSON object
-                json.put("username", username.getText().toString().trim());
-                json.put("password", password.getText().toString().trim());
+	                JSONObject json = new JSONObject();
+        	        //extract the username and password from UI elements and create a JSON object
+                	json.put("username", username.getText().toString().trim());
+                	json.put("password", password.getText().toString().trim());
 
-                //add serialised JSON object into POST request
-                StringEntity se = new StringEntity(json.toString());
-                //set request content type
-                se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-                httppost.setEntity(se);
+                	//add serialised JSON object into POST request
+                	StringEntity se = new StringEntity(json.toString());
+                	//set request content type
+                	se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+                	httppost.setEntity(se);
 
-                //send the POST request
-                HttpResponse response = httpclient.execute(httppost);
+	                //send the POST request
+        	        HttpResponse response = httpclient.execute(httppost);
 
-                //read the response from Services endpoint
-                String jsonResponse = EntityUtils.toString(response.getEntity());
+                	//read the response from Services endpoint
+                	String jsonResponse = EntityUtils.toString(response.getEntity());
 
-                JSONObject jsonObject = new JSONObject(jsonResponse);
-                //read the session information
-                session_name=jsonObject.getString("session_name");
-                session_id=jsonObject.getString("sessid");
-                if (jsonObject!=null)
-                	registrado=true;
-                return 0;
+                	JSONObject jsonObject = new JSONObject(jsonResponse);
+                	//read the session information
+                	session_name=jsonObject.getString("session_name");
+                	session_id=jsonObject.getString("sessid");
+                	if (jsonObject!=null)
+	                	registrado=true;
+        	        return 0;
 
-            }catch (Exception e) {
-                Log.v("Error adding article", e.getMessage());
+            	}catch (Exception e) {
+                	Log.v("Error adding article", e.getMessage());
+            	}
+
+            	return 0;
             }
 
-            return 0;
-        }
+	    // onPostExecute displays the results of the AsyncTask.
+	    @Override
+	    protected void onPostExecute(Integer result) {
+	      	//Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
+	       	//apellido.setText(result);
+	       	if(registrado){
+	 		Intent intent = new Intent(Login.this,PantallaTransicion.class);
+	     		startActivity(intent);
+	 		finish();
+	    			
+	 		/*Toast.makeText(getBaseContext(), "Perfecto!", Toast.LENGTH_LONG).show();
+	 		Intent i = new Intent(this, PantallaTransicion.class);
+	 		startActivity(i);*/
+	 	}
+	 	else
+	 		errorLogging();
+	            
+	        }
+        
+	    }
 
-       // onPostExecute displays the results of the AsyncTask.
-       @Override
-        protected void onPostExecute(Integer result) {
-            //Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-            //apellido.setText(result);
-        	if(registrado){
-    			Intent intent = new Intent(Login.this,PantallaTransicion.class);
-    	    	startActivity(intent);
-    			finish();
-    			
-    			/*Toast.makeText(getBaseContext(), "Perfecto!", Toast.LENGTH_LONG).show();
-    			Intent i = new Intent(this, PantallaTransicion.class);
-    			startActivity(i);*/
-    		}
-    		else
-    			errorLogging();
-            
-        }
-	}
-
-   	public static String httpGetData(String mURL) {
-        InputStream inputStream = null;
+   	    public static String httpGetData(String mURL) {
+            	InputStream inputStream = null;
 	        String result = "";
 	        try {
 	 
@@ -188,16 +187,16 @@ public class Login extends Activity {
 	        }
 	 
 	        return result;    
-    }	
+            }	
 	 
-   	private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-        String line = "";
-        String result = "";
-        while((line = bufferedReader.readLine()) != null)
-            result += line;
+   	    private static String convertInputStreamToString(InputStream inputStream) throws IOException{
+        	BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
+        	String line = "";
+        	String result = "";
+        	while((line = bufferedReader.readLine()) != null)
+            		result += line;
  
-        inputStream.close();
-        return result;
-    }
+	        inputStream.close();
+	        return result;
+    	    }
 }
