@@ -925,7 +925,6 @@ containing a value of this type.
         public static final int activity_horizontal_margin=0x7f080011;
         public static final int activity_vertical_margin=0x7f080012;
     }
-
     public static final class drawable {
         public static final int abc_ab_bottom_solid_dark_holo=0x7f020000;
         public static final int abc_ab_bottom_solid_light_holo=0x7f020001;
@@ -1105,7 +1104,6 @@ containing a value of this type.
         public static final int varios=0x7f0200ad;
         public static final int voz=0x7f0200ae;
     }
-
     public static final class id {
         public static final int EditTextCantProduct=0x7f05004b;
         public static final int action_bar=0x7f05001c;
@@ -1148,14 +1146,7 @@ containing a value of this type.
         public static final int buttonSauces=0x7f050046;
         public static final int buttonStore=0x7f050047;
         public static final int button_Voice=0x7f05004f;
-<<<<<<< HEAD
-        public static final int button_codeSearch=0x7f050050;
-        public static final int button_go=0x7f050079;
-        public static final int button_ok=0x7f05004e;
-        public static final int button_accept=0x7f05006e;
-=======
         public static final int button_accept=0x7f050079;
->>>>>>> Rama-Vivi-Android
         public static final int button_addProduct=0x7f05004c;
         public static final int button_cancel=0x7f05006c;
         public static final int button_codeSearch=0x7f050050;
@@ -1234,17 +1225,10 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f050019;
         public static final int quantity=0x7f050057;
         public static final int radio=0x7f05002f;
-<<<<<<< HEAD
-        public static final int search=0x7f05007d;
-        public static final int reg_email=0x7f050092;
-        public static final int reg_password=0x7f050093;
-        public static final int reg_usuario=0x7f050091;
-=======
         public static final int reg_email=0x7f0500a3;
         public static final int reg_password=0x7f0500a4;
         public static final int reg_usuario=0x7f0500a2;
         public static final int search=0x7f0500ad;
->>>>>>> Rama-Vivi-Android
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1265,31 +1249,6 @@ containing a value of this type.
         public static final int tabMode=0x7f050002;
         public static final int textView1=0x7f05003c;
         public static final int textViewAdd=0x7f050049;
-<<<<<<< HEAD
-        public static final int txt_barSearch=0x7f05004d;
-        public static final int txt_product=0x7f050051;
-        public static final int txt_quantity=0x7f050052;
-        public static final int textViewBread=0x7f05007a;
-        public static final int textViewCategory=0x7f05006c;
-        public static final int textViewCondiment=0x7f050082;
-        public static final int textViewDairy=0x7f050076;
-        public static final int textViewDrinks=0x7f05007c;
-        public static final int textViewFish=0x7f050080;
-        public static final int textViewFrozen=0x7f050086;
-        public static final int textViewFruits=0x7f050078;
-        public static final int textViewMeat=0x7f05007e;
-        public static final int textViewOthers=0x7f05008c;
-        public static final int textViewPasta=0x7f050084;
-        public static final int textViewSauces=0x7f050088;
-        public static final int textViewStore=0x7f05008a;
-        public static final int textView_Cat=0x7f050064;
-        public static final int textView_Item_Cant=0x7f050052;
-        public static final int textView_Item_Name=0x7f050051;
-        public static final int text_listName=0x7f050098;
-        public static final int texto_favorites=0x7f05004d;
-        public static final int texto_recipes=0x7f05004e;
-        public static final int texto_topten=0x7f05004f;
-=======
         public static final int textViewBread=0x7f05008a;
         public static final int textViewCategory=0x7f050076;
         public static final int textViewCondiment=0x7f050092;
@@ -1310,7 +1269,6 @@ containing a value of this type.
         public static final int texto_favorites=0x7f050053;
         public static final int texto_recipes=0x7f050054;
         public static final int texto_topten=0x7f050055;
->>>>>>> Rama-Vivi-Android
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int tvTitle=0x7f05005d;
@@ -1371,25 +1329,9 @@ containing a value of this type.
         public static final int abc_popup_menu_item_layout=0x7f030014;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
-<<<<<<< HEAD
-        public static final int abc_simple_decor=0x7f030017;
-        public static final int activity_acceso_despensa=0x7f030018;
-        public static final int activity_add_manualmente=0x7f030019;
-        public static final int activity_bar_search=0x7f03001a;
-        public static final int activity_item_listview=0x7f03001b;
-        public static final int activity_login=0x7f03001c;
-        public static final int activity_modificar_producto_despensa=0x7f03001d;
-        public static final int activity_mostrar_productos_categoria=0x7f03001e;
-        public static final int activity_pantalla_principal=0x7f03001f;
-        public static final int activity_pantalla_transicion=0x7f030020;
-        public static final int activity_seleccionar_categoria=0x7f030021;
-        public static final int activity_shopping_lists=0x7f030022;
-        public static final int shopping_list_go=0x7f030028;
-=======
         public static final int activity_acceso_despensa=0x7f030017;
         public static final int activity_add_manualmente=0x7f030018;
         public static final int activity_bar_search=0x7f030019;
->>>>>>> Rama-Vivi-Android
         public static final int activity_fragment_favorites=0x7f03001a;
         public static final int activity_fragment_recipes=0x7f03001b;
         public static final int activity_fragment_topten=0x7f03001c;
@@ -1423,13 +1365,8 @@ containing a value of this type.
         public static final int login=0x7f0d0001;
         public static final int menu_action_bar=0x7f0d0002;
         public static final int menu_search=0x7f0d0003;
-<<<<<<< HEAD
-        public static final int modificar_producto_despensa=0x7f0d0003;
-        public static final int mostrar_productos_categoria=0x7f0d0004;
-=======
         public static final int modificar_producto_despensa=0x7f0d0004;
         public static final int mostrar_productos_categoria=0x7f0d0005;
->>>>>>> Rama-Vivi-Android
     }
     public static final class string {
         public static final int CantProducts=0x7f0a0039;
@@ -1496,12 +1433,7 @@ containing a value of this type.
         public static final int dialog_header=0x7f0a0033;
         public static final int drogueria=0x7f0a0020;
         public static final int estadisticas=0x7f0a0013;
-<<<<<<< HEAD
-        public static final int home=0x7f0a003f;
-        public static final int favorite=0x7f0a0040;
-=======
         public static final int favorite=0x7f0a0042;
->>>>>>> Rama-Vivi-Android
         public static final int frutasVerduras=0x7f0a0017;
         public static final int hello_world=0x7f0a000f;
         public static final int home=0x7f0a003f;
