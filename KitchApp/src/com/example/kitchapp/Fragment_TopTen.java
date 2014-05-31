@@ -34,11 +34,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-<<<<<<< HEAD
-public class Fragment_TopTen extends Fragment {
-	
-	View rootView;
-=======
 public class Fragment_TopTen extends Fragment implements OnClickListener{
 	View rootView;
 	private ListView list;
@@ -58,7 +53,6 @@ public class Fragment_TopTen extends Fragment implements OnClickListener{
          
         return frag;
     }
->>>>>>> Rama-Vivi-Android
 	
 	@Override  
     public void onCreate(Bundle savedInstanceState) {  
@@ -109,9 +103,6 @@ public class Fragment_TopTen extends Fragment implements OnClickListener{
 		
 		return rootView;
 	}
-<<<<<<< HEAD
-}
-=======
 	
 
 	public ArrayList<String> initializeArrayTitleRecipes(){
@@ -124,7 +115,7 @@ public class Fragment_TopTen extends Fragment implements OnClickListener{
 			 UnicodeEscaper escaper = UnicodeEscaper.above(127);
     	     UnicodeUnescaper unescaper     = new UnicodeUnescaper();
     	  
-    	     //String textoProblematico = "Música";
+    	     //String textoProblematico = "MÃºsica";
     	  
     	     //String textoEscapado = escaper.translate(textoProblematico);
     	     // textoEscapado == "M\\u00FAsica", que se imprime como "M\u00FAsica"
@@ -166,8 +157,4 @@ public class Fragment_TopTen extends Fragment implements OnClickListener{
 		
 	}
 	
-	
-	
-	
 }
->>>>>>> Rama-Vivi-Android
