@@ -1,6 +1,7 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -10,22 +11,17 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 
 public class PantallaPrincipal extends Activity implements OnClickListener{
 
@@ -41,7 +37,7 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		Button buttonRecipes = (Button) findViewById(R.id.button3);
 		buttonRecipes.setOnClickListener(this);
 	}
-
+	
 	public void onClick(View v) {
 		switch(v.getId()) {
 			case R.id.button1:
@@ -69,7 +65,7 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		ArrayList<String> resp=new ArrayList<String>();
 		HttpPost httppost1;
 		HttpPost httppost2;
-	    @Override
+		@Override
 	    protected ArrayList<String> doInBackground(String... urls) {
 		    	
 			HttpClient httpclient = new DefaultHttpClient();
@@ -114,36 +110,26 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 			  }
 			
 			  return null;
-	    }
+		}
 		
 		// onPostExecute displays the results of the AsyncTask.
 		@Override
 		protected void onPostExecute(ArrayList<String> result) {
+			//Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+			//apellido.setText(result);
+			//if(existRecipe){
+			/*String tmp="";
+			
+			infoRecipe.add(result.get(0));
+			infoRecipe.add(result.get(0));*/
+				//Intent intent = new Intent(getActivity(),ShowRecipe.class);
+				/*intent.putStringArrayListExtra("topten", result);
+			    startActivity(intent);*/
+			//}	      
+			//bundle=result;
 			Intent intent = new Intent(getApplicationContext(), Recipes.class);
 			intent.putStringArrayListExtra("infoTopTen", result);
 			startActivity(intent);
 		}
-	}
-	
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		MenuInflater inflater = getMenuInflater();
-        	inflater.inflate(R.menu.menu_pantalla_ppal, menu);
-        	return true;
-	}
-	
-	public boolean onOptionsItemSelected(MenuItem item) {
-		SharedPreferences settings = getSharedPreferences(
-				PantallaTransicion.PREFS_NAME, 0);
-		SharedPreferences.Editor editor = settings.edit();
-
-		editor.putBoolean("hasLoggedIn", false);
-		editor.commit();
-
-		Intent j = new Intent(this, Login.class);
-		j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		startActivity(j);
-		finish();
-		return true;
 	}
 }
