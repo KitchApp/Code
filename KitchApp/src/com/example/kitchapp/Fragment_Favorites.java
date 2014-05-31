@@ -20,5 +20,6 @@ public class Fragment_Favorites extends Fragment{
 		texto.setText("Tab seleccionada" + "\n\n" + "Favoritos");;
 		
 		return rootView;
+		
 	}
 }
