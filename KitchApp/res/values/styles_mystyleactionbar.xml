@@ -20,14 +20,14 @@
 <resources>
 
     <style name="Theme.Mystyleactionbar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="actionBarItemBackground">@drawable/selectable_background_mystyleactionbar</item>
+        <!--item name="actionBarItemBackground">@drawable/selectable_background_mystyleactionbar</item>-->
         <item name="popupMenuStyle">@style/PopupMenu.Mystyleactionbar</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Mystyleactionbar</item>
         <item name="actionBarTabStyle">@style/ActionBarTabStyle.Mystyleactionbar</item>
         <item name="actionDropDownStyle">@style/DropDownNav.Mystyleactionbar</item>
         <item name="actionBarStyle">@style/ActionBar.Solid.Mystyleactionbar</item>
-        <item name="actionModeBackground">@drawable/cab_background_top_mystyleactionbar</item>
-        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_mystyleactionbar</item>
+        <!--item name="actionModeBackground">@drawable/cab_background_top_mystyleactionbar</item>-->
+        <!--item name="actionModeSplitBackground">@drawable/cab_background_bottom_mystyleactionbar</item>-->
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Mystyleactionbar</item>
                 <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Mystyleactionbar.Widget</item>
