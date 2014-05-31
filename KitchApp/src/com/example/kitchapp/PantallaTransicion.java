@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
-
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -24,10 +23,10 @@ public class PantallaTransicion extends Activity {
 		setContentView(R.layout.activity_pantalla_transicion);
 		
 		/*pDialog = new ProgressDialog(PantallaTransicion.this);
-        pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        pDialog.setMessage("Procesando...");
-        //pDialog.setCancelable(true);
-        pDialog.setMax(100);*/
+        	pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        	pDialog.setMessage("Procesando...");
+        	//pDialog.setCancelable(true);
+        	pDialog.setMax(100);*/
 
 		barra=(ProgressBar)findViewById(R.id.progressBar1);
 	        tarea = new AccesoBBDD();
@@ -43,12 +42,11 @@ public class PantallaTransicion extends Activity {
 	
 		
 	
-	private void tareaLarga()
-    {
+	private void tareaLarga() {
             try { 
                     Thread.sleep(300); 
             } catch(InterruptedException e) {}
-    }
+    	}
 	
 	public class AccesoBBDD extends AsyncTask<Void,Integer,Boolean>{
 
@@ -72,7 +70,6 @@ public class PantallaTransicion extends Activity {
                     barra.setProgress(progreso);
             }
             
-            
             protected void onPreExecute() {
                     
                     /*pDialog.setOnCancelListener(new OnCancelListener() {
@@ -84,23 +81,21 @@ public class PantallaTransicion extends Activity {
                     
                     //pDialog.setProgress(0);
                     //pDialog.show();
-            	barra.setMax(100);
-            	barra.setProgress(0);
+            	    barra.setMax(100);
+            	    barra.setProgress(0);
             	
             }
             
             @Override
             protected void onPostExecute(Boolean result) {
-                    if(result)
-                    {
+                    if(result) {
 
                             //pDialog.dismiss();
                             //Toast.makeText(PantallaTransicion.this, "Tarea finalizada!", Toast.LENGTH_SHORT).show();
                             //setContentView(R.layout.activity_pantalla_principal);
                     	
-                    	Intent i = new Intent(PantallaTransicion.this, PantallaPrincipal.class);
-                		startActivity(i);
-                    	
+                    	    Intent i = new Intent(PantallaTransicion.this, PantallaPrincipal.class);
+                	    startActivity(i);
                     }
             }
             
