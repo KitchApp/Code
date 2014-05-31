@@ -5,7 +5,6 @@ public class ShoppingListItem {
 	private String listName;
 	private boolean checked;
 	
-	
 	public ShoppingListItem(String name){
 		listName = name;
 	}
