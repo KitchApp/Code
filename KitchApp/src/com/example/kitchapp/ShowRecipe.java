@@ -2,6 +2,7 @@ package com.example.kitchapp;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.text.translate.UnicodeEscaper;
 import org.apache.commons.lang3.text.translate.UnicodeUnescaper;
@@ -14,7 +15,9 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
+
 import com.squareup.picasso.Picasso;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -35,6 +38,7 @@ import android.widget.Toast;
 
 public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 
+	
 	private String titleBundle;
 	private String imageBundle;
 	private Integer idRecipeBundle;
@@ -68,13 +72,16 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 		headerPreparation=(TextView)findViewById(R.id.headerPreparation);
 		preparationRef=(TextView)findViewById(R.id.preparation);
 		
+		
 	}
 
 	
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
+		
 	}
+	
 	
 	private class GetInfoRecipeById extends AsyncTask<String, Integer, ArrayList<String>>{
 		Activity activity;
@@ -85,13 +92,13 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 		ListView list;
 		ItemIngredientsAdapter adapter;
 		public GetInfoRecipeById(Activity activity){
-		        this.activity = activity;
-	    	}
+	        this.activity = activity;
+	    }
 		
 		@Override
-	    	protected ArrayList<String> doInBackground(String... urls) {
+	    protected ArrayList<String> doInBackground(String... urls) {
 	    	
-		    HttpClient httpclient = new DefaultHttpClient();
+			HttpClient httpclient = new DefaultHttpClient();
 		    HttpPost httppost1 = new HttpPost("http://www.kitchapp.es/getNumPersByIdRecipe.php?entity_id="+idRecipeBundle);
 		    HttpPost httppost2 = new HttpPost("http://www.kitchapp.es/getNationalityByIdRecipe.php?entity_id="+idRecipeBundle);
 		    HttpPost httppost3 = new HttpPost("http://www.kitchapp.es/getIngredientsbyIdRecipe.php?entity_id="+idRecipeBundle);
@@ -138,13 +145,13 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 		        String jsonResponse4 = EntityUtils.toString(response4.getEntity());
 		        String jsonResponse5 = EntityUtils.toString(response5.getEntity());
 		        if (!jsonResponse1.equals("")){
-		        	//n�mero de personas
+		        	//número de personas
 		        	resp.add(jsonResponse1);
 		        	//nacionalidad
 		        	resp.add(jsonResponse2);
 		        	//ingredientes
 		        	resp.add(jsonResponse3);
-		        	//preparaci�n
+		        	//preparación
 		        	resp.add(jsonResponse4);
 		        	//cantidades de los ingredientes
 		        	resp.add(jsonResponse5);
@@ -152,11 +159,11 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 		        return resp;
 		        
 		
-		    	}catch (Exception e) {
-		        	Log.v("Error adding article", e.getMessage());
-		    	}
+		    }catch (Exception e) {
+		        Log.v("Error adding article", e.getMessage());
+		    }
 		
-		    	return null;
+		    return null;
 		}
 	
 		// onPostExecute displays the results of the AsyncTask.
@@ -205,11 +212,11 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 			
 			adapter = new ItemIngredientsAdapter(activity,ingredients,quantities,units);
 			// Asignamos el Adapter al ListView, en este punto hacemos que el
-	     		// ListView muestre los datos que queremos.
+	     	// ListView muestre los datos que queremos.
 			ingredientsRef=(ListView)findViewById(R.id.ingredients);
 			ingredientsRef.setAdapter(adapter);
-			//result[3] contiene la preparaci�n
-			headerPreparation.setText("Preparaci�n");
+			//result[3] contiene la preparación
+			headerPreparation.setText("Preparación");
 			String aux1=StringEscapeUtils.unescapeJava(result.get(3));
 			result.set(3,parsePreparation(aux1));
 			preparationRef.setText(result.get(3));
@@ -267,10 +274,12 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 			tmp1=resp.get(2).split("\\["+"\"");
 			for (int i = 1; i < tmp1.length; i++) {
 				tmp2=tmp1[i].split("\"]");
-	    	    		UnicodeUnescaper unescaper = new UnicodeUnescaper();
+	    	    UnicodeUnescaper unescaper = new UnicodeUnescaper();
 				ingredients.add(new ItemReceta(i,unescaper.translate(tmp2[0])));
 			}
+			
 		}
+		
 		
 		public void initializeArrayQuantities(){
 			String [] tmp1;
@@ -287,6 +296,7 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 				tmp3=tmp1[j].split("\"]");
 				units.add(new ItemReceta(j,tmp3[0]));
 			}
+			
 		}
 	}
 
