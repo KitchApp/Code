@@ -1,70 +1,80 @@
 package com.example.kitchapp;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.concurrent.ExecutionException;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Login extends Activity {
 	
-	private HashMap<String,String> users;
 	private EditText userName;
 	private EditText password;
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 	Boolean registrado=false;
 
 	public String session_name;
-	public String session_id;
+    public String session_id;
     public String encryptedPassword="";
 	
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// setting default screen to login.xml
-		setContentView(R.layout.activity_login);
+		
+		SharedPreferences settings = getSharedPreferences(PantallaTransicion.PREFS_NAME, 0);
+        boolean hasLoggedIn = settings.getBoolean("hasLoggedIn", false);
+        
+        if (hasLoggedIn) {
+        	Intent intent = new Intent(Login.this,PantallaTransicion.class);
+	        startActivity(intent);
+			finish();
+        }
+        
+     // setting default screen to login.xml
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+     
+        setContentView(R.layout.activity_login);
+
 		
 		userName = (EditText)findViewById(R.id.editTextuserName);
 		password = (EditText)findViewById(R.id.editTextPassword);
 
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
-	}
 		
+	}
+
+		
+
 	public void intento_logueo(View view) {
 		String name = userName.getText().toString(); 
 		String key = password.getText().toString();
+		
+		
 		new HttpAsyncTask().execute();
 	}
 	
@@ -72,7 +82,8 @@ public class Login extends Activity {
 		Intent i = new Intent(this, Registro.class);
 		startActivity(i);
 	}
-		
+	
+	
 	public void errorLogging() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
@@ -95,11 +106,15 @@ public class Login extends Activity {
 	    builder.show();
 	}
    
-	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
 
+	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
+		
+
+		
         @Override
         protected Integer doInBackground(String... urls) {
-        	     	
+        	
+        	
         	HttpClient httpclient = new DefaultHttpClient();
 
             //set the remote endpoint URL
@@ -143,27 +158,30 @@ public class Login extends Activity {
             return 0;
         }
 
-       // onPostExecute displays the results of the AsyncTask.
+       /** onPostExecute displays the results of the AsyncTask.**/
        @Override
         protected void onPostExecute(Integer result) {
-            //Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-            //apellido.setText(result);
-        	if(registrado){
+            if(registrado){
+        		SharedPreferences settings = getSharedPreferences(PantallaTransicion.PREFS_NAME, 0);
+				SharedPreferences.Editor editor = settings.edit();
+				
+				editor.putBoolean("hasLoggedIn", true);
+				editor.commit();
+
     			Intent intent = new Intent(Login.this,PantallaTransicion.class);
     	    	startActivity(intent);
     			finish();
-    			
-    			/*Toast.makeText(getBaseContext(), "Perfecto!", Toast.LENGTH_LONG).show();
-    			Intent i = new Intent(this, PantallaTransicion.class);
-    			startActivity(i);*/
     		}
     		else
     			errorLogging();
             
-        }
-	}
+            
+       }
+    }
 
-   	public static String httpGetData(String mURL) {
+
+	
+	public static String httpGetData(String mURL) {
         InputStream inputStream = null;
 	        String result = "";
 	        try {
@@ -187,17 +205,23 @@ public class Login extends Activity {
 	            Log.d("InputStream", e.getLocalizedMessage());
 	        }
 	 
-	        return result;    
-    }	
+	        return result;
+    
+    }  
+	
 	 
-   	private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-        String line = "";
-        String result = "";
-        while((line = bufferedReader.readLine()) != null)
-            result += line;
- 
-        inputStream.close();
-        return result;
-    }
-}
+	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
+	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
+	        String line = "";
+	        String result = "";
+	        while((line = bufferedReader.readLine()) != null)
+	            result += line;
+	 
+	        inputStream.close();
+	        return result;
+	 
+	    }
+	
+	 }
+	
+	

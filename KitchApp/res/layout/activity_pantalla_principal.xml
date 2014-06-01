@@ -67,7 +67,7 @@
 					    	        android:layout_weight="1"      
 					            	android:textColor="@color/white" 
 									android:background="@color/darkGray"     		        
-									android:drawableRight="@drawable/despensa"		        		             
+									android:drawableRight="@drawable/despensa1"		        		             
 									android:text="@string/despensa" 
 									android:gravity="center"
 									android:textSize="20sp" />

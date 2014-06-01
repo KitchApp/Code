@@ -21,11 +21,14 @@ import com.squareup.picasso.Picasso;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -50,12 +53,20 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 	private TextView nationalityRef;
 	private TextView headerIngredients;
 	private TextView headerPreparation;
+	private Handler_Sqlite helper;
+	private String ingred="";
+	private String quant="";
+	private String unit="";
+	private ArrayList<ItemReceta> quantities=new ArrayList<ItemReceta>();
+	private ArrayList<ItemReceta> ingredients=new ArrayList<ItemReceta>();
+	private ArrayList<ItemReceta> units=new ArrayList<ItemReceta>();
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_show_recipe);
-	    
+	    helper=new Handler_Sqlite(this);
 		Bundle extras1= this.getIntent().getExtras();
 		if(extras1!=null){
 			titleBundle=extras1.getString("titulo");
@@ -82,12 +93,34 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 		
 	}
 	
+	public void initializeStringIngredients(){
+		for(int i=0;i<ingredients.size();i++){
+			
+			ingred+=ingredients.get(i).getNombre()+",";
+		}
+	}
+	
+	public void initializeStringQuantities(){
+		for(int i=0;i<quantities.size();i++){
+			quant+=quantities.get(i).getNombre()+",";
+		}
+		
+		
+	}
+	
+	public void initializeArrayUnits(){
+		for(int i=0;i<units.size();i++){
+			unit+=units.get(i).getNombre()+",";
+		}	
+	}
+	
+
 	
 	private class GetInfoRecipeById extends AsyncTask<String, Integer, ArrayList<String>>{
 		Activity activity;
 		ArrayList<String> resp=new ArrayList<String>();
-		ArrayList<ItemReceta> ingredients=new ArrayList<ItemReceta>();
-		ArrayList<ItemReceta> quantities=new ArrayList<ItemReceta>();
+		//ArrayList<ItemReceta> ingredients=new ArrayList<ItemReceta>();
+		//ArrayList<ItemReceta> quantities=new ArrayList<ItemReceta>();
 		ArrayList<ItemReceta> units=new ArrayList<ItemReceta>();
 		ListView list;
 		ItemIngredientsAdapter adapter;

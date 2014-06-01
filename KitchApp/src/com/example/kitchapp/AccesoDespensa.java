@@ -1,8 +1,8 @@
 package com.example.kitchapp;
 
-
 import android.os.Bundle;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,7 +13,7 @@ import android.widget.Button;
 
 
 public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,15 +51,32 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.menu_search, menu);
+		inflater.inflate(R.menu.menu_actionbar_search, menu);
 		return super.onCreateOptionsMenu(menu);
-
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
-			Intent j = new Intent(this, Bar_Search.class);
-			startActivity(j);
+		switch (item.getItemId()) {
+		case R.id.search:
+			Intent i = new Intent(this, Bar_Search.class);
+			startActivity(i);
 			return true;
+		case R.id.logout:
+			SharedPreferences settings = getSharedPreferences(
+					PantallaTransicion.PREFS_NAME, 0);
+			SharedPreferences.Editor editor = settings.edit();
+
+			editor.putBoolean("hasLoggedIn", false);
+			editor.commit();
+
+			Intent j = new Intent(this, Login.class);
+			j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(j);
+			finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 	

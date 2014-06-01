@@ -25,7 +25,14 @@ import android.widget.Button;
 
 public class PantallaPrincipal extends Activity implements OnClickListener{
 
+	private Handler_Sqlite helper;
+	private ArrayList<String> titulos;
+	private ArrayList<String> imagenes;
+	private ArrayList<String> topTen;
+	
 	public void onCreate(Bundle savedInstanceState) {
+		helper=new Handler_Sqlite(this);
+		helper.open();
 		super.onCreate(savedInstanceState);
 		// setting default screen to login.xml
 		
@@ -36,7 +43,9 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		buttonList.setOnClickListener(this);
 		Button buttonRecipes = (Button) findViewById(R.id.button3);
 		buttonRecipes.setOnClickListener(this);
-	}
+		
+}
+	
 	
 	public void onClick(View v) {
 		switch(v.getId()) {
@@ -50,16 +59,45 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 				startActivity(j);
 				break;
 				
-			/*case R.id.button3:
-				Intent k = new Intent(this, Recipes.class);
-				startActivity(k);
-				break;*/
-				
 			case R.id.button3:
+				loadFavoriteRecipe();
 				new GetTitleImageTopTen().execute();
 				break;
 		}
 	}
+	
+	
+	public void loadFavoriteRecipe(){
+		//helper=new Handler_Sqlite(this);
+		//helper.open();
+		titulos=initializeArrayTitleRecipesFromLocalBBDD();
+		imagenes=initializeArrayImagesRecipesFromLocalBBDD();
+		helper.close();
+	}
+	
+	public ArrayList<String> initializeArrayTitleRecipesFromLocalBBDD(){
+		ArrayList<String>items = new ArrayList<String>();
+		ArrayList<String>tmp = new ArrayList<String>();
+		//Leer de la base de datos local los titulos de las recetas favoritas
+		tmp=helper.readInfoFavoriteRecipes("title");
+		for (int i = 0; i < tmp.size(); i++) {
+			items.add((String)tmp.get(i));
+		}
+		return items;
+	}
+	
+		
+	public ArrayList<String> initializeArrayImagesRecipesFromLocalBBDD(){
+		ArrayList<String>items = new ArrayList<String>();
+		ArrayList<String>tmp = new ArrayList<String>();
+		//Leer de la base de datos local las imagenes de las recetas favoritas
+		tmp=helper.readInfoFavoriteRecipes("image");
+		for (int i = 0; i < tmp.size(); i++) {
+			items.add((String)tmp.get(i));
+		}
+		return items;
+	}
+	
 	
 	private class GetTitleImageTopTen extends AsyncTask<String, Integer, ArrayList<String>>{
 		ArrayList<String> resp=new ArrayList<String>();
@@ -103,7 +141,8 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 			        	//resp.add(searchFilter);
 			        }
 			        
-			        return resp;	        
+			        return resp;
+			        
 			
 			  }catch (Exception e) {
 			        Log.v("Error adding article", e.getMessage());
@@ -129,7 +168,11 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 			//bundle=result;
 			Intent intent = new Intent(getApplicationContext(), Recipes.class);
 			intent.putStringArrayListExtra("infoTopTen", result);
+			intent.putStringArrayListExtra("titleFavorite", titulos);
+			intent.putStringArrayListExtra("imagesFavorite", imagenes);
 			startActivity(intent);
 		}
 	}
+	
+	
 }
