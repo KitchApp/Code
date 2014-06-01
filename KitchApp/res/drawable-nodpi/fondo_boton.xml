@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+	android:constantSize="true"
+	android:variablePadding="false" >
+	
+	<!--  Un gráfico 9-patch es básicamente es una imagen de mapa de bits 
+		extensible, es decir, un tipo de imagen que Android puede cambiar de 
+		tamaño automáticamente para ajustarse a la vista a la que se le ha sido
+ 		asignado como background.
+ 	-->
+ 	
+ 	<!-- 2) En la carpeta drawable he agregado dos imágenes que me servirán 
+		como fondo para un botón (para cuando se encuentre en su estado normal 
+		y cuando sea presionado por el usuario).
+	-->
+
+	<!-- 3) Para definir la imagen que se desplegará como fondo del botón según
+		el estado del mismo, he creado un archivo XML dentro de la misma carpeta de
+		drawable cuyo nombre es fondo_boton.xml
+	-->
+ 
+	<!-- Una vez definido esto, he agregado un archivo de estilos dentro de la 
+		carpeta values. Mi archivo se llama styles.xml
+	-->
+ 
+	<!-- Los estilos pueden definirse para toda la ACTIVIDAD o para toda la APLICACIÓN
+		o de forma más específica a un WIDGET. En el caso de que el estilo lo apliquemos como un tema, 
+		cada uno de los elementos de la actividad aplicará las propiedades del estilo que soporten.
+	-->
+	
+	<item android:state_pressed="true" android:drawable="@drawable/button_over"/>
+	<item android:state_focused="true" android:drawable="@drawable/button_over"/>
+	<!-- item android:drawable="@drawable/button" /> --> 
+  
+</selector>
