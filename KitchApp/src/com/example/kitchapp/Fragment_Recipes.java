@@ -102,10 +102,13 @@ public class Fragment_Recipes extends Fragment implements Interface{
 		        case 2: open_Dialog_Spinner(position);
 		        		break;
 		         
-		    	
 		    	// Recetas por Recomendacion de mi Despensa    	
 	        	case 3: showRecipesWithMyPantry();		   
 	        		break;
+	        		
+	        		//Recetas rápidas
+		        case 4: new GetTitleImageByCookingMode().execute();
+		        		break;
 		    	}
 		    }
 		});
@@ -660,4 +663,77 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			}
 			
 		}
+<<<<<<< HEAD
 }
+=======
+		
+		// (4) Por modo de cocina: Rapidas
+					private class GetTitleImageByCookingMode extends AsyncTask<String, Integer, ArrayList<String>>{
+							ArrayList<String> resp=new ArrayList<String>();
+							HttpPost httppost5;
+							HttpPost httppost6;
+							@Override
+						    protected ArrayList<String> doInBackground(String... urls) {
+						    	
+								HttpClient httpclient = new DefaultHttpClient();
+								//String searchFilter=userInput.getText().toString().trim();
+							    //set the remote endpoint URL
+								/*try{
+									httppost5 = new HttpPost("http://www.kitchapp.es/getRecipesTitleByCookingMode.php?field_tiempo_de_preparacion_value="+URLEncoder.encode(searchFilter,"UTF-8"));
+									httppost6 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesImagesByCookingMode.php?field_tiempo_de_preparacion_value="+URLEncoder.encode(searchFilter,"UTF-8"));
+								} catch (UnsupportedEncodingException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}*/
+								httppost5 = new HttpPost("http://www.kitchapp.es/getRecipesTitleByCookingMode.php?");
+								httppost6 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesImagesByCookingMode.php?");
+							    try {					
+							        JSONObject json5 = new JSONObject();
+							        JSONObject json6 = new JSONObject();
+							        //add serialised JSON object into POST request
+							        StringEntity se5 = new StringEntity(json5.toString());
+							        StringEntity se6 = new StringEntity(json6.toString());
+							        //set request content type
+							        se5.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+							        httppost5.setEntity(se5);
+							        se6.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+							        httppost6.setEntity(se6);
+							        
+								    //send the POST request
+								    HttpResponse response5 = httpclient.execute(httppost5);
+								    HttpResponse response6 = httpclient.execute(httppost6);
+								
+							        //read the response from Services endpoint
+							        String jsonResponse5 = EntityUtils.toString(response5.getEntity());
+							        String jsonResponse6 = EntityUtils.toString(response6.getEntity());
+							        //if (!jsonResponse5.equals("")){
+							        	//existRecipe=true;
+							        	resp.add(jsonResponse5);
+							        	resp.add(jsonResponse6);
+							        	resp.add(searchFilter);
+							        //}
+							        return resp;		        
+							
+							    }catch (Exception e) {
+							        Log.v("Error adding article", e.getMessage());
+							    }
+								
+							    return null;
+							}
+						
+							// onPostExecute displays the results of the AsyncTask.
+							@Override
+							protected void onPostExecute(ArrayList<String> result) {
+								//Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+							    //apellido.setText(result);
+								//if(existRecipe){
+									Intent intent = new Intent(getActivity(),ShowListRecipes.class);						
+									intent.putStringArrayListExtra("recipes", result);
+							    	startActivity(intent);
+								//}											    		    
+							}
+					}					
+		
+		
+}
+>>>>>>> Rama-Vivi-Android
