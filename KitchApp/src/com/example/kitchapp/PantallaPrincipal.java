@@ -173,9 +173,5 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 			startActivity(intent);
 		}
 	}
-<<<<<<< HEAD
-=======
-	
-	
->>>>>>> Rama-Vivi-Android
+
 }
