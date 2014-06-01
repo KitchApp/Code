@@ -1,16 +1,12 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
-import android.app.Activity;
-=======
 import java.util.HashMap;
 import java.util.List;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
->>>>>>> Rama-Vivi-Android
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -818,7 +814,7 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 		EditText product = (EditText) findViewById(R.id.et1);
 		String prod = product.getText().toString();
 		if (prod.equals("")) {
-			alertDialogReport("Es necesario escribir el nombre del producto con su cantidad, para poder añadir");
+			alertDialogReport("Es necesario escribir el nombre del producto con su cantidad, para poder aÃ±adir");
 			return true;
 		}
 		else {
