@@ -57,7 +57,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class Fragment_Recipes extends Fragment {
+public class Fragment_Recipes extends Fragment implements Interface{
 	
 	//private ArrayList<ItemReceta> options=new ArrayList<ItemReceta>();
 	private ArrayList<ItemRecipeWithImage> options=new ArrayList<ItemRecipeWithImage>();
@@ -107,14 +107,126 @@ public class Fragment_Recipes extends Fragment {
 		        		// Recetas por Dieta	    	
 		        case 2: open_Dialog_Spinner(position);
 		        		break;
-		         }
+		         
+		    	
+		    	// Recetas por Recomendacion de mi Despensa    	
+	        	case 3: showRecipesWithMyPantry();		   
+	        		break;
+		    	}
 		    }
 		});
 		
 		return rootView;	
 	}	
 	
+	public void showRecipesWithMyPantry(){
+		helper.open();
 		
+		
+			products=helper.readAllProductsPantry();		
+			//for(int i=0;i<products.size();i++){
+				//GetIDRecipesPlusIngredientsByOneIngredient thread=new GetIDRecipesPlusIngredientsByOneIngredient(products.get(i));
+			    GetIDRecipesPlusIngredientsByOneIngredient thread=new GetIDRecipesPlusIngredientsByOneIngredient();
+				thread.delegate=this;
+				thread.execute();			
+			
+		//}
+		if(products.size()==0){
+			Toast.makeText(getActivity(), "No tiene productos en su despensa", Toast.LENGTH_LONG).show();
+		}
+	}
+	
+	public ArrayList<String> processFinish(ArrayList<String> output){
+		//En output se tiene la salida del onpostexecute de GetIDRecipesPlusIngredientsByOneIngredient
+		//El método devuelve un arraylist con un string con los titulos de las recetas, otro string con los ids de las recetas
+		//y otro string con las urls de las imagenes -->este resultado lo recoge el método onPostExecuto del hilo
+		String keys="";
+		String urlImages="";
+		String titlesTmp="";
+		ArrayList<String> resp=new ArrayList<String>();
+		ArrayList<String> val=new ArrayList<String>();
+		parsearIDRecipeAndIngredients(output.get(0));
+		parsearIDRecipeAndImage(output.get(1));
+		//parsearQuantAndUnit(output.get(2));
+	
+		int cont;
+		Iterator<String> iter = hashIngredients.keySet().iterator();
+		while(iter.hasNext()) {
+			cont=0;
+			String key = (String)iter.next();
+		    val = hashIngredients.get(key);
+		    String aux="";
+		    String textoDesescapado;
+		    for(int j=1;j<val.size();j++){
+		    	     UnicodeEscaper escaper = UnicodeEscaper.above(127);
+		    	     UnicodeUnescaper unescaper     = new UnicodeUnescaper();
+		    	  
+		    	     //String textoProblematico = "Música";
+		    	  
+		    	     //String textoEscapado = escaper.translate(textoProblematico);
+		    	     // textoEscapado == "M\\u00FAsica", que se imprime como "M\u00FAsica"
+		    	  
+		    	     textoDesescapado = unescaper.translate(val.get(j));
+		    	  
+		    	      //cambiar manifest
+		    	    if(helper.existProductAdded(textoDesescapado)){
+		    	    	//if(helper.getUnitsProduct(textoDesescapado).equals(object)){
+		    	    		
+		    	    	//}
+						cont++;
+					}
+		    		 
+		    }
+		    if(cont==val.size()-1){
+		    	keys=keys+key+",";
+		    	urlImages=urlImages+hashImages.get(key)+",";
+				titlesTmp=titlesTmp+val.get(0)+",";
+					// TODO Auto-generated catch block
+		    }
+		}
+		resp.add(titlesTmp);
+		resp.add(keys);
+		resp.add(urlImages);
+		return resp;
+	}	
+	
+	
+	public void parsearIDRecipeAndImage(String result){
+		String []tmp1=result.split("\"");
+		for(int j=1;j<tmp1.length;j=j+2){
+			hashImages.put(tmp1[j], tmp1[j+1]);
+		}
+	}
+	
+	public void parsearIDRecipeAndIngredients(String result){
+		String []tmp1=result.split("\""+"\\["+"\"");
+		String []value1=tmp1[1].split("\""+"\\]"+"\\["+"\"");
+		String []value2;
+		String []key;
+		ArrayList<String> valuetmp=new ArrayList<String>();
+		key=tmp1[0].split("\"");
+		String myKey=key[1];
+		String[] tmp2=value1[value1.length-1].split("\""+"\\]"+"\"");
+		String[] myValue=value1;
+		myValue[myValue.length-1]=tmp2[0];
+		myValue[myValue.length-1]=myValue[myValue.length-1].split("\""+"\\]")[0];
+		for(int k=0;k<myValue.length;k++){
+			valuetmp.add(myValue[k]);
+		}
+		
+		hashIngredients.put(myKey, valuetmp);
+		for(int i=1;i<tmp1.length-1;i++){
+			valuetmp=new ArrayList<String>();
+			key=tmp1[i].split("\""+"\\]"+"\"");
+			value2=tmp1[i+1].split("\""+"\\]"+"\\["+"\"");
+			value2[value2.length-1]=value2[value2.length-1].split("\""+"\\]")[0];
+			for(int j=0;j<value2.length;j++){
+					valuetmp.add(value2[j]);
+					
+			}
+			hashIngredients.put(key[1], valuetmp);
+		}
+	}
 	
 	private void initializeArrayListRecipes() {
 		options.add(new ItemRecipeWithImage(R.drawable.ingrediente,"Por ingrediente"));
@@ -461,5 +573,111 @@ public class Fragment_Recipes extends Fragment {
 			}
 		}
 	
+		
+		//con mi despensa
+		private class GetIDRecipesPlusIngredientsByOneIngredient extends AsyncTask<String, Integer, ArrayList<String>>{
+			public Interface delegate=null;
+			ArrayList<String> resp=new ArrayList<String>();
+			HttpPost httppost1;
+			HttpPost httppost2;
+			HttpPost httppost3;
+			ItemProducto prod=null;
+			//String searchFilter;
 			
+			/*public GetIDRecipesPlusIngredientsByOneIngredient(ItemProducto itemProducto) {
+				// TODO Auto-generated constructor stub
+				if(itemProducto!=null){
+					prod=itemProducto;
+				}
+			}*/
+			@Override
+		    protected ArrayList<String> doInBackground(String... urls) {
+		    	
+				HttpClient httpclient = new DefaultHttpClient();
+				/*if (prod==null)
+					searchFilter=userInput.getText().toString().trim();
+				else
+					searchFilter=prod.getNombre();*/
+				//set the remote endpoint URL
+				httppost1 = new HttpPost("http://www.kitchapp.es/getIDRecipesPlusIngredientsByOneIngredient.php?");
+				httppost2 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesPlusIDImagesByOneIngredient.php?");
+				httppost3 = new HttpPost("http://www.kitchapp.es/getQuantityPlusUnitsByOneIngredient.php?");
+				/*try {
+					httppost1 = new HttpPost("http://www.kitchapp.es/getIDRecipesPlusIngredientsByOneIngredient.php?field_ingrediente_nombre_value="+URLEncoder.encode(searchFilter,"UTF-8"));
+					httppost2 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesPlusIDImagesByOneIngredient.php?field_ingrediente_nombre_value="+URLEncoder.encode(searchFilter,"UTF-8"));
+				} catch (UnsupportedEncodingException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}*/
+			    try {
+			        JSONObject json1 = new JSONObject();
+			        JSONObject json2 = new JSONObject();
+			        JSONObject json3 = new JSONObject();
+			        
+			        List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+			        String size=Integer.toString(products.size());
+			        pairs.add(new BasicNameValuePair("size", size));
+			        for(int i=0;i<products.size();i++){
+			        	pairs.add(new BasicNameValuePair(Integer.toString(i), products.get(i).getNombre()));
+			        }
+			        
+			        
+			        httppost1.setEntity(new UrlEncodedFormEntity(pairs));
+			        
+			        //add serialised JSON object into POST request
+			       /* StringEntity se1 = new StringEntity(json1.toString());
+			        StringEntity se2 = new StringEntity(json2.toString());*/
+			        //set request content type
+			        /*se1.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+			        httppost1.setEntity(se1);*/
+			        //se2.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+			        httppost2.setEntity(new UrlEncodedFormEntity(pairs));
+			        httppost3.setEntity(new UrlEncodedFormEntity(pairs));
+			        //send the POST request
+			        HttpResponse response1 = httpclient.execute(httppost1);
+			        HttpResponse response2 = httpclient.execute(httppost2);
+			        HttpResponse response3 = httpclient.execute(httppost3);
+			        //read the response from Services endpoint
+			        String jsonResponse1 = EntityUtils.toString(response1.getEntity());
+			        String jsonResponse2 = EntityUtils.toString(response2.getEntity());
+			        String jsonResponse3 = EntityUtils.toString(response3.getEntity());
+			        //jsonResponse2 = new String(jsonResponse2.getBytes("UTF-8"), "UTF-8");
+			        if (!jsonResponse1.equals("")){
+			        	//existRecipe=true;
+			        	resp.add(jsonResponse1);
+			        	resp.add(jsonResponse2);
+			        	resp.add(jsonResponse3);
+			        	//resp.add(searchFilter);
+			        }
+			        
+			        return resp;
+			    }catch (Exception e) {
+			        Log.v("Error adding article", e.getMessage());
+			    }
+			    return null;
+			}
+		
+			// onPostExecute displays the results of the AsyncTask.
+			@Override
+			protected void onPostExecute(ArrayList<String> result) {
+				String titlesTmp="";
+				String ids="";
+				String urlImage="";
+				ArrayList<String> resp=new ArrayList<String>();
+				resp=delegate.processFinish(result);
+				UnicodeUnescaper unescaper1     = new UnicodeUnescaper();  
+				titlesTmp=unescaper1.translate(resp.get(0));
+				ids=resp.get(1);
+				urlImage=resp.get(2);
+				ArrayList<String> bundle=new ArrayList<String>();
+				bundle.add(titlesTmp);
+				bundle.add(ids);
+				bundle.add(urlImage);
+				Intent intent = new Intent(getActivity(),ShowListRecipes.class);
+				intent.putStringArrayListExtra("pantry", bundle); 
+			    startActivity(intent);
+			}
+			
+		}
+		
 }
