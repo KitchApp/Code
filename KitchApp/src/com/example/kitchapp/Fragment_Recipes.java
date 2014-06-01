@@ -132,8 +132,8 @@ public class Fragment_Recipes extends Fragment implements Interface{
 	
 	public ArrayList<String> processFinish(ArrayList<String> output){
 		//En output se tiene la salida del onpostexecute de GetIDRecipesPlusIngredientsByOneIngredient
-		//El método devuelve un arraylist con un string con los titulos de las recetas, otro string con los ids de las recetas
-		//y otro string con las urls de las imagenes -->este resultado lo recoge el método onPostExecuto del hilo
+		//El mï¿½todo devuelve un arraylist con un string con los titulos de las recetas, otro string con los ids de las recetas
+		//y otro string con las urls de las imagenes -->este resultado lo recoge el mï¿½todo onPostExecuto del hilo
 		String keys="";
 		String urlImages="";
 		String titlesTmp="";
@@ -155,7 +155,7 @@ public class Fragment_Recipes extends Fragment implements Interface{
 		    	     UnicodeEscaper escaper = UnicodeEscaper.above(127);
 		    	     UnicodeUnescaper unescaper     = new UnicodeUnescaper();
 		    	  
-		    	     //String textoProblematico = "Música";
+		    	     //String textoProblematico = "Mï¿½sica";
 		    	  
 		    	     //String textoEscapado = escaper.translate(textoProblematico);
 		    	     // textoEscapado == "M\\u00FAsica", que se imprime como "M\u00FAsica"
@@ -555,11 +555,7 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			}
 		}
 	
-<<<<<<< HEAD
-}
-=======
-		
-		//con mi despensa
+		// (3) Busqueda con lo que hay en mi despensa
 		private class GetIDRecipesPlusIngredientsByOneIngredient extends AsyncTask<String, Integer, ArrayList<String>>{
 			public Interface delegate=null;
 			ArrayList<String> resp=new ArrayList<String>();
@@ -664,6 +660,4 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			}
 			
 		}
-		
 }
->>>>>>> Rama-Vivi-Android
