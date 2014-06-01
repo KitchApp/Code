@@ -137,7 +137,7 @@ public class Fragment_Recipes extends Fragment {
 		switch (position) {
 			case 0: userInput.setHint("Introduzca ingrediente");
 					break;
-			case 1: userInput.setHint("Introduzca nacionalidad");
+			case 1: userInput.setHint("Introduzca ");
 					break;
 			case 3: userInput.setHint("Introduzca ");
 					break;			
