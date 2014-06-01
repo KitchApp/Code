@@ -32,33 +32,6 @@ public class ItemProducto {
 	    this.units = units;
 	    //this.barCode=barCode;
 	  }
-<<<<<<< HEAD
-	  
-	  public int getCantidad() {
-		  return cantidad;
-	  }
-	  
-	  public void setCantidad(int cantidad) {
-		  this.cantidad = cantidad;
-	  }
-	
-	  public boolean isSelected() {
-		  return selected;
-	  }
-	  
-	  public void setSelected(boolean selected) {
-		  this.selected = selected;
-	  }
-	  
-	  public int getCategory() {
-		  return category;
-	  }
-	  
-	  public void setCategory(int category) {
-		  this.category = category;
-	  }
-	  
-=======
      
   /*public Item(long id, String nombre, String tipo, String rutaImagen) {
     this.id = id;
@@ -131,5 +104,4 @@ public class ItemProducto {
     this.tipo = tipo;
   }*/
   
->>>>>>> Rama-Vivi-Android
 }
