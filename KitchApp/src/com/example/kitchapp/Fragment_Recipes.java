@@ -14,12 +14,7 @@ import java.text.Normalizer.Form;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-
-
-
-
 import java.util.List;
-
 import org.apache.commons.lang3.text.translate.UnicodeEscaper;
 import org.apache.commons.lang3.text.translate.UnicodeUnescaper;
 import org.apache.http.HttpResponse;
@@ -35,7 +30,6 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 import org.json.JSONTokener;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -220,16 +214,6 @@ public class Fragment_Recipes extends Fragment {
 	    		adapterDiet.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 	    		spinnercategory.setAdapter(adapterDiet);
 	    		break;
-	    
-	    case 5: ArrayAdapter<CharSequence> adapterIntolerance = ArrayAdapter.createFromResource(context, R.array.intolerancias, android.R.layout.simple_spinner_item);	     
-	     		adapterIntolerance.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-	     		spinnercategory.setAdapter(adapterIntolerance);
-				break;
-	    
-	    case 6: ArrayAdapter<CharSequence> adapterTipoPlato = ArrayAdapter.createFromResource(context, R.array.tipoPlato, android.R.layout.simple_spinner_item);	     
-	    		adapterTipoPlato.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-	    		spinnercategory.setAdapter(adapterTipoPlato);
-	    		break;
 	    }
 	    	    
 	     spinnercategory.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -388,9 +372,6 @@ public class Fragment_Recipes extends Fragment {
 		}
 	}
 	
-<<<<<<< HEAD:KitchApp/src/com/example/kitchapp/Fragment_Recipes.java
-}
-=======
 	
 	// (2) Busqueda por Dieta
 		private class GetTitleImageByDiet extends AsyncTask<String, Integer, ArrayList<String>>{
@@ -454,16 +435,12 @@ public class Fragment_Recipes extends Fragment {
 			// onPostExecute displays the results of the AsyncTask.
 			@Override
 			protected void onPostExecute(ArrayList<String> result) {
-				//Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
-			    //apellido.setText(result);
 				//if(existRecipe){
 					Intent intent = new Intent(getActivity(),ShowListRecipes.class);
 					intent.putStringArrayListExtra("recipes", result);
-			    	startActivity(intent);
+				    	startActivity(intent);
 				//}	    		    
 			}
 		}
 	
-			
 }
->>>>>>> Rama-Vivi-Android:KitchApp_MostrarPorDietas/src/com/example/kitchapp/Fragment_Recipes.java
