@@ -16,16 +16,11 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.Mystyleactionbar" >
-<<<<<<< HEAD
-=======
 
         
         <!--  android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >-->
         
->>>>>>> Rama-Vivi-Android
 
-        <!--  android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >-->
-        
         <activity
             android:name="com.example.kitchapp.Login"
             android:label="@string/app_name">
