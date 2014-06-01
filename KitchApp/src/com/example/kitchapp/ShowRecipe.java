@@ -61,6 +61,12 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 	private ArrayList<ItemReceta> ingredients=new ArrayList<ItemReceta>();
 	private ArrayList<ItemReceta> units=new ArrayList<ItemReceta>();
 	
+	@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_recipes_favourites, menu);
+        return true;
+    }
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +92,26 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 		
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	        case R.id.favourite:
+	        	
+	        	SQLiteDatabase tmp = helper.open();
+	        	if(tmp!=null){
+	        		initializeStringIngredients();
+	        		initializeStringQuantities();
+	        		initializeArrayUnits();
+	        	    String[] num=numPersRef.getText().toString().split(" Personas");
+	        	    helper.addFavoriteRecipe(idRecipeBundle,titleBundle,imageBundle,Integer.parseInt(num[0]),nationalityRef.getText().toString(),ingred,quant,unit, preparationRef.getText().toString());
+	        	    Toast.makeText(getApplicationContext(), "Receta añadida a favoritos", Toast.LENGTH_LONG).show();
+	        	    //Log.i("ActionBar", "Nuevo!");
+	        	}
+	        	    return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	   }
+	}
 	
 	@Override
 	public void onClick(View v) {

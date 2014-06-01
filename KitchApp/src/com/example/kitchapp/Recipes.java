@@ -39,8 +39,6 @@ public class Recipes extends ActionBarActivity {
 	        extras1= this.getIntent().getExtras();
 			if(extras1!=null){
 				infoBundle=extras1.getStringArrayList("infoTopTen");
-				titlefavoriteBundle=extras1.getStringArrayList("titleFavorite");
-				imagesfavoriteBundle=extras1.getStringArrayList("imagesFavorite");
 			}
 	  
 	        adapter = new PagerAdapter(getSupportFragmentManager());
@@ -143,11 +141,5 @@ public class Recipes extends ActionBarActivity {
 	        }*/
 	    }
 		
-		public boolean onCreateOptionsMenu(Menu menu) {
-			// Inflate the menu; this adds items to the action bar if it is present.
-			MenuInflater inflater = getMenuInflater();
-			inflater.inflate(R.menu.action_bar_recipes, menu);
-			return super.onCreateOptionsMenu(menu);
-		}
-		
+				
 		}

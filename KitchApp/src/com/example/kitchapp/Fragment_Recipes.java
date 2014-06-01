@@ -100,17 +100,18 @@ public class Fragment_Recipes extends Fragment {
 		        case 0: open_Dialog(position);
 		        		break;
 
-		               }
+		        // Recetas por Nacionalidad		        		
+		        case 1: open_Dialog(position);
+		        		break;
+		        
+		         }
 		    }
 		});
 		
 		return rootView;	
 	}	
 	
-	
-	
-	
-	
+		
 	
 	private void initializeArrayListRecipes() {
 		options.add(new ItemRecipeWithImage(R.drawable.ingrediente,"Por ingrediente"));
@@ -122,7 +123,7 @@ public class Fragment_Recipes extends Fragment {
 		options.add(new ItemRecipeWithImage(R.drawable.tipoplato,"Tipo de plato"));		
 	}
 	
-
+	
 	public void open_Dialog(final int position) {
 
 		LayoutInflater li = LayoutInflater.from(getActivity());
@@ -150,6 +151,8 @@ public class Fragment_Recipes extends Fragment {
 					    	case 0: new GetTitleImageByIngredient().execute();			    
 					    			break;
 					    			
+					    	case 1: new GetTitleImageByNationality().execute();
+					    			break;
 					    	}
 					    	
 					    	//resto de opciones
@@ -169,6 +172,7 @@ public class Fragment_Recipes extends Fragment {
 		alertDialog.show();
 	}
 	
+
 	
 	// (0) Busqueda por Ingrediente.
 	private class GetTitleImageByIngredient extends AsyncTask<String, Integer, ArrayList<String>>{
@@ -240,7 +244,81 @@ public class Fragment_Recipes extends Fragment {
 			//}	    		    
 		}
 	}
-
-
+			
+	// (1) Busqueda por nacionalidad
+	private class GetTitleImageByNationality extends AsyncTask<String, Integer, ArrayList<String>>{
 	
+		ArrayList<String> resp=new ArrayList<String>();
+		HttpPost httppost3;
+		HttpPost httppost4;
+		@Override
+		protected ArrayList<String> doInBackground(String... urls) {
+		    	
+			HttpClient httpclient = new DefaultHttpClient();
+			String searchFilter=userInput.getText().toString().trim();
+		    //set the remote endpoint URL
+			if (searchFilter.equals("Española") || searchFilter.equals("española"))
+				searchFilter="Espanola";
+			    
+			try{
+				httppost3 = new HttpPost("http://www.kitchapp.es/getTitleByNationality.php?name="+URLEncoder.encode(searchFilter,"UTF-8"));
+				httppost4 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesImagesByNationality.php?name="+URLEncoder.encode(searchFilter,"UTF-8"));	
+			} catch (UnsupportedEncodingException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+				
+		    try {
+			
+		        JSONObject json3 = new JSONObject();
+		        JSONObject json4 = new JSONObject();
+		        //add serialised JSON object into POST request
+		        StringEntity se3 = new StringEntity(json3.toString());
+		        StringEntity se4 = new StringEntity(json4.toString());
+		        //set request content type
+		        se3.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+		        httppost3.setEntity(se3);
+		        se4.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+		        httppost4.setEntity(se4);
+					
+		        //send the POST request
+		        HttpResponse response3 = httpclient.execute(httppost3);
+		        HttpResponse response4 = httpclient.execute(httppost4);
+			
+		        //read the response from Services endpoint
+		        String jsonResponse3 = EntityUtils.toString(response3.getEntity());
+		        String jsonResponse4 = EntityUtils.toString(response4.getEntity());
+		        //if (!jsonResponse3.equals("")){
+		        	//existRecipe=true;
+		        	resp.add(jsonResponse3);
+		        	resp.add(jsonResponse4);
+		        	resp.add(searchFilter);
+		        //}
+		        return resp;		        
+			
+		    }catch (Exception e) {
+		        Log.v("Error adding article", e.getMessage());
+		    }
+			
+		    return null;
+		}
+		
+		// onPostExecute displays the results of the AsyncTask.
+		@Override
+		protected void onPostExecute(ArrayList<String> result) {
+			//Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+		    //apellido.setText(result);
+			//if(existRecipe){
+				Intent intent = new Intent(getActivity(),ShowListRecipes.class);				
+				intent.putStringArrayListExtra("recipes", result);
+		    	startActivity(intent);
+			//}				
+		}
+	}
+	
+<<<<<<< HEAD
 }
+=======
+			
+}
+>>>>>>> Rama-Vivi-Android
