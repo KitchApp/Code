@@ -50,3 +50,17 @@ public class ItemAdapter extends ArrayAdapter<String> {
 	}
 
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+ 
+ 
+>>>>>>> Rama-Vivi-Android

@@ -28,15 +28,19 @@ public class Recipes extends ActionBarActivity {
 	private PagerAdapter adapter;
 	private ViewPagerListener pageListener;
 	private static ArrayList<String> infoBundle;
+	private static ArrayList<String> titlefavoriteBundle;
+	private static ArrayList<String> imagesfavoriteBundle;
+	private Bundle extras1=new Bundle();
 	
 		protected void onCreate(Bundle arg0) {
 	        super.onCreate(arg0);
 	        setContentView(R.layout.activity_recipes_viewpager);
 	        
-	        Bundle extras1= this.getIntent().getExtras();
+	        extras1= this.getIntent().getExtras();
 			if(extras1!=null){
 				infoBundle=extras1.getStringArrayList("infoTopTen");
-				
+				titlefavoriteBundle=extras1.getStringArrayList("titleFavorite");
+				imagesfavoriteBundle=extras1.getStringArrayList("imagesFavorite");
 			}
 	  
 	        adapter = new PagerAdapter(getSupportFragmentManager());
@@ -60,16 +64,14 @@ public class Recipes extends ActionBarActivity {
 		            case 0:
 		            	return Fragment_TopTen.newInstance(infoBundle);
 		            case 1:
-		                //return new Fragment_Recipes();
-		            case 2:
-		                //return new Fragment_Favorites();
+		                return new Fragment_Recipes();
 		            default:
 		            	return null;
 				}
 			}
 	
 			public int getCount() {
-				return 1;
+				return 2;
 			}
 			
 			public CharSequence getPageTitle(int position) {
@@ -113,6 +115,10 @@ public class Recipes extends ActionBarActivity {
 	            public void onTabSelected(Tab tab, FragmentTransaction arg1) {
 	               /* if(adapter == null)
 	                    setPagerAdapter();*/
+	            	infoBundle=extras1.getStringArrayList("infoTopTen");
+    				titlefavoriteBundle=extras1.getStringArrayList("titleFavorite");
+    				imagesfavoriteBundle=extras1.getStringArrayList("imagesFavorite");
+    			
 	                if (mViewPager.getCurrentItem() != tab.getPosition())
 	                    mViewPager.setCurrentItem(tab.getPosition());
 	 
@@ -120,6 +126,8 @@ public class Recipes extends ActionBarActivity {
 	 
 	            @Override
 	            public void onTabReselected(Tab tab, FragmentTransaction arg1) {
+	            		
+	            	
 	            }
 	        };
 	        for (int i = 0; i < 3; i++) {
@@ -135,4 +143,15 @@ public class Recipes extends ActionBarActivity {
 	        }*/
 	    }
 		
+<<<<<<< HEAD
 }
+=======
+		public boolean onCreateOptionsMenu(Menu menu) {
+			// Inflate the menu; this adds items to the action bar if it is present.
+			MenuInflater inflater = getMenuInflater();
+			inflater.inflate(R.menu.action_bar_recipes, menu);
+			return super.onCreateOptionsMenu(menu);
+		}
+		
+		}
+>>>>>>> Rama-Vivi-Android

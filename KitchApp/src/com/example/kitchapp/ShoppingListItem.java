@@ -25,4 +25,5 @@ public class ShoppingListItem {
 		this.checked = checked;
 	}
 
+	
 }

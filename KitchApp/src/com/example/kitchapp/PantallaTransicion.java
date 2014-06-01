@@ -1,26 +1,29 @@
 package com.example.kitchapp;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.Menu;
 import android.view.View;
+=======
+import android.view.Window;
+>>>>>>> Rama-Vivi-Android
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 public class PantallaTransicion extends Activity {
-	
-	private ProgressDialog pDialog;	
+
 	private AccesoBBDD tarea;
 	private ProgressBar barra;
+	public static final String PREFS_NAME = "MyPrefsFile";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_pantalla_transicion);
+<<<<<<< HEAD
 		
 		/*pDialog = new ProgressDialog(PantallaTransicion.this);
         	pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -31,14 +34,20 @@ public class PantallaTransicion extends Activity {
 		barra=(ProgressBar)findViewById(R.id.progressBar1);
 	        tarea = new AccesoBBDD();
         	tarea.execute();
+=======
+		barra = (ProgressBar) findViewById(R.id.progressBar1);
+		tarea = new AccesoBBDD();
+		tarea.execute();
+>>>>>>> Rama-Vivi-Android
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	private void tareaLarga() {
+		try {
+			Thread.sleep(300);
+		} catch (InterruptedException e) {
+		}
 	}
+<<<<<<< HEAD
 	
 		
 	
@@ -49,19 +58,18 @@ public class PantallaTransicion extends Activity {
     	}
 	
 	public class AccesoBBDD extends AsyncTask<Void,Integer,Boolean>{
+=======
+>>>>>>> Rama-Vivi-Android
+
+	public class AccesoBBDD extends AsyncTask<Void, Integer, Boolean> {
 
 		@Override
-			protected Boolean doInBackground(Void... params) {
-
-				// TODO Auto-generated method stub
-				for(int i=1; i<=10; i++) {
-					tareaLarga();
-					publishProgress(i*10);
-					/*if(isCancelled())
-						break;*/
-				}
-				return true;
+		protected Boolean doInBackground(Void... params) {
+			for (int i = 1; i <= 10; i++) {
+				tareaLarga();
+				publishProgress(i * 10);
 			}
+<<<<<<< HEAD
 			
 			
 			@Override
@@ -103,6 +111,32 @@ public class PantallaTransicion extends Activity {
             protected void onCancelled() {
                     Toast.makeText(PantallaTransicion.this, "Tarea cancelada!", Toast.LENGTH_SHORT).show();
             }*/
+=======
+			return true;
+		}
+
+		@Override
+		protected void onProgressUpdate(Integer... values) {
+			int progreso = values[0].intValue();
+			barra.setProgress(progreso);
+		}
+
+		protected void onPreExecute() {
+			barra.setMax(100);
+			barra.setProgress(0);
+
+		}
+
+		@Override
+		protected void onPostExecute(Boolean result) {
+			if (result) {
+				Intent i = new Intent(PantallaTransicion.this,
+						PantallaPrincipal.class);
+				startActivity(i);
+				finish();
+			}
+		}
+>>>>>>> Rama-Vivi-Android
 	}
 
 }

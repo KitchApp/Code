@@ -6,10 +6,10 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.ActionBarActivity;
@@ -27,12 +27,14 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class MostrarProductosCategoria extends ActionBarActivity  implements OnClickListener {
+
+public class MostrarProductosCategoria extends ActionBarActivity implements OnClickListener {
 	
     private ListView list;
     private ArrayList<ItemProducto> products;
@@ -45,17 +47,22 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
     private Button cancel;
     private Button decrement;
     private Button increment;
-    private int cantFinal;
+    private Button accept;
+    private Button cancelUnits;
+    private Spinner unitsProduct;
+    private String units;
+    private String productName;
+    private int productCant;
+    private String productBarcode;
+    private boolean addVoice;
     private AlertDialog.Builder builder;
     private Integer tipoCat;
     private static final int REQUEST_CODE = 1234;
     Handler_Sqlite helper;
-
 	Dialog match_text_dialog;
 	ListView textlist;
 	ArrayList<String> matches_text;
-	private boolean barCode = false;
-
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -121,72 +128,27 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				case 12:
 					title.setText("Varios");
 					break;	
+
 			}
 		}
 			
-	//helper.close();						
-		/*Bundle extra = this.getIntent().getExtras();
-		
-		if (extra!=null && extra.getInt("key") != 0) {
-			int key = extra.getInt("key");
-			if (key == 1) {
-				//initializeArrayList(tipoCat);
-				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"),1,false);
-				boolean encontrado = false;
-				int i = 0;
-				int cantProductModify = 0;
-				while (i<products.size() && !encontrado){
-					ItemProducto prod = products.get(i);
-					String name = prod.getNombre().toLowerCase();
-					if (name.equals(item.getNombre().toLowerCase())) {
-						encontrado = true;
-						cantProductModify = prod.getCantidad() + item.getCantidad();
-					}
-					i++;
-				}
-				if (!encontrado) {
-					products.add(item);
-					SQLiteDatabase tmp1 = helper.open();	
-					if (tmp1!=null){
-						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"","insertPantry",1);
-						helper.close();
-					}					
-				}
-				else {
-					modifyProduct();
-					products.get(i-1).setCantidad(cantProductModify);
-					SQLiteDatabase tmc = helper.open();	
-					if (tmc!=null){
-						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
-						helper.close();
-					}					
-				}
-			}
-
-		}*/
-		
-		/*TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
-		link_atras.setOnClickListener(this);*/
-		/*Button button_add=(Button)findViewById(R.id.button_add);
-		button_add.setOnClickListener(this);*/
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
-		adapter = new ItemProductoAdapter(this, products);
+		adapter = new ItemProductoAdapter(this,products);
 		// Asignamos el Adapter al ListView, en este punto hacemos que el
 		// ListView muestre los datos que queremos.
 		list.setAdapter(adapter);
-		//setContentView(R.layout.activity_mostrar_productos_categoria);
 		list.setOnItemClickListener(new OnItemClickListener(){
 			 
 		    @Override
 		    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
 		        // TODO Auto-generated method stub
-		        //Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
 		        
-		        	cantFinal = products.get(position).getCantidad();
-		        	modificarProducto(arg1,position);		 
-		    }		 
+		        	modificarProducto(arg1,position);
+		 
+		    }
+		 
 		}); 
 	}
 
@@ -194,15 +156,22 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
-	        inflater.inflate(R.menu.menu_action_bar, menu);
-        	item_add = menu.findItem(R.id.add_Product);
-        	return super.onCreateOptionsMenu(menu);        
+        inflater.inflate(R.menu.menu_action_bar, menu);
+        item_add = menu.findItem(R.id.add_Product);
+        return super.onCreateOptionsMenu(menu);
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
 		switch (item.getItemId()) {
+		
+			case R.id.home:
+				Intent intent = new Intent(this, PantallaPrincipal.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+				return true;
+			
 			case R.id.add_Product:
 				alertDialogListView(true,0);
 				return true;
@@ -221,13 +190,27 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				}
 				return true;
 				
+			case R.id.logout:
+				SharedPreferences settings = getSharedPreferences(PantallaTransicion.PREFS_NAME, 0);
+				SharedPreferences.Editor editor = settings.edit();
+		
+				editor.putBoolean("hasLoggedIn", false);
+				editor.commit();
+		
+				Intent j = new Intent(this, Login.class);
+				j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(j);
+				finish();
+				return true;
+				
 			default:
 				return super.onOptionsItemSelected(item);
 		}
+		
 	}
-
-	public void modificarProducto(View view, int position) {
-
+	
+	public void modificarProducto(View view,int position) {
+		
 		builder = new AlertDialog.Builder(this);
 		 
         // Get the layout inflater
@@ -251,9 +234,11 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
     	increment = (Button) view.findViewById(R.id.button_increment);
     	increment.setOnClickListener(this);
         builder.setView(view);
-                        
+                
+        
         builder.create();
-        builder.show(); 
+        builder.show();
+ 
 	}
 
 	@Override
@@ -268,25 +253,22 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				products.set(pos,prod);
 				SQLiteDatabase tmp = helper.open();
 				if (tmp != null) {
-					helper.updateProduct(nameLast,prod.getNombre(),prod.getCantidad());
+					helper.updateProduct(nameLast,prod.getNombre(),prod.getCantidad(),"updatePantry",1);
 					helper.close();
 				}
 				Intent j = new Intent(this,MostrarProductosCategoria.class);
 				j.putExtra("idCat",tipoCat);
 				startActivity(j);
+				finish();
 				
 				break;
 			
 			case R.id.button_cancel:
-            			Intent i = new Intent(this,MostrarProductosCategoria.class);
-            			i.putExtra("idCat",tipoCat);
+            	Intent i = new Intent(this,MostrarProductosCategoria.class);
+            	i.putExtra("idCat",tipoCat);
 				startActivity(i);
+				finish();
 				break;
-			
-			/*case R.id.textView_Atras:
-				Intent j = new Intent(this,AccesoDespensa.class);
-				startActivity(j);
-				break;*/
 				
 			case R.id.button_decrement:
 				decrementCant(v);
@@ -296,42 +278,59 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 				incrementCant(v);
 				break;
 				
-			/*case R.id.button_add:
-				alertDialogListView(true,0);
-				break;*/
+			case R.id.button_acceptPantry:
+				String unit = "";
+	 			if (units.equals("Litros")) {
+					unit = "l";
+				}
+				else if (units.equals("Mililitros")) {
+					unit = "ml";
+				}
+				else if (units.equals("Kilos")) {
+					unit = "kg";
+				}
+				else if (units.equals("Gramos")) {
+					unit = "gr";
+				}
+				else if (units.equals("Unidades")) {
+					unit = "unid";
+				}
+	 			addProductPantry(unit);
+				break;
+			
+			case R.id.buttonCancelPantry:
+				Intent intent = new Intent(this,MostrarProductosCategoria.class);
+				intent.putExtra("idCat",tipoCat);
+				startActivity(intent);
+				finish();
+				break;
+				
+				
 		}
+            	
+				
 	}
-
+	
 	private void initializeArrayList(Integer category) {
-
+	
 		products=helper.readProducts(category,"readPantry");
 		
-		/*products.add(new ItemProducto(1,helper.read()[1],4,""));
-		products.add(new ItemProducto(2,helper.read()[2],3,""));
-		products.add(new ItemProducto(3,helper.read()[4],4,""));
-		products.add(new ItemProducto(4,"Natillas Chocolate Danone",2,""));
-		products.add(new ItemProducto(5,"Queso Semicurado El Ventero",1,""));*/
-		
 	}
-
+	
 	public void decrementCant(View view) {
-		/*cantProduct = (TextView) view.findViewById(R.id.cantProduct);
-		int cant = Integer.parseInt(cantProduct.getText().toString());
-		int cantModified = cant--;
-		cantProduct.setText(cantModified + "");*/
 		
 		if (Integer.parseInt(cantProduct.getText().toString()) > 0) {
 	        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())-1 + "");
-		}
-	}
 
-	public void incrementCant(View view) {
-		/*cantProduct = (TextView) view.findViewById(R.id.cantProduct);
-		int cant = Integer.parseInt(cantProduct.getText().toString());
-		int cantModified = cant--;
-		cantProduct.setText(cantModified + "");*/
+		}
 		
-        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");	
+	}
+	
+	public void incrementCant(View view) {
+		
+        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
+
+		
 	}
 	
 	public void modifyProduct() {
@@ -366,11 +365,14 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		        		if (item==0)
 		        			addManualmente();
 		        		else if (item == 1) {
+		        			addVoice = true;
 		        			addVoice();
 		        		}
 		        		else if(item==2){
+		        			addVoice = false;
 		        			addBarCode();
-		        		}	        			
+		        		}
+	        			
 		        }
 		    }).show();
 	    }
@@ -382,9 +384,12 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 	    	    
 	    		new AlertDialog.Builder(this).setAdapter(adapter, new DialogInterface.OnClickListener() {
 		        	public void onClick(DialogInterface dialog, int item ) {
-			        		if (item==0)
+			        		if (item==0) {
+			        			addVoice = true;
 			        			addVoice();
+			        		}
 			        		else if (item == 1) {
+			        			addVoice = false;
 			        			addBarCode();
 			        		}        			
 			        }
@@ -400,6 +405,7 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 			        		if (item==0)
 			        			addManualmente();
 			        		else if (item == 1) {
+			        			addVoice = false;
 			        			addBarCode();
 			        		}        			
 			        }
@@ -415,120 +421,102 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 			        		if (item==0)
 			        			addManualmente();
 			        		else if (item == 1) {
+			        			addVoice = true;
 			        			addVoice();
 			        		}        			
 			        }
 			    }).show();
 	    	}
 	    }
-	}
 
+	}
+	
+	
 	public void addManualmente() {
-		Intent intent = new Intent(this, AddManualmente.class);
-		intent.putExtra("idCat", tipoCat);
-		startActivity(intent);
-	}
-
+		  Intent intent = new Intent(this,AddManualmente.class);
+		  intent.putExtra("idCat",tipoCat);
+		  startActivity(intent);
+		  finish();
+	  }
+	
 	public void addVoice() {
-		if (isConnected()) {
-			Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-			intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-					RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-			startActivityForResult(intent, REQUEST_CODE);
-		} else {
-			Toast.makeText(getApplicationContext(),
-					"Please Connect to Internet", Toast.LENGTH_LONG).show();
-		}
+		if(isConnected()){
+       	 Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        	 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+        	 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        	 startActivityForResult(intent, REQUEST_CODE);
+       			 }
+       	else{
+       		Toast.makeText(getApplicationContext(), "Please Connect to Internet", Toast.LENGTH_LONG).show();
+       	}
 	}
-
-	public void addBarCode() {
+	
+	public void addBarCode(){
 		IntentIntegrator scanIntegrator = new IntentIntegrator(this);
+
 		scanIntegrator.initiateScan();
 	}
 	
 	public boolean isConnected() {
 		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo net = cm.getActiveNetworkInfo();
-		if (net != null && net.isAvailable() && net.isConnected()) {
-			return true;
-		} else {
-			return false;
-		}
+	    NetworkInfo net = cm.getActiveNetworkInfo();
+	    if (net!=null && net.isAvailable() && net.isConnected()) {
+	        return true;
+	    } else {
+	        return false; 
+	    }
 	}
-
+	
 	@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-     if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+		if (addVoice) {
+			if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
     	    
-     match_text_dialog = new Dialog(MostrarProductosCategoria.this);
-     match_text_dialog.setContentView(R.layout.dialog_matches);
-     match_text_dialog.setTitle("Select Matching Text");
-     textlist = (ListView)match_text_dialog.findViewById(R.id.listDialogVoice);
-     matches_text = data
-		     .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-     ArrayAdapter<String> adapter =    new ArrayAdapter<String>(this,
-    	     android.R.layout.simple_list_item_1, matches_text);
-     textlist.setAdapter(adapter);
-     textlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-     @Override
-     public void onItemClick(AdapterView<?> parent, View view,
+				match_text_dialog = new Dialog(MostrarProductosCategoria.this);
+				match_text_dialog.setContentView(R.layout.dialog_matches);
+				match_text_dialog.setTitle("Select Matching Text");
+				textlist = (ListView)match_text_dialog.findViewById(R.id.listDialogVoice);
+				matches_text = data
+						.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+				ArrayAdapter<String> adapter =    new ArrayAdapter<String>(this,
+						android.R.layout.simple_list_item_1, matches_text);
+				textlist.setAdapter(adapter);
+				textlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+					@Override
+					public void onItemClick(AdapterView<?> parent, View view,
                              int position, long id) {
     	 
-    	 match_text_dialog.hide();
-    	 addProduct(position);
-     }
-     });
+						match_text_dialog.hide();
+						addProduct(position);
+					}
+				});
      
-     match_text_dialog.show();
+				match_text_dialog.show();
      
-     }
-     super.onActivityResult(requestCode, resultCode, data);
-     
-   //BarCode		
-		
-   		IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+			}
+			super.onActivityResult(requestCode, resultCode, data);
+		}
+		else {
+			IntentResult scanningResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+			if (scanningResult != null )
+				addProductBarCode(scanningResult.getContents());
+			else {
+				Toast toast = Toast.makeText(getApplicationContext(), 
+	   		        "No scan data received!", Toast.LENGTH_SHORT);
+	   		    toast.show();
+			}
+		}
    		
-   		if (scanningResult != null ) {
-   			//we have a result
-   			String result=scanningResult.getContents();
-   			if (!helper.exist(result,"products")){
-   				if (!helper.exist(result,"productsTemporary")){
-   					alertDialogReport("Producto no existente");
-   					//alertDialogListView(false,3);   					
-   				}
-   				else{
-   					ArrayList<Object> tmp=helper.readProductsTemporary(result);
-   					helper.insertProducts((String)tmp.get(0), 1, tipoCat,(String)tmp.get(1),"insertPantry",1);
-   					//Para que se refresque la informaciï¿½n en la pantalla
-   					ItemProducto item = new ItemProducto(products.size(),(String)tmp.get(0),1,1,false);
-   					products.add(item);
-   					list = (ListView)findViewById(R.id.listViewProducts);
-   					ItemProductoAdapter adapter;
-   					// Inicializamos el adapter.
-   					adapter = new ItemProductoAdapter(this,products);
-   					// Asignamos el Adapter al ListView, en este punto hacemos que el
-   					// ListView muestre los datos que queremos.
-   					list.setAdapter(adapter);   					
-   				}   				
-   			}
-   			else{
-   				Toast.makeText(this,"Producto ya existente",Toast.LENGTH_SHORT).show();
-   			}   			   			
-   		}
-   		else{
-   		    Toast toast = Toast.makeText(getApplicationContext(), 
-   		        "No scan data received!", Toast.LENGTH_SHORT);
-   		    toast.show();
-   		}   		  
-   		//fin BarCode   		          
+     
+
     }
 	
 	
 	public void alertDialogReport(String msj) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	   // builder.setTitle("Error")
-	           builder.setIcon(
+	    builder.setTitle("Error")
+	           .setIcon(
 	                    getResources().getDrawable(
 	                            R.drawable.close))
 	            .setMessage(msj)
@@ -536,7 +524,6 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 	 
 	                @Override
 	                public void onClick(DialogInterface arg0, int arg1) {
-	                	//arg0.cancel();
 	                	alertDialogListView(false,3);
 	                }
 	            });
@@ -548,20 +535,19 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 	
 	public void addProduct(int position) {
 		String[] prod = matches_text.get(position).split(" ");
-	 	String name = "";
+	 	productName = "";
 	 	String oneCantM = "un";
 	 	String oneCantF = "una";
-	 	int cant = 0;
+	 	productCant = 0;
 	 	boolean error = false;
-			//Intent intent = new Intent(this,MostrarProductosCategoria.class);
    	 	for (int i = 0;i < prod.length;i++) {
-   	 			if (cant == 0) {
+   	 			if (productCant == 0) {
    	 				if ((prod[i].equals(oneCantM)) || (prod[i].equals(oneCantF))) {
-						cant = 1;
+   	 					productCant = 1;
    	 				}
    	 				else {
    	 					try {
-   	 						cant = Integer.parseInt(prod[i]);
+   	 						productCant = Integer.parseInt(prod[i]);
    	 					}
    	 					catch (NumberFormatException e) {
    	 						if (i == prod.length-1) {
@@ -569,61 +555,24 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
    	 							error = true;
    	 						}
    	 						else {
-   	 							name += prod[i];
-   	 							name += " ";
+   	 							productName += prod[i];
+   	 							productName += " ";
    	 						}
    	 					}
    	 				}
    	 			}
    	 			else {
-   	 				name += prod[i];
-					name += " ";
+   	 				productName += prod[i];
+   	 				productName += " ";
    	 			}
    	 			
    	 		}
    	 		if (!error) {
-   	 			if (cant <= 0) {
+   	 			if (productCant <= 0) {
    	 				errorCantVoice();
    	 			}
    	 			else {
-   	 				initializeArrayList(tipoCat);
-   	 				ItemProducto item = new ItemProducto(products.size(),name,cant,1,false);
-   	 				boolean encontrado = false;
-   	 				int i = 0;
-   	 				int cantProductModify = 0;
-   	 				while (i<products.size() && !encontrado){
-   	 					ItemProducto product = products.get(i);
-   	 					String nameP = product.getNombre().toLowerCase();
-   	 					if (nameP.equals(item.getNombre().toLowerCase())) {
-   	 						encontrado = true;
-   	 						cantProductModify = product.getCantidad() + item.getCantidad();
-   	 					}
-   	 					i++;
-   	 				}
-   	 				if (!encontrado) {
-   	 					products.add(item);
-   	 					SQLiteDatabase tmp = helper.open();	
-   	 					if (tmp!=null){
-   	 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"","insertPantry",1);
-   	 						helper.close();
-   	 					}
-			
-   	 				}
-   	 				else {
-   	 					modifyProduct();
-   	 					products.get(i-1).setCantidad(cantProductModify);
-   	 					SQLiteDatabase tmp = helper.open();
-   	 					if (tmp!=null) {
-   	 						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
-   	 						helper.close();
-   	 					}
-   	 				}
-   	 	
-		/*Intent intent = new Intent(this,MostrarProductosCategoria.class);
-		startActivity(intent);*/
-   	 				list = (ListView) findViewById(R.id.listViewProducts);
-   	 				ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
-   	 				list.setAdapter(adapter);
+   	 				selectUnits();
    	 			}
    	 		}
 		
@@ -664,10 +613,9 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 			check.setVisibility(View.INVISIBLE);
 		}
 	}
-
+	
 	public void deleteProducts() {
 		for (int i=0;i<products.size();i++) {
-
 			ItemProducto item = products.get(i);
 			if (item.isSelected()) {
 				products.remove(i);
@@ -682,6 +630,116 @@ public class MostrarProductosCategoria extends ActionBarActivity  implements OnC
 		list = (ListView) findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
 		list.setAdapter(adapter);
+	}
+	
+	public void selectUnits() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		 
+        // Get the layout inflater
+        LayoutInflater inflater = this.getLayoutInflater();
+ 
+        // Inflate and set the layout for the dialog
+        // Pass null as the parent view because its going in the dialog layout
+
+        View view = inflater.inflate(R.layout.activity_select_units, null);
+    	
+    	unitsProduct = (Spinner) view.findViewById(R.id.spinnerUnitsPantry);
+    	ArrayAdapter<CharSequence> adapterUnits = ArrayAdapter.createFromResource(this, R.array.Unidades, android.R.layout.simple_spinner_item);
+    	adapterUnits.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    	unitsProduct.setAdapter(adapterUnits);
+    	unitsProduct.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+    		
+    		public void onItemSelected (AdapterView<?> parent,
+            android.view.View v, int position, long id) {
+                units = unitsProduct.getItemAtPosition(position).toString();
+    		}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+    	
+        accept = (Button) view.findViewById(R.id.button_acceptPantry);
+    	accept.setOnClickListener(this);
+    	cancelUnits = (Button) view.findViewById(R.id.buttonCancelPantry);
+    	cancelUnits.setOnClickListener(this);
+    	
+        builder.setView(view);
+                
+        
+        builder.create();
+        builder.show();
+	}
+	
+	public void addProductPantry(String unit) {
+		if (addVoice) {
+			ItemProducto item = new ItemProducto(products.size(),productName,productCant,tipoCat,unit,false);
+			boolean encontrado = false;
+			int i = 0;
+			int cantProductModify = 0;
+			while (i<products.size() && !encontrado){
+				ItemProducto product = products.get(i);
+				String nameP = product.getNombre().toLowerCase();
+				if (nameP.equals(item.getNombre().toLowerCase())) {
+					encontrado = true;
+					cantProductModify = product.getCantidad() + item.getCantidad();
+				}
+				i++;
+			}
+			if (!encontrado) {
+				products.add(item);
+				SQLiteDatabase tmp = helper.open();	
+				if (tmp!=null){
+					helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,unit,"","insertPantry",1);
+					helper.close();
+				}
+
+			}
+			else {
+				modifyProduct();
+				products.get(i-1).setCantidad(cantProductModify);
+				SQLiteDatabase tmp = helper.open();
+				if (tmp!=null) {
+					helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify,"updatePantry",1);
+					helper.close();
+				}
+			}
+		}
+		else {
+			ItemProducto item = new ItemProducto(products.size(),productName,1,tipoCat,unit,false);
+			products.add(item);
+			SQLiteDatabase tmp = helper.open();
+			if (tmp!=null) {
+				helper.insertProducts(productName, 1, tipoCat,unit,productBarcode,"insertPantry",1);
+				helper.close();
+			}
+		}
+		Intent intent = new Intent(this,MostrarProductosCategoria.class);
+		intent.putExtra("idCat", tipoCat);
+		startActivity(intent);
+		finish();
+	}
+	
+	public void addProductBarCode(String barcode) {
+		if (!helper.exist(barcode,"products")){
+   			if (!helper.exist(barcode,"productsTemporary")){
+   				alertDialogReport("Producto no existente");
+   			}
+   			else{
+   					
+   				ArrayList<Object> tmp=helper.readProductsTemporary(barcode);
+   				productName = (String)tmp.get(0);
+   				productBarcode = (String)tmp.get(1);
+   				selectUnits();
+   					
+   			}
+		}
+   		else{
+   			Toast.makeText(this,"Producto ya existente",Toast.LENGTH_SHORT).show();
+   		}
+			
 	}
 
 }

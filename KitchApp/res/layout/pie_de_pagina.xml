@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <bitmap 
+<<<<<<< HEAD
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:src="@drawable/fondo_pie_pagina" />
+=======
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:src="@drawable/fondo_pie_pagina" />
+   
+>>>>>>> Rama-Vivi-Android

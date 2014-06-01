@@ -60,6 +60,7 @@
 		           	android:layout_marginLeft="10dp"
 		            	android:layout_marginRight="10dp" >
 						    
+<<<<<<< HEAD
 			    	<Button
 				        android:id="@+id/button2"
 				        android:layout_width="0dp"
@@ -71,6 +72,19 @@
 					android:text="@string/despensa" 
 					android:gravity="center"
 					android:textSize="20sp" />
+=======
+						    <Button
+							        android:id="@+id/button2"
+							        android:layout_width="0dp"
+					    	        android:layout_height="wrap_content"
+					    	        android:layout_weight="1"      
+					            	android:textColor="@color/white" 
+									android:background="@color/darkGray"     		        
+									android:drawableRight="@drawable/despensa1"		        		             
+									android:text="@string/despensa" 
+									android:gravity="center"
+									android:textSize="20sp" />
+>>>>>>> Rama-Vivi-Android
 							
 			</LinearLayout>
 					
