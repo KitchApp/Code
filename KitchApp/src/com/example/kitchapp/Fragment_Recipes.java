@@ -138,7 +138,7 @@ public class Fragment_Recipes extends Fragment {
 		switch (position) {
 			case 0: userInput.setHint("Introduzca ingrediente");
 					break;
-			case 1: userInput.setHint("Introduzca ");
+			case 1: userInput.setHint("Introduzca nacionalidad");
 					break;
 			case 3: userInput.setHint("Introduzca ");
 					break;			
@@ -257,7 +257,7 @@ public class Fragment_Recipes extends Fragment {
 			HttpClient httpclient = new DefaultHttpClient();
 			String searchFilter=userInput.getText().toString().trim();
 		    //set the remote endpoint URL
-			if (searchFilter.equals("Española") || searchFilter.equals("española"))
+			if (searchFilter.equals("EspaÃ±ola") || searchFilter.equals("espaÃ±ola"))
 				searchFilter="Espanola";
 			    
 			try{
@@ -316,9 +316,4 @@ public class Fragment_Recipes extends Fragment {
 		}
 	}
 	
-<<<<<<< HEAD
 }
-=======
-			
-}
->>>>>>> Rama-Vivi-Android
