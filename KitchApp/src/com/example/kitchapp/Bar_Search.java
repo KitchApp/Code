@@ -1,13 +1,10 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
+
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-<<<<<<< HEAD
-import android.app.Activity;
-=======
 
->>>>>>> Rama-Vivi-Android
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
