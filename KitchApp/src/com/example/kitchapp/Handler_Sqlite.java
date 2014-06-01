@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -12,6 +13,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import static android.provider.BaseColumns._ID;
+
 
 public class Handler_Sqlite extends SQLiteOpenHelper{
 
@@ -92,8 +94,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		onCreate(db);
 	}
 	
-<<<<<<< HEAD
-=======
 	public ArrayList<ItemProducto> readAllProductsPantry(){
 		
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
@@ -118,7 +118,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		return result;
 	}
 	
->>>>>>> Rama-Vivi-Android
 	public ArrayList<ItemProducto> readProducts(Integer key,String option){
 		
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
@@ -293,6 +292,7 @@ public void insertProducts(String name,Integer number, Integer idCategory, Strin
 		}
 		
 	}
+
 	
 public Integer getIDProduct(String name,String col) {
 	
@@ -329,13 +329,9 @@ public boolean existProductList(String name) {
 	return (c.moveToFirst());
 }
 
-<<<<<<< HEAD
-	//mï¿½todo temporal
-=======
 
->>>>>>> Rama-Vivi-Android
 
-	//m�todo temporal
+	//método temporal
 	public void insertLists(String name){
 		ContentValues registro=new ContentValues();
 		
@@ -414,6 +410,7 @@ public boolean existProductList(String name) {
 		String tmp=column+"=?";
 		this.getWritableDatabase().delete(tableName,column+"=?",args);
 	}
+	
 	
 	public boolean existProductAdded(String name) {
 		SQLiteDatabase db=this.getReadableDatabase();
