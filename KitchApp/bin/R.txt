@@ -168,235 +168,8 @@ int dimen abc_dropdownitem_text_padding_right 0x7f08000f
 int dimen abc_panel_menu_list_width 0x7f08000b
 int dimen abc_search_view_preferred_width 0x7f08000d
 int dimen abc_search_view_text_min_width 0x7f08000c
-<<<<<<< HEAD
-int dimen activity_horizontal_margin 0x7f080015
-int dimen activity_vertical_margin 0x7f080016
-int dimen dialog_fixed_height_major 0x7f080013
-int dimen dialog_fixed_height_minor 0x7f080014
-int dimen dialog_fixed_width_major 0x7f080011
-int dimen dialog_fixed_width_minor 0x7f080012
-<<<<<<< HEAD
-=======
 int dimen activity_horizontal_margin 0x7f080011
 int dimen activity_vertical_margin 0x7f080012
-<<<<<<< HEAD
->>>>>>> Rama-Vivi-Android
-int drawable abc_ab_bottom_solid_dark_holo 0x7f020000
-int drawable abc_ab_bottom_solid_light_holo 0x7f020001
-int drawable abc_ab_bottom_transparent_dark_holo 0x7f020002
-int drawable abc_ab_bottom_transparent_light_holo 0x7f020003
-int drawable abc_ab_share_pack_holo_dark 0x7f020004
-int drawable abc_ab_share_pack_holo_light 0x7f020005
-int drawable abc_ab_solid_dark_holo 0x7f020006
-int drawable abc_ab_solid_light_holo 0x7f020007
-int drawable abc_ab_stacked_solid_dark_holo 0x7f020008
-int drawable abc_ab_stacked_solid_light_holo 0x7f020009
-int drawable abc_ab_stacked_transparent_dark_holo 0x7f02000a
-int drawable abc_ab_stacked_transparent_light_holo 0x7f02000b
-int drawable abc_ab_transparent_dark_holo 0x7f02000c
-int drawable abc_ab_transparent_light_holo 0x7f02000d
-int drawable abc_cab_background_bottom_holo_dark 0x7f02000e
-int drawable abc_cab_background_bottom_holo_light 0x7f02000f
-int drawable abc_cab_background_top_holo_dark 0x7f020010
-int drawable abc_cab_background_top_holo_light 0x7f020011
-int drawable abc_ic_ab_back_holo_dark 0x7f020012
-int drawable abc_ic_ab_back_holo_light 0x7f020013
-int drawable abc_ic_cab_done_holo_dark 0x7f020014
-int drawable abc_ic_cab_done_holo_light 0x7f020015
-int drawable abc_ic_clear 0x7f020016
-int drawable abc_ic_clear_disabled 0x7f020017
-int drawable abc_ic_clear_holo_light 0x7f020018
-int drawable abc_ic_clear_normal 0x7f020019
-int drawable abc_ic_clear_search_api_disabled_holo_light 0x7f02001a
-int drawable abc_ic_clear_search_api_holo_light 0x7f02001b
-int drawable abc_ic_commit_search_api_holo_dark 0x7f02001c
-int drawable abc_ic_commit_search_api_holo_light 0x7f02001d
-int drawable abc_ic_go 0x7f02001e
-int drawable abc_ic_go_search_api_holo_light 0x7f02001f
-int drawable abc_ic_menu_moreoverflow_normal_holo_dark 0x7f020020
-int drawable abc_ic_menu_moreoverflow_normal_holo_light 0x7f020021
-int drawable abc_ic_menu_share_holo_dark 0x7f020022
-int drawable abc_ic_menu_share_holo_light 0x7f020023
-int drawable abc_ic_search 0x7f020024
-int drawable abc_ic_search_api_holo_light 0x7f020025
-int drawable abc_ic_voice_search 0x7f020026
-int drawable abc_ic_voice_search_api_holo_light 0x7f020027
-int drawable abc_item_background_holo_dark 0x7f020028
-int drawable abc_item_background_holo_light 0x7f020029
-int drawable abc_list_divider_holo_dark 0x7f02002a
-int drawable abc_list_divider_holo_light 0x7f02002b
-int drawable abc_list_focused_holo 0x7f02002c
-int drawable abc_list_longpressed_holo 0x7f02002d
-int drawable abc_list_pressed_holo_dark 0x7f02002e
-int drawable abc_list_pressed_holo_light 0x7f02002f
-int drawable abc_list_selector_background_transition_holo_dark 0x7f020030
-int drawable abc_list_selector_background_transition_holo_light 0x7f020031
-int drawable abc_list_selector_disabled_holo_dark 0x7f020032
-int drawable abc_list_selector_disabled_holo_light 0x7f020033
-int drawable abc_list_selector_holo_dark 0x7f020034
-int drawable abc_list_selector_holo_light 0x7f020035
-int drawable abc_menu_dropdown_panel_holo_dark 0x7f020036
-int drawable abc_menu_dropdown_panel_holo_light 0x7f020037
-int drawable abc_menu_hardkey_panel_holo_dark 0x7f020038
-int drawable abc_menu_hardkey_panel_holo_light 0x7f020039
-int drawable abc_search_dropdown_dark 0x7f02003a
-int drawable abc_search_dropdown_light 0x7f02003b
-int drawable abc_spinner_ab_default_holo_dark 0x7f02003c
-int drawable abc_spinner_ab_default_holo_light 0x7f02003d
-int drawable abc_spinner_ab_disabled_holo_dark 0x7f02003e
-int drawable abc_spinner_ab_disabled_holo_light 0x7f02003f
-int drawable abc_spinner_ab_focused_holo_dark 0x7f020040
-int drawable abc_spinner_ab_focused_holo_light 0x7f020041
-int drawable abc_spinner_ab_holo_dark 0x7f020042
-int drawable abc_spinner_ab_holo_light 0x7f020043
-int drawable abc_spinner_ab_pressed_holo_dark 0x7f020044
-int drawable abc_spinner_ab_pressed_holo_light 0x7f020045
-int drawable abc_tab_indicator_ab_holo 0x7f020046
-int drawable abc_tab_selected_focused_holo 0x7f020047
-int drawable abc_tab_selected_holo 0x7f020048
-int drawable abc_tab_selected_pressed_holo 0x7f020049
-int drawable abc_tab_unselected_pressed_holo 0x7f02004a
-int drawable abc_textfield_search_default_holo_dark 0x7f02004b
-int drawable abc_textfield_search_default_holo_light 0x7f02004c
-int drawable abc_textfield_search_right_default_holo_dark 0x7f02004d
-int drawable abc_textfield_search_right_default_holo_light 0x7f02004e
-int drawable abc_textfield_search_right_selected_holo_dark 0x7f02004f
-int drawable abc_textfield_search_right_selected_holo_light 0x7f020050
-int drawable abc_textfield_search_selected_holo_dark 0x7f020051
-int drawable abc_textfield_search_selected_holo_light 0x7f020052
-int drawable abc_textfield_searchview_holo_dark 0x7f020053
-int drawable abc_textfield_searchview_holo_light 0x7f020054
-int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
-int drawable abc_textfield_searchview_right_holo_light 0x7f020056
-int drawable add_product 0x7f020057
-int drawable anadir_icono 0x7f020058
-int drawable barras 0x7f020059
-int drawable barras2 0x7f02005a
-int drawable barras3 0x7f02005b
-int drawable bebidas 0x7f02005c
-int drawable boton_redondo_color_aqua 0x7f02005d
-int drawable boton_redondo_color_celeste 0x7f02005e
-int drawable boton_redondo_color_navy 0x7f02005f
-int drawable button_over 0x7f020060
-int drawable cabecera_kitchapp 0x7f020061
-int drawable carnes 0x7f020062
-int drawable close 0x7f020063
-int drawable cod_barras_verdeok 0x7f020064
-int drawable condimentos 0x7f020065
-int drawable congelados 0x7f020066
-int drawable delete 0x7f020067
-int drawable delete2 0x7f020068
-int drawable despensa 0x7f020069
-int drawable dialog_button_selector 0x7f02006a
-int drawable dialog_container 0x7f02006b
-int drawable dialog_divider 0x7f02006c
-int drawable drogueria 0x7f02006d
-int drawable estadisticas 0x7f02006e
-int drawable ffondo 0x7f02006f
-int drawable fondo 0x7f020070
-int drawable fondo2 0x7f020071
-int drawable fondo_boton 0x7f020072
-int drawable fondo_de_pantalla_naranja 0x7f020073
-int drawable fondo_lista 0x7f020074
-int drawable fondo_lista_compra 0x7f020075
-int drawable fondo_lista_compra1 0x7f020076
-int drawable fondo_lista_compra10 0x7f020077
-int drawable fondo_lista_compra11 0x7f020078
-int drawable fondo_lista_compra12 0x7f020079
-int drawable fondo_lista_compra13 0x7f02007a
-int drawable fondo_lista_compra14 0x7f02007b
-int drawable fondo_lista_compra15 0x7f02007c
-int drawable fondo_lista_compra16 0x7f02007d
-int drawable fondo_lista_compra2 0x7f02007e
-int drawable fondo_lista_compra3 0x7f02007f
-int drawable fondo_lista_compra4 0x7f020080
-int drawable fondo_lista_compra5 0x7f020081
-int drawable fondo_lista_compra6 0x7f020082
-int drawable fondo_lista_compra7 0x7f020083
-int drawable fondo_lista_compra8 0x7f020084
-int drawable fondo_lista_compra85 0x7f020085
-int drawable fondo_lista_compra9 0x7f020086
-int drawable fondo_nuevo 0x7f020087
-int drawable fondo_pie_pagina 0x7f020088
-int drawable frutas_verduras 0x7f020089
-int drawable go 0x7f02008a
-<<<<<<< HEAD
-int drawable highlight_focused 0x7f0200b1
-int drawable highlight_pressed 0x7f0200b0
-int drawable hoja8 0x7f02008b
-int drawable home 0x7f02008c
-int drawable ic_action_search 0x7f02008d
-int drawable ic_launcher 0x7f02008e
-int drawable ic_launcher2 0x7f02008f
-int drawable imageok_verde 0x7f020090
-int drawable images 0x7f020091
-int drawable imagetic_verde 0x7f020092
-int drawable imagevoz_verde 0x7f020093
-int drawable lacteos 0x7f020094
-int drawable lista_compra 0x7f020095
-int drawable listview_selector 0x7f020096
-int drawable localizacion 0x7f020097
-int drawable loupe 0x7f020098
-int drawable lupa_sobre_un_robot_androide 0x7f020099
-int drawable micro_verde 0x7f02009a
-int drawable microfono 0x7f02009b
-int drawable microfono2 0x7f02009c
-int drawable mini_tic 0x7f02009d
-int drawable mini_tic2 0x7f02009e
-int drawable mini_tic3 0x7f02009f
-int drawable numberpicker_down 0x7f0200a0
-int drawable numberpicker_up 0x7f0200a1
-int drawable pan_bolleria 0x7f0200a2
-int drawable pastas 0x7f0200a3
-int drawable pescados 0x7f0200a4
-int drawable propuestaportadaappis 0x7f0200a5
-int drawable prueba2 0x7f0200a6
-int drawable recetario 0x7f0200a7
-int drawable resumen_de_color_como_fondo 0x7f0200a8
-int drawable salsas 0x7f0200a9
-int drawable teclado_android 0x7f0200aa
-int drawable tic 0x7f0200ab
-int drawable tic_verde 0x7f0200ac
-int drawable tick 0x7f0200ad
-int drawable varios 0x7f0200ae
-int drawable voz 0x7f0200af
-int drawable highlight_focused 0x7f0200ac
-int drawable highlight_pressed 0x7f0200ab
-int drawable hoja8 0x7f02008a
-int drawable ic_launcher 0x7f02008b
-int drawable ic_launcher2 0x7f02008c
-int drawable imageok_verde 0x7f02008d
-int drawable images 0x7f02008e
-int drawable imagetic_verde 0x7f02008f
-int drawable imagevoz_verde 0x7f020090
-int drawable lacteos 0x7f020091
-int drawable lista_compra 0x7f020092
-int drawable listview_selector 0x7f020093
-int drawable localizacion 0x7f020094
-int drawable lupa_sobre_un_robot_androide 0x7f020095
-int drawable micro_verde 0x7f020096
-int drawable microfono 0x7f020097
-int drawable microfono2 0x7f020098
-int drawable mini_tic 0x7f020099
-int drawable mini_tic2 0x7f02009a
-int drawable mini_tic3 0x7f02009b
-int drawable numberpicker_down 0x7f02009c
-int drawable numberpicker_up 0x7f02009d
-int drawable pan_bolleria 0x7f02009e
-int drawable pastas 0x7f02009f
-int drawable pescados 0x7f0200a0
-int drawable propuestaportadaappis 0x7f0200a1
-int drawable prueba2 0x7f0200a2
-int drawable recetario 0x7f0200a3
-int drawable resumen_de_color_como_fondo 0x7f0200a4
-int drawable salsas 0x7f0200a5
-int drawable teclado_android 0x7f0200a6
-int drawable tic 0x7f0200a7
-int drawable tic_verde 0x7f0200a8
-int drawable varios 0x7f0200a9
-int drawable voz 0x7f0200aa
-=======
->>>>>>> Rama-Vivi-Android
 int drawable ab_background_textured_mystyleactionbar 0x7f020000
 int drawable ab_bottom_solid_mystyleactionbar 0x7f020001
 int drawable ab_solid_mystyleactionbar 0x7f020002
@@ -514,136 +287,6 @@ int drawable condimentos 0x7f020071
 int drawable congelados 0x7f020072
 int drawable delete 0x7f020073
 int drawable delete2 0x7f020074
-<<<<<<< HEAD
-int drawable despensa 0x7f020075
-int drawable dialog_button_selector 0x7f020076
-int drawable dialog_container 0x7f020077
-int drawable dialog_divider 0x7f020078
-int drawable drogueria 0x7f020079
-int drawable estadisticas 0x7f02007a
-int drawable ffondo 0x7f02007b
-int drawable fondo 0x7f02007c
-int drawable fondo2 0x7f02007d
-int drawable fondo_boton 0x7f02007e
-int drawable fondo_de_pantalla_naranja 0x7f02007f
-int drawable fondo_lista 0x7f020080
-int drawable fondo_lista_compra 0x7f020081
-int drawable fondo_lista_compra1 0x7f020082
-int drawable fondo_lista_compra10 0x7f020083
-int drawable fondo_lista_compra11 0x7f020084
-int drawable fondo_lista_compra12 0x7f020085
-int drawable fondo_lista_compra13 0x7f020086
-int drawable fondo_lista_compra14 0x7f020087
-int drawable fondo_lista_compra15 0x7f020088
-int drawable fondo_lista_compra16 0x7f020089
-int drawable fondo_lista_compra2 0x7f02008a
-int drawable fondo_lista_compra3 0x7f02008b
-int drawable fondo_lista_compra4 0x7f02008c
-int drawable fondo_lista_compra5 0x7f02008d
-int drawable fondo_lista_compra6 0x7f02008e
-int drawable fondo_lista_compra7 0x7f02008f
-int drawable fondo_lista_compra8 0x7f020090
-int drawable fondo_lista_compra85 0x7f020091
-int drawable fondo_lista_compra9 0x7f020092
-int drawable fondo_nuevo 0x7f020093
-int drawable fondo_pie_pagina 0x7f020094
-int drawable frutas_verduras 0x7f020095
-int drawable highlight_focused 0x7f0200cc
-int drawable highlight_pressed 0x7f0200cb
-int drawable hoja8 0x7f020096
-int drawable ic_launcher 0x7f020097
-int drawable ic_launcher2 0x7f020098
-int drawable imageok_verde 0x7f020099
-int drawable images 0x7f02009a
-int drawable imagetic_verde 0x7f02009b
-int drawable imagevoz_verde 0x7f02009c
-int drawable lacteos 0x7f02009d
-int drawable list_focused_mystyleactionbar 0x7f02009e
-int drawable list_pressed_mystyleactionbar 0x7f02009f
-int drawable lista_compra 0x7f0200a0
-int drawable listview_selector 0x7f0200a1
-int drawable localizacion 0x7f0200a2
-int drawable lupa_sobre_un_robot_androide 0x7f0200a3
-int drawable menu_dropdown_panel_mystyleactionbar 0x7f0200a4
-int drawable micro_verde 0x7f0200a5
-int drawable microfono 0x7f0200a6
-int drawable microfono2 0x7f0200a7
-int drawable mini_tic 0x7f0200a8
-int drawable mini_tic2 0x7f0200a9
-int drawable mini_tic3 0x7f0200aa
-int drawable numberpicker_down 0x7f0200ab
-int drawable numberpicker_up 0x7f0200ac
-int drawable pan_bolleria 0x7f0200ad
-int drawable pastas 0x7f0200ae
-int drawable pescados 0x7f0200af
-int drawable progress_bg_mystyleactionbar 0x7f0200b0
-int drawable progress_horizontal_mystyleactionbar 0x7f0200b1
-int drawable progress_primary_mystyleactionbar 0x7f0200b2
-int drawable progress_secondary_mystyleactionbar 0x7f0200b3
-int drawable propuestaportadaappis 0x7f0200b4
-int drawable prueba2 0x7f0200b5
-int drawable recetario 0x7f0200b6
-int drawable resumen_de_color_como_fondo 0x7f0200b7
-int drawable salsas 0x7f0200b8
-int drawable selectable_background_mystyleactionbar 0x7f0200b9
-int drawable spinner_ab_default_mystyleactionbar 0x7f0200ba
-int drawable spinner_ab_disabled_mystyleactionbar 0x7f0200bb
-int drawable spinner_ab_focused_mystyleactionbar 0x7f0200bc
-int drawable spinner_ab_pressed_mystyleactionbar 0x7f0200bd
-int drawable spinner_background_ab_mystyleactionbar 0x7f0200be
-int drawable tab_indicator_ab_mystyleactionbar 0x7f0200bf
-int drawable tab_selected_focused_mystyleactionbar 0x7f0200c0
-int drawable tab_selected_mystyleactionbar 0x7f0200c1
-int drawable tab_selected_pressed_mystyleactionbar 0x7f0200c2
-int drawable tab_unselected_focused_mystyleactionbar 0x7f0200c3
-int drawable tab_unselected_mystyleactionbar 0x7f0200c4
-int drawable tab_unselected_pressed_mystyleactionbar 0x7f0200c5
-int drawable teclado_android 0x7f0200c6
-int drawable tic 0x7f0200c7
-int drawable tic_verde 0x7f0200c8
-int drawable varios 0x7f0200c9
-int drawable voz 0x7f0200ca
-=======
-int drawable highlight_focused 0x7f0200b0
-int drawable highlight_pressed 0x7f0200af
-int drawable hoja8 0x7f02008b
-int drawable home 0x7f02008c
-int drawable ic_launcher 0x7f02008d
-int drawable ic_launcher2 0x7f02008e
-int drawable imageok_verde 0x7f02008f
-int drawable images 0x7f020090
-int drawable imagetic_verde 0x7f020091
-int drawable imagevoz_verde 0x7f020092
-int drawable lacteos 0x7f020093
-int drawable lista_compra 0x7f020094
-int drawable listview_selector 0x7f020095
-int drawable localizacion 0x7f020096
-int drawable loupe 0x7f020097
-int drawable lupa_sobre_un_robot_androide 0x7f020098
-int drawable micro_verde 0x7f020099
-int drawable microfono 0x7f02009a
-int drawable microfono2 0x7f02009b
-int drawable mini_tic 0x7f02009c
-int drawable mini_tic2 0x7f02009d
-int drawable mini_tic3 0x7f02009e
-int drawable numberpicker_down 0x7f02009f
-int drawable numberpicker_up 0x7f0200a0
-int drawable pan_bolleria 0x7f0200a1
-int drawable pastas 0x7f0200a2
-int drawable pescados 0x7f0200a3
-int drawable propuestaportadaappis 0x7f0200a4
-int drawable prueba2 0x7f0200a5
-int drawable recetario 0x7f0200a6
-int drawable resumen_de_color_como_fondo 0x7f0200a7
-int drawable salsas 0x7f0200a8
-int drawable teclado_android 0x7f0200a9
-int drawable tic 0x7f0200aa
-int drawable tic_verde 0x7f0200ab
-int drawable tick 0x7f0200ac
-int drawable varios 0x7f0200ad
-int drawable voz 0x7f0200ae
->>>>>>> Rama-Vivi-Android
-=======
 int drawable despensa1 0x7f020075
 int drawable dialog_button_selector 0x7f020076
 int drawable dialog_container 0x7f020077
@@ -751,7 +394,6 @@ int drawable tipoplato 0x7f0200da
 int drawable update_pantry 0x7f0200db
 int drawable varios 0x7f0200dc
 int drawable voz 0x7f0200dd
->>>>>>> Rama-Vivi-Android
 int id EditTextCantProduct 0x7f05004b
 int id action_bar 0x7f05001c
 int id action_bar_activity_content 0x7f050015
@@ -764,48 +406,12 @@ int id action_context_bar 0x7f05001d
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id action_settings 0x7f05007a
-int id btnRegistro 0x7f050075
-int id action_settings 0x7f050099
-=======
-int id action_settings 0x7f0500aa
->>>>>>> Rama-Vivi-Android
-=======
 int id action_settings 0x7f050096
->>>>>>> Rama-Vivi-Android
 int id activity_chooser_view_content 0x7f050025
 int id add_Product 0x7f050097
 int id always 0x7f05000b
 int id barcode 0x7f05009d
 int id beginning 0x7f050011
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id btnLogin 0x7f05005a
-int id buttonBread 0x7f05003f
-int id buttonCondiment 0x7f050043
-int id buttonDairy 0x7f05003d
-int id btnRegistro 0x7f050095
-int id button1 0x7f050066
-int id button2 0x7f050067
-int id button3 0x7f050068
-int id button4 0x7f050069
-int id buttonAddCode 0x7f050074
-int id buttonAddManually 0x7f050072
-int id buttonAddVoice 0x7f050073
-int id buttonDelete 0x7f050075
-=======
-int id btnLogin 0x7f050065
-int id btnRegistro 0x7f0500a5
-int id button1 0x7f05006f
-int id button2 0x7f050070
-int id button3 0x7f050071
-int id button4 0x7f050072
-int id buttonAddCode 0x7f050084
-int id buttonAddManually 0x7f050082
-int id buttonAddVoice 0x7f050083
-=======
 int id btnLogin 0x7f050062
 int id btnRegistro 0x7f050090
 int id button1 0x7f05006e
@@ -814,17 +420,11 @@ int id button3 0x7f050070
 int id buttonAddCode 0x7f050086
 int id buttonAddManually 0x7f050084
 int id buttonAddVoice 0x7f050085
->>>>>>> Rama-Vivi-Android
 int id buttonBread 0x7f05003f
 int id buttonCancelList 0x7f050076
 int id buttonCancelPantry 0x7f05007a
 int id buttonCondiment 0x7f050043
 int id buttonDairy 0x7f05003d
-<<<<<<< HEAD
-int id buttonDelete 0x7f050085
->>>>>>> Rama-Vivi-Android
-=======
->>>>>>> Rama-Vivi-Android
 int id buttonDrinks 0x7f050040
 int id buttonFish 0x7f050042
 int id buttonFrozen 0x7f050045
@@ -834,51 +434,6 @@ int id buttonOthers 0x7f050048
 int id buttonPasta 0x7f050044
 int id buttonSauces 0x7f050046
 int id buttonStore 0x7f050047
-<<<<<<< HEAD
-int id button_Voice 0x7f05004f
-<<<<<<< HEAD
-int id button_addProduct 0x7f05004c
-int id button_cancel 0x7f050061
-int id button_codeSearch 0x7f050050
-int id button_decrement 0x7f05005d
-int id button_go 0x7f050079
-int id button_increment 0x7f05005f
-int id button_ok 0x7f05004e
-int id button_save 0x7f050060
-int id cantProduct 0x7f05005e
-int id checkBox_Product 0x7f050053
-int id checkBox_list 0x7f050077
-int id checkbox 0x7f05002d
-int id collapseActionView 0x7f05000d
-int id default_activity_button 0x7f050028
-int id delete_Product 0x7f05007c
-int id dialog 0x7f05000e
-int id disableHome 0x7f050008
-int id dropdown 0x7f05000f
-int id editTextDialogUserInput 0x7f05006f
-int id button_accept 0x7f05006f
-int id collapseActionView 0x7f05000d
-int id default_activity_button 0x7f050028
-int id delete_Product 0x7f05009b
-=======
-int id button_accept 0x7f050079
-int id button_addProduct 0x7f05004c
-int id button_cancel 0x7f05006c
-int id button_codeSearch 0x7f050050
-int id button_decrement 0x7f050068
-int id button_go 0x7f0500a9
-int id button_increment 0x7f05006a
-int id button_ok 0x7f05004e
-int id button_save 0x7f05006b
-int id cantProduct 0x7f050069
-int id checkBox_Product 0x7f050059
-int id checkBox_list 0x7f0500a7
-int id checkbox 0x7f05002d
-int id collapseActionView 0x7f05000d
-int id default_activity_button 0x7f050028
-int id delete_Product 0x7f0500ac
->>>>>>> Rama-Vivi-Android
-=======
 int id button_acceptList 0x7f050077
 int id button_acceptPantry 0x7f05007b
 int id button_addProduct 0x7f05004d
@@ -895,7 +450,6 @@ int id collapseActionView 0x7f05000d
 int id default_activity_button 0x7f050028
 int id delete_Product 0x7f050098
 int id delete_ProductList 0x7f05009f
->>>>>>> Rama-Vivi-Android
 int id dialog 0x7f05000e
 int id disableHome 0x7f050008
 int id dropdown 0x7f05000f
@@ -906,23 +460,6 @@ int id editTextuserName 0x7f050060
 int id edit_query 0x7f050030
 int id encabezado 0x7f05005e
 int id end 0x7f050013
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id expand_activities_button 0x7f050026
-int id expanded_menu 0x7f05002c
-int id footer 0x7f050057
-int id header 0x7f050071
-int id et1 0x7f050070
-=======
-int id et1 0x7f050081
-int id expand_activities_button 0x7f050026
-int id expanded_menu 0x7f05002c
-int id footer 0x7f050062
-int id header 0x7f0500a1
-int id headerIngredients 0x7f05007f
-int id headerPreparation 0x7f05007d
->>>>>>> Rama-Vivi-Android
-=======
 int id et1 0x7f050083
 int id expand_activities_button 0x7f050026
 int id expanded_menu 0x7f05002c
@@ -931,65 +468,11 @@ int id footer 0x7f05005f
 int id header 0x7f05008c
 int id headerIngredients 0x7f050081
 int id headerPreparation 0x7f05007f
->>>>>>> Rama-Vivi-Android
 int id home 0x7f050014
 int id homeAsUp 0x7f050005
 int id icon 0x7f05002a
 int id ifRoom 0x7f05000a
 int id image 0x7f050027
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id layout_root 0x7f05006e
-int id link_to_login 0x7f050076
-int id link_to_register 0x7f05005b
-int id listDialogVoice 0x7f050070
-int id listMode 0x7f050001
-int id listViewProducts 0x7f050063
-int id listView_lists 0x7f05006d
-int id imageView1 0x7f050055
-int id imagen 0x7f050053
-int id listMode 0x7f050001
-int id listViewSauces 0x7f050088
-int id listViewStore 0x7f05008a
-int id listView_lists 0x7f05006f
-int id listViewBread 0x7f05007b
-int id listViewCatRec 0x7f050063
-int id listViewCondiment 0x7f050083
-int id listViewDairy 0x7f050077
-int id listViewDrinks 0x7f05007d
-int id listViewFish 0x7f050081
-int id listViewFrozen 0x7f050087
-int id listViewFruits 0x7f050079
-int id listViewMeat 0x7f05007f
-int id listViewOthers 0x7f05008d
-int id listViewPasta 0x7f050085
-=======
-int id imageView1 0x7f050060
-int id imagen 0x7f05005e
-int id ingredients 0x7f050056
-int id ivItem 0x7f05005c
-int id layout_root 0x7f05009e
-int id link_to_login 0x7f0500a6
-int id link_to_register 0x7f050066
-int id listDialogVoice 0x7f0500a0
-int id listMode 0x7f050001
-int id listViewBread 0x7f05008b
-int id listViewCondiment 0x7f050093
-int id listViewDairy 0x7f050087
-int id listViewDrinks 0x7f05008d
-int id listViewFish 0x7f050091
-int id listViewFrozen 0x7f050097
-int id listViewFruits 0x7f050089
-int id listViewMeat 0x7f05008f
-int id listViewOthers 0x7f05009d
-int id listViewPasta 0x7f050095
-int id listViewProducts 0x7f05006e
-int id listViewRecipe 0x7f050080
-int id listViewSauces 0x7f050099
-int id listViewStore 0x7f05009b
-int id listView_lists 0x7f05007a
->>>>>>> Rama-Vivi-Android
-=======
 int id imageView1 0x7f05005d
 int id imagen 0x7f05005b
 int id ingredients 0x7f050051
@@ -1004,7 +487,6 @@ int id listViewProducts 0x7f05006d
 int id listViewProductsList 0x7f050087
 int id listViewRecipe 0x7f050082
 int id listView_lists 0x7f05007c
->>>>>>> Rama-Vivi-Android
 int id list_item 0x7f050029
 int id logout 0x7f050095
 int id manual 0x7f05009b
@@ -1015,46 +497,18 @@ int id never 0x7f050009
 int id nombre 0x7f05005c
 int id none 0x7f050010
 int id normal 0x7f050000
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id pager_title_strip 0x7f05006a
-int id progressBar1 0x7f050068
-=======
-int id numPersons 0x7f05007b
-int id pager 0x7f050074
-int id pager_title_strip 0x7f050075
-int id preparation 0x7f05007e
-int id progressBar1 0x7f050073
->>>>>>> Rama-Vivi-Android
-=======
 int id numPersons 0x7f05007d
 int id pager 0x7f050072
 int id preparation 0x7f050080
 int id progressBar1 0x7f050071
->>>>>>> Rama-Vivi-Android
 int id progress_circular 0x7f050018
 int id progress_horizontal 0x7f050019
 int id quantity 0x7f050052
 int id radio 0x7f05002f
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id search 0x7f05007d
-int id reg_email 0x7f050092
-int id reg_password 0x7f050093
-int id reg_usuario 0x7f050091
-int id pager 0x7f05006b
-=======
-int id reg_email 0x7f0500a3
-int id reg_password 0x7f0500a4
-int id reg_usuario 0x7f0500a2
-int id search 0x7f0500ad
->>>>>>> Rama-Vivi-Android
-=======
 int id reg_email 0x7f05008e
 int id reg_password 0x7f05008f
 int id reg_usuario 0x7f05008d
 int id search 0x7f050099
->>>>>>> Rama-Vivi-Android
 int id search_badge 0x7f050032
 int id search_bar 0x7f050031
 int id search_button 0x7f050033
@@ -1069,82 +523,16 @@ int id shortcut 0x7f05002e
 int id showCustom 0x7f050007
 int id showHome 0x7f050004
 int id showTitle 0x7f050006
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id spinnerCategory 0x7f05006a
-=======
-int id spinnerCategory 0x7f050077
->>>>>>> Rama-Vivi-Android
-=======
 int id spinnerCategory 0x7f050074
 int id spinnerUnitsAddPantry 0x7f05004c
 int id spinnerUnitsList 0x7f050075
 int id spinnerUnitsPantry 0x7f050079
->>>>>>> Rama-Vivi-Android
 int id split_action_bar 0x7f05001e
 int id submit_area 0x7f050039
 int id tV_Cat_Rec 0x7f05006a
 int id tabMode 0x7f050002
 int id textView1 0x7f05003c
 int id textViewAdd 0x7f050049
-<<<<<<< HEAD
-<<<<<<< HEAD
-int id textViewCategory 0x7f050069
-int id textView_Cat 0x7f050062
-int id textView_Item_Cant 0x7f050055
-int id textView_Item_Name 0x7f050054
-int id text_listName 0x7f050078
-int id title 0x7f05002b
-int id top_action_bar 0x7f050020
-int id txt_barSearch 0x7f05004d
-int id txt_product 0x7f050051
-int id txt_quantity 0x7f050052
-int id textViewBread 0x7f050079
-int id textViewCondiment 0x7f050081
-int id textViewDairy 0x7f050075
-int id textViewDrinks 0x7f05007b
-int id textViewFish 0x7f05007f
-int id textViewFrozen 0x7f050085
-int id textViewFruits 0x7f050077
-int id textViewMeat 0x7f05007d
-int id textViewOthers 0x7f05008b
-int id textViewPasta 0x7f050083
-int id textViewSauces 0x7f050087
-int id textViewStore 0x7f050089
-int id textView_Cat 0x7f050062
-int id texto_favorites 0x7f05004d
-int id texto_recipes 0x7f05004e
-int id texto_topten 0x7f05004f
-=======
-int id textViewBread 0x7f05008a
-int id textViewCategory 0x7f050076
-int id textViewCondiment 0x7f050092
-int id textViewDairy 0x7f050086
-int id textViewDrinks 0x7f05008c
-int id textViewFish 0x7f050090
-int id textViewFrozen 0x7f050096
-int id textViewFruits 0x7f050088
-int id textViewMeat 0x7f05008e
-int id textViewOthers 0x7f05009c
-int id textViewPasta 0x7f050094
-int id textViewSauces 0x7f050098
-int id textViewStore 0x7f05009a
-int id textView_Cat 0x7f05006d
-int id textView_Item_Cant 0x7f05005b
-int id textView_Item_Name 0x7f05005a
-int id text_listName 0x7f0500a8
-int id texto_favorites 0x7f050053
-int id texto_recipes 0x7f050054
-int id texto_topten 0x7f050055
-int id title 0x7f05002b
-int id top_action_bar 0x7f050020
-int id tvTitle 0x7f05005d
-int id txt_barSearch 0x7f05004d
-int id txt_product 0x7f050051
-int id txt_quantity 0x7f050052
-int id units 0x7f050058
->>>>>>> Rama-Vivi-Android
-=======
 int id textViewCategory 0x7f050073
 int id textViewProductsList 0x7f050058
 int id textViewUnits 0x7f050078
@@ -1160,7 +548,6 @@ int id title 0x7f05002b
 int id top_action_bar 0x7f050020
 int id tvTitle 0x7f05005a
 int id units 0x7f050053
->>>>>>> Rama-Vivi-Android
 int id up 0x7f050021
 int id update_Pantry 0x7f05009e
 int id useLogo 0x7f050003
@@ -1191,63 +578,8 @@ int layout abc_list_menu_item_radio 0x7f030013
 int layout abc_popup_menu_item_layout 0x7f030014
 int layout abc_search_dropdown_item_icons_2line 0x7f030015
 int layout abc_search_view 0x7f030016
-<<<<<<< HEAD
-int layout abc_simple_decor 0x7f030017
-int layout activity_acceso_despensa 0x7f030018
-int layout activity_add_manualmente 0x7f030019
-int layout activity_bar_search 0x7f03001a
-int layout activity_seleccionar_categoria 0x7f030021
-int layout cabecera 0x7f030023
-int layout shopping_list_go 0x7f030028
-int layout shoppinglist_item 0x7f030029
-int layout support_simple_spinner_dropdown_item 0x7f03002a
-int menu add_manualmente 0x7f0d0000
-int menu login 0x7f0d0001
-int menu menu_action_bar 0x7f0d0002
-int menu menu_search 0x7f0d0003
-int menu modificar_producto_despensa 0x7f0d0004
-int menu mostrar_productos_categoria 0x7f0d0005
-=======
 int layout activity_acceso_despensa 0x7f030017
 int layout activity_add_manualmente 0x7f030018
-<<<<<<< HEAD
-int layout activity_bar_search 0x7f030019
->>>>>>> Rama-Vivi-Android
-int layout activity_fragment_favorites 0x7f03001a
-int layout activity_fragment_recipes 0x7f03001b
-int layout activity_fragment_topten 0x7f03001c
-int layout activity_item_ingredients_listviewrec 0x7f03001d
-int layout activity_item_listview 0x7f03001e
-int layout activity_item_recipe_with_image 0x7f03001f
-int layout activity_list_item_layout 0x7f030020
-int layout activity_login 0x7f030021
-int layout activity_modificar_producto_despensa 0x7f030022
-int layout activity_mostrar_productos_categoria 0x7f030023
-int layout activity_pantalla_principal 0x7f030024
-int layout activity_pantalla_transicion 0x7f030025
-int layout activity_recipes_viewpager 0x7f030026
-int layout activity_seleccionar_categoria 0x7f030027
-int layout activity_shopping_lists 0x7f030028
-int layout activity_show_recipe 0x7f030029
-int layout activity_show_recipes_listview 0x7f03002a
-int layout activity_una_lista 0x7f03002b
-int layout button_style_main_activity 0x7f03002c
-int layout cabecera 0x7f03002d
-int layout dialog_crear_lista_compra 0x7f03002e
-int layout dialog_matches 0x7f03002f
-int layout pie_de_pagina 0x7f030030
-int layout registro 0x7f030031
-int layout shopping_list_go 0x7f030032
-int layout shoppinglist_item 0x7f030033
-int layout support_simple_spinner_dropdown_item 0x7f030034
-int menu add_manualmente 0x7f0d0000
-int menu login 0x7f0d0001
-int menu menu_action_bar 0x7f0d0002
-int menu menu_search 0x7f0d0003
-int menu modificar_producto_despensa 0x7f0d0004
-int menu mostrar_productos_categoria 0x7f0d0005
-int string CantProducts 0x7f0a0039
-=======
 int layout activity_fragment_favorites 0x7f030019
 int layout activity_fragment_recipes 0x7f03001a
 int layout activity_fragment_topten 0x7f03001b
@@ -1290,7 +622,6 @@ int menu menu_search 0x7f0d0006
 int menu mostrar_productos_categoria 0x7f0d0007
 int menu show_products_list 0x7f0d0008
 int string CantProducts 0x7f0a0038
->>>>>>> Rama-Vivi-Android
 int string abc_action_bar_home_description 0x7f0a0001
 int string abc_action_bar_up_description 0x7f0a0002
 int string abc_action_menu_overflow_description 0x7f0a0003
@@ -1329,27 +660,12 @@ int string despensa 0x7f0a0010
 int string dialog_header 0x7f0a0042
 int string drogueria 0x7f0a0020
 int string estadisticas 0x7f0a0013
-<<<<<<< HEAD
-<<<<<<< HEAD
-int string frutasVerduras 0x7f0a0017
-int string hello_world 0x7f0a000f
-int string home 0x7f0a003f
-int string favorite 0x7f0a0040
-=======
-int string favorite 0x7f0a0042
-=======
 int string favourite 0x7f0a0046
->>>>>>> Rama-Vivi-Android
 int string frutasVerduras 0x7f0a0017
 int string headerIngredients 0x7f0a0047
 int string headerPreparation 0x7f0a0048
 int string hello_world 0x7f0a000f
-<<<<<<< HEAD
-int string home 0x7f0a003f
->>>>>>> Rama-Vivi-Android
-=======
 int string home 0x7f0a0041
->>>>>>> Rama-Vivi-Android
 int string lacteos 0x7f0a0016
 int string lista_compra 0x7f0a0011
 int string listadelacompra 0x7f0a0039
