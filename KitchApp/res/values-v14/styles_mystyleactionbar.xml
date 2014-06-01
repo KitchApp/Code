@@ -20,23 +20,14 @@
 <resources>
 
     <style name="Theme.Mystyleactionbar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-<<<<<<< HEAD
-        <!--item name="android:actionBarItemBackground">@drawable/selectable_background_mystyleactionbar</item>-->
-=======
         <item name="android:actionBarItemBackground">@drawable/selectable_background_mystyleactionbar</item>
->>>>>>> Rama-Vivi-Android
         <item name="android:popupMenuStyle">@style/PopupMenu.Mystyleactionbar</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Mystyleactionbar</item>
         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Mystyleactionbar</item>
         <item name="android:actionDropDownStyle">@style/DropDownNav.Mystyleactionbar</item>
         <item name="android:actionBarStyle">@style/ActionBar.Solid.Mystyleactionbar</item>
-<<<<<<< HEAD
-        <!--item name="android:actionModeBackground">@drawable/cab_background_top_mystyleactionbar</item>-->
-        <!--item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_mystyleactionbar</item>-->
-=======
         <item name="android:actionModeBackground">@drawable/cab_background_top_mystyleactionbar</item>
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_mystyleactionbar</item>
->>>>>>> Rama-Vivi-Android
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Mystyleactionbar</item>
         
                 <!-- Light.DarkActionBar specific -->
@@ -45,24 +36,14 @@
     </style>
 
     <style name="ActionBar.Solid.Mystyleactionbar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-<<<<<<< HEAD
-        <!--item name="android:background">@drawable/ab_solid_mystyleactionbar</item>
-        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_mystyleactionbar</item>
-        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_mystyleactionbar</item> -->
-=======
         <item name="android:background">@drawable/ab_solid_mystyleactionbar</item>
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_mystyleactionbar</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_mystyleactionbar</item>
->>>>>>> Rama-Vivi-Android
         <item name="android:progressBarStyle">@style/ProgressBar.Mystyleactionbar</item>
     </style>
 
     <style name="ActionBar.Transparent.Mystyleactionbar" parent="@style/Widget.AppCompat.ActionBar">
-<<<<<<< HEAD
-        <!--item name="android:background">@drawable/ab_transparent_mystyleactionbar</item>-->
-=======
         <item name="android:background">@drawable/ab_transparent_mystyleactionbar</item>
->>>>>>> Rama-Vivi-Android
         <item name="android:progressBarStyle">@style/ProgressBar.Mystyleactionbar</item>
     </style>
     
@@ -71,10 +52,5 @@
         <item name="android:popupMenuStyle">@style/PopupMenu.Mystyleactionbar</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Mystyleactionbar</item>
     </style>
-<<<<<<< HEAD
-    
-</resources>
-=======
 
 </resources>
->>>>>>> Rama-Vivi-Android
