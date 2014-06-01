@@ -48,7 +48,7 @@ public class ShowListRecipes extends ActionBarActivity  implements OnClickListen
 	private ArrayList<String> titulos;
 	private ArrayList<String> imagenes;
 	private ArrayList<Integer> idRecipes;
-	
+	private ArrayList<String> infoBundlePantry;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,13 +60,17 @@ public class ShowListRecipes extends ActionBarActivity  implements OnClickListen
 		Bundle extras1= this.getIntent().getExtras();
 		if(extras1!=null){
 			infoBundle=extras1.getStringArrayList("recipes");
-			
+			infoBundlePantry=extras1.getStringArrayList("pantry");
 		}
 		if(infoBundle!=null){
 			titulos=initializeArrayTitleRecipes();
 			imagenes=initializeArrayImagesRecipes();
 		}
-		
+		if(infoBundlePantry!=null){
+			titulos=initializeArrayTitleRecipesByPantry();
+			imagenes=initializeArrayImagesRecipesByPantry();
+			
+		}
 		
 		List<ItemRecipeWithImage> items = new ArrayList<ItemRecipeWithImage>();
 		for(int i=0;i<titulos.size();i++){
@@ -119,7 +123,24 @@ public class ShowListRecipes extends ActionBarActivity  implements OnClickListen
 		}
 		return items;
 	}
-		
+	
+	public ArrayList<String> initializeArrayTitleRecipesByPantry(){
+		ArrayList<String>items = new ArrayList<String>();
+
+		String[] idTmp=infoBundlePantry.get(1).split(",");
+		if(!idTmp[0].equals("")){
+			String[] tmp=infoBundlePantry.get(0).split(",");
+			for (int i = 0; i < tmp.length; i++) {
+				//titleTmp=tmp[i].split("\""+","+"\""+"nid"+"\""+":"+"\"");
+				idRecipes.add(Integer.parseInt(idTmp[i]));
+				//titleTmp=tmp[i].split("\""+"\\}");
+				UnicodeUnescaper unescaper = new UnicodeUnescaper();
+				items.add(unescaper.translate(tmp[i]));
+			}
+		}
+		return items;
+	}
+	
 	public ArrayList<String> initializeArrayImagesRecipes(){
 		ArrayList<String>items = new ArrayList<String>();
 		String[] titleTmp;
@@ -141,6 +162,29 @@ public class ShowListRecipes extends ActionBarActivity  implements OnClickListen
 		}
 		return items;
 	}
+	
+	public ArrayList<String> initializeArrayImagesRecipesByPantry(){
+		ArrayList<String>items = new ArrayList<String>();
+		String[] titleTmp;
+		String[] tmp=infoBundlePantry.get(2).split("public://");
+		if(!tmp[1].equals("")){
+			for (int i = 1; i < tmp.length; i++) {
+				titleTmp=tmp[i].split(",");
+				titleTmp=titleTmp[0].split("Recetas"+"\\/");
+				titleTmp=titleTmp[1].split(" ");
+				String aux="";
+				for (int j = 0; j < titleTmp.length-1; j++) {
+					aux=aux+titleTmp[j]+"%20";
+				}
+				aux=aux+titleTmp[titleTmp.length-1];
+				items.add("http://www.kitchapp.es/sites/default/files/Recetas/"+aux);
+				/*titleTmp=tmp[i].split(",");
+				items.add("http://www.kitchapp.es/sites/default/files/Recetas/"+titleTmp[0]);*/
+			}
+		}
+		return items;
+	}
+		
 	
 
 }
