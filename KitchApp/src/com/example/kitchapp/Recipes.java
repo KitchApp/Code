@@ -143,9 +143,6 @@ public class Recipes extends ActionBarActivity {
 	        }*/
 	    }
 		
-<<<<<<< HEAD
-}
-=======
 		public boolean onCreateOptionsMenu(Menu menu) {
 			// Inflate the menu; this adds items to the action bar if it is present.
 			MenuInflater inflater = getMenuInflater();
@@ -154,4 +151,3 @@ public class Recipes extends ActionBarActivity {
 		}
 		
 		}
->>>>>>> Rama-Vivi-Android
