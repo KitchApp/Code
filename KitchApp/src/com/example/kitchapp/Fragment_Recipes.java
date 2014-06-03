@@ -102,13 +102,17 @@ public class Fragment_Recipes extends Fragment implements Interface{
 		        case 2: open_Dialog_Spinner(position);
 		        		break;
 		         
+		    	
 		    	// Recetas por Recomendacion de mi Despensa    	
 	        	case 3: showRecipesWithMyPantry();		   
 	        		break;
+<<<<<<< HEAD
 	        		
 	        		//Recetas r�pidas
 		        case 4: new GetTitleImageByCookingMode().execute();
 		        		break;
+=======
+>>>>>>> parent of b027bd5... Recipes by Cooking Mode
 		    	}
 		    }
 		});
@@ -663,6 +667,7 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			}
 		}	
 		
+<<<<<<< HEAD
 		// (4) Por modo de cocina: Rapidas
 		private class GetTitleImageByCookingMode extends AsyncTask<String, Integer, ArrayList<String>>{
 			ArrayList<String> resp=new ArrayList<String>();
@@ -723,3 +728,6 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			}
 		}					
 }
+=======
+}
+>>>>>>> parent of b027bd5... Recipes by Cooking Mode
