@@ -353,7 +353,7 @@ public class Fragment_Recipes extends Fragment implements Interface{
 		HttpPost httppost2;
 		
 		@Override
-	        protected ArrayList<String> doInBackground(String... urls) {
+	    protected ArrayList<String> doInBackground(String... urls) {
 	    	
 			HttpClient httpclient = new DefaultHttpClient();
 			String searchFilter=userInput.getText().toString().trim();
@@ -482,7 +482,7 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			//if(existRecipe){
 				Intent intent = new Intent(getActivity(),ShowListRecipes.class);				
 				intent.putStringArrayListExtra("recipes", result);
-			    	startActivity(intent);
+		    	startActivity(intent);
 			//}				
 		}
 	}
@@ -496,7 +496,7 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			HttpPost httppost2;
 			
 			@Override
-		    	protected ArrayList<String> doInBackground(String... urls) {
+		    protected ArrayList<String> doInBackground(String... urls) {
 		    	
 				HttpClient httpclient = new DefaultHttpClient();
 				//String searchFilter=userInput.getText().toString().trim();
@@ -661,7 +661,7 @@ public class Fragment_Recipes extends Fragment implements Interface{
 				intent.putStringArrayListExtra("pantry", bundle); 
 			    startActivity(intent);
 			}
-		}	
+			
 		
 		// (4) Por modo de cocina: Rapidas
 		private class GetTitleImageByCookingMode extends AsyncTask<String, Integer, ArrayList<String>>{
@@ -720,6 +720,6 @@ public class Fragment_Recipes extends Fragment implements Interface{
 					intent.putStringArrayListExtra("recipes", result);
 				    	startActivity(intent);
 				//}											    		    
-			}
-		}					
+							}
+			}					
 }
