@@ -120,6 +120,9 @@ public class Fragment_Recipes extends Fragment implements Interface{
 		        case 5: open_Dialog_Spinner(position);
         				break;
         		
+        				// Recetas por Tipo de Plato
+		        case 6: open_Dialog_Spinner(position);
+						break;        				
 		    	}
 		    }
 		});
@@ -305,6 +308,8 @@ public class Fragment_Recipes extends Fragment implements Interface{
 				break;
 			case 5: aux= "Seleccione Intolerancia";
 				break;	
+			case 6: aux= "Seleccione tipo de plato";
+				break;
 				
 		}
 		
@@ -322,6 +327,8 @@ public class Fragment_Recipes extends Fragment implements Interface{
 	                	   			break;
 	                	   		case 5: new GetTitleImageIntolerances().execute();
                 	   				break;
+	                	   		case 6: new GetTitleImageByTypeOfDish().execute();
+             	   					break;	
 	                	   		  }		
 	                   }
 	    });	    	    
@@ -820,6 +827,76 @@ public class Fragment_Recipes extends Fragment implements Interface{
 							//}										    		    
 						}
 					}
-					
+				
+					// (6) Busqueda por Tipo de Plato
+					private class GetTitleImageByTypeOfDish extends AsyncTask<String, Integer, ArrayList<String>>{
+								
+						ArrayList<String> resp=new ArrayList<String>();
+						HttpPost httppost1;
+						HttpPost httppost2;
+								
+						@Override
+					    protected ArrayList<String> doInBackground(String... urls) {
+						    	
+							HttpClient httpclient = new DefaultHttpClient();
+							//String searchFilter=userInput.getText().toString().trim();
+						    //set the remote endpoint URL
+						    //HttpPost httppost1 = new HttpPost("http://www.kitchapp.es/getRecipesTitleByDiet.php?field_dieta_value="+searchFilter);
+							//HttpPost httppost2 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesImagesByDiet.php?field_dieta_value="+searchFilter);
+							try {
+								httppost1 = new HttpPost("http://www.kitchapp.es/getRecipesTitleByTypeOfDish.php?name="+URLEncoder.encode(searchFilter,"UTF-8"));
+								httppost2 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesImagesByTypeOfDish.php?name="+URLEncoder.encode(searchFilter,"UTF-8"));
+							} catch (UnsupportedEncodingException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+								    		    
+						    try {
+							
+						        JSONObject json1 = new JSONObject();
+						        JSONObject json2 = new JSONObject();
+						        //add serialised JSON object into POST request
+						        StringEntity se1 = new StringEntity(json1.toString());
+						        StringEntity se2 = new StringEntity(json2.toString());
+						        //set request content type
+						        se1.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+						        httppost1.setEntity(se1);
+						        se2.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+						        httppost2.setEntity(se2);
+									
+						        //send the POST request
+						        HttpResponse response1 = httpclient.execute(httppost1);
+						        HttpResponse response2 = httpclient.execute(httppost2);
+							
+						        //read the response from Services endpoint
+								String jsonResponse1 = EntityUtils.toString(response1.getEntity());
+						        String jsonResponse2 = EntityUtils.toString(response2.getEntity());
+						        //if (!jsonResponse1.equals("")){
+						        	//existRecipe=true;
+						        	resp.add(jsonResponse1);
+						        	resp.add(jsonResponse2);
+						        	resp.add(searchFilter);
+						        // }
+							       
+					           return resp;
+								        		
+						    }catch (Exception e) {
+								        Log.v("Error adding article", e.getMessage());
+							}
+								
+							return null;
+						}
+							
+						// onPostExecute displays the results of the AsyncTask.
+						@Override
+						protected void onPostExecute(ArrayList<String> result) {
+							
+							//if(existRecipe){
+								Intent intent = new Intent(getActivity(),ShowListRecipes.class);
+								intent.putStringArrayListExtra("recipes", result);
+						    	startActivity(intent);
+							//}	    		    
+						}
+					}
 		
 }
