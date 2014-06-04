@@ -115,6 +115,11 @@ public class Fragment_Recipes extends Fragment implements Interface{
 	        		//Recetas rápidas
 		        case 4: new GetTitleImageByCookingMode().execute();
 		        		break;
+		        		
+		        		// Recetas por Intolerancias
+		        case 5: open_Dialog_Spinner(position);
+        				break;
+        		
 		    	}
 		    }
 		});
@@ -298,7 +303,8 @@ public class Fragment_Recipes extends Fragment implements Interface{
 		switch (position) {
 			case 2: aux= "Seleccione una Dieta";
 				break;
-				
+			case 5: aux= "Seleccione Intolerancia";
+				break;	
 				
 		}
 		
@@ -314,7 +320,8 @@ public class Fragment_Recipes extends Fragment implements Interface{
 	                	   switch (position){
 	                	   		case 2: new GetTitleImageByDiet().execute();
 	                	   			break;
-	                	   			
+	                	   		case 5: new GetTitleImageIntolerances().execute();
+                	   				break;
 	                	   		  }		
 	                   }
 	    });	    	    
@@ -750,5 +757,69 @@ public class Fragment_Recipes extends Fragment implements Interface{
 							}
 					}					
 		
+					
+					// (4) Por intolerancia
+					private class GetTitleImageIntolerances extends AsyncTask<String, Integer, ArrayList<String>>{
+						ArrayList<String> resp=new ArrayList<String>();
+						HttpPost httppost7;
+						HttpPost httppost8;
+								
+						@Override
+					    protected ArrayList<String> doInBackground(String... urls) {
+										    	
+							HttpClient httpclient = new DefaultHttpClient();
+							try {									
+								httppost7 = new HttpPost("http://www.kitchapp.es/getRecipesTitleByIntolerances.php?name="+URLEncoder.encode(searchFilter,"UTF-8"));
+								httppost8 = new HttpPost("http://www.kitchapp.es/getUrlsRecipesImagesByIntolerances.php?name="+URLEncoder.encode(searchFilter,"UTF-8"));
+							} catch (UnsupportedEncodingException e1) {
+								// TODO Auto-generated catch block
+								e1.printStackTrace();
+							}
+									
+							try {
+											
+								JSONObject json7 = new JSONObject();
+								JSONObject json8 = new JSONObject();
+						        //add serialised JSON object into POST request
+						        StringEntity se7 = new StringEntity(json7.toString());
+								StringEntity se8 = new StringEntity(json8.toString());
+								//set request content type
+								se7.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+								httppost7.setEntity(se7);
+								se8.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+								httppost8.setEntity(se8);
+								    
+								//send the POST request
+					 			HttpResponse response7 = httpclient.execute(httppost7);
+					 			HttpResponse response8 = httpclient.execute(httppost8);
+										
+					            //read the response from Services endpoint
+								String jsonResponse7 = EntityUtils.toString(response7.getEntity());
+								String jsonResponse8 = EntityUtils.toString(response8.getEntity());
+								//if (!jsonResponse7.equals("")){
+								   	//  existRecipe=true;
+								    resp.add(jsonResponse7);
+								    resp.add(jsonResponse8);
+								    resp.add(searchFilter);
+						        //}
+					            return resp;		        
+												
+							}catch (Exception e) {
+							      Log.v("Error adding article", e.getMessage());
+							}								
+						    return null;
+						}
+											
+						// onPostExecute displays the results of the AsyncTask.
+						@Override			
+						protected void onPostExecute(ArrayList<String> result) {				
+							//if(existRecipe){
+								Intent intent = new Intent(getActivity(),ShowListRecipes.class);
+								intent.putStringArrayListExtra("recipes", result);
+						    	startActivity(intent);
+							//}										    		    
+						}
+					}
+					
 		
 }
