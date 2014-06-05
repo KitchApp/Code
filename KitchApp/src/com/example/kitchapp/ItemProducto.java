@@ -4,22 +4,29 @@ public class ItemProducto {
   protected long id;
   protected int cantidad;
   protected String nombre;
+  protected boolean selected;
+  protected int category;
+  protected String units;
   protected String barCode;
   
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";
     this.cantidad = 0;
+    this.selected = false;
   }
      
   //public ItemProducto(long id, String nombre, int cantidad, String tipo) {
-  public ItemProducto(int id, String nombre, int cantidad) {
-    this.id = id;
-    this.nombre = nombre;
-    //this.tipo = tipo;
-    this.cantidad = cantidad;
-    //this.barCode=barCode;
-  }
+  public ItemProducto(int id, String nombre, int cantidad,int category,String units,boolean selected) {
+	    this.id = id;
+	    this.nombre = nombre;
+	    //this.tipo = tipo;
+	    this.category = category;
+	    this.units = units;
+	    this.cantidad = cantidad;
+	    this.selected = selected;
+	    //this.barCode=barCode;
+	  }
      
   /*public Item(long id, String nombre, String tipo, String rutaImagen) {
     this.id = id;
@@ -58,6 +65,30 @@ public class ItemProducto {
   
   public void setCantidad(int cantidad) {
 	  this.cantidad = cantidad;
+  }
+  
+  public boolean isSelected() {
+	  return selected;
+  }
+  
+  public void setSelected(boolean selected) {
+	  this.selected = selected;
+  }
+  
+  public int getCategory() {
+	  return category;
+  }
+  
+  public void setCategory(int category) {
+	  this.category = category;
+  }
+  
+  public String getUnits() {
+	  return units;
+  }
+  
+  public void setUnits(String units) {
+	  this.units = units;
   }
      
  /* public String getTipo() {

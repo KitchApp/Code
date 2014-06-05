@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Categorias">
-        <item >Lacteos</item><item>Frutas y Verduras</item>
-        
-        
+        <item >Lacteos</item>
+        <item >Frutas y Verduras</item>
         <item >Pan y Bolleria</item>
         <item >Bebidas</item>
         <item >Carnes</item>
         <item >Pescados</item>
-        <item >Salsas y Condimentos</item>
+        <item >Condimentos</item>
         <item >Pastas y Arroces</item>
         <item >Congelados</item>
+        <item >Salsas</item>
+        <item >Drogueria</item>
         <item >Varios</item>
+    </string-array>
+    
+    <string-array name="Unidades">
+        <item >Litros</item>
+        <item >Mililitros</item>
+        <item >Kilos</item>
+        <item >Gramos</item>
+        <item >Unidades</item>
     </string-array>
     
 </resources>
