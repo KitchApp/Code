@@ -60,11 +60,42 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 				break;
 				
 			case R.id.button3:
+				loadFavoriteRecipe();
 				new GetTitleImageTopTen().execute();
 				break;
 		}
 	}
 	
+	public void loadFavoriteRecipe(){
+		//helper=new Handler_Sqlite(this);
+		//helper.open();
+		titulos=initializeArrayTitleRecipesFromLocalBBDD();
+		imagenes=initializeArrayImagesRecipesFromLocalBBDD();
+		helper.close();
+	}
+	
+	public ArrayList<String> initializeArrayTitleRecipesFromLocalBBDD(){
+		ArrayList<String>items = new ArrayList<String>();
+		ArrayList<String>tmp = new ArrayList<String>();
+		//Leer de la base de datos local los titulos de las recetas favoritas
+		tmp=helper.readInfoFavoriteRecipes("title");
+		for (int i = 0; i < tmp.size(); i++) {
+			items.add((String)tmp.get(i));
+		}
+		return items;
+	}
+	
+		
+	public ArrayList<String> initializeArrayImagesRecipesFromLocalBBDD(){
+		ArrayList<String>items = new ArrayList<String>();
+		ArrayList<String>tmp = new ArrayList<String>();
+		//Leer de la base de datos local las imagenes de las recetas favoritas
+		tmp=helper.readInfoFavoriteRecipes("image");
+		for (int i = 0; i < tmp.size(); i++) {
+			items.add((String)tmp.get(i));
+		}
+		return items;
+	}
 	
 	
 	

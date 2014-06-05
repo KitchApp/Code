@@ -63,13 +63,15 @@ public class Recipes extends ActionBarActivity {
 		            	return Fragment_TopTen.newInstance(infoBundle);
 		            case 1:
 		                return new Fragment_Recipes();
+		            case 2:
+		                return Fragment_Favorites.newInstance(titlefavoriteBundle,imagesfavoriteBundle);
 		            default:
 		            	return null;
 				}
 			}
 	
 			public int getCount() {
-				return 2;
+				return 3;
 			}
 			
 			public CharSequence getPageTitle(int position) {
