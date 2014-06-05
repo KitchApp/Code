@@ -8,29 +8,14 @@ public class ItemProducto {
   protected int category;
   protected String units;
   protected String barCode;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-         
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
   
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
   public ItemProducto() {
     this.nombre = "";
     //this.tipo = "";
     this.cantidad = 0;
     this.selected = false;
   }
+<<<<<<< HEAD
      
   //public ItemProducto(long id, String nombre, int cantidad, String tipo) {
   public ItemProducto(int id, String nombre, int cantidad,int category,String units,boolean selected) {
@@ -41,6 +26,25 @@ public class ItemProducto {
 	    this.units = units;
 	    this.cantidad = cantidad;
 	    this.selected = selected;
+	    //this.barCode=barCode;
+	  }
+=======
+  
+  public ItemProducto(int id, String nombre, int cantidad) {
+	    this.id = id;
+	    this.nombre = nombre;
+	    this.cantidad = cantidad;
+  }
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
+     
+  public ItemProducto(int id, String nombre, int cantidad,int category,String units, boolean selected) {
+	    this.id = id;
+	    this.nombre = nombre;
+	    //this.tipo = tipo;
+	    this.category = category;
+	    this.cantidad = cantidad;
+	    this.selected = selected;
+	    this.units = units;
 	    //this.barCode=barCode;
 	  }
      

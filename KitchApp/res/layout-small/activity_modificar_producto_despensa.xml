@@ -6,6 +6,7 @@
     android:orientation="vertical" >
     
     <EditText 
+<<<<<<< HEAD
          android:id="@+id/nameProductModify"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
@@ -88,6 +89,70 @@
 	        android:text="@string/cancel" 
 	        android:textSize="22sp" />
 >>>>>>> Rama-Edu-Android
+=======
+	        android:id="@+id/nameProductModify"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginBottom="20dp"
+	        android:singleLine="true" >
+	        <requestFocus />
+	</EditText>
+	
+    <LinearLayout 
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	    	android:orientation="horizontal" >
+	    
+		 	<Button
+				   android:id="@+id/button_decrement"
+				   style="@style/boton_style"
+				   android:layout_weight="1"			   	       			   	    
+				   android:background="@drawable/numberpicker_down" />
+			    	    
+		 	<EditText 
+		           android:id="@+id/cantProduct"
+		           style="@style/boton_style"
+			   	   android:layout_weight="1"
+				   android:text="15"	   
+		    	   android:textColor="@color/navy"
+		    	   android:gravity="center"
+		    	   android:textSize="30sp">	
+		 	</EditText>	
+		    
+		 	<Button
+		           android:id="@+id/button_increment"
+		           style="@style/boton_style"
+				   android:layout_weight="1"
+		           android:background="@drawable/numberpicker_up" 
+		           android:onClick="incrementCant" />
+		 		  
+    </LinearLayout>
+    
+    <LinearLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:layout_marginTop="10dp">
+	        
+        	<Button
+			        android:id="@+id/button_cancel"
+			        style="@style/boton_style"
+					android:layout_weight="1"
+			        android:background="@color/lightGray" 
+			        android:text="@string/cancel" 
+			        android:textSize="22sp" />
         
-    </LinearLayout>    
+         	
+         	<Button
+			        android:id="@+id/button_save"
+			        style="@style/boton_style"
+					android:layout_weight="1"
+			        android:background="@color/lightGray" 
+			        android:text="@string/save" 
+			        android:textSize="22sp"/>
+			        		        
+    </LinearLayout>
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
+        
 </LinearLayout>

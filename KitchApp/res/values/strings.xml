@@ -48,8 +48,24 @@
     <string name="listadelacompra">Lista de la compra</string>
     <string name="accept">Aceptar</string>
     <string name="delete">Eliminar</string>
+<<<<<<< HEAD
     <string name="dialog_header">Nombre de la lista</string>
     <string name="categorySelected">Seleccionar categoría y unidades</string>
+=======
+    <string name="search">Buscar</string>
+    <string name="manual">Manual</string>
+    <string name="voice">Voz</string>
+    <string name="barcode">Barras</string>
+    <string name="logout">Salir</string>
+    <string name="home">Inicio</string>
+    <string name="dialog_header">Nombre de la lista</string>
+    <string name="categorySelected">Seleccionar categoría</string>
+    <string name="topTen">Top Ten</string>
+    <string name="recipes">Recetas</string>
+    <string name="favourite">Favoritos</string>
+    <string name="headerIngredients">Ingredientes</string>
+    <string name="headerPreparation">Preparación</string>
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
     <string name="unitsSelected">Seleccionar unidades</string>
     <string name="buyed">Comprado</string>
    

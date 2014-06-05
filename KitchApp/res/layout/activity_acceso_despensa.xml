@@ -38,6 +38,7 @@
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	            android:orientation="horizontal">		    	
 		   		<Button
 		   	    	android:id="@+id/buttonDairy"
@@ -62,6 +63,14 @@
 		        android:layout_marginLeft="10dp"
 		        android:layout_marginRight="10dp" >		    	
 			   	<Button
+=======
+	            android:orientation="horizontal"
+	            android:padding="5dp" 
+		        android:layout_marginBottom="5dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp" >		    	
+			   	<Button
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		   		        android:id="@+id/buttonDairy"
 		   	    		android:layout_width="0dp"
 		   	    		android:layout_height="wrap_content"
@@ -87,12 +96,16 @@
 			   			android:layout_marginRight="10dp"
 					   	android:layout_marginLeft="10dp" />
 			   	    
+<<<<<<< HEAD
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			</LinearLayout>   	
 			   	
 	        <LinearLayout 
 	        	android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
+<<<<<<< HEAD
 <<<<<<< HEAD
 	            android:orientation="horizontal">
 			   	<Button
@@ -102,28 +115,62 @@
 			   	    android:drawableTop="@drawable/pan_bolleria"
 			   	    android:textSize="15dp"
 			   	    android:text="@string/panBolleria" />
+=======
+	            android:orientation="horizontal"
+	            android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp" >
+				<Button
+			   			android:id="@+id/buttonBread"
+						android:layout_width="0dp"
+		   	    		android:layout_height="wrap_content"
+	        	   		android:layout_weight="1"
+			   			android:background="@color/lightGreen"
+			   			android:textColor="@color/white"
+			   			android:drawableTop="@drawable/pan_bolleria"
+			   			android:textSize="15sp"
+			   			android:text="@string/panBolleria"
+			   			android:layout_marginRight="10dp"
+			   			android:layout_marginLeft="10dp" />
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			
-			   	<Button
-			       	android:id="@+id/buttonDrinks"
-			       	android:layout_weight="1"		
-			       	android:background="@color/lightGreen"	       	
-			       	android:drawableTop="@drawable/bebidas"
-			       	android:textSize="15dp"
-			       	android:text="@string/bebidas" />
+				<Button
+			       		android:id="@+id/buttonDrinks"
+			       		android:layout_width="0dp"
+		   	    		android:layout_height="wrap_content"
+			       		android:layout_weight="1"		
+				       	android:background="@color/lightGreen"
+				       	android:textColor="@color/white"	       	
+				       	android:drawableTop="@drawable/bebidas"
+				       	android:textSize="15sp"
+			    	   	android:text="@string/bebidas" 
+			       		android:layout_marginRight="10dp"
+			   			android:layout_marginLeft="10dp" />
 			</LinearLayout>
 			
 	        <LinearLayout 
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:orientation="horizontal">
-			   	<Button
-			   	    android:id="@+id/buttonMeat"
-			   	    android:layout_weight="1"
-			   	    android:background="@color/lightGreen"
-			   	    android:drawableTop="@drawable/carnes"
-			   	    android:textSize="15dp"
-			   	    android:text="@string/carnes" />
+	           	android:layout_width="fill_parent"
+	           	android:layout_height="wrap_content"
+	        	android:orientation="horizontal"
+	           	android:padding="10dp" 
+		        android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp" >
+				<Button
+						android:id="@+id/buttonMeat"
+						android:layout_width="0dp"
+		   	    		android:layout_height="wrap_content"
+			   			android:layout_weight="1"
+			   			android:background="@color/lightGreen"
+			   			android:textColor="@color/white"
+			   			android:drawableTop="@drawable/carnes"
+			   			android:textSize="15sp"
+					   	android:text="@string/carnes" 
+					   	android:layout_marginRight="10dp"
+			   			android:layout_marginLeft="10dp" />
 	            
+<<<<<<< HEAD
 			   	<Button
 			       	android:id="@+id/buttonFish"
 			       	android:layout_weight="1"
@@ -185,6 +232,8 @@
 					   	android:layout_marginRight="10dp"
 			   			android:layout_marginLeft="10dp" />
 	            
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 				<Button
 			    	   	android:id="@+id/buttonFish"
 			       		android:layout_width="0dp"
@@ -198,11 +247,15 @@
 			       		android:layout_marginRight="10dp"
 			   			android:layout_marginLeft="10dp" />						   	
 
+<<<<<<< HEAD
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			</LinearLayout>
 			
 			<LinearLayout 
 			    android:layout_width="fill_parent"
+<<<<<<< HEAD
 <<<<<<< HEAD
 			    android:layout_height="wrap_content"
 			    android:orientation="horizontal">
@@ -222,6 +275,8 @@
 			       	android:textSize="15dp"
 			       	android:text="@string/pastasArroces" />
 =======
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 				android:layout_height="wrap_content"
 				android:orientation="horizontal"
 				android:padding="10dp" 
@@ -254,6 +309,7 @@
 				       	android:layout_marginRight="10dp"
 				   		android:layout_marginLeft="10dp" />
 	
+<<<<<<< HEAD
 >>>>>>> Rama-Edu-Android
 			</LinearLayout>			   				   			   	
 							   					   	
@@ -276,27 +332,82 @@
 					android:drawableTop="@drawable/salsas"
 			       	android:textSize="15dp"
 			       	android:text="@string/salsas" />
-			</LinearLayout>		
-			
+=======
+			</LinearLayout>			   				   			   	
+							   					   	
 			<LinearLayout 
-			    android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-			    android:orientation="horizontal">
-			   	<Button
-			   	    android:id="@+id/buttonStore"
-			   	    android:layout_weight="1"
-			   	    android:background="@color/lightGreen"
-			   	    android:drawableTop="@drawable/drogueria"
-			   	    android:textSize="15dp"
-			   	    android:text="@string/drogueria" />
-			   	<Button
-			       	android:id="@+id/buttonOthers"
-			       	android:layout_weight="1"
-			       	android:background="@color/lightGreen"
-					android:drawableTop="@drawable/varios"
-			       	android:textSize="15dp"
-			       	android:text="@string/varios" />
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="10dp" 
+			    android:layout_marginBottom="10dp"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginRight="5dp" >
+				<Button
+					   	android:id="@+id/buttonFrozen"
+				   		android:layout_width="0dp"
+			   	    	android:layout_height="wrap_content"
+					   	android:layout_weight="1"
+					   	android:background="@color/lightGreen"
+					   	android:textColor="@color/white"
+					   	android:drawableTop="@drawable/congelados"
+				   		android:textSize="15sp"
+					   	android:text="@string/congelados" 
+					   	android:layout_marginRight="10dp"
+					   	android:layout_marginLeft="10dp" />
+					
+				<Button
+				       	android:id="@+id/buttonSauces"
+				       	android:layout_width="0dp"
+			   	    	android:layout_height="wrap_content"
+				       	android:layout_weight="1"
+				       	android:background="@color/lightGreen"
+				       	android:textColor="@color/white"
+						android:drawableTop="@drawable/salsas"
+				       	android:textSize="15sp"
+				       	android:text="@string/salsas" 
+				       	android:layout_marginRight="10dp"
+				   		android:layout_marginLeft="10dp" />
+				   	
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			</LinearLayout>		
+				
+			<LinearLayout 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="10dp" 
+	           	android:layout_marginBottom="10dp"
+	           	android:layout_marginLeft="5dp"
+	           	android:layout_marginRight="5dp" >
+				<Button
+				   		android:id="@+id/buttonStore"
+				   		android:layout_width="0dp"
+			   	    	android:layout_height="wrap_content"
+				   		android:layout_weight="1"
+				   		android:background="@color/lightGreen"
+				   		android:textColor="@color/white"
+				   		android:drawableTop="@drawable/drogueria"
+				   		android:textSize="15sp"
+				   		android:text="@string/drogueria"
+					   	android:layout_marginRight="10dp"
+					   	android:layout_marginLeft="10dp" />
+				   	   
+				<Button
+				       	android:id="@+id/buttonOthers"
+				       	android:layout_width="0dp"
+			   	    	android:layout_height="wrap_content"
+				       	android:layout_weight="1"
+				       	android:background="@color/lightGreen"
+				       	android:textColor="@color/white"
+						android:drawableTop="@drawable/varios"
+				       	android:textSize="15sp"
+		   		       	android:text="@string/varios" 
+				       	android:layout_marginRight="10dp"
+					   	android:layout_marginLeft="10dp" />
+	
+			</LinearLayout>		
+<<<<<<< HEAD
 
 			<!--<LinearLayout 
 			    android:layout_width="fill_parent"
@@ -382,6 +493,8 @@
 					   	android:layout_marginLeft="10dp" />
 	
 			</LinearLayout>		
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	
 				<!--<LinearLayout 
 				    android:layout_width="fill_parent"
@@ -396,6 +509,9 @@
 		   		</LinearLayout>  -->		
  
 		</LinearLayout>
+<<<<<<< HEAD
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	</RelativeLayout>
 </ScrollView>

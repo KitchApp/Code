@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:kitchapp="http://schemas.android.com/apk/res-auto" >
 
@@ -22,3 +23,33 @@
         android:title="@string/delete"/>
 
 </menu>
+=======
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+      xmlns:kitchapp="http://schemas.android.com/apk/res-auto">
+    
+    <item 
+        android:id="@+id/add_Product"
+        kitchapp:showAsAction="always"
+        android:icon="@drawable/ic_action_new"
+        android:title="@string/add"/>
+    
+    <item 
+        android:id="@+id/delete_Product"
+        kitchapp:showAsAction="always"
+        android:icon="@drawable/ic_action_discard"
+        android:title="@string/delete"/>
+    
+    <item 
+        android:id="@+id/home"
+        kitchapp:showAsAction="always|withText"
+        android:icon="@drawable/ic_action_dial_pad"
+        android:title="@string/home"/>
+    
+    <item 
+        android:id="@+id/logout"
+        kitchapp:showAsAction="always|withText"
+        android:icon="@drawable/ic_action_forward"
+        android:title="@string/logout"/>
+
+</menu>
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1

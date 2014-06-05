@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
+<<<<<<< HEAD
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -14,4 +15,20 @@
         android:layout_marginLeft="150dp"
         android:layout_marginTop="180dp" />
          
+=======
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@drawable/propuestaportadaappis"
+	    android:orientation="vertical" >
+	
+	    <ProgressBar
+		        android:id="@+id/progressBar1"
+		        style="?android:attr/progressBarStyleLarge"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="150dp"
+		        android:layout_marginTop="180dp" />
+	         
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 </LinearLayout>

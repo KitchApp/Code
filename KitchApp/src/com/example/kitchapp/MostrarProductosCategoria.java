@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.ActionBarActivity;
@@ -70,6 +71,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 		
+<<<<<<< HEAD
 <<<<<<< HEAD
 		
 <<<<<<< HEAD
@@ -165,6 +167,8 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 >>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
 =======
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -217,10 +221,14 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 
 				case 11:
 <<<<<<< HEAD
+<<<<<<< HEAD
 					title.setText("Droguer�a");
 =======
 					title.setText("Drogueria");
 >>>>>>> Rama-Edu-Android
+=======
+					title.setText("Drogueria");
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 					break;
 			
 				case 12:
@@ -230,6 +238,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 			}
 		}
 			
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -349,6 +358,8 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 		button_add.setOnClickListener(this);
 =======
 >>>>>>> Rama-Edu-Android
+=======
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -382,6 +393,16 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
 		switch (item.getItemId()) {
+<<<<<<< HEAD
+=======
+		
+			case R.id.home:
+				Intent intent = new Intent(this, PantallaPrincipal.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+				return true;
+			
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			case R.id.add_Product:
 				alertDialogListView(true,0);
 				return true;
@@ -400,6 +421,22 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 				}
 				return true;
 				
+<<<<<<< HEAD
+=======
+			case R.id.logout:
+				SharedPreferences settings = getSharedPreferences(PantallaTransicion.PREFS_NAME, 0);
+				SharedPreferences.Editor editor = settings.edit();
+		
+				editor.putBoolean("hasLoggedIn", false);
+				editor.commit();
+		
+				Intent j = new Intent(this, Login.class);
+				j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(j);
+				finish();
+				return true;
+				
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			default:
 				return super.onOptionsItemSelected(item);
 		}
@@ -493,6 +530,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 					unit = "unid";
 				}
 	 			addProductPantry(unit);
+<<<<<<< HEAD
 				break;
 			
 			case R.id.buttonCancelPantry:
@@ -501,6 +539,16 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 				startActivity(intent);
 				finish();
 				break;
+=======
+				break;
+			
+			case R.id.buttonCancelPantry:
+				Intent intent = new Intent(this,MostrarProductosCategoria.class);
+				intent.putExtra("idCat",tipoCat);
+				startActivity(intent);
+				finish();
+				break;
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 				
 				
 		}
@@ -770,6 +818,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
    	 			}
    	 			else {
 <<<<<<< HEAD
+<<<<<<< HEAD
    	 				initializeArrayList(tipoCat);
    	 				ItemProducto item = new ItemProducto(products.size(),name,cant);
    	 				boolean encontrado = false;
@@ -846,6 +895,9 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 =======
    	 				selectUnits();
 >>>>>>> Rama-Edu-Android
+=======
+   	 				selectUnits();
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
    	 			}
    	 		}
 		

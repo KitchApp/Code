@@ -7,6 +7,7 @@
     android:padding="10dp" >
  
     <TextView
+<<<<<<< HEAD
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,3 +30,23 @@
 </LinearLayout>
 
 
+=======
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	 
+    <EditText
+	        android:id="@+id/editTextDialogUserInput"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/dialog_header" 
+		    android:textColorHint="@color/black"
+		    android:textSize="20sp"
+		    android:fontFamily="sans-serif" >	    	    		 
+        	<requestFocus />
+ 
+    </EditText>
+ 
+</LinearLayout>
+>>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
