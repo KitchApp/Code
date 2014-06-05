@@ -64,11 +64,7 @@ public class ItemProductoAdapter extends BaseAdapter {
     nombre.setText(item.getNombre());
          
     TextView cantidad = (TextView) vi.findViewById(R.id.textView_Item_Cant);
-<<<<<<< HEAD
-	cantidad.setText(item.getCantidad() + "");
-=======
     cantidad.setText(item.getCantidad() + "");
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
     
     TextView units = (TextView) vi.findViewById(R.id.textView_Item_Units);
     units.setText(item.getUnits());
