@@ -41,11 +41,8 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		buttonPantry.setOnClickListener(this);
 		Button buttonList = (Button) findViewById(R.id.button1);
 		buttonList.setOnClickListener(this);
-<<<<<<< HEAD
-=======
 		Button buttonRecipes = (Button) findViewById(R.id.button3);
 		buttonRecipes.setOnClickListener(this);
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		
 }
 	
@@ -61,12 +58,6 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 				Intent j = new Intent(this, AccesoDespensa.class);
 				startActivity(j);
 				break;
-<<<<<<< HEAD
-		}
-	}
-	
-	
-=======
 				
 			case R.id.button3:
 				loadFavoriteRecipe();
@@ -183,5 +174,4 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		}
 	}
 
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 }
