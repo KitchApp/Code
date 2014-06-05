@@ -3,12 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true">
-	<LinearLayout 
+    android:fillViewport="true" >
+    
+    <LinearLayout 
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical"
+<<<<<<< HEAD
     	android:background="@color/white">
+=======
+    	android:background="@color/white" >
+>>>>>>> Rama-Edu-Android
 
     	
     	<TextView
@@ -18,21 +23,20 @@
         	android:layout_gravity="center_horizontal"
         	android:text="@string/lacteos"
         	android:textSize="40sp" 
-        	android:textColor="@color/navy"/>
+        	android:textColor="@color/navy" />
     
     	<ListView
         	android:id="@+id/listViewProducts"
         	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content">
+        	android:layout_height="wrap_content" >
         
     	</ListView>
     	
-    	<Button
-	   	    android:id="@+id/button_add"
-	   	    android:layout_width="wrap_content"
-	   	    android:layout_height="wrap_content"
-	   	    android:background="@drawable/anadir_icono" 
-	   	    android:layout_gravity="center_horizontal"/>    	    	
+    	 	
 
+<<<<<<< HEAD
 	</LinearLayout>
+=======
+    </LinearLayout>
+>>>>>>> Rama-Edu-Android
 </ScrollView>

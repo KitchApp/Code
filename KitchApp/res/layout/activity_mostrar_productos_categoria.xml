@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true">
-	<LinearLayout 
+    android:fillViewport="true" >
+    
+    <LinearLayout 
     	android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
     	android:orientation="vertical"
@@ -27,12 +28,11 @@
         
     	</ListView>
     	
-    	<Button
-	   	    android:id="@+id/button_add"
-	   	    android:layout_width="wrap_content"
-	   	    android:layout_height="wrap_content"
-	   	    android:background="@drawable/anadir_icono" 
-	   	    android:layout_gravity="center_horizontal"/>    	    	
+    	   	
 
+<<<<<<< HEAD
 	</LinearLayout>
+=======
+    </LinearLayout>
+>>>>>>> Rama-Edu-Android
 </ScrollView>

@@ -28,7 +28,9 @@
     <string name="title_activity_add_despensa">AddDespensa</string>
     <string name="title_activity_modificar_producto_despensa">ModificarProductoDespensaActivity</string>
     <string name="save">Guardar</string>
+    <string name="save2">Guardar</string>
     <string name="cancel">Cancelar</string>
+    <string name="cancel2">Cancelar</string>
     <string name="ok">OK</string>
     <string name="add_manually">Añadir Manualmente</string>
     <string name="nameProduct">Nombre Producto</string>
@@ -37,5 +39,18 @@
     <string name="back">Volver</string>
     <string name="title_activity_mostrar_productos_categoria">MostrarProductosCategoriaActivity</string>
     <string name="title_activity_add_manualmente">AddManualmenteActivity</string>
-
+    <string name="nameOfList">Añadir nuevaLista</string>
+    <string name="addProduct">Añadir artículo</string>
+    <string name="create">Crear</string>
+    <string name="remove">Eliminar</string>
+    <string name="product1">Articulo1</string>
+    <string name="CantProducts">Articulos</string>
+    <string name="listadelacompra">Lista de la compra</string>
+    <string name="accept">Aceptar</string>
+    <string name="delete">Eliminar</string>
+    <string name="dialog_header">Nombre de la lista</string>
+    <string name="categorySelected">Seleccionar categoría y unidades</string>
+    <string name="unitsSelected">Seleccionar unidades</string>
+    <string name="buyed">Comprado</string>
+   
 </resources>

@@ -1,21 +1,28 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-  	android:layout_width="fill_parent"
-  	android:layout_height="fill_parent"
- 	android:fillViewport="true">
-	<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+    <RelativeLayout
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content" 
-    	android:background="#ffffff">
+    	android:background="#ffffff" >
 
 	    <LinearLayout 
 	        android:layout_width="fill_parent"
 	        android:layout_height="fill_parent"
-	        android:orientation="vertical" >
+	        android:orientation="vertical"
+	        android:paddingTop="10dp" >
+	        
 	        <LinearLayout 
-	            android:layout_width="fill_parent"
-	            android:layout_height="fill_parent"
-	            android:orientation="horizontal">
+	        	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+	           	android:orientation="horizontal"
+	            	android:layout_gravity="center_horizontal"
+	            	android:padding="5dp" 
+		    	android:layout_marginBottom="5dp"
+		    	android:layout_marginLeft="10dp"
+		    	android:layout_marginRight="10dp" >
 		    	<TextView
 		        	android:id="@+id/textView1"
 		        	android:layout_width="wrap_content"
@@ -23,16 +30,21 @@
 		        	android:gravity="center"
 		    		android:text="@string/despensa"
 		    		android:textColor="@color/navy"
-		    		android:textSize="40sp" >		
+		    		android:textSize="50sp" >		
 		    	</TextView>
-			</LinearLayout>
+		</LinearLayout>
 			
 	        <LinearLayout 
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:orientation="horizontal">		    	
-		   		<Button
+	        	android:layout_width="fill_parent"
+	            	android:layout_height="wrap_content"
+	            	android:orientation="horizontal"
+	            	android:padding="5dp" 
+		        android:layout_marginBottom="5dp"
+		        android:layout_marginLeft="30dp"
+		        android:layout_marginRight="30dp" >		    	
+		   	<Button
 		   	    	android:id="@+id/buttonDairy"
+<<<<<<< HEAD
 		   	    	android:layout_weight="1"			   	       			   	    
 			   	    android:background="@color/lightGreen"
 			   	    android:drawableTop="@drawable/lacteos"
@@ -61,9 +73,55 @@
 			   	    android:drawableTop="@drawable/pan_bolleria"
 			   	    android:textSize="15dp"
 			   	    android:text="@string/panBolleria" />
+=======
+		   	    	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+		   	    	android:layout_weight="1"			   	       			   	    
+			   	android:background="@color/lightGreen"
+			   	android:textColor="@color/white"
+			   	android:drawableTop="@drawable/lacteos"
+			   	android:textSize="15sp"
+			   	android:text="@string/lacteos" 
+			   	android:layout_marginRight="30dp" />
+		   	
+			<Button
+				android:id="@+id/buttonFruits"
+			   	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			   	android:layout_weight="1"	
+			   	android:background="@color/lightGreen"
+			   	android:textColor="@color/white"		   	    		   	    			   	    
+			   	android:drawableTop="@drawable/frutas_verduras"
+			   	android:textSize="15sp"
+			   	android:text="@string/frutasVerduras"
+			   	android:layout_marginLeft="30dp"  />
+
+		</LinearLayout>   	
+			   	
+	        <LinearLayout 
+	                android:layout_width="fill_parent"
+	            	android:layout_height="wrap_content"
+	            	android:orientation="horizontal"
+	            	android:padding="5dp" 
+		        android:layout_marginBottom="5dp"
+		        android:layout_marginLeft="30dp"
+		        android:layout_marginRight="30dp" >
+			<Button
+			        android:id="@+id/buttonBread"
+			        android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			   	android:layout_weight="1"
+			   	android:background="@color/lightGreen"
+			   	android:textColor="@color/white"
+			   	android:drawableTop="@drawable/pan_bolleria"
+			   	android:textSize="15sp"
+			   	android:text="@string/panBolleria" 			   	    
+		        	android:layout_marginRight="30dp" />
+>>>>>>> Rama-Edu-Android
 			
-			   	<Button
+			<Button
 			       	android:id="@+id/buttonDrinks"
+<<<<<<< HEAD
 			       	android:layout_weight="1"		
 			       	android:background="@color/lightGreen"	       	
 			       	android:drawableTop="@drawable/bebidas"
@@ -82,9 +140,43 @@
 			   	    android:drawableTop="@drawable/carnes"
 			   	    android:textSize="15dp"
 			   	    android:text="@string/carnes" />
+=======
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			       	android:layout_weight="1"		
+			       	android:background="@color/lightGreen"	
+			       	android:textColor="@color/white"       	
+			       	android:drawableTop="@drawable/bebidas"
+			       	android:textSize="15sp"
+			       	android:text="@string/bebidas" 
+			       	android:layout_marginLeft="30dp" />
+			       	
+		</LinearLayout>
+			
+	        <LinearLayout 
+	                android:layout_width="fill_parent"
+	            	android:layout_height="wrap_content"
+	            	android:orientation="horizontal"
+	            	android:padding="5dp" 
+		        android:layout_marginBottom="5dp"
+	            	android:layout_marginLeft="30dp"
+		        android:layout_marginRight="30dp" >
+		   	<Button
+    		   	        android:id="@+id/buttonMeat"
+			   	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+				android:layout_weight="1"
+			   	android:background="@color/lightGreen"
+			   	android:textColor="@color/white"
+			   	android:drawableTop="@drawable/carnes"
+			   	android:textSize="15sp"
+			   	android:text="@string/carnes"			   	    
+		        	android:layout_marginRight="30dp" />
+>>>>>>> Rama-Edu-Android
 	            
-			   	<Button
+		        <Button
 			       	android:id="@+id/buttonFish"
+<<<<<<< HEAD
 			       	android:layout_weight="1"
 			       	android:background="@color/lightGreen"
 			       	android:drawableTop="@drawable/pescados"
@@ -103,9 +195,43 @@
 			   	    android:drawableTop="@drawable/condimentos"
 			   	    android:textSize="15dp"
 			   	    android:text="@string/condimentos" />
+=======
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+			       	android:textColor="@color/white"
+			       	android:drawableTop="@drawable/pescados"
+			       	android:textSize="15sp"
+			       	android:text="@string/pescados"
+			       	android:layout_marginLeft="30dp" />						   	
+
+		</LinearLayout>
+			
+		<LinearLayout 
+		        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:padding="5dp" 
+		        android:layout_marginBottom="5dp"
+	                android:layout_marginLeft="30dp"
+		        android:layout_marginRight="30dp" >
+			<Button
+			        android:id="@+id/buttonCondiment"
+			   	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			   	android:layout_weight="1"
+			   	android:background="@color/lightGreen"
+			   	android:textColor="@color/white"
+			   	android:drawableTop="@drawable/condimentos"
+			   	android:textSize="15sp"
+			   	android:text="@string/condimentos"			   	    
+		        	android:layout_marginRight="30dp" />
+>>>>>>> Rama-Edu-Android
 			   	
-			   	<Button
+			<Button
 			       	android:id="@+id/buttonPasta"
+<<<<<<< HEAD
 			       	android:layout_weight="1"
 			       	android:background="@color/lightGreen"
 			       	android:drawableTop="@drawable/pastas"
@@ -151,6 +277,86 @@
 					android:drawableTop="@drawable/varios"
 			       	android:textSize="15dp"
 			       	android:text="@string/varios" />
+=======
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+			       	android:textColor="@color/white"
+			       	android:drawableTop="@drawable/pastas"
+			       	android:textSize="15sp"
+			       	android:text="@string/pastasArroces"
+			       	android:layout_marginLeft="30dp" />
+
+		</LinearLayout>			   				   			   	
+						   					   	
+		<LinearLayout 
+		        android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:padding="5dp" 
+		        android:layout_marginBottom="5dp"
+	                android:layout_marginLeft="30dp"
+		        android:layout_marginRight="30dp" >
+			<Button
+			        android:id="@+id/buttonFrozen"
+			   	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+				android:layout_weight="1"
+			   	android:background="@color/lightGreen"
+			   	android:textColor="@color/white"
+			   	android:drawableTop="@drawable/congelados"
+			   	android:textSize="15sp"
+			   	android:text="@string/congelados"			   	    
+		        	android:layout_marginRight="30dp" />
+			
+			<Button
+			       	android:id="@+id/buttonSauces"
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+			       	android:textColor="@color/white"
+				android:drawableTop="@drawable/salsas"
+			       	android:textSize="15sp"
+			       	android:text="@string/salsas"
+			       	android:layout_marginLeft="30dp" />
+			       	
+		</LinearLayout>		
+			
+		<LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+			android:padding="5dp" 
+		        android:layout_marginBottom="5dp"
+	                android:layout_marginLeft="30dp"
+		        android:layout_marginRight="30dp" >
+			<Button
+			        android:id="@+id/buttonStore"
+			        android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			   	android:background="@color/lightGreen"
+			   	android:textColor="@color/white"
+			   	android:drawableTop="@drawable/drogueria"
+			   	android:textSize="15sp"
+			   	android:text="@string/drogueria" 			   	    
+		        	android:layout_marginRight="30dp" />
+
+		   	<Button
+			       	android:id="@+id/buttonOthers"
+			       	android:layout_width="0dp"
+		   	    	android:layout_height="wrap_content"
+			       	android:layout_weight="1"
+			       	android:background="@color/lightGreen"
+			       	android:textColor="@color/white"
+				android:drawableTop="@drawable/varios"
+			       	android:textSize="15sp"
+			       	android:text="@string/varios" 
+			       	android:layout_marginLeft="30dp" />
+			       	
+>>>>>>> Rama-Edu-Android
 			</LinearLayout>		
 
 			<!--<LinearLayout 
@@ -165,7 +371,10 @@
 			   	    android:background="@drawable/lupa_sobre_un_robot_androide" />
 			</LinearLayout>  -->		
 
+<<<<<<< HEAD
 			   	
+=======
+>>>>>>> Rama-Edu-Android
 	   	</LinearLayout>
 	</RelativeLayout>
 </ScrollView>
