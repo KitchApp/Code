@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Categorias">
-<<<<<<< HEAD
         <item >Lacteos</item>
         <item >Frutas y Verduras</item>
-=======
-        <item >Lacteos</item><item>Frutas y Verduras</item>
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
         <item >Pan y Bolleria</item>
         <item >Bebidas</item>
         <item >Carnes</item>
@@ -27,8 +23,6 @@
         <item >Unidades</item>
     </string-array>
     
-<<<<<<< HEAD
-=======
     <string-array name="dietas">
         <item>Baja en calorías</item>
         <item>Baja en grasas</item>
@@ -60,5 +54,4 @@
         <item>Pescado</item>
         <item>Soja</item>
     </string-array>  
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 </resources>
