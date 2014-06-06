@@ -4,92 +4,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
     
-<<<<<<< HEAD
-	<EditText 
-         android:id="@+id/nameProductModify"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_marginTop="15dp"
-         android:layout_marginBottom="20dp"
-         android:singleLine="true" >
-         <requestFocus />
-	</EditText>
-	
-    <LinearLayout 
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:orientation="horizontal" >
-    
-	    <Button
-		android:id="@+id/button_decrement"
-		style="@style/boton_style"
-		android:layout_weight="1"			   	       			   	    
-		android:background="@drawable/numberpicker_down" />
-	    	    
-	    <TextView
-	        android:id="@+id/cantProduct"
-	        style="@style/boton_style"
-			android:layout_weight="1"
-			android:text="15"	    	
-	    	android:textColor="@color/navy"
-	    	android:textSize="50sp" >	
-	    </TextView>	
-	    
-	    <Button
-	        android:id="@+id/button_increment"
-	        style="@style/boton_style"
-		android:layout_weight="1"
-	        android:background="@drawable/numberpicker_up" 
-	        android:onClick="incrementCant" />	  
-	        
-    </LinearLayout>
-    
-    <LinearLayout 
-        android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:orientation="horizontal"
-    	android:layout_marginTop="20dp" >
-        
-        <Button
-	        android:id="@+id/button_save"
-	        style="@style/boton_style"
-<<<<<<< HEAD
-		   	android:layout_weight="1"
-<<<<<<< HEAD
-	        android:background="@color/gray" 
-	        android:text="@string/cancel" 
-=======
-	        android:background="@color/lightGray" 
-	        android:text="@string/save" 
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-	        android:textSize="22dip"/>
-=======
-		android:layout_weight="1"
-	        android:background="@color/lightGray" 
-	        android:text="@string/save" 
-	        android:textSize="22sp" />
->>>>>>> Rama-Edu-Android
-        
-        <Button
-	        android:id="@+id/button_cancel"
-	        style="@style/boton_style"
-<<<<<<< HEAD
-		   	android:layout_weight="1"
-<<<<<<< HEAD
-	        android:background="@color/gray" 
-	        android:text="@string/save" 
-=======
-	        android:background="@color/lightGray" 
-	        android:text="@string/cancel" 
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-	        android:textSize="22dip"/>
-=======
-		android:layout_weight="1"
-	        android:background="@color/lightGray" 
-	        android:text="@string/cancel" 
-	        android:textSize="22sp" />
->>>>>>> Rama-Edu-Android
-=======
     <EditText 
 	        android:id="@+id/nameProductModify"
 	        android:layout_width="fill_parent"
@@ -154,6 +68,5 @@
 			        android:textSize="22sp"/>
 			        		        
     </LinearLayout>
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
         
 </LinearLayout>
