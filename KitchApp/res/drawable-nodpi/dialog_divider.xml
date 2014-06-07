@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
 
@@ -6,13 +5,4 @@
 
     <corners android:radius="5dp" />
 
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <solid android:color="@color/dialog_divider" />
-
-    <corners android:radius="5dp" />
-
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 </shape>
