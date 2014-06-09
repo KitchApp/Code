@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-Code
-====
-
 Code of KitchApp Aplication( Android and Web)
 =======
 General Description
@@ -27,4 +23,3 @@ Code
 ====
 
 Code of the Android Application.
->>>>>>> 6be3e5ca1a8e43c57b93ad3256b04c8549f4c911
