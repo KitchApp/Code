@@ -167,19 +167,21 @@ public class ShowListRecipes extends ActionBarActivity  implements OnClickListen
 		ArrayList<String>items = new ArrayList<String>();
 		String[] titleTmp;
 		String[] tmp=infoBundlePantry.get(2).split("public://");
-		if(!tmp[1].equals("")){
-			for (int i = 1; i < tmp.length; i++) {
-				titleTmp=tmp[i].split(",");
-				titleTmp=titleTmp[0].split("Recetas"+"\\/");
-				titleTmp=titleTmp[1].split(" ");
-				String aux="";
-				for (int j = 0; j < titleTmp.length-1; j++) {
-					aux=aux+titleTmp[j]+"%20";
+		if(tmp.length>=2){
+			if(!tmp[1].equals("")){
+				for (int i = 1; i < tmp.length; i++) {
+					titleTmp=tmp[i].split(",");
+					titleTmp=titleTmp[0].split("Recetas"+"\\/");
+					titleTmp=titleTmp[1].split(" ");
+					String aux="";
+					for (int j = 0; j < titleTmp.length-1; j++) {
+						aux=aux+titleTmp[j]+"%20";
+					}
+					aux=aux+titleTmp[titleTmp.length-1];
+					items.add("http://www.kitchapp.es/sites/default/files/Recetas/"+aux);
+					/*titleTmp=tmp[i].split(",");
+					items.add("http://www.kitchapp.es/sites/default/files/Recetas/"+titleTmp[0]);*/
 				}
-				aux=aux+titleTmp[titleTmp.length-1];
-				items.add("http://www.kitchapp.es/sites/default/files/Recetas/"+aux);
-				/*titleTmp=tmp[i].split(",");
-				items.add("http://www.kitchapp.es/sites/default/files/Recetas/"+titleTmp[0]);*/
 			}
 		}
 		return items;
