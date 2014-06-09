@@ -137,14 +137,17 @@ public class Fragment_Recipes extends Fragment implements Interface{
 			products=helper.readAllProductsPantry();		
 			//for(int i=0;i<products.size();i++){
 				//GetIDRecipesPlusIngredientsByOneIngredient thread=new GetIDRecipesPlusIngredientsByOneIngredient(products.get(i));
-			    GetIDRecipesPlusIngredientsByOneIngredient thread=new GetIDRecipesPlusIngredientsByOneIngredient();
+			if(products.size()==0){
+				Toast.makeText(getActivity(), "No tiene productos en su despensa", Toast.LENGTH_LONG).show();
+			}  
+			else {
+			    	GetIDRecipesPlusIngredientsByOneIngredient thread=new GetIDRecipesPlusIngredientsByOneIngredient();
 				thread.delegate=this;
-				thread.execute();			
+				thread.execute();
+			}
 			
 		//}
-		if(products.size()==0){
-			Toast.makeText(getActivity(), "No tiene productos en su despensa", Toast.LENGTH_LONG).show();
-		}
+		
 	}
 	
 	public ArrayList<String> processFinish(ArrayList<String> output){
