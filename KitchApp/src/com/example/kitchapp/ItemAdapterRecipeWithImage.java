@@ -1,11 +1,8 @@
 package com.example.kitchapp;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.List;
 
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Request;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -62,7 +59,6 @@ import android.widget.TextView;
 			tvTitle.setText(item.getTitle());
 			
 			String tmp=item.getImage();
-			String aux;
 			if(tmp!=null)
 				Picasso.with(context).load(item.getImage()).into(ivItem);
 			else

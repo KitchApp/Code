@@ -16,40 +16,21 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-<<<<<<< HEAD
-=======
 import android.content.SharedPreferences;
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-<<<<<<< HEAD
-=======
 import android.view.Window;
-import android.widget.Button;
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 import android.widget.EditText;
 
 public class Login extends Activity {
 	
-<<<<<<< HEAD
-=======
-	private EditText userName;
-	private EditText password;
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 	Boolean registrado=false;
 
@@ -73,51 +54,14 @@ public class Login extends Activity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
      
         setContentView(R.layout.activity_login);
-
 		
-<<<<<<< HEAD
-=======
-		userName = (EditText)findViewById(R.id.editTextuserName);
-		password = (EditText)findViewById(R.id.editTextPassword);
-
-		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
-		Button b1=(Button)findViewById(R.id.btnLogin);
-		
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	}
 
 		
 
 	public void intento_logueo(View view) {
-<<<<<<< HEAD
-		String name = userName.getText().toString(); 
-		String key = password.getText().toString();
-<<<<<<< HEAD
-		SQLiteDatabase tmp = helper.open();
-		if (tmp != null) {
-			if (helper.readUser(name) && key.equals(helper.readPassword(name))) {
-				Intent i = new Intent(this, PantallaTransicion.class);
-
-				startActivity(i);
-			}
-			else if (!helper.readUser(name)) {
-				errorLogging();
-			}
-			else {
-				errorPassword();
-			}
-			helper.close();
-		}				
-
-=======
 		
 		new HttpAsyncTask().execute();
->>>>>>> Rama-Edu-Android
-=======
-		
-		
-		new HttpAsyncTask().execute();
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	}
 	
 	public void registrarse(View view) {
@@ -149,100 +93,11 @@ public class Login extends Activity {
 	    builder.show();
 	}
    
-<<<<<<< HEAD
 
 	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
 		
-
-		
-        @Override
-        protected Integer doInBackground(String... urls) {
-        	
-        	
-        	HttpClient httpclient = new DefaultHttpClient();
-
-            //set the remote endpoint URL
-            HttpPost httppost = new HttpPost("http://www.kitchapp.es/json/user/login");
-            
-            try {
-
-                //get the UI elements for username and password
-            	EditText username= (EditText) findViewById(R.id.editTextuserName);
-                EditText password= (EditText) findViewById(R.id.editTextPassword);
-
-                JSONObject json = new JSONObject();
-                //extract the username and password from UI elements and create a JSON object
-                json.put("username", username.getText().toString().trim());
-                json.put("password", password.getText().toString().trim());
-
-                //add serialised JSON object into POST request
-                StringEntity se = new StringEntity(json.toString());
-                //set request content type
-                se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-                httppost.setEntity(se);
-
-                //send the POST request
-                HttpResponse response = httpclient.execute(httppost);
-
-                //read the response from Services endpoint
-                String jsonResponse = EntityUtils.toString(response.getEntity());
-
-                JSONObject jsonObject = new JSONObject(jsonResponse);
-                //read the session information
-                session_name=jsonObject.getString("session_name");
-                session_id=jsonObject.getString("sessid");
-                if (jsonObject!=null)
-                	registrado=true;
-                return 0;
-
-            }catch (Exception e) {
-                Log.v("Error adding article", e.getMessage());
-            }
-
-            return 0;
-        }
-
-       // onPostExecute displays the results of the AsyncTask.
-       @Override
-        protected void onPostExecute(Integer result) {
-        	if(registrado){
-    			Intent intent = new Intent(Login.this,PantallaTransicion.class);
-    	    	startActivity(intent);
-    			finish();
-    		}
-    		else
-    			errorLogging();
-            
-            
-       }
-    }
-
 
 	
-<<<<<<< HEAD
-	public void errorPassword() {
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		 
-	    builder.setTitle("Error")
-	            .setIcon(
-	                    getResources().getDrawable(
-	                            R.drawable.close))
-=======
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
-
-	private class HttpAsyncTask extends AsyncTask<String, Integer, Integer> {
-		
-
-<<<<<<< HEAD
-	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-=======
-	public static String httpGetData(String mURL) {
-		 InputStream inputStream = null;
-	        String result = "";
-	        try {
->>>>>>> Rama-Edu-Android
-=======
-		
         @Override
         protected Integer doInBackground(String... urls) {
         	
@@ -317,7 +172,6 @@ public class Login extends Activity {
         InputStream inputStream = null;
 	        String result = "";
 	        try {
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	 
 	            // create HttpClient
 	            HttpClient httpclient = new DefaultHttpClient();
@@ -353,18 +207,7 @@ public class Login extends Activity {
 	        inputStream.close();
 	        return result;
 	 
-<<<<<<< HEAD
 	  }
 	
 
 }
-	
-
-
-=======
-	    }
-	
-	 }
-	
-	
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1

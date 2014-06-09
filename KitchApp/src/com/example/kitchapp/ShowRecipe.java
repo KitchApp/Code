@@ -1,10 +1,8 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.apache.commons.lang3.text.translate.UnicodeEscaper;
 import org.apache.commons.lang3.text.translate.UnicodeUnescaper;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -19,23 +17,17 @@ import org.json.JSONObject;
 import com.squareup.picasso.Picasso;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -148,7 +140,6 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 		//ArrayList<ItemReceta> ingredients=new ArrayList<ItemReceta>();
 		//ArrayList<ItemReceta> quantities=new ArrayList<ItemReceta>();
 		ArrayList<ItemReceta> units=new ArrayList<ItemReceta>();
-		ListView list;
 		ItemIngredientsAdapter adapter;
 		public GetInfoRecipeById(Activity activity){
 	        this.activity = activity;
@@ -231,10 +222,8 @@ public class ShowRecipe extends ActionBarActivity  implements OnClickListener {
 			
 			//Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 			titleRef.setText(titleBundle);			
-			String aux=imageBundle;
 			Picasso.with(getApplicationContext()).load(imageBundle).into(imageRef);
 			//result[0] contiene el numero de personas
-			String tmp=result.get(0);
 			result.set(0, parseNumPersons(result.get(0)));
 			numPersRef.setText(result.get(0)+" Personas");
 			headerIngredients.setText("Ingredientes");

@@ -15,27 +15,6 @@ public class ItemProducto {
     this.cantidad = 0;
     this.selected = false;
   }
-<<<<<<< HEAD
-     
-  //public ItemProducto(long id, String nombre, int cantidad, String tipo) {
-  public ItemProducto(int id, String nombre, int cantidad,int category,String units,boolean selected) {
-	    this.id = id;
-	    this.nombre = nombre;
-	    //this.tipo = tipo;
-	    this.category = category;
-	    this.units = units;
-	    this.cantidad = cantidad;
-	    this.selected = selected;
-	    //this.barCode=barCode;
-	  }
-=======
-  
-  public ItemProducto(int id, String nombre, int cantidad) {
-	    this.id = id;
-	    this.nombre = nombre;
-	    this.cantidad = cantidad;
-  }
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
      
   public ItemProducto(int id, String nombre, int cantidad,int category,String units, boolean selected) {
 	    this.id = id;

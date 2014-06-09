@@ -1,36 +1,18 @@
 package com.example.kitchapp;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.text.translate.UnicodeEscaper;
 import org.apache.commons.lang3.text.translate.UnicodeUnescaper;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicHeader;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -112,7 +94,6 @@ public class Fragment_TopTen extends Fragment implements OnClickListener{
 		for (int i = 1; i < tmp.length; i++) {
 			titleTmp=tmp[i].split("\""+","+"\""+"nid"+"\""+":"+"\"");
 			idRecipes.add(Integer.parseInt(titleTmp[1].split("\"")[0]));
-			 UnicodeEscaper escaper = UnicodeEscaper.above(127);
     	     UnicodeUnescaper unescaper     = new UnicodeUnescaper();
     	  
     	     //String textoProblematico = "M�sica";

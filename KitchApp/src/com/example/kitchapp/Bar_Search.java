@@ -148,7 +148,7 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 			SQLiteDatabase db = helper.open();
 			if (db != null) {
 				helper.updateProduct(txt_product.getText().toString(),txt_prod.getText().toString(),
-						Integer.parseInt(txt_qty.getText().toString()));
+						Integer.parseInt(txt_qty.getText().toString()),"updatePantry",1);
 //				helper.close();
 			}
 			helper.close();
@@ -158,6 +158,7 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 			j.putExtra("prod",txt_product.getText());
 			j.putExtra("qty",txt_quantity.getText());
 			startActivity(j);
+			finish();
 			break;
 
 		case R.id.button_cancel:
@@ -165,6 +166,7 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 			i.putExtra("prod",txt_product.getText());
 			i.putExtra("qty",txt_quantity.getText());
 			startActivity(i);
+			finish();
 			break;
 
 		case R.id.button_decrement:
@@ -322,7 +324,7 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 		view = inflater.inflate(R.layout.activity_modificar_producto_despensa,
 				null);
 		
-		txt_prod = (EditText) view.findViewById(R.id.ingredients);
+		txt_prod = (EditText) view.findViewById(R.id.nameProductModify);
 		txt_prod.setText(txt_product.getText());
 		txt_qty = (EditText) view.findViewById(R.id.cantProduct);
 		txt_qty.setText(txt_quantity.getText());

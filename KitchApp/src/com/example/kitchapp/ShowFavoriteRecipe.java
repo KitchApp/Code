@@ -2,13 +2,8 @@ package com.example.kitchapp;
 
 import java.util.ArrayList;
 
-
-
-
-
 import com.squareup.picasso.Picasso;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;

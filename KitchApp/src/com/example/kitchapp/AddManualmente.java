@@ -74,7 +74,7 @@ public class AddManualmente extends Activity implements OnClickListener {
 				else {
 					SQLiteDatabase tmp = helper.open();
 					if (tmp != null) {
-						if (helper.existProductAdded(nameProduct.getText().toString())) {
+						if (helper.existProductAdded(nameProduct.getText().toString().toLowerCase())) {
 							int cantLast = helper.getCant(nameProduct.getText().toString());
 							helper.updateProduct(nameProduct.getText().toString(),nameProduct.getText().toString(),cantLast + cant,"updatePantry",1);
 						}
@@ -82,9 +82,6 @@ public class AddManualmente extends Activity implements OnClickListener {
 							String unit = "";
 				 			if (units.equals("Litros")) {
 								unit = "l";
-							}
-							else if (units.equals("Centilitros")) {
-								unit = "cl";
 							}
 							else if (units.equals("Mililitros")) {
 								unit = "ml";
@@ -94,9 +91,6 @@ public class AddManualmente extends Activity implements OnClickListener {
 							}
 							else if (units.equals("Gramos")) {
 								unit = "gr";
-							}
-							else if (units.equals("Miligramos")) {
-								unit = "mg";
 							}
 							else if (units.equals("Unidades")) {
 								unit = "unid";

@@ -10,16 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class Fragment_Favorites extends Fragment{
 	View rootView;
-	private static ArrayList<String> infoBundle1;
-	private static ArrayList<String> infoBundle2;
 	private ArrayList<String> titulos;
 	private ArrayList<String> imagenes;
 	//private ArrayList<Integer> idRecipes;

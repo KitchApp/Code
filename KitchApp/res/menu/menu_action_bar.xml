@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:kitchapp="http://schemas.android.com/apk/res-auto" >
-
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
-    
-    <item 
-        android:id="@+id/add_Product"
-        android:orderInCategory="100"
-        kitchapp:showAsAction="ifRoom|withText"
-        android:icon="@drawable/add_product"
-        android:title="@string/add"/>
-    
-    <item 
-        android:id="@+id/delete_Product"
-        android:orderInCategory="100"
-        kitchapp:showAsAction="ifRoom|withText"
-        android:icon="@drawable/delete"
-        android:title="@string/delete"/>
-
-</menu>
-=======
 <menu xmlns:android="http://schemas.android.com/apk/res/android" 
       xmlns:kitchapp="http://schemas.android.com/apk/res-auto">
     
@@ -52,4 +26,3 @@
         android:title="@string/logout"/>
 
 </menu>
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1

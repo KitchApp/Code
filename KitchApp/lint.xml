@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
-<<<<<<< HEAD
-    <issue id="DefaultLocale" severity="ignore" />
-    <issue id="ShowToast" severity="ignore" />
-    <issue id="UseSparseArrays" severity="ignore" />
-=======
     <issue id="DefaultLocale">
+        <ignore path="src/com/example/kitchapp/AddManualmente.java" />
+        <ignore path="src/com/example/kitchapp/Bar_Search.java" />
+        <ignore path="src/com/example/kitchapp/MostrarProductosCategoria.java" />
         <ignore path="src/com/example/kitchapp/MostrarProductosLista.java" />
+    </issue>
+    <issue id="ShowToast">
+        <ignore path="src/com/example/kitchapp/Registro.java" />
     </issue>
     <issue id="UseSparseArrays">
         <ignore path="src/com/example/kitchapp/MostrarProductosLista.java" />
     </issue>
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 </lint>

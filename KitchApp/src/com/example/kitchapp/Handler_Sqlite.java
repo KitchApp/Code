@@ -16,21 +16,11 @@ import static android.provider.BaseColumns._ID;
 
 
 public class Handler_Sqlite extends SQLiteOpenHelper{
-<<<<<<< HEAD
-
-=======
->>>>>>> Rama-Edu-Android
-
-
-<<<<<<< HEAD
-	private static final String nameBD = "KitchApp5-BaseDD";
-=======
-	private static final String nameBD = "KitchApp1";
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
+	private static final String nameBD = "KitchApp6-BaseDD";
 
 	Context myContext;
 	public Handler_Sqlite(Context ctx){
-		super(ctx,nameBD, null,3);
+		super(ctx,nameBD, null,1);
 		myContext = ctx;
 	}
 	
@@ -42,30 +32,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	@Override
 	//This method is called when the database is created for the first time.
 	public void onCreate(SQLiteDatabase db){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, barCode TEXT);";
-=======
-		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cant INTEGER, idCat INTEGER, units TEXT, barCode TEXT);";
->>>>>>> Rama-Edu-Android
-=======
 		String query1 = "CREATE TABLE products ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT COLLATE NOCASE, cant INTEGER, idCat INTEGER, units TEXT, barCode TEXT);";
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		String query2 = "CREATE TABLE productsTemporary("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, barCode TEXT);";
 		
 		//This method is limited to directly execute the SQL code that we pass as a parameter
@@ -73,43 +40,15 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		String query4 = "CREATE TABLE listShopping ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)";
 		String query5 = "CREATE TABLE productsList ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, idCat INTEGER, units TEXT, barCode TEXT)";
 		String query6 = "CREATE TABLE listHaveProducts ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, idList INTEGER, idProduct INTEGER,  cant INTEGER, FOREIGN KEY (idList) REFERENCES listShopping("+_ID+"), FOREIGN KEY (idProduct) REFERENCES productsList("+_ID+"))";
-<<<<<<< HEAD
-		
-		db.execSQL(query1);	
-		db.execSQL(query2);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		//db.execSQL(query2);
-=======
-=======
-		db.execSQL(query3);
->>>>>>> Rama-Edu-Android
-=======
-=======
-		//db.execSQL(query2);
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-=======
->>>>>>> Rama-Edu-Android
-=======
 		String query7 = "CREATE TABLE favorites ("+_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, idRecipe INTEGER, title TEXT, image TEXT,numPers INTEGER,nationality TEXT,ingredients TEXT, quantities TEXT, units TEXT,preparation TEXT )";
 		
 		db.execSQL(query1);	
 		db.execSQL(query2);
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		db.execSQL(query3);
 		db.execSQL(query4);
 		db.execSQL(query5);
 		db.execSQL(query6);
-<<<<<<< HEAD
-=======
 		db.execSQL(query7);
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		
 		 InputStream is = null;
 		    try {
@@ -141,45 +80,13 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	@Override
 	//This methos is called when the database needs to be upgraded.
 	public void onUpgrade(SQLiteDatabase db,int old_version, int new_version){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		db.execSQL("DROP TABLE IF EXISTS productos");
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-		//db.execSQL("DROP TABLE IF EXISTS categorias");
-		db.execSQL("DROP TABLE IF EXISTS users");
-		db.execSQL("DROP TABLE IF EXISTS products");
-		db.execSQL("DROP TABLE IF EXISTS productsTemporary");
-<<<<<<< HEAD
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
-=======
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-=======
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
-
-		//db.execSQL("DROP TABLE IF EXISTS categorias");
-=======
-
->>>>>>> Rama-Edu-Android
 		db.execSQL("DROP TABLE IF EXISTS users");
 		db.execSQL("DROP TABLE IF EXISTS products");
 		db.execSQL("DROP TABLE IF EXISTS productsTemporary");
 		db.execSQL("DROP TABLE IF EXISTS listShopping");
 		db.execSQL("DROP TABLE IF EXISTS productsList");
 		db.execSQL("DROP TABLE IF EXISTS listHaveProducts");
-<<<<<<< HEAD
-=======
 		db.execSQL("DROP TABLE IF EXISTS favorites");
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		onCreate(db);
 	}
 	
@@ -188,7 +95,6 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		SQLiteDatabase db=this.getReadableDatabase();
 		
-			String columnas[]={_ID,"name","cant"};
 			//String args[]={key.toString()};
 			//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
 			Cursor c=db.query("products", null, null, null, null, null, null);
@@ -207,81 +113,13 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 		return result;
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-	public ArrayList<ItemProducto> readProducts(Integer key){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-=======
 	public ArrayList<ItemProducto> readProducts(Integer key,String option){
 		
->>>>>>> Rama-Edu-Android
 		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
 		SQLiteDatabase db=this.getReadableDatabase();
-<<<<<<< HEAD
-		String args[]={key.toString()};
-		//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-		Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
-		int id, idName, idNum, idCat;
-		id=c.getColumnIndex(_ID);
-		idName=c.getColumnIndex("name");
-		idNum=c.getColumnIndex("cant");
-		idCat=c.getColumnIndex("idCat");
-		
-		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-			//c.getString(idCat);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			//TODO hacer consulta para la categoría
-			
-=======
-			//TODO hacer consulta para la categorï¿½a
-
->>>>>>> Rama-Edu-Android
-=======
-			//TODO hacer consulta para la categorï¿½a
-
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-			result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum)));
-=======
 		if (option.equals("readPantry")) {
 			String args[]={key.toString()};
+			//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
 			Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
 			int id, idName, idNum, idCat, idUnits;
 			id=c.getColumnIndex(_ID);
@@ -291,6 +129,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 			idUnits=c.getColumnIndex("units");
 		
 			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
+				//c.getString(idCat);
 				result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum),c.getInt(idCat),c.getString(idUnits),false));
 			}
 		}
@@ -311,85 +150,11 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 				d.moveToFirst();
 				result.add(new ItemProducto(d.getInt(id),d.getString(idName),c.getInt(cant),d.getInt(idCat),d.getString(idUnits),false));
 			}
->>>>>>> Rama-Edu-Android
-		}
-		
-		return result;
-=======
-	public ArrayList<ItemProducto> readProducts(Integer key,String option){
-		
-		ArrayList<ItemProducto> result=new ArrayList<ItemProducto>();
-		SQLiteDatabase db=this.getReadableDatabase();
-		if (option.equals("readPantry")) {
-			String columnas[]={_ID,"name","cant"};
-			String args[]={key.toString()};
-			//Cursor c=this.getReadableDatabase().query("productos", columnas, null, null,null, null,null);
-			Cursor c=db.query("products", null, "idCat=?", args, null, null, null);
-			int id, idName, idNum, idCat, idUnits;
-			id=c.getColumnIndex(_ID);
-			idName=c.getColumnIndex("name");
-			idNum=c.getColumnIndex("cant");
-			idCat=c.getColumnIndex("idCat");
-			idUnits=c.getColumnIndex("units");
-		
-			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-				//c.getString(idCat);
-				result.add(new ItemProducto(c.getInt(id),c.getString(idName),c.getInt(idNum),c.getInt(idCat),c.getString(idUnits),false));
-			}
-		}
-		else if (option.equals("readList")) {
-			System.out.println("holaaaa");
-			String args[]={key.toString()};
-			System.out.println(args[0]);
-			int idL,idProduct,cant;
-			Cursor c=db.query("listHaveProducts", null, "idList=?", args, null, null, null);
-			idL = c.getColumnIndex("idList");
-			idProduct = c.getColumnIndex("idProduct");
-			cant = c.getColumnIndex("cant");
-			for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-				String argv[]={((Integer) c.getInt(idProduct)).toString()};
-				Cursor d=db.query("productsList", null, "_ID=?", argv, null, null, null);
-				int id, idName, idCat, idUnits;
-				id=d.getColumnIndex(_ID);
-				idName=d.getColumnIndex("name");
-				idCat=d.getColumnIndex("idCat");
-				idUnits=d.getColumnIndex("units");
-				d.moveToFirst();
-				result.add(new ItemProducto(d.getInt(id),d.getString(idName),c.getInt(cant),d.getInt(idCat),d.getString(idUnits),false));
-			}
 		}
 		
 		return result;
 	}
 	
-	public ArrayList<ShoppingListItem> readLists(){
-		//No utilizo por ahora los argumentos
-		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
-		SQLiteDatabase db=this.getReadableDatabase();
-		//String args[]={key.toString()};
-		//System.out.println(args[0]);
-		Integer listName;
-		//String[] valores_recuperar = {"name"};
-		Cursor c=db.query("listShopping", null, null, null, null, null, null,null);
-		listName = c.getColumnIndex("name");
-		//c.moveToFirst();
-		
-		
-		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-			//c.getString(idCat);
-			lists.add(new ShoppingListItem(c.getString(listName)));
-		}
-		/*c.moveToFirst();
-	
-        do {
-        	String tmp=c.getString(listName);
-        	lists.add(new ShoppingListItem(c.getString(listName)));
-        } while (c.moveToNext());*/
-		return lists;
-		
-		
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
-	}
 	
 	public ArrayList<ShoppingListItem> readLists(){
 		ArrayList<ShoppingListItem> lists=new ArrayList<ShoppingListItem>();
@@ -457,11 +222,7 @@ public class Handler_Sqlite extends SQLiteOpenHelper{
 	}
 	
 		
-<<<<<<< HEAD
 	public void insertProducts(String name,Integer number, Integer idCategory, String units,  String barCode, String option, Integer idList){
-=======
-public void insertProducts(String name,Integer number, Integer idCategory, String units,  String barCode, String option, Integer idList){
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	
 		
 		if (option.equals("insertPantry")) {
@@ -504,7 +265,6 @@ public void insertProducts(String name,Integer number, Integer idCategory, Strin
 	}
 
 	
-<<<<<<< HEAD
 	public Integer getIDProduct(String name,String col) {
 	
 		SQLiteDatabase db=this.getReadableDatabase();
@@ -537,74 +297,12 @@ public void insertProducts(String name,Integer number, Integer idCategory, Strin
 		return (c.moveToFirst());
 	}
 
-=======
-public Integer getIDProduct(String name,String col) {
-	
-	SQLiteDatabase db=this.getReadableDatabase();
-	String args[]={name};
-	Cursor c=db.query("productsList", null, col + "=?", args, null, null, null);
-	int id,nameP,idCat,barcode;
-	id = c.getColumnIndex(_ID);
-	nameP = c.getColumnIndex("name");
-	idCat = c.getColumnIndex("idCat");
-	barcode = c.getColumnIndex("barCode");
-	
-	c.moveToFirst();
-	
-	return c.getInt(id);
-}
-
-public Integer getIdList(String name) {
-	
-	SQLiteDatabase db=this.getReadableDatabase();
-	String args[]={name};
-	Cursor c=db.query("listShopping", null, "name=?", args, null, null, null);
-	int id;
-	id = c.getColumnIndex(_ID);
-	c.moveToFirst();
-	return c.getInt(id);
-}
-
-public boolean existProductList(String name) {
-	SQLiteDatabase db=this.getReadableDatabase();
-	String args[]={name};
-	Cursor c=db.query("productsList", null, "name=?", args, null, null, null);
-
-	return (c.moveToFirst());
-}
-
-
-
-	//mÃ©todo temporal
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	public void insertLists(String name){
 		ContentValues registro=new ContentValues();
 		
 		registro.put("name", name);
 		this.getWritableDatabase().insert("listShopping", null, registro);
 	
-	}
-	
-	public void updateProduct(String name,String nameNew,Integer number,String option,Integer idList) {
-		String args [] = { name };
-		if (option.equals("updatePantry")) {
-			ContentValues tmp = new ContentValues();
-		
-			tmp.put("name",nameNew);
-			tmp.put("cant",number);
-		
-			this.getWritableDatabase().update("products", tmp, "name=?", args);
-		}
-		else if (option.equals("updateList")) { 
-			ContentValues tmp = new ContentValues();
-			ContentValues tmc = new ContentValues();
-			tmp.put("name",nameNew);
-			tmc.put("cant",number);
-			Integer idProduct = getIDProduct(name,"name");
-			String argv [] = {idList.toString(),idProduct.toString()};
-			this.getWritableDatabase().update("productsList", tmp, "name=?", args);
-			this.getWritableDatabase().update("listHaveProducts", tmc, "idList=? AND idProduct=?", argv);
-		}
 	}
 	
 	public void updateProduct(String name,String nameNew,Integer number,String option,Integer idList) {
@@ -661,7 +359,6 @@ public boolean existProductList(String name) {
 		return (c.moveToFirst());
 	}
 	
-<<<<<<< HEAD
 	public void removeList(String listName) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		Integer idList = getIdList(listName);
@@ -679,18 +376,12 @@ public boolean existProductList(String name) {
 		}
 		String args[] = {listName};
 		this.getWritableDatabase().delete("listShopping","name=?",args);
-=======
-	//Hay que borrar primero los productos--->corregirlo
-	public void remove(String tableName, String column, String elemRemove) {
-		String args[] = {elemRemove};
-		String tmp=column+"=?";
-		this.getWritableDatabase().delete(tableName,column+"=?",args);
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	}
 	
 	
 	public boolean existProductAdded(String name) {
 		SQLiteDatabase db=this.getReadableDatabase();
+		System.out.println("adioooos" + name);
 		String args[]={name};
 		Cursor c=db.query("products", null, "name=?", args, null, null, null);
 	
@@ -715,8 +406,6 @@ public boolean existProductList(String name) {
 		return (c.moveToFirst());
 	}
 	
-<<<<<<< HEAD
-=======
 	public ItemProducto existProduct(String data, String table, String col){
 		
 		SQLiteDatabase db= this.getReadableDatabase();
@@ -726,8 +415,10 @@ public boolean existProductList(String name) {
 		int id = c.getColumnIndex(_ID);
 		int n = c.getColumnIndex("name");
 		int q = c.getColumnIndex("cant");
+		int cat = c.getColumnIndex("idCat");
+		int units = c.getColumnIndex("units");
 		if (c.moveToFirst()) {
-			p = new ItemProducto(c.getInt(id),c.getString(n),c.getInt(q));
+			p = new ItemProducto(c.getInt(id),c.getString(n),c.getInt(q),c.getInt(cat),c.getString(units),false);
 		};	
 		return p;
 	}
@@ -750,7 +441,6 @@ public boolean existProductList(String name) {
 		this.getWritableDatabase().update("listShopping", tmp, "name=?", args);
 	}
 	
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 	public String getBarcode(String name) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={name};
@@ -760,13 +450,10 @@ public boolean existProductList(String name) {
 		c.moveToFirst();
 		return c.getString(barcode);
 	}
-<<<<<<< HEAD
-=======
 	
 	public Integer getNumPersRecipe(String titleRecipe) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={titleRecipe};
-		String campos[]={"numPers"};
 	
 		Cursor c=db.query("favorites", null, "title=?", args, null, null, null);
 		int num = c.getColumnIndex("numPers");
@@ -777,7 +464,6 @@ public boolean existProductList(String name) {
 	public String getNationalityRecipe(String titleRecipe) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={titleRecipe};
-		String campos[]={"nationality"};
 	
 		Cursor c=db.query("favorites", null, "title=?", args, null, null, null);
 		int nationality = c.getColumnIndex("nationality");
@@ -788,7 +474,6 @@ public boolean existProductList(String name) {
 	public String getIngredientsRecipe(String titleRecipe) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={titleRecipe};
-		String campos[]={"ingredients"};
 	
 		Cursor c=db.query("favorites", null, "title=?", args, null, null, null);
 		int ingredients = c.getColumnIndex("ingredients");
@@ -799,7 +484,6 @@ public boolean existProductList(String name) {
 	public String getQuantitiesRecipe(String titleRecipe) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={titleRecipe};
-		String campos[]={"quantities"};
 	
 		Cursor c=db.query("favorites", null, "title=?", args, null, null, null);
 		int quantities = c.getColumnIndex("quantities");
@@ -821,7 +505,6 @@ public boolean existProductList(String name) {
 	public String getPreparationRecipe(String titleRecipe) {
 		SQLiteDatabase db=this.getReadableDatabase();
 		String args[]={titleRecipe};
-		String campos[]={"preparation"};
 	
 		Cursor c=db.query("favorites", null, "title=?", args, null, null, null);
 		int preparation = c.getColumnIndex("preparation");
@@ -849,12 +532,10 @@ public boolean existProductList(String name) {
 		ArrayList<String> result=new ArrayList<String>();
 		SQLiteDatabase db=this.getReadableDatabase();
 		//String args[]={(String)data};
-		String campos[]={(String)data};
 		Cursor c=db.query("favorites", null, null, null, null, null, null);
 		int idInfo=c.getColumnIndex(data);
 		//int idBarCode=c.getColumnIndex("barCode");
 		for(c.moveToFirst();!c.isAfterLast();c.moveToNext()){
-			String tmp1=c.getString(idInfo);
 			//String tmp2=c.getString(idBarCode);
 			result.add((c.getString(idInfo)));
 			//result.add((c.getString(idBarCode)));
@@ -873,5 +554,4 @@ public boolean existProductList(String name) {
 		return c.getString(tmp);
 	}
 
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 }

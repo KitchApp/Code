@@ -16,16 +16,6 @@
                 android:layout_height="wrap_content"
                 android:background="@layout/cabecera"
                 android:paddingTop="5dp"
-<<<<<<< HEAD
-                android:paddingBottom="5dp" >
-                <!-- Logo de encabezado-->
-                <ImageView 
-                    	android:src="@drawable/cabecera_kitchapp"
-                    	android:layout_width="fill_parent"
-                    	android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp" />
-=======
                 android:paddingBottom="5dp">
                 <!-- Logo de encabezado-->
                 <ImageView 
@@ -34,7 +24,6 @@
 	                      android:layout_height="wrap_content"
 	                      android:layout_marginLeft="10dp"
 	                      android:layout_marginRight="10dp" />
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
                 <!-- fin Logo de encabezado -->
         </LinearLayout>
         <!--  fin Encabezado -->
@@ -43,17 +32,10 @@
         <LinearLayout 
            	    android:id="@+id/footer"
             	android:orientation="vertical"
-<<<<<<< HEAD
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:background="@layout/pie_de_pagina"
-              android:layout_alignParentBottom="true" >
-=======
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@layout/pie_de_pagina"
                 android:layout_alignParentBottom="true" >
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
         </LinearLayout>
         <!-- fin Pie de página -->
   
@@ -62,72 +44,11 @@
           		android:orientation="vertical"
           		android:layout_width="fill_parent"
           		android:layout_height="wrap_content"
-<<<<<<< HEAD
-          		android:padding="10dp"
-          		android:layout_marginTop="5dp"
-=======
           		android:padding="20dp"
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
           		android:layout_below="@id/encabezado" >
                 
           <!--  Etiqueta de correo electrónico -->
           <TextView 
-<<<<<<< HEAD
-              	android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#372c24"
-                android:textSize="15sp"
-                android:text="Usuario" />
-          
-          <EditText 
-              	android:id="@+id/editTextuserName"
-              	android:layout_width="fill_parent"
-                android:layout_height="wrap_content"                
-                android:textColor="@color/black"
-                android:singleLine="true"
-                android:textSize="15sp" />
-          
-          <!--  Etiqueta contraseña -->
-          <TextView 
-              	android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#372c24"
-                android:textSize="15sp"
-                android:text="Contraseña" />
-          
-          <EditText 
-              	android:id="@+id/editTextPassword"
-              	android:layout_width="fill_parent"
-                android:layout_height="wrap_content"                
-                android:textColor="@color/black"
-                android:singleLine="true"
-                android:textSize="15sp"
-                android:password="true" />
-          
-          <!-- Botón Login -->
-          <Button 
-              	android:id="@+id/btnLogin"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Login"
-                android:onClick="intento_logueo" />
-          
-          <!-- Enlace a la pantalla de registro -->
-          <TextView 
-              	android:id="@+id/link_to_register"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:text="Nuevo en KitchApp? Registrate Aquí"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="#0b84aa"
-                android:clickable="true"
-                android:onClick="registrarse" />
- 
-=======
 	              	android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
 	                android:textColor="#372c24"
@@ -191,7 +112,6 @@
 	                android:clickable="true"
 	                android:onClick="registrarse" />
 	 
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
         </LinearLayout>
         <!-- fin Formulario de login -->
         

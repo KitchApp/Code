@@ -71,104 +71,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 		helper=new Handler_Sqlite(this);
 		products = new ArrayList<ItemProducto>();
 		
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		/*SQLiteDatabase tmp=helper.open();	
-=======
-		/*SQLiteDatabase tmp = helper.open();	
->>>>>>> Rama-Edu-Android
-=======
-		/*SQLiteDatabase tmp=helper.open();	
->>>>>>> Rama-Edu-Android
-=======
-		/*SQLiteDatabase tmp = helper.open();	
-		
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-		if (tmp!=null){
-				
-				helper.insertProducto("Yogurt",2,1,null);
-				helper.insertProducto("Manzana",3,2,null);
-				helper.insertProducto("Magdalena",5,3,null);
-				helper.insertProducto("Leche",6,1);
-<<<<<<< HEAD
-				helper.insertProducto("coca-cola", 4, 4);
-				helper.insertProducto("Pollo", 1, 5);
-				helper.insertProducto("Merluza", 1, 6);
-				helper.insertProducto("Red bull", 4, 4);
-				helper.insertProducto("Arroz largo", 4, 8);
-				helper.insertProducto("Guisantes", 1, 9);
-				helper.insertProducto("Gel baño", 4, 10);
-				helper.insertProducto("Macarrones", 2, 8);
-				helper.insertProducto("Helado Fresa", 4, 9);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-		}*/
->>>>>>> Rama-Edu-Android
-				/*helper.insertCategory(1,"Lácteos")
-=======
-		}
-		helper.close();*/
-				/*helper.insertCategory(1,"Lï¿½cteos")
->>>>>>> Rama-Edu-Android
-				helper.insertCategory(2,"Frutas y Verduras")
-				helper.insertCategory(3,"Pan y Bollerï¿½a")
-				helper.insertCategory(4,"Bebidas")
-				helper.insertCategory(5,"Carnes")
-				helper.insertCategory(6,"Pescados")
-				helper.insertCategory(7,"Salsas y condimentos")
-				helper.insertCategory(8,"Arroces")
-				helper.insertCategory(9,"Congelados")
-				helper.insertCategory(10,"Varios")*/
-		
-<<<<<<< HEAD
-		Bundle extraLacteos= this.getIntent().getExtras();
-		if(extraLacteos!=null){
-<<<<<<< HEAD
-			Integer lacteos=extraLacteos.getInt("lacteos");
-			initializeArrayList(lacteos);
-=======
-=======
-				helper.insertProducto("coca-cola",4,4,null);
-=======
-				/*helper.insertProducto("coca-cola",4,4,null);
->>>>>>> Rama-Edu-Android
-=======
-				/*helper.insertProducto("coca-cola",4,4,null);
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-				helper.insertProducto("Pollo",1,5,null);
-				helper.insertProducto("Merluza",1,6,null);
-				helper.insertProducto("Red bull",4,4,null);
-				helper.insertProducto("Arroz largo",4,8,null);
-				helper.insertProducto("Guisantes",1,9,null);
-				helper.insertProducto("Gel baï¿½o",4,10,null);
-				helper.insertProducto("Macarrones",2,8,null);
-				helper.insertProducto("Helado Fresa",4,9,null);
-		}*/
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		Bundle extras= this.getIntent().getExtras();
 		if(extras!=null){
 			tipoCat=extras.getInt("idCat");
@@ -220,15 +122,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 					break;
 
 				case 11:
-<<<<<<< HEAD
-<<<<<<< HEAD
-					title.setText("Droguerï¿½a");
-=======
 					title.setText("Drogueria");
->>>>>>> Rama-Edu-Android
-=======
-					title.setText("Drogueria");
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 					break;
 			
 				case 12:
@@ -237,129 +131,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 
 			}
 		}
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-			
-=======
-
->>>>>>> Rama-Edu-Android
-		
-			
-=======
-
-		
-			
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-
-	//helper.close();
-		
-		
-		
-		Bundle extra = this.getIntent().getExtras();
-		
-		if (extra!=null && extra.getInt("key") != 0) {
-			int key = extra.getInt("key");
-			if (key == 1) {
-				//initializeArrayList(tipoCat);
-				ItemProducto item = new ItemProducto(products.size(),extra.getString("nameProduct"),extra.getInt("cantProduct"));
-				boolean encontrado = false;
-				int i = 0;
-				int cantProductModify = 0;
-				while (i<products.size() && !encontrado){
-					ItemProducto prod = products.get(i);
-					String name = prod.getNombre().toLowerCase();
-					if (name.equals(item.getNombre().toLowerCase())) {
-						encontrado = true;
-						cantProductModify = prod.getCantidad() + item.getCantidad();
-					}
-					i++;
-				}
-				if (!encontrado) {
-					products.add(item);
-					SQLiteDatabase tmp1 = helper.open();	
-					if (tmp1!=null){
-						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-						helper.close();
-					}
-					
-				}
-				else {
-					modifyProduct();
-					products.get(i-1).setCantidad(cantProductModify);
-					SQLiteDatabase tmc = helper.open();	
-					if (tmc!=null){
-						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
-						helper.close();
-					}
-					
-				}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> Rama-Edu-Android
-=======
-				}
-			}
-			else {
-				int posi = extra.getInt("posicion");
-				int cantProducto = extra.getInt("cantProduct");
-				ItemProducto producto = products.get(posi);
-				producto.setCantidad(cantProducto);
-				products.set(posi,producto);
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
-				
-		
->>>>>>> Rama-Edu-Android
-=======
-				
-		
->>>>>>> 32477ed215e82d01b6f7e658596c4fb24f018cf5
-=======
->>>>>>> Rama-Edu-Android
-=======
-				
-		
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-			}
-
-		}
-		
-		/*TextView link_atras = (TextView) findViewById(R.id.textView_Atras);
-		link_atras.setOnClickListener(this);*/
-		Button button_add=(Button)findViewById(R.id.button_add);
-		button_add.setOnClickListener(this);
-=======
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
+	
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -393,8 +165,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
 		switch (item.getItemId()) {
-<<<<<<< HEAD
-=======
 		
 			case R.id.home:
 				Intent intent = new Intent(this, PantallaPrincipal.class);
@@ -402,7 +172,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 				startActivity(intent);
 				return true;
 			
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			case R.id.add_Product:
 				alertDialogListView(true,0);
 				return true;
@@ -421,8 +190,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 				}
 				return true;
 				
-<<<<<<< HEAD
-=======
 			case R.id.logout:
 				SharedPreferences settings = getSharedPreferences(PantallaTransicion.PREFS_NAME, 0);
 				SharedPreferences.Editor editor = settings.edit();
@@ -436,7 +203,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 				finish();
 				return true;
 				
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 			default:
 				return super.onOptionsItemSelected(item);
 		}
@@ -530,7 +296,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 					unit = "unid";
 				}
 	 			addProductPantry(unit);
-<<<<<<< HEAD
 				break;
 			
 			case R.id.buttonCancelPantry:
@@ -539,16 +304,6 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 				startActivity(intent);
 				finish();
 				break;
-=======
-				break;
-			
-			case R.id.buttonCancelPantry:
-				Intent intent = new Intent(this,MostrarProductosCategoria.class);
-				intent.putExtra("idCat",tipoCat);
-				startActivity(intent);
-				finish();
-				break;
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 				
 				
 		}
@@ -780,7 +535,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 	
 	public void addProduct(int position) {
 		String[] prod = matches_text.get(position).split(" ");
-	 	productName = "";
+	 	String prodName = "";
 	 	String oneCantM = "un";
 	 	String oneCantF = "una";
 	 	productCant = 0;
@@ -800,104 +555,31 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
    	 							error = true;
    	 						}
    	 						else {
-   	 							productName += prod[i];
-   	 							productName += " ";
+   	 							prodName += prod[i];
+   	 							prodName += " ";
    	 						}
    	 					}
    	 				}
    	 			}
    	 			else {
-   	 				productName += prod[i];
-   	 				productName += " ";
+   	 				prodName += prod[i];
+   	 				prodName += " ";
    	 			}
    	 			
+   	 		}
+   	 		String [] nameP = prodName.split(" ");
+   	 		productName = "";
+   	 		for (int k=0;k<nameP.length;k++) {
+   	 			productName += nameP[k];
+   	 			if (k != (nameP.length - 1))
+   	 				productName += " ";
    	 		}
    	 		if (!error) {
    	 			if (productCant <= 0) {
    	 				errorCantVoice();
    	 			}
    	 			else {
-<<<<<<< HEAD
-<<<<<<< HEAD
-   	 				initializeArrayList(tipoCat);
-   	 				ItemProducto item = new ItemProducto(products.size(),name,cant);
-   	 				boolean encontrado = false;
-   	 				int i = 0;
-   	 				int cantProductModify = 0;
-   	 				while (i<products.size() && !encontrado){
-   	 					ItemProducto product = products.get(i);
-   	 					String nameP = product.getNombre().toLowerCase();
-   	 					if (nameP.equals(item.getNombre().toLowerCase())) {
-   	 						encontrado = true;
-   	 						cantProductModify = product.getCantidad() + item.getCantidad();
-   	 					}
-   	 					i++;
-   	 				}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-   	 	initializeArrayList(tipoCat);
-		ItemProducto item = new ItemProducto(products.size(),name,cant);
-		boolean encontrado = false;
-		int i = 0;
-		while (i<products.size() && !encontrado){
-			ItemProducto product = products.get(i);
-			String nameP = product.getNombre().toLowerCase();
-			if (nameP.equals(item.getNombre().toLowerCase())) {
-				encontrado = true;
-			}
-			i++;
-		}
-		if (!encontrado) {
-			products.add(item);
-			SQLiteDatabase tmp = helper.open();	
-			if (tmp!=null){
-				helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
-
-				helper.close();
-			}
->>>>>>> 0eeb76638ed6d7066f13a91e1147d0ce22aab4a7
-=======
-
->>>>>>> Rama-Edu-Android
-=======
-=======
-   	 				if (!encontrado) {
-   	 					products.add(item);
-   	 					SQLiteDatabase tmp = helper.open();	
-   	 					if (tmp!=null){
-   	 						helper.insertProducts(item.getNombre(),item.getCantidad(),tipoCat,"");
-   	 						helper.close();
-   	 					}
->>>>>>> Rama-Edu-Android
-=======
->>>>>>> bc19c81f8e762b2026442b06370439486d3b88f6
-
-			
-   	 				}
-   	 				else {
-   	 					modifyProduct();
-   	 					products.get(i-1).setCantidad(cantProductModify);
-   	 					SQLiteDatabase tmp = helper.open();
-   	 					if (tmp!=null) {
-   	 						helper.updateProduct(item.getNombre(),item.getNombre(),cantProductModify);
-   	 						helper.close();
-   	 					}
-   	 				}
-   	 	
-		/*Intent intent = new Intent(this,MostrarProductosCategoria.class);
-		startActivity(intent);*/
-   	 				list = (ListView) findViewById(R.id.listViewProducts);
-   	 				ItemProductoAdapter adapter = new ItemProductoAdapter(this,products);
-   	 				list.setAdapter(adapter);
-=======
    	 				selectUnits();
->>>>>>> Rama-Edu-Android
-=======
-   	 				selectUnits();
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
    	 			}
    	 		}
 		

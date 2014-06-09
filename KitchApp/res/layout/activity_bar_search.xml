@@ -26,7 +26,7 @@
                     android:id="@+id/button_ok"
                     android:layout_width="40dp"
                     android:layout_height="25dp"
-                    android:background="@drawable/tick" />
+                    android:background="@drawable/mini_tic2" />
     
                 <Button
                     android:id="@+id/button_Voice"

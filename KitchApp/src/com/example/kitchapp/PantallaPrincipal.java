@@ -13,8 +13,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -28,7 +26,6 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 	private Handler_Sqlite helper;
 	private ArrayList<String> titulos;
 	private ArrayList<String> imagenes;
-	private ArrayList<String> topTen;
 	
 	public void onCreate(Bundle savedInstanceState) {
 		helper=new Handler_Sqlite(this);
@@ -41,11 +38,8 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		buttonPantry.setOnClickListener(this);
 		Button buttonList = (Button) findViewById(R.id.button1);
 		buttonList.setOnClickListener(this);
-<<<<<<< HEAD
-=======
 		Button buttonRecipes = (Button) findViewById(R.id.button3);
 		buttonRecipes.setOnClickListener(this);
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 		
 }
 	
@@ -61,12 +55,6 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 				Intent j = new Intent(this, AccesoDespensa.class);
 				startActivity(j);
 				break;
-<<<<<<< HEAD
-		}
-	}
-	
-	
-=======
 				
 			case R.id.button3:
 				loadFavoriteRecipe();
@@ -183,5 +171,4 @@ public class PantallaPrincipal extends Activity implements OnClickListener{
 		}
 	}
 
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 }

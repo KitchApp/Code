@@ -1,47 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal" >
-    
-    <CheckBox 
-        android:id="@+id/checkBox_Product"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:visibility="invisible"/>
-    
-    <TextView 
-        android:id="@+id/textView_Item_Name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Leche Asturiana Entera"
-        android:textSize="20sp" 
-        android:textColor="@color/black"/>
-    <TextView 
-        android:id="@+id/textView_Item_Cant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="5"
-        android:textSize="20sp" 
-        android:textColor="@color/black"/>
-    <TextView 
-        android:id="@+id/textView_Item_Units"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:text=""
-        android:textSize="20sp" 
-        android:textColor="@color/black"/>
-    
-=======
 <LinearLayout 
         xmlns:android="http://schemas.android.com/apk/res/android"
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:orientation="horizontal" >
+	    android:orientation="horizontal"
+	    android:descendantFocusability="blocksDescendants" >
 	    
 	    <CheckBox 
 		        android:id="@+id/checkBox_Product"
@@ -74,5 +37,5 @@
 		        android:text=""
 		        android:textSize="20sp" 
 		        android:textColor="@color/black" />    
->>>>>>> eb9e561c31a6809bd723ad4dc8cbc927e80754b1
 </LinearLayout>
+
