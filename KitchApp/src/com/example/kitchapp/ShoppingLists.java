@@ -63,6 +63,7 @@ public class ShoppingLists extends ActionBarActivity {
 		shoppingLists = helper.readLists();
 	}
 
+<<<<<<< HEAD
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -73,6 +74,9 @@ public class ShoppingLists extends ActionBarActivity {
 		home.setVisible(false);
 		return super.onCreateOptionsMenu(menu);
 	}
+=======
+	
+>>>>>>> Rama-Mayra_Android
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

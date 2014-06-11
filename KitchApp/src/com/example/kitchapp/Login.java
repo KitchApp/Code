@@ -27,7 +27,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+<<<<<<< HEAD
 import android.widget.EditText;
+=======
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+>>>>>>> Rama-Mayra_Android
 
 public class Login extends Activity {
 	
@@ -37,8 +43,12 @@ public class Login extends Activity {
 	public String session_name;
     public String session_id;
     public String encryptedPassword="";
+    private EditText userName;
+	private EditText password;
+	
 	
 	public void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		
 		SharedPreferences settings = getSharedPreferences(PantallaTransicion.PREFS_NAME, 0);
@@ -55,6 +65,7 @@ public class Login extends Activity {
      
         setContentView(R.layout.activity_login);
 		
+    	
 	}
 
 		
