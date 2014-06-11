@@ -8,7 +8,6 @@
     -->
     <style name="AppBaseTheme" parent="android:Theme.Dialog">
 
-    
         <!--
             Personalizaciones temáticas disponibles en los niveles de API más 
             nuevos pueden ir en res / valores-vxx / styles.xml, mientras que 

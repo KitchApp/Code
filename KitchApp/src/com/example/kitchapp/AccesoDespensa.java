@@ -1,34 +1,17 @@
 package com.example.kitchapp;
 
-
-import java.util.ArrayList;
-
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.speech.RecognizerIntent;
-import android.view.LayoutInflater;
+import android.content.SharedPreferences;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 
-
-public class AccesoDespensa extends Activity implements OnClickListener {
+public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,18 +46,35 @@ public class AccesoDespensa extends Activity implements OnClickListener {
 	}
 
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.acceso_despensa, menu);
-		return true;
-	}
 	
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.search:
+			Intent i = new Intent(this, Bar_Search.class);
+			startActivity(i);
+			return true;
+		case R.id.logout:
+			SharedPreferences settings = getSharedPreferences(
+					PantallaTransicion.PREFS_NAME, 0);
+			SharedPreferences.Editor editor = settings.edit();
+
+			editor.putBoolean("hasLoggedIn", false);
+			editor.commit();
+
+			Intent j = new Intent(this, Login.class);
+			j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(j);
+			finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
 
 	
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()){
 
 		case R.id.buttonDairy:

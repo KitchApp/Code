@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
+    <issue id="DefaultLocale">
+        <ignore path="src/com/example/kitchapp/AddManualmente.java" />
+        <ignore path="src/com/example/kitchapp/Bar_Search.java" />
+        <ignore path="src/com/example/kitchapp/MostrarProductosCategoria.java" />
+        <ignore path="src/com/example/kitchapp/MostrarProductosLista.java" />
+    </issue>
+    <issue id="ShowToast">
+        <ignore path="src/com/example/kitchapp/Registro.java" />
+    </issue>
+    <issue id="UseSparseArrays">
+        <ignore path="src/com/example/kitchapp/MostrarProductosLista.java" />
+    </issue>
 </lint>

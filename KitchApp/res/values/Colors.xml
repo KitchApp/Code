@@ -27,4 +27,12 @@
  <color name="lightGray">#B0B0B0</color>
  <color name="androidGreen">#99CC20</color>
  
+ <color name="background">#ececec</color>
+
+    <drawable name="highlight_pressed">#98dff3</drawable>
+    <drawable name="highlight_focused">#b9e6f3</drawable>
+ 
+  <color name="button_normal">#929392</color>
+    <color name="button_pressed">#c0c1c0</color>
+    <color name="dialog_divider">@android:color/black</color>
 </resources>

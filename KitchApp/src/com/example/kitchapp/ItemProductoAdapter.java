@@ -1,13 +1,14 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class ItemProductoAdapter extends BaseAdapter {
@@ -42,6 +43,15 @@ public class ItemProductoAdapter extends BaseAdapter {
       LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
       vi = inflater.inflate(R.layout.activity_item_listview, null);
     }
+    
+    CheckBox checkProduct = (CheckBox) vi.findViewById(R.id.checkBox_Product);
+    checkProduct.setOnClickListener(new OnClickListener() {
+    	@Override
+    	public void onClick(View v) {
+    		ItemProducto data = (ItemProducto) v.getTag();
+    		data.setSelected(((CheckBox) v).isChecked());
+    	}
+    });
              
     ItemProducto item = items.get(position);
          
@@ -54,6 +64,12 @@ public class ItemProductoAdapter extends BaseAdapter {
          
     TextView cantidad = (TextView) vi.findViewById(R.id.textView_Item_Cant);
     cantidad.setText(item.getCantidad() + "");
+    
+    TextView units = (TextView) vi.findViewById(R.id.textView_Item_Units);
+    units.setText(item.getUnits());
+    
+    checkProduct.setChecked(item.isSelected());
+    checkProduct.setTag(item);
  
     return vi;
   }

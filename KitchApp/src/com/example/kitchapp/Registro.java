@@ -1,11 +1,6 @@
 package com.example.kitchapp;
 
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -21,16 +16,12 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -38,16 +29,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
- 
+
 public class Registro extends Activity implements OnClickListener {
 	
 	private EditText userName;
 	private EditText password;
 	private EditText email;
-	private String encryptedPassword="";
 
 	Handler_Sqlite helper = new Handler_Sqlite(this);
-
 	
 	public String session_name;
     public String session_id;
@@ -67,16 +56,14 @@ public class Registro extends Activity implements OnClickListener {
         password = (EditText) findViewById(R.id.reg_password);
         email = (EditText) findViewById(R.id.reg_email);
  
-        // Listening to Login Screen link
-        //loginScreen.setOnClickListener(this);
         buttonRegister.setOnClickListener(this);
+        loginScreen.setOnClickListener(this);
         userName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
 				// TODO Auto-generated method stub
 				if(hasFocus==false){
-					//userValidation=true;
 					new HttpGetName().execute();
 					
 				}
@@ -90,7 +77,6 @@ public class Registro extends Activity implements OnClickListener {
 				// TODO Auto-generated method stub
 				
 				if(hasFocus==true){
-					//emailValidation=true;
 					new HttpGetEmail().execute();
 					
 					
@@ -109,6 +95,8 @@ public class Registro extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 			case R.id.link_to_login:
+				Intent intent = new Intent(this,Login.class);
+				startActivity(intent);
 				finish();
 				break;
 			case R.id.btnRegistro:
@@ -124,12 +112,6 @@ public class Registro extends Activity implements OnClickListener {
 					}
 					else {
 						showMessageEmailValidation();
-						/*new HttpAsyncTask().execute();
-						
-						Intent intent = new Intent(Registro.this,PantallaTransicion.class);
-			        	startActivity(intent);
-						finish();*/
-			            
 					}
 				}
 				break;
@@ -162,7 +144,7 @@ public class Registro extends Activity implements OnClickListener {
 		 
 	    builder.setTitle("Informacion")
 	            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
-	            .setMessage("Recuerde que si desea utilizar su cuenta en la página web tiene que validarla pinchando en el enlace que se le ha enviado al correo electrónico.")
+	            .setMessage("Recuerde que si desea utilizar su cuenta en la pï¿½gina web tiene que validarla pinchando en el enlace que se le ha enviado al correo electrï¿½nico.")
 	            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
 	 
 	                @Override
@@ -228,12 +210,9 @@ public class Registro extends Activity implements OnClickListener {
 		protected String doInBackground(String... mURL) {
 			
 			String response="";
-	        //mURL[0]=mURL[0].replace(" ", "%20");
-	         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
 	          HttpClient httpclient = new DefaultHttpClient();
 	          HttpGet httppost= new HttpGet();;
 	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
-	    	//HttpGet httppost = new HttpGet(mURL[0]);
 	         
 	        	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
 	         
@@ -258,7 +237,6 @@ public class Registro extends Activity implements OnClickListener {
 			// TODO Auto-generated method stub
 			return response;
 		}
-    //return response;
 	
 	
 	
@@ -280,7 +258,6 @@ public class Registro extends Activity implements OnClickListener {
 		try{
 			
 			if(userName.getText().toString().equals(ja.getString(0))){
-				//registrado=true;
 				builder.setTitle("Informacion")
 	            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
 	            .setMessage("Usuario no disponible")
@@ -321,12 +298,9 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 	protected String doInBackground(String... mURL) {
 		
 		String response="";
-        //mURL[0]=mURL[0].replace(" ", "%20");
-         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
           HttpClient httpclient = new DefaultHttpClient();
           HttpGet httppost= new HttpGet();;
          Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
-    	//HttpGet httppost = new HttpGet(mURL[0]);
          	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
          	
          
@@ -350,7 +324,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		// TODO Auto-generated method stub
 		return response;
 	}
-    //return response;
 	
 	
 	
@@ -370,11 +343,7 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		
 	}
 	try{
-		String tmp=email.getText().toString();
-		boolean x=email.getText().toString().equals(ja.getString(2));
-		boolean y=!(email.getText().toString().equals(""));
 		if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
-			//registrado=true;
 			builder.setTitle("Informacion")
             .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
             .setMessage("Email ya registrado")
@@ -417,9 +386,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
                 JSONObject json = new JSONObject();
                 //extract the username and password from UI elements and create a JSON object
-                String name=username.getText().toString().trim();
-                String pass=password.getText().toString().trim();
-                String mail=email.getText().toString().trim();
                 json.put("name", username.getText().toString().trim());
                 json.put("pass", password.getText().toString().trim());
                 json.put("mail", email.getText().toString().trim());
@@ -434,11 +400,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
                 String jsonResponse = EntityUtils.toString(response.getEntity());
 
                 JSONObject jsonObject = new JSONObject(jsonResponse);
-                //String tmp=jsonObject.getString("user");
-                	//showMessageInvalidRegister();
-                /*{"uid":"253","uri":"http://www.kitchapp.es/?q=json/user/253"}*/
-                /*{"form_errors":{"name":"El nombre <em class=\"placeholder\">edu</em> ya se encuentra en uso.","mail":"La direcci\u00f3n de correo <em class=\"placeholder\">edu1@hotmail.com</em> ya est\u00e1 registrada. <a href=\"/?q=user/password\">\u00bfHa olvidado su contrase\u00f1a?</a>"}}*/
-                /*{"form_errors":{"name":"El nombre <em class=\"placeholder\">mayra</em> ya se encuentra en uso.","mail":"La direcci\u00f3n de correo <em class=\"placeholder\">majuma22@gmail.com</em> ya est\u00e1 registrada. <a href=\"/?q=user/password\">\u00bfHa olvidado su contrase\u00f1a?</a>"}}*/
                 //read the session information
                 
                 session_name=jsonObject.getString("session_name");
@@ -452,64 +413,13 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
             return 0;
         }  	
-        	/*encryptedPassword=httpGetData(urls[0]);
-        	return httpGetData(urls[0]);*/
-        }
+  
+       }
         
        // onPostExecute displays the results of the AsyncTask.
         //@Override
         protected void onPostExecute(Integer result) {
-        	/*Intent intent = new Intent(Registro.this,PantallaTransicion.class);
-        	startActivity(intent);
-			finish();*/
         	
-            
-           
        }
 
-	
-	
-	/*public static String httpGetData(String mURL) {
-        //String response="";
-		 InputStream inputStream = null;
-	     String result = "";
-	     try {
-	 
-	            // create HttpClient
-	            HttpClient httpclient = new DefaultHttpClient();
-	 
-	            // make GET request to the given URL
-	            HttpResponse httpResponse = httpclient.execute(new HttpGet(mURL));
-	 
-	            // receive response as inputStream
-	            inputStream = httpResponse.getEntity().getContent();
-	 
-	            // convert inputstream to string
-	            if(inputStream != null)
-	                result = convertInputStreamToString(inputStream);
-	            else
-	                result = "Did not work!";
-	 
-	     } 
-	     catch (Exception e) {
-	            Log.d("InputStream", e.getLocalizedMessage());
-	     }
-	 
-	     return result;
-    
-    }  
-	
-	 
-	 private static String convertInputStreamToString(InputStream inputStream) throws IOException{
-	        BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(inputStream));
-	        String line = "";
-	        String result = "";
-	        while((line = bufferedReader.readLine()) != null)
-	            result += line;
-	 
-	        inputStream.close();
-	        return result;
-	 
-	    
-	}*/
 }
