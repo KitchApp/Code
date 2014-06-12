@@ -10,10 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-<<<<<<< HEAD
-=======
-
->>>>>>> Rama-Lorena-Android
 
 public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
 	
@@ -50,9 +46,6 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 	}
 
 	
-<<<<<<< HEAD
-	
-=======
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -60,7 +53,6 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 		inflater.inflate(R.menu.menu_actionbar_search, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
->>>>>>> Rama-Lorena-Android
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
