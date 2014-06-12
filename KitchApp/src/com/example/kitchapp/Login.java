@@ -27,13 +27,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-<<<<<<< HEAD
-import android.widget.EditText;
-=======
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
->>>>>>> Rama-Mayra_Android
+
 
 public class Login extends Activity {
 	
@@ -50,22 +48,15 @@ public class Login extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
+		// setting default screen to login.xml
+		setContentView(R.layout.activity_login);
+
 		
-		SharedPreferences settings = getSharedPreferences(PantallaTransicion.PREFS_NAME, 0);
-        boolean hasLoggedIn = settings.getBoolean("hasLoggedIn", false);
-        
-        if (hasLoggedIn) {
-        	Intent intent = new Intent(Login.this,PantallaTransicion.class);
-	        startActivity(intent);
-			finish();
-        }
-        
-     // setting default screen to login.xml
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-     
-        setContentView(R.layout.activity_login);
-		
-    	
+		userName = (EditText)findViewById(R.id.editTextuserName);
+		password = (EditText)findViewById(R.id.editTextPassword);
+
+		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
+		Button b1=(Button)findViewById(R.id.btnLogin);
 	}
 
 		
