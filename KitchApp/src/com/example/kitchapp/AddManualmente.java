@@ -2,15 +2,11 @@ package com.example.kitchapp;
 
 import android.os.Bundle;
 import android.app.Activity;
-<<<<<<< HEAD
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-=======
+
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 
->>>>>>> Rama-Lorena-Android
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
@@ -70,7 +66,6 @@ public class AddManualmente extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()){
 		case R.id.button_addProduct:
 			try {
@@ -90,12 +85,9 @@ public class AddManualmente extends Activity implements OnClickListener {
 				 			if (units.equals("Litros")) {
 								unit = "l";
 							}
-<<<<<<< HEAD
-=======
 							else if (units.equals("Centilitros")) {
 								unit = "cl";
 							}
->>>>>>> Rama-Lorena-Android
 							else if (units.equals("Mililitros")) {
 								unit = "ml";
 							}
@@ -105,12 +97,9 @@ public class AddManualmente extends Activity implements OnClickListener {
 							else if (units.equals("Gramos")) {
 								unit = "gr";
 							}
-<<<<<<< HEAD
-=======
 							else if (units.equals("Miligramos")) {
 								unit = "mg";
 							}
->>>>>>> Rama-Lorena-Android
 							else if (units.equals("Unidades")) {
 								unit = "unid";
 							}
