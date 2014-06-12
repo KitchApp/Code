@@ -1,4 +1,3 @@
-
 package com.example.kitchapp;
 
 import java.util.ArrayList;
@@ -62,7 +61,7 @@ public class ShowFavoriteRecipe extends ActionBarActivity  implements OnClickLis
 		//mostrar la imagen
 		Picasso.with(getApplicationContext()).load(imageBundle).into(imageRef);
 		//Picasso.with(getApplicationContext().)
-		//mostrar el nï¿½mero de personas
+		//mostrar el número de personas
 		helper.open();
 		numPersRef.setText(helper.getNumPersRecipe(titleBundle)+" Personas");
 		headerIngredients.setText("Ingredientes");
@@ -102,8 +101,8 @@ public class ShowFavoriteRecipe extends ActionBarActivity  implements OnClickLis
 		// Asignamos el Adapter al ListView, en este punto hacemos que el
      	// ListView muestre los datos que queremos.
 		ingredientsRef.setAdapter(adapter);
-		//mostrar la preparaciï¿½n
-		headerPreparation.setText("Preparaciï¿½n");
+		//mostrar la preparación
+		headerPreparation.setText("Preparación");
 		preparationRef.setText(helper.getPreparationRecipe(titleBundle));
 		helper.close();
 	}

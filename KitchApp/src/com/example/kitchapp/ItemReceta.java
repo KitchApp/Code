@@ -1,4 +1,3 @@
-
 package com.example.kitchapp;
 
 public class ItemReceta {

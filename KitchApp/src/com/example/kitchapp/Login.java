@@ -27,11 +27,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 
 public class Login extends Activity {
 	
@@ -57,6 +55,8 @@ public class Login extends Activity {
 
 		TextView registerScreen = (TextView)findViewById(R.id.link_to_register);
 		Button b1=(Button)findViewById(R.id.btnLogin);
+		
+    	
 	}
 
 		
