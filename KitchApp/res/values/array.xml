@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Categorias">
+        <item >Lacteos</item>
+        <item >Frutas y Verduras</item>
+        <item >Pan y Bolleria</item>
+        <item >Bebidas</item>
+        <item >Carnes</item>
+        <item >Pescados</item>
+        <item >Condimentos</item>
+        <item >Pastas y Arroces</item>
+        <item >Congelados</item>
+        <item >Salsas</item>
+        <item >Drogueria</item>
+        <item >Varios</item>
+    </string-array>
+    
+    <string-array name="Unidades">
+        <item >Litros</item>
+        <item >Mililitros</item>
+        <item >Kilos</item>
+        <item >Gramos</item>
+        <item >Unidades</item>
+    </string-array>
+    
+    <string-array name="dietas">
+        <item>Baja en calorías</item>
+        <item>Baja en grasas</item>
+        <item>Baja en hidratos de carbono</item>
+        <item>Baja en sodio</item>
+        <item>Libre de gluten</item>
+        <item>Mediterranea</item>
+        <item>Proteica</item>
+        <item>Vegetariana</item>
+        <item>Otro</item>
+   </string-array>
+   
+   <string-array name="tipoPlato">
+        <item>Aperitivo</item>
+        <item>Entrante</item>
+        <item>Primer plato</item>
+        <item>Segundo plato</item>
+        <item>Postre</item>        
+   </string-array>
+   
+   <string-array name="intolerancias">
+        <item>Alcohol</item>
+        <item>Fructosa</item>
+        <item>Frutos Secos</item>
+        <item>Gluten</item>
+        <item>Huevo</item>
+        <item>Lactosa</item>
+        <item>Marisco</item>
+        <item>Pescado</item>
+        <item>Soja</item>
+    </string-array>  
+</resources>

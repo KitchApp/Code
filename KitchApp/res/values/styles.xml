@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Tema de la aplicación de base, depende del nivel de API. Este tema se 
+        sustituye por AppBaseTheme de res / valores-vxx / styles.xml en los 
+        dispositivos más nuevos.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Dialog">
+
+        <!--
+            Personalizaciones temáticas disponibles en los niveles de API más 
+            nuevos pueden ir en res / valores-vxx / styles.xml, mientras que 
+            las personalizaciones relacionadas con la compatibilidad con versiones 
+            anteriores pueden ir aquí.
+        -->
+        
+    </style>
+
+    <!-- Application theme. -->    
+                
+	<style name="boton_style" parent="@android:style/Widget.Button">
+	<!-- style name="AppTheme" parent="AppBaseTheme"> -->
+	
+	    <!-- Todas las personalizaciones que no son específicos de un nivel 
+        	 determinado de API pueden ir aquí
+        -->
+                
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>		        				
+		<item name="android:textColor">@color/black</item>
+		<item name="android:gravity">center</item>				
+		<item name="android:layout_margin">5dp</item>
+		<item name="android:layout_marginTop">15dp</item>		
+		<item name="android:textSize">19sp</item>
+		
+	</style>	
+
+</resources>

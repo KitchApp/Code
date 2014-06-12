@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:kitchapp="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <item 
+        android:id="@+id/update_Pantry"
+        android:orderInCategory="100"
+        kitchapp:showAsAction="ifRoom|withText"
+        android:icon="@drawable/update_pantry"
+        android:title="@string/buyed"/>
+    
+    <item 
+        android:id="@+id/delete_ProductList"
+        android:orderInCategory="100"
+        kitchapp:showAsAction="ifRoom|withText"
+        android:icon="@drawable/delete2"
+        android:title="@string/delete"/>
+
+</menu>
