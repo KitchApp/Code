@@ -48,14 +48,23 @@
     <string name="listadelacompra">Lista de la compra</string>
     <string name="accept">Aceptar</string>
     <string name="delete">Eliminar</string>
+<<<<<<< HEAD
     <string name="categorySelected">Seleccionar categoría y unidades</string>
+=======
+>>>>>>> Rama-Lorena-Android
     <string name="search">Buscar</string>
     <string name="manual">Manual</string>
     <string name="voice">Voz</string>
     <string name="barcode">Barras</string>
     <string name="logout">Salir</string>
     <string name="home">Inicio</string>
+<<<<<<< HEAD
     <string name="dialog_header">Nombre de la lista</string>
+=======
+    <string name="options">Opciones</string>
+    <string name="dialog_header">Nombre de la lista</string>
+    <string name="categorySelected">Seleccionar categoría</string>
+>>>>>>> Rama-Lorena-Android
     <string name="topTen">Top Ten</string>
     <string name="recipes">Recetas</string>
     <string name="favourite">Favoritos</string>

@@ -39,7 +39,11 @@
         <!-- fin Pie de página -->
  
         <!-- Formulario de login -->
+<<<<<<< HEAD
         <LinearLayout     
+=======
+        <LinearLayout          
+>>>>>>> Rama-Lorena-Android
 	            android:orientation="vertical"
 	            android:layout_width="fill_parent"
    	            android:layout_height="wrap_content"

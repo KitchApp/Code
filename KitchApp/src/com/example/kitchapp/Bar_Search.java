@@ -95,6 +95,7 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 			public boolean onQueryTextChange(String arg0) {
 				return false;
 			}
+<<<<<<< HEAD
 
 			@Override
 			public boolean onQueryTextSubmit(String arg0) {
@@ -111,6 +112,21 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 		case R.id.manual:
 
 			return true;
+=======
+
+			@Override
+			public boolean onQueryTextSubmit(String arg0) {
+				String prod = searchview.getQuery().toString();
+				if (prod.length() != 0)
+					showProduct(prod, "name");
+				return false;
+			}});
+		return super.onCreateOptionsMenu(menu);
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+>>>>>>> Rama-Lorena-Android
 		case R.id.voice:
 			searchByVoice();
 			return true;
@@ -148,7 +164,11 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 			SQLiteDatabase db = helper.open();
 			if (db != null) {
 				helper.updateProduct(txt_product.getText().toString(),txt_prod.getText().toString(),
+<<<<<<< HEAD
 						Integer.parseInt(txt_qty.getText().toString()),"updatePantry",1);
+=======
+						Integer.parseInt(txt_qty.getText().toString()));
+>>>>>>> Rama-Lorena-Android
 //				helper.close();
 			}
 			helper.close();
@@ -324,7 +344,11 @@ public class Bar_Search extends ActionBarActivity implements OnClickListener {
 		view = inflater.inflate(R.layout.activity_modificar_producto_despensa,
 				null);
 		
+<<<<<<< HEAD
 		txt_prod = (EditText) view.findViewById(R.id.nameProductModify);
+=======
+		txt_prod = (EditText) view.findViewById(R.id.ingredients);
+>>>>>>> Rama-Lorena-Android
 		txt_prod.setText(txt_product.getText());
 		txt_qty = (EditText) view.findViewById(R.id.cantProduct);
 		txt_qty.setText(txt_quantity.getText());

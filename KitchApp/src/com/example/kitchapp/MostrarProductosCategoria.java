@@ -131,7 +131,11 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 
 			}
 		}
+<<<<<<< HEAD
 	
+=======
+			
+>>>>>>> Rama-Lorena-Android
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -535,7 +539,11 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 	
 	public void addProduct(int position) {
 		String[] prod = matches_text.get(position).split(" ");
+<<<<<<< HEAD
 	 	String prodName = "";
+=======
+	 	productName = "";
+>>>>>>> Rama-Lorena-Android
 	 	String oneCantM = "un";
 	 	String oneCantF = "una";
 	 	productCant = 0;
@@ -555,13 +563,19 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
    	 							error = true;
    	 						}
    	 						else {
+<<<<<<< HEAD
    	 							prodName += prod[i];
    	 							prodName += " ";
+=======
+   	 							productName += prod[i];
+   	 							productName += " ";
+>>>>>>> Rama-Lorena-Android
    	 						}
    	 					}
    	 				}
    	 			}
    	 			else {
+<<<<<<< HEAD
    	 				prodName += prod[i];
    	 				prodName += " ";
    	 			}
@@ -574,6 +588,13 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
    	 			if (k != (nameP.length - 1))
    	 				productName += " ";
    	 		}
+=======
+   	 				productName += prod[i];
+   	 				productName += " ";
+   	 			}
+   	 			
+   	 		}
+>>>>>>> Rama-Lorena-Android
    	 		if (!error) {
    	 			if (productCant <= 0) {
    	 				errorCantVoice();

@@ -67,7 +67,11 @@
 					    	        android:layout_weight="1"      
 					            	android:textColor="@color/white" 
 									android:background="@color/darkGray"     		        
+<<<<<<< HEAD
 									android:drawableRight="@drawable/despensa1"		        		             
+=======
+									android:drawableRight="@drawable/despensa"		        		             
+>>>>>>> Rama-Lorena-Android
 									android:text="@string/despensa" 
 									android:gravity="center"
 									android:textSize="20sp" />

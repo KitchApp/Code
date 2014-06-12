@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
@@ -80,4 +81,88 @@
 			       android:textColor="@color/white" />
 		                
 	</LinearLayout>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+	<LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"        
+	        android:orientation="horizontal"
+	        android:layout_gravity="center_horizontal"
+			android:padding="10dp" >
+			
+		    <TextView 
+			        android:id="@+id/textViewUnits"
+			   		android:layout_width="0dp"
+			    	android:layout_height="wrap_content"
+					android:layout_weight="1"    	    		    		    		    	    			
+			        android:layout_marginTop="10dp"
+			   		android:text="@string/unitsSelected"
+			   		android:textColor="@color/navy"
+			   		android:textSize="30sp" />
+			    
+    </LinearLayout>        
+    
+    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"        
+	        android:orientation="vertical"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp" 
+	        android:layout_marginTop="30dp" >
+		    
+		    <Spinner 
+			       android:id="@+id/spinnerUnitsPantry"
+			       android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"	       
+			       android:layout_gravity="center"	
+			       android:layout_marginTop="30dp"       
+			       android:background="@color/lightGray"
+			       android:drawSelectorOnTop="true" />
+			    
+    </LinearLayout>
+    
+    <LinearLayout 
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:layout_marginTop="40dp"
+	    	android:layout_gravity="center_horizontal" >
+		    	
+	        <Button 
+			       android:id="@+id/buttonCancelPantry"
+			       android:layout_width="0dp"
+			       android:layout_height="wrap_content"
+			       android:layout_weight="1"	       
+			       android:background="@drawable/boton_redondo_color_navy"
+			       android:layout_marginBottom="20dp"
+			       android:layout_marginTop="20dp"
+			       android:layout_marginRight="25dp"
+			       android:padding="10dp"		        
+			       android:layout_gravity="left"
+			       android:text="@string/cancel"
+			       android:textSize="25sp"
+			       android:textColor="@color/white" />
+		        
+	        <Button 
+			       android:id="@+id/button_acceptPantry"
+			       android:layout_width="0dp"
+			       android:layout_height="wrap_content"
+				   android:layout_weight="1"	       
+			       android:background="@drawable/boton_redondo_color_navy"
+			       android:layout_marginBottom="20dp"
+			       android:layout_marginTop="20dp"
+			       android:layout_marginLeft="25dp"	  
+			       android:padding="10dp"	      	               	       
+			       android:layout_gravity="right"
+			       android:text="@string/accept"
+			       android:textSize="25sp"
+			       android:textColor="@color/white" />
+		                
+	</LinearLayout>
+>>>>>>> Rama-Lorena-Android
 </LinearLayout>

@@ -79,4 +79,8 @@
         <item name="dropDownListViewStyle">@style/DropDownListView.Mystyleactionbar</item>
     </style>
 
+<<<<<<< HEAD
 </resources>
+=======
+</resources>
+>>>>>>> Rama-Lorena-Android

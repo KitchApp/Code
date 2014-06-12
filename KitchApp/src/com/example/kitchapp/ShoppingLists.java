@@ -1,8 +1,10 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,13 +16,26 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+//import android.view.MenuInflater;
+//import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
+=======
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.Button;
+>>>>>>> Rama-Lorena-Android
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+<<<<<<< HEAD
+=======
+import android.widget.Toast;
+>>>>>>> Rama-Lorena-Android
 import android.widget.AdapterView.OnItemClickListener;
 
 public class ShoppingLists extends ActionBarActivity {
@@ -29,8 +44,10 @@ public class ShoppingLists extends ActionBarActivity {
 	private ListView list;
 	private ShoppingListAdapter adapter;
 	public Handler_Sqlite helper;
+	private ArrayList<ShoppingListItem> lists;
 	private boolean deleteButtonPressed;
 	private MenuItem add_Item;
+	private Dialog customDialog;
 	private String listName;
 	private String listTableName = "listshopping";
 	private Context mycontext;
@@ -63,12 +80,29 @@ public class ShoppingLists extends ActionBarActivity {
 		shoppingLists = helper.readLists();
 	}
 
+<<<<<<< HEAD
 	
+=======
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menu_action_bar, menu);
+		add_Item = menu.findItem(R.id.add_Product);
+		MenuItem home = menu.findItem(R.id.home);
+		home.setVisible(false);
+		return super.onCreateOptionsMenu(menu);
+	}
+>>>>>>> Rama-Lorena-Android
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
+<<<<<<< HEAD
 		// cambiar add_Product por add(para que sea mï¿½s general)
+=======
+		// cambiar add_Product por add(para que sea más general)
+>>>>>>> Rama-Lorena-Android
 		case R.id.add_Product:
 			open_Dialog();
 			return true;
@@ -113,6 +147,17 @@ public class ShoppingLists extends ActionBarActivity {
 		}
 	}
 
+<<<<<<< HEAD
+=======
+	private void add_List() {
+		if (listName == "")
+			listName = "Lista " + shoppingLists.size();
+		shoppingLists.add(new ShoppingListItem(listName));
+		helper.insertLists(listName);
+		list.setAdapter(adapter);
+	}
+
+>>>>>>> Rama-Lorena-Android
 	private void delete_List() {
 
 		for (int i = 0; i < shoppingLists.size(); i++) {
@@ -122,7 +167,11 @@ public class ShoppingLists extends ActionBarActivity {
 				i--;
 				SQLiteDatabase db = helper.open();
 				if (db != null) {
+<<<<<<< HEAD
 					helper.removeList(item.getListName());
+=======
+					helper.remove(listTableName, "name", item.getListName());
+>>>>>>> Rama-Lorena-Android
 					helper.close();
 				}
 			}
@@ -197,7 +246,11 @@ public class ShoppingLists extends ActionBarActivity {
 		listName = shoppingList.getText().toString();
 		int numList = helper.getIdList(listName);
 		Intent j = new Intent(this, MostrarProductosLista.class);
+<<<<<<< HEAD
 		j.putExtra("idList", numList);
+=======
+		j.putExtra("numList", numList);
+>>>>>>> Rama-Lorena-Android
 		startActivity(j);
 		super.finish();
 	}
@@ -293,5 +346,14 @@ public class ShoppingLists extends ActionBarActivity {
 		builder.create();
 		builder.show();
 	}
+<<<<<<< HEAD
+=======
+	
+	public void onBackPressed() {
+		Intent principal = new Intent(this,PantallaPrincipal.class);
+		startActivity(principal);
+		finish();
+	}
+>>>>>>> Rama-Lorena-Android
 
 }

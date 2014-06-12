@@ -3,11 +3,11 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
-  android:fillViewport="true" >
+  android:fillViewport="true">
   <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff" >
+        android:background="#ffffff">
  
         <!--  Encabezado-->
         <LinearLayout 
@@ -38,7 +38,7 @@
                 android:layout_alignParentBottom="true" >
         </LinearLayout>
         <!-- fin Pie de página -->
-  
+ 
         <!-- Formulario de login -->
         <LinearLayout         
           		android:orientation="vertical"

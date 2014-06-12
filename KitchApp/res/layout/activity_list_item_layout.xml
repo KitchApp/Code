@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <RelativeLayout 
 	xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
 	android:layout_height="wrap_content" >
+=======
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content" >
+>>>>>>> Rama-Lorena-Android
 		 
 		<ImageView
 			    android:id="@+id/imagen"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:layout_alignParentLeft="true"
+<<<<<<< HEAD
 			    android:layout_centerInParent="true" />
+=======
+			    android:layout_centerInParent="true"/>
+>>>>>>> Rama-Lorena-Android
 		     
 		<TextView
 			    android:id="@+id/nombre"
@@ -26,6 +36,13 @@
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:layout_alignParentRight="true"
+<<<<<<< HEAD
 			    android:layout_centerInParent="true" />
 		    
 </RelativeLayout>
+=======
+			    android:layout_centerInParent="true"
+			    />
+		    
+</RelativeLayout>
+>>>>>>> Rama-Lorena-Android

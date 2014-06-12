@@ -1,6 +1,15 @@
 package com.example.kitchapp;
 
+<<<<<<< HEAD
 import java.io.IOException;
+=======
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+>>>>>>> Rama-Lorena-Android
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -18,10 +27,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
 import android.app.AlertDialog;
+<<<<<<< HEAD
+=======
+import android.app.AlertDialog.Builder;
+>>>>>>> Rama-Lorena-Android
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.text.Editable;
+>>>>>>> Rama-Lorena-Android
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,6 +52,10 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
+<<<<<<< HEAD
+=======
+	private String encryptedPassword="";
+>>>>>>> Rama-Lorena-Android
 
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 	
@@ -56,6 +77,11 @@ public class Registro extends Activity implements OnClickListener {
         password = (EditText) findViewById(R.id.reg_password);
         email = (EditText) findViewById(R.id.reg_email);
  
+<<<<<<< HEAD
+=======
+        // Listening to Login Screen link
+        //loginScreen.setOnClickListener(this);
+>>>>>>> Rama-Lorena-Android
         buttonRegister.setOnClickListener(this);
         loginScreen.setOnClickListener(this);
         userName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -64,6 +90,10 @@ public class Registro extends Activity implements OnClickListener {
 			public void onFocusChange(View v, boolean hasFocus) {
 				// TODO Auto-generated method stub
 				if(hasFocus==false){
+<<<<<<< HEAD
+=======
+					//userValidation=true;
+>>>>>>> Rama-Lorena-Android
 					new HttpGetName().execute();
 					
 				}
@@ -210,6 +240,11 @@ public class Registro extends Activity implements OnClickListener {
 		protected String doInBackground(String... mURL) {
 			
 			String response="";
+<<<<<<< HEAD
+=======
+	        //mURL[0]=mURL[0].replace(" ", "%20");
+	         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
+>>>>>>> Rama-Lorena-Android
 	          HttpClient httpclient = new DefaultHttpClient();
 	          HttpGet httppost= new HttpGet();;
 	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
@@ -343,6 +378,12 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		
 	}
 	try{
+<<<<<<< HEAD
+=======
+		String tmp=email.getText().toString();
+		boolean x=email.getText().toString().equals(ja.getString(2));
+		boolean y=!(email.getText().toString().equals(""));
+>>>>>>> Rama-Lorena-Android
 		if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
 			builder.setTitle("Informacion")
             .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
@@ -386,6 +427,12 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
                 JSONObject json = new JSONObject();
                 //extract the username and password from UI elements and create a JSON object
+<<<<<<< HEAD
+=======
+                String name=username.getText().toString().trim();
+                String pass=password.getText().toString().trim();
+                String mail=email.getText().toString().trim();
+>>>>>>> Rama-Lorena-Android
                 json.put("name", username.getText().toString().trim());
                 json.put("pass", password.getText().toString().trim());
                 json.put("mail", email.getText().toString().trim());

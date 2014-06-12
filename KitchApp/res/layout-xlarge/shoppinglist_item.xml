@@ -32,4 +32,8 @@
 		        android:onClick="goList"
 		        android:background="@drawable/ic_action_next_item">
 	    </Button>    
+<<<<<<< HEAD
 </RelativeLayout>
+=======
+</RelativeLayout>
+>>>>>>> Rama-Lorena-Android

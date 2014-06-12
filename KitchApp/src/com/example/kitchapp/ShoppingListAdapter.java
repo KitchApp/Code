@@ -178,3 +178,10 @@ class Holder
     	this.checkBox = checkBox;
     }
 }*/
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> Rama-Lorena-Android

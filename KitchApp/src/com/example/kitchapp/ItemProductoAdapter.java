@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
+<<<<<<< HEAD
+=======
+import android.widget.Toast;
+>>>>>>> Rama-Lorena-Android
 
 public class ItemProductoAdapter extends BaseAdapter {
   protected Activity activity;

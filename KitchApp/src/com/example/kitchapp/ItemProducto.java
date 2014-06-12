@@ -15,6 +15,15 @@ public class ItemProducto {
     this.cantidad = 0;
     this.selected = false;
   }
+<<<<<<< HEAD
+=======
+  
+  public ItemProducto(int id, String nombre, int cantidad) {
+	    this.id = id;
+	    this.nombre = nombre;
+	    this.cantidad = cantidad;
+  }
+>>>>>>> Rama-Lorena-Android
      
   public ItemProducto(int id, String nombre, int cantidad,int category,String units, boolean selected) {
 	    this.id = id;

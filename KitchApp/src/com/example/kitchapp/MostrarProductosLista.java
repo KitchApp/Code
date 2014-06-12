@@ -12,12 +12,17 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.ActionBarActivity;
+<<<<<<< HEAD
+=======
+import android.support.v7.widget.PopupMenu;
+>>>>>>> Rama-Lorena-Android
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,6 +55,7 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 	private ArrayList<ItemProducto> productsStore;
 	private ArrayList<ItemProducto> productsOthers;
 	private ExpandableListView listProducts;
+<<<<<<< HEAD
 	private Button accept;
 	private Button cancel;
 	private Button button_addManually;
@@ -59,6 +65,17 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 	private MenuItem item_update;
 	private Spinner category;
 	private Spinner unitsProduct;
+=======
+//	private Button accept;
+//	private Button cancel;
+//	private Button button_addManually;
+//	private Button button_addVoice;
+//	private Button button_addCode;
+	private MenuItem item_delete;
+	private MenuItem item_update;
+//	private Spinner category;
+//	private Spinner unitsProduct;
+>>>>>>> Rama-Lorena-Android
 	private EditText nameProductModified;
 	private EditText cantProductModified;
 	private Button save;
@@ -83,11 +100,13 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 	ArrayList<String> matches_text;
 	Handler_Sqlite helper;
 	int idList;
-
+	private Menu menuBar;
+	private boolean add_product;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_una_lista);
+		setContentView(R.layout.activity_one_shopping_list);
 		helper=new Handler_Sqlite(this);
 		pressedButtonDelete = false;
 		pressedButtonUpdate = false;
@@ -119,6 +138,7 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 
 			@Override
 			public boolean onChildClick(ExpandableListView arg0, View arg1,
+<<<<<<< HEAD
 					int positionGroup, int positionChild, long arg4) {
 				// TODO Auto-generated method stub
 						modificarProducto(arg1,positionGroup,positionChild);
@@ -134,6 +154,22 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 		
 		button_addCode = (Button) findViewById(R.id.buttonAddCode);
 		button_addCode.setOnClickListener(this);
+=======
+				int positionGroup, int positionChild, long arg4) {
+				modificarProducto(arg1,positionGroup,positionChild);
+				return true;
+			}
+		});
+		
+//		button_addManually = (Button) findViewById(R.id.buttonAddManually);
+//		button_addManually.setOnClickListener(this);
+//		
+//		button_addVoice = (Button) findViewById(R.id.buttonAddVoice);
+//		button_addVoice.setOnClickListener(this);
+//		
+//		button_addCode = (Button) findViewById(R.id.buttonAddCode);
+//		button_addCode.setOnClickListener(this);
+>>>>>>> Rama-Lorena-Android
 		
 		
 	}
@@ -142,7 +178,12 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
+<<<<<<< HEAD
         inflater.inflate(R.menu.mostrar_productos_lista, menu);
+=======
+        inflater.inflate(R.menu.show_products_list, menu);
+        menuBar = menu;
+>>>>>>> Rama-Lorena-Android
         item_delete = menu.findItem(R.id.delete_ProductList);
         item_update = menu.findItem(R.id.update_Pantry);
         return super.onCreateOptionsMenu(menu);
@@ -150,6 +191,7 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+<<<<<<< HEAD
 		
 		switch (item.getItemId()) {
 			case R.id.update_Pantry:
@@ -196,6 +238,126 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 				return super.onOptionsItemSelected(item);
 		}
 		
+=======
+		switch (item.getItemId()) {
+		case R.id.add:
+			add_product = true;
+			onPrepareOptionsMenu(menuBar);
+			return true;
+		case R.id.delete_ProductList:
+			if (pressedButtonDelete) {
+//				button_addManually.setEnabled(true);
+//				button_addVoice.setEnabled(true);
+//				button_addCode.setEnabled(true);
+				item_update.setEnabled(true);
+				deleteProducts();
+				hideCheckBox();
+				pressedButtonDelete = false;
+			} else {
+//				button_addManually.setEnabled(false);
+//				button_addVoice.setEnabled(false);
+//				button_addCode.setEnabled(false);
+				item_update.setEnabled(false);
+				showCheckBox();
+				pressedButtonDelete = true;
+			}
+			return true;
+		case R.id.settings:
+			View menuItemView = findViewById(R.id.settings);
+			PopupMenu popup = new PopupMenu(MostrarProductosLista.this,menuItemView);
+			popup.getMenuInflater().inflate(R.menu.menu_settings, popup.getMenu());
+			popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+				
+				@Override
+				public boolean onMenuItemClick(MenuItem item) {
+					switch (item.getItemId()) {
+					case R.id.home:
+						goHome();
+						return true;
+					case R.id.logout:
+						logout();
+						return true;
+					default:
+						return false;
+					}
+				}
+			});
+			popup.show();
+			return true;
+		case R.id.back:
+			add_product = false;
+			onPrepareOptionsMenu(menuBar);
+			return true;
+		case R.id.update_Pantry:
+			if (pressedButtonUpdate) {
+//				button_addManually.setEnabled(true);
+//				button_addVoice.setEnabled(true);
+//				button_addCode.setEnabled(true);
+				item_delete.setEnabled(true);
+				updatePantry();
+				hideCheckBox();
+				pressedButtonUpdate = false;
+			} else {
+//				button_addManually.setEnabled(false);
+//				button_addVoice.setEnabled(false);
+//				button_addCode.setEnabled(false);
+				item_delete.setEnabled(false);
+				showCheckBox();
+				pressedButtonUpdate = true;
+			}
+			return true;
+		case R.id.manual:
+//			if (!searchProduct()) 
+//				nameProduct = "";
+//				cantProduct = 0;
+				selectCategory();
+			
+			return true;
+		case R.id.voice:
+			addVoice = true;
+			addProductVoice();
+			return true;
+		case R.id.barcode:
+			addVoice = false;
+			addBarCode();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+
+	}
+	
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		MenuItem manual = menu.findItem(R.id.manual);
+		MenuItem voice = menu.findItem(R.id.voice);
+		MenuItem barcode = menu.findItem(R.id.barcode);
+		MenuItem back = menu.findItem(R.id.back);
+		MenuItem add = menu.findItem(R.id.add);
+		MenuItem delete = menu.findItem(R.id.delete_ProductList);
+		MenuItem settings = menu.findItem(R.id.settings);
+		MenuItem update = menu.findItem(R.id.update_Pantry);
+		if (add_product) {
+			manual.setVisible(true);
+			voice.setVisible(true);
+			barcode.setVisible(true);	
+			back.setVisible(true);
+			add.setVisible(false);
+			delete.setVisible(false);
+			settings.setVisible(false);
+			update.setVisible(false);
+		} 
+		else {
+			manual.setVisible(false);
+			voice.setVisible(false);
+			barcode.setVisible(false);	
+			back.setVisible(false);
+			add.setVisible(true);
+			delete.setVisible(true);
+			settings.setVisible(true);
+			update.setVisible(true);
+		}
+		return true;
+>>>>>>> Rama-Lorena-Android
 	}
 	
 	private void initializeArrayList(Integer idList) {
@@ -348,11 +510,85 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
 		switch (arg0.getId()) {
-			case R.id.buttonAddManually:
-				if (!searchProduct()) {
-					selectCategory();
-				}
+//			case R.id.buttonAddManually:
+//				if (!searchProduct()) {
+//					selectCategory();
+//				}
+//				break;
+//			case R.id.buttonCancelList:
+//				Intent intent = new Intent(this,MostrarProductosLista.class);
+//				intent.putExtra("idList", idList);
+//				startActivity(intent);
+//				finish();
+//				break;
+//			case R.id.button_acceptList:
+//				int tipoCat = 0;
+//				if (cat.equals("Lacteos")) {
+//					tipoCat = 1;
+//				}
+//				else if (cat.equals("Frutas y Verduras")) {
+//					tipoCat = 2;
+//				}
+//				else if (cat.equals("Pan y Bolleria")) {
+//					tipoCat = 3;
+//				}
+//				else if (cat.equals("Bebidas")) {
+//					tipoCat = 4;
+//				}
+//				else if (cat.equals("Carnes")) {
+//					tipoCat = 5;
+//				}
+//				else if (cat.equals("Pescados")) {
+//					tipoCat = 6;
+//				}
+//				else if (cat.equals("Condimentos")) {
+//					tipoCat = 7;
+//				}
+//				else if (cat.equals("Pastas y Arroces")) {
+//					tipoCat = 8;
+//				}
+//				else if (cat.equals("Congelados")) {
+//					tipoCat = 9;
+//				}
+//				else if (cat.equals("Salsas")) {
+//					tipoCat = 10;
+//				}
+//				else if (cat.equals("Drogueria")) {
+//					tipoCat = 11;
+//				}
+//				else if (cat.equals("Varios")) {
+//					tipoCat = 12;
+//				}
+//				String unit = "";
+//				if (units.equals("Litros")) {
+//					unit = "l";
+//				}
+//				else if (units.equals("Mililitros")) {
+//					unit = "ml";
+//				}
+//				else if (units.equals("Kilos")) {
+//					unit = "kg";
+//				}
+//				else if (units.equals("Gramos")) {
+//					unit = "gr";
+//				}
+//				else if (units.equals("Unidades")) {
+//					unit = "unid";
+//				}
+//				addManually(tipoCat,unit);
+//				break;
+//			case R.id.buttonAddVoice:
+//				addVoice = true;
+//				addProductVoice();
+//				break;	
+//			case R.id.buttonAddCode:
+//				addVoice = false;
+//				addBarCode();
+//				break;
+			case R.id.button_decrement:
+				decrementCant(arg0);
 				break;
+<<<<<<< HEAD
 			case R.id.buttonCancelList:
 				Intent intent = new Intent(this,MostrarProductosLista.class);
 				intent.putExtra("idList", idList);
@@ -632,6 +868,214 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 					default:
 						break;
 				}
+=======
+			case R.id.button_increment:
+				incrementCant(arg0);
+				break;
+			case R.id.button_cancel:
+				Intent i = new Intent(this,MostrarProductosLista.class);
+				i.putExtra("idList",idList);
+				startActivity(i);
+				finish();
+				break;
+			case R.id.button_save:
+				switch (catProduct) {
+					case 1:
+						ItemProducto prodDairy = productsDairy.get(posProduct);
+						String nameLastDairy = prodDairy.getNombre();
+						prodDairy.setNombre(nameProductModified.getText().toString());
+						prodDairy.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsDairy.set(posProduct,prodDairy);
+						SQLiteDatabase tmpDairy = helper.open();
+						if (tmpDairy != null) {
+							helper.updateProduct(nameLastDairy,prodDairy.getNombre(),prodDairy.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentDairy = new Intent(this,MostrarProductosLista.class);
+						intentDairy.putExtra("idList",idList);
+						startActivity(intentDairy);
+						finish();
+						break;
+					case 2:
+						ItemProducto prodFruits = productsFruits.get(posProduct);
+						String nameLastFruits = prodFruits.getNombre();
+						prodFruits.setNombre(nameProductModified.getText().toString());
+						prodFruits.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsFruits.set(posProduct,prodFruits);
+						SQLiteDatabase tmpFruits = helper.open();
+						if (tmpFruits != null) {
+							helper.updateProduct(nameLastFruits,prodFruits.getNombre(),prodFruits.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentFruits = new Intent(this,MostrarProductosLista.class);
+						intentFruits.putExtra("idList",idList);
+						startActivity(intentFruits);
+						finish();
+						break;
+					case 3:
+						ItemProducto prodBread = productsBread.get(posProduct);
+						String nameLastBread = prodBread.getNombre();
+						prodBread.setNombre(nameProductModified.getText().toString());
+						prodBread.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsBread.set(posProduct,prodBread);
+						SQLiteDatabase tmpBread = helper.open();
+						if (tmpBread != null) {
+							helper.updateProduct(nameLastBread,prodBread.getNombre(),prodBread.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentBread = new Intent(this,MostrarProductosLista.class);
+						intentBread.putExtra("idList",idList);
+						startActivity(intentBread);
+						finish();
+						break;
+					case 4:
+						ItemProducto prodDrinks = productsDrinks.get(posProduct);
+						String nameLastDrinks = prodDrinks.getNombre();
+						prodDrinks.setNombre(nameProductModified.getText().toString());
+						prodDrinks.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsDrinks.set(posProduct,prodDrinks);
+						SQLiteDatabase tmpDrinks = helper.open();
+						if (tmpDrinks != null) {
+							helper.updateProduct(nameLastDrinks,prodDrinks.getNombre(),prodDrinks.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentDrinks = new Intent(this,MostrarProductosLista.class);
+						intentDrinks.putExtra("idList",idList);
+						startActivity(intentDrinks);
+						finish();
+						break;
+					case 5:
+						ItemProducto prodMeat = productsMeat.get(posProduct);
+						String nameLastMeat = prodMeat.getNombre();
+						prodMeat.setNombre(nameProductModified.getText().toString());
+						prodMeat.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsMeat.set(posProduct,prodMeat);
+						SQLiteDatabase tmpMeat = helper.open();
+						if (tmpMeat != null) {
+							helper.updateProduct(nameLastMeat,prodMeat.getNombre(),prodMeat.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentMeat = new Intent(this,MostrarProductosLista.class);
+						intentMeat.putExtra("idList",idList);
+						startActivity(intentMeat);
+						finish();
+						break;
+					case 6:
+						ItemProducto prodFish = productsFish.get(posProduct);
+						String nameLastFish = prodFish.getNombre();
+						prodFish.setNombre(nameProductModified.getText().toString());
+						prodFish.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsFish.set(posProduct,prodFish);
+						SQLiteDatabase tmpFish = helper.open();
+						if (tmpFish != null) {
+							helper.updateProduct(nameLastFish,prodFish.getNombre(),prodFish.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentFish = new Intent(this,MostrarProductosLista.class);
+						intentFish.putExtra("idList",idList);
+						startActivity(intentFish);
+						finish();
+						break;
+					case 7:
+						ItemProducto prodCondiment = productsCondiment.get(posProduct);
+						String nameLastCondiment = prodCondiment.getNombre();
+						prodCondiment.setNombre(nameProductModified.getText().toString());
+						prodCondiment.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsCondiment.set(posProduct,prodCondiment);
+						SQLiteDatabase tmpCondiment = helper.open();
+						if (tmpCondiment != null) {
+							helper.updateProduct(nameLastCondiment,prodCondiment.getNombre(),prodCondiment.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentCondiment = new Intent(this,MostrarProductosLista.class);
+						intentCondiment.putExtra("idList",idList);
+						startActivity(intentCondiment);
+						finish();
+						break;
+					case 8:
+						ItemProducto prodPasta = productsPasta.get(posProduct);
+						String nameLastPasta = prodPasta.getNombre();
+						prodPasta.setNombre(nameProductModified.getText().toString());
+						prodPasta.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsPasta.set(posProduct,prodPasta);
+						SQLiteDatabase tmpPasta = helper.open();
+						if (tmpPasta != null) {
+							helper.updateProduct(nameLastPasta,prodPasta.getNombre(),prodPasta.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentPasta = new Intent(this,MostrarProductosLista.class);
+						intentPasta.putExtra("idList",idList);
+						startActivity(intentPasta);
+						finish();
+						break;
+					case 9:
+						ItemProducto prodFrozen = productsFrozen.get(posProduct);
+						String nameLastFrozen = prodFrozen.getNombre();
+						prodFrozen.setNombre(nameProductModified.getText().toString());
+						prodFrozen.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsFrozen.set(posProduct,prodFrozen);
+						SQLiteDatabase tmpFrozen = helper.open();
+						if (tmpFrozen != null) {
+							helper.updateProduct(nameLastFrozen,prodFrozen.getNombre(),prodFrozen.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentFrozen = new Intent(this,MostrarProductosLista.class);
+						intentFrozen.putExtra("idList",idList);
+						startActivity(intentFrozen);
+						finish();
+						break;
+					case 10:
+						ItemProducto prodSauces = productsSauces.get(posProduct);
+						String nameLastSauces = prodSauces.getNombre();
+						prodSauces.setNombre(nameProductModified.getText().toString());
+						prodSauces.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsSauces.set(posProduct,prodSauces);
+						SQLiteDatabase tmpSauces = helper.open();
+						if (tmpSauces != null) {
+							helper.updateProduct(nameLastSauces,prodSauces.getNombre(),prodSauces.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentSauces = new Intent(this,MostrarProductosLista.class);
+						intentSauces.putExtra("idList",idList);
+						startActivity(intentSauces);
+						finish();
+						break;
+					case 11:
+						ItemProducto prodStore = productsStore.get(posProduct);
+						String nameLastStore = prodStore.getNombre();
+						prodStore.setNombre(nameProductModified.getText().toString());
+						prodStore.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsStore.set(posProduct,prodStore);
+						SQLiteDatabase tmpStore = helper.open();
+						if (tmpStore != null) {
+							helper.updateProduct(nameLastStore,prodStore.getNombre(),prodStore.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentStore = new Intent(this,MostrarProductosLista.class);
+						intentStore.putExtra("idList",idList);
+						startActivity(intentStore);
+						finish();
+						break;
+					case 12:
+						ItemProducto prodOthers = productsOthers.get(posProduct);
+						String nameLastOthers = prodOthers.getNombre();
+						prodOthers.setNombre(nameProductModified.getText().toString());
+						prodOthers.setCantidad(Integer.parseInt(cantProductModified.getText().toString()));
+						productsOthers.set(posProduct,prodOthers);
+						SQLiteDatabase tmpOthers = helper.open();
+						if (tmpOthers != null) {
+							helper.updateProduct(nameLastOthers,prodOthers.getNombre(),prodOthers.getCantidad(),"updateList",idList);
+							helper.close();
+						}
+						Intent intentOthers = new Intent(this,MostrarProductosLista.class);
+						intentOthers.putExtra("idList",idList);
+						startActivity(intentOthers);
+						finish();
+						break;
+					default:
+						break;
+				}
+>>>>>>> Rama-Lorena-Android
 				default:
 					break;
 		}
@@ -742,9 +1186,15 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
 
+<<<<<<< HEAD
         View view = inflater.inflate(R.layout.activity_select_category, null);
 
     	category = (Spinner) view.findViewById(R.id.spinnerCategory);
+=======
+        View view = inflater.inflate(R.layout.add_product_to_list, null);
+
+    	final Spinner category = (Spinner) view.findViewById(R.id.spinnerCategory);
+>>>>>>> Rama-Lorena-Android
     	ArrayAdapter<CharSequence> adapterCategory = ArrayAdapter.createFromResource(this, R.array.Categorias, android.R.layout.simple_spinner_item);
     	adapterCategory.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     	category.setAdapter(adapterCategory);
@@ -762,7 +1212,11 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 			}
 		});
     	
+<<<<<<< HEAD
     	unitsProduct = (Spinner) view.findViewById(R.id.spinnerUnitsList);
+=======
+    	final Spinner unitsProduct = (Spinner) view.findViewById(R.id.spinnerUnitsList);
+>>>>>>> Rama-Lorena-Android
     	ArrayAdapter<CharSequence> adapterUnits = ArrayAdapter.createFromResource(this, R.array.Unidades, android.R.layout.simple_spinner_item);
     	adapterUnits.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     	unitsProduct.setAdapter(adapterUnits);
@@ -780,10 +1234,87 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 			}
 		});
     	
+<<<<<<< HEAD
         accept = (Button) view.findViewById(R.id.button_acceptList);
     	accept.setOnClickListener(this);
     	cancel = (Button) view.findViewById(R.id.buttonCancelList);
     	cancel.setOnClickListener(this);
+=======
+    	final EditText name = (EditText)view.findViewById(R.id.name_prod);
+    	final EditText quantity = (EditText)view.findViewById(R.id.qty_prod);
+    	name.setText(nameProduct);
+    	quantity.setText(""+cantProduct);
+
+    	builder
+		.setCancelable(false)
+		.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int id) {
+				nameProduct = name.getText().toString();
+		    	String qty = quantity.getText().toString();
+		    	cantProduct = Integer.parseInt(qty);
+				int tipoCat = 0;
+				if (cat.equals("Lacteos")) {
+					tipoCat = 1;
+				}
+				else if (cat.equals("Frutas y Verduras")) {
+					tipoCat = 2;
+				}
+				else if (cat.equals("Pan y Bolleria")) {
+					tipoCat = 3;
+				}
+				else if (cat.equals("Bebidas")) {
+					tipoCat = 4;
+				}
+				else if (cat.equals("Carnes")) {
+					tipoCat = 5;
+				}
+				else if (cat.equals("Pescados")) {
+					tipoCat = 6;
+				}
+				else if (cat.equals("Condimentos")) {
+					tipoCat = 7;
+				}
+				else if (cat.equals("Pastas y Arroces")) {
+					tipoCat = 8;
+				}
+				else if (cat.equals("Congelados")) {
+					tipoCat = 9;
+				}
+				else if (cat.equals("Salsas")) {
+					tipoCat = 10;
+				}
+				else if (cat.equals("Drogueria")) {
+					tipoCat = 11;
+				}
+				else if (cat.equals("Varios")) {
+					tipoCat = 12;
+				}
+				String unit = "";
+				if (units.equals("Litros")) {
+					unit = "l";
+				}
+				else if (units.equals("Mililitros")) {
+					unit = "ml";
+				}
+				else if (units.equals("Kilos")) {
+					unit = "kg";
+				}
+				else if (units.equals("Gramos")) {
+					unit = "gr";
+				}
+				else if (units.equals("Unidades")) {
+					unit = "unid";
+				}
+				addManually(tipoCat, unit);
+			}
+		})
+		.setNegativeButton("Cancel",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						dialog.cancel();
+					}
+				});
+>>>>>>> Rama-Lorena-Android
     	
         builder.setView(view);
                 
@@ -793,10 +1324,14 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 	}
 	
 	public boolean searchProduct() {
-		EditText product = (EditText) findViewById(R.id.et1);
+		EditText product = (EditText) findViewById(R.id.name_prod);
 		String prod = product.getText().toString();
 		if (prod.equals("")) {
+<<<<<<< HEAD
 			alertDialogReport("Es necesario escribir el nombre del producto con su cantidad, para poder aï¿½adir");
+=======
+			alertDialogReport("Es necesario escribir el nombre del producto con su cantidad, para poder añadir");
+>>>>>>> Rama-Lorena-Android
 			return true;
 		}
 		else {
@@ -819,6 +1354,7 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 					}
 				}
 			}
+<<<<<<< HEAD
 			String [] nameP = prodName.split(" ");
 			nameProduct = "";
 			for (int k=0;k<nameP.length;k++) {
@@ -826,6 +1362,8 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 				if (k != (nameP.length - 1))
 					nameProduct += " ";
 			}
+=======
+>>>>>>> Rama-Lorena-Android
 			if (cantProduct <= 0) {
 				errorAddProduct();
 				return true;
@@ -1087,7 +1625,11 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 					if (tmp != null) {
 						if (helper.existProductAdded(item.getNombre())) {
 							int cant = helper.getCant(item.getNombre());
+<<<<<<< HEAD
 							helper.updateProduct(item.getNombre(), item.getNombre(), item.getCantidad()+cant,"updatePantry",1);
+=======
+							helper.updateProduct(item.getNombre(), item.getNombre(), item.getCantidad() + cant,"updatePantry",idList);
+>>>>>>> Rama-Lorena-Android
 						}
 						else {
 							String barcode = helper.getBarcode(item.getNombre());
@@ -1201,5 +1743,35 @@ public class MostrarProductosLista extends ActionBarActivity implements OnClickL
 		
 	}
 	
+<<<<<<< HEAD
+=======
+	public void onBackPressed() {
+		Intent j = new Intent(this, ShoppingLists.class);
+		startActivity(j);
+		super.finish();
+	}
+	
+	public void goHome() {
+		Intent intent = new Intent(this, PantallaPrincipal.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(intent);
+//		finish();
+	}
+	
+	public void logout() {
+		SharedPreferences settings = getSharedPreferences(
+				PantallaTransicion.PREFS_NAME, 0);
+		SharedPreferences.Editor editor = settings.edit();
+
+		editor.putBoolean("hasLoggedIn", false);
+		editor.commit();
+
+		Intent j = new Intent(this, Login.class);
+		j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(j);
+		finish();
+	}
+	
+>>>>>>> Rama-Lorena-Android
 }
        

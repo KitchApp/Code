@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
     <issue id="DefaultLocale">
+<<<<<<< HEAD
         <ignore path="src/com/example/kitchapp/AddManualmente.java" />
         <ignore path="src/com/example/kitchapp/Bar_Search.java" />
         <ignore path="src/com/example/kitchapp/MostrarProductosCategoria.java" />
@@ -9,6 +10,10 @@
     <issue id="ShowToast">
         <ignore path="src/com/example/kitchapp/Registro.java" />
     </issue>
+=======
+        <ignore path="src/com/example/kitchapp/MostrarProductosLista.java" />
+    </issue>
+>>>>>>> Rama-Lorena-Android
     <issue id="UseSparseArrays">
         <ignore path="src/com/example/kitchapp/MostrarProductosLista.java" />
     </issue>
