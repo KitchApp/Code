@@ -1,14 +1,5 @@
 package com.example.kitchapp;
 
-<<<<<<< HEAD
-import java.util.Arrays;
-import java.util.List;
-import android.content.Context;
-import android.util.TypedValue;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-=======
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +13,6 @@ import android.widget.ArrayAdapter;
 
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.widget.TextView;
 
 

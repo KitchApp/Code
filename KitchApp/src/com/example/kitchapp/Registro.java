@@ -1,15 +1,11 @@
 package com.example.kitchapp;
 
 
-<<<<<<< HEAD
-import java.io.IOException;
-=======
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
@@ -28,12 +24,6 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-<<<<<<< HEAD
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.AsyncTask;
-import android.os.Bundle;
-=======
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -41,16 +31,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-<<<<<<< HEAD
-=======
 import android.widget.TextView;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.widget.Toast;
  
 public class Registro extends Activity implements OnClickListener {
@@ -58,12 +44,8 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
-<<<<<<< HEAD
-	
-=======
 	private String encryptedPassword="";
 
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 
 	
@@ -79,32 +61,22 @@ public class Registro extends Activity implements OnClickListener {
         // Set View to register.xml
         setContentView(R.layout.registro);
  
-<<<<<<< HEAD
-=======
         TextView loginScreen = (TextView) findViewById(R.id.link_to_login);
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
         Button buttonRegister = (Button) findViewById(R.id.btnRegistro);
         userName = (EditText) findViewById(R.id.reg_usuario);
         password = (EditText) findViewById(R.id.reg_password);
         email = (EditText) findViewById(R.id.reg_email);
  
-<<<<<<< HEAD
-=======
         // Listening to Login Screen link
         //loginScreen.setOnClickListener(this);
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
         buttonRegister.setOnClickListener(this);
         userName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
-<<<<<<< HEAD
-				if(hasFocus==false){
-=======
 				// TODO Auto-generated method stub
 				if(hasFocus==false){
 					//userValidation=true;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 					new HttpGetName().execute();
 					
 				}
@@ -115,10 +87,6 @@ public class Registro extends Activity implements OnClickListener {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
-<<<<<<< HEAD
-				if(hasFocus==true){
-					new HttpGetEmail().execute();
-=======
 				// TODO Auto-generated method stub
 				
 				if(hasFocus==true){
@@ -126,7 +94,6 @@ public class Registro extends Activity implements OnClickListener {
 					new HttpGetEmail().execute();
 					
 					
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 				}
 				
 			}
@@ -139,10 +106,7 @@ public class Registro extends Activity implements OnClickListener {
     
 	@Override
 	public void onClick(View v) {
-<<<<<<< HEAD
-=======
 		// TODO Auto-generated method stub
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		switch (v.getId()) {
 			case R.id.link_to_login:
 				finish();
@@ -264,12 +228,6 @@ public class Registro extends Activity implements OnClickListener {
 		protected String doInBackground(String... mURL) {
 			
 			String response="";
-<<<<<<< HEAD
-	        HttpClient httpclient = new DefaultHttpClient();
-	        HttpGet httppost= new HttpGet();;
-	        Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
-	    	httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
-=======
 	        //mURL[0]=mURL[0].replace(" ", "%20");
 	         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
 	          HttpClient httpclient = new DefaultHttpClient();
@@ -278,7 +236,6 @@ public class Registro extends Activity implements OnClickListener {
 	    	//HttpGet httppost = new HttpGet(mURL[0]);
 	         
 	        	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	         
 	         
 	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
@@ -292,15 +249,6 @@ public class Registro extends Activity implements OnClickListener {
 	         Log.i("LocAndroid Response HTTP",response);
 	    	} catch (ClientProtocolException e) {
 	        Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-<<<<<<< HEAD
-	    } catch (IOException e) {
-	        
-	        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-	    }
-			return response;
-		}
-   
-=======
 	        // TODO Auto-generated catch block
 	    } catch (IOException e) {
 	        
@@ -314,7 +262,6 @@ public class Registro extends Activity implements OnClickListener {
 	
 	
 	
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		protected void onPostExecute(String result) {
 			JSONArray ja=null;
 			try {
@@ -325,10 +272,7 @@ public class Registro extends Activity implements OnClickListener {
 			
 			
 		} catch (JSONException e) {
-<<<<<<< HEAD
-=======
 			// TODO Auto-generated catch block
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			e.printStackTrace();
 			Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
 			
@@ -397,15 +341,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
          Log.i("LocAndroid Response HTTP",response);
     	} catch (ClientProtocolException e) {
         Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-<<<<<<< HEAD
-    } catch (IOException e) {
-        
-        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-    }
-		return response;
-	}
-    
-=======
         // TODO Auto-generated catch block
     } catch (IOException e) {
         
@@ -419,7 +354,6 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 	
 	
 	
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	protected void onPostExecute(String result) {
 		JSONArray ja=null;
 		try {
@@ -430,21 +364,15 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 		
 		
 	} catch (JSONException e) {
-<<<<<<< HEAD
-=======
 		// TODO Auto-generated catch block
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		e.printStackTrace();
 		Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
 		
 	}
 	try{
-<<<<<<< HEAD
-=======
 		String tmp=email.getText().toString();
 		boolean x=email.getText().toString().equals(ja.getString(2));
 		boolean y=!(email.getText().toString().equals(""));
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 		if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
 			//registrado=true;
 			builder.setTitle("Informacion")
@@ -489,12 +417,9 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
                 JSONObject json = new JSONObject();
                 //extract the username and password from UI elements and create a JSON object
-<<<<<<< HEAD
-=======
                 String name=username.getText().toString().trim();
                 String pass=password.getText().toString().trim();
                 String mail=email.getText().toString().trim();
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
                 json.put("name", username.getText().toString().trim());
                 json.put("pass", password.getText().toString().trim());
                 json.put("mail", email.getText().toString().trim());

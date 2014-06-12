@@ -1,128 +1,106 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fillViewport="true" >
-    <RelativeLayout
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content" 
-    	android:background="@drawable/fondo_nuevo" >
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:fillViewport="true">
+	<RelativeLayout
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content" 
+	    	android:background="@drawable/fondo_nuevo">
 
-        <LinearLayout 
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:paddingTop="120dp"
-	    android:orientation="vertical" >       	
+			<LinearLayout 
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:paddingTop="120dp"
+			        android:orientation="vertical" >       	
+					
+	       			<LinearLayout 
+				            android:layout_width="fill_parent"
+				            android:layout_height="wrap_content"
+				            android:background="@color/lightGreen"		            
+				            android:orientation="horizontal" 
+				            android:layout_marginTop="20dp"
+				            android:padding="10dp" 
+				            android:layout_marginBottom="10dp"
+				            android:layout_marginLeft="10dp"
+				            android:layout_marginRight="10dp" >
+						    <!-- Distribución de 50% y 50% respectivamente 
+					     	para los elementos agregados al layout. 
+					    	El 100% del espacio disponible para estos elementos (botones),
+					    	corresponde al layout_width del LinearLayout con un 
+					    	valor de fill_parent.
+					    	El valor para el layout_width de los botones lo hemos definido 
+					    	con 0dp. Eso nos ayuda a decirle a nuestro diseño que resalte 
+					    	la propiedad del peso y pueda distribuir equitativamente los 
+					    	componentes sin importar lo extenso del contenido que tenga cada
+					    	“celda”, tal y como si se trataran de porcentajes.  -->
+					    	
+				    	    <Button
+				       		    	android:id="@+id/button1"
+				       		    	android:layout_width="0dp"
+						    		android:layout_height="wrap_content"
+									android:layout_weight="1"	
+									android:textColor="@color/white"      
+									android:background="@color/darkGray"      
+									android:drawableRight="@drawable/lista_compra"										
+									android:text="@string/lista_compra" 
+									android:gravity="center"
+									android:textSize="20sp" />
+				    </LinearLayout>
 			
-       	    <LinearLayout 
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:background="@color/lightGreen"
-		    android:orientation="horizontal"
-		    android:padding="10dp" 
-		    android:layout_marginBottom="10dp"
-		    android:layout_marginLeft="10dp"
-		    android:layout_marginRight="10dp"  >
+	        
+	        		<LinearLayout 
+				            android:layout_width="fill_parent"
+				            android:layout_height="wrap_content"
+				            android:background="@color/lightGreen"
+				            android:orientation="horizontal" 
+				            android:layout_marginTop="30dp"
+				            android:padding="10dp" 
+				            android:layout_marginBottom="10dp"
+				            android:layout_marginLeft="10dp"
+				            android:layout_marginRight="10dp" >
+						    
+						    <Button
+							        android:id="@+id/button2"
+							        android:layout_width="0dp"
+					    	        android:layout_height="wrap_content"
+					    	        android:layout_weight="1"      
+					            	android:textColor="@color/white" 
+									android:background="@color/darkGray"     		        
+									android:drawableRight="@drawable/despensa"		        		             
+									android:text="@string/despensa" 
+									android:gravity="center"
+									android:textSize="20sp" />
+							
+					</LinearLayout>
+					
+			        <LinearLayout 
+				            android:layout_width="fill_parent"
+				            android:layout_height="wrap_content"
+				            android:background="@color/lightGreen"
+				            android:orientation="horizontal"
+				            android:layout_marginTop="30dp"
+				            android:padding="10dp" 
+				            android:layout_marginBottom="10dp" 
+				            android:layout_marginLeft="10dp"
+				            android:layout_marginRight="10dp" >
+					    
+						    <Button
+							        android:id="@+id/button3"
+						    	    android:layout_width="0dp"
+				    		    	android:layout_height="wrap_content"
+				    		    	android:layout_weight="1"        
+							        android:textColor="@color/white"    	
+							        android:background="@color/darkGray"  	        
+							        android:drawableRight="@drawable/recetario"		        		             
+							        android:text="@string/recetario" 
+							        android:gravity="center"
+							        android:textSize="20sp" />
+						
+					</LinearLayout>
+	
+	   	    </LinearLayout>
 
-		    <!-- Distribución de 50% y 50% respectivamente 
-		    	para los elementos agregados al layout. 
-		    	El 100% del espacio disponible para estos elementos (botones),
-			corresponde al layout_width del LinearLayout con un 
-			valor de fill_parent.
-			El valor para el layout_width de los botones lo hemos definido 
-			con 0dp. Eso nos ayuda a decirle a nuestro diseño que resalte 
-			la propiedad del peso y pueda distribuir equitativamente los 
-			componentes sin importar lo extenso del contenido que tenga cada
-			“celda”, tal y como si se trataran de porcentajes. 
-			-->
-		    <Button
-		    	    android:id="@+id/button1"
-		    	    android:layout_width="0dp"
-		    	    android:layout_height="wrap_content"
-			    android:layout_weight="1"	
-		            android:textColor="@color/white"      
-		            android:background="@color/darkGray"      
-      		            android:drawableRight="@drawable/lista_compra"		        		       
-		            android:text="@string/lista_compra" 
-			    android:textSize="25sp"
-			    android:onClick="accederDespensa" />
-				
-            </LinearLayout>
-            
-            <LinearLayout 
-	            android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:background="@color/lightGreen"
-		    android:orientation="horizontal"
-		    android:padding="10dp" 
-		    android:layout_marginBottom="10dp"
-		    android:layout_marginLeft="10dp"
-	            android:layout_marginRight="10dp"  >
-				    
-		    <Button
-		            android:id="@+id/button2"
-		            android:layout_width="0dp"
-			    android:layout_height="wrap_content"
-		            android:layout_weight="1"      
-	                    android:textColor="@color/white" 
-		            android:background="@color/darkGray"     		        
-		            android:drawableRight="@drawable/despensa"		        		             
-		            android:text="@string/despensa" 
-		            android:textSize="25sp"
-			    android:onClick="accederDespensa" />
-				
-	    </LinearLayout>
-				
-            <LinearLayout 
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:background="@color/lightGreen"
-		    android:orientation="horizontal"
-		    android:padding="10dp" 
-		    android:layout_marginBottom="10dp"
-		    android:layout_marginLeft="10dp"
-		    android:layout_marginRight="10dp"  >
-				    
-		    <Button
-			    android:id="@+id/button3"
-			    android:layout_width="0dp"
-			    android:layout_height="wrap_content"
-		       	    android:orientation="horizontal" 
-			    android:layout_weight="1"                        		  
-			    android:textColor="@color/white"    	
-			    android:background="@color/darkGray"  	        
-			    android:drawableRight="@drawable/recetario"		        		             
-			    android:text="@string/recetario" 
-		            android:textSize="25sp"
-		            android:onClick="accederDespensa" />
-				
-            </LinearLayout>
-				
-	    <LinearLayout 
-	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content"
-	            android:background="@color/lightGreen"
-		    android:orientation="horizontal"
-		    android:padding="10dp" 
-		    android:layout_marginBottom="10dp"
-		    android:layout_marginLeft="10dp"
-		    android:layout_marginRight="10dp"  >
-			    
-		    <Button
-		            android:id="@+id/button4"
-			    android:layout_width="0dp"
-		    	    android:layout_height="wrap_content"
-		            android:layout_weight="1"                        		    
-			    android:textColor="@color/white"   
-           	            android:background="@color/darkGray"   		        
- 		            android:drawableRight="@drawable/estadisticas"		        		             
-			    android:text="@string/estadisticas" 
-		            android:textSize="25sp"
-			    android:onClick="accederDespensa" />
-				
-	    </LinearLayout>
-		                		     		       
-   	</LinearLayout>
-
-    </RelativeLayout>
+	</RelativeLayout>
+	
 </ScrollView>

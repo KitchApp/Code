@@ -1,11 +1,14 @@
 package com.example.kitchapp;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -13,38 +16,35 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+//import android.view.MenuInflater;
+//import android.view.MenuItem;
 import android.view.View;
-<<<<<<< HEAD
+import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class ShoppingLists extends ActionBarActivity {
 
-=======
-import android.view.View.OnClickListener;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ListView;
-
-public class ShoppingLists extends ActionBarActivity implements OnClickListener{
-	
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	private ArrayList<ShoppingListItem> shoppingLists;
 	private ListView list;
 	private ShoppingListAdapter adapter;
 	public Handler_Sqlite helper;
+	private ArrayList<ShoppingListItem> lists;
 	private boolean deleteButtonPressed;
 	private MenuItem add_Item;
+	private Dialog customDialog;
 	private String listName;
 	private String listTableName = "listshopping";
 	private String column = "name";
 	private Context mycontext;
-<<<<<<< HEAD
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,11 +64,13 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 			}
 
 		});
-		adapter = new ShoppingListAdapter(this, shoppingLists); 														// SherlockActivity
+		adapter = new ShoppingListAdapter(this, shoppingLists); 
 		list.setAdapter(adapter);
+
 	}
 
 	public void initializeArrayList(Integer idList) {
+
 		shoppingLists = helper.readLists();
 	}
 
@@ -78,60 +80,17 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu_action_bar, menu);
 		add_Item = menu.findItem(R.id.add_Product);
+		MenuItem home = menu.findItem(R.id.home);
+		home.setVisible(false);
 		return super.onCreateOptionsMenu(menu);
-=======
-	
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		mycontext=this;
-		setContentView(R.layout.activity_shopping_lists);
-		shoppingLists = new ArrayList<ShoppingListItem>();
-		helper=new Handler_Sqlite(this);
-		initializeArrayList(1);
-		list = (ListView) findViewById(R.id.listView_lists);
-		adapter = new ShoppingListAdapter(this, shoppingLists);  // Mirar si hay problemas de compatibilidad entre Activity y SherlockActivity
-		list.setAdapter(adapter);	
-		
-		
-		
-	}
-	
-	public void initializeArrayList(Integer idList) {
-		
-		shoppingLists=helper.readLists();
-	}
-        
-	
-	
-	@Override
-	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_action_bar, menu);
-        add_Item = menu.findItem(R.id.add_Product);
-        return super.onCreateOptionsMenu(menu);
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-<<<<<<< HEAD
 		// cambiar add_Product por add(para que sea más general)
 		case R.id.add_Product:
 			open_Dialog();
-=======
-		//cambiar add_Product por add(para que sea más general)
-		case R.id.add_Product:
-			open_Dialog();
-			//add_List();
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			return true;
 
 		case R.id.delete_Product:
@@ -146,6 +105,19 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 				deleteButtonPressed = true;
 			}
 			return true;
+		case R.id.logout:
+			SharedPreferences settings = getSharedPreferences(
+					PantallaTransicion.PREFS_NAME, 0);
+			SharedPreferences.Editor editor = settings.edit();
+
+			editor.putBoolean("hasLoggedIn", false);
+			editor.commit();
+
+			Intent j = new Intent(this, Login.class);
+			j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(j);
+			finish();
+			return true;
 
 		default:
 			return super.onOptionsItemSelected(item);
@@ -154,48 +126,31 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 	}
 
 	private void showCheckBox() {
-<<<<<<< HEAD
 		for (int i = 0; i < list.getChildCount(); i++) {
-=======
-		for (int i=0;i<list.getChildCount();i++) {
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			View v = list.getChildAt(i);
 			CheckBox check = (CheckBox) v.findViewById(R.id.checkBox_list);
 			check.setVisibility(View.VISIBLE);
 		}
 	}
 
-<<<<<<< HEAD
+	private void add_List() {
+		if (listName == "")
+			listName = "Lista " + shoppingLists.size();
+		shoppingLists.add(new ShoppingListItem(listName));
+		helper.insertLists(listName);
+		list.setAdapter(adapter);
+	}
+
 	private void delete_List() {
 
 		for (int i = 0; i < shoppingLists.size(); i++) {
 			ShoppingListItem item = shoppingLists.get(i);
-=======
-//	private void add_List() {
-//		if (listName == "")
-//			listName = "Lista " + shoppingLists.size();
-//		shoppingLists.add(new ShoppingListItem(listName));
-//		helper.insertLists(listName);
-//		list.setAdapter(adapter);
-//	}
-
-	private void delete_List() {
-				
-		for (int i=0;i<shoppingLists.size();i++) {
-			ShoppingListItem item = shoppingLists.get(i);
-//			System.out.println(item.getListName());
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 			if (item.isChecked()) {
 				shoppingLists.remove(i);
 				i--;
 				SQLiteDatabase db = helper.open();
-<<<<<<< HEAD
 				if (db != null) {
-					helper.remove(listTableName, column, item.getListName());
-=======
-				if (db!=null) {
-					helper.remove(listTableName,column,item.getListName());
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
+					helper.remove(listTableName, "name", item.getListName());
 					helper.close();
 				}
 			}
@@ -204,10 +159,6 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		adapter = new ShoppingListAdapter(this, shoppingLists);
 		list.setAdapter(adapter);
 	}
-<<<<<<< HEAD
-=======
-	
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 	public void hideCheckBox() {
 		for (int i = 0; i < list.getChildCount(); i++) {
@@ -222,7 +173,8 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		LayoutInflater li = LayoutInflater.from(this);
 		View promptsView = li.inflate(R.layout.dialog_crear_lista_compra, null);
 
-		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(mycontext);
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+				mycontext);
 
 		// set prompts.xml to alertdialog builder
 		alertDialogBuilder.setView(promptsView);
@@ -232,24 +184,24 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 
 		// set dialog message
 		alertDialogBuilder
-<<<<<<< HEAD
 				.setCancelable(false)
 				.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
-						// get user input and set it to result edit text
+						// get user input and set it to result
+						// edit text
 
 						int length = userInput.getText().length();
 						int pos;
 						if (length == 0) {
 							pos = shoppingLists.size() + 1;
-							listName = "Lista "+ pos;
-						}
-						else
+							listName = "Lista " + pos;
+						} else
 							listName = userInput.getText().toString();
-						if (!helper.existList(listTableName, listName))  
+						if (!helper.existList(listTableName, listName))
 							insertNewList();
 						else
 							errorListName();
+
 					}
 				})
 				.setNegativeButton("Cancel",
@@ -272,7 +224,7 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		TextView shoppingList = (TextView) item.getChildAt(1);
 		listName = shoppingList.getText().toString();
 		int numList = helper.getIdList(listName);
-		Intent j = new Intent(this, MostrarProductosCategoria.class);
+		Intent j = new Intent(this, MostrarProductosLista.class);
 		j.putExtra("numList", numList);
 		startActivity(j);
 		super.finish();
@@ -306,10 +258,10 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 						int pos;
 						if (length == 0) {
 							pos = shoppingLists.size() + 1;
-							listName = "Lista "+ pos;
-						}else
+							listName = "Lista " + pos;
+						} else
 							listName = userInput.getText().toString();
-						modifyList(position,wrong);
+						modifyList(position, wrong);
 					}
 				})
 				.setNegativeButton("Cancel",
@@ -318,31 +270,6 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 								dialog.cancel();
 							}
 						});
-=======
-			.setCancelable(false)
-			.setPositiveButton("OK",
-			  new DialogInterface.OnClickListener() {
-			    public void onClick(DialogInterface dialog,int id) {
-				// get user input and set it to result
-				// edit text
-			    	
-			    listName = userInput.getText().toString();
-			    helper.insertLists(listName);
-			    int idLista=helper.getIdList(listName);
-			    Intent intent = new Intent(mycontext, MostrarProductosLista.class);
-			    intent.putExtra("idList", idLista);
-			    mycontext.startActivity(intent);
-			    //refreshListView(userInput.getText().toString());
-			    
-			    }
-			  })
-			.setNegativeButton("Cancel",
-			  new DialogInterface.OnClickListener() {
-			    public void onClick(DialogInterface dialog,int id) {
-				dialog.cancel();
-			    }
-			  });
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 		// create alert dialog
 		AlertDialog alertDialog = alertDialogBuilder.create();
@@ -350,10 +277,9 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		// show it
 		alertDialog.show();
 
-<<<<<<< HEAD
 	}
-	
-	public void modifyList(int position, String wrong){
+
+	public void modifyList(int position, String wrong) {
 		SQLiteDatabase tmp = helper.open();
 		if (tmp != null)
 			if (!helper.existList(listTableName, listName)) {
@@ -365,15 +291,16 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		adapter = new ShoppingListAdapter(this, shoppingLists);
 		list.setAdapter(adapter);
 	}
-	
+
 	public void insertNewList() {
 		helper.insertLists(listName);
 		int idLista = helper.getIdList(listName);
-		Intent intent = new Intent(mycontext, MostrarProductosCategoria.class);
+		Intent intent = new Intent(mycontext, MostrarProductosLista.class);
 		intent.putExtra("idList", idLista);
 		mycontext.startActivity(intent);
+		super.finish();
 	}
-	
+
 	public void errorListName() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -381,7 +308,7 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 				.setIcon(
 						getResources().getDrawable(
 								android.R.drawable.ic_dialog_info))
-				.setMessage("El nombre de lista "+listName+" ya existe")
+				.setMessage("El nombre de lista " + listName + " ya existe")
 				.setNeutralButton(R.string.ok,
 						new DialogInterface.OnClickListener() {
 
@@ -394,8 +321,11 @@ public class ShoppingLists extends ActionBarActivity implements OnClickListener{
 		builder.create();
 		builder.show();
 	}
-=======
-			}
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
+	
+	public void onBackPressed() {
+		Intent principal = new Intent(this,PantallaPrincipal.class);
+		startActivity(principal);
+		finish();
+	}
 
 }

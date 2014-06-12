@@ -1,44 +1,15 @@
 package com.example.kitchapp;
 
-
-<<<<<<< HEAD
 import android.os.Bundle;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
-=======
-import java.util.ArrayList;
-
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.speech.RecognizerIntent;
-import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-<<<<<<< HEAD
 import android.widget.Button;
-=======
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 
 public class AccesoDespensa extends ActionBarActivity implements OnClickListener {
@@ -80,21 +51,37 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.menu_search, menu);
+		inflater.inflate(R.menu.menu_actionbar_search, menu);
 		return super.onCreateOptionsMenu(menu);
-
 	}
 	
 	public boolean onOptionsItemSelected(MenuItem item) {
-			Intent j = new Intent(this, Bar_Search.class);
-			startActivity(j);
+		switch (item.getItemId()) {
+		case R.id.search:
+			Intent i = new Intent(this, Bar_Search.class);
+			startActivity(i);
 			return true;
+		case R.id.logout:
+			SharedPreferences settings = getSharedPreferences(
+					PantallaTransicion.PREFS_NAME, 0);
+			SharedPreferences.Editor editor = settings.edit();
+
+			editor.putBoolean("hasLoggedIn", false);
+			editor.commit();
+
+			Intent j = new Intent(this, Login.class);
+			j.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(j);
+			finish();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 	
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()){
 
 		case R.id.buttonDairy:
@@ -170,6 +157,12 @@ public class AccesoDespensa extends ActionBarActivity implements OnClickListener
 			break;
 			
 		}
+	}
+	
+	public void onBackPressed() {
+		Intent principal = new Intent(this,PantallaPrincipal.class);
+		startActivity(principal);
+		finish();
 	}
 	
 }

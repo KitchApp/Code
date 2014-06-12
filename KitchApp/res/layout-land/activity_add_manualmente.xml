@@ -4,96 +4,94 @@
     android:layout_height="fill_parent" >
 	
     <LinearLayout 
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
-	    
-	    <!-- TextView
-	        android:id="@+id/textViewAdd"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"	        
-	        android:layout_gravity="center_horizontal"
-	        android:layout_marginTop="20dp"
-	        android:text="@string/add_manually"
-	        android:textColor="@color/navy"
-	        android:textSize="30sp" />  -->
-	        
-		<LinearLayout 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal"
-		    android:layout_gravity="center_horizontal"
-		    android:padding="20dp" >	        
-		    <TextView
-		        android:id="@+id/textViewAdd"
-		        android:layout_width="0dp"
-		        android:layout_height="wrap_content"
-			android:layout_weight="1"	        		        		        
-		        android:text="@string/add_manually"
-		        android:textColor="@color/navy"
-		        android:textSize="30sp" />
-		</LinearLayout>
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:orientation="vertical" >
+        	
+			<LinearLayout 
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:layout_gravity="center_horizontal"
+				    android:padding="20dp" >	        
+				    <TextView
+					        android:id="@+id/textViewAdd"
+					        android:layout_width="0dp"
+					        android:layout_height="wrap_content"
+							android:layout_weight="1"	        		        		        
+					        android:text="@string/add_manually"
+					        android:textColor="@color/navy"
+					        android:textSize="30sp" />
+			</LinearLayout>
 	
-	    <EditText
-	        android:id="@+id/editTextNameProduct"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-		android:layout_gravity="center_horizontal"	                
-	        android:layout_marginTop="10dp"
-	        android:ems="10"
-	        android:textSize="15sp"
-	        android:hint="@string/nameProduct"
-	        android:textColorHint="@color/black" >
-	    	
-	    	<requestFocus />
-	    </EditText>    
+	    	<EditText
+		        	android:id="@+id/editTextNameProduct"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"	                
+		        	android:layout_marginTop="30dp"
+		        	android:ems="10"
+		        	android:textSize="19sp"
+		        	android:hint="@string/nameProduct"
+		        	android:textColorHint="@color/black" >
+		    	
+		    		<requestFocus />
+	    	</EditText>    
 	
-	    <EditText
-	        android:id="@+id/EditTextCantProduct"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center_horizontal"      
-	        android:layout_marginTop="20dp"
-	        android:ems="10"
-	        android:textSize="15sp"
-	        android:hint="@string/cantProduct"
-	        android:textColorHint="@color/black" >
-	
-	        <requestFocus />
-	    </EditText>    
-
-	    <!-- Button 
-	        android:id="@+id/button_addProduct"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_centerHorizontal="true"
-	        android:layout_below="@+id/EditTextCantProduct"
-	        android:layout_marginTop="40dp"
-	        android:background="@drawable/boton_redondo_color_navy"
-	        android:text="@string/add"
-	        android:textSize="25dip"
-	        android:layout_marginBottom="20dp"
-	        android:textColor="@color/white"/> -->
-    
-		<LinearLayout 
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal"
-		    android:layout_gravity="center"
-		    android:layout_marginTop="10dp"
-		    android:padding="5dp" >
-		            
-	    	    <Button
-		        android:id="@+id/button_addProduct"
-		        style="@style/boton_style"
-		   	android:layout_weight="1"
-		        android:background="@drawable/boton_redondo_color_navy"		             
-		        android:text="@string/add"
-		        android:textSize="25sp"
-		        android:layout_marginBottom="20dp"
-		        android:textColor="@color/white" />	    	
+	    	<EditText
+					android:id="@+id/EditTextCantProduct"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:layout_gravity="center_horizontal"      
+		        	android:layout_marginTop="40dp"
+		        	android:ems="10"
+		        	android:textSize="19sp"
+		        	android:hint="@string/cantProduct"
+		        	android:textColorHint="@color/black" >
 		
-		</LinearLayout>
+		        	<requestFocus />
+		    </EditText>    
+	    	
+	    	<LinearLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:layout_gravity="center"
+				    android:layout_marginTop="30dp" >
+			
+			    	<Spinner 
+					        android:id="@+id/spinnerUnitsAddPantry"
+					        android:layout_width="0dp"
+					        android:layout_height="wrap_content"
+					        android:layout_weight="1"	       
+					        android:layout_gravity="center_horizontal"	
+					        android:layout_marginLeft="30dp"
+					        android:layout_marginRight="30dp"
+					        android:layout_marginTop="40dp"       
+					        android:background="@color/lightGray"
+					        android:drawSelectorOnTop="true" />
+			</LinearLayout>
+
+			<LinearLayout 
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:layout_gravity="center"
+				    android:layout_marginTop="30dp" >
+				            
+				    <Button
+					        android:id="@+id/button_addProduct"
+					        android:layout_width="0dp"
+					        android:layout_height="wrap_content"
+							android:layout_weight="1"
+					        android:background="@drawable/boton_redondo_color_navy"		             
+					        android:text="@string/add"
+					        android:textSize="25sp"
+					        android:padding="15dp"
+					        android:textColor="@color/white" />	    	
+					
+			</LinearLayout>
 	
     </LinearLayout>
+    
 </RelativeLayout>

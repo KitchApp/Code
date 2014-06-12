@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+      xmlns:kitchapp="http://schemas.android.com/apk/res-auto" >
+      
+    <item
+        android:id="@+id/manual"
+        android:icon="@drawable/abc_ic_search"
+        android:orderInCategory="100"
+        android:title="@string/manual"
+        android:visible="false"
+        kitchapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/voice"
+        android:icon="@drawable/ic_action_mic"
+        android:orderInCategory="100"
+        android:title="@string/voice"
+        android:visible="false"
+        kitchapp:showAsAction="always"/>
+        
+    <item
+        android:id="@+id/barcode"
+        android:icon="@drawable/ic_action_view_as_list"
+        android:orderInCategory="100"
+        android:title="@string/barcode"
+        android:visible="false"
+        kitchapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/back"
+        android:icon="@drawable/ic_action_undo"
+        android:orderInCategory="100"
+        android:title="@string/back"
+        android:visible="false"
+        kitchapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_action_new"
+        android:orderInCategory="100"
+        android:title="@string/add"
+        kitchapp:showAsAction="always"/>
+    
+    <item 
+        android:id="@+id/delete_ProductList"
+        android:orderInCategory="100"
+        kitchapp:showAsAction="always"
+        android:icon="@drawable/ic_action_discard"
+        android:title="@string/delete"/>
+    
+    <item 
+        android:id="@+id/update_Pantry"
+        android:orderInCategory="100"
+        kitchapp:showAsAction="always"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/buyed"/>
+    
+    <item 
+        android:id="@+id/settings"
+        android:orderInCategory="100"
+        kitchapp:showAsAction="always"
+        android:icon="@drawable/ic_action_overflow"
+        android:title="@string/options"/>
+
+</menu>

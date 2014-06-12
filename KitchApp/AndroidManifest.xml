@@ -15,12 +15,15 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        android:theme="@style/Theme.Mystyleactionbar" >
+
+        
+        <!--  android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >-->
         
 
         <activity
             android:name="com.example.kitchapp.Login"
-            android:label=" " >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -119,6 +122,51 @@
             android:label=" " >
             <intent-filter>
                 <action android:name="com.example.kitchapp.Bar_Search" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kitchapp.Recipes"
+            android:label=" " >
+            <intent-filter>
+                <action android:name="com.example.kitchapp.Recipes" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kitchapp.ShowListRecipes"
+            android:label=" " >
+            <intent-filter>
+                <action android:name="com.example.kitchapp.ShowListRecipes" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kitchapp.ItemAdapterRecipeWithImage"
+            android:label=" " >
+            <intent-filter>
+                <action android:name="com.example.kitchapp.ItemAdapterRecipeWithImage" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kitchapp.ShowRecipe"
+            android:label=" " >
+            <intent-filter>
+                <action android:name="com.example.kitchapp.ShowRecipe" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.kitchapp.ItemIngredientsAdapter"
+            android:label=" " >
+            <intent-filter>
+                <action android:name="com.example.kitchapp.ItemIngredientsAdapter" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

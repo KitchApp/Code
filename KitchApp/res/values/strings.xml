@@ -48,12 +48,21 @@
     <string name="listadelacompra">Lista de la compra</string>
     <string name="accept">Aceptar</string>
     <string name="delete">Eliminar</string>
+    <string name="search">Buscar</string>
+    <string name="manual">Manual</string>
+    <string name="voice">Voz</string>
+    <string name="barcode">Barras</string>
+    <string name="logout">Salir</string>
+    <string name="home">Inicio</string>
+    <string name="options">Opciones</string>
     <string name="dialog_header">Nombre de la lista</string>
     <string name="categorySelected">Seleccionar categoría</string>
-    <string name="search">Buscar</string>
-<<<<<<< HEAD
-    <string name="home">Inicio</string>
-=======
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
+    <string name="topTen">Top Ten</string>
+    <string name="recipes">Recetas</string>
+    <string name="favourite">Favoritos</string>
+    <string name="headerIngredients">Ingredientes</string>
+    <string name="headerPreparation">Preparación</string>
+    <string name="unitsSelected">Seleccionar unidades</string>
+    <string name="buyed">Comprado</string>
    
 </resources>

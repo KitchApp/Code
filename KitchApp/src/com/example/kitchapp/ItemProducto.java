@@ -6,6 +6,7 @@ public class ItemProducto {
   protected String nombre;
   protected boolean selected;
   protected int category;
+  protected String units;
   protected String barCode;
   
   public ItemProducto() {
@@ -18,19 +19,17 @@ public class ItemProducto {
   public ItemProducto(int id, String nombre, int cantidad) {
 	    this.id = id;
 	    this.nombre = nombre;
-	    //this.tipo = tipo;
 	    this.cantidad = cantidad;
-	    //this.barCode=barCode;
   }
      
-  //public ItemProducto(long id, String nombre, int cantidad, String tipo) {
-  public ItemProducto(int id, String nombre, int cantidad,int category, boolean selected) {
+  public ItemProducto(int id, String nombre, int cantidad,int category,String units, boolean selected) {
 	    this.id = id;
 	    this.nombre = nombre;
 	    //this.tipo = tipo;
 	    this.category = category;
 	    this.cantidad = cantidad;
 	    this.selected = selected;
+	    this.units = units;
 	    //this.barCode=barCode;
 	  }
      
@@ -87,6 +86,14 @@ public class ItemProducto {
   
   public void setCategory(int category) {
 	  this.category = category;
+  }
+  
+  public String getUnits() {
+	  return units;
+  }
+  
+  public void setUnits(String units) {
+	  this.units = units;
   }
      
  /* public String getTipo() {

@@ -11,10 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
-<<<<<<< HEAD
-=======
 import android.widget.Toast;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
 
 public class ItemProductoAdapter extends BaseAdapter {
   protected Activity activity;
@@ -68,13 +65,10 @@ public class ItemProductoAdapter extends BaseAdapter {
     nombre.setText(item.getNombre());
          
     TextView cantidad = (TextView) vi.findViewById(R.id.textView_Item_Cant);
+    cantidad.setText(item.getCantidad() + "");
     
-    if (item.getCantidad() == 0) {
-    	cantidad.setText("");
-    }
-    else {
-    	cantidad.setText(item.getCantidad() + "");
-    }
+    TextView units = (TextView) vi.findViewById(R.id.textView_Item_Units);
+    units.setText(item.getUnits());
     
     checkProduct.setChecked(item.isSelected());
     checkProduct.setTag(item);

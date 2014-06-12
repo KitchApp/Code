@@ -33,12 +33,8 @@ public class ShoppingListAdapter extends BaseAdapter {
  
   @Override
   public long getItemId(int position) {
-<<<<<<< HEAD
-	  return position;
-=======
    // return items.get(position).getListName();
 	  return 0;
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
   }
  
   @Override
@@ -47,11 +43,7 @@ public class ShoppingListAdapter extends BaseAdapter {
          
     if(contentView == null) {
       LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-<<<<<<< HEAD
-      vi = inflater.inflate(R.layout.shopping_list_go, null);
-=======
       vi = inflater.inflate(R.layout.shoppinglist_item, null);
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
     }
              
     ShoppingListItem item = items.get(position);
@@ -66,17 +58,18 @@ public class ShoppingListAdapter extends BaseAdapter {
     });
     
          
+    /*ImageView image = (ImageView) vi.findViewById(R.id.imagen);
+    int imageResource = activity.getResources().getIdentifier(item.getRutaImagen(), null, activity.getPackageName());
+    image.setImageDrawable(activity.getResources().getDrawable(imageResource));*/
+         
     TextView nombre = (TextView) vi.findViewById(R.id.text_listName);
     nombre.setText(item.getListName());
          
+    /*TextView cantidad = (TextView) vi.findViewById(R.id.textView_Item_Cant);
+    cantidad.setText(item.getCantidad() + "");*/
+ 
     checkList.setChecked(item.isChecked());
     checkList.setTag(item);
-<<<<<<< HEAD
-    
-    return vi;
-  }
-}
-=======
  
     return vi;
   }
@@ -90,9 +83,11 @@ public class ShoppingListAdapter extends BaseAdapter {
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -129,6 +124,7 @@ public class ShoppingListAdapter extends BaseAdapter {
         final ShoppingListItem row = lists.get(position);
         holder.getTextListName().setText(row.getListName());
         holder.getCheckBox().setTag(row.getListName());
+        //holder.getCheckBox().setChecked(row.isChecked());
         holder.getCheckBox().setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			@Override
@@ -181,9 +177,8 @@ class Holder
     public void setCheckBox(CheckBox checkBox) {
     	this.checkBox = checkBox;
     }
-}
-
-*/
+}*/
 
 
->>>>>>> 9d155f8c3ec06f067b28ee846e3deb48b5317b3a
+
+
