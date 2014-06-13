@@ -15,33 +15,23 @@ public class ItemProducto {
     this.cantidad = 0;
     this.selected = false;
   }
-<<<<<<< HEAD
-=======
+
   
   public ItemProducto(int id, String nombre, int cantidad) {
 	    this.id = id;
 	    this.nombre = nombre;
 	    this.cantidad = cantidad;
   }
->>>>>>> Rama-Lorena-Android
      
   public ItemProducto(int id, String nombre, int cantidad,int category,String units, boolean selected) {
 	    this.id = id;
 	    this.nombre = nombre;
-	    //this.tipo = tipo;
 	    this.category = category;
 	    this.cantidad = cantidad;
 	    this.selected = selected;
 	    this.units = units;
-	    //this.barCode=barCode;
 	  }
-     
-  /*public Item(long id, String nombre, String tipo, String rutaImagen) {
-    this.id = id;
-    this.nombre = nombre;
-    this.tipo = tipo;
-    this.rutaImagen = rutaImagen;
-  }*/
+
      
   public long getId() {
     return id;
@@ -50,15 +40,7 @@ public class ItemProducto {
   public void setId(long id) {
     this.id = id;
   }
-     
-  /*public String getRutaImagen() {
-    return rutaImagen;
-  }*/
-     
-  /*public void setRutaImagen(String rutaImagen) {
-    this.rutaImagen = rutaImagen;
-  }*/
-     
+    
   public String getNombre() {
     return nombre;
   }
@@ -98,13 +80,5 @@ public class ItemProducto {
   public void setUnits(String units) {
 	  this.units = units;
   }
-     
- /* public String getTipo() {
-    return tipo;
-  }
-     
-  public void setTipo(String tipo) {
-    this.tipo = tipo;
-  }*/
-  
+
 }
