@@ -27,18 +27,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
 import android.app.AlertDialog;
-<<<<<<< HEAD
-=======
-import android.app.AlertDialog.Builder;
->>>>>>> Rama-Lorena-Android
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
-import android.text.Editable;
->>>>>>> Rama-Lorena-Android
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -52,50 +44,32 @@ public class Registro extends Activity implements OnClickListener {
 	private EditText userName;
 	private EditText password;
 	private EditText email;
-<<<<<<< HEAD
-=======
-	private String encryptedPassword="";
->>>>>>> Rama-Lorena-Android
 
 	Handler_Sqlite helper = new Handler_Sqlite(this);
 	
 	public String session_name;
-    public String session_id;
-    //private boolean userValidation=false;
-    //private boolean emailValidation=false;
-    //public Boolean registrado=false;
+    	public String session_id;
 	
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // Set View to register.xml
-        setContentView(R.layout.registro);
+    	@Override
+	 public void onCreate(Bundle savedInstanceState) {
+	 	super.onCreate(savedInstanceState);
+        	// Set View to register.xml
+        	setContentView(R.layout.registro);
  
-        TextView loginScreen = (TextView) findViewById(R.id.link_to_login);
-        Button buttonRegister = (Button) findViewById(R.id.btnRegistro);
-        userName = (EditText) findViewById(R.id.reg_usuario);
-        password = (EditText) findViewById(R.id.reg_password);
-        email = (EditText) findViewById(R.id.reg_email);
- 
-<<<<<<< HEAD
-=======
-        // Listening to Login Screen link
-        //loginScreen.setOnClickListener(this);
->>>>>>> Rama-Lorena-Android
-        buttonRegister.setOnClickListener(this);
-        loginScreen.setOnClickListener(this);
-        userName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        	TextView loginScreen = (TextView) findViewById(R.id.link_to_login);
+        	Button buttonRegister = (Button) findViewById(R.id.btnRegistro);
+        	userName = (EditText) findViewById(R.id.reg_usuario);
+        	password = (EditText) findViewById(R.id.reg_password);
+        	email = (EditText) findViewById(R.id.reg_email);
+
+        	buttonRegister.setOnClickListener(this);
+        	loginScreen.setOnClickListener(this);
+        	userName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
 				if(hasFocus==false){
-<<<<<<< HEAD
-=======
-					//userValidation=true;
->>>>>>> Rama-Lorena-Android
 					new HttpGetName().execute();
-					
 				}
 			}
 		});
@@ -104,12 +78,8 @@ public class Registro extends Activity implements OnClickListener {
 			
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
-				
 				if(hasFocus==true){
 					new HttpGetEmail().execute();
-					
-					
 				}
 				
 			}
@@ -122,7 +92,6 @@ public class Registro extends Activity implements OnClickListener {
     
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()) {
 			case R.id.link_to_login:
 				Intent intent = new Intent(this,Login.class);
@@ -240,36 +209,26 @@ public class Registro extends Activity implements OnClickListener {
 		protected String doInBackground(String... mURL) {
 			
 			String response="";
-<<<<<<< HEAD
-=======
-	        //mURL[0]=mURL[0].replace(" ", "%20");
-	         //Log.i("LocAndroid Response HTTP Threas","Ejecutando get 0: "+mURL);
->>>>>>> Rama-Lorena-Android
-	          HttpClient httpclient = new DefaultHttpClient();
-	          HttpGet httppost= new HttpGet();;
-	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
+
+	          	HttpClient httpclient = new DefaultHttpClient();
+	          	HttpGet httppost= new HttpGet();;
+	         	Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
 	         
-	        	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
+	        	httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorNombre.php?name="+userName.getText().toString());
 	         
 	         
-	         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
-	         try {
-	   
-	
-	         Log.i("LocAndroid Response HTTP","Ejecutando get");
-	        // Execute HTTP Post Request
-	      ResponseHandler<String> responseHandler=new BasicResponseHandler();
-	        	response = httpclient.execute(httppost,responseHandler);
-	         Log.i("LocAndroid Response HTTP",response);
-	    	} catch (ClientProtocolException e) {
-	        Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-	        // TODO Auto-generated catch block
-	    } catch (IOException e) {
-	        
-	        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-	        // TODO Auto-generated catch block
-	    }
-			// TODO Auto-generated method stub
+	         	Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
+	         	try {
+	 			Log.i("LocAndroid Response HTTP","Ejecutando get");
+	        		// Execute HTTP Post Request
+	      			ResponseHandler<String> responseHandler=new BasicResponseHandler();
+	        		response = httpclient.execute(httppost,responseHandler);
+	         		Log.i("LocAndroid Response HTTP",response);
+	    		} catch (ClientProtocolException e) {
+	        	Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
+	    		} catch (IOException e) {
+	    			Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
+	    		}
 			return response;
 		}
 	
@@ -278,20 +237,13 @@ public class Registro extends Activity implements OnClickListener {
 		protected void onPostExecute(String result) {
 			JSONArray ja=null;
 			try {
-						
-			
-			if(result.length()>1)
+				if(result.length()>1)
 				ja=new JSONArray(result);
-			
-			
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
+			} catch (JSONException e) {
 			e.printStackTrace();
 			Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
-			
 		}
 		try{
-			
 			if(userName.getText().toString().equals(ja.getString(0))){
 				builder.setTitle("Informacion")
 	            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
@@ -309,12 +261,7 @@ public class Registro extends Activity implements OnClickListener {
 				builder.show();
 				
 			}
-		}
-			catch (Exception e) {
-				
-			} 
-		
-	
+		} catch (Exception e) {} 
 	}
     
     }
@@ -323,40 +270,32 @@ public class Registro extends Activity implements OnClickListener {
 public class HttpGetEmail extends AsyncTask<String, Integer, String> {
      
 		
-		AlertDialog.Builder builder;
-		protected void onPreExecute() {
-		    super.onPreExecute();
+	AlertDialog.Builder builder;
+	protected void onPreExecute() {
+	    	super.onPreExecute();
     		builder = new AlertDialog.Builder(Registro.this);
-		} 
+	} 
 	    
-    @Override
+    	@Override
 	protected String doInBackground(String... mURL) {
 		
 		String response="";
-          HttpClient httpclient = new DefaultHttpClient();
-          HttpGet httppost= new HttpGet();;
-         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
-         	 httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
-         	
-         
-         Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
+          	HttpClient httpclient = new DefaultHttpClient();
+          	HttpGet httppost= new HttpGet();;
+         	Log.i("LocAndroid Response HTTP Thread","Ejecutando get 1");
+         	httppost = new HttpGet("http://kitchapp.es/consultarUsuarioPorEmail.php?mail="+email.getText().toString());
+         	Log.i("LocAndroid Response HTTP Thread","Ejecutando get 2");
          try {
-   
-
-         Log.i("LocAndroid Response HTTP","Ejecutando get");
-        // Execute HTTP Post Request
-      ResponseHandler<String> responseHandler=new BasicResponseHandler();
+	   	Log.i("LocAndroid Response HTTP","Ejecutando get");
+        	// Execute HTTP Post Request
+      		ResponseHandler<String> responseHandler=new BasicResponseHandler();
         	response = httpclient.execute(httppost,responseHandler);
-         Log.i("LocAndroid Response HTTP",response);
+         	Log.i("LocAndroid Response HTTP",response);
     	} catch (ClientProtocolException e) {
-        Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
-        // TODO Auto-generated catch block
-    } catch (IOException e) {
-        
-        Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
-        // TODO Auto-generated catch block
-    }
-		// TODO Auto-generated method stub
+        	Log.i("LocAndroid Response HTTP ERROR 1",e.getMessage());
+    	} catch (IOException e) {
+		Log.i("LocAndroid Response HTTP ERROR 2",e.getMessage());
+        }
 		return response;
 	}
 	
@@ -365,47 +304,32 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 	protected void onPostExecute(String result) {
 		JSONArray ja=null;
 		try {
-					
-		
-		if(result.length()>1)
+			if(result.length()>1)
 			ja=new JSONArray(result);
+		} catch (JSONException e) {
+			e.printStackTrace();
+			Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
 		
-		
-	} catch (JSONException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		Toast.makeText(getApplicationContext(), "Error recuperando la informacion del servidor, verifique su conexion a internet y vuelva a intentarlo.", 1000).show();
-		
-	}
-	try{
-<<<<<<< HEAD
-=======
-		String tmp=email.getText().toString();
-		boolean x=email.getText().toString().equals(ja.getString(2));
-		boolean y=!(email.getText().toString().equals(""));
->>>>>>> Rama-Lorena-Android
-		if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
+		}
+		try{
+			if(email.getText().toString().equals(ja.getString(2))&& !(email.getText().toString().equals(""))){
 			builder.setTitle("Informacion")
-            .setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
-            .setMessage("Email ya registrado")
-            .setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
+            			.setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_info))
+            			.setMessage("Email ya registrado")
+            			.setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
  
-                @Override
-                public void onClick(DialogInterface arg0, int arg1) {
-                	arg0.cancel();
-                	email.requestFocus();
-                }
-            });
+        				 @Override
+                			public void onClick(DialogInterface arg0, int arg1) {
+                				arg0.cancel();
+                				email.requestFocus();
+                			}
+        				});
  
 			builder.create();
 			builder.show();
 			
-		}
-	}
-		catch (Exception e) {
-			
-		} 
-		
+			}
+		} catch (Exception e) {} 
 	
 	}
     
@@ -427,12 +351,7 @@ public class HttpGetEmail extends AsyncTask<String, Integer, String> {
 
                 JSONObject json = new JSONObject();
                 //extract the username and password from UI elements and create a JSON object
-<<<<<<< HEAD
-=======
-                String name=username.getText().toString().trim();
-                String pass=password.getText().toString().trim();
-                String mail=email.getText().toString().trim();
->>>>>>> Rama-Lorena-Android
+
                 json.put("name", username.getText().toString().trim());
                 json.put("pass", password.getText().toString().trim());
                 json.put("mail", email.getText().toString().trim());
