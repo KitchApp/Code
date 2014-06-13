@@ -1,15 +1,7 @@
 package com.example.kitchapp;
 
-<<<<<<< HEAD
 import java.io.IOException;
-=======
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
->>>>>>> Rama-Lorena-Android
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
