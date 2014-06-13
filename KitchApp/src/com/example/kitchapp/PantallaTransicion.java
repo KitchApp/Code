@@ -4,10 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
 import android.view.Window;
->>>>>>> Rama-Lorena-Android
 import android.widget.ProgressBar;
 import android.view.Window;
 
