@@ -10,10 +10,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
-<<<<<<< HEAD
-=======
-import android.widget.Toast;
->>>>>>> Rama-Lorena-Android
 
 public class ItemProductoAdapter extends BaseAdapter {
   protected Activity activity;
@@ -58,10 +54,6 @@ public class ItemProductoAdapter extends BaseAdapter {
     });
              
     ItemProducto item = items.get(position);
-         
-    /*ImageView image = (ImageView) vi.findViewById(R.id.imagen);
-    int imageResource = activity.getResources().getIdentifier(item.getRutaImagen(), null, activity.getPackageName());
-    image.setImageDrawable(activity.getResources().getDrawable(imageResource));*/
          
     TextView nombre = (TextView) vi.findViewById(R.id.textView_Item_Name);
     nombre.setText(item.getNombre());
