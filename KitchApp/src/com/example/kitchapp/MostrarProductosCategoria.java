@@ -131,11 +131,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 
 			}
 		}
-<<<<<<< HEAD
-	
-=======
-			
->>>>>>> Rama-Lorena-Android
+
 		list = (ListView)findViewById(R.id.listViewProducts);
 		ItemProductoAdapter adapter;
 		// Inicializamos el adapter.
@@ -147,10 +143,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 			 
 		    @Override
 		    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
-		        // TODO Auto-generated method stub
-		        
-		        	modificarProducto(arg1,position);
-		 
+		       	modificarProducto(arg1,position);
 		    }
 		 
 		}); 
@@ -160,9 +153,9 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_action_bar, menu);
-        item_add = menu.findItem(R.id.add_Product);
-        return super.onCreateOptionsMenu(menu);
+        	inflater.inflate(R.menu.menu_action_bar, menu);
+        	item_add = menu.findItem(R.id.add_Product);
+        	return super.onCreateOptionsMenu(menu);
 	}
 	
 	@Override
@@ -217,102 +210,94 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 		
 		builder = new AlertDialog.Builder(this);
 		 
-        // Get the layout inflater
-        LayoutInflater inflater = this.getLayoutInflater();
+		 // Get the layout inflater
+        	LayoutInflater inflater = this.getLayoutInflater();
  
-        // Inflate and set the layout for the dialog
-        // Pass null as the parent view because its going in the dialog layout
-
-        view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
-        nameProduct = (EditText) view.findViewById(R.id.nameProductModify);
-        nameProduct.setText(products.get(position).getNombre());
-        cantProduct = (EditText) view.findViewById(R.id.cantProduct);
-        cantProduct.setText(products.get(position).getCantidad() + "");
-    	pos = position;
-    	save = (Button) view.findViewById(R.id.button_save);
-    	save.setOnClickListener(this);
-    	cancel = (Button) view.findViewById(R.id.button_cancel);
-    	cancel.setOnClickListener(this);
-    	decrement = (Button) view.findViewById(R.id.button_decrement);
-    	decrement.setOnClickListener(this);
-    	increment = (Button) view.findViewById(R.id.button_increment);
-    	increment.setOnClickListener(this);
-        builder.setView(view);
-                
-        
-        builder.create();
-        builder.show();
- 
+        	// Inflate and set the layout for the dialog
+        	// Pass null as the parent view because its going in the dialog layout
+	
+		view = inflater.inflate(R.layout.activity_modificar_producto_despensa, null);
+        	nameProduct = (EditText) view.findViewById(R.id.nameProductModify);
+        	nameProduct.setText(products.get(position).getNombre());
+        	cantProduct = (EditText) view.findViewById(R.id.cantProduct);
+        	cantProduct.setText(products.get(position).getCantidad() + "");
+    		pos = position;
+    		save = (Button) view.findViewById(R.id.button_save);
+    		save.setOnClickListener(this);
+    		cancel = (Button) view.findViewById(R.id.button_cancel);
+    		cancel.setOnClickListener(this);
+    		decrement = (Button) view.findViewById(R.id.button_decrement);
+    		decrement.setOnClickListener(this);
+    		increment = (Button) view.findViewById(R.id.button_increment);
+    		increment.setOnClickListener(this);
+        	builder.setView(view);
+        	builder.create();
+        	builder.show();
 	}
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch(v.getId()) {
-			case R.id.button_save:
-				ItemProducto prod = products.get(pos);
-				String nameLast = prod.getNombre();
-				prod.setNombre(nameProduct.getText().toString());
-				prod.setCantidad(Integer.parseInt(cantProduct.getText().toString()));
-				products.set(pos,prod);
-				SQLiteDatabase tmp = helper.open();
-				if (tmp != null) {
-					helper.updateProduct(nameLast,prod.getNombre(),prod.getCantidad(),"updatePantry",1);
-					helper.close();
-				}
-				Intent j = new Intent(this,MostrarProductosCategoria.class);
-				j.putExtra("idCat",tipoCat);
-				startActivity(j);
-				finish();
+		case R.id.button_save:
+			ItemProducto prod = products.get(pos);
+			String nameLast = prod.getNombre();
+			prod.setNombre(nameProduct.getText().toString());
+			prod.setCantidad(Integer.parseInt(cantProduct.getText().toString()));
+			products.set(pos,prod);
+			SQLiteDatabase tmp = helper.open();
+			if (tmp != null) {
+				helper.updateProduct(nameLast,prod.getNombre(),prod.getCantidad(),"updatePantry",1);
+				helper.close();
+			}
+			Intent j = new Intent(this,MostrarProductosCategoria.class);
+			j.putExtra("idCat",tipoCat);
+			startActivity(j);
+			finish();
 				
-				break;
+			break;
 			
-			case R.id.button_cancel:
-            	Intent i = new Intent(this,MostrarProductosCategoria.class);
-            	i.putExtra("idCat",tipoCat);
-				startActivity(i);
-				finish();
-				break;
+		case R.id.button_cancel:
+            		Intent i = new Intent(this,MostrarProductosCategoria.class);
+            		i.putExtra("idCat",tipoCat);
+			startActivity(i);
+			finish();
+			break;
 				
-			case R.id.button_decrement:
-				decrementCant(v);
-				break;
+		case R.id.button_decrement:
+			decrementCant(v);
+			break;
 				
-			case R.id.button_increment:
-				incrementCant(v);
-				break;
+		case R.id.button_increment:
+			incrementCant(v);
+			break;
 				
-			case R.id.button_acceptPantry:
-				String unit = "";
-	 			if (units.equals("Litros")) {
-					unit = "l";
-				}
-				else if (units.equals("Mililitros")) {
-					unit = "ml";
-				}
-				else if (units.equals("Kilos")) {
-					unit = "kg";
-				}
-				else if (units.equals("Gramos")) {
-					unit = "gr";
-				}
-				else if (units.equals("Unidades")) {
-					unit = "unid";
-				}
-	 			addProductPantry(unit);
-				break;
+		case R.id.button_acceptPantry:
+			String unit = "";
+	 		if (units.equals("Litros")) {
+				unit = "l";
+			}
+			else if (units.equals("Mililitros")) {
+				unit = "ml";
+			}
+			else if (units.equals("Kilos")) {
+				unit = "kg";
+			}
+			else if (units.equals("Gramos")) {
+				unit = "gr";
+			}
+			else if (units.equals("Unidades")) {
+				unit = "unid";
+			}
+	 		addProductPantry(unit);
+			break;
 			
-			case R.id.buttonCancelPantry:
-				Intent intent = new Intent(this,MostrarProductosCategoria.class);
-				intent.putExtra("idCat",tipoCat);
-				startActivity(intent);
-				finish();
-				break;
-				
-				
+		case R.id.buttonCancelPantry:
+			Intent intent = new Intent(this,MostrarProductosCategoria.class);
+			intent.putExtra("idCat",tipoCat);
+			startActivity(intent);
+			finish();
+			break;
 		}
-            	
-				
 	}
 	
 	private void initializeArrayList(Integer category) {
@@ -332,15 +317,14 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 	
 	public void incrementCant(View view) {
 		
-        cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
+        	cantProduct.setText(Integer.parseInt(cantProduct.getText().toString())+1 + "");
 
-		
 	}
 	
 	public void modifyProduct() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		 
-	    builder.setTitle("Informacion")
+	    	builder.setTitle("Informacion")
 	            .setIcon(
 	                    getResources().getDrawable(
 	                            android.R.drawable.ic_dialog_info))
@@ -539,11 +523,7 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
 	
 	public void addProduct(int position) {
 		String[] prod = matches_text.get(position).split(" ");
-<<<<<<< HEAD
-	 	String prodName = "";
-=======
 	 	productName = "";
->>>>>>> Rama-Lorena-Android
 	 	String oneCantM = "un";
 	 	String oneCantF = "una";
 	 	productCant = 0;
@@ -563,38 +543,20 @@ public class MostrarProductosCategoria extends ActionBarActivity implements OnCl
    	 							error = true;
    	 						}
    	 						else {
-<<<<<<< HEAD
-   	 							prodName += prod[i];
-   	 							prodName += " ";
-=======
+
    	 							productName += prod[i];
    	 							productName += " ";
->>>>>>> Rama-Lorena-Android
    	 						}
    	 					}
    	 				}
    	 			}
    	 			else {
-<<<<<<< HEAD
-   	 				prodName += prod[i];
-   	 				prodName += " ";
-   	 			}
-   	 			
-   	 		}
-   	 		String [] nameP = prodName.split(" ");
-   	 		productName = "";
-   	 		for (int k=0;k<nameP.length;k++) {
-   	 			productName += nameP[k];
-   	 			if (k != (nameP.length - 1))
-   	 				productName += " ";
-   	 		}
-=======
+
    	 				productName += prod[i];
    	 				productName += " ";
    	 			}
    	 			
    	 		}
->>>>>>> Rama-Lorena-Android
    	 		if (!error) {
    	 			if (productCant <= 0) {
    	 				errorCantVoice();
