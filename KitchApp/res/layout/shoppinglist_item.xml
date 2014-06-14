@@ -31,9 +31,6 @@
 		        android:layout_centerVertical="true"
 		        android:onClick="goList"
 		        android:background="@drawable/ic_action_next_item">
-	    </Button>    
-<<<<<<< HEAD
+	    </Button>
 </RelativeLayout>
-=======
-</RelativeLayout>
->>>>>>> Rama-Lorena-Android
+
