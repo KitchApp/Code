@@ -1,6 +1,5 @@
 package com.example.kitchapp;
 
-<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.List;
 import android.content.Context;
